@@ -1,0 +1,92 @@
+# Environment (secrets)
+.env
+.env.e2e
+!.env.example
+!.env.e2e.example
+conf/manticore.conf
+conf/zxpress_db.mysql.*
+.cursor
+.ai-factory
+
+# Database data
+db/mysql_data/
+
+# Smarty compiled templates
+site/smarty/zxpress/templates_c/*
+site/smarty/zxpress/cache/*
+
+# Uploaded content (user data, not code)
+site/tmp/*
+
+# Large site content/binaries (keep repo clean)
+# These are runtime assets/uploads/archives; we don't want them to flood `git status`.
+site/chapters_images/
+site/image-archive/
+site/archive/
+site/img/*
+!site/img/style.css
+site/covers/
+site/pictures/
+site/screens/
+site/illustrations/
+site/books_files/
+site/files/
+site/news_files/
+
+site/**/*.png
+site/**/*.jpg
+site/**/*.jpeg
+site/**/*.gif
+site/**/*.ico
+site/**/*.webp
+site/**/*.rar
+site/**/*.zip
+site/**/*.7z
+site/**/*.tar
+site/**/*.tar.gz
+site/**/*.tgz
+site/**/*.gz
+site/**/*.bz2
+site/**/*.xz
+site/**/*.sna
+site/**/*.pt3
+
+site/temp/
+site/cat/
+
+# Split storage (uploads / caches / generated indices)
+data/
+data/**
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backups
+backups/
+
+# Logs
+*.log
+
+# Agent working files
+.agents/
+
+# Local development / tooling (not part of repo)
+local_mcp/
+old_mcp/
+
+# PHPUnit
+.phpunit.cache/
+
+# Playwright (e2e/)
+e2e/node_modules/
+e2e/playwright-report/
+e2e/test-results/
+test-results/
+e2e/.env.e2e

@@ -1,0 +1,130 @@
+# Fulltext: ft_title + ft_name only (no article body in index — PHP snippets use attrs title+name).
+source articles_src
+{
+    type            = mysql
+    sql_host        = ${MANTICORE_SQL_HOST}
+    sql_user        = ${MANTICORE_DB_USER}
+    sql_pass        = ${MANTICORE_DB_PASS}
+    sql_db          = ${MANTICORE_DB_NAME}
+    sql_port        = ${MANTICORE_SQL_PORT}
+    sql_query_pre   = SET NAMES utf8mb4
+
+    sql_query       = \
+        SELECT a.id, a.title AS ft_title, CONCAT(p.title, " ", i.title) AS ft_name, \
+               a.title AS title, CONCAT(p.title, " ", i.title) AS name, \
+               a.id AS id1, a.id_issue AS id2, a.id_press AS id3, \
+               a.date, CONCAT(a.id_press, "/", a.id) AS img, 1 AS type \
+        FROM articles a \
+        JOIN issue i ON a.id_issue = i.id \
+        JOIN press p ON a.id_press = p.id \
+        WHERE a.temp = 0
+
+    sql_attr_string   = title
+    sql_attr_string   = name
+    sql_attr_uint     = id1
+    sql_attr_uint     = id2
+    sql_attr_uint     = id3
+    sql_attr_timestamp = date
+    sql_attr_string   = img
+    sql_attr_uint     = type
+}
+
+source chapters_src
+{
+    type            = mysql
+    sql_host        = ${MANTICORE_SQL_HOST}
+    sql_user        = ${MANTICORE_DB_USER}
+    sql_pass        = ${MANTICORE_DB_PASS}
+    sql_db          = ${MANTICORE_DB_NAME}
+    sql_port        = ${MANTICORE_SQL_PORT}
+    sql_query_pre   = SET NAMES utf8mb4
+
+    sql_query       = \
+        SELECT c.ch_id + 100000 AS id, c.ch_title AS ft_title, \
+               CONCAT(b.title1, " ", b.title2) AS ft_name, \
+               c.ch_title AS title, CONCAT(b.title1, " ", b.title2) AS name, \
+               c.ch_id AS id1, c.ch_id_book AS id2, 0 AS id3, \
+               c.ch_date AS date, CONCAT(IFNULL(b.image_id, 0), "/", c.ch_id_book) AS img, 2 AS type \
+        FROM chapters c \
+        JOIN books b ON c.ch_id_book = b.id
+
+    sql_attr_string   = title
+    sql_attr_string   = name
+    sql_attr_uint     = id1
+    sql_attr_uint     = id2
+    sql_attr_uint     = id3
+    sql_attr_timestamp = date
+    sql_attr_string   = img
+    sql_attr_uint     = type
+}
+
+source test2_src
+{
+    type            = mysql
+    sql_host        = ${MANTICORE_SQL_HOST}
+    sql_user        = ${MANTICORE_DB_USER}
+    sql_pass        = ${MANTICORE_DB_PASS}
+    sql_db          = ${MANTICORE_DB_NAME}
+    sql_port        = ${MANTICORE_SQL_PORT}
+    sql_query_pre   = SET NAMES utf8mb4
+
+    sql_query       = SELECT id, text, date FROM echos_zxnet
+
+    sql_attr_timestamp = date
+}
+
+index test1_articles
+{
+    source          = articles_src
+    path            = /var/lib/manticore/test1_articles
+    morphology      = stem_ru, stem_en
+    min_word_len    = 2
+    min_infix_len   = 3
+    expand_keywords = 1
+    charset_table   = 0..9, A..Z->a..z, a..z, \
+                      U+410..U+42F->U+430..U+44F, U+430..U+44F, \
+                      U+0401->U+0435, U+0451->U+0435
+}
+
+index test1_chapters
+{
+    source          = chapters_src
+    path            = /var/lib/manticore/test1_chapters
+    morphology      = stem_ru, stem_en
+    min_word_len    = 2
+    min_infix_len   = 3
+    expand_keywords = 1
+    charset_table   = 0..9, A..Z->a..z, a..z, \
+                      U+410..U+42F->U+430..U+44F, U+430..U+44F, \
+                      U+0401->U+0435, U+0451->U+0435
+}
+
+index test1
+{
+    type            = distributed
+    local           = test1_articles
+    local           = test1_chapters
+}
+
+index test2
+{
+    source          = test2_src
+    path            = /var/lib/manticore/test2
+    morphology      = stem_ru, stem_en
+    min_word_len    = 2
+    min_infix_len   = 3
+    expand_keywords = 1
+    charset_table   = 0..9, A..Z->a..z, a..z, \
+                      U+410..U+42F->U+430..U+44F, U+430..U+44F, \
+                      U+0401->U+0435, U+0451->U+0435
+}
+
+searchd
+{
+    listen          = 9306:mysql
+    listen          = 9308:http
+    log             = /var/log/manticore/searchd.log
+    query_log       = /var/log/manticore/query.log
+    pid_file        = /var/run/manticore/searchd.pid
+    network_timeout = 5
+}

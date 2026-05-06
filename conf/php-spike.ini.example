@@ -1,0 +1,10 @@
+; Example drop-in for experimental PHP hardening (see docs/operations.md § E1).
+; Do NOT enable in production by renaming to a live conf.d name without full E2E.
+;
+; Copy to zz-spike.ini or mount via docker-compose.override.yml only on a test stack.
+;
+; Example (evaluate carefully — may break legacy paths):
+; open_basedir = /home/zxpress/web/zxpress.ru/public_html:/home/zxpress/web/zxpress.ru/data:/tmp:/usr/share/fonts
+;
+; Additional disable_functions entries (append to project policy, do not duplicate blindly):
+; disable_functions = ...

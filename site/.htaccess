@@ -1,0 +1,29 @@
+RewriteEngine on
+AddDefaultCharset UTF-8
+AddType application/wasm wasm
+DirectoryIndex ezines.php
+#DirectoryIndex zzz.php
+Options -Indexes
+php_value display_errors 1
+php_flag zlib.output_compression on
+php_flag always_populate_raw_post_data On
+ErrorDocument 403 /error/403.html
+ErrorDocument 404 /error/404.html
+ErrorDocument 500 /error/500.html
+php_value upload_max_filesize 16M
+<Files init.inc>
+order allow,deny
+deny from all
+</Files>
+#RewriteRule ^[zxnet]+/?([a-z\.0-9]+)/?([0-9])+\$ zxnet.php?e=$1&id=$2
+RewriteRule ^rss/news.rss?$ rss.php
+RewriteRule ^zxnet/([a-z_\.0-9]+)/?$ zxnet.php?e=$1
+RewriteRule ^zxnet/([a-z_\.0-9]+)/([0-9]+)?$ zxnet.php?e=$1&id=$2
+RewriteRule ^zxnet/?$ zxnet.php
+RewriteRule ^menu/([0-9]+)/?$ menu.php?r=$1
+RewriteRule ^menu/([0-9]+)/([0-9]+)?$ menu.php?r=$1&id=$2
+RewriteRule ^news/p([0-9]+)/?$ news.php?p=$1
+RewriteRule ^news/?$ news.php
+RewriteRule ^news/([0-9]+)-.*?$ news.php?id=$1
+
+

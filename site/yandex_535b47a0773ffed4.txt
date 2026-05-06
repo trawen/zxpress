@@ -1,0 +1,45 @@
+<?php
+require 'init.inc';
+
+$id = $_REQUEST['id'];
+if (!$id) {$id = 1;}
+
+$smarty->compile_check = true;
+
+mysql_query("UPDATE news SET views=views+1 WHERE id=$id");
+
+$z = mysql_query("SELECT * FROM news3 WHERE id=$id" );
+$t = mysql_fetch_array($z);
+
+$t['text'] = file_get_contents("news/".$t['id'].".txt");
+$t['date'] = date("j.m.Y", $t['date']);
+
+$smarty->assign('title', $t['title']);
+$smarty->assign('news', $t);
+
+
+
+
+$nmt = round($id / 50);
+$z = mysql_query("SELECT * FROM news3 WHERE type=1 LIMIT $nmt, 5" );
+unset($list);
+$n = 0;
+while ($t = mysql_fetch_array($z)) {
+
+$m = $mn[date("m", $t['date'])];
+$t['date'] = date("j $m Yã. ", $t['date']);
+$list[$n] = $t;
+
+$n++;
+
+}
+
+$smarty->assign('topic', $list);
+
+
+include "right.php";
+
+$smarty->display('news.tpl');
+
+
+?>

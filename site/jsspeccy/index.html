@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <title>JSSpeccy v3</title>
+        <script src="jsspeccy/jsspeccy.js"></script>
+        <style>
+            body {
+                background-color: #444;
+            }
+            #jsspeccy {
+                width: 640px;
+                margin: auto;
+                background-color: white;
+            }
+        </style>
+    </head>
+    <body onload="zx()">
+        <div id="jsspeccy"></div>
+        <script type="text/javascript">
+        function zx() {    
+            let emu = JSSpeccy(document.getElementById('jsspeccy'), {zoom: 2, sandbox: true})
+            console.log("emu", emu)
+            //emu.setMachine(128);
+            //emu.openUrl("/robobroep.sna");
+        }
+        </script>
+    </body>
+</html>

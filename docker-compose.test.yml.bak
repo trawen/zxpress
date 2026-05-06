@@ -1,0 +1,13 @@
+# Optional override: publish DB and Manticore for host-run integration tests (PHPUnit from CI runner).
+# Usage: docker compose -f docker-compose.yml -f docker-compose.test.yml up -d
+services:
+  db:
+    ports:
+      - "3307:3306"
+  manticore:
+    ports:
+      - "9308:9308"
+  php:
+    environment:
+      # Playwright E2E: expose captcha plaintext in guestbook DOM (see comments.php + guestbook.tpl).
+      E2E_EXPOSE_CAPTCHA: "1"
