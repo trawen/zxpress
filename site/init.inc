@@ -58,21 +58,29 @@ require_once __DIR__ . '/includes/auth.php';
 require_once __DIR__ . '/includes/locale.php';
 require_once __DIR__ . '/includes/sape_integration.php';
 
-error_reporting(E_ALL & ~E_DEPRECATED & ~E_NOTICE & ~E_WARNING);
-ini_set("display_errors", 0);
+// DEBUG: always show all PHP errors on screen
+//error_reporting(E_ALL);
+//ini_set('display_errors', '1');
+//ini_set('display_startup_errors', '1');
+//ini_set('html_errors', '1');
 
 set_error_handler(function ($severity, $message, $file, $line) {
 	if (!(error_reporting() & $severity)) {
 		return true;
 	}
 	error_log("PHP Error [$severity]: $message in $file:$line");
-	return true;
+	// Let PHP also output the error.
+	return false;
 });
 
 set_exception_handler(function ($e) {
 	error_log("Uncaught Exception: " . $e->getMessage() . " in " . $e->getFile() . ":" . $e->getLine());
 	http_response_code(500);
-	echo "Произошла ошибка. Попробуйте позже.";
+	echo "<pre>";
+	echo "Uncaught " . get_class($e) . ": " . $e->getMessage() . "\n";
+	echo "in " . $e->getFile() . ":" . $e->getLine() . "\n\n";
+	echo $e->getTraceAsString();
+	echo "</pre>";
 });
 
 if (isset($_REQUEST['id']) && $_REQUEST['id'] != "0") {

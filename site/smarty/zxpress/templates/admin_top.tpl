@@ -30,13 +30,13 @@ a:hover, a:active, body_ahover
 <TD vAlign=top>
 
 <div align="center" style="letter-spacing: 1px; float: left; Font: bold 13px Times">
-<strong><a href="news.php">Новости сайта</a></strong> - 
-<strong><a href="catalog.php">Библиотека</a></strong> - 
-<strong><a href="gallery.php">Галерея</a></strong> - 
-<strong><a href="updates.php">Обновления</a></strong> - 
-<strong><a href="stats.php">Статистика</a></strong> - 
-<strong>О проекте</strong> - 
-<strong><a href="guestbook.php">Гостевая</a></strong> - 
+<strong><a href="news.php">Новости сайта</a></strong> -
+<strong><a href="catalog.php">Библиотека</a></strong> -
+<strong><a href="gallery.php">Галерея</a></strong> -
+<strong><a href="updates.php">Обновления</a></strong> -
+<strong><a href="stats.php">Статистика</a></strong> -
+<strong>О проекте</strong> -
+<strong><a href="guestbook.php">Гостевая</a></strong> -
 <strong><a href="input.php">Вход</a></strong>
 </div>
 
@@ -78,11 +78,13 @@ a:hover, a:active, body_ahover
 
 
 
-<a href="admin_news.php?id={$id}">Новости</a> / 
-<a href="admin_issue.php?id={$press.id}">Книги</a> / 
-<a href="admin_issue.php">Выпуски журналов</a> / 
-<a href="admin_articles.php">Статьи журналов</a>
- — 
+{* <a href="admin_news.php?id={$id}">Новости</a> / *}
+<a href="admin_books.php">Книги</a> /
+<a href="admin_issue.php">Выпуски журналов</a> /
+<a href="admin_articles.php">Статьи журналов</a> /
+<a href="admin_authors.php">Авторы</a> /
+<a href="admin_letters.php">Письма</a>
+ —
 <form method="post" action="/logout.php" style="display:inline">
 <input type="hidden" name="csrf_token" value="{$csrf_token}">
 <button type="submit" style="background:transparent;border:none;padding:0;font:inherit;cursor:pointer;text-decoration:underline;color:inherit">Выйти</button>

@@ -35,6 +35,8 @@ function zx_storage_rel_map(): array
 		'articles' => 'content-store/articles',
 		'articles_eng' => 'content-store/articles-eng',
 		'chapters' => 'content-store/chapters',
+		'letters' => 'content-store/letters',
+		'letters_preview' => 'content-store/letters/preview',
 		'pictures' => 'uploads/pictures',
 		'screens' => 'uploads/screens',
 		'illustrations' => 'uploads/illustrations',
