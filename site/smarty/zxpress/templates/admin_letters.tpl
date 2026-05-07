@@ -108,17 +108,27 @@
 </tr>
 
 <tr>
-<td>Файл (скан)</td>
+<td>Файлы (сканы)</td>
 <td>
-<input type="file" name="upload_file" accept="image/jpeg,image/png">
+<input type="file" name="upload_files[]" multiple accept="image/jpeg,image/png,image/webp,image/gif">
 <div style="font-size:11px;font-weight:normal;margin-top:4px">
-Оригинал сохраняется как есть; превью — webp 1280px по ширине.
+Оригинал сохраняется как есть; превью — jpeg 1280px по ширине (качество 85%).
 </div>
-{if $file_info.original}
-<div style="font-size:11px;font-weight:normal;margin-top:4px">original: {$file_info.original}</div>
-{/if}
-{if $file_info.preview}
-<div style="font-size:11px;font-weight:normal;margin-top:2px">preview: {$file_info.preview}</div>
+{if $images && $images|@count gt 0}
+<div style="font-size:11px;font-weight:normal;margin-top:8px">
+<b>Загруженные страницы:</b><br>
+{section name=n loop=$images}
+<div style="margin-top:4px">
+<input type="checkbox" name="delete_image_{$images[n].id}" value="1"> удалить
+ — id={$images[n].id} sort={$images[n].sort_order} format={$images[n].format}
+<div style="margin-left:18px">
+<a href="{$images[n].original_url}" target="_blank">оригинал</a> —
+<a href="{$images[n].preview_url}" target="_blank">превью</a><br>
+<img src="{$images[n].preview_url}" style="max-width:420px; height:auto; border:1px solid #C8C5AC; margin-top:4px">
+</div>
+</div>
+{/section}
+</div>
 {/if}
 </td>
 </tr>

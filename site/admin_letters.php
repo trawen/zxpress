@@ -30,10 +30,10 @@ function letters_parse_date(?string $raw): ?string
     return $dt->format('Y-m-d');
 }
 
-function letters_make_webp_preview(string $tmpFile, string $dstPath, int $maxWidth = 1280, int $quality = 80): bool
+function letters_make_jpeg_preview(string $tmpFile, string $dstPath, int $maxWidth = 1280, int $quality = 85): bool
 {
-    if (!function_exists('imagewebp')) {
-        error_log('[FIX] admin_letters: imagewebp() not available, skip preview');
+    if (!function_exists('imagejpeg')) {
+        error_log('[FIX] admin_letters: imagejpeg() not available, skip preview');
         return false;
     }
 
@@ -81,11 +81,31 @@ function letters_make_webp_preview(string $tmpFile, string $dstPath, int $maxWid
         return false;
     }
 
-    $ok = @imagewebp($dst, $dstPath, $quality);
+    $ok = @imagejpeg($dst, $dstPath, $quality);
     imagedestroy($dst);
     imagedestroy($src);
     return (bool) $ok;
 }
+
+function letters_images_format_from_ext(string $ext): int
+{
+    $ext = strtolower($ext);
+    if ($ext === 'jpg' || $ext === 'jpeg') {
+        return 1;
+    }
+    if ($ext === 'png') {
+        return 2;
+    }
+    if ($ext === 'webp') {
+        return 3;
+    }
+    if ($ext === 'gif') {
+        return 4;
+    }
+    return 1;
+}
+
+$ENTITY_TYPE_LETTER = 1;
 
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 
@@ -147,30 +167,72 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
             );
         }
 
-        // Upload scan/file (original + preview)
-        $upl = (isset($_FILES['upload_file']) && is_array($_FILES['upload_file'])) ? $_FILES['upload_file'] : [];
-        $tmp = (string) ($upl['tmp_name'] ?? '');
-        $origName = (string) ($upl['name'] ?? '');
-        if ($tmp !== '' && is_file($tmp) && $origName !== '') {
+        // Delete selected images
+        if ($id > 0) {
+            $zImg = db_select($db, "SELECT id, format FROM images WHERE entity_type=? AND entity_id=? ORDER BY sort_order ASC, id ASC", "ii", $ENTITY_TYPE_LETTER, $id);
+            while ($zImg && ($img = mysqli_fetch_array($zImg))) {
+                $imgId = (int) ($img['id'] ?? 0);
+                if ($imgId <= 0) {
+                    continue;
+                }
+                if (!empty($_POST['delete_image_' . $imgId])) {
+                    db_exec($db, "DELETE FROM images WHERE id=? LIMIT 1", "i", $imgId);
+                    foreach (['jpg', 'jpeg', 'png', 'webp', 'gif'] as $ext) {
+                        @unlink(zx_storage_path('letters', $imgId . '.' . $ext));
+                    }
+                    @unlink(zx_storage_path('letters_preview', $imgId . '.jpg'));
+                }
+            }
+        }
+
+        // Upload multiple scans/files (originals + jpeg previews)
+        $upl = (isset($_FILES['upload_files']) && is_array($_FILES['upload_files'])) ? $_FILES['upload_files'] : [];
+        $names = (isset($upl['name']) && is_array($upl['name'])) ? $upl['name'] : [];
+        $tmps = (isset($upl['tmp_name']) && is_array($upl['tmp_name'])) ? $upl['tmp_name'] : [];
+
+        // Determine next sort_order
+        $nextSort = 0;
+        $rowMax = db_select($db, "SELECT COALESCE(MAX(sort_order), 0) AS mx FROM images WHERE entity_type=? AND entity_id=?", "ii", $ENTITY_TYPE_LETTER, $id);
+        $maxRow = $rowMax ? mysqli_fetch_assoc($rowMax) : null;
+        if ($maxRow && isset($maxRow['mx'])) {
+            $nextSort = (int) $maxRow['mx'];
+        }
+
+        for ($i = 0; $i < count($names); $i++) {
+            $tmp = (string) ($tmps[$i] ?? '');
+            $origName = (string) ($names[$i] ?? '');
+            if ($tmp === '' || !is_file($tmp) || $origName === '') {
+                continue;
+            }
+
             $mime = finfo_file(finfo_open(FILEINFO_MIME_TYPE), $tmp);
-            $allowed = ['image/jpeg' => 'jpg', 'image/png' => 'png'];
+            $allowed = ['image/jpeg' => 'jpg', 'image/png' => 'png', 'image/webp' => 'webp', 'image/gif' => 'gif'];
             if (!isset($allowed[$mime])) {
                 error_log('[FIX] admin_letters: rejected upload mime=' . $mime . ' name=' . $origName);
-            } else {
-                $ext = $allowed[$mime];
-                $leaf = $id . '.' . $ext;
-
-                // remove old known originals
-                foreach (['jpg', 'jpeg', 'png'] as $oldExt) {
-                    @unlink(zx_storage_path('letters', $id . '.' . $oldExt));
-                }
-
-                zx_storage_copy_uploaded_file('letters', $leaf, $tmp);
-
-                // preview is always webp
-                $previewPath = zx_storage_path('letters_preview', $id . '.webp');
-                letters_make_webp_preview($tmp, $previewPath, 1280, 80);
+                continue;
             }
+
+            $ext = $allowed[$mime];
+            $format = letters_images_format_from_ext($ext);
+            $nextSort++;
+
+            // Create DB row first to get image id (filename)
+            db_exec(
+                $db,
+                "INSERT INTO images (entity_type, entity_id, format, sort_order, is_active) VALUES (?,?,?,?,1)",
+                "iiii",
+                $ENTITY_TYPE_LETTER,
+                $id,
+                $format,
+                $nextSort
+            );
+            $imgId = (int) mysqli_insert_id($db);
+            if ($imgId <= 0) {
+                continue;
+            }
+
+            zx_storage_copy_uploaded_file('letters', $imgId . '.' . $ext, $tmp);
+            letters_make_jpeg_preview($tmp, zx_storage_path('letters_preview', $imgId . '.jpg'), 1280, 85);
         }
 
         header("Location: /admin_letters.php?id=" . $id, true, 303);
@@ -225,25 +287,29 @@ if ($letter && !empty($letter['date'])) {
 }
 $smarty->assign('letter', $letter);
 
-// Existing file paths for display (admin)
-$file_info = [
-    'original' => null,
-    'preview' => null,
-];
+// Letter images list (admin)
+$images = [];
 if ($id > 0) {
-    foreach (['jpg', 'jpeg', 'png'] as $ext) {
-        $p = zx_storage_path('letters', $id . '.' . $ext);
-        if (is_file($p)) {
-            $file_info['original'] = $p;
-            break;
+    $zImg = db_select($db, "SELECT * FROM images WHERE entity_type=? AND entity_id=? ORDER BY sort_order ASC, id ASC", "ii", $ENTITY_TYPE_LETTER, $id);
+    while ($zImg && ($img = mysqli_fetch_array($zImg))) {
+        $imgId = (int) ($img['id'] ?? 0);
+        $fmt = (int) ($img['format'] ?? 1);
+        $ext = 'jpg';
+        if ($fmt === 2) {
+            $ext = 'png';
+        } elseif ($fmt === 3) {
+            $ext = 'webp';
+        } elseif ($fmt === 4) {
+            $ext = 'gif';
         }
-    }
-    $pPrev = zx_storage_path('letters_preview', $id . '.webp');
-    if (is_file($pPrev)) {
-        $file_info['preview'] = $pPrev;
+        $img['original_path'] = zx_storage_path('letters', $imgId . '.' . $ext);
+        $img['preview_path'] = zx_storage_path('letters_preview', $imgId . '.jpg');
+        $img['original_url'] = '/letters/' . $imgId . '.' . $ext;
+        $img['preview_url'] = '/letters/preview/' . $imgId . '.jpg';
+        $images[] = $img;
     }
 }
-$smarty->assign('file_info', $file_info);
+$smarty->assign('images', $images);
 
 // Admin top expects press_list
 $press_list = [];
