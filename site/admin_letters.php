@@ -167,6 +167,32 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
             );
         }
 
+        // Update sort order for existing images
+        if ($id > 0) {
+            $zImg = db_select(
+                $db,
+                "SELECT id, sort_order FROM images WHERE entity_type=? AND entity_id=? ORDER BY sort_order ASC, id ASC",
+                "ii",
+                $ENTITY_TYPE_LETTER,
+                $id
+            );
+            while ($zImg && ($img = mysqli_fetch_array($zImg))) {
+                $imgId = (int) ($img['id'] ?? 0);
+                if ($imgId <= 0) {
+                    continue;
+                }
+                $key = 'sort_order_' . $imgId;
+                if (!array_key_exists($key, $_POST)) {
+                    continue;
+                }
+                $newSort = (int) ($_POST[$key] ?? 0);
+                $oldSort = (int) ($img['sort_order'] ?? 0);
+                if ($newSort !== $oldSort) {
+                    db_exec($db, "UPDATE images SET sort_order=? WHERE id=? LIMIT 1", "ii", $newSort, $imgId);
+                }
+            }
+        }
+
         // Delete selected images
         if ($id > 0) {
             $zImg = db_select($db, "SELECT id, format FROM images WHERE entity_type=? AND entity_id=? ORDER BY sort_order ASC, id ASC", "ii", $ENTITY_TYPE_LETTER, $id);

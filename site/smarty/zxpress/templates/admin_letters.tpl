@@ -120,7 +120,9 @@
 {section name=n loop=$images}
 <div style="margin-top:4px">
 <input type="checkbox" name="delete_image_{$images[n].id}" value="1"> удалить
- — id={$images[n].id} sort={$images[n].sort_order} format={$images[n].format}
+ — id={$images[n].id}
+ sort=<input type="text" name="sort_order_{$images[n].id}" value="{$images[n].sort_order}" style="width:50px">
+ format={$images[n].format}
 <div style="margin-left:18px">
 <a href="{$images[n].original_url}" target="_blank">оригинал</a> —
 <a href="{$images[n].preview_url}" target="_blank">превью</a><br>

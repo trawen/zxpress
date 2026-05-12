@@ -44,6 +44,25 @@
 	<meta name="keywords" content="ZX Spectrum Spektrum Спектрум Spеccy Спекки Z80 {$keywords}" />
 	<meta name="description" content="{$description|default:$title|strip_tags}" />
 
+	{if $og_title}
+	<meta property="og:title" content="{$og_title}" />
+	<meta property="og:description" content="{$og_description}" />
+	<meta property="og:site_name" content="ZXPRESS" />
+	<meta property="og:type" content="{$og_type}" />
+	<meta property="og:url" content="{$og_url}" />
+	{if $og_image}
+	<meta property="og:image" content="{$og_image}" />
+	{/if}
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="{$og_title}">
+	<meta name="twitter:description" content="{$og_description}">
+	<meta name="twitter:site" content="@zxpressru">
+	{if $og_image}
+	<meta name="twitter:image" content="{$og_image}">
+	<meta name="twitter:image:alt" content="{$og_title}">
+	{/if}
+	{/if}
+
 	<link href="{$host}img/style.css?&{$smarty.now}" type=text/css rel=stylesheet>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 	<script language=javascript src="{$host}img/zxpress.js?{$smarty.now}" type="text/javascript"></script>
@@ -75,6 +94,7 @@
 					<div class="top-menu-line">
 						<a href="{$host}ezines.php{$sl}">Пресса</a> ▪
 						<a href="{$host}books.php{$sl}">Книги</a> ▪
+						<a href="{$host}snailmail.php{$sl}">Письма</a> ▪
 						<a href="{$host}zxnet{$sl}">ZXNet</a>
 					</div>
 				{/if}
