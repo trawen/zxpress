@@ -83,7 +83,8 @@ a:hover, a:active, body_ahover
 <a href="admin_issue.php">Выпуски журналов</a> /
 <a href="admin_articles.php">Статьи журналов</a> /
 <a href="admin_authors.php">Авторы</a> /
-<a href="admin_letters.php">Письма</a>
+<a href="admin_letters.php">Письма</a> /
+<a href="admin_publications.php">Публикации</a>
  —
 <form method="post" action="/logout.php" style="display:inline">
 <input type="hidden" name="csrf_token" value="{$csrf_token}">

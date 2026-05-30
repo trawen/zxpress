@@ -282,7 +282,7 @@ $sqlList = 'SELECT l.*, '
 	. 'LEFT JOIN cities ctn ON ctn.id = at.city_id '
 	. 'LEFT JOIN countries cnt ON cnt.id = at.country_id '
 	. "WHERE $where "
-	. 'ORDER BY (l.date IS NULL) ASC, l.date DESC, l.id DESC '
+	. 'ORDER BY l.created_at DESC, l.id DESC '
 	. 'LIMIT ? OFFSET ?';
 $typesList = $types . 'ii';
 $paramsList = $params;

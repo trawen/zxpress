@@ -94,6 +94,7 @@
 					<div class="top-menu-line">
 						<a href="{$host}ezines.php{$sl}">Пресса</a> ▪
 						<a href="{$host}books.php{$sl}">Книги</a> ▪
+						{* <a href="{$host}publications.php{$sl}">Публикации</a> ▪ *}
 						<a href="{$host}snailmail.php{$sl}">Письма</a> ▪
 						<a href="{$host}zxnet{$sl}">ZXNet</a>
 					</div>
