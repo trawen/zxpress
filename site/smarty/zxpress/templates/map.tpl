@@ -1,8 +1,8 @@
 {include file="top.tpl"}
 
-<h1 class="title" style="">Карта электронных газет и журналов для ZX Spectrum</h1><br>
+<h1 class="title">Карта электронных газет и журналов для ZX Spectrum</h1><br>
 
-<div id="map" class="map" style="height: 500px"></div>
+<div id="map" class="map" class="map-canvas"></div>
 
 
 

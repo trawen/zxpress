@@ -11,8 +11,8 @@
 
       <li class="{if $r.last}last{/if} {if $level eq 0}first{/if}">
       	<div>
-      	<a href="rubrics.php?id={$r.id}&r={$r_id}#articles" {if $id eq $r.id}style="border-bottom: 2px solid #800; margin-top: 4px; margin-bottom: 4px"{/if}>{$r.name_plain}</a> 
-      	{if $r.articles}<span style="font: normal 12px Arial; color: #aaa">{$r.articles}</span>{/if}
+      	<a href="rubrics.php?id={$r.id}&r={$r_id}#articles" {if $id eq $r.id} class="nav-active"{/if}>{$r.name_plain}</a> 
+      	{if $r.articles}<span class="tree-item-count">{$r.articles}</span>{/if}
       	</div>
 
       	{menu data=$r.tree level=$level+1}
@@ -24,8 +24,8 @@
     {else}
       
       <li class="{if $r.last}last{/if} {if $level eq 0}first{/if}">
-      	<a href="rubrics.php?id={$r.id}&r={$r_id}#articles" {if $id eq $r.id}style="border-bottom: 2px solid #800; margin-top: 4px; margin-bottom: 4px"{/if}>{$r.name_plain}</a>
-      	{if $r.articles}<span style="font: normal 12px Arial; color: #aaa">{$r.articles}</span>{/if}
+      	<a href="rubrics.php?id={$r.id}&r={$r_id}#articles" {if $id eq $r.id} class="nav-active"{/if}>{$r.name_plain}</a>
+      	{if $r.articles}<span class="tree-item-count">{$r.articles}</span>{/if}
       </li>
 
     {/if}
@@ -53,13 +53,13 @@
 {if $ra.show}
 <br>
 <div>
-<a style="font: 13pt Georgia; color: #800;" href="{$host}issue.php?id={$ra.id_press}#{$ra.id_issue}">{$ra.press_name_plain} #{$ra.nm_issue}</a> 
+<a class="link-issue" href="{$host}issue.php?id={$ra.id_press}#{$ra.id_issue}">{$ra.press_name_plain} #{$ra.nm_issue}</a> 
 <br>
 </div>
-{if $ra.date}<div style="padding-bottom: 8px; font: normal 12px Tahoma; color: #999">{$ra.date}</div>{/if}
+{if $ra.date}<div class="rubrics-date">{$ra.date}</div>{/if}
 {/if}
 
-<div style="font: 13pt/15pt Times; text-align: left">
+<div class="type-article-link">
 <a href="{$host}article.php?id={$ra.id_article}">{$ra.title_list nofilter}</a>
 </div>
 

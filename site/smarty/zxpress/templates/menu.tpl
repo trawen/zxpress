@@ -12,10 +12,10 @@
 
       <li class="{if $r.last}last{/if} {if $level eq 0}first{/if}">
       	
-      	<a href="{$host}menu/{$r_id}/{$r.id}#articles" {if $id eq $r.id}style="border-bottom: 2px solid #800; margin-top: 4px; margin-bottom: 4px"{/if}>{$r.name_plain}</a> 
-      	{if $r.articles}<span style="font: normal 12px Arial; color: #aaa">{$r.articles}</span>{/if}
+      	<a href="{$host}menu/{$r_id}/{$r.id}#articles" {if $id eq $r.id} class="nav-active"{/if}>{$r.name_plain}</a> 
+      	{if $r.articles}<span class="tree-item-count">{$r.articles}</span>{/if}
         {if $login}
-        <input type="button" onclick="add_tree({$r.id})" value="+" style="height: 22px">
+        <input type="button" onclick="add_tree({$r.id})" value="+" class="tree-add-btn">
       	{/if}
       	{menu data=$r.tree level=$level+1}
 
@@ -26,10 +26,10 @@
     {else}
       
       <li class="{if $r.last}last{/if} {if $level eq 0}first{/if}">
-      	<a href="{$host}menu/{$r_id}/{$r.id}#articles" {if $id eq $r.id}style="border-bottom: 2px solid #800; margin-top: 4px; margin-bottom: 4px"{/if}>{$r.name_plain}</a>
-      	{if $r.articles}<span style="font: normal 12px Arial; color: #aaa">{$r.articles}</span>{/if}
+      	<a href="{$host}menu/{$r_id}/{$r.id}#articles" {if $id eq $r.id} class="nav-active"{/if}>{$r.name_plain}</a>
+      	{if $r.articles}<span class="tree-item-count">{$r.articles}</span>{/if}
         {if $login}
-        <input type="button" onclick="add_tree({$r.id})" value="+" style="height: 22px">
+        <input type="button" onclick="add_tree({$r.id})" value="+" class="tree-add-btn">
         {/if}
       </li>
 

@@ -2,15 +2,15 @@
 
 
 
-<H1>Библиотека бумажных книг и журналов для ZX Spectrum</H1>
+<H1>Бумажные книги и журналы для ZX Spectrum</H1>
 
 <br>
 
 
-<table>
+<table class="books-table">
 {section name=n loop=$books}
-<tr>
-<td>
+<tr class="books-row">
+<td class="books-cover-cell">
 
 {if $books[n].image_id}
 <img src="{$host}pictures/thumbs/{$books[n].image_id}.jpg" width="80" border=0 class="search_img">
@@ -19,10 +19,10 @@
 {/if}
 </td>
 
-<td valign="top" style="padding: 8px; font: normal 15px Times">
+<td valign="top" class="books-cell">
 
 
-<a style="font: bold 17px times" href="{$host}book.php?id={$books[n].id}" style="color: black; font: bold 14px Times">{$books[n].title1}</a>
+<a class="books-title-link" href="{$host}book.php?id={$books[n].id}" class="catalog-book-title">{$books[n].title1}</a>
 
 
 {if $books[n].title2}<div>{$books[n].title2} {$books[n].series}</div>{/if}
@@ -31,7 +31,7 @@
 
 <div>
 
-{if $books[n].online}<a style="font: bold 14px times" href="{$host}book.php?id={$books[n].id}" style="color: black; font: bold 14px Times"><img src="{$host}img/read.png" border=0 title="Читать — {$books[n].title1}"></a> &nbsp;{/if}
+{if $books[n].online}<a class="books-action-link" href="{$host}book.php?id={$books[n].id}" class="catalog-book-title"><img src="{$host}img/read.png" border=0 title="Читать — {$books[n].title1}"></a> &nbsp;{/if}
 
 {if $books[n].file_id}<img src="{$host}img/download.png" border=0 title="Скачать — {$books[n].title1}"> &nbsp;{/if}
 

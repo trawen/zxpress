@@ -7,7 +7,7 @@
 <head>
 	<title>{$title|strip_tags} {$keywords}</title>
 
-	{* <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> *}
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	{if $smarty.server.SCRIPT_NAME eq '/article.php'}
 
@@ -84,9 +84,9 @@
 					</div>
 					{if $login eq 1}
 					<div class="top-menu-line">
-						<form method="post" action="{$host}logout.php" style="display:inline;margin:0">
+						<form method="post" action="{$host}logout.php" class="form-inline">
 							<input type="hidden" name="csrf_token" value="{$csrf_token}">
-							<button type="submit" style="background:none;border:none;padding:0;font:inherit;cursor:pointer;color:inherit;text-decoration:underline">Log out ({$username})</button>
+							<button type="submit" class="btn-link">Log out ({$username})</button>
 						</form>
 					</div>
 					{/if}
@@ -113,13 +113,13 @@
 				{else}
 					{if $login eq 1}
 					<div class="top-menu-line">
-						<form method="post" action="{$host}logout.php" style="display:inline;margin:0">
+						<form method="post" action="{$host}logout.php" class="form-inline">
 							<input type="hidden" name="csrf_token" value="{$csrf_token}">
-							<button type="submit" style="background:none;border:none;padding:0;font:inherit;cursor:pointer;color:inherit;text-decoration:underline">Выйти ({$username})</button>
+							<button type="submit" class="btn-link">Выйти ({$username})</button>
 						</form>
 					</div>
 					{/if}
-					<div class="top-menu-line" style="opacity: 0.5"><a href="https://t.me/zxpress" target="_blank">Мы в
+					<div class="top-menu-line u-faded"><a href="https://t.me/zxpress" target="_blank">Мы в
 							телеграме</a></div>
 					{* style="padding: 0 8px; border-left: 8px solid black; border-right: 8px solid black;" *}
 					{* <div class="top-menu-line"><a href="{$host}news">Новости</a></div> *}
@@ -141,10 +141,10 @@
 			<div class='col-left'>
 
 				{literal}
-					<div style="text-align: left">
+					<div class="u-text-left">
 						<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
-     style="display:inline-block;width:640px;height:90px"
+     class="u-hidden"
      data-ad-client="ca-pub-4566303154078986"
      data-ad-slot="3254804951"></ins>
 <script>

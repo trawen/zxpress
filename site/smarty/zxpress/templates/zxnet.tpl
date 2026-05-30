@@ -8,7 +8,7 @@
 <TR>
 <TD>
 
-<table cellpadding=0 cellspacing=0 style="padding: 8px" border=0>
+<table cellpadding=0 cellspacing=0 class="page-pad-8" border=0>
 <tr>
 <td>
 
@@ -52,7 +52,7 @@
 
 <hr>
 
-<div style="width: 620px; overflow: hidden; padding-left: 8px">{$topic[n].text nofilter}</div>
+<div class="zxnet-topic-body">{$topic[n].text nofilter}</div>
 <hr>
 
 {/section}

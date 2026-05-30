@@ -5,7 +5,7 @@
 <form method='GET' action='{$host}search.php'>
 <table class="search-toolbar-table"><tr><td class="search-toolbar-q">
 <input type="hidden" id="input_page" value="{$page}">
-<div style="position:relative;display:inline-block">
+<div class="search-input-wrap">
 <input class="search_main" id="input_query" name="q" type="search" placeholder="Поиск..." value="{$query}" autocomplete="off">
 <div id="suggest-main" class="search-suggest"></div>
 </div>

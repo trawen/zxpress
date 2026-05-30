@@ -3,17 +3,21 @@
 
 <div class="col-right" id="col-right">
 
+    <div class="sidebar-search">
     <form method='GET' action='search.php'>
-        <div style="position:relative">
+        <div class="search-input-wrap">
         <input class="right" id="input_query_sidebar" name="q" type="search" placeholder="Поиск..." value="{$q}" autocomplete="off">
         <div id="suggest-sidebar" class="search-suggest"></div>
         </div>
     </form>
+    </div>
+
+    <div class="sidebar-body">
 
     <hr>
 
     <div align="center">
-        <div style="font: normal 13pt/17pt Times; word-wrap: break-word"><b>Темы:</b> <a
+        <div class="right-topics"><b>Темы:</b> <a
                 href="{$host}tag.php?id=3">Игры</a>, <a href="{$host}menu/64">Программное обеспечение</a>, <a
                 href="{$host}tag.php?id=56">Пресса</a>, <a href="{$host}menu/1/">Аппаратное обеспечение</a>, <a
                 href="{$host}tag.php?id=21">Сеть</a>, <a href="{$host}tag.php?id=5">Демосцена</a>, <a
@@ -23,12 +27,12 @@
     <hr>
 
     {if $lng eq 'eng'}
-        <div style="font: bold 13pt/17pt Times;">Similar articles:</div>
+        <div class="right-similar-heading">Similar articles:</div>
     {else}
-        <div style="font: bold 13pt/17pt Times;">Похожие статьи:</div>
+        <div class="right-similar-heading">Похожие статьи:</div>
     {/if}
     {foreach from=$random_articles item=r name=r}
-        <div style="font: normal 13pt/17pt Times;  padding-top: 8px; word-wrap: break-word">
+        <div class="right-similar-item">
             {if $lng eq 'eng'}
                 <a href="{$host}article.php?id={$r.id}{$dl}">{$r.title_eng nofilter}</a>
             {else}
@@ -40,14 +44,14 @@
     <hr>
 
 
-    <div style="font: normal 13pt Times;">
+    <div class="right-on-this-day">
         <center>
             <div><b>В этот день... &nbsp; {$today_month}</div><br>
 
-            <div style="font: bold 13pt/17pt Times">
+            <div class="right-on-this-day-links">
                 {foreach from=$monday item=m name=m}
                     <a href="{$host}issue.php?id={$m.press_id_cal}#{$m.number_cal}"
-                        style="white-space: nowrap">{$m.title_cal} №{$m.number_cal}{if $smarty.foreach.m.last eq false},
+                        class="u-nowrap">{$m.title_cal} №{$m.number_cal}{if $smarty.foreach.m.last eq false},
                         {/if}</a>
 
                 {/foreach}
@@ -65,7 +69,7 @@
         <select class="right" name='id' onChange="javascript:this.parentNode.submit();">
             <option selected>Выбрать издание...</option>
             {section name=n loop=$press_list}
-                <option style=" border: none" value='{$press_list[n].id}'>{$press_list[n].title}</option>
+                <option class="right-select-option" value='{$press_list[n].id}'>{$press_list[n].title}</option>
             {/section}
         </select>
     </form>
@@ -73,20 +77,6 @@
 
 
     {literal}
-    <style>
-    .search-suggest {
-        display:none; position:absolute; left:0; right:0; top:100%;
-        background:#fff; border:1px solid #ccc; border-top:none;
-        z-index:9999; max-height:200px; overflow-y:auto;
-        font:normal 13pt/17pt Times;
-    }
-    .search-suggest div {
-        padding:4px 8px; cursor:pointer;
-    }
-    .search-suggest div.active, .search-suggest div:hover {
-        background:#e8e8e8;
-    }
-    </style>
     <script type="text/javascript">
     (function(){
         function initSuggest(inputId, dropId) {
@@ -139,7 +129,7 @@
     {/literal}
 
     {literal}
-        <div style="filter:progid:DXImageTransform.Microsoft.Alpha(opacity=20); opacity: 0.1;" align=center>
+        <div class="right-counter-faded" align=center>
             <!--LiveInternet counter-->
             <script type="text/javascript">
                 <!--
@@ -157,4 +147,6 @@
             <!--/LiveInternet-->
         </div>
     {/literal}
-</div>
+
+    </div><!-- .sidebar-body -->
+</div><!-- .col-right -->

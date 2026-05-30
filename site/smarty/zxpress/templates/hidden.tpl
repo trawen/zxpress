@@ -8,7 +8,7 @@
 <TR>
 <TD>
 
-<table cellpadding=0 cellspacing=0 style="padding: 8px" border=0>
+<table cellpadding=0 cellspacing=0 class="page-pad-8" border=0>
 <tr>
 <td>
 
@@ -20,21 +20,21 @@
 {if $articles[n].print eq 1}
 <br>
 <table cellpadding=0 width="100%"><tr><td>
-<span style="font: bold 12pt Georgia; padding-left: 8px"><a href="issue.php?id={$articles[n].id}#{$articles[n][9]}">{$articles[n].title_list nofilter} №{$articles[n][9]}</a></span>
+<span class="articles-issue-title"><a href="issue.php?id={$articles[n].id}#{$articles[n][9]}">{$articles[n].title_list nofilter} №{$articles[n][9]}</a></span>
 </td><td align="right">
 <NOINDEX>
-<span style="font: 9pt Georgia; padding-right: 8px; color: #796C5F">{$articles[n].date} г.</span>
+<span class="articles-date">{$articles[n].date} г.</span>
 </NOINDEX>
 </td>
 </tr>
 </table>
 <hr noshade class="line">
 {/if}
-<div style="padding-bottom: 2px; padding-left: 8px">
-<a style="font: 10pt Verdana;" href="article.php?id={$articles[n][0]}&show=1">{$articles[n].title_list nofilter}</a>
+<div class="articles-row">
+<a class="articles-link" href="article.php?id={$articles[n][0]}&show=1">{$articles[n].title_list nofilter}</a>
 </div>
 {/section}
-<div style="padding-bottom: 2px; padding-left: 8px; font: 10pt Verdana; color: black">{$sape1 nofilter}</div>
+<div class="articles-sape">{$sape1 nofilter}</div>
 
 
 </td>

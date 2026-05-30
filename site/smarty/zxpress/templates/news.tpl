@@ -34,7 +34,7 @@
 
 {if $n.id_file}
 {if $n.type eq 1}
-<img src="http://zxpress.ru/news_files/{$n.id_file}.jpg" style="display: block; margin: auto; max-width: 100%">
+<img src="http://zxpress.ru/news_files/{$n.id_file}.jpg" class="news-img">
 {elseif $n.type eq 2}
 
 <iframe width="600" height="315" src="https://www.youtube.com/embed/{$n.url|regex_replace:'/[^a-zA-Z0-9_-]/':''}" frameborder="0" allowfullscreen></iframe>

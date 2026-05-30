@@ -12,7 +12,7 @@
 {foreach from=$top_articles item=t name=top}
 <div><a href="{$host}article.php?id={$t.id}&skip=1" title="Просмотры: {$t.views}">{$t.title_list nofilter}</a></div>
 <!-- {if $smarty.foreach.top.index eq 4}
-<div onclick="$('#top').show(); $(this).hide();" class="simulink">показать еще</div><div id="top" style="display: none">
+<div onclick="$('#top').show(); $(this).hide();" class="simulink">показать еще</div><div id="top" class="u-hidden">
 {/if} -->
 <!-- {if $smarty.foreach.top.last eq true}</div>{/if} -->
 {/foreach}

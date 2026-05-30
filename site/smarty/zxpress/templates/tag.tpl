@@ -30,21 +30,21 @@
 <td></td><td><hr></td></tr><tr>
 {/if}
 
-<td style="padding-right: 8px" nowrap valign=top>
+<td class="cell-pr-8" nowrap valign=top>
 {if $a.show}{/if}
 
 <td valign=top>
 {if $a.show}
-<div style="font: normal 15pt Times;">
+<div class="tag-press-title">
 <a href="{$host}issue.php?id={$a.id_press}#{$a.id_issue}">{$a.press_name_plain}</a> 
 <br></div>
-{if $a.date}<div class="date" style="padding-bottom: 8px">{$a.date}</div>{/if}
+{if $a.date}<div class="date" class="tag-date-pad">{$a.date}</div>{/if}
 {/if}
 
 {if $smarty.get.rubrics}
 
 	{foreach from=$a.rubrics item=id_rubrics}
-	<div style="display:inline">
+	<div class="u-inline">
 	<select onChange="save_rubrics({$a.id_article},this)">
 	<option>...</option>
 	{foreach from=$rubrics item=r}
@@ -58,7 +58,7 @@
 	<div></div>
 	
 	{foreachelse}
-	<div style="display:inline">
+	<div class="u-inline">
 	<select onChange="save_rubrics({$a.id_article},this)">
 	<option selected>...</option>
 	{foreach from=$rubrics item=r}
@@ -73,7 +73,7 @@
 
 {/if}
 
-<div style="font: 13pt/15pt Times; text-align: left">
+<div class="type-article-link">
 {if $lng eq 'eng'}
 <a href="{$host}article.php?id={$a.id_article}{$dl}">{$a.title_eng_list nofilter}</a>
 {else}

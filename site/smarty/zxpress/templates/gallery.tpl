@@ -74,7 +74,7 @@
 {/section}
 </center>
 
-<div style="clear: both"></div>
+<div class="u-clearfix"></div>
 
 
 

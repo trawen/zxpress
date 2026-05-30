@@ -2,13 +2,13 @@
 
 <br>
 <center>
-<table cellpadding="0" cellspacing="0" border="0" width="640">
+<table class="pub-layout" cellpadding="0" cellspacing="0" border="0">
 <tr>
 <td align="left">
 
 {if $pub_article_detail}
 
-<p style="font-size: 13px; margin-bottom: 8px;">
+<p class="pub-breadcrumbs">
 	<a href="{$host}publications.php">Публикации</a> &rarr;
 	<a href="{$host}publications.php?id={$pub.id}">{$pub.title_ru}</a>
 </p>
@@ -16,19 +16,19 @@
 <h1>{$pub_article_detail.title_ru}</h1>
 
 {if $pub_article_detail.pages_display}
-<p style="font-size: 13px; color: #888; margin: 4px 0 8px 0;">{$pub_article_detail.pages_display}</p>
+<p class="pub-meta">{$pub_article_detail.pages_display}</p>
 {/if}
 
 {if $pub_article_detail.body_html}
-<div style="margin-top: 20px; font-size: 16px; line-height: 1.5;">{$pub_article_detail.body_html nofilter}</div>
+<div class="pub-body">{$pub_article_detail.body_html nofilter}</div>
 {/if}
 
 {if $pub_article_images && $pub_article_images|@count gt 0}
-<div style="margin-top: 20px;">
+<div class="pub-images">
 {foreach from=$pub_article_images item=img}
-<div style="margin-bottom: 16px;">
+<div class="pub-image-item">
 	<a href="{$img.original_url}" target="_blank" rel="noopener">
-		<img src="{$img.display_src}" alt="" style="width: 100%; max-width: 100%; height: auto; border: 1px solid #ccc;">
+		<img src="{$img.display_src}" alt="" class="pub-image">
 	</a>
 </div>
 {/foreach}
@@ -36,12 +36,12 @@
 {/if}
 
 {if $pub_article_detail.files && $pub_article_detail.files|@count gt 0}
-<div style="margin-top: 20px; padding: 12px; background: #f5f5f0; border: 1px solid #ddd;">
+<div class="pub-files">
 <b>Файлы:</b>
 {foreach from=$pub_article_detail.files item=f}
-<div style="margin-top: 6px; font-size: 14px;">
+<div class="pub-file-item">
 	<a href="{$f.file_url}" target="_blank" rel="noopener">{$f.format_label}</a>
-	{if $f.size_display}<span style="color: #888;">({$f.size_display})</span>{/if}
+	{if $f.size_display}<span class="pub-muted">({$f.size_display})</span>{/if}
 </div>
 {/foreach}
 </div>
@@ -49,23 +49,23 @@
 
 {elseif $pub}
 
-<p style="font-size: 13px; margin-bottom: 8px;">
+<p class="pub-breadcrumbs">
 	<a href="{$host}publications.php">← Все публикации</a>
 </p>
 
-<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<table class="pub-header-table" cellpadding="0" cellspacing="0" border="0">
 <tr valign="top">
 {if $pub_cover}
-<td width="200" style="padding-right: 16px;">
+<td class="pub-cover-cell">
 	<a href="{$pub_cover.original_url}" target="_blank" rel="noopener">
-		<img src="{$pub_cover.thumb_src}" alt="" style="width: 180px; max-width: 180px; height: auto; border: 1px solid #ccc;">
+		<img src="{$pub_cover.thumb_src}" alt="" class="pub-cover-img">
 	</a>
 </td>
 {/if}
 <td>
-<h1 style="margin-top: 0;">{$pub.title_ru}</h1>
+<h1 class="pub-title">{$pub.title_ru}</h1>
 
-<div style="font-size: 14px; color: #555; margin-bottom: 8px;">
+<div class="pub-info">
 {if $pub.type_label}<span>{$pub.type_label}</span>{/if}
 {if $pub.published_display} &nbsp;·&nbsp; {$pub.published_display}{/if}
 {if $pub.geo_display} &nbsp;·&nbsp; {$pub.geo_display}{/if}
@@ -75,31 +75,31 @@
 </table>
 
 {if $pub_articles && $pub_articles|@count gt 0}
-<div style="margin-top: 24px;">
-<h2 style="font-size: 16px; margin-bottom: 12px;">Содержание ({$pub_articles|@count})</h2>
+<div class="pub-toc">
+<h2 class="pub-toc-heading">Содержание ({$pub_articles|@count})</h2>
 
 {foreach from=$pub_articles item=a}
-<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid #eee;">
+<table class="pub-toc-item" cellpadding="0" cellspacing="0" border="0">
 <tr valign="top">
 {if $a.cover}
-<td width="100" style="padding-right: 10px;">
+<td class="pub-toc-cover-cell">
 	<a href="{$host}publications.php?id={$pub.id}&amp;article={$a.id}">
-		<img src="{$a.cover.thumb_src}" alt="" width="90" style="width: 90px; max-width: 90px; height: auto; border: 1px solid #ccc;">
+		<img src="{$a.cover.thumb_src}" alt="" width="90" class="pub-toc-thumb">
 	</a>
 </td>
 {/if}
 <td>
-	<a href="{$host}publications.php?id={$pub.id}&amp;article={$a.id}" style="font-size: 15px; font-weight: bold;">{$a.title_ru}</a>
+	<a href="{$host}publications.php?id={$pub.id}&amp;article={$a.id}" class="pub-toc-title">{$a.title_ru}</a>
 	{if $a.pages_display}
-	<span style="font-size: 12px; color: #888; margin-left: 8px;">{$a.pages_display}</span>
+	<span class="pub-toc-pages">{$a.pages_display}</span>
 	{/if}
 	{if $a.summary_html}
-	<div style="margin-top: 4px; font-size: 14px; color: #444;">{$a.summary_html nofilter}</div>
+	<div class="pub-toc-summary">{$a.summary_html nofilter}</div>
 	{/if}
 	{if $a.files && $a.files|@count gt 0}
-	<div style="margin-top: 4px; font-size: 13px;">
+	<div class="pub-toc-files">
 		{foreach from=$a.files item=f name=fl}
-		<a href="{$f.file_url}" target="_blank" rel="noopener">{$f.format_label}</a>{if $f.size_display} <span style="color:#888;">({$f.size_display})</span>{/if}{if !$smarty.foreach.fl.last}, {/if}
+		<a href="{$f.file_url}" target="_blank" rel="noopener">{$f.format_label}</a>{if $f.size_display} <span class="pub-muted">({$f.size_display})</span>{/if}{if !$smarty.foreach.fl.last}, {/if}
 		{/foreach}
 	</div>
 	{/if}
@@ -111,11 +111,11 @@
 {/if}
 
 {if $pub_images && $pub_images|@count gt 0}
-<div style="margin-top: 20px;">
+<div class="pub-images">
 {foreach from=$pub_images item=img}
-<div style="margin-bottom: 16px;">
+<div class="pub-image-item">
 	<a href="{$img.original_url}" target="_blank" rel="noopener">
-		<img src="{$img.display_src}" alt="" style="width: 100%; max-width: 100%; height: auto; border: 1px solid #ccc;">
+		<img src="{$img.display_src}" alt="" class="pub-image">
 	</a>
 </div>
 {/foreach}
@@ -132,7 +132,7 @@
 <h1>Публикации</h1>
 
 {if $pub_type_filters && $pub_type_filters|@count gt 0}
-<p style="font-size: 13px; line-height: 1.8; margin-bottom: 16px;">
+<p class="pub-filters">
 	<b>Тип:</b>
 	{if $filter_type}
 		<a href="{$host}publications.php">все</a>,
@@ -152,30 +152,30 @@
 
 {if $pub_rows && $pub_rows|@count gt 0}
 {foreach from=$pub_rows item=row}
-<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom: 18px; padding-bottom: 12px;">
+<table class="pub-list-item" cellpadding="0" cellspacing="0" border="0">
 <tr valign="top">
-<td width="140" style="padding-right: 12px;">
+<td class="pub-list-cover-cell">
 {if $row.cover}
 	<a href="{$host}publications.php?id={$row.id}">
-		<img src="{$row.cover.thumb_src}" alt="" width="128" style="width: 128px; max-width: 128px; height: auto; border: 1px solid #ccc;">
+		<img src="{$row.cover.thumb_src}" alt="" width="128" class="pub-list-thumb">
 	</a>
 {else}
-	<div style="width: 128px; height: 170px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #aaa;">нет обложки</div>
+	<div class="pub-list-placeholder">нет обложки</div>
 {/if}
 {if $row.created_display}
-<div style="margin-top: 4px; font-size: 11px; color: #666;">опубликовано: {$row.created_display}</div>
+<div class="pub-list-date">опубликовано: {$row.created_display}</div>
 {/if}
 </td>
 <td>
-	<a href="{$host}publications.php?id={$row.id}" style="font-size: 16px; font-weight: bold;">{$row.title_ru}</a>
-	<div style="margin-top: 4px; font-size: 13px; color: #888;">
+	<a href="{$host}publications.php?id={$row.id}" class="pub-list-title">{$row.title_ru}</a>
+	<div class="pub-list-meta">
 		{$row.type_label}
 		{if $row.published_display} &nbsp;·&nbsp; {$row.published_display}{/if}
 		{if $row.geo_display} &nbsp;·&nbsp; {$row.geo_display}{/if}
 		{if $row.articles_count gt 0} &nbsp;·&nbsp; {$row.articles_count} статей{/if}
 	</div>
 	{if $row.summary_html}
-	<div style="margin-top: 6px; font-size: 14px;">{$row.summary_html nofilter}</div>
+	<div class="pub-list-summary">{$row.summary_html nofilter}</div>
 	{/if}
 </td>
 </tr>
@@ -188,7 +188,7 @@
 {/if}
 
 {if $pub_total_pages gt 1}
-<div style="margin-top: 20px; font-size: 13px;">
+<div class="pub-pagination">
 	Страницы:
 	{section name=pg loop=$pub_total_pages}
 		{assign var=pnum value=$smarty.section.pg.iteration}

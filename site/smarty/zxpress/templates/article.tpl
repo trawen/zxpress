@@ -19,10 +19,10 @@
         <td>
 
             {if $lng eq 'eng'}
-                <a class="title" style="font: 13pt Georgia; color: #800;"
+                <a class="title link-issue"
                     href="{$host}issue.php?id={$press[5]}{$dl}#{$issue.title}">{$article.name_plain}</a>
             {else}
-                <a class="title" style="font: 13pt Georgia; color: #800;"
+                <a class="title link-issue"
                     href="{$host}issue.php?id={$press[5]}{$dl}#{$issue.title}">{$press.title_plain}
                     #{$issue.title}</a>
             {/if}
@@ -30,32 +30,32 @@
             {if $issue.date neq "01 января 1970"}
             <div class="date">{$issue.date}</div>{/if}
         </td>
-        <td align=right>
+        <td align=right class="article-toolbar-cell">
 
 
-            <div style="height: 20px; float: right; padding-right: 10px">
-                <img src="/img/monitor.png" width=20 onclick="ToggleColors();" style="cursor: pointer">
+            <div class="article-toolbar-item">
+                <img src="/img/monitor.png" width=20 onclick="ToggleColors();" class="u-clickable">
             </div>
 
-            <div style="height: 20px; float: right; padding-right: 10px">
+            <div class="article-toolbar-item">
                 <a rel="nofollow" href="pure-text.php?id={$id}"><img src="/img/dws.png" height=19></a>
             </div>
 
 
-            <div style="height: 20px; float: right; padding-right: 10px">
+            <div class="article-toolbar-item">
                 <a rel="nofollow" href="print.php?id={$id}" target="_blank"><img src="/img/print.png" width=20></a>
             </div>
 
             {foreach from=$tags item=t}
-                <div style="height: 20px; float: right; padding-right: 16px">
+                <div class="article-toolbar-item article-toolbar-item--tags">
                     <div
-                        style="height: 20px; width: 13px; background: url('/img/tag1.png') 100% 100% no-repeat; float: left;">
+                        class="article-tag-left">
                     </div>
-                    <div style="height: 20px; background: url('img/tag2.png') 100% 100% repeat-x; float: left;">
+                    <div class="article-tag-mid">
                         &nbsp; <a href="tag.php?id={$t.id}">{$t.tag_name}</a>
                         &nbsp;
                     </div>
-                    <div style="height: 20px; width: 5px; background: url('img/tag3.png') 100% 100%; float: left;">
+                    <div class="article-tag-right">
                     </div>
                 </div>
             {/foreach}
@@ -68,17 +68,17 @@
 {if $lng eq 'eng'}
     <div>
         <div>
-            <h1 style="">{$article.title_eng_html nofilter}</h1>
+            <h1>{$article.title_eng_html nofilter}</h1>
         </div>
-        <div style="justify-self: center;"><img src="{$host}screens/1/{$screens.id}.{$screens.format}" width="128"
+        <div class="article-screen-wrap"><img src="{$host}screens/1/{$screens.id}.{$screens.format}" width="128"
                 title="{$article.title_eng_plain_meta}" alt="{$article.title_eng_plain_meta}"></div>
     </div>
 {else}
     <div>
         <div>
-            <h1 style="">{$article.title_html nofilter}</h1>
+            <h1>{$article.title_html nofilter}</h1>
         </div>
-        <div style="justify-self: center;"><img src="{$host}screens/1/{$screens.id}.{$screens.format}" width="128"
+        <div class="article-screen-wrap"><img src="{$host}screens/1/{$screens.id}.{$screens.format}" width="128"
                 title="{$article.title_plain_meta}" alt="{$article.title_plain_meta}"></div>
     </div>
 {/if}
@@ -88,7 +88,7 @@
     {foreach from=$breadcrumbs item=b name=b}
 
         {if $smarty.foreach.b.iteration gt 1} → {/if}
-        <a href="{$host}menu/{if $b.parent}{$breadcrumbs[0].id}/{/if}{$b.id}" style="color:black">{$b.name_plain}</a>
+        <a href="{$host}menu/{if $b.parent}{$breadcrumbs[0].id}/{/if}{$b.id}" class="u-link-black">{$b.name_plain}</a>
     {/foreach}
     <hr>
     <br>
@@ -119,14 +119,14 @@
     <hr>
     <br>
     {if $lng eq 'eng'}
-        <div style="font: bold 13pt Georgia">Other articles:</div>
+        <div class="article-related-heading">Other articles:</div>
         <br>
-        <table style="width: 600;">
+        <table class="article-related-table">
             {section name=n loop=$other_articles}
                 <tr>
                     {if $other_articles[n].current}
                         <td>
-                            <h2 style="border-bottom: 2px solid #800; margin-top: 4px; margin-bottom: 4px">
+                            <h2 class="nav-active">
                                 {$other_articles[n].title_eng_html nofilter}</h2>
                         </td>
                     {else}
@@ -145,14 +145,14 @@
             {/if}
         </table>
     {else}
-        <div style="font: bold 13pt Georgia">Другие статьи номера:</div>
+        <div class="article-related-heading">Другие статьи номера:</div>
         <br>
-        <table style="width: 600;">
+        <table class="article-related-table">
             {section name=n loop=$other_articles}
                 <tr>
                     {if $other_articles[n].current}
                         <td>
-                            <h2 style="border-bottom: 2px solid #800; margin-top: 4px; margin-bottom: 4px">{$other_articles[n].title_html nofilter}
+                            <h2 class="nav-active">{$other_articles[n].title_html nofilter}
                             </h2>
                         </td>
                     {else}

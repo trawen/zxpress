@@ -3,40 +3,40 @@
 <h1 class="title">Ваше мнение о проекте, пожелания или просто "привет"</h1>
 
 
-<b>Так-же можно написать нам в <a style="opacity: 0.5" href="https://t.me/zxpress" target="_blank">телеграм</a> чат</b>
+<b>Так-же можно написать нам в <a class="u-faded" href="https://t.me/zxpress" target="_blank">телеграм</a> чат</b>
 
 <br>
 <br>
 
 <form method="POST" action="#comments">
 
-{if $error}<div style="COLOR: red;">{$error}<br></div>{/if}
+{if $error}<div class="msg-error">{$error}<br></div>{/if}
 
 
 
 
-<div style="padding: 4px">
-<input class="input" style="width: 150px" type="text" name="user_name" value="{$user_name}" maxlength="32"> &nbsp; ник/имя</div>
+<div class="pad-4">
+<input class="input input-narrow" type="text" name="user_name" value="{$user_name}" maxlength="32"> &nbsp; ник/имя</div>
 
-<div style="padding: 4px">
-<input class="input" style="width: 150px" type="text" name="user_email" value="{$user_email}" maxlength="32">  &nbsp; почта (не публикуется)
+<div class="pad-4">
+<input class="input input-narrow" type="text" name="user_email" value="{$user_email}" maxlength="32">  &nbsp; почта (не публикуется)
 </div>
 
-<div style="padding: 4px">
-{if $e2e_captcha_plain}<span data-testid="e2e-guestbook-captcha" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true">{$e2e_captcha_plain}</span>{/if}
-<input class="input" style="width: 150px; background-image: url(confirm_code.php?token={$captcha_token}); background-repeat: no-repeat;" type="text" name="confirm_code">
+<div class="pad-4">
+{if $e2e_captcha_plain}<span data-testid="e2e-guestbook-captcha" class="u-sr-only" aria-hidden="true">{$e2e_captcha_plain}</span>{/if}
+<input class="input input-captcha input-narrow" type="text" name="confirm_code" style="background-image: url(confirm_code.php?token={$captcha_token})">
  &nbsp; код
 
 </div>
 
 
-<div style="padding: 4px">
-<textarea type="text" name="message" rows="3" style="width: 600px;">{$message}</textarea>
+<div class="pad-4">
+<textarea type="text" name="message" rows="3" class="textarea-guestbook">{$message}</textarea>
 </div>
 
 
-<div style="padding: 4px">
-<input style="width: 150px" type="submit" name="submit" value="отправить">
+<div class="pad-4">
+<input class="input-narrow" type="submit" name="submit" value="отправить">
 </div>
 
 
@@ -53,9 +53,9 @@
 {if $comments}
 {section name=n loop=$comments}
 <hr>
-<div style="padding-top: 10px; font: normal 13pt Times; width: 90%; padding-left: 8px">
-<div style="font: normal 13pt Times; padding-bottom: 3px">
-<b {if $comments[n].nickname eq 'newart'}style="color: #A41E00"{/if}>{$comments[n].nickname}</b>
+<div class="guestbook-comment">
+<div class="guestbook-comment-header">
+<b {if $comments[n].nickname eq 'newart'} class="guestbook-author-highlight"{/if}>{$comments[n].nickname}</b>
  &nbsp; {$comments[n].date}
 </div>
 <div>{$comments[n].text|escape:'htmlall'|nl2br nofilter}</div>

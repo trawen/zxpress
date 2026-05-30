@@ -22,9 +22,9 @@
 
 {section name=n loop=$updates}
 {if $updates[n].print}
-<div style="display: flex;">
-<div style="flex: 0 0 100px;"></div>
-<div style="width:100%"><hr></div>
+<div class="updates-rule-row">
+<div class="updates-rule-spacer"></div>
+<div class="updates-rule-line"><hr></div>
 </div>
 {/if}
 

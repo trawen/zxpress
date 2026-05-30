@@ -24,19 +24,19 @@
 
 
 
-<div style="padding-left: 56px"><H1>Library of electronic newspapers and magazines for ZX Sepectrum</H1></div>
+<div class="catalog-page-title-wrap"><H1>Library of electronic newspapers and magazines for ZX Sepectrum</H1></div>
 
 <br><br>
 
 <table cellpadding=0 cellspacing=0>
 <tr>
 <td></td>
-<td class="catalog8" style="font: bold 14px Times">TITLE</td>
-<td class="catalog8" style="font: bold 14px Times">TYPE</td>
-<td class="catalog8" style="font: bold 14px Times" nowrap>YEAR</td>
-<td class="catalog8" style="font: bold 14px Times" nowrap>CITY</td>
-<td class="catalog8" style="font: bold 14px Times">ISSUE</td>
-<td class="catalog8" style="font: bold 14px Times">ARTICLES</td>
+<td class="catalog8" class="catalog-th-times">TITLE</td>
+<td class="catalog8" class="catalog-th-times">TYPE</td>
+<td class="catalog8" class="catalog-th-times" nowrap>YEAR</td>
+<td class="catalog8" class="catalog-th-times" nowrap>CITY</td>
+<td class="catalog8" class="catalog-th-times">ISSUE</td>
+<td class="catalog8" class="catalog-th-times">ARTICLES</td>
 </tr>
 
 
@@ -50,8 +50,8 @@
 
 {if $catalog[n].letter}
 <td class="catalog2" valign="bottom">
-<div style="COLOR: #493C2F; font: bold 32px Times; position: relative; top: 10px">{$catalog[n].letter}</div></td>
-<td class="catalog2" valign="bottom"><a href="{$host}issue.php?id={$catalog[n].id}" {if $catalog[n].online_articles eq 0}style="color: #594C3F"{/if}><b>{$catalog[n].title_plain}</b></a></td>
+<div class="catalog-letter">{$catalog[n].letter}</div></td>
+<td class="catalog2" valign="bottom"><a href="{$host}issue.php?id={$catalog[n].id}" {if $catalog[n].online_articles eq 0} class="catalog-link-offline"{/if}><b>{$catalog[n].title_plain}</b></a></td>
 <td class="catalog2" valign="bottom">{if $catalog[n].type eq 1}magazine{elseif $catalog[n].type eq 0}newspaper{/if}</td>
 
 
@@ -63,7 +63,7 @@
 <td class="catalog2" valign="bottom" align="center"><b>{if $catalog[n].online_articles}{$catalog[n].online_articles}{else}—{/if}</b></td>
 {else}
 <td></td>
-<td class="catalog"><a href="{$host}issue.php?id={$catalog[n].id}" {if $catalog[n].online_articles eq 0}style="color: #594C3F"{/if}><b>{$catalog[n].title_plain}</b></a></td>
+<td class="catalog"><a href="{$host}issue.php?id={$catalog[n].id}" {if $catalog[n].online_articles eq 0} class="catalog-link-offline"{/if}><b>{$catalog[n].title_plain}</b></a></td>
 <td class="catalog">{if $catalog[n].type eq 1}magazine{elseif $catalog[n].type eq 0}newspaper{/if}</td>
 <td class="catalog" align="center" nowrap>
 {if $catalog[n].years_from neq 1970 AND $catalog[n].years_to neq 1970 AND $catalog[n].years_from neq $catalog[n].years_to}{$catalog[n].years_from}-{$catalog[n].years_to}{elseif $catalog[n].years_from neq 1970}{$catalog[n].years_from}{elseif $catalog[n].years_to neq 1970}{$catalog[n].years_to}{else}&nbsp;{/if}
@@ -90,7 +90,7 @@
 
 
 {/if}
-<tr><td colspan="8" style="height: 4px"></tr>
+<tr><td colspan="8" class="catalog-spacer-4"></tr>
 {/section}	
 </table>
 
@@ -112,19 +112,19 @@
 
 
 
-<div style="padding-left: 56px"><H1>Библиотека электронных газет и журналов для ZX Spectrum</H1></div>
+<div class="catalog-page-title-wrap"><H1>Библиотека электронных газет и журналов для ZX Spectrum</H1></div>
 
 <br><br>
 
 <table cellpadding=0 cellspacing=0>
 <tr>
 <td></td>
-<td class="catalog8" style="font: bold 14px Times">НАЗВАНИЕ</td>
-<td class="catalog8" style="font: bold 14px Times">ФОРМА</td>
-<td class="catalog8" style="font: bold 14px Times" nowrap>ГОДА ИЗДАНИЯ</td>
-<td class="catalog8" style="font: bold 14px Times" nowrap>ГОРОД</td>
-<td class="catalog8" style="font: bold 14px Times">ВЫПУСКИ</td>
-<td class="catalog8" style="font: bold 14px Times">СТАТЬИ</td>
+<td class="catalog8" class="catalog-th-times">НАЗВАНИЕ</td>
+<td class="catalog8" class="catalog-th-times">ФОРМА</td>
+<td class="catalog8" class="catalog-th-times" nowrap>ГОДА ИЗДАНИЯ</td>
+<td class="catalog8" class="catalog-th-times" nowrap>ГОРОД</td>
+<td class="catalog8" class="catalog-th-times">ВЫПУСКИ</td>
+<td class="catalog8" class="catalog-th-times">СТАТЬИ</td>
 </tr>
 
 
@@ -138,8 +138,8 @@
 
 {if $catalog[n].letter}
 <td class="catalog2" valign="bottom">
-<div style="COLOR: #493C2F; font: bold 32px Times; position: relative; top: 10px">{$catalog[n].letter}</div></td>
-<td class="catalog2" valign="bottom"><a href="{$host}issue.php?id={$catalog[n].id}" {if $catalog[n].online_articles eq 0}style="color: #594C3F"{/if}><b>{$catalog[n].title_plain}</b></a></td>
+<div class="catalog-letter">{$catalog[n].letter}</div></td>
+<td class="catalog2" valign="bottom"><a href="{$host}issue.php?id={$catalog[n].id}" {if $catalog[n].online_articles eq 0} class="catalog-link-offline"{/if}><b>{$catalog[n].title_plain}</b></a></td>
 <td class="catalog2" valign="bottom">{if $catalog[n].type eq 1}журнал{elseif $catalog[n].type eq 0}газета{/if}</td>
 
 
@@ -151,7 +151,7 @@
 <td class="catalog2" valign="bottom" align="center"><b>{if $catalog[n].online_articles}{$catalog[n].online_articles}{else}—{/if}</b></td>
 {else}
 <td></td>
-<td class="catalog"><a href="{$host}issue.php?id={$catalog[n].id}" {if $catalog[n].online_articles eq 0}style="color: #594C3F"{/if}><b>{$catalog[n].title_plain}</b></a></td>
+<td class="catalog"><a href="{$host}issue.php?id={$catalog[n].id}" {if $catalog[n].online_articles eq 0} class="catalog-link-offline"{/if}><b>{$catalog[n].title_plain}</b></a></td>
 <td class="catalog">{if $catalog[n].type eq 1}журнал{elseif $catalog[n].type eq 0}газета{/if}</td>
 <td class="catalog" align="center">
 {if $catalog[n].years_from neq 1970 AND $catalog[n].years_to neq 1970 AND $catalog[n].years_from neq $catalog[n].years_to}{$catalog[n].years_from}-{$catalog[n].years_to}{elseif $catalog[n].years_from neq 1970}{$catalog[n].years_from}{elseif $catalog[n].years_to neq 1970}{$catalog[n].years_to}{else}&nbsp;{/if}
@@ -178,7 +178,7 @@
 
 
 {/if}
-<tr><td colspan="8" style="height: 2px"></tr>
+<tr><td colspan="8" class="catalog-spacer-2"></tr>
 {/section}	
 </table>
 
@@ -204,31 +204,31 @@
 
 <a name="books"></a>
 
-<div style="padding-left: 8px">
-<H1>Библиотека ZX Spectrum: <a href="#magazines">электронные газеты и журналы</a> / <span style="color: #777">«книги»</span></H1>
+<div class="catalog-books-title-wrap">
+<H1>Библиотека ZX Spectrum: <a href="#magazines">электронные газеты и журналы</a> / <span class="catalog-books-muted">«книги»</span></H1>
 </div>
 
 <br><br>
 
 <table cellpadding=0 cellspacing=0>
 <tr>
-<td class="catalog8" style="font: bold 13px Verdana">НАЗВАНИЕ</td>
-<td class="catalog8" style="font: bold 13px Verdana">ИЗДАТЕЛЬСТВО</td>
-<td class="catalog8" style="font: bold 13px Verdana">ГОД</td>
-<td class="catalog8" style="font: bold 13px Verdana">СКАН</td>
+<td class="catalog8" class="catalog-th-verdana">НАЗВАНИЕ</td>
+<td class="catalog8" class="catalog-th-verdana">ИЗДАТЕЛЬСТВО</td>
+<td class="catalog8" class="catalog-th-verdana">ГОД</td>
+<td class="catalog8" class="catalog-th-verdana">СКАН</td>
 </tr>
 
 {section name=n loop=$books}
 <tr>
-<td class="catalog"><a href="{$host}book.php?id={$books[n].id}" style="color: black; font: bold 14px Times">{$books[n].title1_plain}
+<td class="catalog"><a href="{$host}book.php?id={$books[n].id}" class="catalog-book-title">{$books[n].title1_plain}
 {if $books[n].title2}<br>{$books[n].title2_plain}{/if}</a>
 </td>
-<td class="catalog" style="font: normal 13px Times">{if $books[n].publisher}{$books[n].publisher_plain}{else}&nbsp;{/if}</td>
+<td class="catalog" class="catalog-cell-times">{if $books[n].publisher}{$books[n].publisher_plain}{else}&nbsp;{/if}</td>
 <td class="catalog">{if $books[n].date eq 1970}&nbsp;{else}{$books[n].date}{/if}</td>
 <td class="catalog" align="center">+</td>
 </tr>
 
-<tr><td colspan="4" style="height: 6px"></tr>
+<tr><td colspan="4" class="catalog-spacer-6"></tr>
 
 {/section}
 </table>

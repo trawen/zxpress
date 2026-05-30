@@ -9,11 +9,11 @@
 <TABLE cellSpacing=0 cellPadding=0 align="center" width="100%">
 <TBODY>
 <TR>
-<TD style="font: 13px Arial;">
+<TD class="type-arial-13">
 
-<table cellpadding=0 cellspacing=0 style="padding: 8px" border=0>
+<table cellpadding=0 cellspacing=0 class="page-pad-8" border=0>
 
-<tr><td style="font: 13px Arial">
+<tr><td class="type-arial-13">
 
 <table><tr><td>
 {section name=n loop=$screens}
@@ -21,20 +21,20 @@
 {/section}
 </td><td>&nbsp;
 
-<table cellpadding=0 width=100% style="padding-left: 16px"><tr><td style="font: 15pt Georgia;">
+<table cellpadding=0 width=100% class="book-meta"><tr><td class="book-article-title">
 <a href="{$host}book.php?id={$press.id}" title="скачать книгу {$press.title1|strip_tags|escape:'html'}">{$press.title1 nofilter}</a>
-</td><td style="font: 10pt Georgia; color: #796C5F; text-align: right; padding-right: 8px;"><noindex>{$press.date} г.
+</td><td class="book-article-date"><noindex>{$press.date} г.
 </noindex></td></tr></table>
 <hr class="line">
 
-<div style="font: 10pt Verdana; width: 600; padding-left: 16px">{$press.ch_title nofilter}</div><br><br>
+<div class="book-article-chapter">{$press.ch_title nofilter}</div><br><br>
 
 </td></tr></table>
 
 
 
 {if $article_tags}
-<div style="font: 10pt Verdana; padding-left: 16px">
+<div class="book-article-tags">
 Темы статьи: <strong>
 {section name=n loop=$article_tags}
 <a class="f{$article_tags[n].nm}" href="{$host}articles_list.php?tag={$article_tags[n].id_tag}" id="tag"> {$article_tags[n].tag_name}</a> &nbsp;
@@ -47,7 +47,7 @@
 
 
 
-<div style='background-color: white; color: black; font: normal Arial 14px; text-align: left; padding: 32px; width: 600px; opacity: .7;' id="palette">
+<div class="chapter-palette" id="palette">
 
 
 
@@ -72,7 +72,7 @@ document.write(VK.Share.button(false,{type: "round", text: "Сохранить"}
 {/literal}
 <td width="20%">
 <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A//zxpress.ru/article.php?id={$article.id}
-&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" class="chapter-fb-iframe" allowTransparency="true"></iframe>
 </td>
 
 <td width="20%">
@@ -92,14 +92,14 @@ document.write(VK.Share.button(false,{type: "round", text: "Сохранить"}
 
 
 {if $other_articles}
-<div style="width: 600; padding-left: 32px">
-<br><br><div style="font: bold 13pt Georgia">СОДЕРЖАНИЕ:</div>
+<div class="book-toc-wrap">
+<br><br><div class="article-related-heading">СОДЕРЖАНИЕ:</div>
 
 
 <ol>
 {section name=n loop=$other_articles}
-<li style="padding-top: 4px">
-<div style="font: 10pt/12pt Verdana; padding-left: 16px">
+<li class="book-toc-item">
+<div class="book-toc-link">
 <a href="{$host}chapter.php?id={$other_articles[n].ch_id}"> {$other_articles[n].ch_title nofilter}</a>
 </div>
 </li>

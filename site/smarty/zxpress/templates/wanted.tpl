@@ -6,13 +6,13 @@
 
 
 
-<div style="border: 1px; border-left: 2px; border-right: 2px; border-style: solid; border-color: #D6D0AB; padding: 12px 12px 14px 12px; background-color: #F2EFDE; opacity: 0.9; margin-left: 4px">
+<div class="wanted-banner">
 
-<div style="padding: 32px">
+<div class="wanted-banner-inner">
 <H1>Ретро-лихорадка</H1>
 
 <br>
-<b style="font: bold 16px Verdana; color: red">ОБЬЯВЛЯЕМ НАГРАДУ ЗА ДИСКЕТЫ И КАССЕТЫ ДЛЯ СПЕКТРУМА!</b>
+<b class="wanted-banner-title">ОБЬЯВЛЯЕМ НАГРАДУ ЗА ДИСКЕТЫ И КАССЕТЫ ДЛЯ СПЕКТРУМА!</b>
 <br>
 
 <p><img border=1 src="http://kino-govno.com/img/30844.jpg" align=right>
