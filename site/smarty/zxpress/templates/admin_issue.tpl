@@ -37,8 +37,8 @@
 <td>
 Название <input type="text" name="title" value="{$press.title}" onchange="change('press_change');">
 
- &nbsp; Формат  
-<select name='type' onchange="change('press_change');">
+ &nbsp; <label for="admin-issue-type">Формат</label>
+<select id="admin-issue-type" name='type' onchange="change('press_change');">
 {if $press.type eq 0}<option value='0' selected>Газета</option><option value='1'>Журнал</option>
 <option value='2'>Отчёт</option>
 {elseif $press.type eq 1}<option value='0'>Газета</option><option value='1' selected>Журнал</option>
@@ -48,8 +48,8 @@
 {/if}
 </select>
 
- &nbsp; Город  
-<select name="city" onchange="change('press_change');">
+ &nbsp; <label for="admin-issue-city">Город</label>
+<select id="admin-issue-city" name="city" onchange="change('press_change');">
 <option value="{$cities[n].id}" {if $cities[n].id eq $press.city}selected{/if}>Неизвестен</otpion>
 {section name=n loop=$cities}
 <option value="{$cities[n].id}" {if $cities[n].id eq $press.city}selected{/if}>{$cities[n].name}</otpion>
@@ -146,8 +146,8 @@
 </div>
 
 <div style="padding: 4px;">
-выпуск 
-<select name="issue_file_{$files[n][0]}" onchange="change('issue_files_change_{$files[n][0]}');">
+<label for="issue-file-issue-{$files[n][0]}">выпуск</label>
+<select id="issue-file-issue-{$files[n][0]}" name="issue_file_{$files[n][0]}" onchange="change('issue_files_change_{$files[n][0]}');">
 {section name=a loop=$issues}
 <option value='{$issues[a].id}' {if $files[n].id_issue EQ $issues[a].id}selected{/if} >{$issues[a].title}</option>
 {/section}
@@ -156,8 +156,8 @@
 
 
 <div style="padding: 4px;">
-формат 
-<select name="file_type_{$files[n][0]}" style="font: 8pt verdana;" onchange="change('issue_files_change_{$files[n][0]}');">
+<label for="issue-file-type-{$files[n][0]}">формат</label>
+<select id="issue-file-type-{$files[n][0]}" name="file_type_{$files[n][0]}" style="font: 8pt verdana;" onchange="change('issue_files_change_{$files[n][0]}');">
 <option value="0" {if $files[n].type EQ 0}selected{/if} 
 >SCL/TRD</option>
 <option value="2" {if $files[n].type EQ 2}selected{/if} 
@@ -218,7 +218,7 @@
 <input type='file' name='upload_file' style="width: 100px"> 
  
  &nbsp; 
-привязать к выпуску <select name="upload_file_issue">
+<label for="admin-issue-upload-issue">привязать к выпуску</label> <select id="admin-issue-upload-issue" name="upload_file_issue">
  
 {section name=n loop=$issues}
 <option value='{$issues[n].id}'>{$issues[n].title}</option>
@@ -231,9 +231,9 @@
 
 
  &nbsp; &nbsp;
-формат 
+<label for="admin-issue-upload-type">формат</label>
 
-<select name="upload_file_type" style="font: 8pt verdana;">
+<select id="admin-issue-upload-type" name="upload_file_type" style="font: 8pt verdana;">
 <option value="0">SCL/TRD</option>
 <option value="2">FDI</option>
 <option value="3">UDI</option>

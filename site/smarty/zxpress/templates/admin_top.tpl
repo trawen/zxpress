@@ -47,7 +47,8 @@ a:hover, a:active, body_ahover
 <div align="right">
 
 <form method='GET' id="goto">
-<select style="height: 18px; width: 220px; background-color: white; color: black; border: 1px solid #D6D0AB" name='id' onChange="javascript:this.parentNode.submit();"><option selected>Перейти к изданию</option>
+<label for="admin-goto-press" class="u-sr-only">Перейти к изданию</label>
+<select id="admin-goto-press" style="height: 18px; width: 220px; background-color: white; color: black; border: 1px solid #D6D0AB" name='id' onChange="javascript:this.parentNode.submit();"><option selected>Перейти к изданию</option>
 {section name=n loop=$press_list}
 {if $press_list[n].online_articles}<option value='{$press_list[n].id}' style="color: #A41E00; text-decoration:  underline">{$press_list[n].title} ({$press_list[n].online_articles} статей){else}<option value='{$press_list[n].id}' >{$press_list[n].title}{/if}</option>
 {/section}

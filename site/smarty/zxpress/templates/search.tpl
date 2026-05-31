@@ -12,6 +12,7 @@
 
 </td><td class="search-toolbar-sort">
 
+<label for="select_sort" class="u-sr-only">Сортировка результатов</label>
 <select class="sort_search" name='s' onChange="fuck()" id="select_sort">
 <option value="up" {if $sort eq "up"}selected{/if}>Сортировать по дате ↑ </option>
 <option value="rw" {if $sort eq "rw"}selected{/if}>Сортировать по ролевантности</option>

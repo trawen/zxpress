@@ -24,7 +24,8 @@
 <td valign="top" width="360" style="border-right:1px solid #C8C5AC">
 <div style="font: bold 12px Verdana; margin-bottom:6px">Письма</div>
 <form method="get" action="admin_letters.php">
-<select name="id" style="width:340px;height:22px" onchange="this.form.submit()">
+<label for="admin-letter-list" class="u-sr-only">Выбрать письмо</label>
+<select id="admin-letter-list" name="id" style="width:340px;height:22px" onchange="this.form.submit()">
 <option value="0" {if !$letter || !$letter.id}selected{/if}>— выбрать —</option>
 {section name=n loop=$letters_list}
 <option value="{$letters_list[n].id}" {if $letter && $letters_list[n].id eq $letter.id}selected{/if}>
@@ -45,9 +46,9 @@
 
 <table style="font: 12px Verdana" cellpadding="4">
 <tr>
-<td>От кого *</td>
+<td><label for="admin-letter-from">От кого *</label></td>
 <td>
-<select name="author_from" style="width:340px">
+<select id="admin-letter-from" name="author_from" style="width:340px">
 <option value="0">---</option>
 {section name=n loop=$authors}
 <option value="{$authors[n].id}" {if $letter && $authors[n].id eq $letter.author_from}selected{/if}>
@@ -59,9 +60,9 @@
 </tr>
 
 <tr>
-<td>Кому *</td>
+<td><label for="admin-letter-to">Кому *</label></td>
 <td>
-<select name="author_to" style="width:340px">
+<select id="admin-letter-to" name="author_to" style="width:340px">
 <option value="0">---</option>
 {section name=n loop=$authors}
 <option value="{$authors[n].id}" {if $letter && $authors[n].id eq $letter.author_to}selected{/if}>

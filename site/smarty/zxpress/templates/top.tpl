@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 {if $lng eq 'eng'}
-	<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 {else}
-	<html lang="ru" xml:lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="ru" xml:lang="ru" xmlns="http://www.w3.org/1999/xhtml">
 {/if}
 
 <head>
@@ -63,9 +64,9 @@
 	{/if}
 	{/if}
 
-	<link href="{$host}img/style.css?&{$smarty.now}" type=text/css rel=stylesheet>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-	<script language=javascript src="{$host}img/zxpress.js?{$smarty.now}" type="text/javascript"></script>
+	<link rel="preload" href="{$host}img/style.css?&{$smarty.now}" as="style">
+	<link href="{$host}img/style.css?&{$smarty.now}" rel="stylesheet">
+	<link rel="preload" href="{$host}img/zxpress-new-logo.png" as="image" fetchpriority="high" media="(max-width: 960px)">
 </head>
 
 <body>
@@ -73,15 +74,25 @@
 
 	<div class="page">
 
-		<div class="top">
+		<header class="top">
+			<a href="{$host}" class="top-logo-mobile">
+				<img src="{$host}img/zxpress-new-logo.png" alt="ZXPRESS" width="568" height="134" class="top-logo-mobile-img" fetchpriority="high">
+			</a>
 			<div class="top-menu">
 				{if $lng eq 'eng'}
+					<div class="top-menu-primary">
 					<div class="top-menu-line"><a href="/">Library</a></div>
 					<div class="top-menu-line">
 						<a href="{$host}books.php{$sl}">books</a> ▪
 						<a href="{$host}ezines.php{$sl}">magazines</a> ▪
 						<a href="{$host}zxnet{$sl}">zxnet</a>
 					</div>
+					</div>
+					<div class="top-menu-extra-wrap">
+					<button type="button" class="top-menu-toggle" aria-expanded="false" aria-controls="top-menu-extra" aria-label="Menu">
+						<span class="top-menu-toggle-icon" aria-hidden="true"></span>
+					</button>
+					<div id="top-menu-extra" class="top-menu-extra">
 					{if $login eq 1}
 					<div class="top-menu-line">
 						<form method="post" action="{$host}logout.php" class="form-inline">
@@ -90,19 +101,6 @@
 						</form>
 					</div>
 					{/if}
-				{else}
-					<div class="top-menu-line">
-						<a href="{$host}ezines.php{$sl}">Пресса</a> ▪
-						<a href="{$host}books.php{$sl}">Книги</a> ▪
-						{* <a href="{$host}publications.php{$sl}">Публикации</a> ▪ *}
-						<a href="{$host}snailmail.php{$sl}">Письма</a> ▪
-						<a href="{$host}zxnet{$sl}">ZXNet</a>
-					</div>
-				{/if}
-
-
-				<div class="top-menu-line"></div>
-				{if $lng eq 'eng'}
 					<div class="top-menu-line"><a href="{$host}news{$sl}">News</a></div>
 					<div class="top-menu-line"><a href="{$host}updates.php{$sl}">Updates</a></div>
 					<div class="top-menu-line"><a href="{$host}gallery.php{$sl}">Gallery</a></div>
@@ -110,7 +108,22 @@
 					<div class="top-menu-line"><a href="{$host}stats.php{$sl}">Stats</a></div>
 					<div class="top-menu-line"><a href="{$host}guestbook.php{$sl}">Guestbook</a></div>
 					<div class="top-menu-line"><a href="{$host}whois.php{$sl}">?</a></div>
+					</div>
+					</div>
 				{else}
+					<div class="top-menu-primary">
+					<div class="top-menu-line top-menu-line--primary">
+						<a href="{$host}ezines.php{$sl}" class="top-menu-item"><img src="{$host}img/ezines-logo.png" alt="" class="top-menu-item-icon"><span class="top-menu-label-desktop">Пресса</span><span class="top-menu-label-mobile">Электронные журналы и газеты</span></a><span class="top-menu-sep"> ▪</span>
+						<a href="{$host}books.php{$sl}" class="top-menu-item"><img src="{$host}img/books-logo.png" alt="" class="top-menu-item-icon"><span class="top-menu-label-desktop">Книги</span><span class="top-menu-label-mobile">Книги и бумажные журналы</span></a><span class="top-menu-sep"> ▪</span>
+						<a href="{$host}snailmail.php{$sl}" class="top-menu-item"><img src="{$host}img/letters-logo.png" alt="" class="top-menu-item-icon"><span class="top-menu-label-desktop">Письма</span><span class="top-menu-label-mobile">Бумажные письма</span></a><span class="top-menu-sep"> ▪</span>
+						<a href="{$host}zxnet{$sl}" class="top-menu-item"><img src="{$host}img/zxnet-logo.png" alt="" class="top-menu-item-icon"><span class="top-menu-label-desktop">ZXNet</span><span class="top-menu-label-mobile">ZXNet эхоконференции</span></a>
+					</div>
+					</div>
+					<div class="top-menu-extra-wrap">
+					<button type="button" class="top-menu-toggle" aria-expanded="false" aria-controls="top-menu-extra" aria-label="Меню">
+						<span class="top-menu-toggle-icon" aria-hidden="true"></span>
+					</button>
+					<div id="top-menu-extra" class="top-menu-extra">
 					{if $login eq 1}
 					<div class="top-menu-line">
 						<form method="post" action="{$host}logout.php" class="form-inline">
@@ -121,7 +134,6 @@
 					{/if}
 					<div class="top-menu-line u-faded"><a href="https://t.me/zxpress" target="_blank">Мы в
 							телеграме</a></div>
-					{* style="padding: 0 8px; border-left: 8px solid black; border-right: 8px solid black;" *}
 					{* <div class="top-menu-line"><a href="{$host}news">Новости</a></div> *}
 					<div class="top-menu-line"><a href="{$host}updates.php">Обновления</a></div>
 					<div class="top-menu-line"><a href="{$host}gallery.php">Галерея</a></div>
@@ -129,16 +141,18 @@
 					<div class="top-menu-line"><a href="{$host}stats.php">Статистика</a></div>
 					<div class="top-menu-line"><a href="{$host}guestbook.php">Гостевая</a></div>
 					<div class="top-menu-line"><a href="{$host}whois.php">?</a></div>
+					</div>
+					</div>
 				{/if}
 			</div>
-		</div>
+		</header>
 
 
 
 		<br>
 
 		<div class="content">
-			<div class='col-left'>
+			<main class="col-left" id="main">
 
 				{literal}
 					<div class="u-text-left">

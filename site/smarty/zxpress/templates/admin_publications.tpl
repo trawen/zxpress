@@ -28,7 +28,8 @@
 <td valign="top" width="360" style="border-right:1px solid #C8C5AC">
 <div style="font: bold 12px Verdana; margin-bottom:6px">Публикации</div>
 <form method="get" action="admin_publications.php">
-<select name="id" style="width:340px;height:22px" onchange="this.form.submit()">
+<label for="admin-pub-list" class="u-sr-only">Выбрать публикацию</label>
+<select id="admin-pub-list" name="id" style="width:340px;height:22px" onchange="this.form.submit()">
 <option value="0" {if !$pub || !$pub.id}selected{/if}>— выбрать —</option>
 {section name=n loop=$pub_list}
 <option value="{$pub_list[n].id}" {if $pub && $pub_list[n].id eq $pub.id}selected{/if}>
@@ -49,9 +50,9 @@
 
 <table style="font: 12px Verdana" cellpadding="4">
 <tr>
-<td>Тип *</td>
+<td><label for="admin-pub-type">Тип *</label></td>
 <td>
-<select name="type" style="width:340px">
+<select id="admin-pub-type" name="type" style="width:340px">
 <option value="0">---</option>
 {foreach from=$pub_types key=k item=v}
 <option value="{$k}" {if $pub && $pub.type == $k}selected{/if}>{$v}</option>
@@ -76,9 +77,9 @@
 </tr>
 
 <tr>
-<td>Страна</td>
+<td><label for="admin-pub-country">Страна</label></td>
 <td>
-<select name="country_id" style="width:340px">
+<select id="admin-pub-country" name="country_id" style="width:340px">
 <option value="0">---</option>
 {section name=n loop=$countries}
 <option value="{$countries[n].id}" {if $pub && $countries[n].id eq $pub.country_id}selected{/if}>
@@ -90,9 +91,9 @@
 </tr>
 
 <tr>
-<td>Город</td>
+<td><label for="admin-pub-city">Город</label></td>
 <td>
-<select name="city_id" style="width:340px">
+<select id="admin-pub-city" name="city_id" style="width:340px">
 <option value="0">---</option>
 {section name=n loop=$cities}
 <option value="{$cities[n].id}" {if $pub && $cities[n].id eq $pub.city_id}selected{/if}>

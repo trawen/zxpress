@@ -9,8 +9,8 @@
 
 
 <form method='GET'>
-перейти 
-<select name='id' onChange="javascript:this.parentNode.submit();">
+<label for="admin-tag-goto">перейти</label>
+<select id="admin-tag-goto" name='id' onChange="javascript:this.parentNode.submit();">
 <option value="0" selected>---</option>
 {section name=x loop=$list}
 <option value="{$list[x].id}">{$list[x].tag_name}  ({$list[x].nm})</option>
@@ -23,8 +23,9 @@
 <input type="hidden" name="csrf_token" value="{$csrf_token}">
 
 
-название тэга <input type="text" name="name" value="{$admin_tag.tag_name}" style="font: bold 14px Arial"> + 
-<select name="add_tag">
+название тэга <input type="text" name="name" value="{$admin_tag.tag_name}" style="font: bold 14px Arial"> +
+<label for="admin-tag-add" class="u-sr-only">Добавить тэг</label>
+<select id="admin-tag-add" name="add_tag">
 <option value="0" selected>---</option>
 {section name=x loop=$list}
 <option value="{$list[x].id}">{$list[x].tag_name} ({$list[x].nm})</option>
@@ -47,17 +48,16 @@
 
 <br><br><br>
 	
-склеить 
-<select name="glue_tag_1">
+<label for="admin-tag-glue-1">склеить</label>
+<select id="admin-tag-glue-1" name="glue_tag_1">
 <option value="0" selected>---</option>
 {section name=x loop=$list}
 <option value="{$list[x].id}">{$list[x].id} - {$list[x].tag_name} ({$list[x].nm})</option>
 {/section}
 </select>
 
-с
-
-<select name="glue_tag_2">
+<label for="admin-tag-glue-2">с</label>
+<select id="admin-tag-glue-2" name="glue_tag_2">
 <option value="0" selected>---</option>
 {section name=x loop=$list}
 <option value="{$list[x].id}">{$list[x].id} - {$list[x].tag_name} ({$list[x].nm})</option>

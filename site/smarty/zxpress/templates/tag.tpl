@@ -45,7 +45,8 @@
 
 	{foreach from=$a.rubrics item=id_rubrics}
 	<div class="u-inline">
-	<select onChange="save_rubrics({$a.id_article},this)">
+	<label for="rubrics-select-{$a.id_article}" class="u-sr-only">Рубрика</label>
+	<select id="rubrics-select-{$a.id_article}" onChange="save_rubrics({$a.id_article},this)">
 	<option>...</option>
 	{foreach from=$rubrics item=r}
 	<option value='{$r.id}' {if $r.id eq $id_rubrics}selected{/if}>{section name=n loop=$r.level}—{/section}{$r.name_plain}</option>
@@ -59,7 +60,8 @@
 	
 	{foreachelse}
 	<div class="u-inline">
-	<select onChange="save_rubrics({$a.id_article},this)">
+	<label for="rubrics-select-new-{$a.id_article}" class="u-sr-only">Рубрика</label>
+	<select id="rubrics-select-new-{$a.id_article}" onChange="save_rubrics({$a.id_article},this)">
 	<option selected>...</option>
 	{foreach from=$rubrics item=r}
 	<option value='{$r.id}'>{section name=n loop=$r.level}—{/section}{$r.name_plain}</option>
@@ -96,30 +98,29 @@
 
 {literal}
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script>
-function save_rubrics(id,t) {
-	
-	$.post(
-	  "/rubrics_set.php",
-	  {
-	    article: id,
-	    menu: $(t).val(),
-	    csrf_token: CSRF_TOKEN
-	  },
-	  onAjaxSuccess
-	);
-
-	function onAjaxSuccess(data) {console.log(data);}
-
+function save_rubrics(id, t) {
+	var body = new URLSearchParams({
+		article: id,
+		menu: t.value,
+		csrf_token: CSRF_TOKEN
+	});
+	fetch('/rubrics_set.php', {
+		method: 'POST',
+		headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+		credentials: 'same-origin',
+		body: body.toString()
+	})
+		.then(function(r) { return r.text(); })
+		.then(function(data) { console.log(data); });
 }
 
 function add(t) {
-	
-	var elem = $(t).prev("div").html();
-	$(t).next("div").html(elem);
-	
-
+	var prev = t.previousElementSibling;
+	var next = t.nextElementSibling;
+	if (prev && prev.tagName === 'DIV' && next && next.tagName === 'DIV') {
+		next.innerHTML = prev.innerHTML;
+	}
 }
 </script>
 {/literal}

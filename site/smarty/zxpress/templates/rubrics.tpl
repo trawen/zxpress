@@ -1,6 +1,5 @@
 
 {include file="top.tpl"}
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
 {function name=menu level=0}     
   <ul{if $level eq 0} class="tree"{/if}>
@@ -71,20 +70,6 @@
 <p onclick="scroll(0,0)">← к меню</p>
 
 {/if}
-
-
-
-{literal}
-<script>
-$(document).ready(function() {
-
-	//$('ul.tree li:last-child').addClass('last');
-
-});
-
-</script>
-{/literal}
-
 
 
 

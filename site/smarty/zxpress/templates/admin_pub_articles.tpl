@@ -27,7 +27,8 @@
 <div style="font: bold 12px Verdana; margin-bottom:6px">Статьи</div>
 <form method="get" action="admin_pub_articles.php">
 <input type="hidden" name="pub_id" value="{$publication.id}">
-<select name="id" style="width:340px;height:22px" onchange="this.form.submit()">
+<label for="admin-pub-article-list" class="u-sr-only">Выбрать статью</label>
+<select id="admin-pub-article-list" name="id" style="width:340px;height:22px" onchange="this.form.submit()">
 <option value="0" {if !$article || !$article.id}selected{/if}>— выбрать —</option>
 {section name=n loop=$articles_list}
 <option value="{$articles_list[n].id}" {if $article && $articles_list[n].id eq $article.id}selected{/if}>

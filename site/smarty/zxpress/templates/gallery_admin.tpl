@@ -37,7 +37,8 @@
 <td align="center" style="font-size: 12px">
 <img class="flag" src="screens/1/{$screens[n].id}.png" width="256" height="192"><br>
 
-<select name="press_{$screens[n].id}">
+<label for="gallery-admin-press-{$screens[n].id}" class="u-sr-only">Издание для скриншота</label>
+<select id="gallery-admin-press-{$screens[n].id}" name="press_{$screens[n].id}">
 {if $screens[n].id_press}<option name="press_{$screens[n].id}" value="{$screens[n].id_press}" checked>{$screens[n].press_title}</option>{/if}
 {$screens_select} {$screens[n].issue}
 
@@ -53,7 +54,8 @@
 <td align="center" style="font-size: 11px">
 <img class="flag" src="screens/1/{$screens[n].id}.png" width="256" height="192"><br>
 
-<select name="press_{$screens[n].id}">
+<label for="gallery-admin-press-{$screens[n].id}" class="u-sr-only">Издание для скриншота</label>
+<select id="gallery-admin-press-{$screens[n].id}" name="press_{$screens[n].id}">
 {if $screens[n].id_press}<option name="press_{$screens[n].id}" value="{$screens[n].id_press}" checked>{$screens[n].press_title}</option>{/if}
 {$screens_select} {$screens[n].issue}
 

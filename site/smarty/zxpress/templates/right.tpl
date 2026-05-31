@@ -1,7 +1,7 @@
-</div>
+</main>
 
 
-<div class="col-right" id="col-right">
+<aside class="col-right" id="col-right">
 
     <div class="sidebar-search">
     <form method='GET' action='search.php'>
@@ -66,7 +66,12 @@
     <hr>
 
     <form method='GET' action='{$host}issue.php'>
-        <select class="right" name='id' onChange="javascript:this.parentNode.submit();">
+        {if $lng eq 'eng'}
+        <label for="sidebar-press-select" class="u-sr-only">Choose publication</label>
+        {else}
+        <label for="sidebar-press-select" class="u-sr-only">Выбрать издание</label>
+        {/if}
+        <select class="right" id="sidebar-press-select" name='id' onChange="javascript:this.parentNode.submit();">
             <option selected>Выбрать издание...</option>
             {section name=n loop=$press_list}
                 <option class="right-select-option" value='{$press_list[n].id}'>{$press_list[n].title}</option>
@@ -80,47 +85,102 @@
     <script type="text/javascript">
     (function(){
         function initSuggest(inputId, dropId) {
-            var $input = $('#' + inputId), $drop = $('#' + dropId);
-            if (!$input.length) return;
+            var input = document.getElementById(inputId);
+            var drop = document.getElementById(dropId);
+            if (!input || !drop) return;
             var timer = null, sel = -1;
 
-            $input.bind('input keyup', function(e) {
+            function hideDrop(clear) {
+                drop.style.display = 'none';
+                if (clear) drop.innerHTML = '';
+            }
+
+            function showDrop() {
+                drop.style.display = 'block';
+            }
+
+            function dropItems() {
+                return drop.querySelectorAll('div');
+            }
+
+            function setActiveItem(items, index) {
+                for (var i = 0; i < items.length; i++) {
+                    items[i].classList.toggle('active', i === index);
+                }
+            }
+
+            input.addEventListener('input', onInput);
+            input.addEventListener('keyup', onInput);
+
+            function onInput(e) {
                 if (e.keyCode === 38 || e.keyCode === 40 || e.keyCode === 13 || e.keyCode === 27) return;
                 clearTimeout(timer);
-                var q = $input.val();
-                if (q.length < 2) { $drop.hide().empty(); return; }
+                var q = input.value;
+                if (q.length < 2) { hideDrop(true); return; }
                 timer = setTimeout(function() {
-                    $.getJSON('/suggest.php', {q: q}, function(data) {
-                        $drop.empty(); sel = -1;
-                        if (!data || !data.length) { $drop.hide(); return; }
-                        for (var i = 0; i < data.length; i++) {
-                            $('<div>').text(data[i]).appendTo($drop);
-                        }
-                        $drop.show();
-                    });
+                    fetch('/suggest.php?q=' + encodeURIComponent(q), {credentials: 'same-origin'})
+                        .then(function(r) { return r.json(); })
+                        .then(function(data) {
+                            drop.innerHTML = '';
+                            sel = -1;
+                            if (!data || !data.length) { hideDrop(true); return; }
+                            for (var i = 0; i < data.length; i++) {
+                                var row = document.createElement('div');
+                                row.textContent = data[i];
+                                drop.appendChild(row);
+                            }
+                            showDrop();
+                        })
+                        .catch(function() { hideDrop(true); });
                 }, 300);
-            });
+            }
 
-            $input.keydown(function(e) {
-                var items = $drop.children();
+            input.addEventListener('keydown', function(e) {
+                var items = dropItems();
                 if (!items.length) return;
-                if (e.keyCode === 40) { sel = Math.min(sel + 1, items.length - 1); items.removeClass('active').eq(sel).addClass('active'); e.preventDefault(); }
-                else if (e.keyCode === 38) { sel = Math.max(sel - 1, 0); items.removeClass('active').eq(sel).addClass('active'); e.preventDefault(); }
-                else if (e.keyCode === 13 && sel >= 0) { $input.val(items.eq(sel).text()); $drop.hide(); }
-                else if (e.keyCode === 27) { $drop.hide(); sel = -1; }
+                if (e.keyCode === 40) {
+                    sel = Math.min(sel + 1, items.length - 1);
+                    setActiveItem(items, sel);
+                    e.preventDefault();
+                } else if (e.keyCode === 38) {
+                    sel = Math.max(sel - 1, 0);
+                    setActiveItem(items, sel);
+                    e.preventDefault();
+                } else if (e.keyCode === 13 && sel >= 0) {
+                    input.value = items[sel].textContent;
+                    hideDrop(true);
+                } else if (e.keyCode === 27) {
+                    hideDrop(true);
+                    sel = -1;
+                }
             });
 
-            $drop.delegate('div', 'mousedown', function() {
-                $input.val($(this).text());
-                $drop.hide();
-                $input.closest('form').submit();
+            drop.addEventListener('mousedown', function(e) {
+                var row = e.target.closest('div');
+                if (!row || !drop.contains(row)) return;
+                input.value = row.textContent;
+                hideDrop(true);
+                var form = input.closest('form');
+                if (form) form.submit();
             });
 
-            $input.blur(function() { setTimeout(function(){ $drop.hide(); }, 200); });
-            $input.focus(function() { if ($drop.children().length) $drop.show(); });
+            input.addEventListener('blur', function() {
+                setTimeout(function() { hideDrop(false); }, 200);
+            });
+            input.addEventListener('focus', function() {
+                if (dropItems().length) showDrop();
+            });
         }
 
-        $(function() {
+        function onReady(fn) {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', fn);
+            } else {
+                fn();
+            }
+        }
+
+        onReady(function() {
             initSuggest('input_query', 'suggest-main');
             initSuggest('input_query_sidebar', 'suggest-sidebar');
         });
@@ -128,25 +188,5 @@
     </script>
     {/literal}
 
-    {literal}
-        <div class="right-counter-faded" align=center>
-            <!--LiveInternet counter-->
-            <script type="text/javascript">
-                <!--
-            document.write("<a href='https://www.liveinternet.ru/stat/zxpress.ru/queries.html' " +
-                "target=_blank><img src='https://counter.yadro.ru/hit?t17.1;r" +
-                escape(document.referrer) + ((typeof(screen) == "undefined") ? "" :
-                    ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
-                        screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
-                ";" + Math.random() +
-                "' alt='' title='LiveInternet: показано число просмотров за 24" +
-                " часа, посетителей за 24 часа и за сегодня' " +
-                "border=0 width=1 height=1><\/a>") //
-            -->
-            </script>
-            <!--/LiveInternet-->
-        </div>
-    {/literal}
-
     </div><!-- .sidebar-body -->
-</div><!-- .col-right -->
+</aside><!-- .col-right -->

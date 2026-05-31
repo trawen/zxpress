@@ -4,8 +4,8 @@
 
 
 
-<form method='get' class="gallery" action='{$host}gallery.php'><b>Отобразить</b>
-<select name='id' onChange="javascript:this.parentNode.submit();">
+<form method='get' class="gallery" action='{$host}gallery.php'><label for="gallery-press-top"><b>Отобразить</b></label>
+<select id="gallery-press-top" name='id' onChange="javascript:this.parentNode.submit();">
 {if $id}
 
 <option value="0">Все издания</option>
@@ -26,7 +26,8 @@
 
 &nbsp;по
 
-<select class="gallery" name='num' onChange="javascript:this.parentNode.submit();">
+<label for="gallery-count-top" class="u-sr-only">Количество на странице</label>
+<select class="gallery" id="gallery-count-top" name='num' onChange="javascript:this.parentNode.submit();">
 
 <option value="50"  {if $num eq 50}selected{/if} >50</option>
 <option value="150" {if $num eq 150}selected{/if} >150</option>
@@ -96,8 +97,8 @@
 
 <hr>
 
-<form method='get' action='gallery.php' class="gallery">Отобразить
-<select class="gallery" name='id' onChange="javascript:this.parentNode.submit();">
+<form method='get' action='gallery.php' class="gallery"><label for="gallery-press-bottom">Отобразить</label>
+<select class="gallery" id="gallery-press-bottom" name='id' onChange="javascript:this.parentNode.submit();">
 {if $id}
 
 <option value="0">Все издания</option>
@@ -118,7 +119,8 @@
 
 &nbsp; по
 
-<select class="gallery" name='num' onChange="javascript:this.parentNode.submit();">
+<label for="gallery-count-bottom" class="u-sr-only">Количество на странице</label>
+<select class="gallery" id="gallery-count-bottom" name='num' onChange="javascript:this.parentNode.submit();">
 
 <option value="50"  {if $num eq 50}selected{/if} >50</option>
 <option value="150" {if $num eq 150}selected{/if} >150</option>

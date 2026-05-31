@@ -2,10 +2,10 @@
 
 
 
-<table cellpadding=0 cellspacing=0 class="page-pad-8" border=0>
-<tr>
+<table cellpadding=0 cellspacing=0 class="page-pad-8 book-page-table" border=0>
+<tr class="book-page-row">
 {if $screens[0].id}
-<td width=280 valign="top">
+<td width=280 valign="top" class="book-covers-cell">
 
 
 
@@ -32,18 +32,20 @@
 
 </td>
 {/if}
-<td align="left" valign="top">
+<td align="left" valign="top" class="book-content-cell">
 
 <!-- <span style="display: inline; font: 13pt/10pt; ">
 {if $press.type eq 0}Книга{elseif $press.type eq 1}Журнал{else}Газета{/if}</span> -->
 
+<div class="book-header">
 <H1 class="h1"> {$press.title1 nofilter}</h1>
 <DIV class="gln"></DIV>
 
 <!-- <DIV class="gln2"></DIV> -->
 <div class="book-subtitle">{$press.title2 nofilter}</div>
+</div>
 
-
+<div class="book-details">
 <br>
 <div class="book-meta">
 
@@ -146,6 +148,8 @@ WORD
 
 
 
+
+</div>
 
 </td>
 </tr>

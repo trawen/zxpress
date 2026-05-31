@@ -1,7 +1,6 @@
 {include file="top.tpl"}
 
 <script type="text/javascript" src="https://vkontakte.ru/js/api/share.js?10" charset="UTF-8"></script>
-<SCRIPT language=javascript src="{$host}img/jquery.js" type=text/javascript></SCRIPT>
 <SCRIPT language=javascript src="{$host}img/rgb.js" type=text/javascript></SCRIPT>
 <link href="https://stg.odnoklassniki.ru/share/odkl_share.css" rel="stylesheet">
 <script src="https://stg.odnoklassniki.ru/share/odkl_share.js" type="text/javascript"></script>

@@ -82,8 +82,8 @@
 
 
 <tr>
-<td>Формат</td><td> 
-<select name='type' onchange="change('book_change');" style="width: 150px">
+<td><label for="admin-book-type">Формат</label></td><td> 
+<select id="admin-book-type" name='type' onchange="change('book_change');" style="width: 150px">
 <option value='1' {if $book.type eq 1}selected{/if}>Книга</option>
 <option value='2' {if $book.type eq 2}selected{/if}>Журнал</option>
 <option value='3' {if $book.type eq 3}selected{/if}>Газета</option>
@@ -103,8 +103,8 @@
 
 
 <tr>
-<td>Город</td><td>  
-<select name="city" onchange="change('book_change');" style="width: 150px">
+<td><label for="admin-book-city">Город</label></td><td>  
+<select id="admin-book-city" name="city" onchange="change('book_change');" style="width: 150px">
 <option value="0">---</option>
 {section name=n loop=$cities}
 {cycle values=""}
@@ -117,8 +117,8 @@
 
 
 <tr>
-<td>Язык</td><td> 
-<select name="language" onchange="change('book_change');" style="width: 150px">
+<td><label for="admin-book-language">Язык</label></td><td> 
+<select id="admin-book-language" name="language" onchange="change('book_change');" style="width: 150px">
 {section name=n loop=$languages}
 <option value="{$languages[n].id}" {if $languages[n].id eq $book.language}selected{/if}>{$languages[n].name}</otpion>
 {/section}
@@ -189,7 +189,8 @@ ISBN</td><td><input type="text" style="width: 100px" name="isbn" value="{$book.i
 
 <div style="padding: 4px;">
 
-<select name='picture_type_{$pictures[n].id}' onchange="change('change_picture_type_{$pictures[n].id}');" >
+<label for="picture-type-{$pictures[n].id}" class="u-sr-only">Тип обложки</label>
+<select id="picture-type-{$pictures[n].id}" name='picture_type_{$pictures[n].id}' onchange="change('change_picture_type_{$pictures[n].id}');" >
 <option value='1' {if $pictures[n].type eq 1}selected{/if}>Лицевая сторона</option>
 <option value='2' {if $pictures[n].type eq 2}selected{/if}>Задняя сторона</option>
 </select>
@@ -248,8 +249,8 @@ ISBN</td><td><input type="text" style="width: 100px" name="isbn" value="{$book.i
 
 комментарий <input type="text" size="16" value="{$files[n].comment}" name="file_comment_{$files[n][0]}" onchange="change('files_change_{$files[n][0]}');">  &nbsp; 
 
-формат 
-<select name="file_type_{$files[n][0]}" style="font: 8pt verdana;" onchange="change('files_change_{$files[n][0]}');">
+<label for="book-file-type-{$files[n][0]}">формат</label>
+<select id="book-file-type-{$files[n][0]}" name="file_type_{$files[n][0]}" style="font: 8pt verdana;" onchange="change('files_change_{$files[n][0]}');">
 <option value="1" {if $files[n].file_type EQ 1}selected{/if} 
 >PDF</option>
 <option value="2" {if $files[n].file_type EQ 2}selected{/if} 
@@ -297,8 +298,8 @@ ISBN</td><td><input type="text" style="width: 100px" name="isbn" value="{$book.i
 
 комментарий <input type="text" size="16" value="" name="upload_file_comment">  &nbsp; 
 
-формат 
-<select name="upload_file_type" style="font: 8pt verdana;">
+<label for="book-upload-file-type">формат</label>
+<select id="book-upload-file-type" name="upload_file_type" style="font: 8pt verdana;">
 <option value="1" {if $files[n].file_type EQ 1}selected{/if} 
 >PDF</option>
 <option value="2" {if $files[n].file_type EQ 2}selected{/if} 
@@ -385,7 +386,8 @@ ISBN</td><td><input type="text" style="width: 100px" name="isbn" value="{$book.i
 
 
 <b>Добавить тэг</b><br>
-<select  style="display: inline; floating: left;" name="new_article_add_tag_{$articles[n].ch_id}">
+<label for="new-ch-article-tag-{$articles[n].ch_id}" class="u-sr-only">Добавить тег</label>
+<select id="new-ch-article-tag-{$articles[n].ch_id}" style="display: inline; floating: left;" name="new_article_add_tag_{$articles[n].ch_id}">
 <option value='0' selected>---</option>
 {section name=i loop=$tags}
 <option value='{$tags[i].id}'>{$tags[i].tag_name}</option>
@@ -497,7 +499,8 @@ ISBN</td><td><input type="text" style="width: 100px" name="isbn" value="{$book.i
 
 
 <b>Добавить тэг</b><br>
-<select  style="display: inline; floating: left;" name="article_add_tag_{$articles[n].ch_id}">
+<label for="ch-article-tag-{$articles[n].ch_id}" class="u-sr-only">Добавить тег</label>
+<select id="ch-article-tag-{$articles[n].ch_id}" style="display: inline; floating: left;" name="article_add_tag_{$articles[n].ch_id}">
 <option value='0' selected>---</option>
 {section name=i loop=$tags}
 <option value='{$tags[i].id}'>{$tags[i].tag_name}</option>

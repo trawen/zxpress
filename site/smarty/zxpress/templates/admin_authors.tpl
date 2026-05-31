@@ -24,7 +24,8 @@
 <td valign="top" width="260" style="border-right:1px solid #C8C5AC">
 <div style="font: bold 12px Verdana; margin-bottom:6px">Авторы</div>
 <form method="get" action="admin_authors.php">
-<select name="id" style="width:240px;height:22px" onchange="this.form.submit()">
+<label for="admin-author-list" class="u-sr-only">Выбрать автора</label>
+<select id="admin-author-list" name="id" style="width:240px;height:22px" onchange="this.form.submit()">
 <option value="0" {if !$author || !$author.id}selected{/if}>— выбрать —</option>
 {section name=n loop=$authors_list}
 <option value="{$authors_list[n].id}" {if $author && $authors_list[n].id eq $author.id}selected{/if}>
@@ -61,9 +62,9 @@
 <td><input type="text" name="group_name" style="width:420px" value="{if $author}{$author.group_name}{/if}"></td>
 </tr>
 <tr>
-<td>Страна</td>
+<td><label for="admin-author-country">Страна</label></td>
 <td>
-<select name="country_id" style="width:240px">
+<select id="admin-author-country" name="country_id" style="width:240px">
 <option value="0">---</option>
 {section name=n loop=$countries}
 <option value="{$countries[n].id}" {if $author && $countries[n].id eq $author.country_id}selected{/if}>
@@ -74,9 +75,9 @@
 </td>
 </tr>
 <tr>
-<td>Город</td>
+<td><label for="admin-author-city">Город</label></td>
 <td>
-<select name="city_id" style="width:240px">
+<select id="admin-author-city" name="city_id" style="width:240px">
 <option value="0">---</option>
 {section name=n loop=$cities}
 <option value="{$cities[n].id}" {if $author && $cities[n].id eq $author.city_id}selected{/if}>{$cities[n].name}</option>
@@ -85,9 +86,9 @@
 </td>
 </tr>
 <tr>
-<td>Пользователь</td>
+<td><label for="admin-author-user">Пользователь</label></td>
 <td>
-<select name="user_id" style="width:240px">
+<select id="admin-author-user" name="user_id" style="width:240px">
 <option value="0">---</option>
 {section name=n loop=$users}
 <option value="{$users[n].id}" {if $author && $users[n].id eq $author.user_id}selected{/if}>{$users[n].username}</option>

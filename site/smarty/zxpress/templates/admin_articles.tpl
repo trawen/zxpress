@@ -53,7 +53,8 @@
 выпуск №
 
 <form method='GET' action='admin_articles.php' style="display: inline">
-<select name="issue" onChange="javascript:this.parentNode.submit();">
+<label for="admin-articles-issue" class="u-sr-only">Номер выпуска</label>
+<select id="admin-articles-issue" name="issue" onChange="javascript:this.parentNode.submit();">
 {section name=n loop=$issues}
 <option value='{$issues[n].id}' {if $issues[n].title eq $issue_title} selected{/if}>{$issues[n].title}</option>
 {/section}
@@ -112,8 +113,8 @@
 
 <div style="display: inline; float: left; padding: 4px; font: bold 11px Verdana; border: 1px dashed #BBB; margin: 4px" align="center">
 <img width="256" src="screens/1/{$screens[n].id}.{$screens[n].format}" style="padding-bottom: 4px"><br>
-<b>Тип 
-<select name='screen_type_{$screens[n].id}' style="width: 60px">
+<b><label for="screen-type-{$screens[n].id}">Тип</label>
+<select id="screen-type-{$screens[n].id}" name='screen_type_{$screens[n].id}' style="width: 60px">
 {if $screens[n].type eq 0}
 <option value='0' selected>заставка</option><option value='1'>меню</option><option value='2'>текст</option>
 {elseif $screens[n].type eq 1}
@@ -123,8 +124,8 @@
 {/if}
 </select>
 
-Выпуск 
-<select style="width: 40px" name="screen_issue_{$screens[n].id}">
+<label for="screen-issue-{$screens[n].id}">Выпуск</label>
+<select id="screen-issue-{$screens[n].id}" style="width: 40px" name="screen_issue_{$screens[n].id}">
 {section name=i loop=$issues}
 {if $issues[i].id eq $issue.id}<option value='{$issues[i].id}' selected>{$issues[i].title}
 {else}<option value='{$issues[i].id}'>{$issues[i].title}
@@ -178,8 +179,8 @@
  
 <input style="font: normal 11px Arial; width: 80px" type="text" onfocus="this.select()" value='<img src="illustrations/1/{$illustrations[n].id_il}.png">' /> 
 
-Выпуск 
-<select  style="width: 50px" name="illustration_issue_{$illustrations[n].id_il}">
+<label for="illustration-issue-{$illustrations[n].id_il}">Выпуск</label>
+<select id="illustration-issue-{$illustrations[n].id_il}" style="width: 50px" name="illustration_issue_{$illustrations[n].id_il}">
 {section name=i loop=$issues}
 {if $issues[i].id eq $issue.id}<option value='{$issues[i].id}' selected>{$issues[i].title}
 {else}<option value='{$issues[i].id}'>{$issues[i].title}
@@ -273,7 +274,8 @@ HTML</b> <input type='checkbox' name='html' {if $html}checked{/if}>
 
 
 <b>Добавить тэг</b><br>
-<select  style="display: inline; floating: left;" name="new_article_add_tag_{$articles[n].id}">
+<label for="new-article-tag-{$articles[n].id}" class="u-sr-only">Добавить тег</label>
+<select id="new-article-tag-{$articles[n].id}" style="display: inline; floating: left;" name="new_article_add_tag_{$articles[n].id}">
 <option value='0' selected>---</option>
 {section name=i loop=$tags}
 <option value='{$tags[i].id}'>{$tags[i].tag_name}</option>
@@ -399,7 +401,8 @@ HTML</b> <input type='checkbox' name='html' {if $html}checked{/if}>
 
 
 <b>Привязать к выпуску</b>
-<select name="article_issue_{$articles[n].id}" onchange="change('issue_change_{$articles[n].id}');">
+<label for="article-issue-{$articles[n].id}" class="u-sr-only">Выпуск статьи</label>
+<select id="article-issue-{$articles[n].id}" name="article_issue_{$articles[n].id}" onchange="change('issue_change_{$articles[n].id}');">
 {section name=i loop=$issues}
 {if $issues[i].id eq $issue.id}<option value='{$issues[i].id}' selected>{$issues[i].title}
 {else}<option value='{$issues[i].id}'>{$issues[i].title}
@@ -412,7 +415,8 @@ HTML</b> <input type='checkbox' name='html' {if $html}checked{/if}>
 
 
 <b>Добавить тэг</b><br>
-<select  style="display: inline; floating: left;" name="article_add_tag_{$articles[n].id}">
+<label for="article-tag-{$articles[n].id}" class="u-sr-only">Добавить тег</label>
+<select id="article-tag-{$articles[n].id}" style="display: inline; floating: left;" name="article_add_tag_{$articles[n].id}">
 <option value='0' selected>---</option>
 {section name=i loop=$tags}
 <option value='{$tags[i].id}'>{$tags[i].tag_name}</option>

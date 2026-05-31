@@ -1,7 +1,5 @@
 {include file="top.tpl"}
 
-<script language=javascript src="{$host}img/jquery.js" type=text/javascript></script>
-<script language=javascript src="{$host}img/rgb.js" type=text/javascript></script>
 
 <table cellspacing=0 cellpadding=0 align="center" width="100%">
 <tr>

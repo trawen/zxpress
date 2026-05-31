@@ -1,6 +1,5 @@
 {include file="top.tpl"}
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script type="text/javascript">var CSRF_TOKEN = '{$csrf_token}';</script>
 
 {function name=menu level=0}     
@@ -102,53 +101,44 @@
 {literal}
 <script>
 
-function add_tree(id = 0) {
+function add_tree(id) {
+  if (id === undefined) id = 0;
 
   var name = prompt("Название", "");
 
-  if (name) {
+  if (!name) return;
 
-      $.post(
-      "/add_tree.php",
-      {
-        
-        id: id,
-        name: name,
-        csrf_token: CSRF_TOKEN
-        
-      },
-      onAjaxSuccess
-    );
-
-  }
-
-  function onAjaxSuccess(data) {
-
-      
-      if (parseInt(data) >= 1) {
-
-        document.location.href = 'http://zxpress.ru/menu/'+data;
-
-      }
-      else {
-
-        location.reload();
-
-      }
-
-  }
-
-}
-
-$(document).ready(function() {
-	
-  $('.back').on('click', function() {
-
-    var p = $(".content").position();
-    scroll(0, p.top );
-
+  var body = new URLSearchParams({
+    id: id,
+    name: name,
+    csrf_token: CSRF_TOKEN
   });
 
+  fetch('/add_tree.php', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    credentials: 'same-origin',
+    body: body.toString()
+  })
+    .then(function(r) { return r.text(); })
+    .then(function(data) {
+      if (parseInt(data, 10) >= 1) {
+        document.location.href = 'http://zxpress.ru/menu/' + data;
+      } else {
+        location.reload();
+      }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.back').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var content = document.querySelector('.content');
+      if (!content) return;
+      var top = content.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop);
+      window.scrollTo(0, top);
+    });
+  });
 });
 
 </script>

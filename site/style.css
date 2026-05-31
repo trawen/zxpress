@@ -75,6 +75,22 @@ body {
 
 }
 
+.top-logo-mobile {
+	display: none;
+}
+
+.top-menu-toggle {
+	display: none;
+}
+
+.top-menu-label-mobile {
+	display: none;
+}
+
+.top-menu-item-icon {
+	display: none;
+}
+
 .footer {
 
 	padding-top: 128px;
@@ -1436,20 +1452,106 @@ a.title.link-issue { font-size: 26px; }
 		background-image: none;
 	}
 
+	.top-logo-mobile {
+		display: block;
+		text-align: center;
+		padding: 12px 16px 4px;
+	}
+
+	.top-logo-mobile-img {
+		max-width: min(100%, 320px);
+		height: auto;
+	}
+
 	.footer {
 		width: 100%;
 		max-width: 100%;
 		height: auto;
-		min-height: 80px;
-		background-size: min(100%, 400px) auto;
-		background-position: bottom right;
-		padding-top: 48px;
+		min-height: 0;
+		background-image: none;
+		padding-top: 16px;
 	}
 
 	.top-menu {
 		float: none;
 		padding: 8px 12px;
 		text-align: center;
+	}
+
+	.top-menu-toggle {
+		display: inline-block;
+		margin: 8px auto 0;
+		padding: 12px 14px;
+		border: 1px solid #c5c1ac;
+		border-radius: 2px;
+		background: #F8F4E0;
+		cursor: pointer;
+		box-sizing: border-box;
+		line-height: 0;
+		overflow: visible;
+	}
+
+	.top-menu-toggle-icon {
+		display: block;
+		width: 22px;
+		height: 14px;
+		background:
+			linear-gradient(#493C2F, #493C2F) 0 0 / 22px 2px no-repeat,
+			linear-gradient(#493C2F, #493C2F) 0 6px / 22px 2px no-repeat,
+			linear-gradient(#493C2F, #493C2F) 0 12px / 22px 2px no-repeat;
+	}
+
+	.top-menu-extra {
+		display: none;
+		margin-top: 8px;
+		padding-top: 8px;
+		border-top: 1px solid #D6D0AB;
+	}
+
+	.top.is-menu-open .top-menu-extra {
+		display: block;
+	}
+
+	.top-menu-label-desktop {
+		display: none;
+	}
+
+	.top-menu-label-mobile {
+		display: inline;
+	}
+
+	.top-menu-sep {
+		display: none;
+	}
+
+	.top-menu-primary {
+		display: inline-block;
+		max-width: 100%;
+		text-align: left;
+		vertical-align: top;
+	}
+
+	.top-menu-line--primary {
+		/* border-top: 2px solid rgba(214, 208, 171, 0.45); */
+		text-align: left;
+	}
+
+	.top-menu-line--primary .top-menu-item {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		padding: 10px 8px;
+		border-bottom: 2px solid rgba(214, 208, 171, 1);
+		text-align: left;
+	}
+
+	.top-menu-item-icon {
+		display: block;
+		width: 44px;
+		height: 44px;
+		flex: 0 0 44px;
+		object-fit: contain;
+		object-position: center;
 	}
 
 	.page {
@@ -1521,6 +1623,45 @@ a.title.link-issue { font-size: 26px; }
 		margin-top: 0;
 		max-width: 80px;
 		height: auto;
+	}
+
+	.book-page-table,
+	.book-page-table tbody {
+		display: block;
+		width: 100%;
+	}
+
+	.book-page-row {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.book-content-cell {
+		display: contents;
+	}
+
+	.book-header {
+		order: 1;
+	}
+
+	.book-covers-cell {
+		order: 2;
+		width: auto;
+		padding: 12px 0;
+	}
+
+	.book-covers-cell .book-frame-cell img {
+		max-width: 100%;
+		height: auto;
+		width: auto;
+	}
+
+	.book-details {
+		order: 3;
+	}
+
+	.book-page-table .book-meta {
+		padding-left: 0;
 	}
 
 	.book-article-page,
