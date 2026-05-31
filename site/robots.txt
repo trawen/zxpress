@@ -1,1 +1,5 @@
-User-Agent: *Disallow: /print.phpDisallow: /input.php
+User-Agent: *
+Disallow: /print.php
+Disallow: /input.php
+
+Sitemap: https://zxpress.ru/sitemap.xml

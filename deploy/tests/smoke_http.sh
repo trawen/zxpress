@@ -26,6 +26,8 @@ grep -q 'X-Frame-Options' "$HEADERS_CONF" || fail "X-Frame-Options not in $HEADE
 grep -q 'X-Content-Type-Options' "$HEADERS_CONF" || fail "X-Content-Type-Options not in $HEADERS_CONF"
 grep -q 'Referrer-Policy' "$HEADERS_CONF" || fail "Referrer-Policy not in $HEADERS_CONF"
 grep -qE 'Content-Security-Policy|CSP' "$NGINX_CONF" || fail "Content-Security-Policy not in nginx-site.conf"
+grep -qE 'location = /sitemap\.xml' "$NGINX_CONF" || fail "location = /sitemap.xml not in nginx-site.conf"
+grep -q 'sitemap\.php' "$NGINX_CONF" || fail "sitemap.xml must fastcgi to sitemap.php"
 grep -qE "form-action 'self'" "$NGINX_CONF" || fail "CSP must include form-action 'self' (otherwise browsers block login POST with default-src 'none')"
 # HSTS may be commented until HTTPS is verified — still must be present as policy text
 grep -qE 'Strict-Transport-Security|HSTS' "$HEADERS_CONF" "$NGINX_CONF" || fail "HSTS (Strict-Transport-Security) not mentioned in nginx/security headers"
