@@ -69,7 +69,7 @@ body {
 
     float: right;
     text-align: center;
-    font: normal 15pt/21pt Times;
+    font: normal 14pt/20pt Times;
     padding-top: 8px;
     padding-right: 32px
 
@@ -1339,6 +1339,13 @@ a.title.link-issue { font-size: 26px; }
 .books-title-link { font: bold 14px Times; color: black; }
 .books-action-link { font: bold 14px Times; color: black; }
 
+/* books2.tpl */
+.books2-rubrics { margin-top: 8px; }
+.books2-rubric { margin-bottom: 28px; }
+.books2-rubric-title { font: bold 18px Times; margin: 0 0 8px 0; }
+.books2-rubric-desc { font: normal 15px Times; line-height: 1.45; }
+.books2-empty { font: normal 15px Times; color: #777; }
+
 /* wanted.tpl */
 .wanted-banner { border: 1px; border-left: 2px; border-right: 2px; border-style: solid; border-color: #D6D0AB; padding: 12px 12px 14px 12px; background-color: #F2EFDE; opacity: 0.9; margin-left: 4px; }
 .wanted-banner-inner { padding: 32px; }
@@ -1550,8 +1557,8 @@ a.title.link-issue { font-size: 26px; }
 
 	.top-menu-item-icon {
 		--scale-max: 194;
-		--slot-w: calc(224 * 44px / var(--scale-max));
-		--slot-h: 44px;
+		--slot-w: calc(224 * 44px * 0.85 / var(--scale-max));
+		--slot-h: calc(44px * 0.85);
 		--sw: 224;
 		--sh: 194;
 		--sx: 0;
@@ -1563,10 +1570,10 @@ a.title.link-issue { font-size: 26px; }
 		overflow: hidden;
 		background-image: url("/img/mobile-logo.webp");
 		background-repeat: no-repeat;
-		background-size: calc(1612px * 44 / var(--scale-max)) calc(193px * 44 / var(--scale-max));
+		background-size: calc(1612px * 44 * 0.85 / var(--scale-max)) calc(193px * 44 * 0.85 / var(--scale-max));
 		background-position:
-			calc(var(--sx) * -44px / var(--scale-max) + (var(--slot-w) - var(--sw) * 44px / var(--scale-max)) / 2)
-			calc(var(--sy) * -44px / var(--scale-max) + (var(--slot-h) - var(--sh) * 44px / var(--scale-max)) / 2);
+			calc(var(--sx) * -44px * 0.85 / var(--scale-max) + (var(--slot-w) - var(--sw) * 44px * 0.85 / var(--scale-max)) / 2)
+			calc(var(--sy) * -44px * 0.85 / var(--scale-max) + (var(--slot-h) - var(--sh) * 44px * 0.85 / var(--scale-max)) / 2);
 	}
 
 	.top-menu-item-icon--ezines {

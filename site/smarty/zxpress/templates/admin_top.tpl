@@ -81,9 +81,11 @@ a:hover, a:active, body_ahover
 
 {* <a href="admin_news.php?id={$id}">Новости</a> / *}
 <a href="admin_books.php">Книги</a> /
+<a href="admin_publishers.php">Издательства</a> /
 <a href="admin_issue.php">Выпуски журналов</a> /
 <a href="admin_articles.php">Статьи журналов</a> /
 <a href="admin_authors.php">Авторы</a> /
+<a href="admin_book_rubrics.php">Рубрики книг</a> /
 <a href="admin_letters.php">Письма</a> /
 <a href="admin_publications.php">Публикации</a>
  —

@@ -49,6 +49,7 @@ function zx_storage_rel_map(): array
 		'archive' => 'legacy/archive',
 		'cat' => 'legacy/cat',
 		'chapters_images' => 'image-archive',
+		'book_rubrics' => 'book_rubrics',
 		'sape' => 'integrations/sape',
 		'chronology_png' => 'cache/chronology/zxpress_dinamic.png',
 		'smarty_templates_c' => 'cache/smarty/templates_c',

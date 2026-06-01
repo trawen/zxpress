@@ -97,7 +97,30 @@
 
 
 <tr>
-<td>Издательство</td><td><input type="text" style="width: 150px" name="publisher" value="{if  $book.publisher}{$book.publisher}{else}«»{/if}" onchange="change('book_change');">  <b> </b>
+<td><label for="admin-book-publishers">Из справочника</label></td><td>
+<select id="admin-book-publishers" name="publisher_ids[]" multiple size="8" style="width:240px" onchange="change('book_change');">
+{section name=n loop=$publishers_list}
+<option value="{$publishers_list[n].id}" {if $publishers_list[n].selected}selected{/if}>{$publishers_list[n].label}</option>
+{/section}
+</select>
+<div style="font:normal 10px Verdana;color:#666;margin-top:2px">Ctrl+клик — несколько издательств</div>
+</td>
+</tr>
+
+
+<tr>
+<td>Издательство</td><td><input type="text" style="width: 240px" name="publisher" value="{if $book.publisher}{$book.publisher}{else}«»{/if}" onchange="change('book_change');"></td>
+</tr>
+
+
+<tr>
+<td><label for="admin-book-rubrics">Рубрики</label></td><td>
+<select id="admin-book-rubrics" name="rubric_ids[]" multiple size="6" style="width:400px" onchange="change('book_change');">
+{section name=n loop=$rubrics_list}
+<option value="{$rubrics_list[n].id}" {if $rubrics_list[n].selected}selected{/if}>{$rubrics_list[n].label}</option>
+{/section}
+</select>
+<div style="font:normal 10px Verdana;color:#666;margin-top:2px">Ctrl+клик — несколько рубрик</div>
 </td>
 </tr>
 

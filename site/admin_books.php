@@ -15,9 +15,106 @@ function my($var)
 
 }
 
+function books_publisher_admin_label(array $row): string
+{
+    $name = trim((string) ($row['name_ru'] ?? ''));
+    $alias = trim((string) ($row['alias_ru'] ?? ''));
+    if ($alias !== '' && $alias !== $name) {
+        return $name . ' (' . $alias . ')';
+    }
+
+    return $name !== '' ? $name : ('#' . (int) ($row['id'] ?? 0));
+}
+
+function books_publisher_ids_from_post(): array
+{
+    $ids = [];
+    if (!isset($_POST['publisher_ids']) || !is_array($_POST['publisher_ids'])) {
+        return $ids;
+    }
+
+    foreach ($_POST['publisher_ids'] as $publisherId) {
+        $publisherId = (int) $publisherId;
+        if ($publisherId > 0) {
+            $ids[$publisherId] = $publisherId;
+        }
+    }
+
+    return array_values($ids);
+}
+
+function books_sync_publishers(mysqli $db, int $bookId, array $publisherIds): void
+{
+    db_exec($db, 'DELETE FROM book_publishers WHERE book_id=?', 'i', $bookId);
+
+    foreach ($publisherIds as $publisherId) {
+        $publisherId = (int) $publisherId;
+        if ($publisherId <= 0) {
+            continue;
+        }
+        db_exec(
+            $db,
+            'INSERT IGNORE INTO book_publishers (book_id, publisher_id) VALUES (?, ?)',
+            'ii',
+            $bookId,
+            $publisherId
+        );
+    }
+}
+
+function books_rubric_admin_label(array $row): string
+{
+    $name = trim((string) ($row['name_ru'] ?? ''));
+    if ($name === '') {
+        $name = trim((string) ($row['name_en'] ?? ''));
+    }
+
+    $label = '[' . (int) ($row['sort_order'] ?? 0) . '] ' . ($name !== '' ? $name : ('#' . (int) ($row['id'] ?? 0)));
+    $nameEn = trim((string) ($row['name_en'] ?? ''));
+    if ($nameEn !== '' && $nameEn !== $name) {
+        $label .= ' / ' . $nameEn;
+    }
+
+    return $label;
+}
+
+function books_rubric_ids_from_post(): array
+{
+    $ids = [];
+    if (!isset($_POST['rubric_ids']) || !is_array($_POST['rubric_ids'])) {
+        return $ids;
+    }
+
+    foreach ($_POST['rubric_ids'] as $rubricId) {
+        $rubricId = (int) $rubricId;
+        if ($rubricId > 0) {
+            $ids[$rubricId] = $rubricId;
+        }
+    }
+
+    return array_values($ids);
+}
+
+function books_sync_rubrics(mysqli $db, int $bookId, array $rubricIds): void
+{
+    db_exec($db, 'DELETE FROM book_rubric_links WHERE book_id=?', 'i', $bookId);
+
+    foreach ($rubricIds as $rubricId) {
+        $rubricId = (int) $rubricId;
+        if ($rubricId <= 0) {
+            continue;
+        }
+        db_exec(
+            $db,
+            'INSERT IGNORE INTO book_rubric_links (book_id, rubric_id) VALUES (?, ?)',
+            'ii',
+            $bookId,
+            $rubricId
+        );
+    }
+}
 
 $id_username = intval($_SESSION['id_username']);
-
 
 // error_reporting(E_ALL);
 
@@ -303,12 +400,11 @@ csrf_verify();
         $series = plain_text_normalize_for_storage(trim((string) ($_POST['series'] ?? '')));
         $authors = plain_text_normalize_for_storage(trim((string) ($_POST['authors'] ?? '')));
         $annotation = trim((string) ($_POST['annotation'] ?? ''));
+        $publisherIds = books_publisher_ids_from_post();
+        $rubricIds = books_rubric_ids_from_post();
         $publisher = plain_text_normalize_for_storage(trim((string) ($_POST['publisher'] ?? '')));
-
-
-
-        if ($publisher == "« »") {
-            $publisher = "";
+        if ($publisher === '« »') {
+            $publisher = '';
         }
 
         $language = intval($_POST['language']);
@@ -329,6 +425,9 @@ csrf_verify();
             );
             $stmt_bup->execute();
         }
+
+        books_sync_publishers($db, (int) $id, $publisherIds);
+        books_sync_rubrics($db, (int) $id, $rubricIds);
 
         $log_t111 = 111;
         $stmt_l111 = $db->prepare(
@@ -642,6 +741,105 @@ while ($z && ($t = mysqli_fetch_array($z))) {
     $n++;
 }
 $smarty->assign('languages', $ln);
+
+$linkedPublisherIds = [];
+if ($id > 0) {
+    $z = db_select($db, 'SELECT publisher_id FROM book_publishers WHERE book_id=?', 'i', $id);
+    while ($z && ($t = mysqli_fetch_array($z))) {
+        $linkedPublisherIds[(int) $t['publisher_id']] = true;
+    }
+}
+
+$publishersList = [];
+$z = db_select(
+    $db,
+    'SELECT id, name_ru, alias_ru, active FROM publishers WHERE active=1 ORDER BY name_ru ASC'
+);
+while ($z && ($t = mysqli_fetch_array($z))) {
+    $pid = (int) $t['id'];
+    $t['label'] = books_publisher_admin_label($t);
+    $t['selected'] = !empty($linkedPublisherIds[$pid]);
+    $publishersList[] = $t;
+    unset($linkedPublisherIds[$pid]);
+}
+
+if ($linkedPublisherIds !== []) {
+    foreach (array_keys($linkedPublisherIds) as $pid) {
+        $stmt = $db->prepare('SELECT id, name_ru, alias_ru, active FROM publishers WHERE id=? LIMIT 1');
+        if (!$stmt) {
+            continue;
+        }
+        $stmt->bind_param('i', $pid);
+        $stmt->execute();
+        $t = $stmt->get_result()->fetch_assoc();
+        $stmt->close();
+        if (!$t) {
+            continue;
+        }
+        $t['label'] = books_publisher_admin_label($t);
+        $t['selected'] = true;
+        if ((int) ($t['active'] ?? 1) !== 1) {
+            $t['label'] .= ' [неакт.]';
+        }
+        $publishersList[] = $t;
+    }
+    usort($publishersList, static function (array $a, array $b): int {
+        return strcasecmp((string) ($a['name_ru'] ?? ''), (string) ($b['name_ru'] ?? ''));
+    });
+}
+$smarty->assign('publishers_list', $publishersList);
+
+$linkedRubricIds = [];
+if ($id > 0) {
+    $z = db_select($db, 'SELECT rubric_id FROM book_rubric_links WHERE book_id=?', 'i', $id);
+    while ($z && ($t = mysqli_fetch_array($z))) {
+        $linkedRubricIds[(int) $t['rubric_id']] = true;
+    }
+}
+
+$rubricsList = [];
+$z = db_select(
+    $db,
+    'SELECT id, name_ru, name_en, sort_order, is_active FROM book_rubrics WHERE is_active=1 ORDER BY sort_order ASC, name_ru ASC'
+);
+while ($z && ($t = mysqli_fetch_array($z))) {
+    $rid = (int) $t['id'];
+    $t['label'] = books_rubric_admin_label($t);
+    $t['selected'] = !empty($linkedRubricIds[$rid]);
+    $rubricsList[] = $t;
+    unset($linkedRubricIds[$rid]);
+}
+
+if ($linkedRubricIds !== []) {
+    foreach (array_keys($linkedRubricIds) as $rid) {
+        $stmt = $db->prepare('SELECT id, name_ru, name_en, sort_order, is_active FROM book_rubrics WHERE id=? LIMIT 1');
+        if (!$stmt) {
+            continue;
+        }
+        $stmt->bind_param('i', $rid);
+        $stmt->execute();
+        $t = $stmt->get_result()->fetch_assoc();
+        $stmt->close();
+        if (!$t) {
+            continue;
+        }
+        $t['label'] = books_rubric_admin_label($t);
+        $t['selected'] = true;
+        if ((int) ($t['is_active'] ?? 1) !== 1) {
+            $t['label'] .= ' [неакт.]';
+        }
+        $rubricsList[] = $t;
+    }
+    usort($rubricsList, static function (array $a, array $b): int {
+        $sort = ((int) ($a['sort_order'] ?? 0)) <=> ((int) ($b['sort_order'] ?? 0));
+        if ($sort !== 0) {
+            return $sort;
+        }
+
+        return strcasecmp((string) ($a['name_ru'] ?? ''), (string) ($b['name_ru'] ?? ''));
+    });
+}
+$smarty->assign('rubrics_list', $rubricsList);
 
 
 $z = db_select($db, "SELECT * FROM books ORDER BY title1 ASC");
