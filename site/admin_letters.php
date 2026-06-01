@@ -289,10 +289,6 @@ while ($z && ($t = mysqli_fetch_array($z))) {
 }
 $smarty->assign('letters_list', $letters_list);
 
-if ($id === 0 && count($letters_list) > 0 && !isset($_GET['id'])) {
-    $id = (int) ($letters_list[0]['id'] ?? 0);
-}
-
 $letter = null;
 if ($id > 0) {
     $stmt = $db->prepare(

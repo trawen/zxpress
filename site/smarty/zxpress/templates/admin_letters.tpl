@@ -26,7 +26,7 @@
 <form method="get" action="admin_letters.php">
 <label for="admin-letter-list" class="u-sr-only">Выбрать письмо</label>
 <select id="admin-letter-list" name="id" style="width:340px;height:22px" onchange="this.form.submit()">
-<option value="0" {if !$letter || !$letter.id}selected{/if}>— выбрать —</option>
+<option value="0" {if !$letter || !$letter.id}selected{/if}>— новое письмо —</option>
 {section name=n loop=$letters_list}
 <option value="{$letters_list[n].id}" {if $letter && $letters_list[n].id eq $letter.id}selected{/if}>
 #{$letters_list[n].id} {$letters_list[n].from_nick} → {$letters_list[n].to_nick}: {$letters_list[n].title_ru}

@@ -1459,8 +1459,11 @@ a.title.link-issue { font-size: 26px; }
 	}
 
 	.top-logo-mobile-img {
-		max-width: min(100%, 320px);
-		height: auto;
+		display: block;
+		width: min(100%, 320px);
+		margin: 0 auto;
+		aspect-ratio: 564 / 138;
+		background: url("/img/mobile-logo.webp") 0 0 / calc(1612 / 564 * 100%) auto no-repeat;
 	}
 
 	.footer {
@@ -1546,12 +1549,52 @@ a.title.link-issue { font-size: 26px; }
 	}
 
 	.top-menu-item-icon {
+		--scale-max: 194;
+		--slot-w: calc(224 * 44px / var(--scale-max));
+		--slot-h: 44px;
+		--sw: 224;
+		--sh: 194;
+		--sx: 0;
+		--sy: 0;
+		width: var(--slot-w);
+		height: var(--slot-h);
+		flex: 0 0 var(--slot-w);
 		display: block;
-		width: 44px;
-		height: 44px;
-		flex: 0 0 44px;
-		object-fit: contain;
-		object-position: center;
+		overflow: hidden;
+		background-image: url("/img/mobile-logo.webp");
+		background-repeat: no-repeat;
+		background-size: calc(1612px * 44 / var(--scale-max)) calc(193px * 44 / var(--scale-max));
+		background-position:
+			calc(var(--sx) * -44px / var(--scale-max) + (var(--slot-w) - var(--sw) * 44px / var(--scale-max)) / 2)
+			calc(var(--sy) * -44px / var(--scale-max) + (var(--slot-h) - var(--sh) * 44px / var(--scale-max)) / 2);
+	}
+
+	.top-menu-item-icon--ezines {
+		--sw: 224;
+		--sh: 194;
+		--sx: 600;
+		--sy: 0;
+	}
+
+	.top-menu-item-icon--books {
+		--sw: 224;
+		--sh: 140;
+		--sx: 884;
+		--sy: 16;
+	}
+
+	.top-menu-item-icon--letters {
+		--sw: 169;
+		--sh: 159;
+		--sx: 1191;
+		--sy: 14;
+	}
+
+	.top-menu-item-icon--zxnet {
+		--sw: 199;
+		--sh: 136;
+		--sx: 1414;
+		--sy: 11;
 	}
 
 	.page {

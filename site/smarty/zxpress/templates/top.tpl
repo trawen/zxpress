@@ -66,7 +66,7 @@
 
 	<link rel="preload" href="{$host}img/style.css?&{$smarty.now}" as="style">
 	<link href="{$host}img/style.css?&{$smarty.now}" rel="stylesheet">
-	<link rel="preload" href="{$host}img/zxpress-new-logo.png" as="image" fetchpriority="high" media="(max-width: 960px)">
+	<link rel="preload" href="{$host}img/mobile-logo.webp" as="image" fetchpriority="high" media="(max-width: 960px)">
 </head>
 
 <body>
@@ -75,8 +75,8 @@
 	<div class="page">
 
 		<header class="top">
-			<a href="{$host}" class="top-logo-mobile">
-				<img src="{$host}img/zxpress-new-logo.png" alt="ZXPRESS" width="568" height="134" class="top-logo-mobile-img" fetchpriority="high">
+			<a href="{$host}" class="top-logo-mobile" aria-label="ZXPRESS">
+				<span class="top-logo-mobile-img" aria-hidden="true"></span>
 			</a>
 			<div class="top-menu">
 				{if $lng eq 'eng'}
@@ -113,10 +113,10 @@
 				{else}
 					<div class="top-menu-primary">
 					<div class="top-menu-line top-menu-line--primary">
-						<a href="{$host}ezines.php{$sl}" class="top-menu-item"><img src="{$host}img/ezines-logo.png" alt="" class="top-menu-item-icon"><span class="top-menu-label-desktop">Пресса</span><span class="top-menu-label-mobile">Электронные журналы и газеты</span></a><span class="top-menu-sep"> ▪</span>
-						<a href="{$host}books.php{$sl}" class="top-menu-item"><img src="{$host}img/books-logo.png" alt="" class="top-menu-item-icon"><span class="top-menu-label-desktop">Книги</span><span class="top-menu-label-mobile">Книги и бумажные журналы</span></a><span class="top-menu-sep"> ▪</span>
-						<a href="{$host}snailmail.php{$sl}" class="top-menu-item"><img src="{$host}img/letters-logo.png" alt="" class="top-menu-item-icon"><span class="top-menu-label-desktop">Письма</span><span class="top-menu-label-mobile">Бумажные письма</span></a><span class="top-menu-sep"> ▪</span>
-						<a href="{$host}zxnet{$sl}" class="top-menu-item"><img src="{$host}img/zxnet-logo.png" alt="" class="top-menu-item-icon"><span class="top-menu-label-desktop">ZXNet</span><span class="top-menu-label-mobile">ZXNet эхоконференции</span></a>
+						<a href="{$host}ezines.php{$sl}" class="top-menu-item"><span class="top-menu-item-icon top-menu-item-icon--ezines" aria-hidden="true"></span><span class="top-menu-label-desktop">Пресса</span><span class="top-menu-label-mobile">Электронные журналы и газеты</span></a><span class="top-menu-sep"> ▪</span>
+						<a href="{$host}books.php{$sl}" class="top-menu-item"><span class="top-menu-item-icon top-menu-item-icon--books" aria-hidden="true"></span><span class="top-menu-label-desktop">Книги</span><span class="top-menu-label-mobile">Книги и бумажные журналы</span></a><span class="top-menu-sep"> ▪</span>
+						<a href="{$host}snailmail.php{$sl}" class="top-menu-item"><span class="top-menu-item-icon top-menu-item-icon--letters" aria-hidden="true"></span><span class="top-menu-label-desktop">Письма</span><span class="top-menu-label-mobile">Бумажные письма</span></a><span class="top-menu-sep"> ▪</span>
+						<a href="{$host}zxnet{$sl}" class="top-menu-item"><span class="top-menu-item-icon top-menu-item-icon--zxnet" aria-hidden="true"></span><span class="top-menu-label-desktop">ZXNet</span><span class="top-menu-label-mobile">ZXNet эхоконференции</span></a>
 					</div>
 					</div>
 					<div class="top-menu-extra-wrap">
