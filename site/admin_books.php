@@ -413,15 +413,48 @@ csrf_verify();
         $circulation = intval($_POST['circulation']);
         $city = intval($_POST['city']);
         $type = intval($_POST['type']);
+        $is_periodical = !empty($_POST['is_periodical']) ? 1 : 0;
+        $periodical_id = plain_text_normalize_for_storage(trim((string) ($_POST['periodical_id'] ?? '')));
+        $periodical_order_raw = trim((string) ($_POST['periodical_order'] ?? ''));
+        $periodical_order = ($periodical_order_raw !== '' && is_numeric($periodical_order_raw))
+            ? (int) $periodical_order_raw
+            : null;
 
         $d = explode(".", $_POST['date']);
         $date = mktime(0, 0, 0, $d[1], $d[0], $d[2]);
 
-        $stmt_bup = $db->prepare("UPDATE books SET type=?, city_id=?, title1=?, title2=?, authors=?, annotation=?, publisher=?, language=?, isbn=?, pages=?, circulation=?, date=?, series=? WHERE id=? LIMIT 1");
+        $stmt_bup = $db->prepare(
+            'UPDATE books SET type=?, city_id=?, title1=?, title2=?, authors=?, annotation=?, publisher=?, language=?, isbn=?, pages=?, circulation=?, date=?, series=?, is_periodical=?, periodical_id=?, periodical_order=? WHERE id=? LIMIT 1'
+        );
         if ($stmt_bup) {
+            $bindTypes = implode('', [
+                'i', 'i',
+                's', 's', 's', 's', 's',
+                'i', 's',
+                'i', 'i', 'i',
+                's',
+                'i', 's', 'i',
+                'i',
+            ]);
             $stmt_bup->bind_param(
-                "iisssssisiiisi",
-                $type, $city, $title1, $title2, $authors, $annotation, $publisher, $language, $isbn, $pages, $circulation, $date, $series, $id
+                $bindTypes,
+                $type,
+                $city,
+                $title1,
+                $title2,
+                $authors,
+                $annotation,
+                $publisher,
+                $language,
+                $isbn,
+                $pages,
+                $circulation,
+                $date,
+                $series,
+                $is_periodical,
+                $periodical_id,
+                $periodical_order,
+                $id
             );
             $stmt_bup->execute();
         }
@@ -716,7 +749,8 @@ if ($t) {
     $t['date'] = date("d.m.Y", $t['date']);
 }
 $smarty->assign('book', $t);
-
+$smarty->assign('prev_book_id', $id > 1 ? $id - 1 : 0);
+$smarty->assign('next_book_id', $id > 0 ? $id + 1 : 0);
 
 // $z = mysqli_query($db,"SELECT * FROM issue WHERE id_press=$id ORDER BY title ASC" ); error_log(mysqli_error($db));
 // $n = 0;

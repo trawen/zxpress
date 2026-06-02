@@ -1,0 +1,23 @@
+CREATE TABLE `books` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `title1` varchar(128) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `title2` varchar(128) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `series` varchar(128) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `publisher` varchar(128) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `authors` varchar(512) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `annotation` text CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `isbn` varchar(16) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `pages` int NOT NULL,
+  `city_id` int NOT NULL,
+  `date` int NOT NULL,
+  `circulation` int NOT NULL,
+  `type` int NOT NULL DEFAULT '0',
+  `language` int NOT NULL,
+  `online` smallint NOT NULL,
+  `image_id` int NOT NULL,
+  `file_id` int NOT NULL,
+  `is_periodical` tinyint(1) NOT NULL DEFAULT '0',
+  `periodical_id` varchar(128) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL DEFAULT '',
+  `periodical_order` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=245 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;

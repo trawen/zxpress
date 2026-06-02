@@ -93,7 +93,20 @@
 </tr>
 
 
+<tr>
+<td>Периодическое издание</td>
+<td><input type="checkbox" name="is_periodical" value="1" {if $book.is_periodical}checked{/if} onchange="change('book_change');"></td>
+</tr>
 
+<tr>
+<td><label for="admin-book-periodical-id">periodical_id</label></td>
+<td><input id="admin-book-periodical-id" type="text" name="periodical_id" style="width:400px" value="{if $book.periodical_id}{$book.periodical_id}{/if}" onchange="change('book_change');"></td>
+</tr>
+
+<tr>
+<td><label for="admin-book-periodical-order">Порядок в серии</label></td>
+<td><input id="admin-book-periodical-order" type="number" name="periodical_order" style="width:100px" value="{if $book.periodical_order !== null && $book.periodical_order !== ''}{$book.periodical_order}{/if}" onchange="change('book_change');"></td>
+</tr>
 
 
 <tr>
@@ -180,6 +193,16 @@ ISBN</td><td><input type="text" style="width: 100px" name="isbn" value="{$book.i
 <br><br>
 
 <a href="admin_books.php?id=0" style="color: blue">Добавить новое издание +</a>
+{if $book.id}
+{if $prev_book_id}
+&nbsp; | &nbsp;
+<a href="admin_books.php?id={$prev_book_id}">« Предыдущая книга (#{$prev_book_id})</a>
+{/if}
+&nbsp; | &nbsp;
+<a href="admin_books.php?id={$next_book_id}">Следующая книга (#{$next_book_id}) »</a>
+&nbsp;
+<input type="submit" name="save" value="Сохранить" style="height:26px;font:12px Verdana">
+{/if}
  
  <input type="hidden" value="" name="book_change" id="book_change">
 </td>
