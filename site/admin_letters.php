@@ -47,10 +47,23 @@ function letters_make_jpeg_preview(string $tmpFile, string $dstPath, int $maxWid
     }
 
     $mime = $info['mime'] ?? '';
+    $src = null;
     if ($mime === 'image/jpeg') {
         $src = @imagecreatefromjpeg($tmpFile);
     } elseif ($mime === 'image/png') {
         $src = @imagecreatefrompng($tmpFile);
+    } elseif ($mime === 'image/webp') {
+        if (!function_exists('imagecreatefromwebp')) {
+            error_log('[FIX] admin_letters: imagecreatefromwebp() not available (GD without WebP)');
+            return false;
+        }
+        $src = @imagecreatefromwebp($tmpFile);
+    } elseif ($mime === 'image/gif') {
+        if (!function_exists('imagecreatefromgif')) {
+            error_log('[FIX] admin_letters: imagecreatefromgif() not available');
+            return false;
+        }
+        $src = @imagecreatefromgif($tmpFile);
     } else {
         error_log('[FIX] admin_letters: preview unsupported mime=' . $mime);
         return false;

@@ -6,8 +6,8 @@
 FROM php:8.5-fpm@sha256:3d98d6bc0e3928478209db6ccc56fd4d5e796dab9d6a7ab56055c9304bf48003 AS builder
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        libpng-dev libjpeg-dev libfreetype6-dev libonig-dev libzip-dev \
-    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+        libpng-dev libjpeg-dev libfreetype6-dev libonig-dev libzip-dev libwebp-dev \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
     && docker-php-ext-install mysqli mbstring gd zip \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -17,7 +17,7 @@ FROM php:8.5-fpm@sha256:3d98d6bc0e3928478209db6ccc56fd4d5e796dab9d6a7ab56055c930
 # Runtime libs for gd/mysqli/mbstring/zip extensions (Debian trixie: libzip5, libpng16-16t64)
 # fonts-dejavu-core: chronology graph uses imagettftext (path under /usr/share)
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        libpng16-16t64 libjpeg62-turbo libfreetype6 libonig5 libzip5 \
+        libpng16-16t64 libjpeg62-turbo libfreetype6 libonig5 libzip5 libwebp7 \
         fonts-dejavu-core \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 

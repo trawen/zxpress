@@ -1,0 +1,21 @@
+CREATE TABLE `periodical_issues` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `periodical_id` int unsigned NOT NULL,
+  `issue_volume` smallint unsigned DEFAULT NULL,
+  `issue_no` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `issue_date` date DEFAULT NULL,
+  `issue_year` smallint unsigned DEFAULT NULL,
+  `title_ru` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `title_en` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `description_ru` text COLLATE utf8mb4_unicode_ci,
+  `description_en` text COLLATE utf8mb4_unicode_ci,
+  `is_active` tinyint(1) NOT NULL DEFAULT '1',
+  `is_bound` tinyint(1) NOT NULL DEFAULT '0',
+  `circulation` int unsigned DEFAULT NULL,
+  `pages` int unsigned NOT NULL DEFAULT '0',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_issue` (`periodical_id`,`issue_year`,`issue_no`),
+  KEY `idx_periodical` (`periodical_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
