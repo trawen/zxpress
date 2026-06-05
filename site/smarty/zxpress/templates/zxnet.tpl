@@ -36,9 +36,8 @@
 
 {elseif $id}
 
-<h1 class="title">ZXNet эхоконференция «<a class="big" href="{$host}zxnet/{$echo.title|escape:'url'}">{$echo.title}</a>»</h1><br>
-
-<h2><big><b>тема:</b> {$subj_title}</big></h2><br>
+<h1 class="title">{$subj_title|default:'###'}</h1>
+<p>ZXNet эхоконференция «<a class="big" href="{$host}zxnet/{$echo.title|escape:'url'}">{$echo.title}</a>»</p><br>
 <hr>
 
 

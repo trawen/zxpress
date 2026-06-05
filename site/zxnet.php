@@ -18,6 +18,7 @@ if (is_array($t)) {
 $smarty->assign('echo', $t);
 $id = $t ? (int)$t['id'] : 0;
 $smarty->assign('id', $id);
+$echo_title = is_array($t) ? (string) ($t['title'] ?? '') : '';
 
 
 if ($subj_id) {
@@ -27,7 +28,8 @@ if ($subj_id) {
 	$stmt_subj->execute();
 	$z = $stmt_subj->get_result();
 	$t = mysqli_fetch_array($z);
-	$smarty->assign('subj_title', $t ? plain_text_decode_entities((string) $t[0]) : '');
+	$subj_title = $t ? plain_text_decode_entities((string) $t[0]) : '';
+	$smarty->assign('subj_title', $subj_title);
 
 	$stmt_topic = $db->prepare("SELECT * FROM echos_zxnet WHERE echo_id=? AND subj_id=? ORDER BY date");
 	$stmt_topic->bind_param("ii", $id, $subj_id);
@@ -54,6 +56,22 @@ if ($subj_id) {
 	}
 	$smarty->assign('topic', $topic);
 
+	if ($subj_title !== '') {
+		$page_title = $echo_title !== '' ? $subj_title . ' — ZXNet «' . $echo_title . '»' : $subj_title;
+	} else {
+		$page_title = $echo_title !== '' ? 'ZXNet «' . $echo_title . '»' : 'ZXNet';
+	}
+	$smarty->assign('title', $page_title);
+
+	$descPlain = '';
+	if (!empty($topic)) {
+		$descPlain = title_plain(strip_tags((string) ($topic[0]['text'] ?? '')));
+	}
+	if ($descPlain === '') {
+		$descPlain = $subj_title !== '' ? $subj_title : $page_title;
+	}
+	$smarty->assign('description', $descPlain);
+
 }
 elseif ($id) {
 
@@ -72,6 +90,10 @@ elseif ($id) {
 	}
 	$smarty->assign('subjs', $subjs);
 
+	$smarty->assign('title', $echo_title !== ''
+		? 'ZXNet эхоконференция «' . $echo_title . '»'
+		: 'ZXNet эхоконференция');
+
 }
 else {
 
@@ -86,7 +108,7 @@ else {
 	}
 	$smarty->assign('echos', $echos);
 
-	$smarty->assign('title', "ZXNet эхоконференция «CODE.ZX»");
+	$smarty->assign('title', 'Архив эхоконференций сети ZXNet');
 
 }
 
