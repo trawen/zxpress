@@ -5,9 +5,57 @@ error_reporting(E_ALL);
 
 require 'init.inc';
 
+function article_public_meta_description(array $article, ?string $lng): string
+{
+	$metaRu = title_plain((string) ($article['meta_description_ru'] ?? ''));
+	$metaEn = title_plain((string) ($article['meta_description_en'] ?? ''));
+	if ($lng === 'eng') {
+		if ($metaEn !== '') {
+			return $metaEn;
+		}
+		if ($metaRu !== '') {
+			return $metaRu;
+		}
+		$titleEng = title_plain((string) ($article['title_eng'] ?? ''));
+		if ($titleEng !== '') {
+			return $titleEng;
+		}
+		return title_plain((string) ($article['title'] ?? ''));
+	}
+	if ($metaRu !== '') {
+		return $metaRu;
+	}
+	return title_plain((string) ($article['title'] ?? ''));
+}
+
+function article_show_not_found($smarty): void {
+	global $db, $article_breadcrumbs;
+	if (!is_array($article_breadcrumbs)) {
+		$article_breadcrumbs = [];
+	}
+	http_response_code(404);
+	$smarty->assign('article', null);
+	$smarty->assign('article_not_found', true);
+	$smarty->assign('title', 'Статья не найдена');
+	include 'right.php';
+	$smarty->display('article.tpl');
+	exit;
+}
+
 $id = intval($_GET['id']);
 $smarty->assign('id_article', $id);
 $smarty->assign('id', $id);
+
+$stmt = mysqli_prepare($db, "SELECT * FROM articles WHERE id=? LIMIT 1");
+mysqli_stmt_bind_param($stmt, "i", $id);
+mysqli_stmt_execute($stmt);
+$z = mysqli_stmt_get_result($stmt);
+$article = mysqli_fetch_array($z);
+
+if (!is_array($article)) {
+	article_show_not_found($smarty);
+}
+
 get_parents($id,1);
 $smarty->assign('breadcrumbs',  array_reverse($article_breadcrumbs) );
 
@@ -16,11 +64,12 @@ mysqli_stmt_bind_param($stmt, "i", $id);
 mysqli_stmt_execute($stmt);
 $z = mysqli_stmt_get_result($stmt);
 $issue = mysqli_fetch_array($z);
-{
-
-	$issue['date'] = date("d ".$months[date("m", $issue['date'])]." Y", $issue['date'] );
-
+if (!is_array($issue)) {
+	article_show_not_found($smarty);
 }
+
+$issue['date'] = date("d ".$months[date("m", $issue['date'])]." Y", $issue['date'] );
+
 $smarty->assign('issue', $issue);
 $id_issue = intval($issue['id']);
 $id_press = intval($issue['id_press']);
@@ -55,16 +104,7 @@ $smarty->assign('press', $press);
 
 
 
-$stmt = mysqli_prepare($db, "SELECT * FROM articles WHERE id=?");
-mysqli_stmt_bind_param($stmt, "i", $id);
-mysqli_stmt_execute($stmt);
-$z = mysqli_stmt_get_result($stmt);
-$article = mysqli_fetch_array($z);
-
-
-if ($article) {
-
-	$article['name_plain'] = title_plain($article['name'] ?? '');
+$article['name_plain'] = title_plain($article['name'] ?? '');
 	$aid = (int)$article['id'];
 	if ($_GET['lng'] == 'eng' && $id <= 10948) {
 		$baseDir = realpath(zx_storage_dir('articles_eng'));
@@ -101,12 +141,21 @@ if ($article) {
 		}
 	}
 
+if ((int) ($article['temp'] ?? 0) === 0) {
+	$hasTitle = title_plain($article['title'] ?? '') !== ''
+		|| title_plain($article['title_eng'] ?? '') !== '';
+	$hasBody = title_plain(strip_tags($article['text'] ?? '')) !== '';
+	if (!$hasTitle && !$hasBody) {
+		article_show_not_found($smarty);
+	}
 }
 
-
 $smarty->assign('article', $article);
+$smarty->assign('article_not_found', false);
 
-$smarty->assign('title', $article ? title_plain($article['title'] ?? '') : '' );
+$smarty->assign('title', title_plain($article['title'] ?? ''));
+$articleDescPlain = article_public_meta_description($article, $smarty->getTemplateVars('lng'));
+$smarty->assign('description', $articleDescPlain);
 
 
  //TAGS

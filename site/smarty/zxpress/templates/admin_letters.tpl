@@ -99,6 +99,16 @@
 </tr>
 
 <tr>
+<td valign="top">Meta description (RU)</td>
+<td><textarea name="meta_description_ru" rows="2" style="width:520px" maxlength="512">{if $letter}{$letter.meta_description_ru}{/if}</textarea></td>
+</tr>
+
+<tr>
+<td valign="top">Meta description (EN)</td>
+<td><textarea name="meta_description_en" rows="2" style="width:520px" maxlength="512">{if $letter}{$letter.meta_description_en}{/if}</textarea></td>
+</tr>
+
+<tr>
 <td valign="top">Текст (RU)</td>
 <td><textarea name="body_ru" rows="10" style="width:520px">{if $letter}{$letter.body_ru nofilter}{/if}</textarea></td>
 </tr>

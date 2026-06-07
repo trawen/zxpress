@@ -8,6 +8,10 @@
 
 {if $letter}
 
+<p class="pub-breadcrumbs">
+	<a href="{$host}snailmail.php{if $lng eq 'eng'}?lng=eng{/if}">← Все бумажные письма</a>
+</p>
+
 <h1>{$letter.title_ru}</h1>
 
 <p class="letter-meta-from">
@@ -21,7 +25,7 @@
 </p>
 
 {if $letter.summary_html}
-<div class="letter-summary">{$letter.summary_html nofilter}</div>
+<p class="letter-summary-block"><b>Краткое содержимое бумажного письма:</b> <span class="letter-summary">{$letter.summary_html nofilter}</span></p>
 {/if}
 
 {if $letter_images && $letter_images|@count gt 0}
@@ -42,21 +46,28 @@
 
 {elseif $letter_not_found}
 
-<h1>Письмо не найдено</h1>
-<p><a href="{$host}snailmail.php{if $lng eq 'eng'}?lng=eng{/if}">К каталогу писем</a></p>
+<h1>Бумажное письмо не найдено</h1>
+<p><a href="{$host}snailmail.php{if $lng eq 'eng'}?lng=eng{/if}">К каталогу бумажных писем</a></p>
 
 {else}
 
+{if $filter_from && $filter_from_author_display}
+<h1 class="letter-filter-h1">Все бумажные письма от {$filter_from_author_display}</h1>
+<p class="pub-breadcrumbs">
+	<a href="{$host}snailmail.php{if $lng eq 'eng'}?lng=eng{/if}">← Все бумажные письма</a>
+</p>
+{else}
 <h1>Бумажные письма середины 90-х годов от участников ZX Spectrum сцены</h1>
 <div class="letter-banner"><img src="{$host}img/snailmail.png" alt="Snailmail" class="letter-banner-img"></div>
-<h2><p><i>Swapping и Snailmail — культура обмена дискетами, кассетами, журналами по обычной (улиточной) почте, без которой демосцена СССР и Восточной Европы 80–90-х, возможно, не существовала бы.</p> <p>До интернета именно письма связывали активных пользователей из разных городов и стран. Обменом как правило занимался специальный человек - своппер.
+<h2><p><i>Swapping и Snailmail — культура обмена дискетами, кассетами, журналами по обычной (улиточной) почте, без которой демосцена СССР и Восточной Европы 80–90-х, возможно, не существовала бы.</p> <p>До интернета именно бумажные письма связывали активных пользователей из разных городов и стран. Обменом как правило занимался специальный человек - своппер.
 Он поддерживал контакты с десятками, иногда сотнями людей. От него зависело, насколько быстро новые релизы, софт, игры и демо разойдутся по сцене. Не редко свопперы занимались так же продажей софта в своем городе.</p><p>
 
-Здесь собраны сканы бумажных писем участников отечественной ZX Spectrum сцены. В письмах вы найдете — новости, планы, обсуждение софта, игр и демосцены.</p></i></h2>
+Здесь собраны сканы бумажных писем участников отечественной ZX Spectrum сцены. В этих бумажных письмах вы найдете — новости, планы, обсуждение софта, игр и демосцены.</p></i></h2>
+{/if}
 
 {if $letter_author_filters && $letter_author_filters|@count gt 0}
 <p class="pub-filters">
-	<b>Фильтровать письма по автору:</b>
+	<b>Фильтровать бумажные письма по автору:</b>
 	{foreach from=$letter_author_filters item=auth name=af}
 		{if !$smarty.foreach.af.first}, {/if}
 		{if $filter_from && $auth.id == $filter_from}
@@ -77,7 +88,7 @@
 <tr valign="top">
 <td width="140" class="pub-list-cover-cell">
 {if $row.cover}
-	<a href="{$row.cover.original_url}" target="_blank" rel="noopener">
+	<a href="{$host}snailmail.php?id={$row.id}{if $lng eq 'eng'}&amp;lng=eng{/if}">
 		<img src="{$row.cover.thumb_src}" alt="" width="128" class="pub-list-thumb">
 	</a>
 {else}
@@ -106,7 +117,7 @@
 <br>
 {/foreach}
 {else}
-<p>Здесь пока нет писем.</p>
+<p>Здесь пока нет бумажных писем.</p>
 {/if}
 
 {if $letters_total_pages gt 1}

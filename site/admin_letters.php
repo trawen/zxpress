@@ -135,6 +135,8 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
     }
     $summary_ru = trim((string) ($_POST['summary_ru'] ?? ''));
     $summary_en = trim((string) ($_POST['summary_en'] ?? ''));
+    $meta_description_ru = plain_text_normalize_for_storage(zx_post_string('meta_description_ru'));
+    $meta_description_en = plain_text_normalize_for_storage(zx_post_string('meta_description_en'));
     $body_ru = trim((string) ($_POST['body_ru'] ?? ''));
     $body_en = trim((string) ($_POST['body_en'] ?? ''));
     $date_raw = zx_post_string('date');
@@ -144,41 +146,65 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
     if ($author_from <= 0 || $author_to <= 0 || $title_ru === '') {
         $smarty->assign('error', 'Заполни: От кого, Кому, Заголовок (RU)');
     } else {
-        if ($id === 0) {
-            db_exec(
-                $db,
-                "INSERT INTO letters (author_from, author_to, title_ru, title_en, summary_ru, summary_en, body_ru, body_en, date, is_active) VALUES (?,?,?,?,?,?,?,?,?,?)",
-                "iisssssssi",
-                $author_from,
-                $author_to,
-                $title_ru,
-                $title_en,
-                ($summary_ru !== '' ? $summary_ru : null),
-                ($summary_en !== '' ? $summary_en : null),
-                ($body_ru !== '' ? $body_ru : null),
-                ($body_en !== '' ? $body_en : null),
-                $date_db,
-                $is_active
-            );
-            $id = (int) mysqli_insert_id($db);
-        } else {
-            db_exec(
-                $db,
-                "UPDATE letters SET author_from=?, author_to=?, title_ru=?, title_en=?, summary_ru=?, summary_en=?, body_ru=?, body_en=?, date=?, is_active=? WHERE id=? LIMIT 1",
-                "iisssssssii",
-                $author_from,
-                $author_to,
-                $title_ru,
-                $title_en,
-                ($summary_ru !== '' ? $summary_ru : null),
-                ($summary_en !== '' ? $summary_en : null),
-                ($body_ru !== '' ? $body_ru : null),
-                ($body_en !== '' ? $body_en : null),
-                $date_db,
-                $is_active,
-                $id
-            );
+        $save_ok = false;
+        try {
+            if ($id === 0) {
+                $save_ok = db_exec(
+                    $db,
+                    'INSERT INTO letters (author_from, author_to, title_ru, title_en, summary_ru, summary_en, meta_description_ru, meta_description_en, body_ru, body_en, date, is_active) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)',
+                    'iisssssssssi',
+                    $author_from,
+                    $author_to,
+                    $title_ru,
+                    $title_en,
+                    ($summary_ru !== '' ? $summary_ru : null),
+                    ($summary_en !== '' ? $summary_en : null),
+                    ($meta_description_ru !== '' ? $meta_description_ru : null),
+                    ($meta_description_en !== '' ? $meta_description_en : null),
+                    ($body_ru !== '' ? $body_ru : null),
+                    ($body_en !== '' ? $body_en : null),
+                    $date_db,
+                    $is_active
+                );
+                if ($save_ok) {
+                    $id = (int) mysqli_insert_id($db);
+                }
+            } else {
+                $save_ok = db_exec(
+                    $db,
+                    'UPDATE letters SET author_from=?, author_to=?, title_ru=?, title_en=?, summary_ru=?, summary_en=?, meta_description_ru=?, meta_description_en=?, body_ru=?, body_en=?, date=?, is_active=? WHERE id=? LIMIT 1',
+                    'iisssssssssii',
+                    $author_from,
+                    $author_to,
+                    $title_ru,
+                    $title_en,
+                    ($summary_ru !== '' ? $summary_ru : null),
+                    ($summary_en !== '' ? $summary_en : null),
+                    ($meta_description_ru !== '' ? $meta_description_ru : null),
+                    ($meta_description_en !== '' ? $meta_description_en : null),
+                    ($body_ru !== '' ? $body_ru : null),
+                    ($body_en !== '' ? $body_en : null),
+                    $date_db,
+                    $is_active,
+                    $id
+                );
+            }
+        } catch (mysqli_sql_exception $e) {
+            $dbName = '';
+            $dbRes = $db->query('SELECT DATABASE()');
+            if ($dbRes && ($dbRow = $dbRes->fetch_row())) {
+                $dbName = (string) ($dbRow[0] ?? '');
+            }
+            error_log('[admin_letters] save failed db=' . $dbName . ' err=' . $e->getMessage());
+            $smarty->assign('error', 'Ошибка сохранения: ' . $e->getMessage());
+            $save_ok = false;
         }
+
+        if (!$save_ok && empty($smarty->getTemplateVars('error'))) {
+            $smarty->assign('error', 'Ошибка сохранения: ' . $db->error);
+        }
+
+        if ($save_ok) {
 
         // Update sort order for existing images
         if ($id > 0) {
@@ -276,6 +302,7 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
 
         header("Location: /admin_letters.php?id=" . $id, true, 303);
         exit;
+        }
     }
 }
 

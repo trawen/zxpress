@@ -1,12 +1,19 @@
 {include file="top.tpl"}
 
-<meta property="og:description" content="{$article.title_plain_meta}" />
+{if $article_not_found}
+
+<h1>Статья не найдена</h1>
+<p><a href="{$host}">На главную</a></p>
+
+{else}
+
+<meta property="og:description" content="{$description|escape:'html'}" />
 <meta property="og:title" content="{$article.title_plain_meta}" />
 <meta property="og:site_name" content="ZXPRESS" />
 <meta property="og:type" content="article" />
 <meta property="og:image" content="{$host}screens/1/{$screens.id}.{$screens.format}" />
 
-<meta name="twitter:description" content="{$article.title_plain_meta}">
+<meta name="twitter:description" content="{$description|escape:'html'}">
 <meta name="twitter:title" content="{$article.title_plain_meta}">
 <meta name="twitter:site" content="@zxpressru">
 <meta name="twitter:creator" content="@zxpressru">
@@ -171,6 +178,8 @@
             {/if}
         </table>
     {/if}
+{/if}
+
 {/if}
 
 

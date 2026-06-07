@@ -1,0 +1,15 @@
+{
+  "name": "zxpress-import-articles-meta",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Import seo-ru / seo-en from descriptions/ into zxpress articles table",
+  "scripts": {
+    "dry-run": "node import-articles-meta.mjs --dry-run",
+    "apply": "node import-articles-meta.mjs --apply"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "mysql2": "^3.14.0"
+  }
+}

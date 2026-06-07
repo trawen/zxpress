@@ -87,7 +87,7 @@ function sidebar_article_link_titles(array $rows): array {
  * tight coupling with init.inc globals.
  */
 function setup_sidebar($db, $smarty, $article_breadcrumbs) {
-	if (count($article_breadcrumbs)) {
+	if (is_array($article_breadcrumbs) && count($article_breadcrumbs)) {
 		$id_menu = intval($article_breadcrumbs[0]['id']);
 
 		$rnd = random_rows($db,

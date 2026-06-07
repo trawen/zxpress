@@ -102,12 +102,33 @@ function letters_public_first_cover(mysqli $db, int $letterId): ?array
 	];
 }
 
+function letters_public_meta_description(array $letter, ?string $lng): string
+{
+	$metaRu = title_plain((string) ($letter['meta_description_ru'] ?? ''));
+	$metaEn = title_plain((string) ($letter['meta_description_en'] ?? ''));
+	if ($lng === 'eng') {
+		if ($metaEn !== '') {
+			return $metaEn;
+		}
+		if ($metaRu !== '') {
+			return $metaRu;
+		}
+		$summaryEn = title_plain(strip_tags((string) ($letter['summary_en'] ?? '')));
+		if ($summaryEn !== '') {
+			return $summaryEn;
+		}
+		return title_plain(strip_tags((string) ($letter['summary_ru'] ?? '')));
+	}
+	if ($metaRu !== '') {
+		return $metaRu;
+	}
+	return title_plain(strip_tags((string) ($letter['summary_ru'] ?? '')));
+}
+
 $id = (int) ($_GET['id'] ?? 0);
 $fromAuthor = (int) ($_GET['from'] ?? 0);
 $page = max(1, (int) ($_GET['p'] ?? 1));
 $offset = ($page - 1) * LETTERS_PER_PAGE;
-
-$lng = $_GET['lng'] ?? null;
 
 if ($id > 0) {
 	$stmt = $db->prepare(
@@ -139,7 +160,7 @@ if ($id > 0) {
 		$smarty->assign('letter', null);
 		$smarty->assign('letter_images', []);
 		$smarty->assign('letter_not_found', true);
-		$smarty->assign('title', 'Письмо не найдено');
+		$smarty->assign('title', 'Бумажное письмо не найдено');
 		$smarty->assign('og_title', '');
 		$smarty->assign('og_description', '');
 		$smarty->assign('og_image', '');
@@ -195,9 +216,10 @@ if ($id > 0) {
 
 		$smarty->assign('letter', $letter);
 		$smarty->assign('letter_images', $images);
+		$lng = $smarty->getTemplateVars('lng');
 		$titlePlain = title_plain((string) ($letter['title_ru'] ?? ''));
 		$smarty->assign('title', $titlePlain);
-		$descPlain = title_plain(strip_tags((string) ($letter['summary_ru'] ?? '')));
+		$descPlain = letters_public_meta_description($letter, $lng);
 		$smarty->assign('description', $descPlain);
 
 		$origin = zxpress_canonical_origin();
@@ -240,6 +262,35 @@ while ($z && ($row = mysqli_fetch_assoc($z))) {
 }
 $smarty->assign('letter_author_filters', $author_filters);
 $smarty->assign('filter_from', $fromAuthor > 0 ? $fromAuthor : 0);
+
+$filterFromAuthorDisplay = '';
+if ($fromAuthor > 0) {
+	foreach ($author_filters as $af) {
+		if ((int) ($af['id'] ?? 0) === $fromAuthor) {
+			$filterFromAuthorDisplay = (string) ($af['author_display'] ?? '');
+			break;
+		}
+	}
+	if ($filterFromAuthorDisplay === '') {
+		$stAuth = $db->prepare('SELECT nickname, group_name FROM authors WHERE id = ? LIMIT 1');
+		if ($stAuth) {
+			$stAuth->bind_param('i', $fromAuthor);
+			$stAuth->execute();
+			$authRow = $stAuth->get_result()->fetch_assoc();
+			$stAuth->close();
+			if ($authRow) {
+				$filterFromAuthorDisplay = letters_public_author_line(
+					$authRow['nickname'] ?? null,
+					$authRow['group_name'] ?? null,
+					null,
+					null,
+					false,
+				);
+			}
+		}
+	}
+}
+$smarty->assign('filter_from_author_display', $filterFromAuthorDisplay);
 
 $where = 'l.is_active = 1';
 $types = '';
@@ -334,12 +385,19 @@ $smarty->assign('letters_total', $total);
 $smarty->assign('letter', null);
 $smarty->assign('letter_not_found', false);
 
-$smarty->assign('title', 'Письма');
-$catalogDesc = 'Бумажные письма середины 90-х годов от участников ZX Spectrum сцены. Swapping и Snailmail.';
+if ($filterFromAuthorDisplay !== '') {
+	$smarty->assign('title', 'Все бумажные письма от ' . $filterFromAuthorDisplay);
+	$catalogDesc = 'Бумажные письма от ' . $filterFromAuthorDisplay . ' — бумажная переписка участников ZX Spectrum сцены.';
+} else {
+	$smarty->assign('title', 'Бумажные письма');
+	$catalogDesc = 'Бумажные письма середины 90-х годов от участников ZX Spectrum сцены. Swapping и Snailmail.';
+}
 $smarty->assign('description', $catalogDesc);
 
 $origin = zxpress_canonical_origin();
-$smarty->assign('og_title', 'Бумажные письма участников ZX Spectrum сцены');
+$smarty->assign('og_title', $filterFromAuthorDisplay !== ''
+	? 'Все бумажные письма от ' . $filterFromAuthorDisplay
+	: 'Бумажные письма участников ZX Spectrum сцены');
 $smarty->assign('og_description', $catalogDesc);
 $smarty->assign('og_image', $origin . '/img/snailmail.png');
 $ogUrl = $origin . '/snailmail.php';

@@ -1,0 +1,14 @@
+{
+  "name": "zxpress-seo-import",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dry-run": "node import-articles-meta.mjs --dry-run",
+    "apply": "node import-articles-meta.mjs --apply"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "mysql2": "^3.14.0"
+  }
+}

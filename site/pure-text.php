@@ -47,6 +47,8 @@ if ($t['temp'] == 1) {
 
 }
 
+$article_heading = title_plain((string) ($t['article_title'] ?? ''));
+
 $title = $t['title']."#".$t['number_title']." - ".$t['article_title'];
 $title = trim(mb_strtolower($title));
 $title = htmlspecialchars_decode($title);
@@ -88,6 +90,10 @@ $text = preg_replace('#</span>#is', '', $text);
 $text = preg_replace('#<div[^>]*>#is', '', $text);
 $text = preg_replace('#</div>#is', '', $text);
 $text = preg_replace('#<img[^>]*>#is', '', $text);
+
+if ($article_heading !== '') {
+	$text = $article_heading . "\n\n" . ltrim($text);
+}
 
 $title = str_replace("&#039", "'", $title);
 $title = str_replace(chr(34), "'", $title);

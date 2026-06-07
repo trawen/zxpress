@@ -1322,7 +1322,9 @@ a.title.link-issue { font-size: 26px; }
 /* letters.tpl */
 .letter-meta-from { font-size: 14px; margin: 8px 0 4px 0; }
 .letter-meta-to { font-size: 14px; margin: 0 0 8px 0; }
-.letter-summary { margin: 12px 0; font-size: 16px; }
+.letter-filter-h1 { font: bold 24px Timex, Times, serif; }
+.letter-summary-block { margin: 12px 0; font-size: 16px; text-indent: 0; padding-left: 0; margin-left: 0; }
+.letter-summary { font-style: italic; }
 .letter-banner { margin-bottom: 12px; }
 .letter-banner-img { max-width: 100%; height: auto; }
 .letter-list-placeholder { width: 128px; height: 96px; background: #eee; border: 1px solid #ccc; }
