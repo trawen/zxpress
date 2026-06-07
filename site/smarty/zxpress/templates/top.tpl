@@ -6,6 +6,11 @@
 {/if}
 
 <head>
+	{if !$smarty.server.SCRIPT_NAME|strstr:'admin_'}
+	{include file="metrika.tpl"}
+	{include file="gtag.tpl"}
+	{/if}
+
 	<title>{$title|strip_tags} {$keywords}</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
