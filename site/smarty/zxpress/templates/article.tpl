@@ -53,20 +53,6 @@
                 <a rel="nofollow" href="print.php?id={$id}" target="_blank"><img src="/img/print.png" width=20></a>
             </div>
 
-            {foreach from=$tags item=t}
-                <div class="article-toolbar-item article-toolbar-item--tags">
-                    <div
-                        class="article-tag-left">
-                    </div>
-                    <div class="article-tag-mid">
-                        &nbsp; <a href="tag.php?id={$t.id}">{$t.tag_name}</a>
-                        &nbsp;
-                    </div>
-                    <div class="article-tag-right">
-                    </div>
-                </div>
-            {/foreach}
-
         </td>
     </tr>
 </table>
@@ -76,6 +62,9 @@
     <div>
         <div>
             <h1>{$article.title_eng_html nofilter}</h1>
+            {if $tags}
+            <p class="article-tags">{foreach from=$tags item=t name=tags}{if !$smarty.foreach.tags.first}, {/if}<a href="{$host}tag.php?id={$t.id}">{$t.tag_name}<sup class="article-tag-count">{$t.count}</sup></a>{/foreach}</p>
+            {/if}
         </div>
         <div class="article-screen-wrap"><img src="{$host}screens/1/{$screens.id}.{$screens.format}" width="128"
                 title="{$article.title_eng_plain_meta}" alt="{$article.title_eng_plain_meta}"></div>
@@ -84,6 +73,9 @@
     <div>
         <div>
             <h1>{$article.title_html nofilter}</h1>
+            {if $tags}
+            <p class="article-tags">{foreach from=$tags item=t name=tags}{if !$smarty.foreach.tags.first}, {/if}<a href="{$host}tag.php?id={$t.id}">{$t.tag_name}<sup class="article-tag-count">{$t.count}</sup></a>{/foreach}</p>
+            {/if}
         </div>
         <div class="article-screen-wrap"><img src="{$host}screens/1/{$screens.id}.{$screens.format}" width="128"
                 title="{$article.title_plain_meta}" alt="{$article.title_plain_meta}"></div>

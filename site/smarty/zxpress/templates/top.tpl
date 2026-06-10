@@ -74,7 +74,7 @@
 	<link rel="preload" href="{$host}img/mobile-logo.webp" as="image" fetchpriority="high" media="(max-width: 960px)">
 </head>
 
-<body>
+<body{if $skip_bg} class="skip-bg"{/if}>
 
 
 	<div class="page">

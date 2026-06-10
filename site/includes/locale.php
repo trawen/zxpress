@@ -39,6 +39,9 @@ function setup_locale($smarty, $db, array $months): void
 
 	$smarty->assign('lng', $lng);
 
+	$skipBg = isset($_GET['skip-bg']) && (string) $_GET['skip-bg'] === '1';
+	$smarty->assign('skip_bg', $skipBg);
+
 	$_safe_uri = htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8');
 
 	if (strrpos($_SERVER['REQUEST_URI'], "lng=eng")) {

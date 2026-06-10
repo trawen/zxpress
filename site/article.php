@@ -159,7 +159,7 @@ $smarty->assign('description', $articleDescPlain);
 
 
  //TAGS
-$stmt = mysqli_prepare($db, "SELECT *, tags.id AS id FROM tags, tags_articles WHERE tags_articles.id_article=? AND tags.id=tags_articles.id_tag");
+$stmt = mysqli_prepare($db, "SELECT *, tags.id AS id FROM tags, tags_articles WHERE tags_articles.id_article=? AND tags.id=tags_articles.id_tag ORDER BY tags.`count` DESC");
 mysqli_stmt_bind_param($stmt, "i", $id);
 mysqli_stmt_execute($stmt);
 $z = mysqli_stmt_get_result($stmt);
