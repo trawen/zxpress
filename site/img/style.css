@@ -1294,6 +1294,9 @@ a.title.link-issue { font-size: 26px; }
 .article-screen-wrap { justify-self: center; }
 
 /* ezine_categories.tpl */
+.ezine-categories-layout h1 { font: bold 20pt Timex; }
+.ezine-category-image-wrap { margin: 0.5em 0 1em; max-width: 720px; }
+.ezine-category-image { display: block; max-width: 100%; height: auto; }
 .ezine-categories-tree-wrap { margin: 1em 0 1.5em; }
 .ezine-category-desc { margin: 0.5em 0 1em; max-width: 720px; }
 .ezine-category-articles-heading { font: bold 13pt Georgia; margin: 1.2em 0 0.6em; }

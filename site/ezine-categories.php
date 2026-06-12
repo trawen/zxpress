@@ -1,5 +1,6 @@
 <?php
 require 'init.inc';
+require_once __DIR__ . '/includes/ezine_category_images.php';
 
 function ec_cat_name(array $row, ?string $lng): string
 {
@@ -11,6 +12,23 @@ function ec_cat_name(array $row, ?string $lng): string
     }
 
     return (string) ($row['name_ru'] ?? '');
+}
+
+function ec_cat_title(array $row, ?string $lng): string
+{
+    if ($lng === 'eng') {
+        $en = trim((string) ($row['title_en'] ?? ''));
+        if ($en !== '') {
+            return $en;
+        }
+    } else {
+        $ru = trim((string) ($row['title_ru'] ?? ''));
+        if ($ru !== '') {
+            return $ru;
+        }
+    }
+
+    return ec_cat_name($row, $lng);
 }
 
 function ec_cat_description(array $row, ?string $lng): string
@@ -182,8 +200,7 @@ if ($id > 0) {
             $articles[] = $t;
         }
 
-        $catTitle = ec_cat_name($category, $lng);
-        $smarty->assign('title', $catTitle);
+        $smarty->assign('title', ec_cat_title($category, $lng));
         $smarty->assign('description', ec_cat_meta_description($category, $lng));
     }
 } else {
@@ -203,8 +220,13 @@ $smarty->assign('category_breadcrumbs', $breadcrumbs);
 $smarty->assign('category_articles', $articles);
 
 if ($category) {
-    $smarty->assign('category_name', ec_cat_name($category, $lng));
+    $smarty->assign('category_title', ec_cat_title($category, $lng));
     $smarty->assign('category_description_html', ec_cat_description_html($category, $lng));
+    if (ec_category_has_public_image((int) ($category['id'] ?? 0))) {
+        $smarty->assign('category_image_url', ec_category_public_image_url((int) $category['id']));
+    } else {
+        $smarty->assign('category_image_url', '');
+    }
 }
 
 include 'right.php';

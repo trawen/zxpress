@@ -36,7 +36,10 @@
  &rarr; <a href="{$host}ezine-categories.php?id={$bc.id}{if $lng eq 'eng'}&amp;lng=eng{/if}{if $title_only}&amp;title=1{/if}">{if $lng eq 'eng' && $bc.name_en}{$bc.name_en}{else}{$bc.name_ru}{/if}</a>
 {/foreach}
 </p>
-<h1>{$category_name}</h1>
+<h1>{$category_title}</h1>
+{if $category_image_url}
+<p class="ezine-category-image-wrap"><img src="{$category_image_url}" class="ezine-category-image" alt="{$category_title|escape:'html'}" loading="lazy"></p>
+{/if}
 {if $category_description_html}
 <p class="ezine-category-desc">{$category_description_html nofilter}</p>
 {/if}

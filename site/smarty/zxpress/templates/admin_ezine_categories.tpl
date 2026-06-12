@@ -18,10 +18,18 @@
 {if $error}
 <div style="color:#A41E00;margin-bottom:10px">{$error}</div>
 {/if}
+{if $merge_message}
+<div style="color:#2E6B2E;margin-bottom:10px">{$merge_message}</div>
+{/if}
+{if $delete_message}
+<div style="color:#2E6B2E;margin-bottom:10px">{$delete_message}</div>
+{/if}
 
 <table width="100%" cellpadding="6" cellspacing="0">
 <tr>
 <td valign="top" width="320" style="border-right:1px solid #C8C5AC">
+<form method="post" action="admin_ezine_categories.php{if $category && $category.id}?id={$category.id}{/if}">
+<input type="hidden" name="csrf_token" value="{$csrf_token}">
 <div style="font: bold 12px Verdana; margin-bottom:6px">Категории</div>
 
 {literal}
@@ -66,6 +74,26 @@
 	vertical-align: middle;
 }
 .admin-ezine-categories-tree-wrap .admin-ec-public-link:hover { color: #A41E00; }
+.admin-ezine-categories-tree-wrap .admin-ec-merge-check {
+	margin: 0 6px 0 0;
+	vertical-align: middle;
+}
+.admin-ezine-categories-tree-wrap .admin-ec-delete-btn {
+	border: none;
+	background: none;
+	cursor: pointer;
+	padding: 0 2px;
+	margin: 0 4px 0 0;
+	color: #A41E00;
+	font: bold 14px/1 Verdana, sans-serif;
+	vertical-align: middle;
+}
+.admin-ezine-categories-tree-wrap .admin-ec-delete-btn:hover { color: #7a1600; }
+.admin-ezine-categories-tree-wrap .admin-ec-merge-actions {
+	margin-top: 10px;
+	padding-top: 8px;
+	border-top: 1px solid #C8C5AC;
+}
 </style>
 {/literal}
 
@@ -73,6 +101,8 @@
 <ul{if $level eq 0} class="tree"{/if}>
 {foreach from=$data item=c}
 <li class="{if $c.last}last{/if}{if $level eq 0} first{/if}">
+<label class="admin-ec-merge-check"><input type="checkbox" name="merge_category_ids[]" value="{$c.id}"></label>
+<button type="submit" name="delete_category" value="{$c.id}" class="admin-ec-delete-btn" title="Удалить категорию" aria-label="Удалить категорию «{$c.name_ru|escape:'html'}»" onclick="return confirm('Удалить категорию «{$c.name_ru|escape:'javascript'}» и все привязки статей?');">×</button>
 <a href="admin_ezine_categories.php?id={$c.id}"{if $category && $category.id eq $c.id} class="nav-active"{/if}>{$c.name_ru}</a>
 {if $c.articles_count gt 0}<span class="tree-item-count">{$c.articles_count}</span>{/if}
 <a href="{$host}ezine-categories.php?id={$c.id}" target="_blank" rel="noopener" class="admin-ec-public-link" title="Публичная страница со статьями" aria-label="Публичная страница">→</a>
@@ -89,6 +119,11 @@
 <p style="font:12px Verdana;color:#666;margin:0">Категорий пока нет</p>
 {/if}
 </div>
+<div class="admin-ec-merge-actions">
+<input type="submit" name="merge" value="Склеить" style="height:26px">
+<div style="color:#666;font:11px Verdana;margin-top:4px">Статьи выбранных категорий будут привязаны ко всем выбранным категориям</div>
+</div>
+</form>
 </td>
 
 <td valign="top">
@@ -99,7 +134,7 @@
 {/if}
 </div>
 
-<form method="post" action="admin_ezine_categories.php?id={if $category && $category.id}{$category.id}{else}0{/if}">
+<form method="post" enctype="multipart/form-data" action="admin_ezine_categories.php?id={if $category && $category.id}{$category.id}{else}0{/if}">
 <input type="hidden" name="csrf_token" value="{$csrf_token}">
 
 <table style="font: 12px Verdana" cellpadding="4">
@@ -134,6 +169,20 @@
 <tr>
 <td valign="top">Meta description (EN)</td>
 <td><textarea name="meta_description_en" style="width:420px;height:48px" maxlength="500">{if $category}{$category.meta_description_en}{/if}</textarea></td>
+</tr>
+<tr>
+<td valign="top">Иллюстрация</td>
+<td>
+{if $category_image_url}
+<div style="margin-bottom:6px">
+<img src="{$category_image_url}" style="max-width:200px;height:auto;border:1px solid #C8C5AC">
+<br>
+<label><input type="checkbox" name="delete_image" value="1"> удалить иллюстрацию</label>
+</div>
+{/if}
+<input type="file" name="upload_image" accept="image/jpeg,image/png,image/webp,image/gif">
+<div style="color:#666;margin-top:4px">Оригинал: data/content-store/ezine-categories/original/ · публикация: WebP 80%</div>
+</td>
 </tr>
 <tr>
 <td><label for="admin-ezine-category-parent">Родительская категория</label></td>
