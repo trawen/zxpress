@@ -1,5 +1,8 @@
 <?php
 
+const PER_ISSUE_WEBP_QUALITY = 70;
+const PER_ISSUE_WEBP_WIDTHS = [640, 1280];
+
 function per_issue_cover_jpg_path(int $issueId): string
 {
     return zx_storage_path('periodical_issues', $issueId . '.jpg');
@@ -12,6 +15,26 @@ function per_issue_cover_webp_path(int $issueId, int $width): string
     }
 
     return zx_storage_path('periodical_issues_preview_1280', $issueId . '.webp');
+}
+
+function per_issue_cover_webp_url(int $issueId, int $width): string
+{
+    if ($width === 640) {
+        return '/periodical-issues/preview-640/' . $issueId . '.webp';
+    }
+
+    return '/periodical-issues/preview-1280/' . $issueId . '.webp';
+}
+
+function per_issue_has_webp_preview(int $issueId, int $width): bool
+{
+    if ($issueId <= 0) {
+        return false;
+    }
+
+    $path = per_issue_cover_webp_path($issueId, $width);
+
+    return is_file($path) && filesize($path) > 0;
 }
 
 function per_issue_has_cover(int $issueId): bool
@@ -117,7 +140,7 @@ function per_issue_save_jpg_from_tmp(string $tmpFile, string $dstPath, int $qual
     return (bool) $ok;
 }
 
-function per_issue_make_webp_preview(string $srcPath, string $dstPath, int $maxWidth, int $quality = 80): bool
+function per_issue_make_webp_preview(string $srcPath, string $dstPath, int $maxWidth, int $quality = PER_ISSUE_WEBP_QUALITY): bool
 {
     if (!function_exists('imagewebp')) {
         error_log('[FIX] periodical_issue_images: imagewebp() not available');
@@ -171,7 +194,48 @@ function per_issue_make_webp_preview(string $srcPath, string $dstPath, int $maxW
     imagedestroy($dst);
     imagedestroy($src);
 
-    return (bool) $ok;
+    if (!$ok || !is_file($dstPath) || filesize($dstPath) <= 0) {
+        if (is_file($dstPath)) {
+            @unlink($dstPath);
+        }
+        error_log('[FIX] periodical_issue_images: failed webp preview path=' . $dstPath . ' maxWidth=' . $maxWidth);
+        return false;
+    }
+
+    return true;
+}
+
+function per_issue_save_webp_previews(int $issueId, string $jpgPath): bool
+{
+    foreach (PER_ISSUE_WEBP_WIDTHS as $width) {
+        if (!per_issue_make_webp_preview($jpgPath, per_issue_cover_webp_path($issueId, $width), $width, PER_ISSUE_WEBP_QUALITY)) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+function per_issue_ensure_webp_previews(int $issueId): bool
+{
+    if ($issueId <= 0 || !per_issue_has_cover($issueId)) {
+        return false;
+    }
+
+    $jpgPath = per_issue_cover_jpg_path($issueId);
+    $needs = false;
+    foreach (PER_ISSUE_WEBP_WIDTHS as $width) {
+        if (!per_issue_has_webp_preview($issueId, $width)) {
+            $needs = true;
+            break;
+        }
+    }
+
+    if (!$needs) {
+        return true;
+    }
+
+    return per_issue_save_webp_previews($issueId, $jpgPath);
 }
 
 function per_issue_save_cover(int $issueId, string $tmpFile): bool
@@ -188,12 +252,7 @@ function per_issue_save_cover(int $issueId, string $tmpFile): bool
         return false;
     }
 
-    if (!per_issue_make_webp_preview($jpgPath, per_issue_cover_webp_path($issueId, 640), 640)) {
-        per_issue_delete_cover($issueId);
-        return false;
-    }
-
-    if (!per_issue_make_webp_preview($jpgPath, per_issue_cover_webp_path($issueId, 1280), 1280)) {
+    if (!per_issue_save_webp_previews($issueId, $jpgPath)) {
         per_issue_delete_cover($issueId);
         return false;
     }

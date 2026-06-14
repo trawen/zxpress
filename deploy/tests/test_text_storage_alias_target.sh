@@ -19,6 +19,21 @@ check_alias "/articles/" "/home/zxpress/web/zxpress.ru/data/content-store/articl
 check_alias "/articles_eng/" "/home/zxpress/web/zxpress.ru/data/content-store/articles-eng/"
 check_alias "/chapters/" "/home/zxpress/web/zxpress.ru/data/content-store/chapters/"
 
+if ! grep -qE 'location \^~ /periodical-issues/' "$CONF"; then
+	echo "[ERROR] periodical-issues location missing in ${CONF}"
+	fail=1
+fi
+
+if ! grep -qE 'rewrite \^/periodical-issues/preview-\(640\|1280\)/' "$CONF"; then
+	echo "[ERROR] periodical issue webp rewrite missing in ${CONF}"
+	fail=1
+fi
+
+if ! grep -q 'periodical_issue_image.php' "$CONF"; then
+	echo "[ERROR] periodical_issue_image.php rewrite target missing in ${CONF}"
+	fail=1
+fi
+
 if [ "$fail" -ne 0 ]; then
 	echo "test_text_storage_alias_target.sh: FAIL"
 	exit 1

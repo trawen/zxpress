@@ -1,0 +1,142 @@
+{include file="admin_top.tpl"}
+{if $login eq 1 and $username}
+
+<TABLE cellSpacing=0 cellPadding=0 align="center" width="100%">
+<TBODY>
+<TR>
+<TD>
+
+<div style="font: bold 14px Verdana">
+<br>
+
+<div style="padding: 10px; border: 1px solid #C8C5AC; background-color: #EBE8D7">
+
+<div style="margin-bottom:10px">
+<a href="admin_periodicals.php?id={$periodical.id}&issue_id={$issue_id}">← Назад к выпуску: {$periodical.title_ru|escape:'html'} — {$issue_label|escape:'html'}</a>
+&nbsp;&nbsp;
+<a href="admin_periodical_articles.php?issue_id={$issue_id}&id=0" style="font-weight:bold">+ Новая статья</a>
+</div>
+
+{if $error}
+<div style="color:#A41E00;margin-bottom:10px">{$error}</div>
+{/if}
+
+<table width="100%" cellpadding="6" cellspacing="0">
+<tr>
+<td valign="top" width="360" style="border-right:1px solid #C8C5AC">
+<div style="font: bold 12px Verdana; margin-bottom:6px">Статьи выпуска</div>
+<form method="get" action="admin_periodical_articles.php">
+<input type="hidden" name="issue_id" value="{$issue_id}">
+<label for="admin-periodical-article-list" class="u-sr-only">Выбрать статью</label>
+<select id="admin-periodical-article-list" name="id" style="width:340px;height:22px" onchange="this.form.submit()">
+<option value="0" {if !$article || !$article.id}selected{/if}>— выбрать —</option>
+{section name=n loop=$articles_list}
+<option value="{$articles_list[n].id}" {if $article && $articles_list[n].id eq $article.id}selected{/if}>
+#{$articles_list[n].id}
+{if $articles_list[n].page_start} стр.{$articles_list[n].page_start}{if $articles_list[n].page_end}-{$articles_list[n].page_end}{/if}{/if}
+{$articles_list[n].title_ru}
+</option>
+{/section}
+</select>
+</form>
+</td>
+
+<td valign="top">
+<div style="font: bold 12px Verdana; margin-bottom:6px">
+{if $article && $article.id}Редактирование статьи #{$article.id}{else}Новая статья{/if}
+</div>
+
+<form method="post" action="admin_periodical_articles.php?issue_id={$issue_id}&id={if $article && $article.id}{$article.id}{else}0{/if}">
+<input type="hidden" name="csrf_token" value="{$csrf_token}">
+
+<table style="font: 12px Verdana" cellpadding="4">
+<tr>
+<td>Заголовок (RU) *</td>
+<td><input type="text" name="title_ru" style="width:520px" maxlength="255" value="{if $article}{$article.title_ru}{/if}"></td>
+</tr>
+<tr>
+<td>Заголовок (EN)</td>
+<td><input type="text" name="title_en" style="width:520px" maxlength="255" value="{if $article}{$article.title_en}{/if}"></td>
+</tr>
+<tr>
+<td>Язык *</td>
+<td>
+<select name="language_id" style="width:240px">
+<option value="0">---</option>
+{section name=n loop=$languages}
+<option value="{$languages[n].id}" {if $article && $languages[n].id eq $article.language_id}selected{elseif !$article && $languages[n].id eq 1}selected{/if}>{$languages[n].name}</option>
+{/section}
+</select>
+</td>
+</tr>
+<tr>
+<td>Оригинальный язык</td>
+<td>
+<select name="original_language_id" style="width:240px">
+<option value="0">---</option>
+{section name=n loop=$languages}
+<option value="{$languages[n].id}" {if $article && $article.original_language_id && $languages[n].id eq $article.original_language_id}selected{/if}>{$languages[n].name}</option>
+{/section}
+</select>
+</td>
+</tr>
+<tr>
+<td>Страница с</td>
+<td>
+<input type="number" name="page_start" style="width:80px" min="0" value="{if $article && $article.page_start}{$article.page_start}{/if}">
+&nbsp; по &nbsp;
+<input type="number" name="page_end" style="width:80px" min="0" value="{if $article && $article.page_end}{$article.page_end}{/if}">
+</td>
+</tr>
+<tr>
+<td>Порядок</td>
+<td><input type="number" name="sort_order" style="width:80px" min="0" value="{if $article}{$article.sort_order}{else}0{/if}"></td>
+</tr>
+<tr>
+<td valign="top">Аннотация (RU)</td>
+<td><textarea name="abstract_ru" rows="4" style="width:520px">{if $article}{$article.abstract_ru nofilter}{/if}</textarea></td>
+</tr>
+<tr>
+<td valign="top">Аннотация (EN)</td>
+<td><textarea name="abstract_en" rows="4" style="width:520px">{if $article}{$article.abstract_en nofilter}{/if}</textarea></td>
+</tr>
+<tr>
+<td valign="top">Текст (RU)</td>
+<td><textarea name="text_ru" rows="10" style="width:520px">{if $article}{$article.text_ru nofilter}{/if}</textarea></td>
+</tr>
+<tr>
+<td valign="top">Текст (EN)</td>
+<td><textarea name="text_en" rows="10" style="width:520px">{if $article}{$article.text_en nofilter}{/if}</textarea></td>
+</tr>
+<tr>
+<td>Meta (RU)</td>
+<td><input type="text" name="meta_description_ru" style="width:520px" maxlength="255" value="{if $article}{$article.meta_description_ru}{/if}"></td>
+</tr>
+<tr>
+<td>Meta (EN)</td>
+<td><input type="text" name="meta_description_en" style="width:520px" maxlength="255" value="{if $article}{$article.meta_description_en}{/if}"></td>
+</tr>
+<tr>
+<td>Активна</td>
+<td><input type="checkbox" name="is_active" value="1" {if !$article || $article.is_active}checked{/if}></td>
+</tr>
+</table>
+
+<div style="margin-top:10px">
+<input type="submit" name="save" value="Сохранить" style="height:26px">
+</div>
+</form>
+</td>
+</tr>
+</table>
+
+</div>
+
+</div>
+
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+
+{/if}

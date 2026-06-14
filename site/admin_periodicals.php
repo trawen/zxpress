@@ -1,5 +1,6 @@
 <?php
 require 'init.inc';
+require_once __DIR__ . '/includes/periodical_issue_images.php';
 
 if (!isset($_SESSION['login']) || !$_SESSION['login']) {
     header('HTTP/1.1 403 Forbidden');
@@ -111,6 +112,20 @@ function per_sync_publishers(mysqli $db, int $periodicalId, array $publisherIds)
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 $issue_id = isset($_GET['issue_id']) ? (int) $_GET['issue_id'] : 0;
 $error = null;
+
+if (isset($_GET['serve_issue_cover'])) {
+    $coverIssueId = (int) $_GET['serve_issue_cover'];
+    $coverPath = per_issue_cover_jpg_path($coverIssueId);
+    if ($coverIssueId <= 0 || !is_file($coverPath)) {
+        header('HTTP/1.1 404 Not Found');
+        exit;
+    }
+
+    header('Content-Type: image/jpeg');
+    header('Content-Length: ' . (string) filesize($coverPath));
+    readfile($coverPath);
+    exit;
+}
 
 if (($_POST['save'] ?? '') === 'Сохранить') {
     csrf_verify();
@@ -248,8 +263,26 @@ if (($_POST['save_issue'] ?? '') === 'Сохранить выпуск') {
             }
 
             if ($saved) {
-                header('Location: /admin_periodicals.php?id=' . $id . '&issue_id=0&scroll_issue=1', true, 303);
-                exit;
+                if ($issue_id > 0) {
+                    if (!empty($_POST['delete_issue_cover'])) {
+                        per_issue_delete_cover($issue_id);
+                    } elseif (!empty($_FILES['upload_issue_cover']['tmp_name']) && is_uploaded_file((string) $_FILES['upload_issue_cover']['tmp_name'])) {
+                        if (!per_issue_save_cover($issue_id, (string) $_FILES['upload_issue_cover']['tmp_name'])) {
+                            $error = 'Не удалось загрузить обложку (JPEG/PNG/WebP/GIF; нужны WebP-превью 640 и 1280 px, 70%)';
+                        }
+                    } elseif (per_issue_has_cover($issue_id) && !per_issue_ensure_webp_previews($issue_id)) {
+                        $error = 'Не удалось сгенерировать WebP-превью обложки (640 и 1280 px, 70%)';
+                    }
+                }
+
+                if ($error === null) {
+                    header(
+                        'Location: /admin_periodicals.php?id=' . $id . '&issue_id=' . $issue_id . ($issue_id > 0 ? '#admin-periodical-issue-form' : ''),
+                        true,
+                        303
+                    );
+                    exit;
+                }
             }
 
             if ((int) mysqli_errno($db) === 1062) {
@@ -342,6 +375,14 @@ if ($id > 0) {
     );
     while ($z && ($t = mysqli_fetch_array($z))) {
         $t['issue_date_fmt'] = per_format_date($t['issue_date'] ?? '');
+        $issueRowId = (int) ($t['id'] ?? 0);
+        $t['articles_count'] = 0;
+        if ($issueRowId > 0) {
+            $zCnt = db_select($db, 'SELECT COUNT(*) AS cnt FROM periodical_articles WHERE issue_id=?', 'i', $issueRowId);
+            if ($zCnt && ($cntRow = mysqli_fetch_assoc($zCnt))) {
+                $t['articles_count'] = (int) ($cntRow['cnt'] ?? 0);
+            }
+        }
         $issues_list[] = $t;
 
         $yearSort = ($t['issue_year'] !== null && $t['issue_year'] !== '') ? (int) $t['issue_year'] : -1;
@@ -391,6 +432,35 @@ if ($id > 0 && $issue_id > 0) {
 $smarty->assign('issue', $issue);
 $smarty->assign('issue_id', $issue_id);
 $smarty->assign('scroll_issue', !empty($_GET['scroll_issue']));
+
+$issue_articles_count = 0;
+if ($issue && !empty($issue['id'])) {
+    $zCnt = db_select($db, 'SELECT COUNT(*) AS cnt FROM periodical_articles WHERE issue_id=?', 'i', (int) $issue['id']);
+    if ($zCnt && ($cntRow = mysqli_fetch_assoc($zCnt))) {
+        $issue_articles_count = (int) ($cntRow['cnt'] ?? 0);
+    }
+}
+$smarty->assign('issue_articles_count', $issue_articles_count);
+
+if ($issue && !empty($issue['id'])) {
+    $issueCoverId = (int) $issue['id'];
+    if (per_issue_has_cover($issueCoverId)) {
+        per_issue_ensure_webp_previews($issueCoverId);
+        $smarty->assign('issue_cover_url', '/admin_periodicals.php?serve_issue_cover=' . $issueCoverId);
+        $smarty->assign('issue_cover_webp_640_url', per_issue_has_webp_preview($issueCoverId, 640)
+            ? per_issue_cover_webp_url($issueCoverId, 640) : '');
+        $smarty->assign('issue_cover_webp_1280_url', per_issue_has_webp_preview($issueCoverId, 1280)
+            ? per_issue_cover_webp_url($issueCoverId, 1280) : '');
+    } else {
+        $smarty->assign('issue_cover_url', '');
+        $smarty->assign('issue_cover_webp_640_url', '');
+        $smarty->assign('issue_cover_webp_1280_url', '');
+    }
+} else {
+    $smarty->assign('issue_cover_url', '');
+    $smarty->assign('issue_cover_webp_640_url', '');
+    $smarty->assign('issue_cover_webp_1280_url', '');
+}
 
 $cities = [];
 $z = db_select($db, 'SELECT id, name FROM cities ORDER BY name ASC');

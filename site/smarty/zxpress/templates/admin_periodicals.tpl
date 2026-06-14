@@ -184,11 +184,12 @@
 <th align="left">Дата</th>
 <th align="left">Название</th>
 <th align="left">Стр.</th>
+<th align="left">Статьи</th>
 <th align="left"></th>
 </tr>
 {section name=g loop=$issues_by_year}
 <tr style="background:#E8E4D0">
-<td colspan="6" style="font:bold 12px Verdana;padding:6px 4px">{$issues_by_year[g].year_label}</td>
+<td colspan="7" style="font:bold 12px Verdana;padding:6px 4px">{$issues_by_year[g].year_label}</td>
 </tr>
 {section name=n loop=$issues_by_year[g].issues}
 <tr style="border-top:1px solid #C8C5AC">
@@ -197,6 +198,7 @@
 <td>{if $issues_by_year[g].issues[n].issue_date_fmt}{$issues_by_year[g].issues[n].issue_date_fmt}{else}—{/if}</td>
 <td>{$issues_by_year[g].issues[n].title_ru}{if !$issues_by_year[g].issues[n].is_active} [×]{/if}{if $issues_by_year[g].issues[n].is_bound} [перепл.]{/if}</td>
 <td>{$issues_by_year[g].issues[n].pages}</td>
+<td>{if $issues_by_year[g].issues[n].articles_count}{$issues_by_year[g].issues[n].articles_count}{else}0{/if} <a href="admin_periodical_articles.php?issue_id={$issues_by_year[g].issues[n].id}">→</a></td>
 <td><a href="admin_periodicals.php?id={$periodical.id}&issue_id={$issues_by_year[g].issues[n].id}">редактировать</a></td>
 </tr>
 {/section}
@@ -210,9 +212,10 @@
 <div id="admin-periodical-issue-form" style="border:1px solid #C8C5AC;padding:10px;background:#F5F2E8">
 <div style="font:bold 12px Verdana;margin-bottom:8px">
 {if $issue.id}Редактирование выпуска #{$issue.id}{else}Новый выпуск{/if}
+{if $issue.id}<a href="admin_periodical_articles.php?issue_id={$issue.id}" style="font-weight:normal;margin-left:12px">Статьи ({$issue_articles_count}) →</a>{/if}
 </div>
 
-<form method="post" action="admin_periodicals.php?id={$periodical.id}&issue_id={if $issue.id}{$issue.id}{else}0{/if}">
+<form method="post" enctype="multipart/form-data" action="admin_periodicals.php?id={$periodical.id}&issue_id={if $issue.id}{$issue.id}{else}0{/if}">
 <input type="hidden" name="csrf_token" value="{$csrf_token}">
 <input type="hidden" name="issue_id" value="{if $issue.id}{$issue.id}{else}0{/if}">
 
@@ -264,6 +267,32 @@
 <tr>
 <td>Переплёт</td>
 <td><input type="checkbox" name="issue_is_bound" value="1" {if $issue.is_bound}checked{/if}></td>
+</tr>
+<tr>
+<td valign="top">Обложка</td>
+<td>
+{if $issue_cover_url}
+<div style="margin-bottom:8px">
+<div style="font:normal 10px Verdana;color:#666;margin-bottom:2px">Оригинал (JPG)</div>
+<img src="{$issue_cover_url}" alt="" style="max-width:200px;height:auto;border:1px solid #C8C5AC;margin-bottom:6px;display:block">
+</div>
+{if $issue_cover_webp_640_url}
+<div style="margin-bottom:8px">
+<div style="font:normal 10px Verdana;color:#666;margin-bottom:2px">WebP 640px, 70% — <a href="{$issue_cover_webp_640_url}" target="_blank" rel="noopener">{$issue_cover_webp_640_url}</a></div>
+<img src="{$issue_cover_webp_640_url}" alt="" style="max-width:200px;height:auto;border:1px solid #C8C5AC;display:block">
+</div>
+{/if}
+{if $issue_cover_webp_1280_url}
+<div style="margin-bottom:8px">
+<div style="font:normal 10px Verdana;color:#666;margin-bottom:2px">WebP 1280px, 70% — <a href="{$issue_cover_webp_1280_url}" target="_blank" rel="noopener">{$issue_cover_webp_1280_url}</a></div>
+<img src="{$issue_cover_webp_1280_url}" alt="" style="max-width:320px;height:auto;border:1px solid #C8C5AC;display:block">
+</div>
+{/if}
+<label><input type="checkbox" name="delete_issue_cover" value="1"> удалить обложку</label><br>
+{/if}
+<input type="file" name="upload_issue_cover" accept="image/jpeg,image/png,image/webp,image/gif">
+<div style="font:normal 10px Verdana;color:#666;margin-top:2px">Оригинал → JPG; для сайта — WebP 640 и 1280 px (макс. ширина), сжатие 70%</div>
+</td>
 </tr>
 </table>
 
