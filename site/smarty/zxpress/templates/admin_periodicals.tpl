@@ -21,19 +21,76 @@
 
 <table width="100%" cellpadding="6" cellspacing="0">
 <tr>
-<td valign="top" width="260" style="border-right:1px solid #C8C5AC">
+<td valign="top" width="320" style="border-right:1px solid #C8C5AC">
 <div style="font: bold 12px Verdana; margin-bottom:6px">Издания</div>
-<form method="get" action="admin_periodicals.php">
-<label for="admin-periodical-list" class="u-sr-only">Выбрать издание</label>
-<select id="admin-periodical-list" name="id" style="width:240px;height:22px" onchange="this.form.submit()">
-<option value="0" {if !$periodical || !$periodical.id}selected{/if}>— выбрать —</option>
-{section name=n loop=$periodicals_list}
-<option value="{$periodicals_list[n].id}" {if $periodical && $periodicals_list[n].id eq $periodical.id}selected{/if}>
-{if !$periodicals_list[n].is_active}[×] {/if}{$periodicals_list[n].title_ru}{if $periodicals_list[n].title_en} / {$periodicals_list[n].title_en}{/if}
-</option>
-{/section}
-</select>
-</form>
+
+{literal}
+<style>
+.admin-periodicals-list-wrap {
+	font: normal 12px Verdana;
+	max-height: 70vh;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.admin-periodicals-list-wrap ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.admin-periodicals-list-wrap li {
+	margin: 0 0 5px;
+	line-height: 1.35;
+}
+.admin-periodicals-list-wrap .admin-periodicals-list-item {
+	display: inline-flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	max-width: 100%;
+}
+.admin-periodicals-list-wrap .admin-periodicals-list-item > a:first-child {
+	flex: 0 1 auto;
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.admin-periodicals-list-wrap a {
+	color: #493C2F;
+	text-decoration: none;
+}
+.admin-periodicals-list-wrap a:hover { color: #A41E00; }
+.admin-periodicals-list-wrap a.nav-active {
+	font-weight: bold;
+	color: #A41E00;
+}
+.admin-periodicals-list-wrap .admin-periodicals-public-link {
+	display: inline-block;
+	margin-left: 6px;
+	color: #666;
+	text-decoration: none;
+	font-size: 13px;
+	line-height: 1;
+	vertical-align: middle;
+	flex: 0 0 auto;
+}
+.admin-periodicals-list-wrap .admin-periodicals-public-link:hover { color: #A41E00; }
+</style>
+{/literal}
+
+<div class="admin-periodicals-list-wrap">
+{if $periodicals_list && $periodicals_list|@count gt 0}
+<ul>
+{foreach from=$periodicals_list item=p}
+<li>
+<span class="admin-periodicals-list-item">
+<a href="admin_periodicals.php?id={$p.id}"{if $periodical && $periodical.id eq $p.id} class="nav-active"{/if}>{if !$p.is_active}[×] {/if}{$p.title_ru|escape:'html'}{if $p.title_en} / {$p.title_en|escape:'html'}{/if}</a><a href="{$host}periodicals.php?id={$p.id}" target="_blank" rel="noopener" class="admin-periodicals-public-link" title="Публичная страница издания" aria-label="Публичная страница издания «{$p.title_ru|escape:'html'}»">→</a>
+</span>
+</li>
+{/foreach}
+</ul>
+{else}
+<p style="color:#666;margin:0">Изданий пока нет</p>
+{/if}
+</div>
 </td>
 
 <td valign="top">

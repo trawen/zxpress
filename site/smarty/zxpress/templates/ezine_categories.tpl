@@ -1,6 +1,9 @@
 {include file="top.tpl"}
 
-<br>
+{if $category && !$category_not_found}
+<div class="article-ezine-categories-top"><a href="{$host}ezine-categories.php{if $lng eq 'eng'}?lng=eng{/if}">{if $lng eq 'eng'}Categories{else}Категории{/if}</a>{foreach from=$category_breadcrumbs item=bc name=bc} → <a href="{$host}ezine-categories.php?id={$bc.id}{if $lng eq 'eng'}&amp;lng=eng{/if}{if $title_only}&amp;title=1{/if}">{if $lng eq 'eng' && $bc.name_en}{$bc.name_en}{else}{$bc.name_ru}{/if}</a>{/foreach}</div>
+{/if}
+
 <center>
 <table class="pub-layout ezine-categories-layout" cellpadding="0" cellspacing="0" border="0">
 <tr>
@@ -30,12 +33,6 @@
 {if !$category}
 <h1>{if $lng eq 'eng'}Ezine article categories{else}Категории статей журналов{/if}</h1>
 {else}
-<p class="pub-breadcrumbs">
-<a href="{$host}ezine-categories.php{if $lng eq 'eng'}?lng=eng{/if}">{if $lng eq 'eng'}Categories{else}Категории{/if}</a>
-{foreach from=$category_breadcrumbs item=bc name=bc}
- &rarr; <a href="{$host}ezine-categories.php?id={$bc.id}{if $lng eq 'eng'}&amp;lng=eng{/if}{if $title_only}&amp;title=1{/if}">{if $lng eq 'eng' && $bc.name_en}{$bc.name_en}{else}{$bc.name_ru}{/if}</a>
-{/foreach}
-</p>
 <h1>{$category_title}</h1>
 {if $category_image_url}
 <p class="ezine-category-image-wrap"><img src="{$category_image_url}" class="ezine-category-image" alt="{$category_title|escape:'html'}" loading="lazy"></p>

@@ -4,6 +4,7 @@ error_reporting(E_ALL);
 
 
 require 'init.inc';
+require_once __DIR__ . '/includes/ezine_categories.php';
 
 function article_public_meta_description(array $article, ?string $lng): string
 {
@@ -157,8 +158,11 @@ $smarty->assign('title', title_plain($article['title'] ?? ''));
 $articleDescPlain = article_public_meta_description($article, $smarty->getTemplateVars('lng'));
 $smarty->assign('description', $articleDescPlain);
 
+$lng = $smarty->getTemplateVars('lng');
+$smarty->assign('ezine_category_branch', ec_article_public_category_branch($db, $id, $lng));
 
- //TAGS
+ //TAGS (hidden for now)
+/*
 $stmt = mysqli_prepare($db, "SELECT *, tags.id AS id FROM tags, tags_articles WHERE tags_articles.id_article=? AND tags.id=tags_articles.id_tag ORDER BY tags.`count` DESC");
 mysqli_stmt_bind_param($stmt, "i", $id);
 mysqli_stmt_execute($stmt);
@@ -172,6 +176,7 @@ while ($t = mysqli_fetch_array($z)) {
 
 }
 $smarty->assign('tags', $tags);
+*/
 
 
 // other articles from issue

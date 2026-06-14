@@ -51,8 +51,12 @@ function ec_category_list_label(array $cat, array $byId): string
 function ec_build_category_tree(array $byParent, int $parentId): array
 {
     $tree = [];
-    foreach ($byParent[$parentId] ?? [] as $row) {
+    $siblings = $byParent[$parentId] ?? [];
+    $siblingCount = count($siblings);
+    foreach ($siblings as $idx => $row) {
         $cid = (int) ($row['id'] ?? 0);
+        $row['can_move_up'] = $idx > 0 ? 1 : 0;
+        $row['can_move_down'] = $idx < $siblingCount - 1 ? 1 : 0;
         $childTree = ec_build_category_tree($byParent, $cid);
         if ($childTree !== []) {
             $row['tree'] = $childTree;
@@ -64,6 +68,91 @@ function ec_build_category_tree(array $byParent, int $parentId): array
     }
 
     return $tree;
+}
+
+/**
+ * Swap sort_order with adjacent sibling category (same parent).
+ */
+function ec_move_category_order(mysqli $db, int $categoryId, string $direction): bool
+{
+    if ($categoryId <= 0 || !in_array($direction, ['up', 'down'], true)) {
+        return false;
+    }
+
+    $stmt = $db->prepare('SELECT id, parent_id, sort_order FROM ezine_categories WHERE id=? LIMIT 1');
+    if (!$stmt) {
+        return false;
+    }
+    $stmt->bind_param('i', $categoryId);
+    $stmt->execute();
+    $current = $stmt->get_result()->fetch_assoc();
+    $stmt->close();
+    if (!$current) {
+        return false;
+    }
+
+    $parentId = isset($current['parent_id']) && $current['parent_id'] !== null
+        ? (int) $current['parent_id']
+        : null;
+
+    if ($parentId === null) {
+        $z = db_select(
+            $db,
+            'SELECT id, sort_order FROM ezine_categories WHERE parent_id IS NULL ORDER BY sort_order ASC, name_ru ASC, id ASC'
+        );
+    } else {
+        $z = db_select(
+            $db,
+            'SELECT id, sort_order FROM ezine_categories WHERE parent_id=? ORDER BY sort_order ASC, name_ru ASC, id ASC',
+            'i',
+            $parentId
+        );
+    }
+
+    $siblings = [];
+    while ($z && ($row = mysqli_fetch_assoc($z))) {
+        $siblings[] = [
+            'id' => (int) ($row['id'] ?? 0),
+            'sort_order' => (int) ($row['sort_order'] ?? 0),
+        ];
+    }
+
+    $index = null;
+    foreach ($siblings as $i => $sibling) {
+        if ($sibling['id'] === $categoryId) {
+            $index = $i;
+            break;
+        }
+    }
+    if ($index === null) {
+        return false;
+    }
+
+    $swapIndex = $direction === 'up' ? $index - 1 : $index + 1;
+    if ($swapIndex < 0 || $swapIndex >= count($siblings)) {
+        return false;
+    }
+
+    $moved = $siblings[$index];
+    $siblings[$index] = $siblings[$swapIndex];
+    $siblings[$swapIndex] = $moved;
+
+    foreach ($siblings as $i => $sibling) {
+        if ($sibling['sort_order'] === $i) {
+            continue;
+        }
+        if (!db_exec(
+            $db,
+            'UPDATE ezine_categories SET sort_order=? WHERE id=? LIMIT 1',
+            'ii',
+            $i,
+            $sibling['id']
+        )) {
+            return false;
+        }
+    }
+
+    return true;
 }
 
 /**
@@ -146,6 +235,18 @@ function ec_delete_category(mysqli $db, int $categoryId): bool
     return db_exec($db, 'DELETE FROM ezine_categories WHERE id=? LIMIT 1', 'i', $categoryId);
 }
 
+function ec_read_article_text(int $articleId): string
+{
+    if ($articleId <= 0) {
+        return '';
+    }
+
+    $path = zx_storage_path('articles', (string) $articleId);
+    $text = @file_get_contents($path);
+
+    return $text !== false ? $text : '';
+}
+
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 $error = null;
 $merge_message = null;
@@ -177,6 +278,38 @@ if (isset($_GET['serve_image'])) {
     exit;
 }
 
+if (isset($_GET['article_text'])) {
+    $articleId = (int) $_GET['article_text'];
+    header('Content-Type: application/json; charset=utf-8');
+
+    if ($articleId <= 0) {
+        echo json_encode(['ok' => false, 'error' => 'invalid id'], JSON_UNESCAPED_UNICODE);
+        exit;
+    }
+
+    $stmt = $db->prepare('SELECT id, title FROM articles WHERE id=? LIMIT 1');
+    $row = null;
+    if ($stmt) {
+        $stmt->bind_param('i', $articleId);
+        $stmt->execute();
+        $row = $stmt->get_result()->fetch_assoc();
+        $stmt->close();
+    }
+
+    if (!$row) {
+        echo json_encode(['ok' => false, 'error' => 'not found'], JSON_UNESCAPED_UNICODE);
+        exit;
+    }
+
+    echo json_encode([
+        'ok' => true,
+        'id' => $articleId,
+        'title' => article_title_list_html($row['title'] ?? ''),
+        'text' => ec_read_article_text($articleId),
+    ], JSON_UNESCAPED_UNICODE);
+    exit;
+}
+
 if (isset($_POST['delete_category']) && (string) $_POST['delete_category'] !== '') {
     csrf_verify();
 
@@ -191,6 +324,25 @@ if (isset($_POST['delete_category']) && (string) $_POST['delete_category'] !== '
     }
 
     $error = 'Не удалось удалить категорию';
+}
+
+if (isset($_POST['move_category']) && (string) $_POST['move_category'] !== '') {
+    csrf_verify();
+
+    if (preg_match('/^(\d+):(up|down)$/', (string) $_POST['move_category'], $m)) {
+        $moveId = (int) $m[1];
+        $moveDir = (string) $m[2];
+        if ($moveId > 0 && ec_move_category_order($db, $moveId, $moveDir)) {
+            $redirect = '/admin_ezine_categories.php';
+            if ($id > 0) {
+                $redirect .= '?id=' . $id;
+            }
+            header('Location: ' . $redirect, true, 303);
+            exit;
+        }
+    }
+
+    $error = 'Не удалось изменить порядок категории';
 }
 
 if (($_POST['merge'] ?? '') === 'Склеить') {
@@ -210,6 +362,33 @@ if (($_POST['merge'] ?? '') === 'Склеить') {
         $merge_message = 'Склеено категорий: ' . $mergeResult['categories']
             . ', добавлено привязок: ' . $mergeResult['added'];
     }
+}
+
+if (isset($_POST['unlink']) && (string) $_POST['unlink'] !== '') {
+    csrf_verify();
+
+    if (preg_match('/^(\d+):(\d+)$/', (string) $_POST['unlink'], $m)) {
+        $unlinkCatId = (int) $m[1];
+        $unlinkArticleId = (int) $m[2];
+        if ($unlinkCatId > 0 && $unlinkArticleId > 0) {
+            db_exec(
+                $db,
+                'DELETE FROM ezine_article_categories WHERE category_id=? AND article_id=? LIMIT 1',
+                'ii',
+                $unlinkCatId,
+                $unlinkArticleId
+            );
+            ec_refresh_articles_count($db, $unlinkCatId);
+            if ($id > 0) {
+                ec_refresh_articles_count($db, $id);
+            }
+            $redirectId = $id > 0 ? $id : $unlinkCatId;
+            header('Location: /admin_ezine_categories.php?id=' . $redirectId . '#articles', true, 303);
+            exit;
+        }
+    }
+
+    $error = 'Не удалось отвязать статью';
 }
 
 if (($_POST['save'] ?? '') === 'Сохранить') {
@@ -351,16 +530,66 @@ $linked_articles = [];
 if ($id > 0) {
     $z = db_select(
         $db,
-        'SELECT a.id, a.title, a.number, eac.sort_order '
+        'SELECT a.id AS id_article, a.title, a.title_eng, a.number, a.id_issue, a.id_press, '
+        . 'i.title AS issue_title, i.date AS issue_date, '
+        . 'p.title AS press_name, eac.sort_order '
         . 'FROM ezine_article_categories eac '
         . 'INNER JOIN articles a ON a.id = eac.article_id '
+        . 'INNER JOIN issue i ON i.id = a.id_issue '
+        . 'INNER JOIN press p ON p.id = i.id_press '
         . 'WHERE eac.category_id=? '
-        . 'ORDER BY eac.sort_order ASC, a.title ASC',
+        . 'ORDER BY i.date ASC, eac.sort_order ASC, a.number ASC, a.title ASC',
         'i',
         $id
     );
-    while ($z && ($t = mysqli_fetch_array($z))) {
+
+    $lastIssue = null;
+    while ($z && ($t = mysqli_fetch_assoc($z))) {
+        $issueId = (int) ($t['id_issue'] ?? 0);
+        $t['show'] = ($lastIssue !== $issueId) ? 1 : 0;
+        $lastIssue = $issueId;
+
+        $issueDate = (int) ($t['issue_date'] ?? 0);
+        $monthKey = date('m', $issueDate);
+        $t['date'] = date('d ' . ($months[$monthKey] ?? '') . ' Y', $issueDate);
+
+        $t['title_list'] = article_title_list_html($t['title'] ?? '');
+        $t['title_eng_list'] = article_title_list_html($t['title_eng'] ?? '');
+        $t['press_name_plain'] = title_plain($t['press_name'] ?? '');
+        $t['issue_title_plain'] = title_plain($t['issue_title'] ?? '');
+
         $linked_articles[] = $t;
+    }
+
+    /** @var array<int, list<array{id: int, name_ru: string}>> $categoriesByArticle */
+    $categoriesByArticle = [];
+    $zCat = db_select(
+        $db,
+        'SELECT eac.article_id, eac.category_id, ec.name_ru '
+        . 'FROM ezine_article_categories eac '
+        . 'INNER JOIN ezine_categories ec ON ec.id = eac.category_id '
+        . 'WHERE eac.article_id IN ('
+        . 'SELECT eac2.article_id FROM ezine_article_categories eac2 WHERE eac2.category_id=?'
+        . ') '
+        . 'ORDER BY eac.article_id ASC, ec.sort_order ASC, ec.name_ru ASC',
+        'i',
+        $id
+    );
+    while ($zCat && ($row = mysqli_fetch_assoc($zCat))) {
+        $aid = (int) ($row['article_id'] ?? 0);
+        $catId = (int) ($row['category_id'] ?? 0);
+        if ($aid <= 0 || $catId <= 0) {
+            continue;
+        }
+        $categoriesByArticle[$aid][] = [
+            'id' => $catId,
+            'name_ru' => (string) ($row['name_ru'] ?? ''),
+        ];
+    }
+
+    foreach ($linked_articles as $idx => $article) {
+        $aid = (int) ($article['id_article'] ?? 0);
+        $linked_articles[$idx]['article_categories'] = $categoriesByArticle[$aid] ?? [];
     }
 }
 $smarty->assign('linked_articles', $linked_articles);
@@ -381,5 +610,5 @@ if ($id > 0 && ec_category_original_path($id)) {
 $smarty->assign('error', $error);
 $smarty->assign('merge_message', $merge_message);
 $smarty->assign('delete_message', $delete_message);
-$smarty->assign('title', 'Админка: Категории статей журналов');
+$smarty->assign('title', 'Админка: Категории электронных газет и журналов');
 $smarty->display('admin_ezine_categories.tpl');

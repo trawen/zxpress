@@ -1,125 +1,7 @@
 <?php
 require 'init.inc';
 require_once __DIR__ . '/includes/ezine_category_images.php';
-
-function ec_cat_name(array $row, ?string $lng): string
-{
-    if ($lng === 'eng') {
-        $en = trim((string) ($row['name_en'] ?? ''));
-        if ($en !== '') {
-            return $en;
-        }
-    }
-
-    return (string) ($row['name_ru'] ?? '');
-}
-
-function ec_cat_title(array $row, ?string $lng): string
-{
-    if ($lng === 'eng') {
-        $en = trim((string) ($row['title_en'] ?? ''));
-        if ($en !== '') {
-            return $en;
-        }
-    } else {
-        $ru = trim((string) ($row['title_ru'] ?? ''));
-        if ($ru !== '') {
-            return $ru;
-        }
-    }
-
-    return ec_cat_name($row, $lng);
-}
-
-function ec_cat_description(array $row, ?string $lng): string
-{
-    if ($lng === 'eng') {
-        $en = trim((string) ($row['description_en'] ?? ''));
-        if ($en !== '') {
-            return $en;
-        }
-    }
-
-    return trim((string) ($row['description_ru'] ?? ''));
-}
-
-function ec_cat_description_html(array $row, ?string $lng): string
-{
-    $s = ec_cat_description($row, $lng);
-    if ($s === '') {
-        return '';
-    }
-
-    return nl2br(htmlspecialchars($s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'));
-}
-
-function ec_cat_meta_description(array $row, ?string $lng): string
-{
-    $metaRu = title_plain((string) ($row['meta_description_ru'] ?? ''));
-    $metaEn = title_plain((string) ($row['meta_description_en'] ?? ''));
-    if ($lng === 'eng') {
-        if ($metaEn !== '') {
-            return $metaEn;
-        }
-        if ($metaRu !== '') {
-            return $metaRu;
-        }
-        return ec_cat_name($row, $lng);
-    }
-    if ($metaRu !== '') {
-        return $metaRu;
-    }
-
-    return ec_cat_name($row, 'ru');
-}
-
-/** @param array<int, list<array<string, mixed>>> $byParent */
-function ec_build_category_tree(array $byParent, int $parentId): array
-{
-    $tree = [];
-    foreach ($byParent[$parentId] ?? [] as $row) {
-        $cid = (int) ($row['id'] ?? 0);
-        $childTree = ec_build_category_tree($byParent, $cid);
-        if ($childTree !== []) {
-            $row['tree'] = $childTree;
-        }
-        $tree[] = $row;
-    }
-    if ($tree !== []) {
-        $tree[count($tree) - 1]['last'] = 1;
-    }
-
-    return $tree;
-}
-
-/** @param array<int, list<array<string, mixed>>> $byParent */
-function ec_category_descendant_ids(array $byParent, int $categoryId): array
-{
-    $ids = [$categoryId];
-    foreach ($byParent[$categoryId] ?? [] as $child) {
-        $cid = (int) ($child['id'] ?? 0);
-        if ($cid > 0) {
-            $ids = array_merge($ids, ec_category_descendant_ids($byParent, $cid));
-        }
-    }
-
-    return $ids;
-}
-
-/** @param array<int, array<string, mixed>> $byId */
-function ec_category_breadcrumbs(array $byId, int $id): array
-{
-    $crumbs = [];
-    $cur = $id;
-    $guard = 0;
-    while ($cur > 0 && isset($byId[$cur]) && $guard < 32) {
-        array_unshift($crumbs, $byId[$cur]);
-        $cur = (int) ($byId[$cur]['parent_id'] ?? 0);
-        $guard++;
-    }
-
-    return $crumbs;
-}
+require_once __DIR__ . '/includes/ezine_categories.php';
 
 $id = (int) ($_GET['id'] ?? 0);
 $lng = $smarty->getTemplateVars('lng');
@@ -205,10 +87,10 @@ if ($id > 0) {
     }
 } else {
     if ($lng === 'eng') {
-        $smarty->assign('title', 'Ezine article categories');
+        $smarty->assign('title', 'Electronic newspaper and magazine categories');
         $smarty->assign('description', 'Categories of articles from ZX Spectrum magazines and newspapers.');
     } else {
-        $smarty->assign('title', 'Категории статей журналов');
+        $smarty->assign('title', 'Категории электронных газет и журналов');
         $smarty->assign('description', 'Категории статей из журналов и газет для ZX Spectrum.');
     }
 }
