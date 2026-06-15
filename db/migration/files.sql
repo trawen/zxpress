@@ -10,3 +10,6 @@ CREATE TABLE files_ (
 
     INDEX idx_entity (entity_type, entity_id)
 );
+
+ALTER TABLE files_
+ADD COLUMN name VARCHAR(255) NOT NULL DEFAULT '' AFTER entity_id;

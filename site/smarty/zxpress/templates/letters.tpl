@@ -9,23 +9,23 @@
 {if $letter}
 
 <p class="pub-breadcrumbs">
-	<a href="{$host}snailmail.php{if $lng eq 'eng'}?lng=eng{/if}">← Все бумажные письма</a>
+	<a href="{$host}snailmail.php{if $lng eq 'eng'}?lng=eng{/if}">{if $lng eq 'eng'}← All letters{else}← Все бумажные письма{/if}</a>
 </p>
 
-<h1>{$letter.title_ru}</h1>
+<h1>{$letter.title_display}</h1>
 
 <p class="letter-meta-from">
-	<b>От:</b> {$letter.from_author_display}
+	<b>{if $lng eq 'eng'}From:{else}От:{/if}</b> {$letter.from_author_display}
 </p>
 <p class="letter-meta-to">
-	<b>Кому:</b> {$letter.to_author_display}
+	<b>{if $lng eq 'eng'}To:{else}Кому:{/if}</b> {$letter.to_author_display}
 	{if $letter.date_display}
 		&nbsp;·&nbsp; <span>{$letter.date_display}</span>
 	{/if}
 </p>
 
 {if $letter.summary_html}
-<p class="letter-summary-block"><b>Краткое содержимое бумажного письма:</b> <span class="letter-summary">{$letter.summary_html nofilter}</span></p>
+<p class="letter-summary-block"><b>{if $lng eq 'eng'}Letter summary:{else}Краткое содержимое бумажного письма:{/if}</b> <span class="letter-summary">{$letter.summary_html nofilter}</span></p>
 {/if}
 
 {if $letter_images && $letter_images|@count gt 0}
@@ -46,28 +46,33 @@
 
 {elseif $letter_not_found}
 
-<h1>Бумажное письмо не найдено</h1>
-<p><a href="{$host}snailmail.php{if $lng eq 'eng'}?lng=eng{/if}">К каталогу бумажных писем</a></p>
+<h1>{if $lng eq 'eng'}Letter not found{else}Бумажное письмо не найдено{/if}</h1>
+<p><a href="{$host}snailmail.php{if $lng eq 'eng'}?lng=eng{/if}">{if $lng eq 'eng'}Back to the letter catalog{else}К каталогу бумажных писем{/if}</a></p>
 
 {else}
 
 {if $filter_from && $filter_from_author_display}
-<h1 class="letter-filter-h1">Все бумажные письма от {$filter_from_author_display}</h1>
+<h1 class="letter-filter-h1">{if $lng eq 'eng'}All letters from {$filter_from_author_display}{else}Все бумажные письма от {$filter_from_author_display}{/if}</h1>
 <p class="pub-breadcrumbs">
-	<a href="{$host}snailmail.php{if $lng eq 'eng'}?lng=eng{/if}">← Все бумажные письма</a>
+	<a href="{$host}snailmail.php{if $lng eq 'eng'}?lng=eng{/if}">{if $lng eq 'eng'}← All letters{else}← Все бумажные письма{/if}</a>
 </p>
 {else}
-<h1>Бумажные письма середины 90-х годов от участников ZX Spectrum сцены</h1>
+<h1>{if $lng eq 'eng'}Paper letters from mid-1990s members of the ZX Spectrum scene{else}Бумажные письма середины 90-х годов от участников ZX Spectrum сцены{/if}</h1>
 <div class="letter-banner"><img src="{$host}img/snailmail.png" alt="Snailmail" class="letter-banner-img"></div>
-<h2><p><i>Swapping и Snailmail — культура обмена дискетами, кассетами, журналами по обычной (улиточной) почте, без которой демосцена СССР и Восточной Европы 80–90-х, возможно, не существовала бы.</p> <p>До интернета именно бумажные письма связывали активных пользователей из разных городов и стран. Обменом как правило занимался специальный человек - своппер.
+<h2><p><i>{if $lng eq 'eng'}
+Swapping and snailmail — the culture of exchanging floppy disks, cassettes, and magazines via regular (snail) mail, without which the demoscene of the USSR and Eastern Europe in the 80s–90s might not have existed.</p> <p>Before the internet, paper letters connected active users from different cities and countries. Exchange was usually handled by a dedicated person — a swapper.
+They maintained contacts with dozens, sometimes hundreds of people. How quickly new releases, software, games and demos spread across the scene depended on them. Swappers often also sold software in their city.</p><p>
+
+Here are scans of paper letters from the domestic ZX Spectrum scene. In these letters you will find news, plans, and discussions of software, games and the demoscene.</p>{else}
+Swapping и Snailmail — культура обмена дискетами, кассетами, журналами по обычной (улиточной) почте, без которой демосцена СССР и Восточной Европы 80–90-х, возможно, не существовала бы.</p> <p>До интернета именно бумажные письма связывали активных пользователей из разных городов и стран. Обменом как правило занимался специальный человек - своппер.
 Он поддерживал контакты с десятками, иногда сотнями людей. От него зависело, насколько быстро новые релизы, софт, игры и демо разойдутся по сцене. Не редко свопперы занимались так же продажей софта в своем городе.</p><p>
 
-Здесь собраны сканы бумажных писем участников отечественной ZX Spectrum сцены. В этих бумажных письмах вы найдете — новости, планы, обсуждение софта, игр и демосцены.</p></i></h2>
+Здесь собраны сканы бумажных писем участников отечественной ZX Spectrum сцены. В этих бумажных письмах вы найдете — новости, планы, обсуждение софта, игр и демосцены.</p>{/if}</i></h2>
 {/if}
 
 {if $letter_author_filters && $letter_author_filters|@count gt 0}
 <p class="pub-filters">
-	<b>Фильтровать бумажные письма по автору:</b>
+	<b>{if $lng eq 'eng'}Filter letters by author:{else}Фильтровать бумажные письма по автору:{/if}</b>
 	{foreach from=$letter_author_filters item=auth name=af}
 		{if !$smarty.foreach.af.first}, {/if}
 		{if $filter_from && $auth.id == $filter_from}
@@ -77,7 +82,7 @@
 		{/if}
 	{/foreach}
 	{if $filter_from}
-		 , <a href="{$host}snailmail.php{if $lng eq 'eng'}?lng=eng{/if}">все</a>
+		 , <a href="{$host}snailmail.php{if $lng eq 'eng'}?lng=eng{/if}">{if $lng eq 'eng'}all{else}все{/if}</a>
 	{/if}
 </p>
 {/if}
@@ -95,17 +100,17 @@
 	<div class="letter-list-placeholder"></div>
 {/if}
 {if $row.published_display}
-<div class="pub-list-date">опубликовано: {$row.published_display}</div>
+<div class="pub-list-date">{if $lng eq 'eng'}published:{else}опубликовано:{/if} {$row.published_display}</div>
 {/if}
 </td>
 <td>
-	<a href="{$host}snailmail.php?id={$row.id}{if $lng eq 'eng'}&amp;lng=eng{/if}" class="pub-list-title">{$row.title_ru}</a>
+	<a href="{$host}snailmail.php?id={$row.id}{if $lng eq 'eng'}&amp;lng=eng{/if}" class="pub-list-title">{$row.title_display}</a>
 	{if $row.summary_html}
 	<div class="pub-list-summary pub-list-summary--lg">{$row.summary_html nofilter}</div>
 	{/if}
 	<div class="letter-list-correspondents">
-		От <b><a href="{$host}snailmail.php?from={$row.author_from}{if $lng eq 'eng'}&amp;lng=eng{/if}" class="u-link-inherit">{$row.from_author_display}</a></b>
-		 к <b><a href="{$host}snailmail.php?from={$row.author_to}{if $lng eq 'eng'}&amp;lng=eng{/if}" class="u-link-inherit">{$row.to_author_display}</a></b>
+		{if $lng eq 'eng'}From{else}От{/if} <b><a href="{$host}snailmail.php?from={$row.author_from}{if $lng eq 'eng'}&amp;lng=eng{/if}" class="u-link-inherit">{$row.from_author_display}</a></b>
+		 {if $lng eq 'eng'}to{else}к{/if} <b><a href="{$host}snailmail.php?from={$row.author_to}{if $lng eq 'eng'}&amp;lng=eng{/if}" class="u-link-inherit">{$row.to_author_display}</a></b>
 		{if $row.date_display}
 			&nbsp;·&nbsp; {$row.date_display}
 		{/if}
@@ -117,12 +122,12 @@
 <br>
 {/foreach}
 {else}
-<p>Здесь пока нет бумажных писем.</p>
+<p>{if $lng eq 'eng'}No letters here yet.{else}Здесь пока нет бумажных писем.{/if}</p>
 {/if}
 
 {if $letters_total_pages gt 1}
 <div class="pub-pagination">
-	Страницы:
+	{if $lng eq 'eng'}Pages:{else}Страницы:{/if}
 	{section name=pg loop=$letters_total_pages}
 		{assign var=pnum value=$smarty.section.pg.iteration}
 		{if $pnum == $letters_page}

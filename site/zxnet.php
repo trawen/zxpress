@@ -5,6 +5,10 @@ require 'init.inc';
 
 $e = mb_substr(trim((string)($_GET['e'] ?? '')), 0, 32);
 $subj_id = intval($_GET['id']);
+$lng = $smarty->getTemplateVars('lng');
+$isEng = ($lng === 'eng');
+$lngQs = $isEng ? '?lng=eng' : '';
+$smarty->assign('zxnet_lng_qs', $lngQs);
 
 $stmt_echo = $db->prepare("SELECT * FROM echos_titles2 WHERE title=? LIMIT 1");
 $stmt_echo->bind_param("s", $e);
@@ -50,16 +54,22 @@ if ($subj_id) {
 		$t['text'] = $decoded;
 		$t['name_from'] = plain_text_decode_entities((string) ($t['name_from'] ?? ''));
 		$t['name_to'] = plain_text_decode_entities((string) ($t['name_to'] ?? ''));
-		$t['date'] = date("d M Y", $t['date']);
+		$t['date'] = $isEng ? date('j F Y', (int) $t['date']) : date('d.m.Y', (int) $t['date']);
 		$topic[] = $t;
 
 	}
 	$smarty->assign('topic', $topic);
 
 	if ($subj_title !== '') {
-		$page_title = $echo_title !== '' ? $subj_title . ' — ZXNet «' . $echo_title . '»' : $subj_title;
+		$page_title = $echo_title !== ''
+			? ($isEng
+				? $subj_title . ' — ZXNet «' . $echo_title . '»'
+				: $subj_title . ' — ZXNet «' . $echo_title . '»')
+			: $subj_title;
 	} else {
-		$page_title = $echo_title !== '' ? 'ZXNet «' . $echo_title . '»' : 'ZXNet';
+		$page_title = $echo_title !== ''
+			? ($isEng ? 'ZXNet «' . $echo_title . '»' : 'ZXNet «' . $echo_title . '»')
+			: 'ZXNet';
 	}
 	$smarty->assign('title', $page_title);
 
@@ -82,8 +92,12 @@ elseif ($id) {
 	while ($z && ($t = mysqli_fetch_array($z))) {
 
 		$t['title'] = plain_text_decode_entities((string) ($t['title'] ?? ''));
-		$t['date_from'] = date("d.m.Y", $t['date_from']);
-		$t['date_to'] = date("d.m.y", $t['date_to']);
+		$t['date_from'] = $isEng
+			? date('j F Y', (int) $t['date_from'])
+			: date('d.m.Y', (int) $t['date_from']);
+		$t['date_to'] = $isEng
+			? date('j F y', (int) $t['date_to'])
+			: date('d.m.y', (int) $t['date_to']);
 
 		$subjs[] = $t;
 
@@ -91,8 +105,10 @@ elseif ($id) {
 	$smarty->assign('subjs', $subjs);
 
 	$smarty->assign('title', $echo_title !== ''
-		? 'ZXNet эхоконференция «' . $echo_title . '»'
-		: 'ZXNet эхоконференция');
+		? ($isEng
+			? 'ZXNet echo conference «' . $echo_title . '»'
+			: 'ZXNet эхоконференция «' . $echo_title . '»')
+		: ($isEng ? 'ZXNet echo conference' : 'ZXNet эхоконференция'));
 
 }
 else {
@@ -101,14 +117,20 @@ else {
 	while ($z && ($t = mysqli_fetch_array($z))) {
 
 		$t['title'] = plain_text_decode_entities((string) ($t['title'] ?? ''));
-		$t['date_from'] = $mnt[date("m", $t['date_from'])].date(" Y", $t['date_from']);
-		$t['date_to'] = date("d.m.y", $t['date_to']);
+		$t['date_from'] = $isEng
+			? date('F Y', (int) $t['date_from'])
+			: $mnt[date('m', $t['date_from'])] . date(' Y', $t['date_from']);
+		$t['date_to'] = $isEng
+			? date('j F y', (int) $t['date_to'])
+			: date('d.m.y', (int) $t['date_to']);
 		$echos[] = $t;
 
 	}
 	$smarty->assign('echos', $echos);
 
-	$smarty->assign('title', 'Архив эхоконференций сети ZXNet');
+	$smarty->assign('title', $isEng
+		? 'Archive of ZXNet echo conferences'
+		: 'Архив эхоконференций сети ZXNet');
 
 }
 

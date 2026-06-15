@@ -34,11 +34,37 @@ $captcha_expected = $_SESSION['captcha_code'] ?? '';
 function tst_err($a) {
 global $message, $user_name, $user_email, $user_site, $code, $confirm_code, $c, $author_id, $captcha_expected;
 $err=0;
-if (!$message) {$err++; $ert="$err. Поле <b>сообщение</b> слишком короткое.<br>"; }
-if (mb_strlen($message, "UTF-8")>1024) {$err++; $ert.="$err. Поле <b>сообщение</b> слишком длинное.<br>";}
-if (!$user_name) {$err++; $ert.="$err. <b>Имя</b> слишком короткое.<br>";}
-if ($user_email and mb_strlen($user_email)<7) {$err++; $ert.="$err. Поле <b>почта</b> слишком короткое.<br>";}
-if ($captcha_expected === '' || $confirm_code !== $captcha_expected) {$err++; $ert.="$err. <b>Неверный код.</b><br>";}
+$isEng = (($_GET['lng'] ?? $_POST['lng'] ?? '') === 'eng');
+if (!$message) {
+	$err++;
+	$ert = $isEng
+		? "$err. The <b>message</b> field is too short.<br>"
+		: "$err. Поле <b>сообщение</b> слишком короткое.<br>";
+}
+if (mb_strlen($message, "UTF-8")>1024) {
+	$err++;
+	$ert .= $isEng
+		? "$err. The <b>message</b> field is too long.<br>"
+		: "$err. Поле <b>сообщение</b> слишком длинное.<br>";
+}
+if (!$user_name) {
+	$err++;
+	$ert .= $isEng
+		? "$err. <b>Name</b> is too short.<br>"
+		: "$err. <b>Имя</b> слишком короткое.<br>";
+}
+if ($user_email and mb_strlen($user_email)<7) {
+	$err++;
+	$ert .= $isEng
+		? "$err. The <b>email</b> field is too short.<br>"
+		: "$err. Поле <b>почта</b> слишком короткое.<br>";
+}
+if ($captcha_expected === '' || $confirm_code !== $captcha_expected) {
+	$err++;
+	$ert .= $isEng
+		? "$err. <b>Wrong code.</b><br>"
+		: "$err. <b>Неверный код.</b><br>";
+}
 
 
 return $ert;
@@ -55,11 +81,12 @@ mysqli_stmt_execute($stmt);
 $z = mysqli_stmt_get_result($stmt);
 
 $n = 0;
+$isEng = (($_GET['lng'] ?? $_POST['lng'] ?? '') === 'eng');
 while ($t = mysqli_fetch_array($z)) {
 
 $t['number'] = $n+1;
 
-$t['date']=date("j.m.Y", $t['date']);
+$t['date'] = $isEng ? date("j F Y", $t['date']) : date("j.m.Y", $t['date']);
 $comments[$n] = $t;
 
 $n++;
@@ -75,7 +102,11 @@ $stmt = mysqli_prepare($db, "INSERT INTO comments (`id`, `text`, `nickname`, `em
 mysqli_stmt_bind_param($stmt, "ssssii", $message, $user_name, $user_email, $ip, $tm, $article_id);
 mysqli_stmt_execute($stmt);
 
-header("Location: ".$_SERVER['REQUEST_URI']);
+$redirect = $_SERVER['REQUEST_URI'];
+if (strpos($redirect, 'lng=eng') === false && (($_POST['lng'] ?? '') === 'eng')) {
+	$redirect .= (strpos($redirect, '?') !== false ? '&' : '?') . 'lng=eng';
+}
+header("Location: " . $redirect);
 exit;
 }
 else {

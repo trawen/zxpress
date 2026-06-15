@@ -1,6 +1,7 @@
 <?php
 require 'init.inc';
 require_once __DIR__ . '/includes/periodical_issue_images.php';
+require_once __DIR__ . '/includes/periodical_issue_files.php';
 
 if (!isset($_SESSION['login']) || !$_SESSION['login']) {
     header('HTTP/1.1 403 Forbidden');
@@ -125,6 +126,27 @@ if (isset($_GET['serve_issue_cover'])) {
     header('Content-Length: ' . (string) filesize($coverPath));
     readfile($coverPath);
     exit;
+}
+
+if (isset($_POST['delete_issue_file']) && (int) $_POST['delete_issue_file'] > 0) {
+    csrf_verify();
+
+    $fileId = (int) $_POST['delete_issue_file'];
+    $deleteIssueId = per_post_int('issue_id');
+    $deletePeriodicalId = per_post_int('periodical_id');
+
+    if ($deleteIssueId <= 0 || $deletePeriodicalId <= 0) {
+        $error = 'Не удалось удалить файл выпуска';
+    } elseif (!per_issue_delete_file_record($db, $fileId, $deleteIssueId)) {
+        $error = 'Файл не найден';
+    } else {
+        header(
+            'Location: /admin_periodicals.php?id=' . $deletePeriodicalId . '&issue_id=' . $deleteIssueId . '#admin-periodical-issue-form',
+            true,
+            303
+        );
+        exit;
+    }
 }
 
 if (($_POST['save'] ?? '') === 'Сохранить') {
@@ -272,6 +294,34 @@ if (($_POST['save_issue'] ?? '') === 'Сохранить выпуск') {
                         }
                     } elseif (per_issue_has_cover($issue_id) && !per_issue_ensure_webp_previews($issue_id)) {
                         $error = 'Не удалось сгенерировать WebP-превью обложки (640 и 1280 px, 70%)';
+                    }
+
+                    if ($error === null) {
+                        $periodicalRow = null;
+                        $stmtPer = $db->prepare('SELECT * FROM periodicals WHERE id=? LIMIT 1');
+                        if ($stmtPer) {
+                            $stmtPer->bind_param('i', $id);
+                            $stmtPer->execute();
+                            $periodicalRow = $stmtPer->get_result()->fetch_assoc();
+                            $stmtPer->close();
+                        }
+
+                        if ($periodicalRow) {
+                            per_issue_sync_file_formats_from_post($db, $issue_id);
+                            if (!per_issue_upload_files(
+                                $db,
+                                $issue_id,
+                                $periodicalRow,
+                                [
+                                    'id' => $issue_id,
+                                    'issue_no' => $issue_no,
+                                    'issue_year' => $issue_year,
+                                ],
+                                per_issue_post_upload_format()
+                            )) {
+                                $error = 'Не удалось загрузить один или несколько файлов выпуска';
+                            }
+                        }
                     }
                 }
 
@@ -461,6 +511,13 @@ if ($issue && !empty($issue['id'])) {
     $smarty->assign('issue_cover_webp_640_url', '');
     $smarty->assign('issue_cover_webp_1280_url', '');
 }
+
+$issue_files = [];
+if ($issue && !empty($issue['id'])) {
+    $issue_files = per_issue_load_files($db, (int) $issue['id']);
+}
+$smarty->assign('issue_files', $issue_files);
+$smarty->assign('issue_file_formats', per_issue_file_format_options());
 
 $cities = [];
 $z = db_select($db, 'SELECT id, name FROM cities ORDER BY name ASC');

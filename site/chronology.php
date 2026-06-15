@@ -46,14 +46,14 @@ while ($z && ($t = mysqli_fetch_array($z))) {
 		$ml = date('m', $ts);
 	}
 
-	if ($_GET['lng']) {
+	if (($_GET['lng'] ?? '') === 'eng') {
 
-		$t['date'] = date('d ', $ts) . ' ' . date('F', $ts);
+		$t['date'] = date('j F', $ts);
 
 	}
 	else {
 
-		$t['date'] = date('d ', $ts) . ' ' . date($months[date('m', $ts)]);
+		$t['date'] = date('d ', $ts) . $months[date('m', $ts)];
 
 	}
 	$t['title_cal_plain'] = title_plain((string) ($t['title_cal'] ?? ''));

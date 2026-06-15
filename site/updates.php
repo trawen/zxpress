@@ -8,6 +8,7 @@ if (!$page) {$page = 1;}
 
 $num = 250;
 $from = (($page-1) * $num);
+$isEng = (($_GET['lng'] ?? '') === 'eng');
 $z = db_select($db, "SELECT COUNT(*) FROM log WHERE type=1");
 $p = $z ? mysqli_fetch_array($z) : false;
 $nm_pages = ceil($p[0] / $num);
@@ -36,11 +37,16 @@ while ($z && ($t = mysqli_fetch_array($z))) {
 	}
 
 
-	$t['date'] = date("d ", $t['date']) . date($months[date("m", $t['date'])]);
+	$t['date'] = $isEng
+		? date("j F", $t['date'])
+		: date("d ", $t['date']) . $months[date("m", $t['date'])];
 
 	if ($last != $t['date']) {$last = $t['date'];} else {$t['date'] = "";}
 
-	$t['title_list'] = article_title_list_html($t['title'] ?? '');
+	$articleTitle = ($isEng && trim((string) ($t['title_eng'] ?? '')) !== '')
+		? ($t['title_eng'] ?? '')
+		: ($t['title'] ?? '');
+	$t['title_list'] = article_title_list_html($articleTitle);
 
 	$update[] = $t;
 

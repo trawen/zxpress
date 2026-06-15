@@ -7,14 +7,20 @@
 a:link, body_alink
 {
 	color: black;
+	font-family: Verdana, sans-serif;
 }
 a:visited, body_avisited
 {
 	color: black;
+	font-family: Verdana, sans-serif;
 }
 a:hover, a:active, body_ahover
 {
 	color: black;
+	font-family: Verdana, sans-serif;
+}
+body {
+	font-family: Verdana, sans-serif;
 }
 </style>
 {/literal}
@@ -29,7 +35,7 @@ a:hover, a:active, body_ahover
 <TR>
 <TD vAlign=top>
 
-<div align="center" style="letter-spacing: 1px; float: left; Font: bold 13px Times">
+<div align="center" style="letter-spacing: 1px; float: left; font: bold 13px Verdana">
 <strong><a href="news.php">Новости сайта</a></strong> -
 <strong><a href="catalog.php">Библиотека</a></strong> -
 <strong><a href="gallery.php">Галерея</a></strong> -
@@ -80,6 +86,7 @@ a:hover, a:active, body_ahover
 
 
 {* <a href="admin_news.php?id={$id}">Новости</a> / *}
+<div style="font: bold 13px Verdana">
 <a href="admin_books.php">Книги</a> /
 <a href="admin_publishers.php">Издательства</a> /
 <a href="admin_periodicals.php">Периодика</a> /
@@ -95,5 +102,6 @@ a:hover, a:active, body_ahover
 <input type="hidden" name="csrf_token" value="{$csrf_token}">
 <button type="submit" style="background:transparent;border:none;padding:0;font:inherit;cursor:pointer;text-decoration:underline;color:inherit">Выйти</button>
 </form>
+</div>
 
 {/if}

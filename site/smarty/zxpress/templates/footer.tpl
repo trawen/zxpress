@@ -4,8 +4,13 @@
 
 <footer class="footer">
 	<div class="copyright">
+		{if $lng eq 'eng'}
+		<div><b>ZXPRESS</b> — Magazines, newspapers and books for ZX Spectrum &nbsp © 2009-{$smarty.now|date_format:"%Y"}</div>
+		<i class="footer-disclaimer">You may use site materials only with a backlink to the source</i>
+		{else}
 		<div><b>ZXPRESS</b> — Журналы, газеты и книги для ZX Spectrum &nbsp © 2009-{$smarty.now|date_format:"%Y"}</div>
 		<i class="footer-disclaimer">Использование материалов сайта разрешено только при указании обратной ссылки</i>
+		{/if}
 	</div>
 </footer>
 

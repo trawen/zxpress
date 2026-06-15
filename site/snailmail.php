@@ -125,10 +125,73 @@ function letters_public_meta_description(array $letter, ?string $lng): string
 	return title_plain(strip_tags((string) ($letter['summary_ru'] ?? '')));
 }
 
+function letters_public_is_eng(?string $lng): bool
+{
+	return $lng === 'eng';
+}
+
+function letters_public_pick_text(?string $en, ?string $ru, bool $isEng): string
+{
+	if ($isEng && trim((string) $en) !== '') {
+		return (string) $en;
+	}
+	return (string) ($ru ?? '');
+}
+
+function letters_public_date_display($date, bool $isEng): string
+{
+	if ($date === null || $date === '') {
+		return '';
+	}
+	$ts = strtotime((string) $date);
+	if ($ts === false) {
+		return '';
+	}
+	return $isEng ? date('j F Y', $ts) : date('d.m.Y', $ts);
+}
+
+function letters_public_author_from_row(array $row, string $prefix, bool $isEng): string
+{
+	$city = $isEng && trim((string) ($row[$prefix . '_city_name_eng'] ?? '')) !== ''
+		? $row[$prefix . '_city_name_eng']
+		: ($row[$prefix . '_city_name'] ?? null);
+	$country = $isEng && trim((string) ($row[$prefix . '_country_name_eng'] ?? '')) !== ''
+		? $row[$prefix . '_country_name_eng']
+		: ($row[$prefix . '_country_name'] ?? null);
+
+	return letters_public_author_line(
+		$row[$prefix . '_nick'] ?? null,
+		$row[$prefix . '_group_name'] ?? null,
+		$city,
+		$country,
+	);
+}
+
+function letters_public_enrich_row(array $row, bool $isEng): array
+{
+	$row['title_display'] = letters_public_pick_text($row['title_en'] ?? null, $row['title_ru'] ?? null, $isEng);
+	$summary = letters_public_pick_text($row['summary_en'] ?? null, $row['summary_ru'] ?? null, $isEng);
+	$body = letters_public_pick_text($row['body_en'] ?? null, $row['body_ru'] ?? null, $isEng);
+	$row['summary_html'] = letters_public_summary_html($summary !== '' ? $summary : null);
+	$row['body_html'] = letters_public_summary_html($body !== '' ? $body : null);
+	$row['date_display'] = letters_public_date_display($row['date'] ?? null, $isEng);
+	$row['published_display'] = letters_public_date_display($row['created_at'] ?? null, $isEng);
+	$row['from_author_display'] = letters_public_author_from_row($row, 'from', $isEng);
+	$row['to_author_display'] = letters_public_author_from_row($row, 'to', $isEng);
+	return $row;
+}
+
+function letters_public_lng_suffix(bool $isEng): string
+{
+	return $isEng ? '&lng=eng' : '';
+}
+
 $id = (int) ($_GET['id'] ?? 0);
 $fromAuthor = (int) ($_GET['from'] ?? 0);
 $page = max(1, (int) ($_GET['p'] ?? 1));
 $offset = ($page - 1) * LETTERS_PER_PAGE;
+$lng = $smarty->getTemplateVars('lng');
+$isEng = letters_public_is_eng($lng);
 
 if ($id > 0) {
 	$stmt = $db->prepare(
@@ -136,7 +199,9 @@ if ($id > 0) {
 		. 'af.nickname AS from_nick, at.nickname AS to_nick, '
 		. 'af.group_name AS from_group_name, at.group_name AS to_group_name, '
 		. 'cfn.name AS from_city_name, cnf.country_name AS from_country_name, '
-		. 'ctn.name AS to_city_name, cnt.country_name AS to_country_name '
+		. 'cfn.name_eng AS from_city_name_eng, cnf.country_name_eng AS from_country_name_eng, '
+		. 'ctn.name AS to_city_name, cnt.country_name AS to_country_name, '
+		. 'ctn.name_eng AS to_city_name_eng, cnt.country_name_eng AS to_country_name_eng '
 		. 'FROM letters l '
 		. 'LEFT JOIN authors af ON af.id = l.author_from '
 		. 'LEFT JOIN authors at ON at.id = l.author_to '
@@ -160,7 +225,7 @@ if ($id > 0) {
 		$smarty->assign('letter', null);
 		$smarty->assign('letter_images', []);
 		$smarty->assign('letter_not_found', true);
-		$smarty->assign('title', 'Бумажное письмо не найдено');
+		$smarty->assign('title', $isEng ? 'Letter not found' : 'Бумажное письмо не найдено');
 		$smarty->assign('og_title', '');
 		$smarty->assign('og_description', '');
 		$smarty->assign('og_image', '');
@@ -170,24 +235,7 @@ if ($id > 0) {
 		$smarty->assign('letter_not_found', false);
 		db_exec($db, 'UPDATE letters SET view_count = view_count + 1 WHERE id = ? LIMIT 1', 'i', $id);
 
-		$letter['date_display'] = '';
-		if (!empty($letter['date'])) {
-			$letter['date_display'] = date('d.m.Y', strtotime((string) $letter['date']));
-		}
-		$letter['summary_html'] = letters_public_summary_html($letter['summary_ru'] ?? null);
-		$letter['body_html'] = letters_public_summary_html($letter['body_ru'] ?? null);
-		$letter['from_author_display'] = letters_public_author_line(
-			$letter['from_nick'] ?? null,
-			$letter['from_group_name'] ?? null,
-			$letter['from_city_name'] ?? null,
-			$letter['from_country_name'] ?? null,
-		);
-		$letter['to_author_display'] = letters_public_author_line(
-			$letter['to_nick'] ?? null,
-			$letter['to_group_name'] ?? null,
-			$letter['to_city_name'] ?? null,
-			$letter['to_country_name'] ?? null,
-		);
+		$letter = letters_public_enrich_row($letter, $isEng);
 
 		$images = [];
 		$stImg = $db->prepare(
@@ -216,8 +264,7 @@ if ($id > 0) {
 
 		$smarty->assign('letter', $letter);
 		$smarty->assign('letter_images', $images);
-		$lng = $smarty->getTemplateVars('lng');
-		$titlePlain = title_plain((string) ($letter['title_ru'] ?? ''));
+		$titlePlain = title_plain($letter['title_display']);
 		$smarty->assign('title', $titlePlain);
 		$descPlain = letters_public_meta_description($letter, $lng);
 		$smarty->assign('description', $descPlain);
@@ -230,7 +277,7 @@ if ($id > 0) {
 		$smarty->assign('og_title', $titlePlain);
 		$smarty->assign('og_description', $descPlain);
 		$smarty->assign('og_image', $ogImage);
-		$smarty->assign('og_url', $origin . '/snailmail.php?id=' . $id);
+		$smarty->assign('og_url', $origin . '/snailmail.php?id=' . $id . letters_public_lng_suffix($isEng));
 		$smarty->assign('og_type', 'article');
 	}
 
@@ -324,7 +371,9 @@ $sqlList = 'SELECT l.*, '
 	. 'af.nickname AS from_nick, at.nickname AS to_nick, '
 	. 'af.group_name AS from_group_name, at.group_name AS to_group_name, '
 	. 'cfn.name AS from_city_name, cnf.country_name AS from_country_name, '
-	. 'ctn.name AS to_city_name, cnt.country_name AS to_country_name '
+	. 'cfn.name_eng AS from_city_name_eng, cnf.country_name_eng AS from_country_name_eng, '
+	. 'ctn.name AS to_city_name, cnt.country_name AS to_country_name, '
+	. 'ctn.name_eng AS to_city_name_eng, cnt.country_name_eng AS to_country_name_eng '
 	. 'FROM letters l '
 	. 'LEFT JOIN authors af ON af.id = l.author_from '
 	. 'LEFT JOIN authors at ON at.id = l.author_to '
@@ -351,27 +400,7 @@ $z = $stmt->get_result();
 $letters_rows = [];
 while ($z && ($row = $z->fetch_assoc())) {
 	$lid = (int) ($row['id'] ?? 0);
-	$row['date_display'] = '';
-	if (!empty($row['date'])) {
-		$row['date_display'] = date('d.m.Y', strtotime((string) $row['date']));
-	}
-	$row['published_display'] = '';
-	if (!empty($row['created_at'])) {
-		$row['published_display'] = date('d.m.Y', strtotime((string) $row['created_at']));
-	}
-	$row['summary_html'] = letters_public_summary_html($row['summary_ru'] ?? null);
-	$row['from_author_display'] = letters_public_author_line(
-		$row['from_nick'] ?? null,
-		$row['from_group_name'] ?? null,
-		$row['from_city_name'] ?? null,
-		$row['from_country_name'] ?? null,
-	);
-	$row['to_author_display'] = letters_public_author_line(
-		$row['to_nick'] ?? null,
-		$row['to_group_name'] ?? null,
-		$row['to_city_name'] ?? null,
-		$row['to_country_name'] ?? null,
-	);
+	$row = letters_public_enrich_row($row, $isEng);
 	$cover = letters_public_first_cover($db, $lid);
 	$row['cover'] = $cover;
 	$letters_rows[] = $row;
@@ -386,23 +415,40 @@ $smarty->assign('letter', null);
 $smarty->assign('letter_not_found', false);
 
 if ($filterFromAuthorDisplay !== '') {
-	$smarty->assign('title', 'Все бумажные письма от ' . $filterFromAuthorDisplay);
-	$catalogDesc = 'Бумажные письма от ' . $filterFromAuthorDisplay . ' — бумажная переписка участников ZX Spectrum сцены.';
+	if ($isEng) {
+		$smarty->assign('title', 'All letters from ' . $filterFromAuthorDisplay);
+		$catalogDesc = 'Letters from ' . $filterFromAuthorDisplay . ' — paper correspondence of ZX Spectrum scene members.';
+	} else {
+		$smarty->assign('title', 'Все бумажные письма от ' . $filterFromAuthorDisplay);
+		$catalogDesc = 'Бумажные письма от ' . $filterFromAuthorDisplay . ' — бумажная переписка участников ZX Spectrum сцены.';
+	}
 } else {
-	$smarty->assign('title', 'Бумажные письма');
-	$catalogDesc = 'Бумажные письма середины 90-х годов от участников ZX Spectrum сцены. Swapping и Snailmail.';
+	if ($isEng) {
+		$smarty->assign('title', 'Snailmail letters');
+		$catalogDesc = 'Paper letters from the mid-1990s from members of the ZX Spectrum scene. Swapping and snailmail.';
+	} else {
+		$smarty->assign('title', 'Бумажные письма');
+		$catalogDesc = 'Бумажные письма середины 90-х годов от участников ZX Spectrum сцены. Swapping и Snailmail.';
+	}
 }
 $smarty->assign('description', $catalogDesc);
 
 $origin = zxpress_canonical_origin();
 $smarty->assign('og_title', $filterFromAuthorDisplay !== ''
-	? 'Все бумажные письма от ' . $filterFromAuthorDisplay
-	: 'Бумажные письма участников ZX Spectrum сцены');
+	? ($isEng
+		? 'All letters from ' . $filterFromAuthorDisplay
+		: 'Все бумажные письма от ' . $filterFromAuthorDisplay)
+	: ($isEng
+		? 'Snailmail letters from the ZX Spectrum scene'
+		: 'Бумажные письма участников ZX Spectrum сцены'));
 $smarty->assign('og_description', $catalogDesc);
 $smarty->assign('og_image', $origin . '/img/snailmail.png');
 $ogUrl = $origin . '/snailmail.php';
 if ($fromAuthor > 0) {
 	$ogUrl .= '?from=' . $fromAuthor;
+}
+if ($isEng) {
+	$ogUrl .= ($fromAuthor > 0 ? '&' : '?') . 'lng=eng';
 }
 $smarty->assign('og_url', $ogUrl);
 $smarty->assign('og_type', 'website');

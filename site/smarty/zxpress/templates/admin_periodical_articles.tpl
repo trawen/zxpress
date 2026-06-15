@@ -25,20 +25,52 @@
 <tr>
 <td valign="top" width="360" style="border-right:1px solid #C8C5AC">
 <div style="font: bold 12px Verdana; margin-bottom:6px">Статьи выпуска</div>
-<form method="get" action="admin_periodical_articles.php">
-<input type="hidden" name="issue_id" value="{$issue_id}">
-<label for="admin-periodical-article-list" class="u-sr-only">Выбрать статью</label>
-<select id="admin-periodical-article-list" name="id" style="width:340px;height:22px" onchange="this.form.submit()">
-<option value="0" {if !$article || !$article.id}selected{/if}>— выбрать —</option>
+
+{literal}
+<style>
+.admin-periodical-articles-list-wrap {
+	font: normal 12px Verdana;
+	max-height: 70vh;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.admin-periodical-articles-list-wrap ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.admin-periodical-articles-list-wrap li {
+	margin: 0 0 5px;
+	line-height: 1.35;
+}
+.admin-periodical-articles-list-wrap a {
+	color: #493C2F;
+	text-decoration: none;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.admin-periodical-articles-list-wrap a:hover { color: #A41E00; }
+.admin-periodical-articles-list-wrap a.nav-active {
+	font-weight: bold;
+	color: #A41E00;
+}
+</style>
+{/literal}
+
+<div class="admin-periodical-articles-list-wrap">
+{if $articles_list && $articles_list|@count gt 0}
+<ul>
 {section name=n loop=$articles_list}
-<option value="{$articles_list[n].id}" {if $article && $articles_list[n].id eq $article.id}selected{/if}>
-#{$articles_list[n].id}
-{if $articles_list[n].page_start} стр.{$articles_list[n].page_start}{if $articles_list[n].page_end}-{$articles_list[n].page_end}{/if}{/if}
-{$articles_list[n].title_ru}
-</option>
+<li>
+<a href="admin_periodical_articles.php?issue_id={$issue_id}&id={$articles_list[n].id}"{if $article && $articles_list[n].id eq $article.id} class="nav-active"{/if}>{if !$articles_list[n].is_active}[×] {/if}#{$articles_list[n].id}{if $articles_list[n].page_start} стр.{$articles_list[n].page_start}{if $articles_list[n].page_end}-{$articles_list[n].page_end}{/if}{/if} {$articles_list[n].title_ru|escape:'html'}</a>
+</li>
 {/section}
-</select>
-</form>
+</ul>
+{else}
+<p style="color:#666;margin:0">Статей пока нет</p>
+{/if}
+</div>
 </td>
 
 <td valign="top">

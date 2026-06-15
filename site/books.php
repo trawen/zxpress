@@ -3,7 +3,7 @@ require 'init.inc';
 
 
 if ($_GET['lng']) {
-	$smarty->assign('title', "Library of paper books and magazines for ZX Sepectrum");
+	$smarty->assign('title', "Library of paper books and magazines for ZX Spectrum");
 }
 else {
 	$smarty->assign('title', "Библиотека бумажных книг и журналов для ZX Spectrum");

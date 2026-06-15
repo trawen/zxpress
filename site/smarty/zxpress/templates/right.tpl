@@ -5,8 +5,9 @@
 
     <div class="sidebar-search">
     <form method='GET' action='search.php'>
+        {if $lng eq 'eng'}<input type="hidden" name="lng" value="eng">{/if}
         <div class="search-input-wrap">
-        <input class="right" id="input_query_sidebar" name="q" type="search" placeholder="Поиск..." value="{$q}" autocomplete="off">
+        <input class="right" id="input_query_sidebar" name="q" type="search" placeholder="{if $lng eq 'eng'}Search...{else}Поиск...{/if}" value="{$q}" autocomplete="off">
         <div id="suggest-sidebar" class="search-suggest"></div>
         </div>
     </form>
@@ -17,11 +18,18 @@
     <hr>
 
     <div align="center">
-        <div class="right-topics"><b>Темы:</b> <a
-                href="{$host}tag.php?id=3">Игры</a>, <a href="{$host}menu/64">Программное обеспечение</a>, <a
+        <div class="right-topics"><b>{if $lng eq 'eng'}Topics:{else}Темы:{/if}</b>
+                {if $lng eq 'eng'}
+                <a href="{$host}tag.php?id=3{$dl}">Games</a>, <a href="{$host}menu/64{$sl}">Software</a>, <a
+                href="{$host}tag.php?id=56{$dl}">Press</a>, <a href="{$host}menu/1/{$sl}">Hardware</a>, <a
+                href="{$host}tag.php?id=21{$dl}">Network</a>, <a href="{$host}tag.php?id=5{$dl}">Demoscene</a>, <a
+                href="{$host}tag.php?id=37{$dl}">People</a>, <a href="{$host}tag.php?id=13{$dl}">Programming</a></div>
+                {else}
+                <a href="{$host}tag.php?id=3">Игры</a>, <a href="{$host}menu/64">Программное обеспечение</a>, <a
                 href="{$host}tag.php?id=56">Пресса</a>, <a href="{$host}menu/1/">Аппаратное обеспечение</a>, <a
                 href="{$host}tag.php?id=21">Сеть</a>, <a href="{$host}tag.php?id=5">Демосцена</a>, <a
                 href="{$host}tag.php?id=37">Люди</a>, <a href="{$host}tag.php?id=13">Программирование</a></div>
+                {/if}
     </div>
 
     <hr>
@@ -46,18 +54,18 @@
 
     <div class="right-on-this-day">
         <center>
-            <div><b>В этот день... &nbsp; {$today_month}</div><br>
+            <div><b>{if $lng eq 'eng'}On this day...{else}В этот день...{/if} &nbsp; {$today_month}</div><br>
 
             <div class="right-on-this-day-links">
                 {foreach from=$monday item=m name=m}
-                    <a href="{$host}issue.php?id={$m.press_id_cal}#{$m.number_cal}"
+                    <a href="{$host}issue.php?id={$m.press_id_cal}{if $lng eq 'eng'}{$dl}{/if}#{$m.number_cal}"
                         class="u-nowrap">{$m.title_cal} №{$m.number_cal}{if $smarty.foreach.m.last eq false},
                         {/if}</a>
 
                 {/foreach}
             </div>
 
-            {if $monday[0].year_cal eq ""}Релизов не было :({/if}
+            {if $monday[0].year_cal eq ""}{if $lng eq 'eng'}No releases :({else}Релизов не было :({/if}{/if}
 
             </b>
         </center>
@@ -65,14 +73,14 @@
 
     <hr>
 
-    <form method='GET' action='{$host}issue.php'>
+    <form method='GET' action='{$host}issue.php{if $lng eq "eng"}?lng=eng{/if}'>
         {if $lng eq 'eng'}
         <label for="sidebar-press-select" class="u-sr-only">Choose publication</label>
         {else}
         <label for="sidebar-press-select" class="u-sr-only">Выбрать издание</label>
         {/if}
         <select class="right" id="sidebar-press-select" name='id' onChange="javascript:this.parentNode.submit();">
-            <option selected>Выбрать издание...</option>
+            <option selected>{if $lng eq 'eng'}Choose publication...{else}Выбрать издание...{/if}</option>
             {section name=n loop=$press_list}
                 <option class="right-select-option" value='{$press_list[n].id}'>{$press_list[n].title}</option>
             {/section}

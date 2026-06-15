@@ -9,7 +9,12 @@ function setup_locale($smarty, $db, array $months): void
 {
 	$smarty->assign('today_time', date("G:i", time()));
 
-	if (!empty($_GET['lng'])) {
+	$lng = $_GET['lng'] ?? null;
+	if ($lng === 'en') {
+		$lng = 'eng';
+	}
+
+	if ($lng === 'eng') {
 		$smarty->assign('today_month', date("j F", time()));
 		$smarty->assign('eng_link', "&lng=eng");
 	} else {
@@ -29,8 +34,6 @@ function setup_locale($smarty, $db, array $months): void
 		$n++;
 	}
 	$smarty->assign('monday', $mnd);
-
-	$lng = $_GET['lng'] ?? null;
 
 	if ($lng == "eng") {
 		$smarty->assign('sl', "?lng=eng");

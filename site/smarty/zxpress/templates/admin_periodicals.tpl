@@ -22,13 +22,24 @@
 <table width="100%" cellpadding="6" cellspacing="0">
 <tr>
 <td valign="top" width="320" style="border-right:1px solid #C8C5AC">
+<div class="admin-periodicals-sidebar">
 <div style="font: bold 12px Verdana; margin-bottom:6px">Издания</div>
 
 {literal}
 <style>
+.admin-periodicals-sidebar {
+	position: sticky;
+	top: 10px;
+	max-height: calc(100vh - 20px);
+	display: flex;
+	flex-direction: column;
+	background: #EBE8D7;
+	z-index: 2;
+}
 .admin-periodicals-list-wrap {
 	font: normal 12px Verdana;
-	max-height: 70vh;
+	flex: 1 1 auto;
+	min-height: 0;
 	overflow-y: auto;
 	overflow-x: hidden;
 }
@@ -90,6 +101,7 @@
 {else}
 <p style="color:#666;margin:0">Изданий пока нет</p>
 {/if}
+</div>
 </div>
 </td>
 
@@ -294,12 +306,96 @@
 <div style="font:normal 10px Verdana;color:#666;margin-top:2px">Оригинал → JPG; для сайта — WebP 640 и 1280 px (макс. ширина), сжатие 70%</div>
 </td>
 </tr>
+{if $issue.id}
+<tr>
+<td valign="top">Файлы</td>
+<td>
+{literal}
+<style>
+.admin-periodical-issue-files { margin-bottom: 8px; }
+.admin-periodical-issue-file-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin: 0 0 6px;
+	padding: 6px 8px;
+	border: 1px solid #D6D0AB;
+	background: #F8F6EE;
+	font: normal 11px Verdana;
+}
+.admin-periodical-issue-file-row a { color: #493C2F; }
+.admin-periodical-issue-file-row a:hover { color: #A41E00; }
+.admin-periodical-issue-file-delete {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	padding: 0;
+	border: 1px solid #C8A0A0;
+	background: #F5E8E8;
+	color: #A41E00;
+	font: bold 14px/1 Verdana;
+	cursor: pointer;
+}
+.admin-periodical-issue-file-delete:hover {
+	background: #A41E00;
+	color: #fff;
+	border-color: #A41E00;
+}
+</style>
+{/literal}
+<div class="admin-periodical-issue-files">
+{if $issue_files && $issue_files|@count gt 0}
+{section name=n loop=$issue_files}
+<div class="admin-periodical-issue-file-row">
+<label>формат
+<select name="issue_file_format_{$issue_files[n].id}" style="font:11px Verdana">
+{foreach from=$issue_file_formats key=fmtId item=fmtLabel}
+<option value="{$fmtId}" {if $issue_files[n].format eq $fmtId}selected{/if}>{$fmtLabel}</option>
+{/foreach}
+</select>
+</label>
+{if $issue_files[n].file_url}<a href="{$issue_files[n].file_url}" target="_blank" rel="noopener">{$issue_files[n].name|escape:'html'}</a>{else}{$issue_files[n].name|escape:'html'}{/if}
+{if $issue_files[n].size_display}<span style="color:#666">({$issue_files[n].size_display})</span>{/if}
+<button type="submit" form="per-issue-file-delete-{$issue_files[n].id}" name="delete_issue_file" value="{$issue_files[n].id}" class="admin-periodical-issue-file-delete" title="Удалить файл">×</button>
+</div>
+{/section}
+{else}
+<div style="color:#666;margin-bottom:6px">Файлов пока нет</div>
+{/if}
+</div>
+<input type="file" name="upload_issue_files[]" multiple>
+<div style="font:normal 10px Verdana;color:#666;margin-top:4px">
+<label for="upload-issue-file-format">Формат для новых файлов (иконка):</label>
+<select id="upload-issue-file-format" name="upload_issue_file_format" style="font:11px Verdana;margin-left:4px">
+<option value="">— из расширения —</option>
+{foreach from=$issue_file_formats key=fmtId item=fmtLabel}
+<option value="{$fmtId}">{$fmtLabel}</option>
+{/foreach}
+</select>
+<br>
+Имя на диске: транслит названия издания + год + номер выпуска + исходное расширение
+</div>
+</td>
+</tr>
+{/if}
 </table>
 
 <div style="margin-top:8px">
 <input type="submit" name="save_issue" value="Сохранить выпуск" style="height:26px">
 </div>
 </form>
+{if $issue.id && $issue_files && $issue_files|@count gt 0}
+{section name=n loop=$issue_files}
+<form id="per-issue-file-delete-{$issue_files[n].id}" method="post" action="admin_periodicals.php?id={$periodical.id}&issue_id={$issue.id}#admin-periodical-issue-form">
+<input type="hidden" name="csrf_token" value="{$csrf_token}">
+<input type="hidden" name="periodical_id" value="{$periodical.id}">
+<input type="hidden" name="issue_id" value="{$issue.id}">
+</form>
+{/section}
+{/if}
 </div>
 {/if}
 {/if}

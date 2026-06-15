@@ -27,6 +27,17 @@ $t = mysqli_fetch_array($z);
 
 $t['title_plain'] = title_plain($t['title'] ?? '');
 
+if (($_GET['lng'] ?? '') === 'eng') {
+	$cityEng = trim((string) ($t['name_eng'] ?? ''));
+	if ($cityEng !== '') {
+		$t['name'] = $cityEng;
+	}
+	$countryEng = trim((string) ($t['country_name_eng'] ?? ''));
+	if ($countryEng !== '') {
+		$t['country_name'] = $countryEng;
+	}
+}
+
 
 if ($t['years_to'] != $t['years_from']) {
 

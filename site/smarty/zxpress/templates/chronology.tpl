@@ -1,11 +1,11 @@
 {include file="top.tpl"}
 
-<h1 class="title">Хронология выхода электронных газет и журналов на ZX Spectrum</h1>
+<h1 class="title">{if $lng eq 'eng'}Chronology of electronic newspapers and magazines on ZX Spectrum{else}Хронология выхода электронных газет и журналов на ZX Spectrum{/if}</h1>
 
 
 <div class="chron-chart-wrap"><img src="{$host}zxpress_dinamic.png?v={$chronology_png_ver}" width="{$chronology_png_w}" height="{$chronology_png_h}" alt="" class="chron-chart-img"></div><br>
 
-<div class="right-on-this-day">На графике отражено количество изданий выпущенных за каждый год. Невероятно, но факт, в 1997-ом году <b>каждый день</b> выходило по одной газете или журналу. </div>
+<div class="right-on-this-day">{if $lng eq 'eng'}The chart shows the number of publications released each year. Incredibly, in 1997 <b>every day</b> one newspaper or magazine was released.{else}На графике отражено количество изданий выпущенных за каждый год. Невероятно, но факт, в 1997-ом году <b>каждый день</b> выходило по одной газете или журналу.{/if}</div>
 <br>
 
 <hr>
@@ -22,7 +22,7 @@
 
 <table border=0 class="comments-wrap">
 
-<tr><td colspan="2" class="chron-section-title">Детальная статистика</td></tr>
+<tr><td colspan="2" class="chron-section-title">{if $lng eq 'eng'}Detailed statistics{else}Детальная статистика{/if}</td></tr>
 
 {section name=n loop=$chronology}
 
@@ -30,7 +30,7 @@
 <tr>
 <td align="left" colspan=2><hr>
 <a name="{$chronology[n].year_display}"></a>
-<div class="chron-year-heading">{$chronology[n].year_display} год</div><br>
+<div class="chron-year-heading">{$chronology[n].year_display}{if $lng neq 'eng'} год{/if}</div><br>
 </td>
 </tr>
 {/if}
@@ -41,7 +41,7 @@
 <td align="left" width="110"><div class="chron-date">{$chronology[n].date}</div></td>
 
 <td align="left" class="type-times-13-bold" nowrap>
-<a href="{$host}issue.php?id={$chronology[n].press_id_cal}#{$chronology[n].number_cal}">
+<a href="{$host}issue.php?id={$chronology[n].press_id_cal}{if $lng eq 'eng'}{$dl}{/if}#{$chronology[n].number_cal}">
 {$chronology[n].title_cal_plain} №{$chronology[n].number_cal}</a>
 </td>
 </tr>
