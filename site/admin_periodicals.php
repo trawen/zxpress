@@ -157,10 +157,13 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
     $issn = plain_text_normalize_for_storage(per_post_string('issn'));
     $description_ru = plain_text_normalize_for_storage(per_post_string('description_ru'));
     $description_en = plain_text_normalize_for_storage(per_post_string('description_en'));
+    $meta_description_ru = plain_text_normalize_for_storage(per_post_string('meta_description_ru'));
+    $meta_description_en = plain_text_normalize_for_storage(per_post_string('meta_description_en'));
     $city_id = per_post_int('city_id');
     $year_start = per_nullable_int(per_post_string('year_start'));
     $year_end = per_nullable_int(per_post_string('year_end'));
     $is_active = !empty($_POST['is_active']) ? 1 : 0;
+    $is_samizdat = !empty($_POST['is_samizdat']) ? 1 : 0;
     $publisherIds = per_publisher_ids_from_post();
 
     if ($title_ru === '') {
@@ -170,16 +173,19 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
         if ($id === 0) {
             $saved = db_exec(
                 $db,
-                'INSERT INTO periodicals (title_ru, title_en, issn, city_id, description_ru, description_en, is_active, year_start, year_end) '
-                . 'VALUES (?,?,?,?,?,?,?,?,?)',
-                'sssissiii',
+                'INSERT INTO periodicals (title_ru, title_en, issn, city_id, description_ru, description_en, meta_description_ru, meta_description_en, is_active, is_samizdat, year_start, year_end) '
+                . 'VALUES (?,?,?,?,?,?,?,?,?,?,?,?)',
+                'sssissssiiii',
                 $title_ru,
                 $title_en,
                 $issn,
                 ($city_id > 0 ? $city_id : 1),
                 per_nullable_text($description_ru),
                 per_nullable_text($description_en),
+                $meta_description_ru,
+                $meta_description_en,
                 $is_active,
+                $is_samizdat,
                 $year_start,
                 $year_end
             );
@@ -189,15 +195,18 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
         } else {
             $saved = db_exec(
                 $db,
-                'UPDATE periodicals SET title_ru=?, title_en=?, issn=?, city_id=?, description_ru=?, description_en=?, is_active=?, year_start=?, year_end=? WHERE id=? LIMIT 1',
-                'sssissiiii',
+                'UPDATE periodicals SET title_ru=?, title_en=?, issn=?, city_id=?, description_ru=?, description_en=?, meta_description_ru=?, meta_description_en=?, is_active=?, is_samizdat=?, year_start=?, year_end=? WHERE id=? LIMIT 1',
+                'sssissssiiiii',
                 $title_ru,
                 $title_en,
                 $issn,
                 ($city_id > 0 ? $city_id : 1),
                 per_nullable_text($description_ru),
                 per_nullable_text($description_en),
+                $meta_description_ru,
+                $meta_description_en,
                 $is_active,
+                $is_samizdat,
                 $year_start,
                 $year_end,
                 $id
@@ -347,7 +356,7 @@ if (($_POST['save_issue'] ?? '') === 'Сохранить выпуск') {
 $smarty->assign('error', $error);
 
 $periodicals_list = [];
-$z = db_select($db, 'SELECT id, title_ru, title_en, issn, is_active, year_start, year_end FROM periodicals ORDER BY title_ru ASC');
+$z = db_select($db, 'SELECT id, title_ru, title_en, issn, is_active, is_samizdat, year_start, year_end FROM periodicals ORDER BY title_ru ASC');
 while ($z && ($t = mysqli_fetch_array($z))) {
     $periodicals_list[] = $t;
 }

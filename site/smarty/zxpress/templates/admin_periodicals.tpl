@@ -93,7 +93,7 @@
 {foreach from=$periodicals_list item=p}
 <li>
 <span class="admin-periodicals-list-item">
-<a href="admin_periodicals.php?id={$p.id}"{if $periodical && $periodical.id eq $p.id} class="nav-active"{/if}>{if !$p.is_active}[×] {/if}{$p.title_ru|escape:'html'}{if $p.title_en} / {$p.title_en|escape:'html'}{/if}</a><a href="{$host}periodicals.php?id={$p.id}" target="_blank" rel="noopener" class="admin-periodicals-public-link" title="Публичная страница издания" aria-label="Публичная страница издания «{$p.title_ru|escape:'html'}»">→</a>
+<a href="admin_periodicals.php?id={$p.id}"{if $periodical && $periodical.id eq $p.id} class="nav-active"{/if}>{if !$p.is_active}[×] {/if}{if $p.is_samizdat}[сам.] {/if}{$p.title_ru|escape:'html'}{if $p.title_en} / {$p.title_en|escape:'html'}{/if}</a><a href="{$host}periodicals.php?id={$p.id}" target="_blank" rel="noopener" class="admin-periodicals-public-link" title="Публичная страница издания" aria-label="Публичная страница издания «{$p.title_ru|escape:'html'}»">→</a>
 </span>
 </li>
 {/foreach}
@@ -153,6 +153,14 @@
 <td><textarea name="description_en" style="width:420px;height:80px">{if $periodical}{$periodical.description_en}{/if}</textarea></td>
 </tr>
 <tr>
+<td valign="top">Meta (RU)</td>
+<td><textarea name="meta_description_ru" rows="5" style="width:420px" maxlength="255">{if $periodical}{$periodical.meta_description_ru}{/if}</textarea></td>
+</tr>
+<tr>
+<td valign="top">Meta (EN)</td>
+<td><textarea name="meta_description_en" rows="5" style="width:420px" maxlength="255">{if $periodical}{$periodical.meta_description_en}{/if}</textarea></td>
+</tr>
+<tr>
 <td><label for="admin-periodical-publishers">Издательства</label></td>
 <td>
 <select id="admin-periodical-publishers" name="publisher_ids[]" multiple size="6" style="width:420px">
@@ -172,6 +180,10 @@
 <tr>
 <td>Активно</td>
 <td><input type="checkbox" name="is_active" value="1" {if !$periodical || $periodical.is_active}checked{/if}></td>
+</tr>
+<tr>
+<td>Самиздат</td>
+<td><input type="checkbox" name="is_samizdat" value="1" {if $periodical && $periodical.is_samizdat}checked{/if}></td>
 </tr>
 </table>
 

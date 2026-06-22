@@ -7,9 +7,11 @@ CREATE TABLE `periodicals` (
   `description_ru` text COLLATE utf8mb4_unicode_ci,
   `description_en` text COLLATE utf8mb4_unicode_ci,
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
+  `is_samizdat` tinyint(1) NOT NULL DEFAULT '0',
   `year_start` smallint unsigned DEFAULT NULL,
   `year_end` smallint unsigned DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
