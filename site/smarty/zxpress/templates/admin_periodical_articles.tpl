@@ -142,11 +142,11 @@
 </tr>
 <tr>
 <td>Meta (RU)</td>
-<td><input type="text" name="meta_description_ru" style="width:520px" maxlength="255" value="{if $article}{$article.meta_description_ru}{/if}"></td>
+<td><textarea name="meta_description_ru" rows="5" style="width:520px" maxlength="255">{if $article}{$article.meta_description_ru}{/if}</textarea></td>
 </tr>
 <tr>
 <td>Meta (EN)</td>
-<td><input type="text" name="meta_description_en" style="width:520px" maxlength="255" value="{if $article}{$article.meta_description_en}{/if}"></td>
+<td><textarea name="meta_description_en" rows="5" style="width:520px" maxlength="255">{if $article}{$article.meta_description_en}{/if}</textarea></td>
 </tr>
 <tr>
 <td>Активна</td>
