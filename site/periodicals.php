@@ -22,7 +22,19 @@ function per_pub_summary_html(?string $s): string
 	if ($s === '') {
 		return '';
 	}
-	return nl2br(htmlspecialchars($s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'));
+	return htmlspecialchars($s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+}
+
+function per_pub_rich_html(?string $s): string
+{
+	$s = (string) $s;
+	if ($s === '') {
+		return '';
+	}
+	if (strpos($s, '<') !== false && strpos($s, '>') !== false) {
+		return $s;
+	}
+	return per_pub_summary_html($s);
 }
 
 function per_pub_lng_qs(bool $isEng, bool $first = false): string
@@ -252,10 +264,10 @@ if ($id > 0) {
 					$articleLoaded = true;
 					db_exec($db, 'UPDATE periodical_articles SET views = views + 1 WHERE id = ? LIMIT 1', 'i', $articleId);
 					$article['title_display'] = per_pub_pick($article['title_en'] ?? null, $article['title_ru'] ?? null, $isEng);
-					$article['abstract_html'] = per_pub_summary_html(
+					$article['abstract_html'] = per_pub_rich_html(
 						per_pub_pick($article['abstract_en'] ?? null, $article['abstract_ru'] ?? null, $isEng)
 					);
-					$article['body_html'] = per_pub_summary_html(
+					$article['body_html'] = per_pub_rich_html(
 						per_pub_pick($article['text_en'] ?? null, $article['text_ru'] ?? null, $isEng)
 					);
 					$article['pages_display'] = per_pub_pages_display(
@@ -335,7 +347,16 @@ if ($id > 0) {
 					$issueTitle = title_plain($issue['label']);
 					$smarty->assign('title', $issueTitle . ' — ' . $titlePlain);
 					$smarty->assign('og_title', $issueTitle . ' — ' . $titlePlain);
-					$issueDesc = title_plain(strip_tags($issue['description_html'] ?? ''));
+					$issueMetaEn = title_plain((string) ($issue['meta_description_en'] ?? ''));
+					$issueMetaRu = title_plain((string) ($issue['meta_description_ru'] ?? ''));
+					if ($isEng && $issueMetaEn !== '') {
+						$issueDesc = $issueMetaEn;
+					} elseif ($issueMetaRu !== '') {
+						$issueDesc = $issueMetaRu;
+					} else {
+						$issueDesc = title_plain(strip_tags($issue['description_html'] ?? ''));
+					}
+					$smarty->assign('description', $issueDesc !== '' ? $issueDesc : $descPlain);
 					$smarty->assign('og_description', $issueDesc !== '' ? $issueDesc : $descPlain);
 					if (!empty($issue['cover'])) {
 						$smarty->assign('og_image', $origin . $issue['cover']['display_src']);
@@ -351,7 +372,7 @@ if ($id > 0) {
 				$db,
 				'SELECT pi.*, (SELECT COUNT(*) FROM periodical_articles pa WHERE pa.issue_id = pi.id AND pa.is_active = 1) AS articles_count '
 				. 'FROM periodical_issues pi WHERE pi.periodical_id = ? AND pi.is_active = 1 '
-				. 'ORDER BY pi.issue_year DESC, pi.issue_volume IS NULL, pi.issue_volume ASC, pi.issue_no ASC',
+				. 'ORDER BY (pi.issue_date IS NULL) ASC, pi.issue_date DESC, pi.issue_year DESC, CAST(pi.issue_no AS UNSIGNED) DESC, pi.issue_no DESC',
 				'i',
 				$id
 			);

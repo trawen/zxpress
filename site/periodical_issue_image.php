@@ -1,5 +1,5 @@
 <?php
-require 'init.inc';
+require_once __DIR__ . '/includes/storage_paths.php';
 require_once __DIR__ . '/includes/periodical_issue_images.php';
 
 $issueId = (int) ($_GET['issue_id'] ?? 0);

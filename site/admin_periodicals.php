@@ -215,7 +215,12 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
 
         if ($saved) {
             per_sync_publishers($db, $id, $publisherIds);
-            header('Location: /admin_periodicals.php?id=' . $id . ($issue_id > 0 ? '&issue_id=' . $issue_id : ''), true, 303);
+            header(
+                'Location: /admin_periodicals.php?id=' . $id
+                . ($issue_id > 0 ? '&issue_id=' . $issue_id . '#admin-periodical-issue-form' : ''),
+                true,
+                303
+            );
             exit;
         }
 
@@ -234,6 +239,8 @@ if (($_POST['save_issue'] ?? '') === 'Сохранить выпуск') {
         $title_en = plain_text_normalize_for_storage(per_post_string('issue_title_en'));
         $description_ru = plain_text_normalize_for_storage(per_post_string('issue_description_ru'));
         $description_en = plain_text_normalize_for_storage(per_post_string('issue_description_en'));
+        $meta_description_ru = plain_text_normalize_for_storage(per_post_string('issue_meta_description_ru'));
+        $meta_description_en = plain_text_normalize_for_storage(per_post_string('issue_meta_description_en'));
         $issue_volume = per_nullable_int(per_post_string('issue_volume'));
         $issue_year = per_nullable_int(per_post_string('issue_year'));
         $circulation = per_nullable_int(per_post_string('circulation'));
@@ -250,9 +257,9 @@ if (($_POST['save_issue'] ?? '') === 'Сохранить выпуск') {
             if ($issue_id === 0) {
                 $saved = db_exec(
                     $db,
-                    'INSERT INTO periodical_issues (periodical_id, issue_volume, issue_no, issue_date, issue_year, title_ru, title_en, description_ru, description_en, is_active, is_bound, circulation, pages) '
-                    . 'VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)',
-                    'iississssiiii',
+                    'INSERT INTO periodical_issues (periodical_id, issue_volume, issue_no, issue_date, issue_year, title_ru, title_en, description_ru, description_en, meta_description_ru, meta_description_en, is_active, is_bound, circulation, pages) '
+                    . 'VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+                    'iississssssiiii',
                     $id,
                     $issue_volume,
                     $issue_no,
@@ -262,6 +269,8 @@ if (($_POST['save_issue'] ?? '') === 'Сохранить выпуск') {
                     $title_en,
                     per_nullable_text($description_ru),
                     per_nullable_text($description_en),
+                    $meta_description_ru,
+                    $meta_description_en,
                     $is_active,
                     $is_bound,
                     $circulation,
@@ -273,9 +282,9 @@ if (($_POST['save_issue'] ?? '') === 'Сохранить выпуск') {
             } else {
                 $saved = db_exec(
                     $db,
-                    'UPDATE periodical_issues SET issue_volume=?, issue_no=?, issue_date=?, issue_year=?, title_ru=?, title_en=?, description_ru=?, description_en=?, is_active=?, is_bound=?, circulation=?, pages=? '
+                    'UPDATE periodical_issues SET issue_volume=?, issue_no=?, issue_date=?, issue_year=?, title_ru=?, title_en=?, description_ru=?, description_en=?, meta_description_ru=?, meta_description_en=?, is_active=?, is_bound=?, circulation=?, pages=? '
                     . 'WHERE id=? AND periodical_id=? LIMIT 1',
-                    'ississssiiiiii',
+                    'ississssssiiiiii',
                     $issue_volume,
                     $issue_no,
                     $issue_date,
@@ -284,6 +293,8 @@ if (($_POST['save_issue'] ?? '') === 'Сохранить выпуск') {
                     $title_en,
                     per_nullable_text($description_ru),
                     per_nullable_text($description_en),
+                    $meta_description_ru,
+                    $meta_description_en,
                     $is_active,
                     $is_bound,
                     $circulation,
@@ -482,6 +493,8 @@ if ($id > 0 && $issue_id > 0) {
         'title_en' => '',
         'description_ru' => '',
         'description_en' => '',
+        'meta_description_ru' => '',
+        'meta_description_en' => '',
         'circulation' => '',
         'pages' => 0,
         'is_active' => 1,
@@ -490,8 +503,6 @@ if ($id > 0 && $issue_id > 0) {
 }
 $smarty->assign('issue', $issue);
 $smarty->assign('issue_id', $issue_id);
-$smarty->assign('scroll_issue', !empty($_GET['scroll_issue']));
-
 $issue_articles_count = 0;
 if ($issue && !empty($issue['id'])) {
     $zCnt = db_select($db, 'SELECT COUNT(*) AS cnt FROM periodical_articles WHERE issue_id=?', 'i', (int) $issue['id']);

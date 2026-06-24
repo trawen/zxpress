@@ -26,7 +26,7 @@ body {
 {/literal}
 
 <META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
-<BODY style="padding-top: 0px; margin-top: 0px; overflow-x: hidden !important; background-image: url(img/bg8.png); ">
+<BODY style="padding-top: 0px; margin-top: 0px; overflow-x: hidden !important; background-image: url(img/zxpress-2026-2-bg.webp); background-color: #EEEBCD;">
 
 
 <DIV style="padding-top: 16px"></DIV>

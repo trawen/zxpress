@@ -46,21 +46,49 @@ function per_issue_has_cover(int $issueId): bool
     return is_file(per_issue_cover_jpg_path($issueId));
 }
 
+function per_issue_legacy_cover_webp_paths(int $issueId): array
+{
+    if ($issueId <= 0) {
+        return [];
+    }
+
+    $root = zx_data_root() . '/content-store/periodical-issues/preview';
+
+    return [
+        $root . '/640/' . $issueId . '.webp',
+        $root . '/1280/' . $issueId . '.webp',
+    ];
+}
+
+function per_issue_cover_paths(int $issueId): array
+{
+    if ($issueId <= 0) {
+        return [];
+    }
+
+    return array_merge(
+        [
+            per_issue_cover_jpg_path($issueId),
+            per_issue_cover_webp_path($issueId, 640),
+            per_issue_cover_webp_path($issueId, 1280),
+        ],
+        per_issue_legacy_cover_webp_paths($issueId),
+    );
+}
+
 function per_issue_delete_cover(int $issueId): void
 {
     if ($issueId <= 0) {
         return;
     }
 
-    $paths = [
-        per_issue_cover_jpg_path($issueId),
-        per_issue_cover_webp_path($issueId, 640),
-        per_issue_cover_webp_path($issueId, 1280),
-    ];
+    foreach (per_issue_cover_paths($issueId) as $path) {
+        if (!is_file($path)) {
+            continue;
+        }
 
-    foreach ($paths as $path) {
-        if (is_file($path)) {
-            @unlink($path);
+        if (!@unlink($path)) {
+            error_log('[FIX] per_issue_delete_cover: unlink failed issue_id=' . $issueId . ' path=' . $path);
         }
     }
 }

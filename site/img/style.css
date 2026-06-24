@@ -951,8 +951,19 @@ time {
 
 .pub-body {
 	margin-top: 20px;
-	font-size: 16px;
+	font-size: 18px;
+	font-style: italic;
 	line-height: 1.5;
+	white-space: pre-line;
+}
+
+.pub-body p {
+	white-space: normal;
+	margin: 0 0 1em;
+}
+
+.pub-body p:last-child {
+	margin-bottom: 0;
 }
 
 .pub-images {
@@ -1053,8 +1064,19 @@ time {
 
 .pub-toc-summary {
 	margin-top: 4px;
-	font-size: 14px;
+	font-size: 18px;
+	font-style: italic;
 	color: #444;
+	white-space: pre-line;
+}
+
+.pub-toc-summary p {
+	white-space: normal;
+	margin: 0 0 1em;
+}
+
+.pub-toc-summary p:last-child {
+	margin-bottom: 0;
 }
 
 .pub-toc-files {
@@ -1410,7 +1432,20 @@ a.title.link-issue { font-size: 26px; }
 .letter-banner-img { max-width: 100%; height: auto; }
 .letter-list-placeholder { width: 128px; height: 96px; background: #eee; border: 1px solid #ccc; }
 .letter-list-correspondents { margin-top: 6px; font-size: 14px; color: #555; }
-.pub-list-summary--lg { font-size: 16px; }
+.pub-list-summary--lg {
+	font-size: 18px;
+	font-style: italic;
+	white-space: pre-line;
+}
+
+.pub-list-summary--lg p {
+	white-space: normal;
+	margin: 0 0 1em;
+}
+
+.pub-list-summary--lg p:last-child {
+	margin-bottom: 0;
+}
 
 /* updates.tpl */
 .updates-rule-row { display: flex; }

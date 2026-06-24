@@ -197,7 +197,7 @@
 <br><br>
 <div style="font:bold 12px Verdana;margin-bottom:8px;border-top:1px solid #C8C5AC;padding-top:12px">
 Выпуски
-<a href="admin_periodicals.php?id={$periodical.id}&issue_id=0&scroll_issue=1" style="font-weight:normal;margin-left:12px">+ новый выпуск</a>
+<a href="admin_periodicals.php?id={$periodical.id}&issue_id=0#admin-periodical-issue-form" style="font-weight:normal;margin-left:12px">+ новый выпуск</a>
 </div>
 
 {if $issues_by_year && $issues_by_year|@count gt 0}
@@ -223,7 +223,7 @@
 <td>{$issues_by_year[g].issues[n].title_ru}{if !$issues_by_year[g].issues[n].is_active} [×]{/if}{if $issues_by_year[g].issues[n].is_bound} [перепл.]{/if}</td>
 <td>{$issues_by_year[g].issues[n].pages}</td>
 <td>{if $issues_by_year[g].issues[n].articles_count}{$issues_by_year[g].issues[n].articles_count}{else}0{/if} <a href="admin_periodical_articles.php?issue_id={$issues_by_year[g].issues[n].id}">→</a></td>
-<td><a href="admin_periodicals.php?id={$periodical.id}&issue_id={$issues_by_year[g].issues[n].id}">редактировать</a></td>
+<td><a href="admin_periodicals.php?id={$periodical.id}&issue_id={$issues_by_year[g].issues[n].id}#admin-periodical-issue-form">редактировать</a></td>
 </tr>
 {/section}
 {/section}
@@ -275,6 +275,14 @@
 <tr>
 <td valign="top">Описание (EN)</td>
 <td><textarea name="issue_description_en" style="width:420px;height:60px">{$issue.description_en}</textarea></td>
+</tr>
+<tr>
+<td valign="top">Meta (RU)</td>
+<td><textarea name="issue_meta_description_ru" rows="5" style="width:420px" maxlength="255">{$issue.meta_description_ru}</textarea></td>
+</tr>
+<tr>
+<td valign="top">Meta (EN)</td>
+<td><textarea name="issue_meta_description_en" rows="5" style="width:420px" maxlength="255">{$issue.meta_description_en}</textarea></td>
 </tr>
 <tr>
 <td>Тираж</td>
@@ -425,15 +433,14 @@
 </TBODY>
 </TABLE>
 
-{if $scroll_issue}
+{if $issue}
 {literal}
 <script type="text/javascript">
 window.addEventListener('load', function () {
     var el = document.getElementById('admin-periodical-issue-form');
     if (el) {
-        el.scrollIntoView({ behavior: 'instant', block: 'end' });
+        el.scrollIntoView({ behavior: 'instant', block: 'start' });
     }
-    window.scrollTo(0, document.documentElement.scrollHeight);
 });
 </script>
 {/literal}

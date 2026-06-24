@@ -12,7 +12,7 @@
 <div style="padding: 10px; border: 1px solid #C8C5AC; background-color: #EBE8D7">
 
 <div style="margin-bottom:10px">
-<a href="admin_periodicals.php?id={$periodical.id}&issue_id={$issue_id}">← Назад к выпуску: {$periodical.title_ru|escape:'html'} — {$issue_label|escape:'html'}</a>
+<a href="admin_periodicals.php?id={$periodical.id}&issue_id={$issue_id}#admin-periodical-issue-form">← Назад к выпуску: {$periodical.title_ru|escape:'html'} — {$issue_label|escape:'html'}</a>
 &nbsp;&nbsp;
 <a href="admin_periodical_articles.php?issue_id={$issue_id}&id=0" style="font-weight:bold">+ Новая статья</a>
 </div>

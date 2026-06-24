@@ -29,6 +29,11 @@ if ! grep -qE 'rewrite \^/periodical-issues/preview-\(640\|1280\)/' "$CONF"; the
 	fail=1
 fi
 
+if ! grep -q '@periodical_issue_webp' "$CONF"; then
+	echo "[ERROR] periodical_issue_webp fallback location missing in ${CONF}"
+	fail=1
+fi
+
 if ! grep -q 'periodical_issue_image.php' "$CONF"; then
 	echo "[ERROR] periodical_issue_image.php rewrite target missing in ${CONF}"
 	fail=1
