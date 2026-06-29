@@ -13,6 +13,12 @@ function setup_locale($smarty, $db, array $months): void
 	if ($lng === 'en') {
 		$lng = 'eng';
 	}
+	if ($lng === null) {
+		$requestPath = parse_url((string) ($_SERVER['REQUEST_URI'] ?? ''), PHP_URL_PATH);
+		if (is_string($requestPath) && (str_starts_with($requestPath, '/eng/') || str_starts_with($requestPath, '/en/'))) {
+			$lng = 'eng';
+		}
+	}
 
 	if ($lng === 'eng') {
 		$smarty->assign('today_month', date("j F", time()));

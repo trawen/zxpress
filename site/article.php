@@ -5,6 +5,7 @@ error_reporting(E_ALL);
 
 require 'init.inc';
 require_once __DIR__ . '/includes/ezine_categories.php';
+require_once __DIR__ . '/includes/ezine_slugs.php';
 
 function article_public_meta_description(array $article, ?string $lng): string
 {
@@ -43,7 +44,26 @@ function article_show_not_found($smarty): void {
 	exit;
 }
 
-$id = intval($_GET['id']);
+$pressSlug = per_slug_normalize_path((string) ($_GET['press_slug'] ?? ''));
+$issueSlug = per_slug_normalize_path((string) ($_GET['issue_slug'] ?? ''));
+$articleSlug = per_slug_normalize_path((string) ($_GET['article_slug'] ?? ''));
+$slugRoute = ($pressSlug !== '' && $issueSlug !== '' && $articleSlug !== '');
+
+$id = (int) ($_GET['id'] ?? 0);
+$isEng = ($smarty->getTemplateVars('lng') === 'eng');
+
+if ($slugRoute) {
+	$resolved = ezn_resolve_article_route($db, $pressSlug, $issueSlug, $articleSlug, $isEng);
+	if (!$resolved['ok']) {
+		article_show_not_found($smarty);
+	}
+	$id = (int) $resolved['article_id'];
+} elseif ($id > 0) {
+	ezn_maybe_redirect_article_legacy($db, $id, $isEng);
+} else {
+	article_show_not_found($smarty);
+}
+
 $smarty->assign('id_article', $id);
 $smarty->assign('id', $id);
 
@@ -93,13 +113,17 @@ if ($screens == NULL) {
 $smarty->assign('screens', $screens);
 
 
-$stmt = mysqli_prepare($db, "SELECT * FROM issue, press, cities WHERE issue.id=? AND press.id=issue.id_press AND press.city=cities.id");
+$stmt = mysqli_prepare($db, "SELECT issue.id, issue.title, issue.slug_ru, issue.slug_en, issue.id_press, press.id AS press_id, press.title AS press_title, press.slug_ru AS press_slug_ru, press.slug_en AS press_slug_en, cities.* FROM issue INNER JOIN press ON press.id=issue.id_press LEFT JOIN cities ON press.city=cities.id WHERE issue.id=?");
 mysqli_stmt_bind_param($stmt, "i", $id_issue);
 mysqli_stmt_execute($stmt);
 $z = mysqli_stmt_get_result($stmt);
 $press = mysqli_fetch_array($z);
 if (is_array($press)) {
-	$press['title_plain'] = title_plain($press['title'] ?? '');
+	$press['id'] = (int) ($press['press_id'] ?? $press['id'] ?? 0);
+	$press['title'] = (string) ($press['press_title'] ?? $press['title'] ?? '');
+	$press['slug_ru'] = (string) ($press['press_slug_ru'] ?? '');
+	$press['slug_en'] = (string) ($press['press_slug_en'] ?? '');
+	$press['title_plain'] = title_plain($press['title']);
 }
 $smarty->assign('press', $press);
 
@@ -154,9 +178,37 @@ if ((int) ($article['temp'] ?? 0) === 0) {
 $smarty->assign('article', $article);
 $smarty->assign('article_not_found', false);
 
+$pressRow = [
+	'id' => $id_press,
+	'title' => (string) ($press['title'] ?? ''),
+	'slug_ru' => (string) ($press['press_slug_ru'] ?? $press['slug_ru'] ?? ''),
+	'slug_en' => (string) ($press['press_slug_en'] ?? $press['slug_en'] ?? ''),
+];
+$issueRow = [
+	'id' => $id_issue,
+	'id_press' => $id_press,
+	'title' => (string) ($issue['title'] ?? ''),
+	'slug_ru' => (string) ($issue['slug_ru'] ?? ''),
+	'slug_en' => (string) ($issue['slug_en'] ?? ''),
+];
+$smarty->assign('press_public_url', ezn_url_press($pressRow, $isEng));
+$smarty->assign('issue_public_url', ezn_url_issue($pressRow, $issueRow, $isEng));
+$smarty->assign('article_public_url', ezn_url_article($pressRow, $issueRow, $article, $isEng));
+ezn_assign_lang_switch_urls($smarty, $pressRow, $issueRow, $article);
+
 $smarty->assign('title', title_plain($article['title'] ?? ''));
 $articleDescPlain = article_public_meta_description($article, $smarty->getTemplateVars('lng'));
 $smarty->assign('description', $articleDescPlain);
+
+$origin = zxpress_canonical_origin();
+$articleCanonical = ezn_url_article($pressRow, $issueRow, $article, $isEng);
+$smarty->assign('canonical_url', $origin . $articleCanonical);
+$smarty->assign('hreflang_ru', $origin . ezn_url_for_lang(false, $pressRow, $issueRow, $article));
+$smarty->assign('hreflang_en', $origin . ezn_url_for_lang(true, $pressRow, $issueRow, $article));
+$smarty->assign('og_title', $article['title_plain_meta'] ?? title_plain($article['title'] ?? ''));
+$smarty->assign('og_description', $articleDescPlain);
+$smarty->assign('og_type', 'article');
+$smarty->assign('og_url', $origin . $articleCanonical);
 
 $lng = $smarty->getTemplateVars('lng');
 $smarty->assign('ezine_category_branch', ec_article_public_category_branch($db, $id, $lng));
@@ -189,6 +241,7 @@ while ($t = mysqli_fetch_array($z)) {
 	if ($id == $t['id']) {$t['current'] = 1;}
 	$t['title_html'] = article_title_list_html($t['title'] ?? '');
 	$t['title_eng_html'] = article_title_list_html($t['title_eng'] ?? '');
+	$t['public_url'] = ezn_url_article($pressRow, $issueRow, $t, $isEng);
 	$art[] = $t;
 
 }

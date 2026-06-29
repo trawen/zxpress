@@ -81,6 +81,27 @@
 <td><textarea name="description_en" style="width:420px;height:80px">{if $publisher}{$publisher.description_en}{/if}</textarea></td>
 </tr>
 <tr>
+<td valign="top">Meta (RU)</td>
+<td><textarea name="meta_description_ru" rows="5" style="width:420px" maxlength="255">{if $publisher}{$publisher.meta_description_ru}{/if}</textarea></td>
+</tr>
+<tr>
+<td valign="top">Meta (EN)</td>
+<td><textarea name="meta_description_en" rows="5" style="width:420px" maxlength="255">{if $publisher}{$publisher.meta_description_en}{/if}</textarea></td>
+</tr>
+<tr>
+<td>Slug RU (URL)</td>
+<td>
+<input type="text" name="slug_ru" style="width:420px" maxlength="255" value="{if $publisher}{$publisher.slug_ru}{/if}">
+<div style="font:normal 10px Verdana;color:#666;margin-top:2px">пусто = из meta (RU), иначе название</div>
+</td>
+</tr>
+<tr>
+<td>Slug EN (URL)</td>
+<td>
+<input type="text" name="slug_en" style="width:420px" maxlength="255" value="{if $publisher}{$publisher.slug_en}{/if}">
+</td>
+</tr>
+<tr>
 <td><label for="admin-publisher-city">Город</label></td>
 <td>
 <select id="admin-publisher-city" name="city_id" style="width:240px">

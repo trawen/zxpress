@@ -1,5 +1,7 @@
 <?php
 require 'init.inc';
+require_once __DIR__ . '/includes/periodicals_slugs.php';
+require_once __DIR__ . '/includes/periodical_article_images.php';
 
 if (!isset($_SESSION['login']) || !$_SESSION['login']) {
     header('HTTP/1.1 403 Forbidden');
@@ -98,6 +100,8 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
     $original_language_id = pea_post_int('original_language_id');
     $meta_description_ru = plain_text_normalize_for_storage(pea_post_string('meta_description_ru'));
     $meta_description_en = plain_text_normalize_for_storage(pea_post_string('meta_description_en'));
+    $slugInputRu = pea_post_string('slug_ru');
+    $slugInputEn = pea_post_string('slug_en');
     $is_active = !empty($_POST['is_active']) ? 1 : 0;
 
     if ($title_ru === '') {
@@ -105,17 +109,36 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
     } elseif ($language_id <= 0) {
         $error = 'Выберите язык статьи';
     } else {
+        $articleSeed = [
+            'title_ru' => $title_ru,
+            'title_en' => $title_en,
+            'meta_description_ru' => $meta_description_ru,
+            'meta_description_en' => $meta_description_en,
+        ];
+        $slugs = per_admin_resolve_slugs(
+            $db,
+            'periodical_articles',
+            $slugInputRu,
+            $slugInputEn,
+            static fn (): string => per_slug_default_article_ru($articleSeed),
+            static fn (): string => per_slug_default_article_en($articleSeed),
+            $id,
+            'issue_id',
+            $issue_id
+        );
         if ($id === 0) {
             $saved = db_exec(
                 $db,
-                'INSERT INTO periodical_articles (issue_id, original_language_id, language_id, title_ru, title_en, abstract_ru, abstract_en, text_ru, text_en, page_start, page_end, sort_order, is_active, meta_description_ru, meta_description_en) '
-                . 'VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
-                'iiissssssiiiiss',
+                'INSERT INTO periodical_articles (issue_id, original_language_id, language_id, title_ru, title_en, slug_ru, slug_en, abstract_ru, abstract_en, text_ru, text_en, page_start, page_end, sort_order, is_active, meta_description_ru, meta_description_en) '
+                . 'VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+                'iiisssssssiiiiss',
                 $issue_id,
                 pea_nullable_int($original_language_id),
                 $language_id,
                 $title_ru,
                 $title_en,
+                $slugs['slug_ru'],
+                $slugs['slug_en'],
                 pea_nullable_text($abstract_ru),
                 pea_nullable_text($abstract_en),
                 pea_nullable_text($text_ru),
@@ -133,13 +156,15 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
         } else {
             $saved = db_exec(
                 $db,
-                'UPDATE periodical_articles SET original_language_id=?, language_id=?, title_ru=?, title_en=?, abstract_ru=?, abstract_en=?, text_ru=?, text_en=?, page_start=?, page_end=?, sort_order=?, is_active=?, meta_description_ru=?, meta_description_en=? '
+                'UPDATE periodical_articles SET original_language_id=?, language_id=?, title_ru=?, title_en=?, slug_ru=?, slug_en=?, abstract_ru=?, abstract_en=?, text_ru=?, text_en=?, page_start=?, page_end=?, sort_order=?, is_active=?, meta_description_ru=?, meta_description_en=? '
                 . 'WHERE id=? AND issue_id=? LIMIT 1',
-                'iissssssiiiissii',
+                'iissssssssiiiissii',
                 pea_nullable_int($original_language_id),
                 $language_id,
                 $title_ru,
                 $title_en,
+                $slugs['slug_ru'],
+                $slugs['slug_en'],
                 pea_nullable_text($abstract_ru),
                 pea_nullable_text($abstract_en),
                 pea_nullable_text($text_ru),
@@ -156,6 +181,12 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
         }
 
         if (!empty($saved)) {
+            if ($id <= 0) {
+                $id = (int) mysqli_insert_id($db);
+            }
+            if ($id > 0) {
+                per_article_image_handle_admin_post($db, $id);
+            }
             header('Location: /admin_periodical_articles.php?issue_id=' . $issue_id . '&id=' . $id, true, 303);
             exit;
         }
@@ -192,6 +223,9 @@ if ($id > 0) {
     }
 }
 $smarty->assign('article', $article);
+
+$article_images = ($id > 0) ? per_article_image_load_for_article($db, $id) : [];
+$smarty->assign('article_images', $article_images);
 
 $languages = [];
 $z = db_select($db, 'SELECT id, name FROM languages ORDER BY name ASC');

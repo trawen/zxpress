@@ -1,6 +1,7 @@
 <?php
 
 require 'init.inc'; // MARKER_12345
+require_once __DIR__ . '/includes/ezine_slugs.php';
 
 $limit = 10;
 
@@ -44,7 +45,9 @@ if ($p == 0 and $q) {
 if ($j == "ezine" and $q) {
 
   $log_search_row($db, $q, $t, 0, $id);
-  header("Location: /article.php?id=$id");
+  $isEng = ($smarty->getTemplateVars('lng') === 'eng');
+  $articleUrl = ezn_canonical_article_url($db, $id, $isEng);
+  header('Location: ' . ($articleUrl ?? '/article.php?id=' . $id));
   exit;
 
 }
@@ -172,6 +175,14 @@ else {
         $img = explode("/", $result["matches"][$id]['attrs']['img']);
         $inf[$n]['img'] = $img[0];
         $inf[$n]['type'] = intval($result["matches"][$id]['attrs']['type']);
+
+        if ($inf[$n]['type'] === 1) {
+          $isEngSearch = ($smarty->getTemplateVars('lng') === 'eng');
+          $articleUrl = ezn_canonical_article_url($db, $inf[$n]['id1'], $isEngSearch);
+          $inf[$n]['article_url'] = $articleUrl ?? '/article.php?id=' . $inf[$n]['id1'];
+          $issueUrl = ezn_canonical_issue_url_by_ids($db, $inf[$n]['id3'], $inf[$n]['id2'], $isEngSearch);
+          $inf[$n]['issue_url'] = $issueUrl ?? '/issue.php?id=' . $inf[$n]['id3'] . '#' . rawurlencode((string) $inf[$n]['id2']);
+        }
 
         $docs[] = search_source_doc_from_match($result["matches"][$id]['attrs'], $inf[$n]['type']);
 

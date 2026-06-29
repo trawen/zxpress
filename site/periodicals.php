@@ -2,6 +2,7 @@
 require 'init.inc';
 require_once __DIR__ . '/includes/periodical_issue_images.php';
 require_once __DIR__ . '/includes/periodical_issue_files.php';
+require_once __DIR__ . '/includes/periodicals_slugs.php';
 
 function per_pub_is_eng(?string $lng): bool
 {
@@ -35,14 +36,6 @@ function per_pub_rich_html(?string $s): string
 		return $s;
 	}
 	return per_pub_summary_html($s);
-}
-
-function per_pub_lng_qs(bool $isEng, bool $first = false): string
-{
-	if (!$isEng) {
-		return '';
-	}
-	return $first ? '?lng=eng' : '&lng=eng';
 }
 
 function per_pub_issue_label(array $issue, bool $isEng): string
@@ -185,13 +178,38 @@ function per_pub_enrich_periodical(array $row, bool $isEng): array
 	return $row;
 }
 
+$perSlug = per_slug_normalize_path((string) ($_GET['per'] ?? ''));
+$issueSlug = per_slug_normalize_path((string) ($_GET['issue_slug'] ?? ''));
+$articleSlug = per_slug_normalize_path((string) ($_GET['article_slug'] ?? ''));
+$slugRoute = ($perSlug !== '');
+
 $id = (int) ($_GET['id'] ?? 0);
 $issueId = (int) ($_GET['issue'] ?? 0);
 $articleId = (int) ($_GET['article'] ?? 0);
+
+if ($slugRoute) {
+	$resolved = per_pub_resolve_route($db, $perSlug, $issueSlug, $articleSlug, per_pub_is_eng($smarty->getTemplateVars('lng')));
+	if (!$resolved['ok']) {
+		http_response_code(404);
+		$smarty->assign('periodical', null);
+		$smarty->assign('per_not_found', true);
+		$smarty->assign('title', per_pub_is_eng($smarty->getTemplateVars('lng')) ? 'Periodical not found' : 'Издание не найдено');
+		$smarty->assign('per_url_catalog', per_pub_url_catalog(per_pub_is_eng($smarty->getTemplateVars('lng'))));
+		per_pub_assign_lang_switch_urls($smarty, null, null, null);
+		include 'right.php';
+		$smarty->display('periodicals.tpl');
+		exit;
+	}
+	$id = (int) $resolved['periodical_id'];
+	$issueId = (int) $resolved['issue_id'];
+	$articleId = (int) $resolved['article_id'];
+} else {
+	per_pub_maybe_redirect_legacy($db, false, $id, $issueId, $articleId, per_pub_is_eng($smarty->getTemplateVars('lng')));
+}
+
 $lng = $smarty->getTemplateVars('lng');
 $isEng = per_pub_is_eng($lng);
-$smarty->assign('per_lng_qs', per_pub_lng_qs($isEng));
-$smarty->assign('per_lng_qs_first', per_pub_lng_qs($isEng, true));
+$smarty->assign('per_url_catalog', per_pub_url_catalog($isEng));
 
 // --- single periodical / issue / article ---
 if ($id > 0) {
@@ -217,6 +235,7 @@ if ($id > 0) {
 		$smarty->assign('periodical', null);
 		$smarty->assign('per_not_found', true);
 		$smarty->assign('title', $isEng ? 'Periodical not found' : 'Издание не найдено');
+		per_pub_assign_lang_switch_urls($smarty, null, null, null);
 	} else {
 		$smarty->assign('per_not_found', false);
 		$periodical = per_pub_enrich_periodical($periodical, $isEng);
@@ -244,7 +263,7 @@ if ($id > 0) {
 		$smarty->assign('og_title', $titlePlain);
 		$smarty->assign('og_description', $descPlain !== '' ? $descPlain : $titlePlain);
 		$smarty->assign('og_image', '');
-		$smarty->assign('og_url', $origin . '/periodicals.php?id=' . $id . per_pub_lng_qs($isEng));
+		$smarty->assign('og_url', $origin . per_pub_url_periodical($periodical, $isEng));
 		$smarty->assign('og_type', 'website');
 
 		$articleLoaded = false;
@@ -277,6 +296,7 @@ if ($id > 0) {
 					);
 					$smarty->assign('per_article', $article);
 
+					$issueRow = null;
 					$issueStmt = $db->prepare('SELECT * FROM periodical_issues WHERE id = ? AND periodical_id = ? AND is_active = 1 LIMIT 1');
 					if ($issueStmt) {
 						$issueStmt->bind_param('ii', $issueId, $id);
@@ -285,6 +305,8 @@ if ($id > 0) {
 						$issueStmt->close();
 						if ($issueRow) {
 							$issueRow['label'] = per_pub_issue_label($issueRow, $isEng);
+							$issueRow['preview_caption'] = per_pub_issue_preview_caption($issueRow, $isEng);
+							$issueRow['url'] = per_pub_url_issue($periodical, $issueRow, $isEng);
 							$smarty->assign('per_issue', $issueRow);
 						}
 					}
@@ -297,8 +319,12 @@ if ($id > 0) {
 					$smarty->assign('description', $artDesc);
 					$smarty->assign('og_title', $artTitle);
 					$smarty->assign('og_description', $artDesc);
-					$smarty->assign('og_url', $origin . '/periodicals.php?id=' . $id . '&issue=' . $issueId . '&article=' . $articleId . per_pub_lng_qs($isEng));
+					if ($issueRow) {
+						$smarty->assign('og_url', $origin . per_pub_url_article($periodical, $issueRow, $article, $isEng));
+					}
 					$smarty->assign('og_type', 'article');
+					$smarty->assign('per_url_periodical', per_pub_url_periodical($periodical, $isEng));
+					per_pub_assign_lang_switch_urls($smarty, $periodical, $issueRow, $article);
 				}
 			}
 		}
@@ -314,6 +340,7 @@ if ($id > 0) {
 				$stmt->close();
 				if ($issue) {
 					$issue['label'] = per_pub_issue_label($issue, $isEng);
+					$issue['preview_caption'] = per_pub_issue_preview_caption($issue, $isEng);
 					$issue['title_display'] = per_pub_pick($issue['title_en'] ?? null, $issue['title_ru'] ?? null, $isEng);
 					$issue['description_html'] = per_pub_summary_html(
 						per_pub_pick($issue['description_en'] ?? null, $issue['description_ru'] ?? null, $isEng)
@@ -321,6 +348,7 @@ if ($id > 0) {
 					$issue['date_display'] = per_pub_date_display($issue['issue_date'] ?? null, $isEng);
 					$issue['cover'] = per_pub_get_issue_cover($issueId);
 					$issue['files'] = per_pub_load_issue_files($db, $issueId);
+					$issue['url'] = per_pub_url_issue($periodical, $issue, $isEng);
 					$smarty->assign('per_issue', $issue);
 
 					$articles = [];
@@ -340,6 +368,7 @@ if ($id > 0) {
 							isset($a['page_end']) ? (int) $a['page_end'] : 0,
 							$isEng
 						);
+						$a['url'] = per_pub_url_article($periodical, $issue, $a, $isEng);
 						$articles[] = $a;
 					}
 					$smarty->assign('per_articles', $articles);
@@ -361,7 +390,9 @@ if ($id > 0) {
 					if (!empty($issue['cover'])) {
 						$smarty->assign('og_image', $origin . $issue['cover']['display_src']);
 					}
-					$smarty->assign('og_url', $origin . '/periodicals.php?id=' . $id . '&issue=' . $issueId . per_pub_lng_qs($isEng));
+					$smarty->assign('og_url', $origin . per_pub_url_issue($periodical, $issue, $isEng));
+					$smarty->assign('per_url_periodical', per_pub_url_periodical($periodical, $isEng));
+					per_pub_assign_lang_switch_urls($smarty, $periodical, $issue, null);
 				}
 			}
 		}
@@ -382,9 +413,12 @@ if ($id > 0) {
 				$row['preview_caption'] = per_pub_issue_preview_caption($row, $isEng);
 				$row['date_display'] = per_pub_date_display($row['issue_date'] ?? null, $isEng);
 				$row['cover'] = per_pub_get_issue_cover($iid);
+				$row['url'] = per_pub_url_issue($periodical, $row, $isEng);
 				$perIssues[] = $row;
 			}
 			$smarty->assign('per_issues', $perIssues);
+			$smarty->assign('per_url_periodical', per_pub_url_periodical($periodical, $isEng));
+			per_pub_assign_lang_switch_urls($smarty, $periodical, null, null);
 		}
 	}
 
@@ -394,6 +428,8 @@ if ($id > 0) {
 }
 
 // --- catalog ---
+per_pub_maybe_redirect_legacy($db, $slugRoute, 0, 0, 0, $isEng);
+
 $rows = [];
 $z = db_select(
 	$db,
@@ -408,24 +444,26 @@ $z = db_select(
 );
 while ($z && ($row = mysqli_fetch_assoc($z))) {
 	$row = per_pub_enrich_periodical($row, $isEng);
+	$row['url'] = per_pub_url_periodical($row, $isEng);
 	$rows[] = $row;
 }
 $smarty->assign('per_rows', $rows);
 $smarty->assign('periodical', null);
 $smarty->assign('per_not_found', false);
 
-$smarty->assign('title', $isEng ? 'Periodicals' : 'Периодика');
+$smarty->assign('title', $isEng ? 'Periodicals' : 'Бумажные газеты и журналы');
 $catalogDesc = $isEng
 	? 'Paper periodicals archive on ZXPress.'
 	: 'Архив бумажной периодики на ZXPress.';
 $smarty->assign('description', $catalogDesc);
 
 $origin = zxpress_canonical_origin();
-$smarty->assign('og_title', $isEng ? 'Periodicals on ZXPress' : 'Периодика на ZXPress');
+$smarty->assign('og_title', $isEng ? 'Periodicals on ZXPress' : 'Бумажные газеты и журналы на ZXPress');
 $smarty->assign('og_description', $catalogDesc);
 $smarty->assign('og_image', '');
-$smarty->assign('og_url', $origin . '/periodicals.php' . per_pub_lng_qs($isEng, true));
+$smarty->assign('og_url', $origin . per_pub_url_catalog($isEng));
 $smarty->assign('og_type', 'website');
+per_pub_assign_lang_switch_urls($smarty, null, null, null);
 
 include 'right.php';
 $smarty->display('periodicals.tpl');

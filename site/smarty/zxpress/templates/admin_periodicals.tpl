@@ -93,7 +93,7 @@
 {foreach from=$periodicals_list item=p}
 <li>
 <span class="admin-periodicals-list-item">
-<a href="admin_periodicals.php?id={$p.id}"{if $periodical && $periodical.id eq $p.id} class="nav-active"{/if}>{if !$p.is_active}[×] {/if}{if $p.is_samizdat}[сам.] {/if}{$p.title_ru|escape:'html'}{if $p.title_en} / {$p.title_en|escape:'html'}{/if}</a><a href="{$host}periodicals.php?id={$p.id}" target="_blank" rel="noopener" class="admin-periodicals-public-link" title="Публичная страница издания" aria-label="Публичная страница издания «{$p.title_ru|escape:'html'}»">→</a>
+<a href="admin_periodicals.php?id={$p.id}"{if $periodical && $periodical.id eq $p.id} class="nav-active"{/if}>{if !$p.is_active}[×] {/if}{if $p.is_samizdat}[сам.] {/if}{$p.title_ru|escape:'html'}{if $p.title_en} / {$p.title_en|escape:'html'}{/if}</a><a href="{$p.public_url|escape:'html'}" target="_blank" rel="noopener" class="admin-periodicals-public-link" title="Публичная страница издания" aria-label="Публичная страница издания «{$p.title_ru|escape:'html'}»">→</a>
 </span>
 </li>
 {/foreach}
@@ -121,6 +121,20 @@
 <tr>
 <td>Название (EN)</td>
 <td><input type="text" name="title_en" style="width:420px" maxlength="255" value="{if $periodical}{$periodical.title_en}{/if}"></td>
+</tr>
+<tr>
+<td>Slug RU (URL)</td>
+<td>
+<input type="text" name="slug_ru" style="width:420px" maxlength="255" value="{if $periodical}{$periodical.slug_ru}{/if}">
+<div style="font:normal 10px Verdana;color:#666;margin-top:2px">/ru/periodicals/<i>slug</i> — пусто = из названия (RU)</div>
+</td>
+</tr>
+<tr>
+<td>Slug EN (URL)</td>
+<td>
+<input type="text" name="slug_en" style="width:420px" maxlength="255" value="{if $periodical}{$periodical.slug_en}{/if}">
+<div style="font:normal 10px Verdana;color:#666;margin-top:2px">/eng/periodicals/<i>slug</i> — пусто = из названия (EN)</div>
+</td>
 </tr>
 <tr>
 <td>ISSN</td>
@@ -267,6 +281,19 @@
 <tr>
 <td>Название (EN)</td>
 <td><input type="text" name="issue_title_en" style="width:420px" maxlength="255" value="{$issue.title_en}"></td>
+</tr>
+<tr>
+<td>Slug RU (URL)</td>
+<td>
+<input type="text" name="issue_slug_ru" style="width:420px" maxlength="255" value="{$issue.slug_ru}">
+<div style="font:normal 10px Verdana;color:#666;margin-top:2px">/ru/periodicals/…/<i>slug</i> — пусто = год + номер</div>
+</td>
+</tr>
+<tr>
+<td>Slug EN (URL)</td>
+<td>
+<input type="text" name="issue_slug_en" style="width:420px" maxlength="255" value="{$issue.slug_en}">
+</td>
 </tr>
 <tr>
 <td valign="top">Описание (RU)</td>

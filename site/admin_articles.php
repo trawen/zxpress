@@ -6,6 +6,7 @@ if (!isset($_SESSION['login']) || !$_SESSION['login']) {
     exit;
 }
 require 'html_fix.php';
+require_once __DIR__ . '/includes/ezine_slugs.php';
 //error_reporting(E_ALL);
 
 function admin_articles_read_text(int $articleId): string
@@ -286,6 +287,37 @@ while ($z && ($t = mysqli_fetch_array($z))) {
 		$stmt_title->bind_param("si", $title, $id_article);
 		$stmt_title->execute();
 
+	}
+
+	// UPDATE META + SLUGS
+	if (($_POST['slug_change_'.$id_article] ?? null) == 1) {
+		$metaRu = plain_text_normalize_for_storage(trim((string) ($_POST['meta_description_ru_' . $id_article] ?? '')));
+		$metaEn = plain_text_normalize_for_storage(trim((string) ($_POST['meta_description_en_' . $id_article] ?? '')));
+		$slugInputRu = trim((string) ($_POST['slug_ru_' . $id_article] ?? ''));
+		$slugInputEn = trim((string) ($_POST['slug_en_' . $id_article] ?? ''));
+
+		$articleRow = array_merge($t, [
+			'meta_description_ru' => $metaRu,
+			'meta_description_en' => $metaEn,
+		]);
+		$slugs = ezn_admin_resolve_article_slugs(
+			$db,
+			$slugInputRu,
+			$slugInputEn,
+			static fn (): string => ezn_default_article_ru($articleRow),
+			static fn (): string => ezn_default_article_en($articleRow),
+			(int) $id_article,
+			(int) $issue
+		);
+
+		$stmt_meta_slug = $db->prepare(
+			'UPDATE articles SET meta_description_ru=?, meta_description_en=?, slug_ru=?, slug_en=? WHERE id=? LIMIT 1'
+		);
+		if ($stmt_meta_slug) {
+			$stmt_meta_slug->bind_param('ssssi', $metaRu, $metaEn, $slugs['slug_ru'], $slugs['slug_en'], $id_article);
+			$stmt_meta_slug->execute();
+			$stmt_meta_slug->close();
+		}
 	}
 	
 	// UPDATE ARTICLE
@@ -573,6 +605,31 @@ $stmt_autonum = $db->prepare("SELECT articles.number FROM issue, articles WHERE 
 	}
 	
 	$id_text = mysqli_insert_id($db);
+	if ($id_text > 0) {
+		$articleRow = [
+			'id' => $id_text,
+			'id_issue' => $issue,
+			'title' => $title,
+			'title_eng' => '',
+			'meta_description_ru' => '',
+			'meta_description_en' => '',
+		];
+		$slugs = ezn_admin_resolve_article_slugs(
+			$db,
+			'',
+			'',
+			static fn (): string => ezn_default_article_ru($articleRow),
+			static fn (): string => ezn_default_article_en($articleRow),
+			(int) $id_text,
+			(int) $issue
+		);
+		$stmt_new_slug = $db->prepare('UPDATE articles SET slug_ru=?, slug_en=? WHERE id=? LIMIT 1');
+		if ($stmt_new_slug) {
+			$stmt_new_slug->bind_param('ssi', $slugs['slug_ru'], $slugs['slug_en'], $id_text);
+			$stmt_new_slug->execute();
+			$stmt_new_slug->close();
+		}
+	}
 	$text = html_legacy_normalize(stripslashes($_POST['new_article_text']), (int) $html, $issue);
 	if ($id_text > 0) {
 		admin_articles_write_text((int) $id_text, $text);

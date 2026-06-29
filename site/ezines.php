@@ -1,5 +1,6 @@
 <?php
 require 'init.inc';
+require_once __DIR__ . '/includes/ezine_slugs.php';
 
 
 
@@ -15,6 +16,8 @@ $a = "#";
 while ($z && ($t = mysqli_fetch_array($z))) {
 
 $t['title_plain'] = title_plain($t['title'] ?? '');
+$isEngCatalog = ($_GET['lng'] ?? '') === 'eng';
+$t['public_url'] = ezn_url_press($t, $isEngCatalog);
 $s = strtoupper(mb_substr($t['title_plain'], 0, 1, 'UTF-8'));
 if ($f AND $a !=$s AND ($s < "0" OR $s>"9") ) {
 

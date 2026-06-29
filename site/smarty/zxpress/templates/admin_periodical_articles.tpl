@@ -78,7 +78,7 @@
 {if $article && $article.id}Редактирование статьи #{$article.id}{else}Новая статья{/if}
 </div>
 
-<form method="post" action="admin_periodical_articles.php?issue_id={$issue_id}&id={if $article && $article.id}{$article.id}{else}0{/if}">
+<form method="post" enctype="multipart/form-data" action="admin_periodical_articles.php?issue_id={$issue_id}&id={if $article && $article.id}{$article.id}{else}0{/if}">
 <input type="hidden" name="csrf_token" value="{$csrf_token}">
 
 <table style="font: 12px Verdana" cellpadding="4">
@@ -89,6 +89,19 @@
 <tr>
 <td>Заголовок (EN)</td>
 <td><input type="text" name="title_en" style="width:520px" maxlength="255" value="{if $article}{$article.title_en}{/if}"></td>
+</tr>
+<tr>
+<td>Slug RU (URL)</td>
+<td>
+<input type="text" name="slug_ru" style="width:520px" maxlength="255" value="{if $article}{$article.slug_ru}{/if}">
+<div style="font:normal 10px Verdana;color:#666;margin-top:2px">/ru/periodicals/…/…/<i>slug</i> — пусто = из meta (RU), иначе заголовок</div>
+</td>
+</tr>
+<tr>
+<td>Slug EN (URL)</td>
+<td>
+<input type="text" name="slug_en" style="width:520px" maxlength="255" value="{if $article}{$article.slug_en}{/if}">
+</td>
 </tr>
 <tr>
 <td>Язык *</td>
@@ -152,6 +165,34 @@
 <td>Активна</td>
 <td><input type="checkbox" name="is_active" value="1" {if !$article || $article.is_active}checked{/if}></td>
 </tr>
+{if $article && $article.id}
+<tr>
+<td valign="top">Картинки</td>
+<td>
+<input type="file" name="upload_files[]" multiple accept="image/jpeg,image/png,image/webp,image/gif">
+<div style="font:normal 10px Verdana;color:#666;margin-top:4px">оригинал сохраняется как есть; превью 640 и 1280 px в WebP (70%)</div>
+{if $article_images && $article_images|@count gt 0}
+<div style="margin-top:10px">
+{section name=img loop=$article_images}
+<div style="margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid #C8C5AC">
+<label><input type="checkbox" name="delete_image_{$article_images[img].id}" value="1"> удалить</label>
+ — id={$article_images[img].id}
+ sort=<input type="text" name="sort_order_{$article_images[img].id}" value="{$article_images[img].sort_order}" style="width:50px">
+ {if $article_images[img].width && $article_images[img].height}{$article_images[img].width}×{$article_images[img].height}{/if}
+<br>
+<a href="{$article_images[img].original_url}" target="_blank" rel="noopener">оригинал</a> —
+<a href="{$article_images[img].preview_url}" target="_blank" rel="noopener">640</a> —
+<a href="{$article_images[img].preview_url_hd}" target="_blank" rel="noopener">1280</a><br>
+<img src="{$article_images[img].preview_url}" alt="" style="max-width:420px;height:auto;border:1px solid #C8C5AC;margin-top:4px">
+</div>
+{/section}
+</div>
+{else}
+<p style="color:#666;margin:8px 0 0">Картинок пока нет</p>
+{/if}
+</td>
+</tr>
+{/if}
 </table>
 
 <div style="margin-top:10px">

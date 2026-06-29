@@ -2,6 +2,7 @@
 require 'init.inc';
 require_once __DIR__ . '/includes/periodical_issue_images.php';
 require_once __DIR__ . '/includes/periodical_issue_files.php';
+require_once __DIR__ . '/includes/periodicals_slugs.php';
 
 if (!isset($_SESSION['login']) || !$_SESSION['login']) {
     header('HTTP/1.1 403 Forbidden');
@@ -159,6 +160,8 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
     $description_en = plain_text_normalize_for_storage(per_post_string('description_en'));
     $meta_description_ru = plain_text_normalize_for_storage(per_post_string('meta_description_ru'));
     $meta_description_en = plain_text_normalize_for_storage(per_post_string('meta_description_en'));
+    $slugInputRu = per_post_string('slug_ru');
+    $slugInputEn = per_post_string('slug_en');
     $city_id = per_post_int('city_id');
     $year_start = per_nullable_int(per_post_string('year_start'));
     $year_end = per_nullable_int(per_post_string('year_end'));
@@ -169,15 +172,26 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
     if ($title_ru === '') {
         $error = 'Название (RU) обязательно';
     } else {
+        $slugs = per_admin_resolve_slugs(
+            $db,
+            'periodicals',
+            $slugInputRu,
+            $slugInputEn,
+            static fn (): string => per_slug_from_title($title_ru),
+            static fn (): string => per_slug_from_title($title_en !== '' ? $title_en : $title_ru),
+            $id
+        );
         $saved = false;
         if ($id === 0) {
             $saved = db_exec(
                 $db,
-                'INSERT INTO periodicals (title_ru, title_en, issn, city_id, description_ru, description_en, meta_description_ru, meta_description_en, is_active, is_samizdat, year_start, year_end) '
-                . 'VALUES (?,?,?,?,?,?,?,?,?,?,?,?)',
-                'sssissssiiii',
+                'INSERT INTO periodicals (title_ru, title_en, slug_ru, slug_en, issn, city_id, description_ru, description_en, meta_description_ru, meta_description_en, is_active, is_samizdat, year_start, year_end) '
+                . 'VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+                'sssssissssiiii',
                 $title_ru,
                 $title_en,
+                $slugs['slug_ru'],
+                $slugs['slug_en'],
                 $issn,
                 ($city_id > 0 ? $city_id : 1),
                 per_nullable_text($description_ru),
@@ -195,10 +209,12 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
         } else {
             $saved = db_exec(
                 $db,
-                'UPDATE periodicals SET title_ru=?, title_en=?, issn=?, city_id=?, description_ru=?, description_en=?, meta_description_ru=?, meta_description_en=?, is_active=?, is_samizdat=?, year_start=?, year_end=? WHERE id=? LIMIT 1',
-                'sssissssiiiii',
+                'UPDATE periodicals SET title_ru=?, title_en=?, slug_ru=?, slug_en=?, issn=?, city_id=?, description_ru=?, description_en=?, meta_description_ru=?, meta_description_en=?, is_active=?, is_samizdat=?, year_start=?, year_end=? WHERE id=? LIMIT 1',
+                'sssssissssiiiii',
                 $title_ru,
                 $title_en,
+                $slugs['slug_ru'],
+                $slugs['slug_en'],
                 $issn,
                 ($city_id > 0 ? $city_id : 1),
                 per_nullable_text($description_ru),
@@ -241,6 +257,8 @@ if (($_POST['save_issue'] ?? '') === 'Сохранить выпуск') {
         $description_en = plain_text_normalize_for_storage(per_post_string('issue_description_en'));
         $meta_description_ru = plain_text_normalize_for_storage(per_post_string('issue_meta_description_ru'));
         $meta_description_en = plain_text_normalize_for_storage(per_post_string('issue_meta_description_en'));
+        $issueSlugInputRu = per_post_string('issue_slug_ru');
+        $issueSlugInputEn = per_post_string('issue_slug_en');
         $issue_volume = per_nullable_int(per_post_string('issue_volume'));
         $issue_year = per_nullable_int(per_post_string('issue_year'));
         $circulation = per_nullable_int(per_post_string('circulation'));
@@ -253,13 +271,30 @@ if (($_POST['save_issue'] ?? '') === 'Сохранить выпуск') {
         if ($issue_no === '') {
             $error = 'Номер выпуска обязателен';
         } else {
+            $issueSlugSeed = [
+                'issue_year' => $issue_year,
+                'issue_no' => $issue_no,
+                'title_ru' => $title_ru,
+                'title_en' => $title_en,
+            ];
+            $issueSlugs = per_admin_resolve_slugs(
+                $db,
+                'periodical_issues',
+                $issueSlugInputRu,
+                $issueSlugInputEn,
+                static fn (): string => per_slug_default_issue_ru($issueSlugSeed),
+                static fn (): string => per_slug_default_issue_en($issueSlugSeed),
+                $issue_id,
+                'periodical_id',
+                $id
+            );
             $saved = false;
             if ($issue_id === 0) {
                 $saved = db_exec(
                     $db,
-                    'INSERT INTO periodical_issues (periodical_id, issue_volume, issue_no, issue_date, issue_year, title_ru, title_en, description_ru, description_en, meta_description_ru, meta_description_en, is_active, is_bound, circulation, pages) '
-                    . 'VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
-                    'iississssssiiii',
+                    'INSERT INTO periodical_issues (periodical_id, issue_volume, issue_no, issue_date, issue_year, title_ru, title_en, slug_ru, slug_en, description_ru, description_en, meta_description_ru, meta_description_en, is_active, is_bound, circulation, pages) '
+                    . 'VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+                    'iississssssssiiii',
                     $id,
                     $issue_volume,
                     $issue_no,
@@ -267,6 +302,8 @@ if (($_POST['save_issue'] ?? '') === 'Сохранить выпуск') {
                     $issue_year,
                     $title_ru,
                     $title_en,
+                    $issueSlugs['slug_ru'],
+                    $issueSlugs['slug_en'],
                     per_nullable_text($description_ru),
                     per_nullable_text($description_en),
                     $meta_description_ru,
@@ -282,15 +319,17 @@ if (($_POST['save_issue'] ?? '') === 'Сохранить выпуск') {
             } else {
                 $saved = db_exec(
                     $db,
-                    'UPDATE periodical_issues SET issue_volume=?, issue_no=?, issue_date=?, issue_year=?, title_ru=?, title_en=?, description_ru=?, description_en=?, meta_description_ru=?, meta_description_en=?, is_active=?, is_bound=?, circulation=?, pages=? '
+                    'UPDATE periodical_issues SET issue_volume=?, issue_no=?, issue_date=?, issue_year=?, title_ru=?, title_en=?, slug_ru=?, slug_en=?, description_ru=?, description_en=?, meta_description_ru=?, meta_description_en=?, is_active=?, is_bound=?, circulation=?, pages=? '
                     . 'WHERE id=? AND periodical_id=? LIMIT 1',
-                    'ississssssiiiiii',
+                    'ississssssssiiii',
                     $issue_volume,
                     $issue_no,
                     $issue_date,
                     $issue_year,
                     $title_ru,
                     $title_en,
+                    $issueSlugs['slug_ru'],
+                    $issueSlugs['slug_en'],
                     per_nullable_text($description_ru),
                     per_nullable_text($description_en),
                     $meta_description_ru,
@@ -369,6 +408,7 @@ $smarty->assign('error', $error);
 $periodicals_list = [];
 $z = db_select($db, 'SELECT id, title_ru, title_en, issn, is_active, is_samizdat, year_start, year_end FROM periodicals ORDER BY title_ru ASC');
 while ($z && ($t = mysqli_fetch_array($z))) {
+    $t['public_url'] = per_pub_url_periodical($t, false);
     $periodicals_list[] = $t;
 }
 $smarty->assign('periodicals_list', $periodicals_list);
@@ -491,6 +531,8 @@ if ($id > 0 && $issue_id > 0) {
         'issue_date_fmt' => '',
         'title_ru' => '',
         'title_en' => '',
+        'slug_ru' => '',
+        'slug_en' => '',
         'description_ru' => '',
         'description_en' => '',
         'meta_description_ru' => '',

@@ -15,10 +15,14 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	{if $smarty.server.SCRIPT_NAME eq '/article.php'}
+	{if $canonical_url}
+	<link rel="canonical" href="{$canonical_url|escape:'html'}" />
+	{/if}
 
-		<link rel="alternate" hreflang="ru" href="http://zxpress.ru/article.php?id={$id}" />
-		<link rel="alternate" hreflang="en" href="http://zxpress.ru{$url_eng}" />
+	{if $smarty.server.SCRIPT_NAME eq '/article.php' || $smarty.server.SCRIPT_NAME eq '/issue.php'}
+
+		{if $hreflang_ru}<link rel="alternate" hreflang="ru" href="{$hreflang_ru|escape:'html'}" />{/if}
+		{if $hreflang_en}<link rel="alternate" hreflang="en" href="{$hreflang_en|escape:'html'}" />{/if}
 
 		{literal}
 

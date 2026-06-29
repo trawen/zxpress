@@ -9,9 +9,10 @@
 {if $per_article && $periodical && $per_issue}
 
 <p class="pub-breadcrumbs">
-	<a href="{$host}periodicals.php{$per_lng_qs_first}">{if $lng eq 'eng'}Periodicals{else}Периодика{/if}</a> &rarr;
-	<a href="{$host}periodicals.php?id={$periodical.id}{$per_lng_qs}">{$periodical.title_display|escape:'html'}</a> &rarr;
-	<a href="{$host}periodicals.php?id={$periodical.id}&amp;issue={$per_issue.id}{$per_lng_qs}">{$per_issue.label|escape:'html'}</a>
+	<a href="{$per_url_catalog|escape:'html'}">{if $lng eq 'eng'}Periodicals{else}Бумажные газеты и журналы{/if}</a> &rarr;
+	<a href="{$per_url_periodical|escape:'html'}">{$periodical.title_display|escape:'html'}</a> &rarr;
+	<a href="{$per_issue.url|escape:'html'}">{if $per_issue.preview_caption}{$per_issue.preview_caption|escape:'html'}{else}{$per_issue.label|escape:'html'}{/if}</a> &rarr;
+	{$per_article.title_display|escape:'html'}
 </p>
 
 <h1>{$per_article.title_display|escape:'html'}</h1>
@@ -31,8 +32,9 @@
 {elseif $per_issue && $periodical}
 
 <p class="pub-breadcrumbs">
-	<a href="{$host}periodicals.php{$per_lng_qs_first}">{if $lng eq 'eng'}Periodicals{else}Периодика{/if}</a> &rarr;
-	<a href="{$host}periodicals.php?id={$periodical.id}{$per_lng_qs}">{$periodical.title_display|escape:'html'}</a>
+	<a href="{$per_url_catalog|escape:'html'}">{if $lng eq 'eng'}Periodicals{else}Бумажные газеты и журналы{/if}</a> &rarr;
+	<a href="{$per_url_periodical|escape:'html'}">{$periodical.title_display|escape:'html'}</a> &rarr;
+	{if $per_issue.preview_caption}{$per_issue.preview_caption|escape:'html'}{else}{$per_issue.label|escape:'html'}{/if}
 </p>
 
 <table class="pub-header-table" cellpadding="0" cellspacing="0" border="0">
@@ -78,7 +80,7 @@
 <table class="pub-toc-item" cellpadding="0" cellspacing="0" border="0">
 <tr valign="top">
 <td>
-	<a href="{$host}periodicals.php?id={$periodical.id}&amp;issue={$per_issue.id}&amp;article={$a.id}{$per_lng_qs}" class="pub-toc-title">{$a.title_display|escape:'html'}</a>
+	<a href="{$a.url|escape:'html'}" class="pub-toc-title">{$a.title_display|escape:'html'}</a>
 	{if $a.pages_display}
 	<span class="pub-toc-pages">{$a.pages_display}</span>
 	{/if}
@@ -95,7 +97,8 @@
 {elseif $periodical}
 
 <p class="pub-breadcrumbs">
-	<a href="{$host}periodicals.php{$per_lng_qs_first}">{if $lng eq 'eng'}← All periodicals{else}← Вся периодика{/if}</a>
+	<a href="{$per_url_catalog|escape:'html'}">{if $lng eq 'eng'}Periodicals{else}Бумажные газеты и журналы{/if}</a> &rarr;
+	{$periodical.title_display|escape:'html'}
 </p>
 
 <h1 class="pub-title">{$periodical.title_display|escape:'html'}</h1>
@@ -118,7 +121,7 @@
 {foreach from=$per_issues item=i}
 <div class="per-issues-grid__item">
 <div class="per-issues-grid__caption">{$i.preview_caption|escape:'html'}</div>
-<a href="{$host}periodicals.php?id={$periodical.id}&amp;issue={$i.id}{$per_lng_qs}" class="per-issues-grid__link">
+<a href="{$i.url|escape:'html'}" class="per-issues-grid__link">
 {if $i.cover}
 <img src="{$i.cover.thumb_src}" alt="{$i.preview_caption|escape:'html'}" class="per-issues-grid__thumb" width="160" height="auto">
 {else}
@@ -134,18 +137,18 @@
 {elseif $per_not_found}
 
 <h1>{if $lng eq 'eng'}Periodical not found{else}Издание не найдено{/if}</h1>
-<p><a href="{$host}periodicals.php{$per_lng_qs_first}">{if $lng eq 'eng'}Back to catalog{else}К каталогу{/if}</a></p>
+<p><a href="{$per_url_catalog|escape:'html'}">{if $lng eq 'eng'}Back to catalog{else}К каталогу{/if}</a></p>
 
 {else}
 
-<h1>{if $lng eq 'eng'}Periodicals{else}Периодика{/if}</h1>
+<h1>{if $lng eq 'eng'}Periodicals{else}Бумажные газеты и журналы{/if}</h1>
 
 {if $per_rows && $per_rows|@count gt 0}
 {foreach from=$per_rows item=row}
 <table class="pub-list-item" cellpadding="0" cellspacing="0" border="0" width="100%">
 <tr valign="top">
 <td>
-	<a href="{$host}periodicals.php?id={$row.id}{$per_lng_qs}" class="pub-list-title">{$row.title_display|escape:'html'}</a>
+	<a href="{$row.url|escape:'html'}" class="pub-list-title">{$row.title_display|escape:'html'}</a>
 	<div class="pub-list-summary">
 		{if $row.years_display}{$row.years_display}{/if}
 		{if $row.geo_display}{if $row.years_display} · {/if}{$row.geo_display|escape:'html'}{/if}
@@ -160,7 +163,7 @@
 <hr>
 {/foreach}
 {else}
-<p>{if $lng eq 'eng'}No periodicals yet.{else}Периодики пока нет.{/if}</p>
+<p>{if $lng eq 'eng'}No periodicals yet.{else}Изданий пока нет.{/if}</p>
 {/if}
 
 {/if}

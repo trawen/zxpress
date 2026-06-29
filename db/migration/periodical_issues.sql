@@ -7,6 +7,8 @@ CREATE TABLE `periodical_issues` (
   `issue_year` smallint unsigned DEFAULT NULL,
   `title_ru` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `title_en` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `slug_ru` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `slug_en` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `description_ru` text COLLATE utf8mb4_unicode_ci,
   `description_en` text COLLATE utf8mb4_unicode_ci,
   `meta_description_ru` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -19,5 +21,7 @@ CREATE TABLE `periodical_issues` (
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `uq_issue` (`periodical_id`,`issue_year`,`issue_no`),
+  UNIQUE KEY `uq_periodical_issue_slug_ru` (`periodical_id`, `slug_ru`),
+  UNIQUE KEY `uq_periodical_issue_slug_en` (`periodical_id`, `slug_en`),
   KEY `idx_periodical` (`periodical_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

@@ -250,5 +250,5 @@ function fuck() {
 	var query = queryEl.value;
 	var page = pageEl ? pageEl.value : '';
 	var from = fromEl && fromEl.checked ? 1 : 0;
-	window.location.href = 'http://zxpress.ru/search.php?q=' + encodeURIComponent(query) + '&s=' + encodeURIComponent(sort) + '&f=' + from + (page ? '&page=' + encodeURIComponent(page) : '');
+	window.location.href = '/search.php?q=' + encodeURIComponent(query) + '&s=' + encodeURIComponent(sort) + '&f=' + from + (page ? '&p=' + encodeURIComponent(page) : '');
 }

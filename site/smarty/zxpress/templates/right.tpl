@@ -4,7 +4,7 @@
 <aside class="col-right" id="col-right">
 
     <div class="sidebar-search">
-    <form method='GET' action='search.php'>
+    <form method='GET' action='{$host}search.php'>
         {if $lng eq 'eng'}<input type="hidden" name="lng" value="eng">{/if}
         <div class="search-input-wrap">
         <input class="right" id="input_query_sidebar" name="q" type="search" placeholder="{if $lng eq 'eng'}Search...{else}Поиск...{/if}" value="{$q}" autocomplete="off">

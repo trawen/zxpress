@@ -64,10 +64,10 @@
 </td>
 <td class="search-results-body">
 <div><b>
-<a href="{$host}search.php?jump=ezine&id={$search[n].id1}&q={$query|escape:'url'}">{$search[n].title}</a>
+<a href="{$search[n].article_url}">{$search[n].title}</a>
 </b></div>
 <div>
-<a class="title_small" href="{$host}issue.php?id={$search[n].id3}#{$search[n].id2}">{$search[n].name}</a>
+<a class="title_small" href="{$search[n].issue_url}">{$search[n].name}</a>
 
 {else}
 {if $search[n].img}

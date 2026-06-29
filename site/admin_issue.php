@@ -1,5 +1,6 @@
 <?php
 require 'init.inc';
+require_once __DIR__ . '/includes/ezine_slugs.php';
 
 if (!isset($_SESSION['login']) || !$_SESSION['login']) {
     header('HTTP/1.1 403 Forbidden');
@@ -39,6 +40,31 @@ if ($_POST['save'] == "save") {
         $id = (int) mysqli_insert_id($db);
         if ($id <= 0) {
             error_log('[FIX] admin_issue: mysqli_insert_id after INSERT press is zero');
+        } elseif ($id > 0) {
+            $stmt_new_press = $db->prepare('SELECT * FROM press WHERE id=? LIMIT 1');
+            if ($stmt_new_press) {
+                $stmt_new_press->bind_param('i', $id);
+                $stmt_new_press->execute();
+                $newPressRow = $stmt_new_press->get_result()->fetch_assoc();
+                $stmt_new_press->close();
+                if (is_array($newPressRow)) {
+                    $slugs = per_admin_resolve_slugs(
+                        $db,
+                        'press',
+                        '',
+                        '',
+                        static fn (): string => ezn_default_press_ru($newPressRow),
+                        static fn (): string => ezn_default_press_en($newPressRow),
+                        $id
+                    );
+                    $stmt_slug = $db->prepare('UPDATE press SET slug_ru=?, slug_en=? WHERE id=? LIMIT 1');
+                    if ($stmt_slug) {
+                        $stmt_slug->bind_param('ssi', $slugs['slug_ru'], $slugs['slug_en'], $id);
+                        $stmt_slug->execute();
+                        $stmt_slug->close();
+                    }
+                }
+            }
         }
     }
 
@@ -65,6 +91,26 @@ if ($_POST['save'] == "save") {
                 $stmt_is->execute();
             }
             $id_issue = mysqli_insert_id($db);
+            if ($id_issue > 0) {
+                $issueRow = ['id' => $id_issue, 'id_press' => $id, 'title' => $title];
+                $issueSlugs = per_admin_resolve_slugs(
+                    $db,
+                    'issue',
+                    '',
+                    '',
+                    static fn (): string => ezn_default_issue_ru($issueRow),
+                    static fn (): string => ezn_default_issue_en($issueRow),
+                    $id_issue,
+                    'id_press',
+                    $id
+                );
+                $stmt_is_slug = $db->prepare('UPDATE issue SET slug_ru=?, slug_en=? WHERE id=? LIMIT 1');
+                if ($stmt_is_slug) {
+                    $stmt_is_slug->bind_param('ssi', $issueSlugs['slug_ru'], $issueSlugs['slug_en'], $id_issue);
+                    $stmt_is_slug->execute();
+                    $stmt_is_slug->close();
+                }
+            }
 
         } else {
 
@@ -99,6 +145,27 @@ if ($_POST['save'] == "save") {
         if ($stmt_ai) {
             $stmt_ai->bind_param('is', $id, $add_issue);
             $stmt_ai->execute();
+            $newIssueId = (int) mysqli_insert_id($db);
+            if ($newIssueId > 0) {
+                $issueRow = ['id' => $newIssueId, 'id_press' => $id, 'title' => $add_issue];
+                $issueSlugs = per_admin_resolve_slugs(
+                    $db,
+                    'issue',
+                    '',
+                    '',
+                    static fn (): string => ezn_default_issue_ru($issueRow),
+                    static fn (): string => ezn_default_issue_en($issueRow),
+                    $newIssueId,
+                    'id_press',
+                    $id
+                );
+                $stmt_ai_slug = $db->prepare('UPDATE issue SET slug_ru=?, slug_en=? WHERE id=? LIMIT 1');
+                if ($stmt_ai_slug) {
+                    $stmt_ai_slug->bind_param('ssi', $issueSlugs['slug_ru'], $issueSlugs['slug_en'], $newIssueId);
+                    $stmt_ai_slug->execute();
+                    $stmt_ai_slug->close();
+                }
+            }
         }
 
     }
@@ -123,6 +190,27 @@ if ($_POST['save'] == "save") {
             if ($stmt_up) {
                 $stmt_up->bind_param("si", $title, $id_issue);
                 $stmt_up->execute();
+            }
+
+            $slugInputRu = trim((string) ($_POST['issue_slug_ru_' . $id_issue] ?? ''));
+            $slugInputEn = trim((string) ($_POST['issue_slug_en_' . $id_issue] ?? ''));
+            $issueRow = array_merge($t, ['title' => $title]);
+            $issueSlugs = per_admin_resolve_slugs(
+                $db,
+                'issue',
+                $slugInputRu,
+                $slugInputEn,
+                static fn (): string => ezn_default_issue_ru($issueRow),
+                static fn (): string => ezn_default_issue_en($issueRow),
+                $id_issue,
+                'id_press',
+                $id
+            );
+            $stmt_issue_slug = $db->prepare('UPDATE issue SET slug_ru=?, slug_en=? WHERE id=? LIMIT 1');
+            if ($stmt_issue_slug) {
+                $stmt_issue_slug->bind_param('ssi', $issueSlugs['slug_ru'], $issueSlugs['slug_en'], $id_issue);
+                $stmt_issue_slug->execute();
+                $stmt_issue_slug->close();
             }
 
             if (($_POST['issue_delete_' . $id_issue] ?? null) == 1) {
@@ -159,6 +247,35 @@ if ($_POST['save'] == "save") {
         if ($stmt_pr) {
             $stmt_pr->bind_param("iisii", $type, $city, $title, $numbers, $id);
             $stmt_pr->execute();
+        }
+
+        $stmt_press_row = $db->prepare('SELECT * FROM press WHERE id=? LIMIT 1');
+        $pressRow = null;
+        if ($stmt_press_row) {
+            $stmt_press_row->bind_param('i', $id);
+            $stmt_press_row->execute();
+            $pressRow = $stmt_press_row->get_result()->fetch_assoc();
+            $stmt_press_row->close();
+        }
+        if (is_array($pressRow)) {
+            $pressRow['title'] = $title;
+            $slugInputRu = trim((string) ($_POST['slug_ru'] ?? ''));
+            $slugInputEn = trim((string) ($_POST['slug_en'] ?? ''));
+            $pressSlugs = per_admin_resolve_slugs(
+                $db,
+                'press',
+                $slugInputRu,
+                $slugInputEn,
+                static fn (): string => ezn_default_press_ru($pressRow),
+                static fn (): string => ezn_default_press_en($pressRow),
+                $id
+            );
+            $stmt_press_slug = $db->prepare('UPDATE press SET slug_ru=?, slug_en=? WHERE id=? LIMIT 1');
+            if ($stmt_press_slug) {
+                $stmt_press_slug->bind_param('ssi', $pressSlugs['slug_ru'], $pressSlugs['slug_en'], $id);
+                $stmt_press_slug->execute();
+                $stmt_press_slug->close();
+            }
         }
 
     }
@@ -264,6 +381,8 @@ if (!$id) {
         'type' => 0,
         'city' => 0,
         'numbers' => 0,
+        'slug_ru' => '',
+        'slug_en' => '',
     ]);
     $smarty->assign('issues', []);
     $smarty->assign('files', []);

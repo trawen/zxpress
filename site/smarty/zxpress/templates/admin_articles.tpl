@@ -380,7 +380,18 @@ HTML</b> <input type='checkbox' name='html' {if $html}checked{/if}>
 
 
 <td style="font: bold 11px Verdana; padding-left: 8px;" ROWSPAN=2>
-<a href="article.php?id={$articles[n].id}" target="_blank" style="color: blue">Предпросмотр статьи »</a> <br><br><br>
+<a href="article.php?id={$articles[n].id}" target="_blank" style="color: blue">Предпросмотр статьи »</a>
+{if $articles[n].slug_ru}<br><span style="font-weight: normal">/ru/ezines/…/{$articles[n].slug_ru}</span>{/if}
+<br><br><br>
+
+<b>Meta description (ru)</b><br>
+<input type="text" name="meta_description_ru_{$articles[n].id}" value="{$articles[n].meta_description_ru|escape:'html'}" size="60" maxlength="255" onchange="change('slug_change_{$articles[n].id}');"><br>
+<b>Meta description (en)</b><br>
+<input type="text" name="meta_description_en_{$articles[n].id}" value="{$articles[n].meta_description_en|escape:'html'}" size="60" maxlength="255" onchange="change('slug_change_{$articles[n].id}');"><br>
+<b>slug (ru)</b> <input type="text" name="slug_ru_{$articles[n].id}" value="{$articles[n].slug_ru|escape:'html'}" size="20" onchange="change('slug_change_{$articles[n].id}');">
+<b>slug (en)</b> <input type="text" name="slug_en_{$articles[n].id}" value="{$articles[n].slug_en|escape:'html'}" size="20" onchange="change('slug_change_{$articles[n].id}');">
+<input id="slug_change_{$articles[n].id}" type="hidden" value="" name="slug_change_{$articles[n].id}"/>
+<br><br>
 
 {if $articles[n].by}
 Добавил: 

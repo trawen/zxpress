@@ -21,6 +21,8 @@ function pub_nullable_text(string $value): ?string
     return $value !== '' ? $value : null;
 }
 
+require_once __DIR__ . '/includes/periodicals_slugs.php';
+
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 $error = null;
 
@@ -35,19 +37,38 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
     $form_en = plain_text_normalize_for_storage(pub_post_string('form_en'));
     $description_ru = plain_text_normalize_for_storage(pub_post_string('description_ru'));
     $description_en = plain_text_normalize_for_storage(pub_post_string('description_en'));
+    $meta_description_ru = plain_text_normalize_for_storage(pub_post_string('meta_description_ru'));
+    $meta_description_en = plain_text_normalize_for_storage(pub_post_string('meta_description_en'));
+    $slugInputRu = pub_post_string('slug_ru');
+    $slugInputEn = pub_post_string('slug_en');
     $city_id = pub_post_int('city_id');
     $active = !empty($_POST['active']) ? 1 : 0;
 
     if ($name_ru === '') {
         $error = 'Название (RU) обязательно';
     } else {
+        $publisherSeed = [
+            'name_ru' => $name_ru,
+            'name_en' => $name_en,
+            'meta_description_ru' => $meta_description_ru,
+            'meta_description_en' => $meta_description_en,
+        ];
+        $slugs = per_admin_resolve_slugs(
+            $db,
+            'publishers',
+            $slugInputRu,
+            $slugInputEn,
+            static fn (): string => per_slug_default_publisher_ru($publisherSeed),
+            static fn (): string => per_slug_default_publisher_en($publisherSeed),
+            $id
+        );
         $saved = false;
         if ($id === 0) {
             $saved = db_exec(
                 $db,
-                'INSERT INTO publishers (name_ru, name_en, alias_ru, alias_en, form_ru, form_en, description_ru, description_en, city_id, active) '
-                . 'VALUES (?,?,?,?,?,?,?,?,?,?)',
-                'ssssssssii',
+                'INSERT INTO publishers (name_ru, name_en, alias_ru, alias_en, form_ru, form_en, description_ru, description_en, meta_description_ru, meta_description_en, slug_ru, slug_en, city_id, active) '
+                . 'VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+                'ssssssssssssii',
                 $name_ru,
                 $name_en,
                 $alias_ru,
@@ -56,6 +77,10 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
                 $form_en,
                 pub_nullable_text($description_ru),
                 pub_nullable_text($description_en),
+                $meta_description_ru,
+                $meta_description_en,
+                $slugs['slug_ru'],
+                $slugs['slug_en'],
                 ($city_id > 0 ? $city_id : 1),
                 $active
             );
@@ -65,8 +90,8 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
         } else {
             $saved = db_exec(
                 $db,
-                'UPDATE publishers SET name_ru=?, name_en=?, alias_ru=?, alias_en=?, form_ru=?, form_en=?, description_ru=?, description_en=?, city_id=?, active=? WHERE id=? LIMIT 1',
-                'ssssssssiii',
+                'UPDATE publishers SET name_ru=?, name_en=?, alias_ru=?, alias_en=?, form_ru=?, form_en=?, description_ru=?, description_en=?, meta_description_ru=?, meta_description_en=?, slug_ru=?, slug_en=?, city_id=?, active=? WHERE id=? LIMIT 1',
+                'ssssssssssssiii',
                 $name_ru,
                 $name_en,
                 $alias_ru,
@@ -75,6 +100,10 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
                 $form_en,
                 pub_nullable_text($description_ru),
                 pub_nullable_text($description_en),
+                $meta_description_ru,
+                $meta_description_en,
+                $slugs['slug_ru'],
+                $slugs['slug_en'],
                 ($city_id > 0 ? $city_id : 1),
                 $active,
                 $id

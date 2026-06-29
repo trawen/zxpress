@@ -71,7 +71,7 @@ issues
 <a name="{$articles[n].issue}"></a>
 <br><hr><br>
 <div class="issue-section-header"><b>
-<a href="issue.php?id=189#{$articles[n].issue}">{$press.title_plain} #{$articles[n].issue}</a>
+<a href="{$articles[n].issue_url}">{$press.title_plain} #{$articles[n].issue}</a>
 </b>
 <br>
 {if $articles[n].date neq "01 января 1970"}
@@ -82,9 +82,9 @@ issues
 
 <div class="issue-article-link">
 {if $lng eq 'eng'}
-<a href="{$host}article.php?id={$articles[n].id}{$dl}">{$articles[n].title_eng_list nofilter}</a>
+<a href="{$articles[n].public_url}">{$articles[n].title_eng_list nofilter}</a>
 {else}
-<a href="{$host}article.php?id={$articles[n].id}{$dl}">{$articles[n].title_list nofilter}</a>
+<a href="{$articles[n].public_url}">{$articles[n].title_list nofilter}</a>
 {/if}
 </div>
 </div>
@@ -92,6 +92,9 @@ issues
 {/section}
 </td></tr></table>
 
+{if $issue_anchor}
+<script>if (!location.hash) { location.hash = '{$issue_anchor|escape:'javascript'}'; }</script>
+{/if}
 
 {include file="right.tpl"}
 {include file="footer.tpl"}

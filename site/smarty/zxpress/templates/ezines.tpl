@@ -21,7 +21,7 @@
 <div class="ezines-mobile-letter"><a name="letter_{$catalog[m].letter}">{$catalog[m].letter}</a></div>
 {/if}
 <div class="ezines-mobile-item{if $catalog[m].letter} ezines-mobile-item-letter{/if}">
-<a href="{$host}issue.php?id={$catalog[m].id}" {if $catalog[m].online_articles eq 0} class="catalog-link-offline"{/if}><b>{$catalog[m].title_plain}</b></a><span class="number">{$catalog[m].numbers}</span>{if $catalog[m].name}, {$catalog[m].name}{/if}{if $catalog[m].years_from neq 1970 or $catalog[m].years_to neq 1970}, <span class="ezines-mobile-years">{if $catalog[m].years_from neq 1970 AND $catalog[m].years_to neq 1970 AND $catalog[m].years_from neq $catalog[m].years_to}{$catalog[m].years_from}-{$catalog[m].years_to}{elseif $catalog[m].years_from neq 1970}{$catalog[m].years_from}{else}{$catalog[m].years_to}{/if}</span>{/if}{if $a}, {if $catalog[m].finish eq 100}<img src="{$host}img/ok.png" width="18" alt="100%">{elseif $catalog[m].finish eq 0}—{else}{$catalog[m].finish}%{/if}{/if}
+<a href="{$catalog[m].public_url}" {if $catalog[m].online_articles eq 0} class="catalog-link-offline"{/if}><b>{$catalog[m].title_plain}</b></a><span class="number">{$catalog[m].numbers}</span>{if $catalog[m].name}, {$catalog[m].name}{/if}{if $catalog[m].years_from neq 1970 or $catalog[m].years_to neq 1970}, <span class="ezines-mobile-years">{if $catalog[m].years_from neq 1970 AND $catalog[m].years_to neq 1970 AND $catalog[m].years_from neq $catalog[m].years_to}{$catalog[m].years_from}-{$catalog[m].years_to}{elseif $catalog[m].years_from neq 1970}{$catalog[m].years_from}{else}{$catalog[m].years_to}{/if}</span>{/if}{if $a}, {if $catalog[m].finish eq 100}<img src="{$host}img/ok.png" width="18" alt="100%">{elseif $catalog[m].finish eq 0}—{else}{$catalog[m].finish}%{/if}{/if}
 </div>
 {/if}
 {/section}
@@ -55,7 +55,7 @@
 <td class="catalog2" valign="bottom">
 <a name="letter_{$catalog[n].letter}">
 <div class="catalog-letter">{$catalog[n].letter}</div></a></td>
-<td class="catalog2" valign="bottom"><a href="{$host}issue.php?id={$catalog[n].id}" {if $catalog[n].online_articles eq 0} class="catalog-link-offline"{/if}><b>{$catalog[n].title_plain}</b></a>
+<td class="catalog2" valign="bottom"><a href="{$catalog[n].public_url}" {if $catalog[n].online_articles eq 0} class="catalog-link-offline"{/if}><b>{$catalog[n].title_plain}</b></a>
 <span class="number">{$catalog[n].numbers}</span>
 </td>
 
@@ -90,7 +90,7 @@
 
 
 <td></td>
-<td class="catalog"><a href="{$host}issue.php?id={$catalog[n].id}" {if $catalog[n].online_articles eq 0} class="catalog-link-offline"{/if}><b>{$catalog[n].title_plain}</b></a>
+<td class="catalog"><a href="{$catalog[n].public_url}" {if $catalog[n].online_articles eq 0} class="catalog-link-offline"{/if}><b>{$catalog[n].title_plain}</b></a>
 <span class="number">{$catalog[n].numbers}</span>
 </td>
 

@@ -3,6 +3,8 @@
  * Dynamic sitemap.xml for Russian public pages in articles, books, and snailmail sections.
  */
 
+require_once __DIR__ . '/ezine_slugs.php';
+
 /**
  * Resolve languages.id for Russian editions (books, press). Null if unknown — no language filter.
  */
@@ -122,7 +124,7 @@ function sitemap_render(mysqli $db, string $origin): void
 	echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
 
 	// --- Section index pages (Russian, no lng=eng) ---
-	sitemap_emit_url(rtrim($origin, '/') . '/ezines.php', $lastmodToday, 'weekly', '0.9');
+	sitemap_emit_url(rtrim($origin, '/') . '/ru/ezines', $lastmodToday, 'weekly', '0.9');
 	sitemap_emit_url(rtrim($origin, '/') . '/books.php', $lastmodToday, 'weekly', '0.9');
 	sitemap_emit_url(rtrim($origin, '/') . '/snailmail.php', $lastmodToday, 'weekly', '0.9');
 
@@ -138,7 +140,11 @@ function sitemap_render(mysqli $db, string $origin): void
 		if ($id <= 0) {
 			continue;
 		}
-		$entry = sitemap_url_entry($origin, 'article.php?id=' . $id, $lastmodToday);
+		$canonical = ezn_canonical_article_url($db, $id, false);
+		$path = ($canonical !== null && !str_starts_with($canonical, '/article.php'))
+			? $canonical
+			: 'article.php?id=' . $id;
+		$entry = sitemap_url_entry($origin, $path, $lastmodToday);
 		sitemap_emit_url($entry['loc'], $entry['lastmod'], 'monthly', '0.7');
 	}
 
@@ -154,7 +160,11 @@ function sitemap_render(mysqli $db, string $origin): void
 		if ($pressId <= 0) {
 			continue;
 		}
-		$entry = sitemap_url_entry($origin, 'issue.php?id=' . $pressId, $lastmodToday);
+		$canonical = ezn_canonical_press_url($db, $pressId, false);
+		$path = ($canonical !== null && !str_starts_with($canonical, '/issue.php'))
+			? $canonical
+			: 'issue.php?id=' . $pressId;
+		$entry = sitemap_url_entry($origin, $path, $lastmodToday);
 		sitemap_emit_url($entry['loc'], $entry['lastmod'], 'monthly', '0.6');
 	}
 

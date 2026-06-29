@@ -1,10 +1,47 @@
 <?php
 require 'init.inc';
+require_once __DIR__ . '/includes/ezine_slugs.php';
 
 $smarty->assign('issue_archive_hidden', htmlspecialchars($_GET['issue_archive_hidden'] ?? '', ENT_QUOTES, 'UTF-8'));
 
-$id = intval($_GET['id']);
-if (!$id) {$id = 1;}
+$pressSlug = per_slug_normalize_path((string) ($_GET['press_slug'] ?? ''));
+$issueSlug = per_slug_normalize_path((string) ($_GET['issue_slug'] ?? ''));
+$slugRoute = ($pressSlug !== '');
+
+$id = (int) ($_GET['id'] ?? 0);
+$isEng = ($_GET['lng'] ?? '') === 'eng';
+
+if ($slugRoute) {
+	$pressId = ezn_find_press_id($db, $pressSlug, $isEng);
+	if ($pressId <= 0) {
+		http_response_code(404);
+		$smarty->assign('press', null);
+		$smarty->assign('title', $isEng ? 'Publication not found' : 'Издание не найдено');
+		include 'right.php';
+		$smarty->display('issue.tpl');
+		exit;
+	}
+	$id = $pressId;
+	if ($issueSlug !== '') {
+		$issueIdForAnchor = ezn_find_issue_id($db, $id, $issueSlug, $isEng);
+		if ($issueIdForAnchor > 0) {
+			$stmt_anchor = $db->prepare('SELECT title FROM issue WHERE id=? LIMIT 1');
+			if ($stmt_anchor) {
+				$stmt_anchor->bind_param('i', $issueIdForAnchor);
+				$stmt_anchor->execute();
+				$anchorRow = $stmt_anchor->get_result()->fetch_assoc();
+				$stmt_anchor->close();
+				if (is_array($anchorRow) && ($anchorRow['title'] ?? '') !== '') {
+					$smarty->assign('issue_anchor', (string) $anchorRow['title']);
+				}
+			}
+		}
+	}
+} elseif ($id > 0) {
+	ezn_maybe_redirect_press_legacy($db, $id, $isEng);
+} else {
+	$id = 1;
+}
 
 
 
@@ -78,7 +115,38 @@ if ($t['years_from']) {
 
 $num = array("выпуск","выпуска","выпусков");
 $smarty->assign("num", getNumEnding($t['numbers'], $num));
+$t['public_url'] = ezn_url_press($t, ($_GET['lng'] ?? '') === 'eng');
+$pressRow = [
+	'id' => (int) $t['id'],
+	'title' => (string) ($t['title'] ?? ''),
+	'slug_ru' => (string) ($t['slug_ru'] ?? ''),
+	'slug_en' => (string) ($t['slug_en'] ?? ''),
+];
 $smarty->assign('press', $t);
+
+$isEngIssue = ($_GET['lng'] ?? '') === 'eng';
+$issueCanonRow = null;
+$issueCanonicalPath = ezn_url_press($pressRow, $isEngIssue);
+if ($issueSlug !== '') {
+	$issueIdForCanonical = ezn_find_issue_id($db, $id, $issueSlug, $isEngIssue);
+	if ($issueIdForCanonical > 0) {
+		$stmtIssueCanon = $db->prepare('SELECT id, id_press, title, slug_ru, slug_en FROM issue WHERE id=? LIMIT 1');
+		if ($stmtIssueCanon) {
+			$stmtIssueCanon->bind_param('i', $issueIdForCanonical);
+			$stmtIssueCanon->execute();
+			$issueCanonRow = $stmtIssueCanon->get_result()->fetch_assoc();
+			$stmtIssueCanon->close();
+			if (is_array($issueCanonRow)) {
+				$issueCanonicalPath = ezn_url_issue($pressRow, $issueCanonRow, $isEngIssue);
+			}
+		}
+	}
+}
+$origin = zxpress_canonical_origin();
+$smarty->assign('canonical_url', $origin . $issueCanonicalPath);
+$smarty->assign('hreflang_ru', $origin . ezn_url_for_lang(false, $pressRow, $issueCanonRow, null));
+$smarty->assign('hreflang_en', $origin . ezn_url_for_lang(true, $pressRow, $issueCanonRow, null));
+ezn_assign_lang_switch_urls($smarty, $pressRow, null, null);
 
 
 
@@ -99,10 +167,12 @@ $smarty->assign('issues', $is);
 
 
 // Prefetch all articles for this press with issue data in one query
-$stmt = mysqli_prepare($db, "SELECT articles.*, issue.title AS issue_title, issue.date AS issue_date, issue.id AS issue_id FROM articles JOIN issue ON articles.id_issue=issue.id WHERE articles.temp=0 AND issue.id_press=? ORDER BY issue.title DESC, articles.number, articles.title");
+$stmt = mysqli_prepare($db, "SELECT articles.*, issue.title AS issue_title, issue.slug_ru AS issue_slug_ru, issue.slug_en AS issue_slug_en, issue.date AS issue_date, issue.id AS issue_id FROM articles JOIN issue ON articles.id_issue=issue.id WHERE articles.temp=0 AND issue.id_press=? ORDER BY issue.title DESC, articles.number, articles.title");
 mysqli_stmt_bind_param($stmt, "i", $id);
 mysqli_stmt_execute($stmt);
 $z = mysqli_stmt_get_result($stmt);
+
+$isEngIssue = ($_GET['lng'] ?? '') === 'eng';
 
 $a = 0;
 $prev_issue = null;
@@ -121,6 +191,15 @@ while ($t2 = mysqli_fetch_array($z)) {
 	}
 	$t2['title_list'] = article_title_list_html($t2['title'] ?? '');
 	$t2['title_eng_list'] = article_title_list_html($t2['title_eng'] ?? '');
+	$issueRow = [
+		'id' => (int) $t2['issue_id'],
+		'id_press' => $id,
+		'title' => (string) $t2['issue_title'],
+		'slug_ru' => (string) ($t2['issue_slug_ru'] ?? ''),
+		'slug_en' => (string) ($t2['issue_slug_en'] ?? ''),
+	];
+	$t2['issue_url'] = ezn_url_issue($pressRow, $issueRow, $isEngIssue);
+	$t2['public_url'] = ezn_url_article($pressRow, $issueRow, $t2, $isEngIssue);
 	$art[$a] = $t2;
 	$a++;
 }

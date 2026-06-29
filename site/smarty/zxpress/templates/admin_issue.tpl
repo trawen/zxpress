@@ -58,6 +58,10 @@
 
  &nbsp; Количество выпусков <input type="text" name="numbers" value="{$press.numbers}" onchange="change('press_change');">
 
+<br><br>
+slug (ru) <input type="text" name="slug_ru" value="{$press.slug_ru}" size="24" onchange="change('press_change');">
+slug (en) <input type="text" name="slug_en" value="{$press.slug_en}" size="24" onchange="change('press_change');">
+
 </td>
 <td align="right">
 <a href="admin_issue.php?id=0" style="color: blue">Добавить новое издание +</a>
@@ -88,6 +92,11 @@
 
 <div style="padding: 4px;">
 название <input type="text" size="3" value="{$issues[n].title}" name="issue_title_{$issues[n].id}">
+</div>
+
+<div style="padding: 4px;">
+slug ru <input type="text" size="12" value="{$issues[n].slug_ru}" name="issue_slug_ru_{$issues[n].id}">
+slug en <input type="text" size="12" value="{$issues[n].slug_en}" name="issue_slug_en_{$issues[n].id}">
 </div>
 
 <div style="padding: 4px;">

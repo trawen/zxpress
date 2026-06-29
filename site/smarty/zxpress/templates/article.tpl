@@ -31,10 +31,10 @@
 
             {if $lng eq 'eng'}
                 <a class="title link-issue"
-                    href="{$host}issue.php?id={$press[5]}{$dl}#{$issue.title}">{$article.name_plain}</a>
+                    href="{$issue_public_url}">{$article.name_plain}</a>
             {else}
                 <a class="title link-issue"
-                    href="{$host}issue.php?id={$press[5]}{$dl}#{$issue.title}">{$press.title_plain}
+                    href="{$issue_public_url}">{$press.title_plain}
                     #{$issue.title}</a>
             {/if}
 
@@ -129,7 +129,7 @@
                     {else}
                         <td>
                             <h2>
-                                <a href="article.php?id={$other_articles[n].id}{$dl}"> {$other_articles[n].title_eng_html nofilter}</a>
+                                <a href="{$other_articles[n].public_url}"> {$other_articles[n].title_eng_html nofilter}</a>
                             </h2>
                         </td>
                     {/if}
@@ -155,7 +155,7 @@
                     {else}
                         <td>
                             <h2>
-                                <a href="article.php?id={$other_articles[n].id}{$dl}"> {$other_articles[n].title_html nofilter}</a>
+                                <a href="{$other_articles[n].public_url}"> {$other_articles[n].title_html nofilter}</a>
                             </h2>
                         </td>
                     {/if}
