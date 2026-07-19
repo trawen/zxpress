@@ -96,8 +96,8 @@ services:
     restart: unless-stopped
     read_only: true
     tmpfs:
-      - /home/zxpress/tmp:size=64m,uid=33,gid=33,noexec,nosuid,nodev
-      - /tmp:size=16m,noexec,nosuid,nodev
+      - /home/zxpress/tmp:size=256m,uid=33,gid=33,noexec,nosuid,nodev
+      - /tmp:size=64m,noexec,nosuid,nodev
       - /var/run:size=1m,noexec,nosuid,nodev
       - /var/log:size=8m,noexec,nosuid,nodev
     cap_drop: [ALL]

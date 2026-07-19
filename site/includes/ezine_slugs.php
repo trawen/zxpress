@@ -56,7 +56,7 @@ function ezn_is_eng(?string $lng): bool
 
 function ezn_path_prefix(bool $isEng): string
 {
-    return $isEng ? '/eng' : '/ru';
+    return $isEng ? '/en' : '/ru';
 }
 
 function ezn_section(): string

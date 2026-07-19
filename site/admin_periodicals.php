@@ -321,7 +321,7 @@ if (($_POST['save_issue'] ?? '') === 'Сохранить выпуск') {
                     $db,
                     'UPDATE periodical_issues SET issue_volume=?, issue_no=?, issue_date=?, issue_year=?, title_ru=?, title_en=?, slug_ru=?, slug_en=?, description_ru=?, description_en=?, meta_description_ru=?, meta_description_en=?, is_active=?, is_bound=?, circulation=?, pages=? '
                     . 'WHERE id=? AND periodical_id=? LIMIT 1',
-                    'ississssssssiiii',
+                    'ississssssssiiiiii',
                     $issue_volume,
                     $issue_no,
                     $issue_date,

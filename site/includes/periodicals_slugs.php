@@ -232,7 +232,7 @@ function per_slug_scope_for_row(string $table, array $row): array
 
 function per_pub_path_prefix(bool $isEng): string
 {
-    return $isEng ? '/eng' : '/ru';
+    return $isEng ? '/en' : '/ru';
 }
 
 function per_pub_url_catalog(bool $isEng): string

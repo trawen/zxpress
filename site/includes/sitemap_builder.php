@@ -4,6 +4,7 @@
  */
 
 require_once __DIR__ . '/ezine_slugs.php';
+require_once __DIR__ . '/letters_slugs.php';
 
 /**
  * Resolve languages.id for Russian editions (books, press). Null if unknown — no language filter.
@@ -126,7 +127,7 @@ function sitemap_render(mysqli $db, string $origin): void
 	// --- Section index pages (Russian, no lng=eng) ---
 	sitemap_emit_url(rtrim($origin, '/') . '/ru/ezines', $lastmodToday, 'weekly', '0.9');
 	sitemap_emit_url(rtrim($origin, '/') . '/books.php', $lastmodToday, 'weekly', '0.9');
-	sitemap_emit_url(rtrim($origin, '/') . '/snailmail.php', $lastmodToday, 'weekly', '0.9');
+	sitemap_emit_url(rtrim($origin, '/') . '/ru/snailmail', $lastmodToday, 'weekly', '0.9');
 
 	// --- Articles (press / ezines): public Russian articles only ---
 	$sqlArticles = 'SELECT a.id FROM articles a '
@@ -209,13 +210,17 @@ function sitemap_render(mysqli $db, string $origin): void
 	}
 
 	// --- Snailmail (active letters, Russian UI URLs) ---
-	$zLet = db_select($db, 'SELECT id FROM letters WHERE is_active = 1 ORDER BY id ASC');
+	$zLet = db_select($db, 'SELECT id, slug_ru, slug_en FROM letters WHERE is_active = 1 ORDER BY id ASC');
 	while ($zLet && ($row = mysqli_fetch_assoc($zLet))) {
 		$id = (int) ($row['id'] ?? 0);
 		if ($id <= 0) {
 			continue;
 		}
-		$entry = sitemap_url_entry($origin, 'snailmail.php?id=' . $id, $lastmodToday);
+		$path = letters_url_letter($row, false);
+		if (str_starts_with($path, '/snailmail.php')) {
+			$path = 'snailmail.php?id=' . $id;
+		}
+		$entry = sitemap_url_entry($origin, $path, $lastmodToday);
 		sitemap_emit_url($entry['loc'], $entry['lastmod'], 'monthly', '0.7');
 	}
 

@@ -37,16 +37,6 @@
 	{if $per_issue.preview_caption}{$per_issue.preview_caption|escape:'html'}{else}{$per_issue.label|escape:'html'}{/if}
 </p>
 
-<table class="pub-header-table" cellpadding="0" cellspacing="0" border="0">
-<tr valign="top">
-{if $per_issue.cover}
-<td class="pub-cover-cell">
-	<a href="{$per_issue.cover.jpg_url}" target="_blank" rel="noopener">
-		<img src="{$per_issue.cover.display_src}" alt="" class="pub-cover-img">
-	</a>
-</td>
-{/if}
-<td>
 <h1 class="pub-title">{$per_issue.label|escape:'html'}</h1>
 <div class="pub-info">
 	<span>{$periodical.title_display|escape:'html'}</span>
@@ -54,12 +44,33 @@
 	{if $per_issue.pages} &nbsp;·&nbsp; {if $lng eq 'eng'}{$per_issue.pages} pp.{else}{$per_issue.pages} стр.{/if}{/if}
 	{if $per_issue.circulation} &nbsp;·&nbsp; {if $lng eq 'eng'}circ. {$per_issue.circulation}{else}тираж {$per_issue.circulation}{/if}{/if}
 </div>
-{if $per_issue.description_html}
+
+{if $per_issue.cover && $per_issue.description_html}
+<table class="pub-header-table pub-issue-lead" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td class="pub-cover-cell">
+	<a href="{$per_issue.cover.jpg_url}" target="_blank" rel="noopener">
+		<img src="{$per_issue.cover.display_src}" alt="" class="pub-cover-img">
+	</a>
+</td>
+<td class="pub-header-desc-cell">
 <div class="pub-toc-summary">{$per_issue.description_html nofilter}</div>
-{/if}
 </td>
 </tr>
 </table>
+{elseif $per_issue.cover}
+<table class="pub-header-table pub-issue-lead" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td class="pub-cover-cell">
+	<a href="{$per_issue.cover.jpg_url}" target="_blank" rel="noopener">
+		<img src="{$per_issue.cover.display_src}" alt="" class="pub-cover-img">
+	</a>
+</td>
+</tr>
+</table>
+{elseif $per_issue.description_html}
+<div class="pub-toc-summary">{$per_issue.description_html nofilter}</div>
+{/if}
 
 {if $per_issue.files && $per_issue.files|@count gt 0}
 <div class="pub-files">

@@ -133,7 +133,7 @@
 <td>Slug EN (URL)</td>
 <td>
 <input type="text" name="slug_en" style="width:420px" maxlength="255" value="{if $periodical}{$periodical.slug_en}{/if}">
-<div style="font:normal 10px Verdana;color:#666;margin-top:2px">/eng/periodicals/<i>slug</i> — пусто = из названия (EN)</div>
+<div style="font:normal 10px Verdana;color:#666;margin-top:2px">/en/periodicals/<i>slug</i> — пусто = из названия (EN)</div>
 </td>
 </tr>
 <tr>

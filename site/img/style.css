@@ -1013,6 +1013,14 @@ time {
 	border: 1px solid #ccc;
 }
 
+.pub-issue-lead {
+	margin-top: 12px;
+}
+
+.pub-header-desc-cell {
+	vertical-align: top;
+}
+
 .pub-title {
 	margin-top: 0;
 }
@@ -1427,7 +1435,7 @@ a.title.link-issue { font-size: 26px; }
 .letter-meta-to { font-size: 14px; margin: 0 0 8px 0; }
 .letter-filter-h1 { font: bold 24px Timex, Times, serif; }
 .letter-summary-block { margin: 12px 0; font-size: 16px; text-indent: 0; padding-left: 0; margin-left: 0; }
-.letter-summary { font-style: italic; }
+.letter-summary { font-style: italic; white-space: pre-line; }
 .letter-banner { margin-bottom: 12px; }
 .letter-banner-img { max-width: 100%; height: auto; }
 .letter-list-placeholder { width: 128px; height: 96px; background: #eee; border: 1px solid #ccc; }

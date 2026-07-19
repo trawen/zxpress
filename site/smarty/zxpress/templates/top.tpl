@@ -124,7 +124,7 @@
 					<div class="top-menu-line top-menu-line--primary">
 						<a href="{$host}ezines.php{$sl}" class="top-menu-item"><span class="top-menu-item-icon top-menu-item-icon--ezines" aria-hidden="true"></span><span class="top-menu-label-desktop">Пресса</span><span class="top-menu-label-mobile">Электронные журналы и газеты</span></a><span class="top-menu-sep"> ▪</span>
 						<a href="{$host}books.php{$sl}" class="top-menu-item"><span class="top-menu-item-icon top-menu-item-icon--books" aria-hidden="true"></span><span class="top-menu-label-desktop">Книги</span><span class="top-menu-label-mobile">Книги и бумажные журналы</span></a><span class="top-menu-sep"> ▪</span>
-						<a href="{$host}snailmail.php{$sl}" class="top-menu-item"><span class="top-menu-item-icon top-menu-item-icon--letters" aria-hidden="true"></span><span class="top-menu-label-desktop">Бумажные письма</span><span class="top-menu-label-mobile">Бумажные письма</span></a><span class="top-menu-sep"> ▪</span>
+						<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/snailmail" class="top-menu-item"><span class="top-menu-item-icon top-menu-item-icon--letters" aria-hidden="true"></span><span class="top-menu-label-desktop">Бумажные письма</span><span class="top-menu-label-mobile">Бумажные письма</span></a><span class="top-menu-sep"> ▪</span>
 						<a href="{$host}zxnet{$sl}" class="top-menu-item"><span class="top-menu-item-icon top-menu-item-icon--zxnet" aria-hidden="true"></span><span class="top-menu-label-desktop">ZXNet</span><span class="top-menu-label-mobile">ZXNet эхоконференции</span></a>
 					</div>
 					</div>

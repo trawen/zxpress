@@ -9,7 +9,7 @@
 {if $letter}
 
 <p class="pub-breadcrumbs">
-	<a href="{$host}snailmail.php{if $lng eq 'eng'}?lng=eng{/if}">{if $lng eq 'eng'}← All letters{else}← Все бумажные письма{/if}</a>
+	<a href="{$letters_catalog_url}">{if $lng eq 'eng'}← All letters{else}← Все бумажные письма{/if}</a>
 </p>
 
 <h1>{$letter.title_display}</h1>
@@ -47,14 +47,14 @@
 {elseif $letter_not_found}
 
 <h1>{if $lng eq 'eng'}Letter not found{else}Бумажное письмо не найдено{/if}</h1>
-<p><a href="{$host}snailmail.php{if $lng eq 'eng'}?lng=eng{/if}">{if $lng eq 'eng'}Back to the letter catalog{else}К каталогу бумажных писем{/if}</a></p>
+<p><a href="{$letters_catalog_url}">{if $lng eq 'eng'}Back to the letter catalog{else}К каталогу бумажных писем{/if}</a></p>
 
 {else}
 
 {if $filter_from && $filter_from_author_display}
 <h1 class="letter-filter-h1">{if $lng eq 'eng'}All letters from {$filter_from_author_display}{else}Все бумажные письма от {$filter_from_author_display}{/if}</h1>
 <p class="pub-breadcrumbs">
-	<a href="{$host}snailmail.php{if $lng eq 'eng'}?lng=eng{/if}">{if $lng eq 'eng'}← All letters{else}← Все бумажные письма{/if}</a>
+	<a href="{$letters_catalog_url}">{if $lng eq 'eng'}← All letters{else}← Все бумажные письма{/if}</a>
 </p>
 {else}
 <h1>{if $lng eq 'eng'}Paper letters from mid-1990s members of the ZX Spectrum scene{else}Бумажные письма середины 90-х годов от участников ZX Spectrum сцены{/if}</h1>
@@ -78,11 +78,11 @@ Swapping и Snailmail — культура обмена дискетами, ка
 		{if $filter_from && $auth.id == $filter_from}
 			<b>{$auth.author_display}</b>
 		{else}
-			<a href="{$host}snailmail.php?from={$auth.id}{if $lng eq 'eng'}&amp;lng=eng{/if}">{$auth.author_display}</a>
+			<a href="{$letters_catalog_url}?from={$auth.id}">{$auth.author_display}</a>
 		{/if}
 	{/foreach}
 	{if $filter_from}
-		 , <a href="{$host}snailmail.php{if $lng eq 'eng'}?lng=eng{/if}">{if $lng eq 'eng'}all{else}все{/if}</a>
+		 , <a href="{$letters_catalog_url}">{if $lng eq 'eng'}all{else}все{/if}</a>
 	{/if}
 </p>
 {/if}
@@ -93,7 +93,7 @@ Swapping и Snailmail — культура обмена дискетами, ка
 <tr valign="top">
 <td width="140" class="pub-list-cover-cell">
 {if $row.cover}
-	<a href="{$host}snailmail.php?id={$row.id}{if $lng eq 'eng'}&amp;lng=eng{/if}">
+	<a href="{$row.public_url}">
 		<img src="{$row.cover.thumb_src}" alt="" width="128" class="pub-list-thumb">
 	</a>
 {else}
@@ -104,13 +104,13 @@ Swapping и Snailmail — культура обмена дискетами, ка
 {/if}
 </td>
 <td>
-	<a href="{$host}snailmail.php?id={$row.id}{if $lng eq 'eng'}&amp;lng=eng{/if}" class="pub-list-title">{$row.title_display}</a>
+	<a href="{$row.public_url}" class="pub-list-title">{$row.title_display}</a>
 	{if $row.summary_html}
 	<div class="pub-list-summary pub-list-summary--lg">{$row.summary_html nofilter}</div>
 	{/if}
 	<div class="letter-list-correspondents">
-		{if $lng eq 'eng'}From{else}От{/if} <b><a href="{$host}snailmail.php?from={$row.author_from}{if $lng eq 'eng'}&amp;lng=eng{/if}" class="u-link-inherit">{$row.from_author_display}</a></b>
-		 {if $lng eq 'eng'}to{else}к{/if} <b><a href="{$host}snailmail.php?from={$row.author_to}{if $lng eq 'eng'}&amp;lng=eng{/if}" class="u-link-inherit">{$row.to_author_display}</a></b>
+		{if $lng eq 'eng'}From{else}От{/if} <b><a href="{$letters_catalog_url}?from={$row.author_from}" class="u-link-inherit">{$row.from_author_display}</a></b>
+		 {if $lng eq 'eng'}to{else}к{/if} <b><a href="{$letters_catalog_url}?from={$row.author_to}" class="u-link-inherit">{$row.to_author_display}</a></b>
 		{if $row.date_display}
 			&nbsp;·&nbsp; {$row.date_display}
 		{/if}
@@ -133,7 +133,7 @@ Swapping и Snailmail — культура обмена дискетами, ка
 		{if $pnum == $letters_page}
 			<b>{$pnum}</b>
 		{else}
-			<a href="{$host}snailmail.php?p={$pnum}{if $filter_from}&amp;from={$filter_from}{/if}{if $lng eq 'eng'}&amp;lng=eng{/if}">{$pnum}</a>
+			<a href="{$letters_catalog_url}?p={$pnum}{if $filter_from}&amp;from={$filter_from}{/if}">{$pnum}</a>
 		{/if}
 		{if !$smarty.section.pg.last} {/if}
 	{/section}

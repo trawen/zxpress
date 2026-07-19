@@ -1,5 +1,7 @@
 <?php
 require 'init.inc';
+require_once __DIR__ . '/includes/letters_publish.php';
+require_once __DIR__ . '/includes/letters_slugs.php';
 
 const LETTERS_ENTITY_TYPE = 1;
 const LETTERS_PER_PAGE = 20;
@@ -37,7 +39,8 @@ function letters_public_summary_html(?string $s): string
 	if ($s === '') {
 		return '';
 	}
-	return nl2br(htmlspecialchars($s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'));
+	// Do not nl2br: .pub-body / .letter-summary / .pub-list-summary--lg use white-space: pre-line.
+	return htmlspecialchars($s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 }
 
 /** Nickname, optional group_name after "/", no spaces; optional (city, country) when both are set (if $includeGeo). */
@@ -178,6 +181,7 @@ function letters_public_enrich_row(array $row, bool $isEng): array
 	$row['published_display'] = letters_public_date_display($row['created_at'] ?? null, $isEng);
 	$row['from_author_display'] = letters_public_author_from_row($row, 'from', $isEng);
 	$row['to_author_display'] = letters_public_author_from_row($row, 'to', $isEng);
+	$row['public_url'] = letters_url_letter($row, $isEng);
 	return $row;
 }
 
@@ -186,12 +190,39 @@ function letters_public_lng_suffix(bool $isEng): string
 	return $isEng ? '&lng=eng' : '';
 }
 
+$lng = $smarty->getTemplateVars('lng');
+$isEng = letters_public_is_eng($lng);
+
+$letterSlug = trim((string) ($_GET['letter_slug'] ?? ''));
 $id = (int) ($_GET['id'] ?? 0);
 $fromAuthor = (int) ($_GET['from'] ?? 0);
 $page = max(1, (int) ($_GET['p'] ?? 1));
 $offset = ($page - 1) * LETTERS_PER_PAGE;
-$lng = $smarty->getTemplateVars('lng');
-$isEng = letters_public_is_eng($lng);
+
+// Lazy auto-publish: at most one queued letter per calendar day.
+letters_maybe_publish_next($db);
+
+if ($letterSlug !== '') {
+	$id = letters_find_id_by_slug($db, $letterSlug, $isEng);
+	if ($id <= 0) {
+		http_response_code(404);
+		$smarty->assign('letter', null);
+		$smarty->assign('letter_images', []);
+		$smarty->assign('letter_not_found', true);
+		$smarty->assign('title', $isEng ? 'Letter not found' : 'Бумажное письмо не найдено');
+		$smarty->assign('og_title', '');
+		$smarty->assign('og_description', '');
+		$smarty->assign('og_image', '');
+		$smarty->assign('og_url', '');
+		$smarty->assign('og_type', '');
+		$smarty->assign('letters_catalog_url', letters_url_catalog($isEng));
+		letters_assign_lang_switch_urls($smarty, null);
+		$smarty->display('letters.tpl');
+		exit;
+	}
+}
+
+letters_maybe_redirect_legacy($db, $letterSlug !== '', $id, $isEng);
 
 if ($id > 0) {
 	$stmt = $db->prepare(
@@ -237,6 +268,15 @@ if ($id > 0) {
 
 		$letter = letters_public_enrich_row($letter, $isEng);
 
+		if ($letterSlug !== '') {
+			$canonicalSlug = letters_row_slug($letter, $isEng);
+			$incomingSlug = letters_slug_normalize_path($letterSlug);
+			if ($canonicalSlug !== '' && $incomingSlug !== '' && $canonicalSlug !== $incomingSlug) {
+				header('Location: ' . letters_url_letter($letter, $isEng), true, 301);
+				exit;
+			}
+		}
+
 		$images = [];
 		$stImg = $db->prepare(
 			'SELECT id, format, sort_order FROM images WHERE entity_type = ? AND entity_id = ? AND is_active = 1 '
@@ -277,8 +317,15 @@ if ($id > 0) {
 		$smarty->assign('og_title', $titlePlain);
 		$smarty->assign('og_description', $descPlain);
 		$smarty->assign('og_image', $ogImage);
-		$smarty->assign('og_url', $origin . '/snailmail.php?id=' . $id . letters_public_lng_suffix($isEng));
+		$smarty->assign('og_url', $origin . $letter['public_url']);
 		$smarty->assign('og_type', 'article');
+		$smarty->assign('letters_catalog_url', letters_url_catalog($isEng));
+		letters_assign_lang_switch_urls($smarty, $letter);
+	}
+
+	if (!isset($letter) || !$letter) {
+		$smarty->assign('letters_catalog_url', letters_url_catalog($isEng));
+		letters_assign_lang_switch_urls($smarty, null);
 	}
 
 	include 'right.php';
@@ -382,7 +429,7 @@ $sqlList = 'SELECT l.*, '
 	. 'LEFT JOIN cities ctn ON ctn.id = at.city_id '
 	. 'LEFT JOIN countries cnt ON cnt.id = at.country_id '
 	. "WHERE $where "
-	. 'ORDER BY l.created_at DESC, l.id DESC '
+	. 'ORDER BY COALESCE(l.published_at, l.created_at) DESC, l.id DESC '
 	. 'LIMIT ? OFFSET ?';
 $typesList = $types . 'ii';
 $paramsList = $params;
@@ -443,15 +490,14 @@ $smarty->assign('og_title', $filterFromAuthorDisplay !== ''
 		: 'Бумажные письма участников ZX Spectrum сцены'));
 $smarty->assign('og_description', $catalogDesc);
 $smarty->assign('og_image', $origin . '/img/snailmail.png');
-$ogUrl = $origin . '/snailmail.php';
+$catalogUrl = letters_url_catalog($isEng);
 if ($fromAuthor > 0) {
-	$ogUrl .= '?from=' . $fromAuthor;
+	$catalogUrl .= '?from=' . $fromAuthor;
 }
-if ($isEng) {
-	$ogUrl .= ($fromAuthor > 0 ? '&' : '?') . 'lng=eng';
-}
-$smarty->assign('og_url', $ogUrl);
+$smarty->assign('og_url', $origin . $catalogUrl);
 $smarty->assign('og_type', 'website');
+$smarty->assign('letters_catalog_url', letters_url_catalog($isEng));
+letters_assign_lang_switch_urls($smarty, null);
 
 include 'right.php';
 $smarty->display('letters.tpl');

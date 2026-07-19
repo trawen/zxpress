@@ -94,7 +94,7 @@ final class PeriodicalsSlugsTest extends TestCase
     public function testUrlCatalogUsesEngPrefix(): void
     {
         self::assertSame('/ru/periodicals', per_pub_url_catalog(false));
-        self::assertSame('/eng/periodicals', per_pub_url_catalog(true));
+        self::assertSame('/en/periodicals', per_pub_url_catalog(true));
     }
 
     public function testUrlPeriodicalBuildsSlugPath(): void
@@ -104,7 +104,7 @@ final class PeriodicalsSlugsTest extends TestCase
             per_pub_url_periodical(['id' => 6, 'slug_ru' => 'spectr', 'slug_en' => 'spectrum'], false)
         );
         self::assertSame(
-            '/eng/periodicals/spectrum',
+            '/en/periodicals/spectrum',
             per_pub_url_periodical(['id' => 6, 'slug_ru' => 'spectr', 'slug_en' => 'spectrum'], true)
         );
     }
