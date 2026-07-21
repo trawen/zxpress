@@ -1,5 +1,6 @@
 <?php
 require 'init.inc';
+require_once __DIR__ . '/includes/authors_slugs.php';
 
 if (!isset($_SESSION['login']) || !$_SESSION['login']) {
     header('HTTP/1.1 403 Forbidden');
@@ -33,15 +34,29 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
     if ($nickname === '') {
         $smarty->assign('error', 'Ник обязателен');
     } else {
+        $slugs = authors_resolve_slugs(
+            $db,
+            zx_post_string('slug_ru'),
+            zx_post_string('slug_en'),
+            $nickname,
+            $name_ru,
+            $name_en,
+            $id
+        );
+        $slug_ru = $slugs['slug_ru'];
+        $slug_en = $slugs['slug_en'];
+
         if ($id === 0) {
             db_exec(
                 $db,
-                "INSERT INTO authors (nickname, name_ru, name_en, group_name, country_id, city_id, user_id, is_active) VALUES (?,?,?,?,?,?,?,?)",
-                "ssssiiii",
+                "INSERT INTO authors (nickname, name_ru, name_en, group_name, slug_ru, slug_en, country_id, city_id, user_id, is_active) VALUES (?,?,?,?,?,?,?,?,?,?)",
+                "ssssssiiii",
                 $nickname,
                 ($name_ru !== '' ? $name_ru : null),
                 ($name_en !== '' ? $name_en : null),
                 ($group_name !== '' ? $group_name : null),
+                $slug_ru,
+                $slug_en,
                 ($country_id > 0 ? $country_id : null),
                 ($city_id > 0 ? $city_id : null),
                 ($user_id > 0 ? $user_id : null),
@@ -51,12 +66,14 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
         } else {
             db_exec(
                 $db,
-                "UPDATE authors SET nickname=?, name_ru=?, name_en=?, group_name=?, country_id=?, city_id=?, user_id=?, is_active=? WHERE id=? LIMIT 1",
-                "ssssiiiii",
+                "UPDATE authors SET nickname=?, name_ru=?, name_en=?, group_name=?, slug_ru=?, slug_en=?, country_id=?, city_id=?, user_id=?, is_active=? WHERE id=? LIMIT 1",
+                "ssssssiiiii",
                 $nickname,
                 ($name_ru !== '' ? $name_ru : null),
                 ($name_en !== '' ? $name_en : null),
                 ($group_name !== '' ? $group_name : null),
+                $slug_ru,
+                $slug_en,
                 ($country_id > 0 ? $country_id : null),
                 ($city_id > 0 ? $city_id : null),
                 ($user_id > 0 ? $user_id : null),

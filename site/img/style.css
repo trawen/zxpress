@@ -10,6 +10,57 @@
     font-weight: 400;
 }
 
+/* Test fonts for snailmail (from Meduza stack): headings = Proxima Nova, body = PF Regal */
+@font-face {
+	font-family: "Proxima Nova";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../fonts/ProximaNova-Regular-v1.woff") format("woff");
+	font-display: swap;
+}
+@font-face {
+	font-family: "Proxima Nova";
+	font-style: normal;
+	font-weight: 600;
+	src: url("../fonts/ProximaNova-Semibold-v1.woff") format("woff");
+	font-display: swap;
+}
+@font-face {
+	font-family: "Proxima Nova";
+	font-style: normal;
+	font-weight: 700;
+	src: url("../fonts/ProximaNova-Bold-v1.woff") format("woff");
+	font-display: swap;
+}
+@font-face {
+	font-family: "PF Regal Text";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../fonts/PFRegalTextPro-RegularB-v1.woff") format("woff");
+	font-display: swap;
+}
+@font-face {
+	font-family: "PF Regal Text";
+	font-style: italic;
+	font-weight: 400;
+	src: url("../fonts/PFRegalTextPro-RegularBItalic-v1.woff") format("woff");
+	font-display: swap;
+}
+@font-face {
+	font-family: "PF Regal Text";
+	font-style: normal;
+	font-weight: 700;
+	src: url("../fonts/PFRegalTextPro-Bold-v1.woff") format("woff");
+	font-display: swap;
+}
+@font-face {
+	font-family: "PF Regal Text";
+	font-style: italic;
+	font-weight: 700;
+	src: url("../fonts/PFRegalTextPro-BoldItalic-v1.woff") format("woff");
+	font-display: swap;
+}
+
 pre {
 	font-family: Menlo, "MenloRegular", monospace;
 }
@@ -1144,6 +1195,13 @@ time {
 	line-height: 1.8;
 	margin-bottom: 16px;
 }
+.pub-filter-count {
+	font-size: 0.62em;
+	font-weight: normal;
+	color: rgba(73, 60, 47, 0.38);
+	margin-left: 1px;
+	line-height: 0;
+}
 
 .pub-list-item {
 	width: 100%;
@@ -1442,8 +1500,65 @@ a.title.link-issue { font-size: 26px; }
 .letter-list-correspondents { margin-top: 6px; font-size: 14px; color: #555; }
 .pub-list-summary--lg {
 	font-size: 18px;
-	font-style: italic;
+	font-style: normal;
 	white-space: pre-line;
+}
+
+/* snailmail test typography */
+.snailmail-layout {
+	font-family: "PF Regal Text", Georgia, "Times New Roman", serif;
+}
+.snailmail-layout h1,
+.snailmail-layout h2,
+.snailmail-layout .letter-filter-h1,
+.snailmail-layout .pub-list-title {
+	font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+}
+.snailmail-layout .pub-body,
+.snailmail-layout .letter-summary,
+.snailmail-layout .pub-list-summary--lg,
+.snailmail-layout .letter-summary-block,
+.snailmail-layout .letter-meta-from,
+.snailmail-layout .letter-meta-to,
+.snailmail-layout .letter-list-correspondents,
+.snailmail-layout .pub-filters,
+.snailmail-layout .pub-breadcrumbs,
+.snailmail-layout .pub-pagination,
+.snailmail-layout .pub-list-date {
+	font-family: "PF Regal Text", Georgia, "Times New Roman", serif;
+}
+
+.snailmail-lang-bar {
+	width: 100%;
+	margin: 0 0 8px;
+	text-align: right;
+	box-sizing: border-box;
+}
+.content--snailmail {
+	display: grid;
+	grid-template-columns: auto auto;
+	width: max-content;
+	max-width: 100%;
+	box-sizing: border-box;
+	align-items: start;
+}
+.content--snailmail > .snailmail-lang-bar {
+	grid-column: 1 / -1;
+}
+.snailmail-lang-switch {
+	font: normal 13px/1.2 "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #555;
+}
+.snailmail-lang-switch a {
+	color: #A41E00;
+	text-decoration: none;
+}
+.snailmail-lang-switch a:hover {
+	text-decoration: underline;
+}
+.snailmail-lang-switch b {
+	color: #080402;
 }
 
 .pub-list-summary--lg p {
@@ -1527,6 +1642,26 @@ a.title.link-issue { font-size: 26px; }
 		box-sizing: border-box;
 		padding: 0 8px;
 		align-items: stretch;
+	}
+
+	.content--snailmail {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.content--snailmail > .col-right {
+		margin-left: 0;
+		width: auto;
+		align-self: stretch;
+	}
+
+	.snailmail-lang-bar {
+		width: 100%;
+		max-width: 100%;
+		padding: 0;
+		box-sizing: border-box;
 	}
 
 	.col-left {

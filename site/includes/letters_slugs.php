@@ -127,6 +127,16 @@ function letters_path_prefix(bool $isEng): string
     return $isEng ? '/en' : '/ru';
 }
 
+/** URL section segment: "snailmail" (public) or "snailmail-new" (layout test). */
+function letters_section(): string
+{
+    if (defined('LETTERS_SECTION') && is_string(LETTERS_SECTION) && LETTERS_SECTION !== '') {
+        return LETTERS_SECTION;
+    }
+
+    return 'snailmail';
+}
+
 function letters_row_slug(array $row, bool $isEng): string
 {
     if ($isEng) {
@@ -146,7 +156,7 @@ function letters_row_slug(array $row, bool $isEng): string
 
 function letters_url_catalog(bool $isEng): string
 {
-    return letters_path_prefix($isEng) . '/snailmail';
+    return letters_path_prefix($isEng) . '/' . letters_section();
 }
 
 function letters_url_letter(array $row, bool $isEng): string
@@ -158,10 +168,12 @@ function letters_url_letter(array $row, bool $isEng): string
             return letters_url_catalog($isEng);
         }
 
-        return '/snailmail.php?id=' . $id . ($isEng ? '&lng=eng' : '');
+        $script = letters_section() === 'snailmail-new' ? '/snailmail_new.php' : '/snailmail.php';
+
+        return $script . '?id=' . $id . ($isEng ? '&lng=eng' : '');
     }
 
-    return letters_path_prefix($isEng) . '/snailmail/' . $slug;
+    return letters_path_prefix($isEng) . '/' . letters_section() . '/' . $slug;
 }
 
 function letters_find_id_by_slug(mysqli $db, string $slug, bool $isEng): int
@@ -210,11 +222,32 @@ function letters_canonical_letter_url(mysqli $db, int $letterId, bool $isEng): ?
     return letters_url_letter($row, $isEng);
 }
 
-function letters_assign_lang_switch_urls($smarty, ?array $letter): void
-{
+function letters_assign_lang_switch_urls(
+    $smarty,
+    ?array $letter,
+    string $authorSlugRu = '',
+    string $authorSlugEn = '',
+    int $page = 0
+): void {
     if ($letter === null) {
-        $smarty->assign('url_rus', htmlspecialchars(letters_url_catalog(false), ENT_QUOTES, 'UTF-8'));
-        $smarty->assign('url_eng', htmlspecialchars(letters_url_catalog(true), ENT_QUOTES, 'UTF-8'));
+        $qsRu = [];
+        $qsEn = [];
+        $slugRu = $authorSlugRu !== '' ? $authorSlugRu : $authorSlugEn;
+        $slugEn = $authorSlugEn !== '' ? $authorSlugEn : $authorSlugRu;
+        if ($slugRu !== '') {
+            $qsRu['author'] = $slugRu;
+        }
+        if ($slugEn !== '') {
+            $qsEn['author'] = $slugEn;
+        }
+        if ($page > 1) {
+            $qsRu['p'] = $page;
+            $qsEn['p'] = $page;
+        }
+        $suffixRu = $qsRu !== [] ? ('?' . http_build_query($qsRu)) : '';
+        $suffixEn = $qsEn !== [] ? ('?' . http_build_query($qsEn)) : '';
+        $smarty->assign('url_rus', htmlspecialchars(letters_url_catalog(false) . $suffixRu, ENT_QUOTES, 'UTF-8'));
+        $smarty->assign('url_eng', htmlspecialchars(letters_url_catalog(true) . $suffixEn, ENT_QUOTES, 'UTF-8'));
         return;
     }
 
@@ -230,7 +263,7 @@ function letters_maybe_redirect_legacy(mysqli $db, bool $slugRoute, int $letterI
     if ($slugRoute) {
         return;
     }
-    if (basename((string) ($_SERVER['SCRIPT_NAME'] ?? '')) !== 'snailmail.php') {
+    if (!in_array(basename((string) ($_SERVER['SCRIPT_NAME'] ?? '')), ['snailmail.php', 'snailmail_new.php'], true)) {
         return;
     }
 
@@ -239,12 +272,25 @@ function letters_maybe_redirect_legacy(mysqli $db, bool $slugRoute, int $letterI
         return;
     }
 
+    $legacyScripts = ['/snailmail.php', '/snailmail_new.php'];
     // Catalog: /snailmail.php → /ru/snailmail (keep from/p query via Location only for bare catalog)
     if ($letterId <= 0 && !isset($_GET['id'])) {
-        if ($path === '/snailmail.php') {
+        if (in_array($path, $legacyScripts, true)) {
             $qs = [];
-            if (isset($_GET['from']) && (int) $_GET['from'] > 0) {
-                $qs['from'] = (int) $_GET['from'];
+            $authorParam = '';
+            if (isset($_GET['author'])) {
+                $authorParam = trim((string) $_GET['author']);
+            } elseif (isset($_GET['from'])) {
+                $authorParam = trim((string) $_GET['from']);
+            }
+            if ($authorParam !== '') {
+                require_once __DIR__ . '/authors_slugs.php';
+                $resolved = authors_resolve_filter($db, $authorParam, $isEng);
+                if (!empty($resolved['row'])) {
+                    $url = authors_url($resolved['row'], $isEng, isset($_GET['p']) ? max(1, (int) $_GET['p']) : 1);
+                    header('Location: ' . $url, true, 301);
+                    exit;
+                }
             }
             if (isset($_GET['p']) && (int) $_GET['p'] > 1) {
                 $qs['p'] = (int) $_GET['p'];
@@ -265,7 +311,7 @@ function letters_maybe_redirect_legacy(mysqli $db, bool $slugRoute, int $letterI
     }
 
     $canonical = letters_canonical_letter_url($db, $letterId, $isEng);
-    if ($canonical === null || str_starts_with($canonical, '/snailmail.php')) {
+    if ($canonical === null || str_contains($canonical, '.php?')) {
         return;
     }
 

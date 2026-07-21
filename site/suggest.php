@@ -10,7 +10,9 @@ header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-cache, no-store');
 
 $q = trim($_GET['q'] ?? '');
-$q = normalize_query($q);
+// QSUGGEST needs a plain prefix — do not apply MATCH OR-expansion from normalize_query().
+$q = str_replace(['ё', 'Ё'], ['е', 'Е'], $q);
+$q = preg_replace('/\s+/u', ' ', $q);
 
 if (mb_strlen($q) < 2) {
     echo '[]';

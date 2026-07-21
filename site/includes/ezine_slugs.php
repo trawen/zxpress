@@ -69,6 +69,18 @@ function ezn_public_path_prefix(bool $isEng): string
     return ezn_path_prefix($isEng) . '/' . ezn_section();
 }
 
+/** Canonical catalog: /ru/ezines or /en/ezines */
+function ezn_url_catalog(bool $isEng): string
+{
+    return ezn_public_path_prefix($isEng);
+}
+
+/** Layout-test catalog under /{lang}/ezines-new */
+function ezn_url_catalog_new(bool $isEng): string
+{
+    return ezn_path_prefix($isEng) . '/ezines-new';
+}
+
 function ezn_default_press_ru(array $row): string
 {
     return per_slug_from_title((string) ($row['title'] ?? ''));

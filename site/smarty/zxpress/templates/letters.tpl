@@ -15,10 +15,12 @@
 <h1>{$letter.title_display}</h1>
 
 <p class="letter-meta-from">
-	<b>{if $lng eq 'eng'}From:{else}От:{/if}</b> {$letter.from_author_display}
+	<b>{if $lng eq 'eng'}From:{else}От:{/if}</b>
+	{if $letter.author_from}<a href="{$letter.from_author_url}" class="u-link-inherit">{$letter.from_author_display}</a>{else}{$letter.from_author_display}{/if}
 </p>
 <p class="letter-meta-to">
-	<b>{if $lng eq 'eng'}To:{else}Кому:{/if}</b> {$letter.to_author_display}
+	<b>{if $lng eq 'eng'}To:{else}Кому:{/if}</b>
+	{if $letter.author_to}<a href="{$letter.to_author_url}" class="u-link-inherit">{$letter.to_author_display}</a>{else}{$letter.to_author_display}{/if}
 	{if $letter.date_display}
 		&nbsp;·&nbsp; <span>{$letter.date_display}</span>
 	{/if}
@@ -51,8 +53,8 @@
 
 {else}
 
-{if $filter_from && $filter_from_author_display}
-<h1 class="letter-filter-h1">{if $lng eq 'eng'}All letters from {$filter_from_author_display}{else}Все бумажные письма от {$filter_from_author_display}{/if}</h1>
+{if $filter_author && $filter_author_display}
+<h1 class="letter-filter-h1">{if $lng eq 'eng'}Letters with {$filter_author_display}{else}Письма с участием {$filter_author_display}{/if}</h1>
 <p class="pub-breadcrumbs">
 	<a href="{$letters_catalog_url}">{if $lng eq 'eng'}← All letters{else}← Все бумажные письма{/if}</a>
 </p>
@@ -72,16 +74,16 @@ Swapping и Snailmail — культура обмена дискетами, ка
 
 {if $letter_author_filters && $letter_author_filters|@count gt 0}
 <p class="pub-filters">
-	<b>{if $lng eq 'eng'}Filter letters by author:{else}Фильтровать бумажные письма по автору:{/if}</b>
+	<b>{if $lng eq 'eng'}Filter letters by correspondent:{else}Фильтровать бумажные письма по корреспонденту:{/if}</b>
 	{foreach from=$letter_author_filters item=auth name=af}
 		{if !$smarty.foreach.af.first}, {/if}
-		{if $filter_from && $auth.id == $filter_from}
-			<b>{$auth.author_display}</b>
+		{if $filter_author && $auth.id == $filter_author}
+			<b>{$auth.author_display}<sup class="pub-filter-count">{$auth.letter_count}</sup></b>
 		{else}
-			<a href="{$letters_catalog_url}?from={$auth.id}">{$auth.author_display}</a>
+			<a href="{$auth.author_url}">{$auth.author_display}<sup class="pub-filter-count">{$auth.letter_count}</sup></a>
 		{/if}
 	{/foreach}
-	{if $filter_from}
+	{if $filter_author}
 		 , <a href="{$letters_catalog_url}">{if $lng eq 'eng'}all{else}все{/if}</a>
 	{/if}
 </p>
@@ -109,8 +111,8 @@ Swapping и Snailmail — культура обмена дискетами, ка
 	<div class="pub-list-summary pub-list-summary--lg">{$row.summary_html nofilter}</div>
 	{/if}
 	<div class="letter-list-correspondents">
-		{if $lng eq 'eng'}From{else}От{/if} <b><a href="{$letters_catalog_url}?from={$row.author_from}" class="u-link-inherit">{$row.from_author_display}</a></b>
-		 {if $lng eq 'eng'}to{else}к{/if} <b><a href="{$letters_catalog_url}?from={$row.author_to}" class="u-link-inherit">{$row.to_author_display}</a></b>
+		{if $lng eq 'eng'}From{else}От{/if} <b>{if $row.from_author_url}<a href="{$row.from_author_url}" class="u-link-inherit">{$row.from_author_display}</a>{else}{$row.from_author_display}{/if}</b>
+		 {if $lng eq 'eng'}to{else}к{/if} <b>{if $row.to_author_url}<a href="{$row.to_author_url}" class="u-link-inherit">{$row.to_author_display}</a>{else}{$row.to_author_display}{/if}</b>
 		{if $row.date_display}
 			&nbsp;·&nbsp; {$row.date_display}
 		{/if}
@@ -133,7 +135,7 @@ Swapping и Snailmail — культура обмена дискетами, ка
 		{if $pnum == $letters_page}
 			<b>{$pnum}</b>
 		{else}
-			<a href="{$letters_catalog_url}?p={$pnum}{if $filter_from}&amp;from={$filter_from}{/if}">{$pnum}</a>
+			<a href="{$letters_catalog_url}?p={$pnum}">{$pnum}</a>
 		{/if}
 		{if !$smarty.section.pg.last} {/if}
 	{/section}

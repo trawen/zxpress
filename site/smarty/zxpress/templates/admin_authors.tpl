@@ -29,7 +29,7 @@
 <option value="0" {if !$author || !$author.id}selected{/if}>— выбрать —</option>
 {section name=n loop=$authors_list}
 <option value="{$authors_list[n].id}" {if $author && $authors_list[n].id eq $author.id}selected{/if}>
-{$authors_list[n].nickname}
+{$authors_list[n].nickname}{if $authors_list[n].name_ru} ({$authors_list[n].name_ru}){elseif $authors_list[n].name_en} ({$authors_list[n].name_en}){/if}
 </option>
 {/section}
 </select>
@@ -60,6 +60,20 @@
 <tr>
 <td>Группа</td>
 <td><input type="text" name="group_name" style="width:420px" value="{if $author}{$author.group_name}{/if}"></td>
+</tr>
+<tr>
+<td>Slug (RU)</td>
+<td>
+<input type="text" name="slug_ru" style="width:420px" maxlength="191" pattern="[a-z0-9-]*" value="{if $author}{$author.slug_ru}{/if}">
+<div style="font-size:11px;font-weight:normal;color:#555">Пустое поле генерируется из ника (или имени RU). Разрешены только a-z, 0-9 и дефис.</div>
+</td>
+</tr>
+<tr>
+<td>Slug (EN)</td>
+<td>
+<input type="text" name="slug_en" style="width:420px" maxlength="191" pattern="[a-z0-9-]*" value="{if $author}{$author.slug_en}{/if}">
+<div style="font-size:11px;font-weight:normal;color:#555">Пустое поле генерируется из имени EN (или ника).</div>
+</td>
 </tr>
 <tr>
 <td><label for="admin-author-country">Страна</label></td>

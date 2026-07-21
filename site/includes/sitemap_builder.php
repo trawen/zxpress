@@ -224,5 +224,24 @@ function sitemap_render(mysqli $db, string $origin): void
 		sitemap_emit_url($entry['loc'], $entry['lastmod'], 'monthly', '0.7');
 	}
 
+	// --- Authors with active letters ---
+	require_once __DIR__ . '/authors_slugs.php';
+	$zAuth = db_select(
+		$db,
+		'SELECT a.id, a.slug_ru, a.slug_en FROM authors a '
+		. 'INNER JOIN letters l ON l.is_active = 1 AND (l.author_from = a.id OR l.author_to = a.id) '
+		. 'WHERE COALESCE(a.is_active, 1) = 1 '
+		. 'GROUP BY a.id, a.slug_ru, a.slug_en '
+		. 'ORDER BY a.id ASC'
+	);
+	while ($zAuth && ($row = mysqli_fetch_assoc($zAuth))) {
+		$path = authors_url($row, false);
+		if ($path === '' || str_ends_with($path, '/authors')) {
+			continue;
+		}
+		$entry = sitemap_url_entry($origin, $path, $lastmodToday);
+		sitemap_emit_url($entry['loc'], $entry['lastmod'], 'monthly', '0.6');
+	}
+
 	echo '</urlset>' . "\n";
 }

@@ -160,7 +160,18 @@
 
 		<br>
 
-		<div class="content">
+		<div class="content{if $smarty.server.SCRIPT_NAME eq '/snailmail.php'} content--snailmail{/if}">
+			{if $smarty.server.SCRIPT_NAME eq '/snailmail.php'}
+			<div class="snailmail-lang-bar">
+				<div class="snailmail-lang-switch">
+					{if $lng eq 'eng'}
+						<a href="{$url_rus}">rus</a> / <b>eng</b>
+					{else}
+						<b>rus</b> / <a href="{$url_eng}">eng</a>
+					{/if}
+				</div>
+			</div>
+			{/if}
 			<main class="col-left" id="main">
 
 				{literal}
