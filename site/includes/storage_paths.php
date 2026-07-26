@@ -37,6 +37,7 @@ function zx_storage_rel_map(): array
 		'chapters' => 'content-store/chapters',
 		'letters' => 'content-store/letters',
 		'letters_preview' => 'content-store/letters/preview',
+		'letters_preview_256' => 'content-store/letters/preview-256',
 		'ezine_categories_original' => 'content-store/ezine-categories/original',
 		'ezine_categories_webp' => 'content-store/ezine-categories/webp',
 		'periodical_issues' => 'content-store/periodical-issues',

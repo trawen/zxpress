@@ -274,6 +274,8 @@ $smarty->assign('letters_rows', $letters_rows);
 $smarty->assign('letters_page', $page);
 $smarty->assign('letters_total_pages', $totalPages);
 $smarty->assign('letters_total', $total);
+$smarty->assign('letters_prev_page', $page > 1 ? $page - 1 : 0);
+$smarty->assign('letters_next_page', $page < $totalPages ? $page + 1 : 0);
 $smarty->assign('letter', null);
 $smarty->assign('letter_not_found', false);
 

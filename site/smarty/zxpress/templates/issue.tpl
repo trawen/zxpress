@@ -17,9 +17,9 @@
 
 <span class="issue-type-label">
 {if $lng eq 'eng'}
-{if $press.type eq 0}Newspaper{else}Magazine{/if}
+{if $press.type eq 0}Newspaper{elseif $press.type eq 2}Report{else}Magazine{/if}
 {else}
-{if $press.type eq 0}Газета{else}Журнал{/if}
+{if $press.type eq 0}Газета{elseif $press.type eq 2}Отчёт{else}Журнал{/if}
 {/if}
 </span><H1 class="h1"> {$press.title_plain}</h1>
 
@@ -41,9 +41,9 @@ issues
 
 <img src="{$host}img/diske.png" width=21 class="issue-download-icon" valign=top> 
 {if $lng eq 'eng'}
-<a href="{$host}d.php?id={$press.id}">Download the newspaper archive to run in the emulator</a>
+<a href="{$host}d.php?id={$press.id}">Download the {if $press.type eq 0}newspaper{elseif $press.type eq 2}report{else}magazine{/if} archive to run in the emulator</a>
 {else}
-<a href="{$host}d.php?id={$press.id}">Скачать архив {if $press.type eq 0}газеты{else}журнала{/if} для запуска в эмуляторе</a>
+<a href="{$host}d.php?id={$press.id}">Скачать архив {if $press.type eq 0}газеты{elseif $press.type eq 2}отчёта{else}журнала{/if} для запуска в эмуляторе</a>
 {/if}
 
 <!-- <table width=100% cellpadding=0 cellspacing=0><tr><td valign=top><img src="img/diske.png" width=21 class="issue-download-icon"></td>

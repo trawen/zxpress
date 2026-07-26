@@ -1,120 +1,169 @@
 <?php
 require 'init.inc';
-//require "comments.php";
+require_once __DIR__ . '/includes/books_public.php';
+require_once __DIR__ . '/includes/authors_slugs.php';
 
-//error_reporting(E_ALL);
+function book_articles_ui_template(): string
+{
+	return books_ui_is_new() ? 'book_articles_new.tpl' : 'book_articles.tpl';
+}
 
-$id = intval($_GET['id'] ?? 0);
-if (!$id) {$id = 1;}
+$id = (int) ($_GET['id'] ?? 0);
+if ($id <= 0) {
+	$id = 1;
+}
 
-$skip = intval($_GET['skip']);
-$show = intval($_GET['show']) * 1;
+$skip = (int) ($_GET['skip'] ?? 0);
 
-$months = array(
-		"01"=>"января",
-		"02"=>"февраля",
-		"03"=>"марта",
-		"04"=>"апреля",
-		"05"=>"мая",
-		"06"=>"июня",
-		"07"=>"июля",
-		"08"=>"августа",
-		"09"=>"сентября",
-		"10"=>"октября",
-		"11"=>"ноября",
-		"12"=>"декабря");
+$lng = $smarty->getTemplateVars('lng');
+$isEng = ($lng === 'eng');
 
-//$smarty->debugging = true;
+$catalogUrl = books_url_catalog($isEng);
+$smarty->assign('books_catalog_url', $catalogUrl);
+$smarty->assign('ezines_catalog_url', books_ui_is_new() ? ezn_url_catalog_new($isEng) : ezn_url_catalog($isEng));
+$smarty->assign('letters_catalog_url', ezn_path_prefix($isEng) . '/snailmail-new');
+$smarty->assign('authors_catalog_url', authors_url_catalog($isEng));
+$smarty->assign('smn_nav_authors_active', false);
+$smarty->assign('smn_nav_ezines_active', false);
+$smarty->assign('smn_nav_gallery_active', false);
+$smarty->assign('smn_nav_zxnet_active', false);
+$smarty->assign('smn_nav_books_active', books_ui_is_new());
 
-$stmt = mysqli_prepare($db, "SELECT * FROM articles, issue WHERE temp=? AND articles.id=? AND issue.id=articles.id_issue");
-mysqli_stmt_bind_param($stmt, "ii", $show, $id);
-mysqli_stmt_execute($stmt);
-$z = mysqli_stmt_get_result($stmt);
-$issue = mysqli_fetch_array($z);
-$issue['date'] = date("d ".$months[date("m", $issue['date'])]." Y", $issue['date'] );
-$smarty->assign('issue', $issue);
-
-
-$stmt = mysqli_prepare($db, "SELECT * FROM books, chapters WHERE ch_id=? AND books.id=ch_id_book");
-mysqli_stmt_bind_param($stmt, "i", $id);
+$stmt = mysqli_prepare($db, 'SELECT * FROM books, chapters WHERE ch_id=? AND books.id=ch_id_book LIMIT 1');
+mysqli_stmt_bind_param($stmt, 'i', $id);
 mysqli_stmt_execute($stmt);
 $z = mysqli_stmt_get_result($stmt);
 $press = mysqli_fetch_array($z);
-$press['date'] = date(" Y", $press['date'] );
-$ch_id_book = intval($press['ch_id_book']);
+
+$articleNotFound = false;
+$chIdBook = 0;
+
+if ($press) {
+	foreach (['title1', 'title2', 'series', 'publisher', 'authors', 'ch_title'] as $field) {
+		if (isset($press[$field])) {
+			$press[$field] = plain_text_decode_entities((string) $press[$field]);
+		}
+	}
+	$year = (int) date('Y', (int) ($press['date'] ?? 0));
+	$press['date'] = $year;
+	$press['year_display'] = ($year > 1970) ? (string) $year : '';
+	$press['date_label'] = $press['year_display'] !== ''
+		? ($isEng ? $press['year_display'] : ($press['year_display'] . ' г.'))
+		: '';
+	$imageId = (int) ($press['image_id'] ?? 0);
+	$press['cover_src'] = $imageId > 0
+		? ('/pictures/thumbs/' . $imageId . '.jpg')
+		: '';
+	$chIdBook = (int) ($press['ch_id_book'] ?? 0);
+	$press['public_url'] = books_url_book((int) ($press['id'] ?? 0), $isEng);
+} else {
+	$articleNotFound = true;
+	http_response_code(404);
+	error_log('[FIX] book_articles.php book/chapter not found id=' . $id);
+}
+
 $smarty->assign('press', $press);
 
-
-$stmt = mysqli_prepare($db, "SELECT * FROM chapters WHERE ch_id=?");
-mysqli_stmt_bind_param($stmt, "i", $id);
+$stmt = mysqli_prepare($db, 'SELECT * FROM chapters WHERE ch_id=? LIMIT 1');
+mysqli_stmt_bind_param($stmt, 'i', $id);
 mysqli_stmt_execute($stmt);
 $z = mysqli_stmt_get_result($stmt);
 $article = mysqli_fetch_array($z);
+
 if ($article) {
-$chapterPath = realpath(zx_storage_path('chapters', (string) $article['ch_id']));
-$allowedDir = realpath(zx_storage_dir('chapters'));
-if ($chapterPath && $allowedDir && strpos($chapterPath, $allowedDir . DIRECTORY_SEPARATOR) === 0) {
-	$article['text'] = file_get_contents($chapterPath);
+	$article['ch_title'] = plain_text_decode_entities((string) ($article['ch_title'] ?? ''));
+	$article['ch_title_plain'] = title_plain(strip_tags((string) $article['ch_title']));
+	$chapterPath = realpath(zx_storage_path('chapters', (string) $article['ch_id']));
+	$allowedDir = realpath(zx_storage_dir('chapters'));
+	if ($chapterPath && $allowedDir && strpos($chapterPath, $allowedDir . DIRECTORY_SEPARATOR) === 0) {
+		$article['text'] = books_chapter_root_urls((string) file_get_contents($chapterPath));
+	} else {
+		$article['text'] = '';
+		error_log('book_articles.php: path traversal attempt for ch_id=' . $article['ch_id']);
+	}
 } else {
-	$article['text'] = '';
-	error_log("book_articles.php: path traversal attempt for ch_id=" . $article['ch_id']);
+	$articleNotFound = true;
+	http_response_code(404);
+	error_log('[FIX] book_articles.php chapter not found id=' . $id);
+	$article = [
+		'ch_id' => $id,
+		'ch_title' => '',
+		'ch_title_plain' => $isEng ? 'Chapter not found' : 'Глава не найдена',
+		'text' => '',
+	];
 }
+
 $smarty->assign('article', $article);
-}
+$smarty->assign('article_not_found', $articleNotFound);
 
-$tit = strip_tags($article['ch_title']);
-$tit = str_replace ( "\r", " " , $tit);
-$tit = str_replace ( "\n", " " , $tit);
-$tit = str_replace ( "\t", " " , $tit);
-$tit = str_replace ( "  ", " " , $tit);
+$bookTitle = $press ? (string) ($press['title1'] ?? '') : '';
+$chapterTitlePlain = (string) ($article['ch_title_plain'] ?? '');
+$pageTitle = $bookTitle !== '' && $chapterTitlePlain !== ''
+	? ($bookTitle . ' — ' . $chapterTitlePlain)
+	: ($chapterTitlePlain !== '' ? $chapterTitlePlain : ($isEng ? 'Chapter' : 'Глава'));
+$smarty->assign('title', $pageTitle);
+$smarty->assign('description', $chapterTitlePlain !== '' ? $chapterTitlePlain : $pageTitle);
 
-$smarty->assign('title', $press['title1']." - ".$tit );
-
-
-//TAGS
-$stmt = mysqli_prepare($db, "SELECT * FROM tags, tags_articles WHERE tag_type=1 AND tags_articles.id_article=? AND tags.id=tags_articles.id_tag");
-mysqli_stmt_bind_param($stmt, "i", $id);
+$tags = [];
+$keywords = '';
+$stmt = mysqli_prepare(
+	$db,
+	'SELECT * FROM tags, tags_articles WHERE tag_type=1 AND tags_articles.id_article=? AND tags.id=tags_articles.id_tag'
+);
+mysqli_stmt_bind_param($stmt, 'i', $id);
 mysqli_stmt_execute($stmt);
 $z = mysqli_stmt_get_result($stmt);
-$n = 0;
-while ($t = mysqli_fetch_array($z)) {
-	$tg[$n] = $t;
-	$keywords = $keywords . $t['tag_name'] . " ";
-	$n++;
+while ($z && ($t = mysqli_fetch_array($z))) {
+	$tags[] = $t;
+	$keywords .= $t['tag_name'] . ' ';
 }
-$smarty->assign('article_tags', $tg);
-
-
-//OTHER ARTICLES
-$stmt = mysqli_prepare($db, "SELECT * FROM chapters WHERE ch_id_book=? ORDER BY ch_date ASC");
-mysqli_stmt_bind_param($stmt, "i", $ch_id_book);
-mysqli_stmt_execute($stmt);
-$z = mysqli_stmt_get_result($stmt);
-$n = 0;
-while ($t = mysqli_fetch_array($z)) {
-$art[$n] = $t;
-$n++;
-}
-$smarty->assign('other_articles', $art);
-
-
-$smarty->assign('id_article', $id);
+$smarty->assign('article_tags', $tags);
 $smarty->assign('keywords', $keywords);
 
-// Comments form on this page must be processed server-side (validation/CSRF/captcha).
+$otherArticles = [];
+if ($chIdBook > 0) {
+	$stmt = mysqli_prepare($db, 'SELECT * FROM chapters WHERE ch_id_book=? ORDER BY ch_date ASC');
+	mysqli_stmt_bind_param($stmt, 'i', $chIdBook);
+	mysqli_stmt_execute($stmt);
+	$z = mysqli_stmt_get_result($stmt);
+	while ($z && ($t = mysqli_fetch_array($z))) {
+		$t['ch_title'] = plain_text_decode_entities((string) ($t['ch_title'] ?? ''));
+		$t['public_url'] = books_url_chapter((int) $t['ch_id'], $isEng);
+		$t['current'] = ((int) $t['ch_id'] === $id);
+		$otherArticles[] = $t;
+	}
+}
+$smarty->assign('other_articles', $otherArticles);
+$smarty->assign('id_article', $id);
+
+$smarty->assign('url_rus', htmlspecialchars(books_url_chapter($id, false), ENT_QUOTES, 'UTF-8'));
+$smarty->assign('url_eng', htmlspecialchars(books_url_chapter($id, true), ENT_QUOTES, 'UTF-8'));
+
 if (!empty($_POST['submit'])) {
 	error_log('[FIX] book_articles.php comment submit detected for id=' . $id);
 }
-require "comments.php";
 
-
-if (!$skip) {
-$stmt = mysqli_prepare($db, "UPDATE chapters SET ch_views=ch_views+1 WHERE ch_id=?");
-mysqli_stmt_bind_param($stmt, "i", $id);
-mysqli_stmt_execute($stmt);
+if (!$articleNotFound) {
+	require_once __DIR__ . '/includes/comments_scope.php';
+	$comments_target_id = comments_id_book_chapter($id);
+	$smarty->assign('comments_enabled', true);
+	$smarty->assign('comments_form_action', books_url_chapter($id, $isEng));
+	$smarty->assign('comments_invite', $isEng
+		? 'Share your thoughts about this chapter'
+		: 'Поделитесь вашим мнением о главе');
+	require __DIR__ . '/comments.php';
+} else {
+	$smarty->assign('comments_enabled', false);
 }
 
-include "right.php";
+if (!$skip && !$articleNotFound) {
+	$stmt = mysqli_prepare($db, 'UPDATE chapters SET ch_views=ch_views+1 WHERE ch_id=?');
+	mysqli_stmt_bind_param($stmt, 'i', $id);
+	mysqli_stmt_execute($stmt);
+}
 
-$smarty->display('book_articles.tpl');
-?>
+if (!books_ui_is_new()) {
+	include __DIR__ . '/right.php';
+}
+
+$smarty->display(book_articles_ui_template());

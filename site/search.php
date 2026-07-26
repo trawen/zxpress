@@ -2,6 +2,47 @@
 
 require 'init.inc'; // MARKER_12345
 require_once __DIR__ . '/includes/ezine_slugs.php';
+require_once __DIR__ . '/includes/books_public.php';
+require_once __DIR__ . '/includes/authors_slugs.php';
+
+function search_ui_is_new(): bool
+{
+	return defined('SEARCH_UI_VARIANT') && SEARCH_UI_VARIANT === 'new';
+}
+
+function search_catalog_url(bool $isEng): string
+{
+	if (search_ui_is_new()) {
+		return ezn_path_prefix($isEng) . '/search-new';
+	}
+	return '/search.php' . ($isEng ? '?lng=eng' : '');
+}
+
+function search_page_url(bool $isEng, string $q, int $page, string $sort, $from): string
+{
+	$base = search_catalog_url($isEng);
+	$params = [];
+	if ($q !== '') {
+		$params['q'] = $q;
+	}
+	if ($page > 0) {
+		$params['p'] = $page;
+	}
+	if ($sort !== '') {
+		$params['s'] = $sort;
+	}
+	if ($from !== '' && $from !== null && (string) $from !== '0') {
+		$params['f'] = $from;
+	}
+	if (!search_ui_is_new() && $isEng && !isset($params['lng'])) {
+		$params['lng'] = 'eng';
+	}
+	if ($params === []) {
+		return $base;
+	}
+	$sep = (strpos($base, '?') === false) ? '?' : '&';
+	return $base . $sep . http_build_query($params);
+}
 
 $limit = 10;
 
@@ -42,11 +83,12 @@ if ($p == 0 and $q) {
   $log_search_row($db, $q, $t, 128, 0);
 }
 
+$isEngPage = ($smarty->getTemplateVars('lng') === 'eng');
+
 if ($j == "ezine" and $q) {
 
   $log_search_row($db, $q, $t, 0, $id);
-  $isEng = ($smarty->getTemplateVars('lng') === 'eng');
-  $articleUrl = ezn_canonical_article_url($db, $id, $isEng);
+  $articleUrl = ezn_canonical_article_url($db, $id, $isEngPage);
   header('Location: ' . ($articleUrl ?? '/article.php?id=' . $id));
   exit;
 
@@ -54,7 +96,7 @@ if ($j == "ezine" and $q) {
 elseif ($j == "book" and $q) {
 
   $log_search_row($db, $q, $t, 1, $id);
-  header("Location: /book_articles.php?id=$id");
+  header('Location: ' . books_url_chapter($id, $isEngPage));
   exit;
 
 }
@@ -69,9 +111,13 @@ elseif ($j == "zxnet" and $q) {
 $sort_mode = get_sort_mode($s);
 
 $smarty->assign('query', $q);
+$smarty->assign('q', $q);
 $smarty->assign('page', $p);
 $smarty->assign('sort', $s);
 $smarty->assign('from', $f);
+
+$hitOpen = search_ui_is_new() ? '<mark class="smn-search-hit">' : "<b class='find'>";
+$hitClose = search_ui_is_new() ? '</mark>' : '</b>';
 
 if (getenv('LOG_LEVEL') === 'DEBUG') {
   error_log('[FIX] search.php: layout — zxpress.ru parity (350/280 toolbar, 210px sidebar, colgroup table) style.css + search.tpl');
@@ -113,8 +159,8 @@ if ($f) {
       $index = "test2";
       $opts = array
       (
-        "before_match"    => "<b class='find'>",
-        "after_match"   => "</b>",
+        "before_match"    => $hitOpen,
+        "after_match"   => $hitClose,
         "chunk_separator" => " ... ",
         "limit_words"       => 35,
         "around"      => 35,
@@ -172,16 +218,51 @@ else {
         $inf[$n]['id3'] = intval($result["matches"][$id]['attrs']['id3']);
         $d = $result["matches"][$id]['attrs']['date'];
         $inf[$n]['date'] = $d ? date("d ".$months[date("m", $d)]." Y", $d ) : "";
-        $img = explode("/", $result["matches"][$id]['attrs']['img']);
-        $inf[$n]['img'] = $img[0];
+        $img = explode("/", (string) ($result["matches"][$id]['attrs']['img'] ?? ''));
         $inf[$n]['type'] = intval($result["matches"][$id]['attrs']['type']);
+        $inf[$n]['img'] = '';
+        $inf[$n]['img_format'] = 'png';
 
         if ($inf[$n]['type'] === 1) {
-          $isEngSearch = ($smarty->getTemplateVars('lng') === 'eng');
-          $articleUrl = ezn_canonical_article_url($db, $inf[$n]['id1'], $isEngSearch);
+          // Manticore img is "id_press/article_id" — not a screen id. Resolve cover by issue.
+          $pressId = $inf[$n]['id3'];
+          $issueId = $inf[$n]['id2'];
+          $screen = null;
+          if ($pressId > 0 && $issueId > 0) {
+            $stmtScr = $db->prepare('SELECT id, format FROM screens WHERE id_press=? AND id_issue=? ORDER BY type ASC, id ASC LIMIT 1');
+            if ($stmtScr) {
+              $stmtScr->bind_param('ii', $pressId, $issueId);
+              $stmtScr->execute();
+              $screen = $stmtScr->get_result()->fetch_assoc();
+              $stmtScr->close();
+            }
+          }
+          if (!$screen && $pressId > 0) {
+            $stmtScr = $db->prepare('SELECT id, format FROM screens WHERE id_press=? ORDER BY type ASC, id ASC LIMIT 1');
+            if ($stmtScr) {
+              $stmtScr->bind_param('i', $pressId);
+              $stmtScr->execute();
+              $screen = $stmtScr->get_result()->fetch_assoc();
+              $stmtScr->close();
+            }
+          }
+          if ($screen) {
+            $inf[$n]['img'] = (string) (int) ($screen['id'] ?? 0);
+            $fmt = strtolower(preg_replace('/[^a-z0-9]+/i', '', (string) ($screen['format'] ?? 'png')) ?: 'png');
+            $inf[$n]['img_format'] = $fmt !== '' ? $fmt : 'png';
+          }
+          $articleUrl = ezn_canonical_article_url($db, $inf[$n]['id1'], $isEngPage);
           $inf[$n]['article_url'] = $articleUrl ?? '/article.php?id=' . $inf[$n]['id1'];
-          $issueUrl = ezn_canonical_issue_url_by_ids($db, $inf[$n]['id3'], $inf[$n]['id2'], $isEngSearch);
+          $issueUrl = ezn_canonical_issue_url_by_ids($db, $inf[$n]['id3'], $inf[$n]['id2'], $isEngPage);
           $inf[$n]['issue_url'] = $issueUrl ?? '/issue.php?id=' . $inf[$n]['id3'] . '#' . rawurlencode((string) $inf[$n]['id2']);
+        } else {
+          // Books: img attr is "image_id/book_id".
+          $bookImg = (string) ($img[0] ?? '');
+          if ($bookImg !== '' && $bookImg !== '0') {
+            $inf[$n]['img'] = $bookImg;
+          }
+          $inf[$n]['chapter_url'] = books_url_chapter($inf[$n]['id1'], $isEngPage);
+          $inf[$n]['book_url'] = books_url_book($inf[$n]['id2'], $isEngPage);
         }
 
         $docs[] = search_source_doc_from_match($result["matches"][$id]['attrs'], $inf[$n]['type']);
@@ -196,8 +277,8 @@ else {
       $index = "test1";
       $opts = array
       (
-        "before_match"    => "<b class='find'>",
-        "after_match"   => "</b>",
+        "before_match"    => $hitOpen,
+        "after_match"   => $hitClose,
         "chunk_separator" => " ... ",
         "limit_words"       => 25,
         "around"      => 25,
@@ -233,9 +314,41 @@ else {
 
 $smarty->assign('search', $search);
 
-include "right.php";
-
-$smarty->display('search.tpl');
+if (search_ui_is_new()) {
+  $catalog = search_catalog_url($isEngPage);
+  $smarty->assign('search_catalog_url', $catalog);
+  $smarty->assign('ezines_catalog_url', ezn_url_catalog_new($isEngPage));
+  $smarty->assign('letters_catalog_url', ezn_path_prefix($isEngPage) . '/snailmail-new');
+  $smarty->assign('authors_catalog_url', authors_url_catalog($isEngPage));
+  $smarty->assign('smn_nav_authors_active', false);
+  $smarty->assign('smn_nav_ezines_active', false);
+  $smarty->assign('smn_nav_gallery_active', false);
+  $smarty->assign('smn_nav_zxnet_active', false);
+  $smarty->assign('smn_nav_guestbook_active', false);
+  $smarty->assign('smn_nav_updates_active', false);
+  $smarty->assign('smn_nav_map_active', false);
+  $smarty->assign('url_rus', htmlspecialchars(search_page_url(false, $q, $p, $s, $f), ENT_QUOTES, 'UTF-8'));
+  $smarty->assign('url_eng', htmlspecialchars(search_page_url(true, $q, $p, $s, $f), ENT_QUOTES, 'UTF-8'));
+  if ($q !== '') {
+    $smarty->assign('title', ($isEngPage ? 'Search: ' : 'Поиск: ') . $q);
+    $smarty->assign('description', $isEngPage
+      ? ('Search results for “' . $q . '” on ZXPRESS')
+      : ('Результаты поиска «' . $q . '» на ZXPRESS'));
+  } else {
+    $smarty->assign('title', $isEngPage ? 'Search' : 'Поиск');
+    $smarty->assign('description', $isEngPage
+      ? 'Search ZX Spectrum magazines, newspapers and books'
+      : 'Поиск по журналам, газетам и книгам для ZX Spectrum');
+  }
+  if ($smarty->getTemplateVars('found') === null && $q === '') {
+    $smarty->assign('found', 0);
+    $smarty->assign('time', '0');
+  }
+  $smarty->display('search_new.tpl');
+} else {
+  include "right.php";
+  $smarty->display('search.tpl');
+}
 
 function count_pages($result) {
 
@@ -269,6 +382,9 @@ function first_fix($entry) {
     }
     $padded = " " . $entry;
     $b = mb_strpos($entry, "<b");
+    if ($b === false) {
+      $b = mb_strpos($entry, "<mark");
+    }
     $f1 = mb_strlen($padded) > 4 ? mb_strpos($padded, ". ", 4) : false;
     $f2 = mb_strpos($padded, "!", 0);
     $f3 = mb_strpos($padded, "?", 0);

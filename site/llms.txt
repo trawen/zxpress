@@ -1,0 +1,28 @@
+# ZXPRESS
+
+> ZXPRESS is a digital library of ZX Spectrum magazines, newspapers, paper books, scene letters, and ZXNet echo conferences from the post-Soviet demoscene (1990s–2020s), with Russian and English interfaces.
+
+ZXPRESS preserves scanned and transcribed publications for ZX Spectrum users and researchers. Primary language of the archive is Russian; many pages also have English titles or summaries. Last reviewed 2026-07-24.
+
+## Sections
+
+- [Diskmags (electronic press)](https://zxpress.ru/ru/ezines): Catalog of ZX Spectrum electronic newspapers and magazines
+- [Periodicals](https://zxpress.ru/ru/periodicals): Paper magazines and newspapers
+- [Books](https://zxpress.ru/books.php): Paper books for ZX Spectrum
+- [Paper letters (snailmail)](https://zxpress.ru/ru/snailmail): Scanned 1990s scene correspondence (swapping / snailmail)
+- [ZXNet](https://zxpress.ru/zxnet): ZXNet Fido-style echo conferences
+- [Article categories](https://zxpress.ru/ru/categories): Thematic tree of ezine articles
+- [Authors](https://zxpress.ru/ru/authors): Authors of articles, letters and publications
+- [Gallery](https://zxpress.ru/gallery.php): Image gallery from the archive
+- [Updates](https://zxpress.ru/updates.php): Latest additions to the library
+- [News](https://zxpress.ru/news): Site news
+- [English diskmags](https://zxpress.ru/en/ezines): English-language entry to the diskmags catalog
+
+## Optional
+
+- [Guestbook](https://zxpress.ru/guestbook.php): Public visitor comments
+- [Chronology](https://zxpress.ru/chronology.php): Timeline of Spectrum press activity
+- [Stats](https://zxpress.ru/stats.php): Archive statistics
+- [About / whois](https://zxpress.ru/whois.php): Project information
+- [Sitemap](https://zxpress.ru/sitemap.xml): Full XML sitemap of indexable pages
+- [Robots](https://zxpress.ru/robots.txt): Crawler rules

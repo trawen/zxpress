@@ -2,6 +2,7 @@
 require 'init.inc';
 require_once __DIR__ . '/includes/letters_publish.php';
 require_once __DIR__ . '/includes/letters_slugs.php';
+require_once __DIR__ . '/includes/letters_images.php';
 
 if (!isset($_SESSION['login']) || !$_SESSION['login']) {
     header('HTTP/1.1 403 Forbidden');
@@ -567,6 +568,9 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
 
             if (!letters_make_jpeg_preview($originalPath, zx_storage_path('letters_preview', $imgId . '.jpg'), 1280, 85)) {
                 $uploadErrors[] = $origName . ': оригинал сохранён, но превью не создалось';
+            }
+            if (!letters_make_preview_256($originalPath, $imgId)) {
+                $uploadErrors[] = $origName . ': оригинал сохранён, но preview-256 не создалось';
             }
         }
 

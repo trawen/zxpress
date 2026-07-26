@@ -7,7 +7,6 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="robots" content="noindex, nofollow">
 	<title>{$title|strip_tags} — ZXPRESS</title>
 	{if $description}<meta name="description" content="{$description|strip_tags|escape:'html'}">{/if}
 	{if $og_title}
@@ -17,7 +16,7 @@
 	<meta property="og:url" content="{$og_url|escape:'html'}">
 	{if $og_image}<meta property="og:image" content="{$og_image|escape:'html'}">{/if}
 	{/if}
-	<link rel="stylesheet" href="{$host}img/snailmail-new.css?{$smarty.now}">
+	{smn_styles}
 </head>
 <body class="smn">
 	<div class="smn-frame">
@@ -28,11 +27,11 @@
 				</a>
 				<nav class="smn-nav" aria-label="{if $lng eq 'eng'}Sections{else}Разделы{/if}">
 					<div class="smn-nav-primary">
-						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/ezines-new">{if $lng eq 'eng'}Ezines{else}Эл. журналы{/if}</a>
+						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/ezines-new">{if $lng eq 'eng'}Diskmags{else}Эл. журналы{/if}</a>
 						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/periodicals">{if $lng eq 'eng'}Periodicals{else}Периодика{/if}</a>
-						<a class="smn-nav-item" href="{$host}books.php{if $lng eq 'eng'}?lng=eng{/if}">{if $lng eq 'eng'}Books{else}Книги{/if}</a>
+						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/books-new">{if $lng eq 'eng'}Books{else}Книги{/if}</a>
 						<a class="smn-nav-item is-active" href="{$letters_catalog_url}">{if $lng eq 'eng'}Letters{else}Письма{/if}</a>
-						<a class="smn-nav-item" href="{$host}zxnet{if $lng eq 'eng'}?lng=eng{/if}">ZXNet</a>
+						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/zxnet-new">ZXNet</a>
 					</div>
 					<div class="smn-nav-more-wrap">
 						<button type="button" class="smn-nav-more-toggle" aria-expanded="false" aria-controls="smn-nav-more" aria-haspopup="true">
@@ -52,7 +51,7 @@
 					{/if}
 				</div>
 			</div>
-			<form class="smn-search" method="GET" action="{$host}search.php">
+			<form class="smn-search" method="GET" action="{if $lng eq 'eng'}/en{else}/ru{/if}/search-new">
 				{if $lng eq 'eng'}<input type="hidden" name="lng" value="eng">{/if}
 				<div class="smn-search-wrap">
 					<label class="smn-search-label" for="input_query_smn">{if $lng eq 'eng'}Search{else}Поиск{/if}</label>
@@ -60,12 +59,26 @@
 					<div id="suggest-smn" class="smn-search-suggest"></div>
 				</div>
 			</form>
+			<nav class="smn-breadcrumbs" aria-label="{if $lng eq 'eng'}Breadcrumbs{else}Хлебные крошки{/if}">
+				<a href="{if $lng eq 'eng'}/en{else}/ru{/if}">{if $lng eq 'eng'}Home{else}Главная{/if}</a>
+				<span class="smn-breadcrumb-sep" aria-hidden="true">→</span>
+{if $letter}
+				<a href="{$letters_catalog_url}">{if $lng eq 'eng'}Letters{else}Письма{/if}</a>
+				<span class="smn-breadcrumb-sep" aria-hidden="true">→</span>
+				<span class="smn-breadcrumb-current">{$letter.title_display}</span>
+{elseif $filter_author && $filter_author_display}
+				<a href="{$letters_catalog_url}">{if $lng eq 'eng'}Letters{else}Письма{/if}</a>
+				<span class="smn-breadcrumb-sep" aria-hidden="true">→</span>
+				<span class="smn-breadcrumb-current">{$filter_author_display}</span>
+{else}
+				<span class="smn-breadcrumb-current">{if $lng eq 'eng'}Letters{else}Письма{/if}</span>
+{/if}
+			</nav>
 		</header>
 
 		<main class="smn-main">
 {if $letter}
 
-			<p class="smn-back"><a href="{$letters_catalog_url}">{if $lng eq 'eng'}← All letters{else}← Все письма{/if}</a></p>
 			<article class="smn-letter">
 				<h1 class="smn-letter-title">{$letter.title_display}</h1>
 				<p class="smn-letter-meta">
@@ -89,7 +102,7 @@
 				<div class="smn-letter-scans">
 				{foreach from=$letter_images item=img}
 					<a href="{$img.original_url}" target="_blank" rel="noopener" class="smn-scan">
-						<img src="{$img.display_src}" alt="">
+						<img src="{$img.display_src}" alt="" loading="lazy" decoding="async">
 					</a>
 				{/foreach}
 				</div>
@@ -110,23 +123,22 @@
 
 			{if $filter_author && $filter_author_display}
 			<section class="smn-hero smn-hero--compact">
-				<p class="smn-back"><a href="{$letters_catalog_url}">{if $lng eq 'eng'}← All letters{else}← Все письма{/if}</a></p>
 				<h1>{if $lng eq 'eng'}Letters with {$filter_author_display}{else}Письма с участием {$filter_author_display}{/if}</h1>
 			</section>
 			{else}
 			<section class="smn-hero">
 				<h1>{if $lng eq 'eng'}Paper letters from mid-1990s members of the ZX Spectrum scene{else}Бумажная переписка участников ZX Spectrum-сцены{/if}</h1>
-				<div class="smn-lead" id="smn-lead" data-collapsed-label="{if $lng eq 'eng'}Show more{else}Показать полностью{/if}" data-expanded-label="{if $lng eq 'eng'}Show less{else}Свернуть{/if}">{if $lng eq 'eng'}
-					<p>Swapping and snailmail — the culture of exchanging floppy disks, cassettes, and magazines via regular (snail) mail, without which the demoscene of the USSR and Eastern Europe in the 80s–90s might not have existed.</p>
-					<p>Before the internet, paper letters connected active users from different cities and countries. Exchange was usually handled by a dedicated person — a swapper. They maintained contacts with dozens, sometimes hundreds of people. How quickly new releases, software, games and demos spread across the scene depended on them. Swappers often also sold software in their city.</p>
-					<p>Here are scans of paper letters from the domestic ZX Spectrum scene. In these letters you will find news, plans, and discussions of software, games and the demoscene.</p>
+				<div class="smn-lead" id="smn-lead" data-collapsed-label="{if $lng eq 'eng'}Show more{else}Показать полностью{/if}" data-expanded-label="{if $lng eq 'eng'}Show less{else}Свернуть{/if}">				{if $lng eq 'eng'}
+					<p>This section is about the culture of <b>swapping</b> and <b>snailmail</b> — exchanging floppy disks and cassettes by ordinary (snail) mail. Without that network of exchange, the demoscene of the USSR and Eastern Europe in the 1980s–1990s might not have developed into the form we know today.</p>
+					<p>Before the Internet became widespread, paper letters were what linked active users across cities and countries. Exchange was usually handled by a dedicated person — a <b>swapper</b>. They kept in touch with dozens, sometimes hundreds of people. How quickly new releases (software, games and demos) spread across the scene depended on them. Swappers often also sold software at local markets and by mail.</p>
+					<p>This section collects scans of paper letters from members of the post-Soviet ZX Spectrum scene of the 1990s. In them you will find news, plans, and discussions of programs, games, demos and the demoscene of that time.</p>
 				{else}
 					<p>Раздел посвящен культуре <b>swapping</b> и <b>snailmail</b> - обмену дискетами, кассетами через обычную (улиточную) почту. Без этой системы обмена демосцена СССР и Восточной Европы 1980–1990-х годов, вероятно, не смогла бы развиваться в том виде, в котором мы её знаем сегодня.</p>
 					<p>До широкого распространения Интернета именно бумажные письма связывали активных пользователей из разных городов и стран. Обменом как правило занимался специальный человек - <b>своппер</b>. Он поддерживал контакты с десятками, иногда сотнями людей. От него зависело, насколько быстро новые релизы (софт, игры и демо) разойдутся по сцене. Не редко свопперы занимались так же продажей софта, на местном рынке и по почте.</p>
 					<p>В этом разделе собраны сканы бумажных писем участников постсоветской ZX Spectrum-сцены 1990-х годов. В них можно найти новости, планы, обсуждения программ, игр, демо и демосцены того времени.</p>
 				{/if}</div>
 				<div class="smn-hero-visual">
-					<img src="{$host}img/snailmail.png" alt="" width="420" height="280">
+					<img src="{$host}img/snailmail.png" alt="" width="180" height="120">
 				</div>
 			</section>
 			{/if}
@@ -156,7 +168,7 @@
 					<a class="smn-list-card" href="{$row.public_url}">
 						<h2 class="smn-list-title">{$row.title_display}</h2>
 						{if $row.summary_html || $row.cover}
-						<span class="smn-list-summary">{if $row.cover}<span class="smn-list-cover"><img src="{$row.cover.thumb_src}" alt="" width="128"></span>{/if}{if $row.summary_html}<span class="smn-list-summary-text">{$row.summary_html nofilter}</span>{/if}</span>
+						<span class="smn-list-summary">{if $row.cover}<span class="smn-list-cover"><img src="{$row.cover.thumb_src}" alt="" width="256" loading="lazy" decoding="async"></span>{/if}{if $row.summary_html}<span class="smn-list-summary-text">{$row.summary_html nofilter}</span>{/if}</span>
 						{/if}
 						<span class="smn-list-meta">
 							<span class="smn-list-meta-main">
@@ -178,14 +190,24 @@
 
 			{if $letters_total_pages gt 1}
 			<nav class="smn-pages" aria-label="{if $lng eq 'eng'}Pages{else}Страницы{/if}">
+				{if $letters_prev_page}
+					<a class="smn-pages-prev" href="{if $letters_prev_page gt 1}{$letters_catalog_url}?p={$letters_prev_page}{else}{$letters_catalog_url}{/if}" rel="prev" aria-label="{if $lng eq 'eng'}Previous page{else}Предыдущая страница{/if}">←</a>
+				{else}
+					<span class="smn-pages-prev is-disabled" aria-hidden="true">←</span>
+				{/if}
 				{section name=pg loop=$letters_total_pages}
 					{assign var=pnum value=$smarty.section.pg.iteration}
 					{if $pnum == $letters_page}
-						<b>{$pnum}</b>
+						<b aria-current="page">{$pnum}</b>
 					{else}
-						<a href="{$letters_catalog_url}?p={$pnum}">{$pnum}</a>
+						<a href="{if $pnum gt 1}{$letters_catalog_url}?p={$pnum}{else}{$letters_catalog_url}{/if}">{$pnum}</a>
 					{/if}
 				{/section}
+				{if $letters_next_page}
+					<a class="smn-pages-next" href="{$letters_catalog_url}?p={$letters_next_page}" rel="next" aria-label="{if $lng eq 'eng'}Next page{else}Следующая страница{/if}">→</a>
+				{else}
+					<span class="smn-pages-next is-disabled" aria-hidden="true">→</span>
+				{/if}
 			</nav>
 			{/if}
 

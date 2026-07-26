@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/letters_slugs.php';
 require_once __DIR__ . '/authors_slugs.php';
+require_once __DIR__ . '/letters_images.php';
 
 const LETTERS_ENTITY_TYPE = 1;
 
@@ -113,14 +114,23 @@ function letters_public_first_cover(mysqli $db, int $letterId): ?array
 	}
 	$orig = letters_public_original_url($imgId, $fmt);
 	$prev = letters_public_preview_url($imgId);
+	$prev256 = letters_preview_256_url($imgId);
+	$prev256Path = letters_preview_256_path($imgId);
 	$prevPath = zx_storage_path('letters_preview', $imgId . '.jpg');
-	$thumbSrc = is_file($prevPath) ? $prev : $orig;
+	if (is_file($prev256Path) && filesize($prev256Path) > 0) {
+		$thumbSrc = $prev256;
+	} elseif (is_file($prevPath)) {
+		$thumbSrc = $prev;
+	} else {
+		$thumbSrc = $orig;
+	}
 
 	return [
 		'image_id' => $imgId,
 		'format' => $fmt,
 		'original_url' => $orig,
 		'preview_url' => $prev,
+		'preview_256_url' => $prev256,
 		'thumb_src' => $thumbSrc,
 	];
 }

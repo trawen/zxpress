@@ -18,7 +18,7 @@ deny from all
 #RewriteRule ^[zxnet]+/?([a-z\.0-9]+)/?([0-9])+\$ zxnet.php?e=$1&id=$2
 RewriteRule ^rss/news.rss?$ rss.php
 RewriteRule ^zxnet/([a-z_\.0-9]+)/?$ zxnet.php?e=$1
-RewriteRule ^zxnet/([a-z_\.0-9]+)/([0-9]+)?$ zxnet.php?e=$1&id=$2
+RewriteRule ^zxnet/([a-z_\.0-9]+)/([a-z0-9-]+)/?$ zxnet.php?e=$1&id=$2
 RewriteRule ^zxnet/?$ zxnet.php
 RewriteRule ^menu/([0-9]+)/?$ menu.php?r=$1
 RewriteRule ^menu/([0-9]+)/([0-9]+)?$ menu.php?r=$1&id=$2
@@ -46,9 +46,71 @@ RewriteRule ^ru/ezines/?$ ezines.php [L,QSA]
 RewriteRule ^en/ezines/?$ ezines.php?lng=eng [L,QSA]
 RewriteRule ^eng/ezines/?$ ezines.php?lng=eng [L,QSA]
 
+RewriteRule ^ru/ezines-new/([^/]+)/([^/]+)/(.+)/?$ article_new.php?press_slug=$1&issue_slug=$2&article_slug=$3 [L,QSA]
+RewriteRule ^en/ezines-new/([^/]+)/([^/]+)/(.+)/?$ article_new.php?lng=eng&press_slug=$1&issue_slug=$2&article_slug=$3 [L,QSA]
+RewriteRule ^eng/ezines-new/([^/]+)/([^/]+)/(.+)/?$ article_new.php?lng=eng&press_slug=$1&issue_slug=$2&article_slug=$3 [L,QSA]
+
+RewriteRule ^ru/ezines-new/([^/]+)/([^/]+)/?$ issue_new.php?press_slug=$1&issue_slug=$2 [L,QSA]
+RewriteRule ^en/ezines-new/([^/]+)/([^/]+)/?$ issue_new.php?lng=eng&press_slug=$1&issue_slug=$2 [L,QSA]
+RewriteRule ^eng/ezines-new/([^/]+)/([^/]+)/?$ issue_new.php?lng=eng&press_slug=$1&issue_slug=$2 [L,QSA]
+
+RewriteRule ^ru/ezines-new/([^/]+)/?$ issue_new.php?press_slug=$1 [L,QSA]
+RewriteRule ^en/ezines-new/([^/]+)/?$ issue_new.php?lng=eng&press_slug=$1 [L,QSA]
+RewriteRule ^eng/ezines-new/([^/]+)/?$ issue_new.php?lng=eng&press_slug=$1 [L,QSA]
+
 RewriteRule ^ru/ezines-new/?$ ezines_new.php [L,QSA]
 RewriteRule ^en/ezines-new/?$ ezines_new.php?lng=eng [L,QSA]
 RewriteRule ^eng/ezines-new/?$ ezines_new.php?lng=eng [L,QSA]
+
+RewriteRule ^ru/gallery-new/?$ gallery_new.php [L,QSA]
+RewriteRule ^en/gallery-new/?$ gallery_new.php?lng=eng [L,QSA]
+RewriteRule ^eng/gallery-new/?$ gallery_new.php?lng=eng [L,QSA]
+
+RewriteRule ^ru/guestbook-new/?$ guestbook_new.php [L,QSA]
+RewriteRule ^en/guestbook-new/?$ guestbook_new.php?lng=eng [L,QSA]
+RewriteRule ^eng/guestbook-new/?$ guestbook_new.php?lng=eng [L,QSA]
+
+RewriteRule ^ru/updates-new/?$ updates_new.php [L,QSA]
+RewriteRule ^en/updates-new/?$ updates_new.php?lng=eng [L,QSA]
+RewriteRule ^eng/updates-new/?$ updates_new.php?lng=eng [L,QSA]
+
+RewriteRule ^ru/search-new/?$ search_new.php [L,QSA]
+RewriteRule ^en/search-new/?$ search_new.php?lng=eng [L,QSA]
+RewriteRule ^eng/search-new/?$ search_new.php?lng=eng [L,QSA]
+
+RewriteRule ^ru/map/([a-z0-9-]+)/?$ map_new.php?filter=$1 [L,QSA]
+RewriteRule ^en/map/([a-z0-9-]+)/?$ map_new.php?lng=eng&filter=$1 [L,QSA]
+RewriteRule ^eng/map/([a-z0-9-]+)/?$ map_new.php?lng=eng&filter=$1 [L,QSA]
+RewriteRule ^ru/map/?$ map_new.php [L,QSA]
+RewriteRule ^en/map/?$ map_new.php?lng=eng [L,QSA]
+RewriteRule ^eng/map/?$ map_new.php?lng=eng [L,QSA]
+
+RewriteRule ^ru/categories/([0-9]+)/?$ categories.php?id=$1 [L,QSA]
+RewriteRule ^en/categories/([0-9]+)/?$ categories.php?lng=eng&id=$1 [L,QSA]
+RewriteRule ^eng/categories/([0-9]+)/?$ categories.php?lng=eng&id=$1 [L,QSA]
+RewriteRule ^ru/categories/?$ categories.php [L,QSA]
+RewriteRule ^en/categories/?$ categories.php?lng=eng [L,QSA]
+RewriteRule ^eng/categories/?$ categories.php?lng=eng [L,QSA]
+
+RewriteRule ^ru/books-new/chapter/([0-9]+)/?$ book_articles_new.php?id=$1 [L,QSA]
+RewriteRule ^en/books-new/chapter/([0-9]+)/?$ book_articles_new.php?lng=eng&id=$1 [L,QSA]
+RewriteRule ^eng/books-new/chapter/([0-9]+)/?$ book_articles_new.php?lng=eng&id=$1 [L,QSA]
+RewriteRule ^ru/books-new/([0-9]+)/?$ book_new.php?id=$1 [L,QSA]
+RewriteRule ^en/books-new/([0-9]+)/?$ book_new.php?lng=eng&id=$1 [L,QSA]
+RewriteRule ^eng/books-new/([0-9]+)/?$ book_new.php?lng=eng&id=$1 [L,QSA]
+RewriteRule ^ru/books-new/?$ books_new.php [L,QSA]
+RewriteRule ^en/books-new/?$ books_new.php?lng=eng [L,QSA]
+RewriteRule ^eng/books-new/?$ books_new.php?lng=eng [L,QSA]
+
+RewriteRule ^ru/zxnet-new/([a-z_\.0-9]+)/([a-z0-9-]+)/?$ zxnet_new.php?e=$1&id=$2 [L,QSA]
+RewriteRule ^en/zxnet-new/([a-z_\.0-9]+)/([a-z0-9-]+)/?$ zxnet_new.php?lng=eng&e=$1&id=$2 [L,QSA]
+RewriteRule ^eng/zxnet-new/([a-z_\.0-9]+)/([a-z0-9-]+)/?$ zxnet_new.php?lng=eng&e=$1&id=$2 [L,QSA]
+RewriteRule ^ru/zxnet-new/([a-z_\.0-9]+)/?$ zxnet_new.php?e=$1 [L,QSA]
+RewriteRule ^en/zxnet-new/([a-z_\.0-9]+)/?$ zxnet_new.php?lng=eng&e=$1 [L,QSA]
+RewriteRule ^eng/zxnet-new/([a-z_\.0-9]+)/?$ zxnet_new.php?lng=eng&e=$1 [L,QSA]
+RewriteRule ^ru/zxnet-new/?$ zxnet_new.php [L,QSA]
+RewriteRule ^en/zxnet-new/?$ zxnet_new.php?lng=eng [L,QSA]
+RewriteRule ^eng/zxnet-new/?$ zxnet_new.php?lng=eng [L,QSA]
 
 RewriteRule ^ru/snailmail/([^/]+)/?$ snailmail.php?letter_slug=$1 [L,QSA]
 RewriteRule ^en/snailmail/([^/]+)/?$ snailmail.php?lng=eng&letter_slug=$1 [L,QSA]
@@ -71,15 +133,15 @@ RewriteRule ^ru/authors/?$ authors.php [L,QSA]
 RewriteRule ^en/authors/?$ authors.php?lng=eng [L,QSA]
 RewriteRule ^eng/authors/?$ authors.php?lng=eng [L,QSA]
 
-RewriteRule ^ru/(?!periodicals|ezines|snailmail|authors)([^/]+)/([^/]+)/([^/]+)/?$ /ru/ezines/$1/$2/$3 [R=301,L]
-RewriteRule ^en/(?!periodicals|ezines|snailmail|authors)([^/]+)/([^/]+)/([^/]+)/?$ /en/ezines/$1/$2/$3 [R=301,L]
-RewriteRule ^eng/(?!periodicals|ezines|snailmail|authors)([^/]+)/([^/]+)/([^/]+)/?$ /en/ezines/$1/$2/$3 [R=301,L]
-RewriteRule ^ru/(?!periodicals|ezines|snailmail|authors)([^/]+)/([^/]+)/?$ /ru/ezines/$1/$2 [R=301,L]
-RewriteRule ^en/(?!periodicals|ezines|snailmail|authors)([^/]+)/([^/]+)/?$ /en/ezines/$1/$2 [R=301,L]
-RewriteRule ^eng/(?!periodicals|ezines|snailmail|authors)([^/]+)/([^/]+)/?$ /en/ezines/$1/$2 [R=301,L]
-RewriteRule ^ru/(?!periodicals|ezines|snailmail|authors)([^/]+)/?$ /ru/ezines/$1 [R=301,L]
-RewriteRule ^en/(?!periodicals|ezines|snailmail|authors)([^/]+)/?$ /en/ezines/$1 [R=301,L]
-RewriteRule ^eng/(?!periodicals|ezines|snailmail|authors)([^/]+)/?$ /en/ezines/$1 [R=301,L]
+RewriteRule ^ru/(?!periodicals|ezines|snailmail|authors|categories|gallery-new|zxnet-new|books-new|guestbook-new|updates-new|search-new|map)([^/]+)/([^/]+)/([^/]+)/?$ /ru/ezines/$1/$2/$3 [R=301,L]
+RewriteRule ^en/(?!periodicals|ezines|snailmail|authors|categories|gallery-new|zxnet-new|books-new|guestbook-new|updates-new|search-new|map)([^/]+)/([^/]+)/([^/]+)/?$ /en/ezines/$1/$2/$3 [R=301,L]
+RewriteRule ^eng/(?!periodicals|ezines|snailmail|authors|categories|gallery-new|zxnet-new|books-new|guestbook-new|updates-new|search-new|map)([^/]+)/([^/]+)/([^/]+)/?$ /en/ezines/$1/$2/$3 [R=301,L]
+RewriteRule ^ru/(?!periodicals|ezines|snailmail|authors|categories|gallery-new|zxnet-new|books-new|guestbook-new|updates-new|search-new|map)([^/]+)/([^/]+)/?$ /ru/ezines/$1/$2 [R=301,L]
+RewriteRule ^en/(?!periodicals|ezines|snailmail|authors|categories|gallery-new|zxnet-new|books-new|guestbook-new|updates-new|search-new|map)([^/]+)/([^/]+)/?$ /en/ezines/$1/$2 [R=301,L]
+RewriteRule ^eng/(?!periodicals|ezines|snailmail|authors|categories|gallery-new|zxnet-new|books-new|guestbook-new|updates-new|search-new|map)([^/]+)/([^/]+)/?$ /en/ezines/$1/$2 [R=301,L]
+RewriteRule ^ru/(?!periodicals|ezines|snailmail|authors|categories|gallery-new|zxnet-new|books-new|guestbook-new|updates-new|search-new|map)([^/]+)/?$ /ru/ezines/$1 [R=301,L]
+RewriteRule ^en/(?!periodicals|ezines|snailmail|authors|categories|gallery-new|zxnet-new|books-new|guestbook-new|updates-new|search-new|map)([^/]+)/?$ /en/ezines/$1 [R=301,L]
+RewriteRule ^eng/(?!periodicals|ezines|snailmail|authors|categories|gallery-new|zxnet-new|books-new|guestbook-new|updates-new|search-new|map)([^/]+)/?$ /en/ezines/$1 [R=301,L]
 
 RewriteRule ^ru/ezines/([^/]+)/([^/]+)/([^/]+)/?$ article.php?press_slug=$1&issue_slug=$2&article_slug=$3 [L,QSA]
 RewriteRule ^en/ezines/([^/]+)/([^/]+)/([^/]+)/?$ article.php?lng=eng&press_slug=$1&issue_slug=$2&article_slug=$3 [L,QSA]

@@ -158,10 +158,32 @@ function ec_pick_deepest_linked_category(array $linkedIds, array $byId): int
     return $pick;
 }
 
+/** Public catalog: /{lang}/categories */
+function ec_public_catalog_url(bool $isEng): string
+{
+    require_once __DIR__ . '/ezine_slugs.php';
+
+    return ezn_path_prefix($isEng) . '/categories';
+}
+
+/** Public category: /{lang}/categories/{id} */
+function ec_public_category_url(int $id, bool $isEng, bool $titleOnly = false): string
+{
+    $url = ec_public_catalog_url($isEng);
+    if ($id > 0) {
+        $url .= '/' . $id;
+    }
+    if ($titleOnly) {
+        $url .= '?title=1';
+    }
+
+    return $url;
+}
+
 /**
  * Breadcrumb of one category branch for a public article.
  *
- * @return list<array{id: int, name: string}>
+ * @return list<array{id: int, name: string, public_url: string}>
  */
 function ec_article_public_category_branch(mysqli $db, int $articleId, ?string $lng): array
 {
@@ -192,14 +214,117 @@ function ec_article_public_category_branch(mysqli $db, int $articleId, ?string $
         $byId[(int) ($row['id'] ?? 0)] = $row;
     }
 
+    $isEng = ($lng === 'eng');
     $leafId = ec_pick_deepest_linked_category($linkedIds, $byId);
     $branch = [];
     foreach (ec_category_breadcrumbs($byId, $leafId) as $row) {
+        $cid = (int) ($row['id'] ?? 0);
         $branch[] = [
-            'id' => (int) ($row['id'] ?? 0),
+            'id' => $cid,
             'name' => ec_cat_name($row, $lng),
+            'public_url' => ec_public_category_url($cid, $isEng),
         ];
     }
 
     return $branch;
+}
+
+/**
+ * Up to $limit other articles from the same (deepest) category as $articleId.
+ *
+ * @return array{category: ?array{id:int,name:string,public_url:string}, articles: list<array<string,mixed>>}
+ */
+function ec_article_related_from_same_category(mysqli $db, int $articleId, ?string $lng, int $limit = 5): array
+{
+    $empty = ['category' => null, 'articles' => []];
+    if ($articleId <= 0 || $limit <= 0) {
+        return $empty;
+    }
+
+    $linkedIds = [];
+    $z = db_select(
+        $db,
+        'SELECT category_id FROM ezine_article_categories WHERE article_id=? ORDER BY sort_order ASC, category_id ASC',
+        'i',
+        $articleId
+    );
+    while ($z && ($row = mysqli_fetch_assoc($z))) {
+        $cid = (int) ($row['category_id'] ?? 0);
+        if ($cid > 0) {
+            $linkedIds[] = $cid;
+        }
+    }
+    if ($linkedIds === []) {
+        return $empty;
+    }
+
+    $byId = [];
+    $zAll = db_select($db, 'SELECT * FROM ezine_categories');
+    while ($zAll && ($row = mysqli_fetch_assoc($zAll))) {
+        $byId[(int) ($row['id'] ?? 0)] = $row;
+    }
+
+    $leafId = ec_pick_deepest_linked_category($linkedIds, $byId);
+    if ($leafId <= 0 || !isset($byId[$leafId])) {
+        return $empty;
+    }
+
+    $isEng = ($lng === 'eng');
+    $catRow = $byId[$leafId];
+    $category = [
+        'id' => $leafId,
+        'name' => ec_cat_name($catRow, $lng),
+        'public_url' => ec_public_category_url($leafId, $isEng),
+    ];
+
+    require_once __DIR__ . '/ezine_slugs.php';
+
+    $stmt = $db->prepare(
+        'SELECT a.id, a.title, a.title_eng, a.number, a.id_issue, a.id_press, '
+        . 'a.slug_ru, a.slug_en, '
+        . 'i.title AS issue_title, i.date AS issue_date, '
+        . 'i.slug_ru AS issue_slug_ru, i.slug_en AS issue_slug_en, '
+        . 'p.title AS press_title, '
+        . 'p.slug_ru AS press_slug_ru, p.slug_en AS press_slug_en '
+        . 'FROM ezine_article_categories eac '
+        . 'INNER JOIN articles a ON a.id = eac.article_id AND a.temp = 0 AND a.id <> ? '
+        . 'INNER JOIN issue i ON i.id = a.id_issue '
+        . 'INNER JOIN press p ON p.id = i.id_press '
+        . 'WHERE eac.category_id = ? '
+        . 'ORDER BY eac.sort_order ASC, i.date DESC, a.number ASC, a.title ASC '
+        . 'LIMIT ?'
+    );
+    if (!$stmt) {
+        return ['category' => $category, 'articles' => []];
+    }
+    $stmt->bind_param('iii', $articleId, $leafId, $limit);
+    $stmt->execute();
+    $res = $stmt->get_result();
+    $articles = [];
+    while ($res && ($t = $res->fetch_assoc())) {
+        $pressRow = [
+            'id' => (int) ($t['id_press'] ?? 0),
+            'title' => (string) ($t['press_title'] ?? ''),
+            'slug_ru' => (string) ($t['press_slug_ru'] ?? ''),
+            'slug_en' => (string) ($t['press_slug_en'] ?? ''),
+        ];
+        $issueRow = [
+            'id' => (int) ($t['id_issue'] ?? 0),
+            'id_press' => (int) ($t['id_press'] ?? 0),
+            'title' => (string) ($t['issue_title'] ?? ''),
+            'slug_ru' => (string) ($t['issue_slug_ru'] ?? ''),
+            'slug_en' => (string) ($t['issue_slug_en'] ?? ''),
+        ];
+        $articles[] = [
+            'id' => (int) ($t['id'] ?? 0),
+            'title_html' => article_title_list_html($t['title'] ?? ''),
+            'title_eng_html' => article_title_list_html($t['title_eng'] ?? ''),
+            'press_name_plain' => title_plain($t['press_title'] ?? ''),
+            'issue_title' => (string) ($t['issue_title'] ?? ''),
+            'public_url' => ezn_url_article($pressRow, $issueRow, $t, $isEng),
+        ];
+    }
+    $stmt->close();
+
+    return ['category' => $category, 'articles' => $articles];
 }

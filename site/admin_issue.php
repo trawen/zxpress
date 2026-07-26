@@ -337,7 +337,7 @@ if ($id) {
         $smarty->assign('press', mysqli_fetch_array($z));
     }
 
-    $stmt_gi = $db->prepare("SELECT * FROM issue WHERE id_press=? ORDER BY title ASC");
+    $stmt_gi = $db->prepare("SELECT * FROM issue WHERE id_press=? ORDER BY LENGTH(title) ASC, title ASC");
     if ($stmt_gi) {
         $stmt_gi->bind_param("i", $id);
         $stmt_gi->execute();

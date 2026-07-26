@@ -6,6 +6,9 @@ error_reporting(E_ALL);
 require 'init.inc';
 require_once __DIR__ . '/includes/ezine_categories.php';
 require_once __DIR__ . '/includes/ezine_slugs.php';
+require_once __DIR__ . '/includes/letters_slugs.php';
+require_once __DIR__ . '/includes/authors_slugs.php';
+require_once __DIR__ . '/includes/comments_scope.php';
 
 function article_public_meta_description(array $article, ?string $lng): string
 {
@@ -39,9 +42,38 @@ function article_show_not_found($smarty): void {
 	$smarty->assign('article', null);
 	$smarty->assign('article_not_found', true);
 	$smarty->assign('title', 'Статья не найдена');
-	include 'right.php';
-	$smarty->display('article.tpl');
+	if (!article_ui_is_new()) {
+		include 'right.php';
+	}
+	$smarty->display(article_ui_template());
 	exit;
+}
+
+function article_ui_is_new(): bool
+{
+	return defined('EZINES_UI_VARIANT') && EZINES_UI_VARIANT === 'new';
+}
+
+function article_ui_template(): string
+{
+	return article_ui_is_new() ? 'article_new.tpl' : 'article.tpl';
+}
+
+function article_ui_render($smarty, bool $isEng): void
+{
+	$catalogUrl = article_ui_is_new() ? ezn_url_catalog_new($isEng) : ezn_url_catalog($isEng);
+	$smarty->assign('ezines_catalog_url', $catalogUrl);
+	$smarty->assign('ezines_classic_url', ezn_url_catalog($isEng));
+	$smarty->assign('letters_catalog_url', ezn_path_prefix($isEng) . '/snailmail-new');
+	$smarty->assign('authors_catalog_url', authors_url_catalog($isEng));
+	$smarty->assign('smn_nav_authors_active', false);
+	$smarty->assign('smn_nav_ezines_active', true);
+
+	if (!article_ui_is_new()) {
+		global $db;
+		include __DIR__ . '/right.php';
+	}
+	$smarty->display(article_ui_template());
 }
 
 $pressSlug = per_slug_normalize_path((string) ($_GET['press_slug'] ?? ''));
@@ -89,7 +121,16 @@ if (!is_array($issue)) {
 	article_show_not_found($smarty);
 }
 
-$issue['date'] = date("d ".$months[date("m", $issue['date'])]." Y", $issue['date'] );
+$dateTs = (int) ($issue['date'] ?? 0);
+$lng = $smarty->getTemplateVars('lng');
+$isEng = ($lng === 'eng');
+if ($dateTs > 0) {
+	$issue['date'] = $isEng
+		? date('d F Y', $dateTs)
+		: date('d ' . ($months[date('m', $dateTs)] ?? '') . ' Y', $dateTs);
+} else {
+	$issue['date'] = '';
+}
 
 $smarty->assign('issue', $issue);
 $id_issue = intval($issue['id']);
@@ -142,7 +183,7 @@ $article['name_plain'] = title_plain($article['name'] ?? '');
 		$resolved = realpath($candidate);
 		if ($resolved !== false && is_file($resolved)
 			&& strpos($resolved, $baseDir . DIRECTORY_SEPARATOR) === 0) {
-			$article['text'] = (string)file_get_contents($resolved);
+			$article['text'] = ezn_article_root_urls((string) file_get_contents($resolved));
 		}
 	}
 
@@ -213,6 +254,16 @@ $smarty->assign('og_url', $origin . $articleCanonical);
 $lng = $smarty->getTemplateVars('lng');
 $smarty->assign('ezine_category_branch', ec_article_public_category_branch($db, $id, $lng));
 
+$relatedCategory = null;
+$relatedCategoryArticles = [];
+if (article_ui_is_new()) {
+	$relatedBundle = ec_article_related_from_same_category($db, $id, $lng, 5);
+	$relatedCategory = $relatedBundle['category'];
+	$relatedCategoryArticles = $relatedBundle['articles'];
+}
+$smarty->assign('related_category', $relatedCategory);
+$smarty->assign('related_category_articles', $relatedCategoryArticles);
+
  //TAGS (hidden for now)
 /*
 $stmt = mysqli_prepare($db, "SELECT *, tags.id AS id FROM tags, tags_articles WHERE tags_articles.id_article=? AND tags.id=tags_articles.id_tag ORDER BY tags.`count` DESC");
@@ -254,7 +305,18 @@ if (!$skip) {
 	mysqli_stmt_execute($stmt);
 }
 
-include "right.php";
+if (article_ui_is_new()) {
+	$comments_target_id = comments_id_ezine_article((int) $id);
+	$comments_target_ids = comments_ezine_article_read_ids($db, (int) $id);
+	$smarty->assign('comments_enabled', true);
+	$smarty->assign('comments_form_action', ezn_url_article($pressRow, $issueRow, $article, $isEng));
+	$smarty->assign('comments_invite', $isEng
+		? 'Share your thoughts about the article'
+		: 'Поделитесь вашим мнением о статье');
+	require __DIR__ . '/comments.php';
+} else {
+	$smarty->assign('comments_enabled', false);
+}
 
-$smarty->display('article.tpl');
+article_ui_render($smarty, $isEng);
 ?>

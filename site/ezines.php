@@ -99,6 +99,15 @@ while ($z && ($t = mysqli_fetch_array($z))) {
 	$t['type_label'] = ezines_public_type_label((int) ($t['type'] ?? 0), $isEng);
 	$t['years_label'] = ezines_public_years_label((int) $t['years_from'], (int) $t['years_to']);
 	$t['issues_count'] = $numbers;
+	if ($numbers > 0) {
+		if ($isEng) {
+			$t['issues_count_label'] = $numbers . ' ' . ($numbers === 1 ? 'issue' : 'issues');
+		} else {
+			$t['issues_count_label'] = $numbers . ' ' . getNumEnding($numbers, ['номер', 'номера', 'номеров']);
+		}
+	} else {
+		$t['issues_count_label'] = '';
+	}
 	$city = trim((string) ($t['name'] ?? ''));
 	$t['city_label'] = $city;
 

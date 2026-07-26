@@ -165,4 +165,7 @@ setup_locale($smarty, $db, $months);
 
 $smarty->registerPlugin("function", "friendly_url", "friendly_url");
 
+require_once __DIR__ . '/includes/snailmail_new_assets.php';
+$smarty->registerPlugin('function', 'smn_styles', 'smarty_function_smn_styles');
+
 ?>

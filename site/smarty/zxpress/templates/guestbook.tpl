@@ -19,7 +19,7 @@
 <input class="input input-narrow" type="text" name="user_name" value="{$user_name}" maxlength="32"> &nbsp; {if $lng eq 'eng'}nickname/name{else}ник/имя{/if}</div>
 
 <div class="pad-4">
-<input class="input input-narrow" type="text" name="user_email" value="{$user_email}" maxlength="32">  &nbsp; {if $lng eq 'eng'}email (not published){else}почта (не публикуется){/if}
+<input class="input input-narrow" type="text" name="user_email" value="{$user_email}" maxlength="32" required>  &nbsp; {if $lng eq 'eng'}email (not published){else}почта (не публикуется){/if}
 </div>
 
 <div class="pad-4">

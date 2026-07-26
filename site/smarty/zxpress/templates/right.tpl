@@ -133,14 +133,33 @@
                             sel = -1;
                             if (!data || !data.length) { hideDrop(true); return; }
                             for (var i = 0; i < data.length; i++) {
+                                var item = data[i];
+                                var label = (typeof item === 'string') ? item : ((item && item.label) ? String(item.label) : '');
+                                if (!label) continue;
                                 var row = document.createElement('div');
-                                row.textContent = data[i];
+                                row.textContent = label;
+                                row.setAttribute('data-label', label);
+                                if (item && item.url) row.setAttribute('data-url', String(item.url));
                                 drop.appendChild(row);
                             }
+                            if (!dropItems().length) { hideDrop(true); return; }
                             showDrop();
                         })
                         .catch(function() { hideDrop(true); });
                 }, 300);
+            }
+
+            function applySuggestRow(row) {
+                var url = row.getAttribute('data-url') || '';
+                var label = row.getAttribute('data-label') || row.textContent || '';
+                hideDrop(true);
+                if (url) {
+                    location.href = url;
+                    return;
+                }
+                input.value = label;
+                var form = input.closest('form');
+                if (form) form.submit();
             }
 
             input.addEventListener('keydown', function(e) {
@@ -155,8 +174,8 @@
                     setActiveItem(items, sel);
                     e.preventDefault();
                 } else if (e.keyCode === 13 && sel >= 0) {
-                    input.value = items[sel].textContent;
-                    hideDrop(true);
+                    e.preventDefault();
+                    applySuggestRow(items[sel]);
                 } else if (e.keyCode === 27) {
                     hideDrop(true);
                     sel = -1;
@@ -166,10 +185,8 @@
             drop.addEventListener('mousedown', function(e) {
                 var row = e.target.closest('div');
                 if (!row || !drop.contains(row)) return;
-                input.value = row.textContent;
-                hideDrop(true);
-                var form = input.closest('form');
-                if (form) form.submit();
+                e.preventDefault();
+                applySuggestRow(row);
             });
 
             input.addEventListener('blur', function() {

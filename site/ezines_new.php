@@ -4,5 +4,6 @@
  * Public URL: /{lang}/ezines-new
  */
 define('EZINES_UI_VARIANT', 'new');
+define('EZINES_SECTION', 'ezines-new');
 
 require __DIR__ . '/ezines.php';

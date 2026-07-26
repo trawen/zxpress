@@ -66,7 +66,7 @@
 {section name=n loop=$other_articles}
 <li class="book-toc-item">
 <div class="book-toc-link">
-<a href="chapter.php?id={$other_articles[n].ch_id}"> {$other_articles[n].ch_title nofilter}</a>
+<a href="{$other_articles[n].public_url}"> {$other_articles[n].ch_title nofilter}</a>
 </div>
 </li>
 {/section}

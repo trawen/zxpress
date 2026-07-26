@@ -1,71 +1,177 @@
 <?php
 require 'init.inc';
+require_once __DIR__ . '/includes/ezine_slugs.php';
+require_once __DIR__ . '/includes/authors_slugs.php';
 
-//$smarty->debugging = true;
+function updates_ui_is_new(): bool
+{
+	return defined('UPDATES_UI_VARIANT') && UPDATES_UI_VARIANT === 'new';
+}
 
-$page = intval($_GET['page']);
-if (!$page) {$page = 1;}
+function updates_ui_template(): string
+{
+	return updates_ui_is_new() ? 'updates_new.tpl' : 'updates.tpl';
+}
+
+function updates_url(bool $isEng, int $page = 1): string
+{
+	$base = updates_ui_is_new()
+		? (ezn_path_prefix($isEng) . '/updates-new')
+		: '/updates.php';
+	$qs = [];
+	if (!updates_ui_is_new() && $isEng) {
+		$qs['lng'] = 'eng';
+	}
+	if ($page > 1) {
+		$qs['page'] = $page;
+	}
+	if ($qs === []) {
+		return $base;
+	}
+	return $base . '?' . http_build_query($qs);
+}
+
+$lng = $smarty->getTemplateVars('lng');
+$isEng = ($lng === 'eng');
+$page = max(1, (int) ($_GET['page'] ?? 1));
+
+$catalogUrl = updates_url($isEng, 1);
+$smarty->assign('updates_catalog_url', $catalogUrl);
+$smarty->assign('ezines_catalog_url', updates_ui_is_new() ? ezn_url_catalog_new($isEng) : ezn_url_catalog($isEng));
+$smarty->assign('letters_catalog_url', ezn_path_prefix($isEng) . '/snailmail-new');
+$smarty->assign('authors_catalog_url', authors_url_catalog($isEng));
+$smarty->assign('smn_nav_authors_active', false);
+$smarty->assign('smn_nav_ezines_active', false);
+$smarty->assign('smn_nav_gallery_active', false);
+$smarty->assign('smn_nav_zxnet_active', false);
+$smarty->assign('smn_nav_guestbook_active', false);
+$smarty->assign('smn_nav_updates_active', updates_ui_is_new());
 
 $num = 250;
-$from = (($page-1) * $num);
-$isEng = (($_GET['lng'] ?? '') === 'eng');
-$z = db_select($db, "SELECT COUNT(*) FROM log WHERE type=1");
+$from = ($page - 1) * $num;
+$z = db_select($db, 'SELECT COUNT(*) FROM log WHERE type=1');
 $p = $z ? mysqli_fetch_array($z) : false;
-$nm_pages = ceil($p[0] / $num);
+$total = (int) ($p[0] ?? 0);
+$nm_pages = max(1, (int) ceil($total / $num));
+if ($page > $nm_pages) {
+	$page = $nm_pages;
+	$from = ($page - 1) * $num;
+}
 
-for ($n=1; $n < $nm_pages-1; $n++) {$pg[]=$n;}
-
-$smarty->assign('pages', $pg);
+$pages = [];
+for ($n = 1; $n <= $nm_pages; $n++) {
+	$pages[] = $n;
+}
+$smarty->assign('pages', $pages);
 $smarty->assign('tk_page', $page);
+$smarty->assign('updates_total_pages', $nm_pages);
 
+$z = db_select(
+	$db,
+	'SELECT log.date AS log_date, '
+		. 'articles.id AS article_id, articles.title, articles.title_eng, '
+		. 'articles.slug_ru AS article_slug_ru, articles.slug_en AS article_slug_en, '
+		. 'press.id AS press_id, press.title AS press_title, '
+		. 'press.slug_ru AS press_slug_ru, press.slug_en AS press_slug_en, '
+		. 'issue.id AS issue_id, issue.title AS issue_title, '
+		. 'issue.slug_ru AS issue_slug_ru, issue.slug_en AS issue_slug_en '
+		. 'FROM log '
+		. 'INNER JOIN press ON press.id = log.id_press '
+		. 'INNER JOIN issue ON issue.id = log.id_issue '
+		. 'INNER JOIN articles ON articles.id = log.id_article '
+		. 'WHERE log.type = 1 AND articles.temp = 0 '
+		. 'ORDER BY log.date DESC LIMIT ?, ?',
+	'ii',
+	$from,
+	$num
+);
 
-$z = db_select($db, "SELECT *, issue.title AS issue_title, issue.id AS issue_id, press.title AS press_title, press.id AS press_id, articles.title AS title FROM log, press, issue, articles WHERE log.type=1 AND articles.temp=0 AND press.id=log.id_press AND issue.id=log.id_issue AND articles.id=log.id_article ORDER BY log.date DESC LIMIT ?, ?", "ii", $from, $num);
-
+$update = [];
+$p_press = null;
+$p_issue = null;
+$last = null;
+$groupIndex = 0;
 while ($z && ($t = mysqli_fetch_array($z))) {
-
-	if ($p_press == $t['press_title'] and $p_issue == $t['issue_title']) {
-
+	$pressTitle = (string) ($t['press_title'] ?? '');
+	$issueTitle = (string) ($t['issue_title'] ?? '');
+	if ($p_press === $pressTitle && $p_issue === $issueTitle) {
 		$t['print'] = 0;
-
-	}
-	else {
-
+		$t['show_rule'] = 0;
+	} else {
 		$t['print'] = 1;
-		$p_press = $t['press_title'];
-		$p_issue = $t['issue_title'];
-
+		$t['show_rule'] = $groupIndex > 0 ? 1 : 0;
+		$p_press = $pressTitle;
+		$p_issue = $issueTitle;
+		$groupIndex++;
 	}
 
-
-	$t['date'] = $isEng
-		? date("j F", $t['date'])
-		: date("d ", $t['date']) . $months[date("m", $t['date'])];
-
-	if ($last != $t['date']) {$last = $t['date'];} else {$t['date'] = "";}
+	$dateTs = (int) ($t['log_date'] ?? 0);
+	$dateLabel = $isEng
+		? date('j F', $dateTs)
+		: (date('d ', $dateTs) . ($months[date('m', $dateTs)] ?? ''));
+	if ($last !== $dateLabel) {
+		$last = $dateLabel;
+		$t['date'] = $dateLabel;
+	} else {
+		$t['date'] = '';
+	}
 
 	$articleTitle = ($isEng && trim((string) ($t['title_eng'] ?? '')) !== '')
-		? ($t['title_eng'] ?? '')
-		: ($t['title'] ?? '');
+		? (string) ($t['title_eng'] ?? '')
+		: (string) ($t['title'] ?? '');
 	$t['title_list'] = article_title_list_html($articleTitle);
 
-	$update[] = $t;
+	// Classic template expects article id in `id`.
+	$t['id'] = (int) ($t['article_id'] ?? 0);
 
+	$pressRow = [
+		'id' => (int) ($t['press_id'] ?? 0),
+		'title' => $pressTitle,
+		'slug_ru' => (string) ($t['press_slug_ru'] ?? ''),
+		'slug_en' => (string) ($t['press_slug_en'] ?? ''),
+	];
+	$issueRow = [
+		'id' => (int) ($t['issue_id'] ?? 0),
+		'title' => $issueTitle,
+		'slug_ru' => (string) ($t['issue_slug_ru'] ?? ''),
+		'slug_en' => (string) ($t['issue_slug_en'] ?? ''),
+	];
+	$articleRow = [
+		'id' => (int) ($t['article_id'] ?? 0),
+		'title' => (string) ($t['title'] ?? ''),
+		'title_eng' => (string) ($t['title_eng'] ?? ''),
+		'slug_ru' => (string) ($t['article_slug_ru'] ?? ''),
+		'slug_en' => (string) ($t['article_slug_en'] ?? ''),
+	];
+
+	if (updates_ui_is_new()) {
+		$t['issue_public_url'] = ezn_url_issue($pressRow, $issueRow, $isEng);
+		$t['article_public_url'] = ezn_url_article($pressRow, $issueRow, $articleRow, $isEng);
+	} else {
+		$t['issue_public_url'] = '/issue.php?id=' . (int) $pressRow['id']
+			. ($isEng ? '&lng=eng' : '')
+			. '#' . rawurlencode($issueTitle);
+		$t['article_public_url'] = '/article.php?id=' . (int) $articleRow['id']
+			. ($isEng ? '&lng=eng' : '');
+	}
+
+	$update[] = $t;
 }
 $smarty->assign('updates', $update);
 
+$smarty->assign('title', $isEng ? 'ZXPress updates list' : 'Список последних обновлений');
+$smarty->assign(
+	'description',
+	$isEng
+		? 'Latest additions to the zxpress library'
+		: 'Список последних поступлений в библиотеку zxpress'
+);
 
+$smarty->assign('url_rus', htmlspecialchars(updates_url(false, $page), ENT_QUOTES, 'UTF-8'));
+$smarty->assign('url_eng', htmlspecialchars(updates_url(true, $page), ENT_QUOTES, 'UTF-8'));
 
-if ($_GET['lng']) {
-	$smarty->assign('title', "ZXPress updates list");
+if (!updates_ui_is_new()) {
+	include __DIR__ . '/right.php';
 }
-else {
-	$smarty->assign('title', "Список последних обновлений");
-}
 
-
-
-
-include "right.php";
-
-$smarty->display('updates.tpl');
-?>
+$smarty->display(updates_ui_template());

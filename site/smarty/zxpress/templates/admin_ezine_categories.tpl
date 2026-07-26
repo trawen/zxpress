@@ -140,7 +140,7 @@
 <span class="admin-ec-tree-item">
 <a href="admin_ezine_categories.php?id={$c.id}"{if $category && $category.id eq $c.id} class="nav-active"{/if}>{$c.name_ru}</a>
 {if $c.articles_count gt 0}<span class="tree-item-count">{$c.articles_count}</span>{/if}
-<a href="{$host}ezine-categories.php?id={$c.id}" target="_blank" rel="noopener" class="admin-ec-public-link" title="Публичная страница со статьями" aria-label="Публичная страница">→</a>
+<a href="/ru/categories/{$c.id}" target="_blank" rel="noopener" class="admin-ec-public-link" title="Публичная страница со статьями" aria-label="Публичная страница">→</a>
 <label class="admin-ec-merge-check"><input type="checkbox" name="merge_category_ids[]" value="{$c.id}"></label>
 <button type="submit" name="delete_category" value="{$c.id}" class="admin-ec-delete-btn" title="Удалить категорию" aria-label="Удалить категорию «{$c.name_ru|escape:'html'}»" onclick="return confirm('Удалить категорию «{$c.name_ru|escape:'javascript'}» и все привязки статей?');">×</button>
 <button type="submit" name="move_category" value="{$c.id}:up" class="admin-ec-move-btn" title="Выше"{if !$c.can_move_up} disabled{/if} aria-label="Переместить выше">↑</button>

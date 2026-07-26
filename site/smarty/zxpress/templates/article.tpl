@@ -38,7 +38,7 @@
                     #{$issue.title}</a>
             {/if}
 
-            {if $issue.date neq "01 января 1970"}
+            {if $issue.date && $issue.date neq "01 января 1970" && $issue.date neq "01 January 1970"}
             <div class="date">{$issue.date}</div>{/if}
         </td>
         <td align=right class="article-toolbar-cell">

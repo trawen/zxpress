@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ZXPRESS Emulator</title>
+    <style>
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000; }
+        #canvas { display: block; width: 100vw; height: 100vh; object-fit: contain; }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+        (function() {
+            var params = new URLSearchParams(window.location.search);
+            var filePath = params.get('file');
+            if (!filePath) return;
+
+            window.Module = {
+                preRun: [],
+                postRun: [],
+                onInit: function () {
+                    Module.ccall('OnCommand', null, ['string'], ['filtering=off']);
+                    Module.ccall('OnCommand', null, ['string'], ['zoom=fill screen']);
+                },
+                onReady: function() {
+                    Module.ccall('OpenFile', null, ['string'], [filePath]);
+                },
+                canvas: document.getElementById('canvas'),
+                locateFile: function (file) {
+                    return '/us/' + file;
+                }
+            };
+
+            var script = document.createElement('script');
+            script.src = '/us/unreal_speccy_portable.js';
+            document.body.appendChild(script);
+        })();
+    </script>
+</body>
+</html>

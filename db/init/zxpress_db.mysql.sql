@@ -36,6 +36,8 @@ CREATE TABLE `articles` (
   `dt` int NOT NULL DEFAULT '0',
   `id_press` int NOT NULL DEFAULT '0',
   `text_type` int NOT NULL DEFAULT '0',
+  `text_ru` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `text_en` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`),
   KEY `temp` (`temp`),
   KEY `id_issue` (`id_issue`),

@@ -1,6 +1,6 @@
 -- Playwright / manual regression: ZXNet topic with HTML entities in `echos_zxnet.text`.
 -- After plain_text_decode_entities + Smarty escape, the page must not show visible &quot;
--- URL: /zxnet/e2e.talk/911001
+-- URL: /zxnet/e2e.talk/encoding-fixture-topic
 -- IDs 911001 are reserved for this fixture (ON DUPLICATE KEY UPDATE keeps it idempotent).
 
 USE zxpress_db;
@@ -14,14 +14,16 @@ ON DUPLICATE KEY UPDATE
 	date_to = VALUES(date_to),
 	description = VALUES(description);
 
-INSERT INTO echos_subjs2 (id, echo_id, title, nm, date_from, date_to)
-VALUES (911001, 911001, 'Encoding fixture topic', 0, UNIX_TIMESTAMP(), UNIX_TIMESTAMP())
+INSERT INTO echos_subjs2 (id, echo_id, title, nm, date_from, date_to, slug_ru, slug_en)
+VALUES (911001, 911001, 'Encoding fixture topic', 0, UNIX_TIMESTAMP(), UNIX_TIMESTAMP(), 'encoding-fixture-topic', 'encoding-fixture-topic')
 ON DUPLICATE KEY UPDATE
 	echo_id = VALUES(echo_id),
 	title = VALUES(title),
 	nm = VALUES(nm),
 	date_from = VALUES(date_from),
-	date_to = VALUES(date_to);
+	date_to = VALUES(date_to),
+	slug_ru = VALUES(slug_ru),
+	slug_en = VALUES(slug_en);
 
 INSERT INTO echos_zxnet (id, echo_id, subj_id, `date`, name_from, name_to, text, nm, tag, tear, origin)
 VALUES (

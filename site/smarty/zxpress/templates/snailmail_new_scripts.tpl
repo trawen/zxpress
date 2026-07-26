@@ -7,17 +7,60 @@
 		if (!input || !drop) return;
 		var timer = null, sel = -1;
 
+		function suggestLng() {
+			var p = location.pathname || '';
+			return (p === '/en' || p.indexOf('/en/') === 0 || p.indexOf('/eng/') === 0) ? 'eng' : 'ru';
+		}
+
+		function initGoButton() {
+			var wrap = input.closest('.smn-search-wrap');
+			if (!wrap || wrap.querySelector('.smn-search-go')) return;
+			var btn = document.createElement('button');
+			btn.type = 'submit';
+			btn.className = 'smn-search-go';
+			btn.textContent = suggestLng() === 'eng' ? 'detailed search' : 'подробный поиск';
+			wrap.appendChild(btn);
+
+			function syncGo() {
+				var has = !!String(input.value || '').trim();
+				btn.hidden = !has;
+				wrap.classList.toggle('has-query', has);
+			}
+
+			input.addEventListener('input', syncGo);
+			input.addEventListener('change', syncGo);
+			input.addEventListener('keyup', syncGo);
+			syncGo();
+		}
+
+		initGoButton();
+
+		function sizeDrop() {
+			var rect = drop.getBoundingClientRect();
+			// When hidden, measure from the search wrap bottom.
+			var top = rect.top;
+			if (!top || drop.style.display === 'none') {
+				var wrap = input.closest('.smn-search-wrap') || input;
+				top = wrap.getBoundingClientRect().bottom;
+			}
+			var room = Math.floor(window.innerHeight - top - 12);
+			if (room < 120) room = 120;
+			drop.style.maxHeight = room + 'px';
+		}
+
 		function hideDrop(clear) {
 			drop.style.display = 'none';
 			if (clear) drop.innerHTML = '';
 		}
 
 		function showDrop() {
+			sizeDrop();
 			drop.style.display = 'block';
+			sizeDrop();
 		}
 
 		function dropItems() {
-			return drop.querySelectorAll('div');
+			return drop.querySelectorAll('.smn-suggest-row');
 		}
 
 		function setActiveItem(items, index) {
@@ -25,6 +68,68 @@
 				items[i].classList.toggle('active', i === index);
 			}
 		}
+
+		function itemLabel(item) {
+			if (typeof item === 'string') return item;
+			return (item && item.label) ? String(item.label) : '';
+		}
+
+		function applyItem(row) {
+			var url = row.getAttribute('data-url') || '';
+			var label = row.getAttribute('data-label') || row.textContent || '';
+			hideDrop(true);
+			if (url) {
+				location.href = url;
+				return;
+			}
+			input.value = label;
+			var form = input.closest('form');
+			if (form) form.submit();
+		}
+
+		function renderItems(data) {
+			drop.innerHTML = '';
+			sel = -1;
+			if (!data || !data.length) { hideDrop(true); return; }
+			for (var i = 0; i < data.length; i++) {
+				var item = data[i];
+				var label = itemLabel(item);
+				if (!label) continue;
+				var row = document.createElement('div');
+				row.className = 'smn-suggest-row';
+				row.setAttribute('data-label', label);
+				if (item && item.url) row.setAttribute('data-url', String(item.url));
+				if (item && item.type) row.setAttribute('data-type', String(item.type));
+
+				var main = document.createElement('div');
+				main.className = 'smn-suggest-label';
+				if (item && item.label_html) {
+					main.innerHTML = String(item.label_html);
+				} else {
+					main.textContent = label;
+				}
+				row.appendChild(main);
+
+				if (item && item.meta) {
+					var meta = document.createElement('div');
+					meta.className = 'smn-suggest-meta';
+					meta.textContent = String(item.meta);
+					row.appendChild(meta);
+				}
+				drop.appendChild(row);
+			}
+			if (!dropItems().length) { hideDrop(true); return; }
+			showDrop();
+		}
+
+		function blockSuggestContextMenu(e) {
+			e.preventDefault();
+			e.stopPropagation();
+		}
+
+		// Only block context menu on suggestion rows — not on the input
+		// (so Inspect / DevTools via right-click still work).
+		drop.addEventListener('contextmenu', blockSuggestContextMenu, true);
 
 		input.addEventListener('input', onInput);
 		input.addEventListener('keyup', onInput);
@@ -35,19 +140,11 @@
 			var q = input.value;
 			if (q.length < 2) { hideDrop(true); return; }
 			timer = setTimeout(function () {
-				fetch('/suggest.php?q=' + encodeURIComponent(q), { credentials: 'same-origin' })
+				var url = '/suggest.php?q=' + encodeURIComponent(q)
+					+ '&ui=new&lng=' + encodeURIComponent(suggestLng());
+				fetch(url, { credentials: 'same-origin' })
 					.then(function (r) { return r.json(); })
-					.then(function (data) {
-						drop.innerHTML = '';
-						sel = -1;
-						if (!data || !data.length) { hideDrop(true); return; }
-						for (var i = 0; i < data.length; i++) {
-							var row = document.createElement('div');
-							row.textContent = data[i];
-							drop.appendChild(row);
-						}
-						showDrop();
-					})
+					.then(renderItems)
 					.catch(function () { hideDrop(true); });
 			}, 300);
 		}
@@ -64,8 +161,8 @@
 				setActiveItem(items, sel);
 				e.preventDefault();
 			} else if (e.keyCode === 13 && sel >= 0) {
-				input.value = items[sel].textContent;
-				hideDrop(true);
+				e.preventDefault();
+				applyItem(items[sel]);
 			} else if (e.keyCode === 27) {
 				hideDrop(true);
 				sel = -1;
@@ -73,12 +170,15 @@
 		});
 
 		drop.addEventListener('mousedown', function (e) {
-			var row = e.target.closest('div');
+			// Only left click opens a suggestion; ignore right/middle.
+			if (e.button !== 0) {
+				e.preventDefault();
+				return;
+			}
+			var row = e.target.closest('.smn-suggest-row');
 			if (!row || !drop.contains(row)) return;
-			input.value = row.textContent;
-			hideDrop(true);
-			var form = input.closest('form');
-			if (form) form.submit();
+			e.preventDefault();
+			applyItem(row);
 		});
 
 		input.addEventListener('blur', function () {
@@ -86,6 +186,9 @@
 		});
 		input.addEventListener('focus', function () {
 			if (dropItems().length) showDrop();
+		});
+		window.addEventListener('resize', function () {
+			if (drop.style.display === 'block') sizeDrop();
 		});
 	}
 
@@ -278,6 +381,70 @@
 		syncCollapsed();
 	}
 
+	/* Mobile: drop sticky header top padding on scroll */
+	function initBrandCompact() {
+		var header = document.querySelector('.smn-header');
+		if (!header) return;
+		var mq = window.matchMedia('(max-width: 820px)');
+		var ticking = false;
+
+		function sync() {
+			if (!mq.matches) {
+				header.classList.remove('is-compact');
+				return;
+			}
+			header.classList.toggle('is-compact', window.scrollY > 8);
+		}
+
+		function onScroll() {
+			if (ticking) return;
+			ticking = true;
+			requestAnimationFrame(function () {
+				ticking = false;
+				sync();
+			});
+		}
+
+		sync();
+		window.addEventListener('scroll', onScroll, { passive: true });
+		window.addEventListener('resize', sync);
+		if (mq.addEventListener) {
+			mq.addEventListener('change', sync);
+		} else if (mq.addListener) {
+			mq.addListener(sync);
+		}
+	}
+
+	/* TEMP: pin category aside to sticky breadcrumbs level */
+	function initCatAsidePin() {
+		var aside = document.querySelector('.smn-article-cat-aside');
+		var crumbs = document.getElementById('smn-sticky-breadcrumbs');
+		if (!aside || !crumbs) return;
+
+		var header = crumbs.closest('.smn-header');
+
+		function measurePinTop() {
+			if (!header) return 0;
+			// Breadcrumbs level + a little lower, to clear the header fade.
+			var pin = Math.round(crumbs.getBoundingClientRect().top - header.getBoundingClientRect().top) + 60;
+			return pin < 0 ? 0 : pin;
+		}
+
+		function sync() {
+			if (window.getComputedStyle(aside).position !== 'sticky') {
+				aside.style.top = '';
+				aside.style.maxHeight = '';
+				return;
+			}
+			var pinTop = measurePinTop();
+			aside.style.top = pinTop + 'px';
+			aside.style.maxHeight = 'calc(100vh - ' + pinTop + 'px - 16px)';
+		}
+
+		sync();
+		window.addEventListener('resize', sync);
+	}
+
 	if (document.readyState === 'loading') {
 		document.addEventListener('DOMContentLoaded', function () {
 			initSuggest('input_query_smn', 'suggest-smn');
@@ -285,6 +452,9 @@
 			initNavMore();
 			initTextCollapse('smn-lead');
 			initTextCollapse('smn-letter-summary');
+			initTextCollapse('smn-press-issue-desc');
+			initCatAsidePin();
+			initBrandCompact();
 		});
 	} else {
 		initSuggest('input_query_smn', 'suggest-smn');
@@ -292,6 +462,9 @@
 		initNavMore();
 		initTextCollapse('smn-lead');
 		initTextCollapse('smn-letter-summary');
+		initTextCollapse('smn-press-issue-desc');
+		initCatAsidePin();
+		initBrandCompact();
 	}
 })();
 </script>

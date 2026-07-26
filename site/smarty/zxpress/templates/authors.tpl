@@ -7,7 +7,6 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="robots" content="noindex, nofollow">
 	<title>{$title|strip_tags} — zxpress.ru</title>
 	{if $description}<meta name="description" content="{$description|strip_tags|escape:'html'}">{/if}
 	{if $og_title}
@@ -17,7 +16,7 @@
 	<meta property="og:url" content="{$og_url|escape:'html'}">
 	{if $og_image}<meta property="og:image" content="{$og_image|escape:'html'}">{/if}
 	{/if}
-	<link rel="stylesheet" href="{$host}img/snailmail-new.css?{$smarty.now}">
+	{smn_styles}
 </head>
 <body class="smn">
 	<div class="smn-frame">
@@ -28,11 +27,11 @@
 				</a>
 				<nav class="smn-nav" aria-label="{if $lng eq 'eng'}Sections{else}Разделы{/if}">
 					<div class="smn-nav-primary">
-						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/ezines-new">{if $lng eq 'eng'}Ezines{else}Эл. журналы{/if}</a>
+						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/ezines-new">{if $lng eq 'eng'}Diskmags{else}Эл. журналы{/if}</a>
 						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/periodicals">{if $lng eq 'eng'}Periodicals{else}Периодика{/if}</a>
-						<a class="smn-nav-item" href="{$host}books.php{if $lng eq 'eng'}?lng=eng{/if}">{if $lng eq 'eng'}Books{else}Книги{/if}</a>
+						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/books-new">{if $lng eq 'eng'}Books{else}Книги{/if}</a>
 						<a class="smn-nav-item is-active" href="{$letters_catalog_url}">{if $lng eq 'eng'}Letters{else}Письма{/if}</a>
-						<a class="smn-nav-item" href="{$host}zxnet{if $lng eq 'eng'}?lng=eng{/if}">ZXNet</a>
+						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/zxnet-new">ZXNet</a>
 					</div>
 					<div class="smn-nav-more-wrap">
 						<button type="button" class="smn-nav-more-toggle" aria-expanded="false" aria-controls="smn-nav-more" aria-haspopup="true">
@@ -52,7 +51,7 @@
 					{/if}
 				</div>
 			</div>
-			<form class="smn-search" method="GET" action="{$host}search.php">
+			<form class="smn-search" method="GET" action="{if $lng eq 'eng'}/en{else}/ru{/if}/search-new">
 				{if $lng eq 'eng'}<input type="hidden" name="lng" value="eng">{/if}
 				<div class="smn-search-wrap">
 					<label class="smn-search-label" for="input_query_smn">{if $lng eq 'eng'}Search{else}Поиск{/if}</label>
@@ -117,7 +116,7 @@
 					<a class="smn-list-card" href="{$row.public_url}">
 						<h2 class="smn-list-title">{$row.title_display}</h2>
 						{if $row.summary_html || $row.cover}
-						<span class="smn-list-summary">{if $row.cover}<span class="smn-list-cover"><img src="{$row.cover.thumb_src}" alt="" width="128"></span>{/if}{if $row.summary_html}<span class="smn-list-summary-text">{$row.summary_html nofilter}</span>{/if}</span>
+						<span class="smn-list-summary">{if $row.cover}<span class="smn-list-cover"><img src="{$row.cover.thumb_src}" alt="" width="256" loading="lazy" decoding="async"></span>{/if}{if $row.summary_html}<span class="smn-list-summary-text">{$row.summary_html nofilter}</span>{/if}</span>
 						{/if}
 						<span class="smn-list-meta">
 							<span class="smn-list-meta-main">

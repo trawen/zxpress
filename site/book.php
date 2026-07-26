@@ -1,96 +1,124 @@
 <?php
 require 'init.inc';
+require_once __DIR__ . '/includes/books_public.php';
+require_once __DIR__ . '/includes/authors_slugs.php';
+
+function book_ui_template(): string
+{
+	return books_ui_is_new() ? 'book_new.tpl' : 'book.tpl';
+}
 
 $smarty->assign('issue_archive_hidden', htmlspecialchars($_GET['issue_archive_hidden'] ?? '', ENT_QUOTES, 'UTF-8'));
 
-$id = intval($_GET['id']);
-if (!$id) {$id = 1;}
+$lng = $smarty->getTemplateVars('lng');
+$isEng = ($lng === 'eng');
 
-$months = array(
-		"01"=>"января",
-		"02"=>"февраля",
-		"03"=>"марта",
-		"04"=>"апреля",
-		"05"=>"мая",
-		"06"=>"июня",
-		"07"=>"июля",
-		"08"=>"августа",
-		"09"=>"сентября",
-		"10"=>"октября",
-		"11"=>"ноября",
-		"12"=>"декабря");
-
-
-$z = db_select($db, "SELECT * FROM pictures WHERE book_id=? ORDER BY pictures.type ASC", "i", $id);
-
-$n = 0;
-while ($z && ($t = mysqli_fetch_array($z))) {
-$c[$n] = $t;
-$n++;
+$id = (int) ($_GET['id'] ?? 0);
+if ($id <= 0) {
+	$id = 1;
 }
-$smarty->assign('screens', $c);
 
+$catalogUrl = books_url_catalog($isEng);
+$smarty->assign('books_catalog_url', $catalogUrl);
+$smarty->assign('ezines_catalog_url', books_ui_is_new() ? ezn_url_catalog_new($isEng) : ezn_url_catalog($isEng));
+$smarty->assign('letters_catalog_url', ezn_path_prefix($isEng) . '/snailmail-new');
+$smarty->assign('authors_catalog_url', authors_url_catalog($isEng));
+$smarty->assign('smn_nav_authors_active', false);
+$smarty->assign('smn_nav_ezines_active', false);
+$smarty->assign('smn_nav_gallery_active', false);
+$smarty->assign('smn_nav_zxnet_active', false);
+$smarty->assign('smn_nav_books_active', books_ui_is_new());
+
+$screens = [];
+$z = db_select($db, 'SELECT * FROM pictures WHERE book_id=? ORDER BY pictures.type ASC', 'i', $id);
+while ($z && ($t = mysqli_fetch_array($z))) {
+	$t['img_src'] = '/pictures/' . (int) $t['id'] . '.jpg';
+	$screens[] = $t;
+}
+$smarty->assign('screens', $screens);
 
 $z = db_select(
 	$db,
-	"SELECT books.*, cities.name AS city, cities.name_eng AS city_eng FROM books LEFT JOIN cities ON books.city_id=cities.id WHERE books.id=? LIMIT 1",
-	"i",
+	'SELECT books.*, cities.name AS city, cities.name_eng AS city_eng '
+	. 'FROM books LEFT JOIN cities ON books.city_id=cities.id WHERE books.id=? LIMIT 1',
+	'i',
 	$id
 );
 
+$press = $z ? mysqli_fetch_array($z) : false;
+$bookNotFound = false;
 
-$t = $z ? mysqli_fetch_array($z) : false;
-if ($t) {
-	$t['date'] = date("Y", $t['date']);
-	if ((int)($t['city_id'] ?? 0) > 0 && empty($t['city'])) {
-		error_log('[FIX] book.php missing city row id=' . $id . ' city_id=' . (int)$t['city_id']);
+if ($press) {
+	foreach (['title1', 'title2', 'series', 'publisher', 'authors', 'annotation', 'isbn'] as $field) {
+		$press[$field] = plain_text_decode_entities((string) ($press[$field] ?? ''));
 	}
-
-	if ($t['annotation'] and strtolower(substr($t['annotation'], 0, 3)) != "<p>") {$t['annotation'] = "<p>".$t['annotation']."</p>";}
+	$year = (int) date('Y', (int) $press['date']);
+	$press['date'] = $year;
+	$press['year_display'] = ($year > 1970) ? (string) $year : '';
+	$publisher = trim((string) $press['publisher']);
+	$press['publisher_display'] = ($publisher !== '' && $publisher !== '«»') ? $publisher : '';
+	$cityName = $isEng
+		? trim((string) ($press['city_eng'] ?? ''))
+		: trim((string) ($press['city'] ?? ''));
+	if ($cityName === '' && !$isEng) {
+		$cityName = trim((string) ($press['city'] ?? ''));
+	}
+	$press['city_display'] = $cityName;
+	$annotation = trim((string) ($press['annotation'] ?? ''));
+	if ($annotation !== '' && strtolower(substr($annotation, 0, 3)) !== '<p>') {
+		$annotation = '<p>' . $annotation . '</p>';
+	}
+	$press['annotation'] = $annotation;
+	if ((int) ($press['city_id'] ?? 0) > 0 && $cityName === '') {
+		error_log('[FIX] book.php missing city row id=' . $id . ' city_id=' . (int) $press['city_id']);
+	}
 } else {
+	$bookNotFound = true;
 	http_response_code(404);
 	error_log('[FIX] book.php not found id=' . $id);
 }
 
-$smarty->assign('press', $t);
+$smarty->assign('press', $press);
+$smarty->assign('book_not_found', $bookNotFound);
 
-
-$title = $t ? $t['title1'] : '';
-if ($t && $t['title2']) {$title = $title . " — ".$t['title2'];}
-
+$title = $press ? (string) $press['title1'] : ($isEng ? 'Book not found' : 'Книга не найдена');
+if ($press && trim((string) $press['title2']) !== '') {
+	$title .= ' — ' . $press['title2'];
+}
 $smarty->assign('title', $title);
 
-
-
-
-$z = db_select($db, "SELECT * FROM books_files WHERE book_id=?", "i", $id);
-
-$n = 0;
-while ($z && ($t = mysqli_fetch_array($z))) {
-	$f[$n] = $t;
-	$n++;
+$descPlain = '';
+if ($press) {
+	$descPlain = title_plain(strip_tags((string) ($press['annotation'] ?? '')));
+	if ($descPlain === '') {
+		$descPlain = title_plain($title);
+	}
 }
-$smarty->assign('files', $f);
+$smarty->assign('description', $descPlain);
 
-
-
-
-//OTHER ARTICLES
-$z = db_select($db, "SELECT * FROM chapters WHERE ch_id_book=? ORDER BY ch_date ASC", "i", $id);
-$n = 0;
+$files = [];
+$z = db_select($db, 'SELECT * FROM books_files WHERE book_id=?', 'i', $id);
 while ($z && ($t = mysqli_fetch_array($z))) {
-$art[$n] = $t;
-$n++;
+	$t['file_type_label'] = books_file_type_label((int) ($t['file_type'] ?? 0), $isEng);
+	$t['public_url'] = '/books_files/' . rawurlencode((string) ($t['file_name'] ?? ''));
+	$files[] = $t;
 }
-$smarty->assign('other_articles', $art);
+$smarty->assign('files', $files);
 
+$chapters = [];
+$z = db_select($db, 'SELECT * FROM chapters WHERE ch_id_book=? ORDER BY ch_date ASC', 'i', $id);
+while ($z && ($t = mysqli_fetch_array($z))) {
+	$t['ch_title'] = plain_text_decode_entities((string) ($t['ch_title'] ?? ''));
+	$t['public_url'] = books_url_chapter((int) $t['ch_id'], $isEng);
+	$chapters[] = $t;
+}
+$smarty->assign('other_articles', $chapters);
 
+$smarty->assign('url_rus', htmlspecialchars(books_url_book($id, false), ENT_QUOTES, 'UTF-8'));
+$smarty->assign('url_eng', htmlspecialchars(books_url_book($id, true), ENT_QUOTES, 'UTF-8'));
 
+if (!books_ui_is_new()) {
+	include __DIR__ . '/right.php';
+}
 
-include "right.php";
-
-$smarty->display('book.tpl');
-
-
-
-?>
+$smarty->display(book_ui_template());

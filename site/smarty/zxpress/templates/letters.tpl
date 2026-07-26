@@ -96,7 +96,7 @@ Swapping и Snailmail — культура обмена дискетами, ка
 <td width="140" class="pub-list-cover-cell">
 {if $row.cover}
 	<a href="{$row.public_url}">
-		<img src="{$row.cover.thumb_src}" alt="" width="128" class="pub-list-thumb">
+		<img src="{$row.cover.thumb_src}" alt="" width="256" class="pub-list-thumb">
 	</a>
 {else}
 	<div class="letter-list-placeholder"></div>

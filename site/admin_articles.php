@@ -77,7 +77,7 @@ $smarty->assign('id_issue', $issue);
 
 
 if (($_GET['go'] ?? '') == "go") {
-$stmt_go = $db->prepare("SELECT * FROM issue WHERE id_press=? ORDER BY title ASC LIMIT 1");
+$stmt_go = $db->prepare("SELECT * FROM issue WHERE id_press=? ORDER BY LENGTH(title) ASC, title ASC LIMIT 1");
 if ($stmt_go) {
 	$stmt_go->bind_param("i", $id);
 	$stmt_go->execute();
@@ -762,7 +762,7 @@ exit;
 
 
 //GET INFO
-$stmt_iss_list_get = $db->prepare("SELECT * FROM issue WHERE id_press=? ORDER BY title ASC");
+$stmt_iss_list_get = $db->prepare("SELECT * FROM issue WHERE id_press=? ORDER BY LENGTH(title) ASC, title ASC");
 if ($stmt_iss_list_get) {
 	$stmt_iss_list_get->bind_param("i", $id);
 	$stmt_iss_list_get->execute();

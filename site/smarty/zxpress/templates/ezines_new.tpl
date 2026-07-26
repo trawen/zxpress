@@ -7,7 +7,6 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="robots" content="noindex, nofollow">
 	<title>{$title|strip_tags} — ZXPRESS</title>
 	{if $description}<meta name="description" content="{$description|strip_tags|escape:'html'}">{/if}
 	{if $og_title}
@@ -17,7 +16,7 @@
 	<meta property="og:url" content="{$og_url|escape:'html'}">
 	{if $og_image}<meta property="og:image" content="{$og_image|escape:'html'}">{/if}
 	{/if}
-	<link rel="stylesheet" href="{$host}img/snailmail-new.css?{$smarty.now}">
+	{smn_styles}
 </head>
 <body class="smn">
 	<div class="smn-frame">
@@ -28,11 +27,11 @@
 				</a>
 				<nav class="smn-nav" aria-label="{if $lng eq 'eng'}Sections{else}Разделы{/if}">
 					<div class="smn-nav-primary">
-						<a class="smn-nav-item{if $smn_nav_ezines_active|default:false} is-active{/if}" href="{$ezines_catalog_url}">{if $lng eq 'eng'}Ezines{else}Эл. журналы{/if}</a>
+						<a class="smn-nav-item{if $smn_nav_ezines_active|default:false} is-active{/if}" href="{$ezines_catalog_url}">{if $lng eq 'eng'}Diskmags{else}Эл. журналы{/if}</a>
 						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/periodicals">{if $lng eq 'eng'}Periodicals{else}Периодика{/if}</a>
-						<a class="smn-nav-item" href="{$host}books.php{if $lng eq 'eng'}?lng=eng{/if}">{if $lng eq 'eng'}Books{else}Книги{/if}</a>
+						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/books-new">{if $lng eq 'eng'}Books{else}Книги{/if}</a>
 						<a class="smn-nav-item" href="{$letters_catalog_url}">{if $lng eq 'eng'}Letters{else}Письма{/if}</a>
-						<a class="smn-nav-item" href="{$host}zxnet{if $lng eq 'eng'}?lng=eng{/if}">ZXNet</a>
+						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/zxnet-new">ZXNet</a>
 					</div>
 					<div class="smn-nav-more-wrap">
 						<button type="button" class="smn-nav-more-toggle" aria-expanded="false" aria-controls="smn-nav-more" aria-haspopup="true">
@@ -52,7 +51,7 @@
 					{/if}
 				</div>
 			</div>
-			<form class="smn-search" method="GET" action="{$host}search.php">
+			<form class="smn-search" method="GET" action="{if $lng eq 'eng'}/en{else}/ru{/if}/search-new">
 				{if $lng eq 'eng'}<input type="hidden" name="lng" value="eng">{/if}
 				<div class="smn-search-wrap">
 					<label class="smn-search-label" for="input_query_smn">{if $lng eq 'eng'}Search{else}Поиск{/if}</label>
@@ -60,16 +59,23 @@
 					<div id="suggest-smn" class="smn-search-suggest"></div>
 				</div>
 			</form>
+			<nav class="smn-breadcrumbs" aria-label="{if $lng eq 'eng'}Breadcrumbs{else}Хлебные крошки{/if}">
+				<a href="{if $lng eq 'eng'}/en{else}/ru{/if}">{if $lng eq 'eng'}Home{else}Главная{/if}</a>
+				<span class="smn-breadcrumb-sep" aria-hidden="true">→</span>
+				<span class="smn-breadcrumb-current">{include file="snailmail_bc_ezines_label.tpl"}</span>
+			</nav>
 		</header>
 
 		<main class="smn-main">
+
 			<section class="smn-hero smn-hero--compact">
-				<h1>{if $lng eq 'eng'}Electronic newspapers and magazines for ZX Spectrum{else}Электронная пресса для ZX Spectrum{/if}</h1>
-				<div class="smn-lead" id="smn-lead" data-collapsed-label="{if $lng eq 'eng'}Show more{else}Показать полностью{/if}" data-expanded-label="{if $lng eq 'eng'}Show less{else}Свернуть{/if}">{if $lng eq 'eng'}
-					<p>This section is devoted to electronic newspapers and magazines published by the ZX Spectrum user community from the early 1990s through the 2020s. These titles became one of the brightest phenomena of the domestic Spectrum scene, bringing together news, technical knowledge, creativity and lively exchange among thousands of enthusiasts.</p>
-					<p>Most publications were not ordinary text files, but full programs with loading screens, original interfaces, music and illustrations. Reading them became a multimedia experience of its own — typical of the home-computer era.</p>
-					<p>Magazines and newspapers were distributed on cassettes and floppy disks, sent by post and through hobbyist networks long before the Internet became widespread. Their pages carried scene news, game and demo reviews, articles on programming and hardware, interviews, readers’ letters, humour, fiction and original writing. Today these titles are not only a valuable source of information, but also an important historical record of how the Spectrum community developed.</p>
-					<p>The split into magazines and newspapers is rather conventional, yet there were noticeable differences between them.</p>
+				<h1>{if $lng eq 'eng'}Diskmags for ZX Spectrum{else}Электронная пресса для ZX Spectrum{/if}</h1>
+				<div class="smn-lead" id="smn-lead" data-collapsed-label="{if $lng eq 'eng'}Show more{else}Показать полностью{/if}" data-expanded-label="{if $lng eq 'eng'}Show less{else}Свернуть{/if}">				{if $lng eq 'eng'}
+					<p>This section is devoted to electronic newspapers and magazines (scene ezines, or diskmags) published for the ZX Spectrum from the early 1990s onward. These titles became one of the brightest phenomena of the post-Soviet ZX Spectrum scene, bringing together news, technical knowledge, creativity and lively exchange among thousands of Spectrum users.</p>
+					<p>Most publications were runnable programs with loading screens, original interfaces, music and illustrations. Reading them became a unique multimedia experience, typical of the early home-computer era.</p>
+					<p>The first electronic magazines appeared on the Western computer scene in the late 1980s, mainly on the Commodore 64, Amiga and Atari ST. The format later spread widely on the ZX Spectrum scene as well, especially in the countries of the former USSR, where amateur newspapers and magazines became an important way to share information within the community.</p>
+					<p>Magazines and newspapers were distributed on 5.25&quot; floppy disks, sent by post and through FidoNet/ZXNet networks long before the Internet became widespread. Their pages carried scene news, game and demo reviews, articles on programming and hardware, interviews, readers’ letters, humour, fiction and original writing.</p>
+					<p>The split into magazines and newspapers is largely conventional. Many titles sat somewhere in between or changed format over time. Still, most of them shared the following traits:</p>
 					<div class="smn-compare-wrap">
 						<table class="smn-compare">
 							<thead>
@@ -127,7 +133,9 @@
 
 					<p>Журналы и газеты распространялись на 5.25 дискетах, пересылались по почте и через сети FidoNet/ZXNet  задолго до широкого распространения Интернета. На их страницах публиковались новости сцены, обзоры игр и демо, статьи по программированию и аппаратному обеспечению, интервью, переписка читателей, юмор, художественные произведения и авторские материалы. </p>
 
-					<p>Деление на журналы и газеты во многом условно. Многие издания занимали промежуточное положение или со временем меняли формат. Тем не менее для большинства из них были характерны следующие особенности:</p>
+					<p>В основном издания были универсальными и содержали материалы на всевозможные темы связанные с ZX Spectrum. Однако были и тематические издания, например: демосценерские, юмористические, эротические и т.д.</p>
+
+					<p>Деление на журналы и газеты зачастую условно. Некоторые издания занимали промежуточное положение или со временем меняли формат. Тем не менее для большинства из них характерны следующие особенности:</p>
 
 					<div class="smn-compare-wrap">
 						<table class="smn-compare">
@@ -201,7 +209,7 @@
 					<a class="smn-ezine-index-row" href="{$catalog[n].public_url}">
 						<span class="smn-ezine-index-main">
 							<span class="smn-ezine-index-name">{$catalog[n].title_plain}</span>
-							{if $catalog[n].issues_count}<span class="smn-ezine-index-count">{$catalog[n].issues_count}</span>{/if}
+							{if $catalog[n].issues_count_label}<span class="smn-ezine-index-count">{$catalog[n].issues_count_label}</span>{/if}
 						</span>
 						<span class="smn-ezine-index-meta">
 							{if $catalog[n].city_label}

@@ -87,7 +87,7 @@ $smarty->assign('view_tk_page', $page);
 
 
 // Prefetch all issues grouped by press id to avoid N+1 queries
-$z_issues = db_select($db, "SELECT * FROM issue ORDER BY id_press, title ASC");
+$z_issues = db_select($db, "SELECT * FROM issue ORDER BY id_press, LENGTH(title) ASC, title ASC");
 $issues_by_press = [];
 while ($z_issues && ($ti = mysqli_fetch_array($z_issues))) {
     $issues_by_press[$ti['id_press']][] = $ti;

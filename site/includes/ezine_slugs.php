@@ -59,7 +59,18 @@ function ezn_path_prefix(bool $isEng): string
     return $isEng ? '/en' : '/ru';
 }
 
+/** URL section segment: "ezines" (public) or "ezines-new" (layout test). */
 function ezn_section(): string
+{
+    if (defined('EZINES_SECTION') && is_string(EZINES_SECTION) && EZINES_SECTION !== '') {
+        return EZINES_SECTION;
+    }
+
+    return 'ezines';
+}
+
+/** Classic public section — used for article URLs until article_new exists. */
+function ezn_classic_section(): string
 {
     return 'ezines';
 }
@@ -179,7 +190,7 @@ function ezn_find_article_id(mysqli $db, int $issueId, string $slug, bool $isEng
     $primary = per_slug_column($isEng);
     $fallback = $isEng ? 'slug_ru' : 'slug_en';
     $stmt = $db->prepare(
-        'SELECT id FROM articles WHERE id_issue=? AND temp=0 AND (' . $primary . '=? OR ' . $fallback . '=?) LIMIT 1'
+        'SELECT id FROM articles WHERE id_issue=? AND (' . $primary . '=? OR ' . $fallback . '=?) LIMIT 1'
     );
     if (!$stmt) {
         return 0;
@@ -273,7 +284,8 @@ function ezn_url_article(array $press, array $issue, array $article, bool $isEng
         return '/article.php?id=' . $aid . ($isEng ? '&lng=eng' : '');
     }
 
-    return ezn_public_path_prefix($isEng) . '/' . $pressSlug . '/' . $issueSlug . '/' . $articleSlug;
+    // Articles stay on classic /ezines/ until a new article UI exists.
+    return ezn_path_prefix($isEng) . '/' . ezn_section() . '/' . $pressSlug . '/' . $issueSlug . '/' . $articleSlug;
 }
 
 function ezn_url_for_lang(
@@ -436,7 +448,8 @@ function ezn_maybe_redirect_press_legacy(mysqli $db, int $pressId, bool $isEng, 
     if ($pressId <= 0) {
         return;
     }
-    if (basename((string) ($_SERVER['SCRIPT_NAME'] ?? '')) !== 'issue.php') {
+    $script = basename((string) ($_SERVER['SCRIPT_NAME'] ?? ''));
+    if ($script !== 'issue.php' && $script !== 'issue_new.php') {
         return;
     }
 
@@ -496,4 +509,18 @@ function ezn_resolve_lang_from_request(): ?string
     }
 
     return null;
+}
+
+/**
+ * Article HTML stores site paths without a leading slash
+ * (illustrations/..., screens/..., img/...). That works on /article.php
+ * but breaks under /{lang}/ezines-new/{press}/{issue}/{article}.
+ */
+function ezn_article_root_urls(string $html): string
+{
+	return (string) preg_replace(
+		'/\b(src|href)=(["\'])(?!\/|https?:|\/\/|mailto:|data:|#|javascript:)((?:illustrations|screens|img|pictures|chapters_images)\/[^"\']*)\2/i',
+		'$1=$2/$3$2',
+		$html
+	);
 }
