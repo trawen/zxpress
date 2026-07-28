@@ -90,7 +90,16 @@
 		function renderItems(data) {
 			drop.innerHTML = '';
 			sel = -1;
-			if (!data || !data.length) { hideDrop(true); return; }
+			if (!data || !data.length) {
+				var empty = document.createElement('div');
+				empty.className = 'smn-suggest-empty';
+				empty.textContent = suggestLng() === 'eng'
+					? 'Nothing found, try detailed search'
+					: 'Ничего не найдено, попробуйте подробный поиск';
+				drop.appendChild(empty);
+				showDrop();
+				return;
+			}
 			for (var i = 0; i < data.length; i++) {
 				var item = data[i];
 				var label = itemLabel(item);
@@ -118,7 +127,16 @@
 				}
 				drop.appendChild(row);
 			}
-			if (!dropItems().length) { hideDrop(true); return; }
+			if (!dropItems().length) {
+				var emptyFallback = document.createElement('div');
+				emptyFallback.className = 'smn-suggest-empty';
+				emptyFallback.textContent = suggestLng() === 'eng'
+					? 'Nothing found, try detailed search'
+					: 'Ничего не найдено, попробуйте подробный поиск';
+				drop.appendChild(emptyFallback);
+				showDrop();
+				return;
+			}
 			showDrop();
 		}
 
@@ -338,29 +356,48 @@
 		scheduleUpdate();
 	}
 
-	function initTextCollapse(id) {
+	function initTextCollapse(id, options) {
 		var el = document.getElementById(id);
 		if (!el) return;
+		var always = !!(options && options.always);
 		var mq = window.matchMedia('(max-width: 820px)');
 
+		function clearCollapse() {
+			el.classList.remove('is-expanded', 'is-collapsible');
+			el.removeAttribute('role');
+			el.removeAttribute('tabindex');
+			el.removeAttribute('aria-expanded');
+		}
+
 		function syncCollapsed() {
-			if (!mq.matches) {
-				el.classList.remove('is-expanded', 'is-collapsible');
-				el.removeAttribute('role');
-				el.removeAttribute('tabindex');
-				el.removeAttribute('aria-expanded');
+			if (!always && !mq.matches) {
+				clearCollapse();
 				return;
 			}
+
+			var keepOpen = el.classList.contains('is-expanded');
 			el.classList.add('is-collapsible');
+			el.classList.remove('is-expanded');
+
+			// Only collapse when content actually overflows the preview height.
+			if (el.scrollHeight <= el.clientHeight + 4) {
+				clearCollapse();
+				return;
+			}
+
 			el.setAttribute('role', 'button');
 			el.setAttribute('tabindex', '0');
-			if (!el.classList.contains('is-expanded')) {
+			if (keepOpen) {
+				el.classList.add('is-expanded');
+				el.setAttribute('aria-expanded', 'true');
+			} else {
 				el.setAttribute('aria-expanded', 'false');
 			}
 		}
 
 		function toggle() {
-			if (!mq.matches) return;
+			if (!el.classList.contains('is-collapsible')) return;
+			if (!always && !mq.matches) return;
 			var open = !el.classList.contains('is-expanded');
 			el.classList.toggle('is-expanded', open);
 			el.setAttribute('aria-expanded', open ? 'true' : 'false');
@@ -450,7 +487,7 @@
 			initSuggest('input_query_smn', 'suggest-smn');
 			initCoverZoom();
 			initNavMore();
-			initTextCollapse('smn-lead');
+			initTextCollapse('smn-lead', { always: true });
 			initTextCollapse('smn-letter-summary');
 			initTextCollapse('smn-press-issue-desc');
 			initCatAsidePin();
@@ -460,7 +497,7 @@
 		initSuggest('input_query_smn', 'suggest-smn');
 		initCoverZoom();
 		initNavMore();
-		initTextCollapse('smn-lead');
+		initTextCollapse('smn-lead', { always: true });
 		initTextCollapse('smn-letter-summary');
 		initTextCollapse('smn-press-issue-desc');
 		initCatAsidePin();

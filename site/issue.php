@@ -57,6 +57,12 @@ $uiNew = issue_ui_is_new();
 $currentIssueId = 0;
 $viewMode = 'press';
 
+// Reserved catalog filter segments (must not be treated as press slugs).
+if ($uiNew && $issueSlug === '' && ($pressSlug === 'papers' || $pressSlug === 'magazines' || $pressSlug === 'reports')) {
+	header('Location: ' . ezn_url_catalog_new($isEng, $pressSlug), true, 301);
+	exit;
+}
+
 if ($slugRoute) {
 	$pressId = ezn_find_press_id($db, $pressSlug, $isEng);
 	if ($pressId <= 0) {

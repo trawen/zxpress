@@ -86,10 +86,15 @@ function ezn_url_catalog(bool $isEng): string
     return ezn_public_path_prefix($isEng);
 }
 
-/** Layout-test catalog under /{lang}/ezines-new */
-function ezn_url_catalog_new(bool $isEng): string
+/** Layout-test catalog under /{lang}/ezines-new[/{filter}] */
+function ezn_url_catalog_new(bool $isEng, string $filter = ''): string
 {
-    return ezn_path_prefix($isEng) . '/ezines-new';
+    $base = ezn_path_prefix($isEng) . '/ezines-new';
+    if ($filter === 'papers' || $filter === 'magazines' || $filter === 'reports') {
+        return $base . '/' . $filter;
+    }
+
+    return $base;
 }
 
 function ezn_default_press_ru(array $row): string

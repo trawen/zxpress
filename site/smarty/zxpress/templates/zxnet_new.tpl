@@ -20,7 +20,7 @@
 				</a>
 				<nav class="smn-nav" aria-label="{if $lng eq 'eng'}Sections{else}Разделы{/if}">
 					<div class="smn-nav-primary">
-						<a class="smn-nav-item" href="{$ezines_catalog_url}">{if $lng eq 'eng'}Diskmags{else}Эл. журналы{/if}</a>
+						<a class="smn-nav-item" href="{$ezines_catalog_url}">{if $lng eq 'eng'}Diskmags{else}Эл.пресса{/if}</a>
 						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/periodicals">{if $lng eq 'eng'}Periodicals{else}Периодика{/if}</a>
 						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/books-new">{if $lng eq 'eng'}Books{else}Книги{/if}</a>
 						<a class="smn-nav-item" href="{$letters_catalog_url}">{if $lng eq 'eng'}Letters{else}Письма{/if}</a>
@@ -111,7 +111,7 @@
 			<section class="smn-hero smn-hero--compact">
 				<h1>{if $lng eq 'eng'}ZXNet echo conference «{$echo.title}»{else}ZXNet эхоконференция «{$echo.title}»{/if}</h1>
 				{if $echo.description}
-				<div class="smn-lead" id="smn-lead" data-collapsed-label="{if $lng eq 'eng'}Show more{else}Показать полностью{/if}" data-expanded-label="{if $lng eq 'eng'}Show less{else}Свернуть{/if}">
+				<div class="smn-lead is-collapsible" id="smn-lead" data-collapsed-label="{if $lng eq 'eng'}Show more{else}Показать полностью{/if}" data-expanded-label="{if $lng eq 'eng'}Show less{else}Свернуть{/if}">
 					<p>{$echo.description nofilter}</p>
 				</div>
 				{/if}
@@ -156,7 +156,7 @@
 
 			<section class="smn-hero">
 				<h1>{if $lng eq 'eng'}Archive of ZXNet echo conferences{else}Архив эхоконференций сети ZXNet{/if}</h1>
-				<div class="smn-lead" id="smn-lead" data-collapsed-label="{if $lng eq 'eng'}Show more{else}Показать полностью{/if}" data-expanded-label="{if $lng eq 'eng'}Show less{else}Свернуть{/if}">
+				<div class="smn-lead is-collapsible" id="smn-lead" data-collapsed-label="{if $lng eq 'eng'}Show more{else}Показать полностью{/if}" data-expanded-label="{if $lng eq 'eng'}Show less{else}Свернуть{/if}">
 				{if $lng eq 'eng'}
 				<p>This section is dedicated to the echomail conferences of ZXNet, the largest non-commercial network uniting ZX Spectrum users across the former Soviet Union. It contains archives of conferences where users discussed programming, hardware, games, the demoscene, and everyday life.</p>
 

@@ -27,7 +27,7 @@
 				</a>
 				<nav class="smn-nav" aria-label="{if $lng eq 'eng'}Sections{else}Разделы{/if}">
 					<div class="smn-nav-primary">
-						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/ezines-new">{if $lng eq 'eng'}Diskmags{else}Эл. журналы{/if}</a>
+						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/ezines-new">{if $lng eq 'eng'}Diskmags{else}Эл.пресса{/if}</a>
 						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/periodicals">{if $lng eq 'eng'}Periodicals{else}Периодика{/if}</a>
 						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/books-new">{if $lng eq 'eng'}Books{else}Книги{/if}</a>
 						<a class="smn-nav-item is-active" href="{$letters_catalog_url}">{if $lng eq 'eng'}Letters{else}Письма{/if}</a>
@@ -128,7 +128,7 @@
 			{else}
 			<section class="smn-hero">
 				<h1>{if $lng eq 'eng'}Paper letters from mid-1990s members of the ZX Spectrum scene{else}Бумажная переписка участников ZX Spectrum-сцены{/if}</h1>
-				<div class="smn-lead" id="smn-lead" data-collapsed-label="{if $lng eq 'eng'}Show more{else}Показать полностью{/if}" data-expanded-label="{if $lng eq 'eng'}Show less{else}Свернуть{/if}">				{if $lng eq 'eng'}
+				<div class="smn-lead is-collapsible" id="smn-lead" data-collapsed-label="{if $lng eq 'eng'}Show more{else}Показать полностью{/if}" data-expanded-label="{if $lng eq 'eng'}Show less{else}Свернуть{/if}">				{if $lng eq 'eng'}
 					<p>This section is about the culture of <b>swapping</b> and <b>snailmail</b> — exchanging floppy disks and cassettes by ordinary (snail) mail. Without that network of exchange, the demoscene of the USSR and Eastern Europe in the 1980s–1990s might not have developed into the form we know today.</p>
 					<p>Before the Internet became widespread, paper letters were what linked active users across cities and countries. Exchange was usually handled by a dedicated person — a <b>swapper</b>. They kept in touch with dozens, sometimes hundreds of people. How quickly new releases (software, games and demos) spread across the scene depended on them. Swappers often also sold software at local markets and by mail.</p>
 					<p>This section collects scans of paper letters from members of the post-Soviet ZX Spectrum scene of the 1990s. In them you will find news, plans, and discussions of programs, games, demos and the demoscene of that time.</p>

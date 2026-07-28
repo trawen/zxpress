@@ -39,7 +39,7 @@
 				</a>
 				<nav class="smn-nav" aria-label="{if $lng eq 'eng'}Sections{else}Разделы{/if}">
 					<div class="smn-nav-primary">
-						<a class="smn-nav-item{if $smn_nav_ezines_active|default:false} is-active{/if}" href="{$ezines_catalog_url}">{if $lng eq 'eng'}Diskmags{else}Эл. журналы{/if}</a>
+						<a class="smn-nav-item{if $smn_nav_ezines_active|default:false} is-active{/if}" href="{$ezines_catalog_url}">{if $lng eq 'eng'}Diskmags{else}Эл.пресса{/if}</a>
 						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/periodicals">{if $lng eq 'eng'}Periodicals{else}Периодика{/if}</a>
 						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/books-new">{if $lng eq 'eng'}Books{else}Книги{/if}</a>
 						<a class="smn-nav-item" href="{$letters_catalog_url}">{if $lng eq 'eng'}Letters{else}Письма{/if}</a>
@@ -104,7 +104,15 @@
 					</div>
 					{if $screens.id}
 						<div class="smn-article-cover">
-							<img src="{$host}screens/1/{$screens.id}.{$screens.format}" alt="{$press.title_plain} #{$issue.title}" width="128" height="96">
+							<img
+								class="smn-gallery-img"
+								src="{$host}screens/1/{$screens.id}.{$screens.format}"
+								alt="{$press.title_plain} #{$issue.title}"
+								width="256"
+								height="192"
+								loading="lazy"
+								decoding="async"
+							>
 						</div>
 					{/if}
 				</header>

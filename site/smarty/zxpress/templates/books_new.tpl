@@ -20,7 +20,7 @@
 				</a>
 				<nav class="smn-nav" aria-label="{if $lng eq 'eng'}Sections{else}Разделы{/if}">
 					<div class="smn-nav-primary">
-						<a class="smn-nav-item" href="{$ezines_catalog_url}">{if $lng eq 'eng'}Diskmags{else}Эл. журналы{/if}</a>
+						<a class="smn-nav-item" href="{$ezines_catalog_url}">{if $lng eq 'eng'}Diskmags{else}Эл.пресса{/if}</a>
 						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/periodicals">{if $lng eq 'eng'}Periodicals{else}Периодика{/if}</a>
 						<a class="smn-nav-item is-active" href="{$books_catalog_url}">{if $lng eq 'eng'}Books{else}Книги{/if}</a>
 						<a class="smn-nav-item" href="{$letters_catalog_url}">{if $lng eq 'eng'}Letters{else}Письма{/if}</a>
@@ -69,7 +69,7 @@
 						{$books_total} изданий в библиотеке
 					{/if}
 				</p>
-				<div class="smn-lead" id="smn-lead" data-collapsed-label="{if $lng eq 'eng'}Show more{else}Показать полностью{/if}" data-expanded-label="{if $lng eq 'eng'}Show less{else}Свернуть{/if}">
+				<div class="smn-lead is-collapsible" id="smn-lead" data-collapsed-label="{if $lng eq 'eng'}Show more{else}Показать полностью{/if}" data-expanded-label="{if $lng eq 'eng'}Show less{else}Свернуть{/if}">
 				{if $lng eq 'eng'}
 					<p>This section collects paper books and magazines about the ZX Spectrum and related home computers — programming manuals, game guides, repair handbooks and popular titles published from the late 1980s onward.</p>
 					<p>Many editions can be read online or downloaded as scans. Covers and bibliographic details help you find the right book in the ZXPRESS library.</p>

@@ -27,7 +27,7 @@
 				</a>
 				<nav class="smn-nav" aria-label="{if $lng eq 'eng'}Sections{else}Разделы{/if}">
 					<div class="smn-nav-primary">
-						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/ezines-new">{if $lng eq 'eng'}Diskmags{else}Эл. журналы{/if}</a>
+						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/ezines-new">{if $lng eq 'eng'}Diskmags{else}Эл.пресса{/if}</a>
 						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/periodicals">{if $lng eq 'eng'}Periodicals{else}Периодика{/if}</a>
 						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/books-new">{if $lng eq 'eng'}Books{else}Книги{/if}</a>
 						<a class="smn-nav-item is-active" href="{$letters_catalog_url}">{if $lng eq 'eng'}Letters{else}Письма{/if}</a>
