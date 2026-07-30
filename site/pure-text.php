@@ -75,14 +75,16 @@ if (mb_strlen($t) > 60) {
 else {$title = $t;}	
 
 
-$baseDir = realpath(zx_storage_dir('articles'));
-$text = '';
-if ($baseDir !== false) {
-	$candidate = $baseDir . '/' . $id;
-	$resolved = realpath($candidate);
-	if ($resolved !== false && is_file($resolved)
-		&& strpos($resolved, $baseDir . DIRECTORY_SEPARATOR) === 0) {
-		$text = (string)file_get_contents($resolved);
+$text = (string) ($t['text_ru'] ?? '');
+if ($text === '') {
+	$baseDir = realpath(zx_storage_dir('articles'));
+	if ($baseDir !== false) {
+		$candidate = $baseDir . '/' . $id;
+		$resolved = realpath($candidate);
+		if ($resolved !== false && is_file($resolved)
+			&& strpos($resolved, $baseDir . DIRECTORY_SEPARATOR) === 0) {
+			$text = (string)file_get_contents($resolved);
+		}
 	}
 }
 $text = preg_replace('#<span[^>]*>#is', '', $text);

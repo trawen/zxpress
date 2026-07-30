@@ -1,6 +1,6 @@
 <?php
 
-define('LETTERS_SECTION', 'snailmail-new');
+define('LETTERS_SECTION', 'snailmail');
 define('LETTERS_UI_VARIANT', 'new');
 
 require 'init.inc';

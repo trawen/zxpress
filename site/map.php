@@ -38,7 +38,7 @@ if (map_ui_is_new()) {
 	$mapUrlBooks = press_map_url($isEng, 'books');
 
 	$smarty->assign('ezines_catalog_url', $catalogUrl);
-	$smarty->assign('letters_catalog_url', ezn_path_prefix($isEng) . '/snailmail-new');
+	$smarty->assign('letters_catalog_url', letters_url_catalog($isEng));
 	$smarty->assign('authors_catalog_url', authors_url_catalog($isEng));
 	$smarty->assign('map_catalog_url', $mapUrl);
 	$smarty->assign('smn_nav_authors_active', false);

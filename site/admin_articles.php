@@ -9,7 +9,7 @@ require 'html_fix.php';
 require_once __DIR__ . '/includes/ezine_slugs.php';
 //error_reporting(E_ALL);
 
-function admin_articles_read_text(int $articleId): string
+function admin_articles_read_text_from_disk(int $articleId): string
 {
 	$path = zx_storage_path('articles', (string) $articleId);
 	$text = @file_get_contents($path);
@@ -20,11 +20,33 @@ function admin_articles_read_text(int $articleId): string
 	return $text;
 }
 
-function admin_articles_write_text(int $articleId, string $text): bool
+function admin_articles_read_text(mysqli $db, int $articleId): string
 {
-	$ok = zx_storage_write('articles', (string) $articleId, $text);
+	$stmt = $db->prepare('SELECT text_ru FROM articles WHERE id=? LIMIT 1');
+	if ($stmt) {
+		$stmt->bind_param('i', $articleId);
+		$stmt->execute();
+		$res = $stmt->get_result();
+		$row = $res ? mysqli_fetch_array($res) : false;
+		$textRu = is_array($row) ? (string) ($row['text_ru'] ?? '') : '';
+		if ($textRu !== '') {
+			return $textRu;
+		}
+	}
+	return admin_articles_read_text_from_disk($articleId);
+}
+
+function admin_articles_write_text(mysqli $db, int $articleId, string $text): bool
+{
+	$stmt = $db->prepare('UPDATE articles SET text_ru=? WHERE id=? LIMIT 1');
+	if (!$stmt) {
+		error_log('[FIX] admin_articles: prepare text_ru update failed id=' . $articleId . ' err=' . mysqli_error($db));
+		return false;
+	}
+	$stmt->bind_param('si', $text, $articleId);
+	$ok = $stmt->execute();
 	if (!$ok) {
-		error_log('[FIX] admin_articles: article write failed id=' . $articleId . ' bytes=' . strlen($text));
+		error_log('[FIX] admin_articles: text_ru update failed id=' . $articleId . ' err=' . $stmt->error);
 	}
 	return $ok;
 }
@@ -324,7 +346,7 @@ while ($z && ($t = mysqli_fetch_array($z))) {
 	if ($_POST['article_change_'.$id_article] == 1) {
 		
 		$text = html_legacy_normalize(stripslashes($_POST['article_text_'.$id_article]), (int) $html, $issue);
-		admin_articles_write_text((int) $id_article, $text);
+		admin_articles_write_text($db, (int) $id_article, $text);
 	}
 	
 	
@@ -512,6 +534,12 @@ if ($_FILES['upload_text']['tmp_name'] and $ext=="txt") {
 	$id_text = mysqli_insert_id($db);
 	$safe_name = basename($id_text);
 	admin_articles_copy_upload('articles', $safe_name, (string) ($_FILES['upload_text']['tmp_name'] ?? ''), 'upload_text');
+	if ($id_text > 0) {
+		$uploadedText = @file_get_contents((string) ($_FILES['upload_text']['tmp_name'] ?? ''));
+		if ($uploadedText !== false) {
+			admin_articles_write_text($db, (int) $id_text, (string) $uploadedText);
+		}
+	}
 
 	$log_type1 = 1;
 	$stmt_log1a = $db->prepare("INSERT INTO log (`id`, `id_press`, `id_article`, `id_issue`, `id_user`, `date`, `type`, `id_screen`, `id_cover`) VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?)");
@@ -632,7 +660,7 @@ $stmt_autonum = $db->prepare("SELECT articles.number FROM issue, articles WHERE 
 	}
 	$text = html_legacy_normalize(stripslashes($_POST['new_article_text']), (int) $html, $issue);
 	if ($id_text > 0) {
-		admin_articles_write_text((int) $id_text, $text);
+		admin_articles_write_text($db, (int) $id_text, $text);
 	} else {
 		error_log('[FIX] admin_articles: create article id missing issue=' . $issue . ' press=' . $id);
 	}
@@ -747,6 +775,17 @@ if ($years_from AND $years_to) {
 if ($_POST['jump']) {$jump = "&jump=1#jump";}
 if ($_POST['autonumber']) {$au = "&au=1";}
 if ($_POST['html']) {$html = "&html=1";}
+
+// Manticore fulltext index rebuild is not instant:
+// queue a background reindex for articles after admin "save".
+// Worker debounces multiple saves into a single index run.
+$manticoreQueueDir = zx_data_root() . '/manticore-reindex';
+@mkdir($manticoreQueueDir, 0775, true);
+@file_put_contents(
+	$manticoreQueueDir . '/articles.pending',
+	(string) time(),
+	LOCK_EX
+);
 
 //REDIRECT
 header("Location: /admin_articles.php?id=$id&issue=$issue$au$html$jump");
@@ -873,7 +912,10 @@ while ($z && ($t = mysqli_fetch_array($z))) {
 	$id_art = $t['id'];
 $t['by'] = $log_by_article[$id_art] ?? [];
 $t['tags'] = $tags_by_article[$id_art] ?? [];
-	$t['text'] = admin_articles_read_text((int) $t['id']);
+	$t['text'] = (string) ($t['text_ru'] ?? '');
+	if ($t['text'] === '') {
+		$t['text'] = admin_articles_read_text_from_disk((int) $t['id']);
+	}
 $art[$n] = $t;
 $n++;
 }

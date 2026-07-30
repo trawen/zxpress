@@ -5,7 +5,7 @@ require_once __DIR__ . '/includes/authors_slugs.php';
 
 function guestbook_ui_is_new(): bool
 {
-	return defined('GUESTBOOK_UI_VARIANT') && GUESTBOOK_UI_VARIANT === 'new';
+	return !defined('GUESTBOOK_UI_VARIANT') || GUESTBOOK_UI_VARIANT === 'new';
 }
 
 function guestbook_ui_template(): string
@@ -16,9 +16,9 @@ function guestbook_ui_template(): string
 function guestbook_url(bool $isEng): string
 {
 	if (guestbook_ui_is_new()) {
-		return ezn_path_prefix($isEng) . '/guestbook-new';
+		return ezn_path_prefix($isEng) . '/guestbook';
 	}
-	return '/guestbook.php' . ($isEng ? '?lng=eng' : '');
+	return ezn_path_prefix($isEng) . '/guestbook-old';
 }
 
 $_REQUEST['id'] = 0;
@@ -28,8 +28,8 @@ $isEng = ($lng === 'eng');
 
 $catalogUrl = guestbook_url($isEng);
 $smarty->assign('guestbook_catalog_url', $catalogUrl);
-$smarty->assign('ezines_catalog_url', guestbook_ui_is_new() ? ezn_url_catalog_new($isEng) : ezn_url_catalog($isEng));
-$smarty->assign('letters_catalog_url', ezn_path_prefix($isEng) . '/snailmail-new');
+$smarty->assign('ezines_catalog_url', ezn_url_catalog($isEng));
+$smarty->assign('letters_catalog_url', letters_url_catalog($isEng));
 $smarty->assign('authors_catalog_url', authors_url_catalog($isEng));
 $smarty->assign('smn_nav_authors_active', false);
 $smarty->assign('smn_nav_ezines_active', false);

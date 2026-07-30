@@ -1,0 +1,195 @@
+{
+  "summary": {
+    "urls_tested": 28,
+    "issues_count": 1,
+    "http_4xx_5xx": 1,
+    "request_errors": 0,
+    "wrong_section_redirects": 0
+  },
+  "status_counts": {
+    "200": 27,
+    "503": 1
+  },
+  "issues": [
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/zxnet",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/zxnet"
+    }
+  ],
+  "tested": [
+    {
+      "url": "https://zxpress.ru/en/",
+      "status": 200,
+      "final": "https://zxpress.ru/en/",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/en/books",
+      "status": 200,
+      "final": "https://zxpress.ru/en/books",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/en/categories",
+      "status": 200,
+      "final": "https://zxpress.ru/en/categories",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/en/ezines",
+      "status": 200,
+      "final": "https://zxpress.ru/en/ezines",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/en/gallery",
+      "status": 200,
+      "final": "https://zxpress.ru/en/gallery",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/en/guestbook",
+      "status": 200,
+      "final": "https://zxpress.ru/en/guestbook",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/en/map",
+      "status": 200,
+      "final": "https://zxpress.ru/en/map",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/en/search",
+      "status": 200,
+      "final": "https://zxpress.ru/en/search",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/en/updates",
+      "status": 200,
+      "final": "https://zxpress.ru/en/updates",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/en/zxnet",
+      "status": 200,
+      "final": "https://zxpress.ru/en/zxnet",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/eng/",
+      "status": 200,
+      "final": "https://zxpress.ru/eng/",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/ru/",
+      "status": 200,
+      "final": "https://zxpress.ru/ru/",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/ru/authors",
+      "status": 200,
+      "final": "https://zxpress.ru/ru/authors",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/ru/books",
+      "status": 200,
+      "final": "https://zxpress.ru/ru/books",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/ru/categories",
+      "status": 200,
+      "final": "https://zxpress.ru/ru/categories",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/ru/ezines",
+      "status": 200,
+      "final": "https://zxpress.ru/ru/ezines",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/ru/ezines/books",
+      "status": 200,
+      "final": "https://zxpress.ru/ru/books",
+      "history": [
+        302
+      ]
+    },
+    {
+      "url": "https://zxpress.ru/ru/ezines/magazines",
+      "status": 200,
+      "final": "https://zxpress.ru/ru/ezines/magazines",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/ru/ezines/papers",
+      "status": 200,
+      "final": "https://zxpress.ru/ru/ezines/papers",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/ru/ezines/reports",
+      "status": 200,
+      "final": "https://zxpress.ru/ru/ezines/reports",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/ru/ezines/zxnet",
+      "status": 200,
+      "final": "https://zxpress.ru/ru/zxnet",
+      "history": [
+        302
+      ]
+    },
+    {
+      "url": "https://zxpress.ru/ru/gallery",
+      "status": 200,
+      "final": "https://zxpress.ru/ru/gallery",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/ru/guestbook",
+      "status": 200,
+      "final": "https://zxpress.ru/ru/guestbook",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/ru/map",
+      "status": 200,
+      "final": "https://zxpress.ru/ru/map",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/ru/search",
+      "status": 200,
+      "final": "https://zxpress.ru/ru/search",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/ru/snailmail",
+      "status": 200,
+      "final": "https://zxpress.ru/ru/snailmail",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/ru/updates",
+      "status": 200,
+      "final": "https://zxpress.ru/ru/updates",
+      "history": []
+    },
+    {
+      "url": "https://zxpress.ru/ru/zxnet",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/zxnet",
+      "history": []
+    }
+  ]
+}

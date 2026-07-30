@@ -203,35 +203,35 @@
 <table class="admin-ec-edit-form" style="font: 12px Verdana" cellpadding="4">
 <tr>
 <td>Название (RU) *</td>
-<td><input type="text" name="name_ru" maxlength="150" value="{if $category}{$category.name_ru}{/if}"></td>
+<td><input type="text" name="name_ru" maxlength="150" value="{if $category}{$category.name_ru|escape:'html'}{/if}"></td>
 </tr>
 <tr>
-<td>Название (EN) *</td>
-<td><input type="text" name="name_en" maxlength="150" value="{if $category}{$category.name_en}{/if}"></td>
+<td>Название (EN)</td>
+<td><input type="text" name="name_en" maxlength="150" value="{if $category}{$category.name_en|escape:'html'}{/if}"></td>
 </tr>
 <tr>
 <td>Заголовок (RU)</td>
-<td><input type="text" name="title_ru" maxlength="255" value="{if $category}{$category.title_ru}{/if}"></td>
+<td><input type="text" name="title_ru" maxlength="255" value="{if $category}{$category.title_ru|escape:'html'}{/if}"></td>
 </tr>
 <tr>
 <td>Заголовок (EN)</td>
-<td><input type="text" name="title_en" maxlength="255" value="{if $category}{$category.title_en}{/if}"></td>
+<td><input type="text" name="title_en" maxlength="255" value="{if $category}{$category.title_en|escape:'html'}{/if}"></td>
 </tr>
 <tr>
 <td valign="top">Описание (RU)</td>
-<td><textarea name="description_ru" class="admin-ec-field-desc">{if $category}{$category.description_ru}{/if}</textarea></td>
+<td><textarea name="description_ru" class="admin-ec-field-desc">{if $category}{$category.description_ru|escape:'html'}{/if}</textarea></td>
 </tr>
 <tr>
 <td valign="top">Описание (EN)</td>
-<td><textarea name="description_en" class="admin-ec-field-desc">{if $category}{$category.description_en}{/if}</textarea></td>
+<td><textarea name="description_en" class="admin-ec-field-desc">{if $category}{$category.description_en|escape:'html'}{/if}</textarea></td>
 </tr>
 <tr>
 <td valign="top">Meta description (RU)</td>
-<td><textarea name="meta_description_ru" class="admin-ec-field-meta" maxlength="500">{if $category}{$category.meta_description_ru}{/if}</textarea></td>
+<td><textarea name="meta_description_ru" class="admin-ec-field-meta" maxlength="500">{if $category}{$category.meta_description_ru|escape:'html'}{/if}</textarea></td>
 </tr>
 <tr>
 <td valign="top">Meta description (EN)</td>
-<td><textarea name="meta_description_en" class="admin-ec-field-meta" maxlength="500">{if $category}{$category.meta_description_en}{/if}</textarea></td>
+<td><textarea name="meta_description_en" class="admin-ec-field-meta" maxlength="500">{if $category}{$category.meta_description_en|escape:'html'}{/if}</textarea></td>
 </tr>
 <tr>
 <td valign="top">Иллюстрация</td>

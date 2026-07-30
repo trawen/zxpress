@@ -1,4 +1,4 @@
-# Fulltext: ft_title + ft_name only (no article body in index — PHP snippets use attrs title+name).
+# Fulltext: title + issue/press name + article body from DB fields text_ru/text_en.
 source articles_src
 {
     type            = mysql
@@ -10,13 +10,14 @@ source articles_src
     sql_query_pre   = SET NAMES utf8mb4
 
     sql_query       = \
-        SELECT a.id, a.title AS ft_title, CONCAT(p.title, " ", i.title) AS ft_name, \
-               a.title AS title, CONCAT(p.title, " ", i.title) AS name, \
-               a.id AS id1, a.id_issue AS id2, a.id_press AS id3, \
-               a.date, CONCAT(a.id_press, "/", a.id) AS img, 1 AS type \
+        SELECT a.id, a.title AS ft_title, CONCAT(IFNULL(p.title, ""), " ", IFNULL(i.title, "")) AS ft_name, \
+               CONCAT_WS(" ", IFNULL(a.text_ru, ""), IFNULL(a.text_en, "")) AS ft_text, \
+               a.title AS title, CONCAT(IFNULL(p.title, ""), " ", IFNULL(i.title, "")) AS name, \
+               a.id AS id1, a.id_issue AS id2, COALESCE(i.id_press, a.id_press, 0) AS id3, \
+               a.date, CONCAT(COALESCE(i.id_press, a.id_press, 0), "/", a.id) AS img, 1 AS type \
         FROM articles a \
-        JOIN issue i ON a.id_issue = i.id \
-        JOIN press p ON a.id_press = p.id \
+        LEFT JOIN issue i ON a.id_issue = i.id \
+        LEFT JOIN press p ON p.id = i.id_press \
         WHERE a.temp = 0
 
     sql_attr_string   = title

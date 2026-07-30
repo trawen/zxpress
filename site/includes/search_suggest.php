@@ -285,14 +285,14 @@ function search_suggest_articles(mysqli $db, string $q, bool $isEng, int $limit)
 		. ' FROM articles a'
 		. ' INNER JOIN issue i ON i.id = a.id_issue'
 		. ' INNER JOIN press p ON p.id = a.id_press'
-		. ' WHERE a.temp = 0 AND (a.title LIKE ? OR a.title_eng LIKE ?)'
+		. ' WHERE a.temp = 0 AND (a.title LIKE ? OR a.title_eng LIKE ? OR a.text_ru LIKE ? OR a.text_en LIKE ?)'
 		. ' ORDER BY (a.title LIKE ?) DESC, (a.title_eng LIKE ?) DESC, a.title ASC'
 		. ' LIMIT ?';
 	$stmt = $db->prepare($sql);
 	if (!$stmt) {
 		return [];
 	}
-	$stmt->bind_param('ssssi', $contains, $contains, $prefix, $prefix, $limit);
+	$stmt->bind_param('ssssssi', $contains, $contains, $contains, $contains, $prefix, $prefix, $limit);
 	$stmt->execute();
 	$res = $stmt->get_result();
 	$out = [];
@@ -385,14 +385,15 @@ function search_suggest_zxnet(mysqli $db, string $q, bool $isEng, int $limit): a
 	$sql = 'SELECT s.id, s.echo_id, s.title, s.title_en, s.slug_ru, s.slug_en, e.title AS echo_title'
 		. ' FROM echos_subjs2 s'
 		. ' INNER JOIN echos_titles2 e ON e.id = s.echo_id'
-		. ' WHERE s.title LIKE ? OR s.title_en LIKE ?'
+		. ' WHERE (s.title LIKE ? OR s.title_en LIKE ?) AND LOWER(e.title) <> ?'
 		. ' ORDER BY (s.title LIKE ?) DESC, (s.title_en LIKE ?) DESC, s.title ASC'
 		. ' LIMIT ?';
 	$stmt = $db->prepare($sql);
 	if (!$stmt) {
 		return [];
 	}
-	$stmt->bind_param('ssssi', $contains, $contains, $prefix, $prefix, $limit);
+	$hiddenEcho = 'e2e.talk';
+	$stmt->bind_param('sssssi', $contains, $contains, $hiddenEcho, $prefix, $prefix, $limit);
 	$stmt->execute();
 	$res = $stmt->get_result();
 	$out = [];
@@ -486,13 +487,13 @@ function search_suggest_all(mysqli $db, string $q, bool $isEng, bool $uiNew = fa
 
 	if ($uiNew) {
 		if (!defined('EZINES_SECTION')) {
-			define('EZINES_SECTION', 'ezines-new');
+			define('EZINES_SECTION', 'ezines');
 		}
 		if (!defined('BOOKS_UI_VARIANT')) {
 			define('BOOKS_UI_VARIANT', 'new');
 		}
 		if (!defined('LETTERS_SECTION')) {
-			define('LETTERS_SECTION', 'snailmail-new');
+			define('LETTERS_SECTION', 'snailmail');
 		}
 		if (!defined('ZXNET_UI_VARIANT')) {
 			define('ZXNET_UI_VARIANT', 'new');
@@ -512,7 +513,7 @@ function search_suggest_all(mysqli $db, string $q, bool $isEng, bool $uiNew = fa
 	$books = search_suggest_books($db, $q, $isEng, $maxBooks);
 	$letters = search_suggest_letters($db, $q, $isEng, $maxLetters);
 	$zxnet = search_suggest_zxnet($db, $q, $isEng, $maxZxnet);
-	$articles = search_suggest_articles($db, $q, $isEng, $maxArticles);
+	$articles = [];
 	$tags = search_suggest_tags($db, $q, $isEng, $maxTags);
 
 	// Prefer: press/books → letters → zxnet → articles → tags (bottom).

@@ -1,5 +1,5 @@
 {include file="top.tpl"}
-<h1 class="title">{if $lng eq 'eng'}Latest additions to the zxpress library{else}Список последних поступлений в библиотеку zxpress{/if}</h1>
+<h1 class="title">{if $lng eq 'eng'}Additions and updates on zxpress{else}Список поступлений и обновлений на zxpress{/if}</h1>
 
 
 <p>{if $lng eq 'eng'}Site updates are irregular. Priority is given to non-entertainment publications. At the moment, more than 90% of articles from such publications have been processed and uploaded to the site.{else}Обновления сайта носят не регулярный характер. Приоритетными явлются издания не развлекательной направленности. На данный момент обработаны и залиты на сайт более 90% статей таких изданий.{/if}</p>

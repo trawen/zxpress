@@ -6,7 +6,7 @@ require_once __DIR__ . '/includes/authors_slugs.php';
 
 function ezines_ui_is_new(): bool
 {
-	return defined('EZINES_UI_VARIANT') && EZINES_UI_VARIANT === 'new';
+	return !defined('EZINES_UI_VARIANT') || EZINES_UI_VARIANT === 'new';
 }
 
 function ezines_ui_template(): string
@@ -84,7 +84,8 @@ function ezines_type_counts(mysqli $db): array
 }
 
 /**
- * One menu screen (type=1) per press: prefer the last issue
+ * One best-fit screen per press: prefer menu (type=1), then splash (type=0),
+ * then any other screen; within that, prefer the last issue
  * (same order as the press overview: LENGTH(title) DESC, title DESC).
  *
  * @return array<int, array{id:int,format:string,src:string}>
@@ -94,11 +95,16 @@ function ezines_press_splash_map(mysqli $db): array
 	$map = [];
 	$z = db_select(
 		$db,
-		'SELECT s.id_press, s.id, s.format'
+		'SELECT s.id_press, s.id, s.format, s.type'
 		. ' FROM screens s'
 		. ' INNER JOIN issue i ON i.id = s.id_issue'
-		. ' WHERE s.type = 1'
-		. ' ORDER BY s.id_press ASC, LENGTH(i.title) DESC, i.title DESC, s.id ASC'
+		. ' ORDER BY s.id_press ASC,'
+		. ' CASE'
+		. ' WHEN s.type = 1 THEN 0'
+		. ' WHEN s.type = 0 THEN 1'
+		. ' ELSE 2'
+		. ' END ASC,'
+		. ' LENGTH(i.title) DESC, i.title DESC, s.id ASC'
 	);
 	while ($z && ($row = mysqli_fetch_assoc($z))) {
 		$pressId = (int) ($row['id_press'] ?? 0);
@@ -206,7 +212,7 @@ function ezines_ui_render($smarty, bool $isEng, string $filter = ''): void
 	$classicUrl = ezn_url_catalog($isEng);
 	$smarty->assign('ezines_catalog_url', ezines_ui_is_new() ? ezn_url_catalog_new($isEng) : ezn_url_catalog($isEng));
 	$smarty->assign('ezines_classic_url', $classicUrl);
-	$smarty->assign('letters_catalog_url', ezn_path_prefix($isEng) . '/snailmail-new');
+	$smarty->assign('letters_catalog_url', letters_url_catalog($isEng));
 	$smarty->assign('authors_catalog_url', authors_url_catalog($isEng));
 	$smarty->assign('smn_nav_authors_active', false);
 	$smarty->assign('smn_nav_ezines_active', true);
@@ -226,6 +232,33 @@ $lng = $smarty->getTemplateVars('lng');
 $isEng = ezn_is_eng(is_string($lng) ? $lng : null);
 
 $rawFilter = (string) ($_GET['filter'] ?? '');
+if ($rawFilter === '' && ezines_ui_is_new()) {
+	$path = parse_url((string) ($_SERVER['REQUEST_URI'] ?? ''), PHP_URL_PATH);
+	if (is_string($path)) {
+		if (preg_match('#^/(?:ru|en|eng)/ezines/(papers|magazines|reports)/?$#', $path, $m)) {
+			$rawFilter = (string) ($m[1] ?? '');
+		} elseif (preg_match('#^/(?:ru|en|eng)/ezines/([^/]+)/?$#', $path, $m)) {
+			$reservedSections = [
+				'books' => '/books',
+				'zxnet' => '/zxnet',
+				'snailmail' => '/snailmail',
+				'authors' => '/authors',
+				'gallery' => '/gallery',
+				'search' => '/search',
+				'updates' => '/updates',
+				'guestbook' => '/guestbook',
+				'map' => '/map',
+				'categories' => '/categories',
+				'periodicals' => '/periodicals',
+			];
+			$slug = per_slug_normalize_path((string) ($m[1] ?? ''));
+			if (isset($reservedSections[$slug])) {
+				header('Location: ' . ezn_path_prefix($isEng) . $reservedSections[$slug], true, 302);
+				exit;
+			}
+		}
+	}
+}
 $filter = ezines_ui_is_new() ? ezines_normalize_filter($rawFilter) : '';
 if (ezines_ui_is_new() && $rawFilter !== '' && $filter === '') {
 	header('Location: ' . ezn_url_catalog_new($isEng), true, 301);
@@ -300,10 +333,12 @@ while ($z && ($t = mysqli_fetch_array($z))) {
 		? (($t['country_en'] ?? '') !== '' ? ($t['country_en'] ?? '') : ($t['country_ru'] ?? ''))
 		: (($t['country_ru'] ?? '') !== '' ? ($t['country_ru'] ?? '') : ($t['country_en'] ?? ''))
 	));
+	$t['city_name_label'] = $city;
+	$t['country_label'] = $country;
 	if ($city !== '' && $country !== '') {
 		$t['city_label'] = $city . ' (' . $country . ')';
 	} else {
-		$t['city_label'] = $city;
+		$t['city_label'] = $city !== '' ? $city : $country;
 	}
 
 	$c[$n] = $t;

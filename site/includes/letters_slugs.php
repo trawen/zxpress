@@ -168,7 +168,11 @@ function letters_url_letter(array $row, bool $isEng): string
             return letters_url_catalog($isEng);
         }
 
-        $script = letters_section() === 'snailmail-new' ? '/snailmail_new.php' : '/snailmail.php';
+        $script = match (letters_section()) {
+            'snailmail-new' => '/snailmail_new.php',
+            'snailmail-old' => '/snailmail_old.php',
+            default => '/snailmail.php',
+        };
 
         return $script . '?id=' . $id . ($isEng ? '&lng=eng' : '');
     }

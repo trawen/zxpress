@@ -30,7 +30,11 @@ function zxpress_user_is_admin_level(mixed $level): bool
 function handle_login($db, $smarty): void
 {
 	if (!empty($_SESSION['login'])) {
-		$idle_sec = (int) (getenv('ADMIN_SESSION_IDLE_SECONDS') ?: '3600');
+		// Default: keep admin session alive at least 1 day.
+		$idle_sec_raw = (int) (getenv('ADMIN_SESSION_IDLE_SECONDS') ?: '86400');
+		// Enforce "at least a day" unless the operator explicitly disables idle logout
+		// (e.g. ADMIN_SESSION_IDLE_SECONDS <= 0).
+		$idle_sec = $idle_sec_raw > 0 ? max($idle_sec_raw, 86400) : $idle_sec_raw;
 		if ($idle_sec > 0) {
 			$now = time();
 			$last = (int) ($_SESSION['admin_last_activity'] ?? 0);

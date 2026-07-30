@@ -28,10 +28,9 @@
 				<nav class="smn-nav" aria-label="{if $lng eq 'eng'}Sections{else}Разделы{/if}">
 					<div class="smn-nav-primary">
 						<a class="smn-nav-item{if $smn_nav_ezines_active|default:false} is-active{/if}" href="{$ezines_catalog_url}">{if $lng eq 'eng'}Diskmags{else}Эл.пресса{/if}</a>
-						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/periodicals">{if $lng eq 'eng'}Periodicals{else}Периодика{/if}</a>
-						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/books-new">{if $lng eq 'eng'}Books{else}Книги{/if}</a>
+						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/books">{if $lng eq 'eng'}Books{else}Книги{/if}</a>
 						<a class="smn-nav-item" href="{$letters_catalog_url}">{if $lng eq 'eng'}Letters{else}Письма{/if}</a>
-						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/zxnet-new">ZXNet</a>
+						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/zxnet">ZXNet</a>
 					</div>
 					<div class="smn-nav-more-wrap">
 						<button type="button" class="smn-nav-more-toggle" aria-expanded="false" aria-controls="smn-nav-more" aria-haspopup="true">
@@ -51,7 +50,7 @@
 					{/if}
 				</div>
 			</div>
-			<form class="smn-search" method="GET" action="{if $lng eq 'eng'}/en{else}/ru{/if}/search-new">
+			<form class="smn-search" method="GET" action="{if $lng eq 'eng'}/en{else}/ru{/if}/search">
 				{if $lng eq 'eng'}<input type="hidden" name="lng" value="eng">{/if}
 				<div class="smn-search-wrap">
 					<label class="smn-search-label" for="input_query_smn">{if $lng eq 'eng'}Search{else}Поиск{/if}</label>
@@ -246,10 +245,11 @@
 								{if $catalog[n].type_label}<span class="smn-ezine-index-type">{$catalog[n].type_label}</span>{/if}
 {/if}
 								{if $catalog[n].years_label}<span class="smn-ezine-index-years">{$catalog[n].years_label}</span>{/if}
-								{if $catalog[n].city_label}
+								{if $catalog[n].city_name_label || $catalog[n].country_label}
 								<span class="smn-ezine-index-city">
 									{if $catalog[n].country_id}<img class="smn-ezine-flag" src="{$host}img/{$catalog[n].country_id}.png" width="16" height="10" alt="">{/if}
-									{$catalog[n].city_label}
+									{if $catalog[n].city_name_label}<span class="smn-ezine-index-city-name">{$catalog[n].city_name_label}</span>{/if}
+									{if $catalog[n].country_label}<span class="smn-ezine-index-country">({$catalog[n].country_label})</span>{/if}
 								</span>
 								{/if}
 							</span>

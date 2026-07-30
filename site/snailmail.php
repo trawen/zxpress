@@ -9,7 +9,7 @@ if (!defined('LETTERS_PER_PAGE')) {
 
 function letters_ui_is_new(): bool
 {
-	return defined('LETTERS_UI_VARIANT') && LETTERS_UI_VARIANT === 'new';
+	return !defined('LETTERS_UI_VARIANT') || LETTERS_UI_VARIANT === 'new';
 }
 
 function letters_ui_template(): string

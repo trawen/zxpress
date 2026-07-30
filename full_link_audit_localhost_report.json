@@ -1,0 +1,1517 @@
+{
+  "summary": {
+    "tested_pages": 4000,
+    "seen_links": 4000,
+    "issues_count": 250,
+    "http_4xx_5xx": 250,
+    "request_errors": 0,
+    "wrong_section_redirects": 0
+  },
+  "status_counts": {
+    "200": 3750,
+    "503": 242,
+    "404": 8
+  },
+  "issues": [
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/snailmail",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/snailmail"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/zxnet",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/zxnet"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/map",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/map"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/updates",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/updates"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/categories",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/categories"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/gallery",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/gallery"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/stats.php",
+      "status": 503,
+      "final": "https://zxpress.ru/stats.php"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/guestbook",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/guestbook"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/whois.php",
+      "status": 503,
+      "final": "https://zxpress.ru/whois.php"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/en/ezines",
+      "status": 503,
+      "final": "https://zxpress.ru/en/ezines"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/papers",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/papers"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/magazines",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/magazines"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/reports",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/reports"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/z80",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/z80"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/20",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/20"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/200",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/200"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/3bit",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/3bit"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/47th-byte",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/47th-byte"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/acid-paper",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/acid-paper"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/acnews",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/acnews"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/adventurer",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/adventurer"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/all-paper",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/all-paper"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/always",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/always"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/amazing",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/amazing"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/amiga-info",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/amiga-info"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/amiga-news",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/amiga-news"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/amiga-news-2",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/amiga-news-2"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/anecdotes",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/anecdotes"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/anigdot",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/anigdot"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/anti-top",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/anti-top"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/aspect",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/aspect"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/avro-news",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/avro-news"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/balagan",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/balagan"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/batva",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/batva"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/bbstop",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/bbstop"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/best-of",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/best-of"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/black-crow",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/black-crow"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/black-metall",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/black-metall"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/bonus",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/bonus"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/born-dead",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/born-dead"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/bred",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/bred"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/bred-2",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/bred-2"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/breeze",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/breeze"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/buhenvald",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/buhenvald"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/burn-the-lighter",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/burn-the-lighter"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/buzz",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/buzz"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/cafe-photo-album",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/cafe-photo-album"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/cafe-2003",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/cafe-2003"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/chaos",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/chaos"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/cheat",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/cheat"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/chudo",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/chudo"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/city",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/city"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/city-2",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/city-2"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/clime",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/clime"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/codemania",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/codemania"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/cossackos",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/cossackos"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/crazy-news",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/crazy-news"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/crystal-dream",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/crystal-dream"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/cyberman",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/cyberman"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/cybersex",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/cybersex"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/deja-vu",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/deja-vu"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/demo-or-die",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/demo-or-die"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/depress",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/depress"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/depth",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/depth"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/di-halt",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/di-halt"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/dni-pro",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/dni-pro"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/dnieprobite",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/dnieprobite"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/donnews",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/donnews"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/du-hast",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/du-hast"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/dune",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/dune"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/echo",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/echo"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/eldorado",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/eldorado"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/electra",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/electra"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/emulate",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/emulate"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/energy",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/energy"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/enigma-tape-magazine",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/enigma-tape-magazine"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/explorer",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/explorer"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/f-net",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/f-net"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/fanat",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/fanat"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/fanat-newspaper",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/fanat-newspaper"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/fantadrom",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/fantadrom"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/fantastic",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/fantastic"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/fantasy",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/fantasy"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/fantik",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/fantik"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/faultless",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/faultless"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/fenzin",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/fenzin"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/fisherman-press",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/fisherman-press"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/flash-info",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/flash-info"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/foolishness",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/foolishness"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/forever-young",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/forever-young"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/fuck",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/fuck"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/funeral",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/funeral"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/funny-box",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/funny-box"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/funny-night",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/funny-night"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/gamergy",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/gamergy"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/gluk",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/gluk"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/gms-news",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/gms-news"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/gomel-zx-net-news",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/gomel-zx-net-news"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/gothiq",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/gothiq"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/hacker",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/hacker"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/hooy-mag",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/hooy-mag"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/horror",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/horror"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/impulse",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/impulse"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/inferno",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/inferno"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/innovision",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/innovision"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/insanity",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/insanity"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/izhnews",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/izhnews"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/key",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/key"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/kiia-info",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/kiia-info"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/kosme",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/kosme"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/lamergy",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/lamergy"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/last-128",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/last-128"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/lime-tree",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/lime-tree"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/listok",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/listok"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/lntnews",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/lntnews"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/madness",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/madness"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/marazm",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/marazm"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/mask-2",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/mask-2"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/matrix",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/matrix"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/max-pictures-sexual-news",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/max-pictures-sexual-news"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/maximum",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/maximum"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/micro",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/micro"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/millenium",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/millenium"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/miracle",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/miracle"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/mirikom",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/mirikom"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/modern",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/modern"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/move",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/move"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/msf",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/msf"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/muchomor",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/muchomor"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/mustang",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/mustang"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/my-speccy",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/my-speccy"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/natural",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/natural"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/nemofaq",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/nemofaq"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/netus-news",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/netus-news"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/never-mind",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/never-mind"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/nicron",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/nicron"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/nikfe",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/nikfe"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/nonsense",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/nonsense"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/noosfera",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/noosfera"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/numberology",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/numberology"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/oberon",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/oberon"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/odyssey-magazine",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/odyssey-magazine"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/offline",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/offline"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/on-line",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/on-line"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/open-letters",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/open-letters"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/opium",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/opium"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/optron",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/optron"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/orion",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/orion"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/ostrov",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/ostrov"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/out-side",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/out-side"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/outlet",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/outlet"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/overlog",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/overlog"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/pioneer",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/pioneer"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/platinum",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/platinum"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/playboy",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/playboy"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/point",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/point"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/pointovka-report",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/pointovka-report"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/polesse",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/polesse"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/power",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/power"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/prikoly",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/prikoly"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/profi-club",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/profi-club"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/proton",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/proton"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/psychoz",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/psychoz"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/public-spirit",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/public-spirit"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/read-me",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/read-me"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/realtime",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/realtime"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/red-press",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/red-press"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/review",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/review"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/revival",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/revival"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/rip",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/rip"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/rst",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/rst"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/rush",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/rush"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/sapog",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/sapog"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/scene-news",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/scene-news"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/scenergy",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/scenergy"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/scream",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/scream"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/screamergy",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/screamergy"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/scroller",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/scroller"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/setevoy-sokol",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/setevoy-sokol"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/shock",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/shock"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/shocker",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/shocker"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/sibnews",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/sibnews"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/sinc-re-stared",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/sinc-re-stared"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/sinclair-classic",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/sinclair-classic"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/sinclair-news",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/sinclair-news"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/sinclair-town",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/sinclair-town"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/skimer",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/skimer"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/sky-net",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/sky-net"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/sorrow-news",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/sorrow-news"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/sosg",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/sosg"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/spb-zx-week",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/spb-zx-week"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/speccy",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/speccy"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/speccy-life",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/speccy-life"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/specinfo",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/specinfo"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/spectrofun",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/spectrofun"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/spectron",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/spectron"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/spectrophoby",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/spectrophoby"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/spectrum-expert",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/spectrum-expert"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/spectrum-land",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/spectrum-land"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/spectrum-magazine",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/spectrum-magazine"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/spectrum-news",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/spectrum-news"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/spectrum-progress",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/spectrum-progress"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/spite",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/spite"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/star",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/star"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/stump",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/stump"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/subliminal-extacy",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/subliminal-extacy"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/tagan-news",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/tagan-news"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/tales-from-crypt",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/tales-from-crypt"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/target",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/target"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/teleshow",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/teleshow"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/terminal",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/terminal"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/think",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/think"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/times",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/times"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/totoro",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/totoro"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/tusovka",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/tusovka"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/tusovka-2",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/tusovka-2"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/ufo",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/ufo"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/ultimathum",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/ultimathum"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/unsteady-news",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/unsteady-news"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/virtual-world",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/virtual-world"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/virtual-worlds",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/virtual-worlds"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/voyager",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/voyager"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/wallpaper",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/wallpaper"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/warez",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/warez"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/weekend",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/weekend"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/welcome-press",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/welcome-press"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/white-crow",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/white-crow"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/wizard-net-page",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/wizard-net-page"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/wizard-news",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/wizard-news"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/world-in-the-web",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/world-in-the-web"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/x-files",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/x-files"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/x-files-2",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/x-files-2"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/x-ray",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/x-ray"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/xa-xafon",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/xa-xafon"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/zed",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/zed"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/zodiac",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/zodiac"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/zx-chart",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/zx-chart"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/zx-club",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/zx-club"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/zx-digest",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/zx-digest"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/zx-doze",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/zx-doze"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/zx-ferrum",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/zx-ferrum"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/en/ezines/acnews/43/zx-spectrum-autobootable-cd-standard-v1-0-autorun-zx-file-format-specification-boot-parameters-cpu",
+      "status": 404,
+      "final": "https://zxpress.ru/en/ezines/acnews/43/zx-spectrum-autobootable-cd-standard-v1-0-autorun-zx-file-format-specification-boot-parameters-cpu"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/en/ezines/acnews/43/development-of-time-gal-game-on-atm-turbo-computer-video-player-creation-cd-rom-work-audio-video",
+      "status": 404,
+      "final": "https://zxpress.ru/en/ezines/acnews/43/development-of-time-gal-game-on-atm-turbo-computer-video-player-creation-cd-rom-work-audio-video"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/en/ezines/acnews/67/detailed-measurements-of-power-consumption-for-zx-spectrum-amiga-pc-computers-gaming-consoles-and",
+      "status": 404,
+      "final": "https://zxpress.ru/en/ezines/acnews/67/detailed-measurements-of-power-consumption-for-zx-spectrum-amiga-pc-computers-gaming-consoles-and"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/en/ezines/acnews/67/power-consumption-comparison-of-zx-spectrum-retro-computers-and-modern-pcs-energy-usage",
+      "status": 404,
+      "final": "https://zxpress.ru/en/ezines/acnews/67/power-consumption-comparison-of-zx-spectrum-retro-computers-and-modern-pcs-energy-usage"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/en/ezines/acnews/67/history-of-atm-turbo-software-from-1992-to-2014-development-of-applications-games-utilities-and",
+      "status": 404,
+      "final": "https://zxpress.ru/en/ezines/acnews/67/history-of-atm-turbo-software-from-1992-to-2014-development-of-applications-games-utilities-and"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/en/ezines/acnews/67/history-of-atm-turbo-software-from-1992-to-2014-overview-of-system-programs-games-utilities-and",
+      "status": 404,
+      "final": "https://zxpress.ru/en/ezines/acnews/67/history-of-atm-turbo-software-from-1992-to-2014-overview-of-system-programs-games-utilities-and"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/en/ezines/acnews/67/nedolang-compiler-development-for-zx-spectrum-analysis-of-source-code-size-generated-code-volume",
+      "status": 404,
+      "final": "https://zxpress.ru/en/ezines/acnews/67/nedolang-compiler-development-for-zx-spectrum-analysis-of-source-code-size-generated-code-volume"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/en/ezines/acnews/67/development-of-nedolang-compiler-for-zx-spectrum-project-statistics-346-kb-sources-57-kb-binary",
+      "status": 404,
+      "final": "https://zxpress.ru/en/ezines/acnews/67/development-of-nedolang-compiler-for-zx-spectrum-project-statistics-346-kb-sources-57-kb-binary"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/en/ezines/lprint/02",
+      "status": 503,
+      "final": "https://zxpress.ru/en/ezines/lprint/02"
+    }
+  ]
+}

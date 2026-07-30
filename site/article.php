@@ -9,6 +9,7 @@ require_once __DIR__ . '/includes/ezine_slugs.php';
 require_once __DIR__ . '/includes/letters_slugs.php';
 require_once __DIR__ . '/includes/authors_slugs.php';
 require_once __DIR__ . '/includes/comments_scope.php';
+require_once __DIR__ . '/includes/article_text_render.php';
 
 function article_public_meta_description(array $article, ?string $lng): string
 {
@@ -51,7 +52,7 @@ function article_show_not_found($smarty): void {
 
 function article_ui_is_new(): bool
 {
-	return defined('EZINES_UI_VARIANT') && EZINES_UI_VARIANT === 'new';
+	return !defined('EZINES_UI_VARIANT') || EZINES_UI_VARIANT === 'new';
 }
 
 function article_ui_template(): string
@@ -61,10 +62,10 @@ function article_ui_template(): string
 
 function article_ui_render($smarty, bool $isEng): void
 {
-	$catalogUrl = article_ui_is_new() ? ezn_url_catalog_new($isEng) : ezn_url_catalog($isEng);
+	$catalogUrl = ezn_url_catalog($isEng);
 	$smarty->assign('ezines_catalog_url', $catalogUrl);
 	$smarty->assign('ezines_classic_url', ezn_url_catalog($isEng));
-	$smarty->assign('letters_catalog_url', ezn_path_prefix($isEng) . '/snailmail-new');
+	$smarty->assign('letters_catalog_url', letters_url_catalog($isEng));
 	$smarty->assign('authors_catalog_url', authors_url_catalog($isEng));
 	$smarty->assign('smn_nav_authors_active', false);
 	$smarty->assign('smn_nav_ezines_active', true);
@@ -74,6 +75,35 @@ function article_ui_render($smarty, bool $isEng): void
 		include __DIR__ . '/right.php';
 	}
 	$smarty->display(article_ui_template());
+}
+
+function article_read_body_from_disk(int $articleId, bool $isEng): string
+{
+	$baseDir = false;
+	if ($isEng) {
+		$engDir = realpath(zx_storage_dir('articles_eng'));
+		if ($engDir !== false) {
+			$engCandidate = $engDir . '/' . $articleId;
+			$engResolved = realpath($engCandidate);
+			if ($engResolved !== false && is_file($engResolved)
+				&& strpos($engResolved, $engDir . DIRECTORY_SEPARATOR) === 0) {
+				$baseDir = $engDir;
+			}
+		}
+	}
+	if ($baseDir === false) {
+		$baseDir = realpath(zx_storage_dir('articles'));
+	}
+	if ($baseDir === false) {
+		return '';
+	}
+	$candidate = $baseDir . '/' . $articleId;
+	$resolved = realpath($candidate);
+	if ($resolved !== false && is_file($resolved)
+		&& strpos($resolved, $baseDir . DIRECTORY_SEPARATOR) === 0) {
+		return (string) file_get_contents($resolved);
+	}
+	return '';
 }
 
 $pressSlug = per_slug_normalize_path((string) ($_GET['press_slug'] ?? ''));
@@ -99,7 +129,13 @@ if ($slugRoute) {
 $smarty->assign('id_article', $id);
 $smarty->assign('id', $id);
 
-$stmt = mysqli_prepare($db, "SELECT * FROM articles WHERE id=? LIMIT 1");
+// Explicit columns: body still comes from files; when text_* move to DB, add them here only.
+$stmt = mysqli_prepare(
+	$db,
+	'SELECT id, id_issue, id_press, title, title_eng, temp, name, number, '
+	. 'meta_description_ru, meta_description_en, slug_ru, slug_en, text_ru, text_en, text_type '
+	. 'FROM articles WHERE id=? LIMIT 1'
+);
 mysqli_stmt_bind_param($stmt, "i", $id);
 mysqli_stmt_execute($stmt);
 $z = mysqli_stmt_get_result($stmt);
@@ -112,12 +148,16 @@ if (!is_array($article)) {
 get_parents($id,1);
 $smarty->assign('breadcrumbs',  array_reverse($article_breadcrumbs) );
 
-$stmt = mysqli_prepare($db, "SELECT * FROM articles, issue WHERE articles.id=? AND issue.id=articles.id_issue");
-mysqli_stmt_bind_param($stmt, "i", $id);
+$id_issue = (int) ($article['id_issue'] ?? 0);
+$stmt = mysqli_prepare(
+	$db,
+	'SELECT id, id_press, title, date, slug_ru, slug_en FROM issue WHERE id=? LIMIT 1'
+);
+mysqli_stmt_bind_param($stmt, "i", $id_issue);
 mysqli_stmt_execute($stmt);
 $z = mysqli_stmt_get_result($stmt);
 $issue = mysqli_fetch_array($z);
-if (!is_array($issue)) {
+if (!is_array($issue) || $id_issue <= 0) {
 	article_show_not_found($smarty);
 }
 
@@ -133,8 +173,8 @@ if ($dateTs > 0) {
 }
 
 $smarty->assign('issue', $issue);
-$id_issue = intval($issue['id']);
-$id_press = intval($issue['id_press']);
+$id_issue = (int) $issue['id'];
+$id_press = (int) $issue['id_press'];
 
 $stmt = mysqli_prepare($db, "SELECT * FROM screens WHERE id_press=? AND id_issue=? ORDER BY type ASC LIMIT 1");
 mysqli_stmt_bind_param($stmt, "ii", $id_press, $id_issue);
@@ -171,21 +211,22 @@ $smarty->assign('press', $press);
 
 
 $article['name_plain'] = title_plain($article['name'] ?? '');
-	$aid = (int)$article['id'];
-	if ($_GET['lng'] == 'eng' && $id <= 10948) {
-		$baseDir = realpath(zx_storage_dir('articles_eng'));
-	} else {
-		$baseDir = realpath(zx_storage_dir('articles'));
-	}
-	$article['text'] = '';
-	if ($baseDir !== false) {
-		$candidate = $baseDir . '/' . $aid;
-		$resolved = realpath($candidate);
-		if ($resolved !== false && is_file($resolved)
-			&& strpos($resolved, $baseDir . DIRECTORY_SEPARATOR) === 0) {
-			$article['text'] = ezn_article_root_urls((string) file_get_contents($resolved));
-		}
-	}
+$aid = (int)$article['id'];
+$rawDbText = $isEng
+	? (string) ($article['text_en'] ?? '')
+	: (string) ($article['text_ru'] ?? '');
+if ($rawDbText === '' && $isEng) {
+	$rawDbText = (string) ($article['text_ru'] ?? '');
+}
+if ($rawDbText === '') {
+	$rawDbText = article_read_body_from_disk($aid, $isEng);
+}
+// Render first (markdown → HTML), then fix relative media URLs in resulting markup.
+$rendered = ezn_render_article_body($rawDbText, (int) ($article['text_type'] ?? 0));
+$article['text'] = ezn_article_root_urls($rendered['html']);
+$smarty->assign('article_text_mode', $rendered['mode']);
+$smarty->assign('article_text_use_pre', $rendered['use_pre'] ? 1 : 0);
+$smarty->assign('article_text_mono', $rendered['mono'] ? 1 : 0);
 
 	$article['title_plain_meta'] = title_plain($article['title'] ?? '');
 	$article['title_eng_plain_meta'] = title_plain($article['title_eng'] ?? '');
@@ -237,7 +278,9 @@ $smarty->assign('issue_public_url', ezn_url_issue($pressRow, $issueRow, $isEng))
 $smarty->assign('article_public_url', ezn_url_article($pressRow, $issueRow, $article, $isEng));
 ezn_assign_lang_switch_urls($smarty, $pressRow, $issueRow, $article);
 
-$smarty->assign('title', title_plain($article['title'] ?? ''));
+$smarty->assign('title', $isEng && title_plain($article['title_eng'] ?? '') !== ''
+	? title_plain($article['title_eng'] ?? '')
+	: title_plain($article['title'] ?? ''));
 $articleDescPlain = article_public_meta_description($article, $smarty->getTemplateVars('lng'));
 $smarty->assign('description', $articleDescPlain);
 
@@ -246,7 +289,9 @@ $articleCanonical = ezn_url_article($pressRow, $issueRow, $article, $isEng);
 $smarty->assign('canonical_url', $origin . $articleCanonical);
 $smarty->assign('hreflang_ru', $origin . ezn_url_for_lang(false, $pressRow, $issueRow, $article));
 $smarty->assign('hreflang_en', $origin . ezn_url_for_lang(true, $pressRow, $issueRow, $article));
-$smarty->assign('og_title', $article['title_plain_meta'] ?? title_plain($article['title'] ?? ''));
+$smarty->assign('og_title', $isEng && ($article['title_eng_plain_meta'] ?? '') !== ''
+	? ($article['title_eng_plain_meta'] ?? '')
+	: ($article['title_plain_meta'] ?? title_plain($article['title'] ?? '')));
 $smarty->assign('og_description', $articleDescPlain);
 $smarty->assign('og_type', 'article');
 $smarty->assign('og_url', $origin . $articleCanonical);
@@ -282,19 +327,24 @@ $smarty->assign('tags', $tags);
 */
 
 
-// other articles from issue
-$stmt = mysqli_prepare($db, "SELECT * FROM articles WHERE id_issue=? ORDER BY number, title");
+// Other articles in the issue — titles/slugs only (no body columns).
+$art = [];
+$stmt = mysqli_prepare(
+	$db,
+	'SELECT id, title, title_eng, slug_ru, slug_en, number '
+	. 'FROM articles WHERE id_issue=? ORDER BY number, title'
+);
 mysqli_stmt_bind_param($stmt, "i", $id_issue);
 mysqli_stmt_execute($stmt);
 $z = mysqli_stmt_get_result($stmt);
 while ($t = mysqli_fetch_array($z)) {
-
-	if ($id == $t['id']) {$t['current'] = 1;}
+	if ($id == $t['id']) {
+		$t['current'] = 1;
+	}
 	$t['title_html'] = article_title_list_html($t['title'] ?? '');
 	$t['title_eng_html'] = article_title_list_html($t['title_eng'] ?? '');
 	$t['public_url'] = ezn_url_article($pressRow, $issueRow, $t, $isEng);
 	$art[] = $t;
-
 }
 $smarty->assign('other_articles', $art);
 

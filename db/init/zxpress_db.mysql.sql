@@ -35,7 +35,7 @@ CREATE TABLE `articles` (
   `name` varchar(32) COLLATE utf8mb3_unicode_ci NOT NULL DEFAULT '',
   `dt` int NOT NULL DEFAULT '0',
   `id_press` int NOT NULL DEFAULT '0',
-  `text_type` int NOT NULL DEFAULT '0',
+  `text_type` int NOT NULL DEFAULT '2' COMMENT '0=legacy,1=text_pre,2=html_pre,3=markdown',
   `text_ru` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `text_en` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`),
@@ -652,7 +652,15 @@ CREATE TABLE `press` (
   `online_articles` int NOT NULL,
   `language` int NOT NULL,
   `ex` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
+  `slug_ru` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `slug_en` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description_ru` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `description_en` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `meta_description_ru` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `meta_description_en` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_press_slug_ru` (`slug_ru`),
+  UNIQUE KEY `uq_press_slug_en` (`slug_en`)
 ) ENGINE=InnoDB AUTO_INCREMENT=343 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

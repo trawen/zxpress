@@ -4,17 +4,21 @@ require_once __DIR__ . '/ezine_slugs.php';
 
 function books_ui_is_new(): bool
 {
-	return (defined('BOOKS_UI_VARIANT') && BOOKS_UI_VARIANT === 'new')
-		|| (defined('BOOK_UI_VARIANT') && BOOK_UI_VARIANT === 'new')
-		|| (defined('BOOK_ARTICLE_UI_VARIANT') && BOOK_ARTICLE_UI_VARIANT === 'new');
+	if (defined('BOOKS_UI_VARIANT') || defined('BOOK_UI_VARIANT') || defined('BOOK_ARTICLE_UI_VARIANT')) {
+		return (defined('BOOKS_UI_VARIANT') && BOOKS_UI_VARIANT === 'new')
+			|| (defined('BOOK_UI_VARIANT') && BOOK_UI_VARIANT === 'new')
+			|| (defined('BOOK_ARTICLE_UI_VARIANT') && BOOK_ARTICLE_UI_VARIANT === 'new');
+	}
+
+	return true;
 }
 
 function books_url_catalog(bool $isEng): string
 {
 	if (books_ui_is_new()) {
-		return ezn_path_prefix($isEng) . '/books-new';
+		return ezn_path_prefix($isEng) . '/books';
 	}
-	return '/books.php' . ($isEng ? '?lng=eng' : '');
+	return ezn_path_prefix($isEng) . '/books-old';
 }
 
 function books_url_book(int $id, bool $isEng): string
@@ -23,9 +27,9 @@ function books_url_book(int $id, bool $isEng): string
 		return books_url_catalog($isEng);
 	}
 	if (books_ui_is_new()) {
-		return ezn_path_prefix($isEng) . '/books-new/' . $id;
+		return ezn_path_prefix($isEng) . '/books/' . $id;
 	}
-	return '/book.php?id=' . $id . ($isEng ? '&lng=eng' : '');
+	return ezn_path_prefix($isEng) . '/books-old/' . $id;
 }
 
 function books_url_chapter(int $chapterId, bool $isEng): string
@@ -34,9 +38,9 @@ function books_url_chapter(int $chapterId, bool $isEng): string
 		return books_url_catalog($isEng);
 	}
 	if (books_ui_is_new()) {
-		return ezn_path_prefix($isEng) . '/books-new/chapter/' . $chapterId;
+		return ezn_path_prefix($isEng) . '/books/chapter/' . $chapterId;
 	}
-	return '/book_articles.php?id=' . $chapterId . ($isEng ? '&lng=eng' : '');
+	return ezn_path_prefix($isEng) . '/books-old/chapter/' . $chapterId;
 }
 
 function books_file_type_label(int $type, bool $isEng): string

@@ -1,6 +1,7 @@
 <?php
 require 'init.inc';
-
+require_once __DIR__ . '/includes/ezine_slugs.php';
+require_once __DIR__ . '/includes/article_text_render.php';
 
 //error_reporting(E_ALL);
 
@@ -46,14 +47,20 @@ mysqli_stmt_execute($stmt);
 $z = mysqli_stmt_get_result($stmt);
 $article = mysqli_fetch_array($z);
 if ($article['temp'] == 0) {
-	$articlePath = realpath(zx_storage_path('articles', (string) $article['id']));
-	$allowedDir = realpath(zx_storage_dir('articles'));
-	if ($articlePath && $allowedDir && strpos($articlePath, $allowedDir . DIRECTORY_SEPARATOR) === 0) {
-		$article['text'] = file_get_contents($articlePath);
-	} else {
-		$article['text'] = '';
+	$raw = (string) ($article['text_ru'] ?? '');
+	if ($raw === '') {
+		$articlePath = realpath(zx_storage_path('articles', (string) $article['id']));
+		$allowedDir = realpath(zx_storage_dir('articles'));
+		if ($articlePath && $allowedDir && strpos($articlePath, $allowedDir . DIRECTORY_SEPARATOR) === 0) {
+			$raw = (string) file_get_contents($articlePath);
+		}
 	}
+	$rendered = ezn_render_article_body($raw, (int) ($article['text_type'] ?? 0));
+	$article['text'] = ezn_article_root_urls($rendered['html']);
 	$smarty->assign('article', $article);
+	$smarty->assign('article_text_mode', $rendered['mode']);
+	$smarty->assign('article_text_use_pre', $rendered['use_pre'] ? 1 : 0);
+	$smarty->assign('article_text_mono', $rendered['mono'] ? 1 : 0);
 }
 else {
 

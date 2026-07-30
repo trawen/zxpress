@@ -104,8 +104,12 @@
         15.1 Федерального закона от 27 июля 2006 года No 149-ФЗ
     </center>
 {else}
-    {* Trusted legacy body from disk (RGB spans etc.); must match chapter.tpl — escape_html would show raw tags *}
-    <pre id="text">{$article.text nofilter}</pre>
+    {* Body by text_type: text/html pre (mono) or markdown HTML *}
+    {if $article_text_use_pre}
+    <pre id="text"{if $article_text_mono} class="article-text-mono"{/if}>{$article.text nofilter}</pre>
+    {else}
+    <div id="text" class="article-text-md">{$article.text nofilter}</div>
+    {/if}
 {/if}
 <br>
 <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki" data-counter=""

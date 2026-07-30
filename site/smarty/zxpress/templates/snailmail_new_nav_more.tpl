@@ -10,13 +10,10 @@
 	</form>
 	{/if}
 	<a href="{$host}news{$sl|default:'?lng=eng'}">News</a>
-	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/updates-new"{if $smn_nav_updates_active|default:false} class="is-active"{/if}>Updates</a>
+	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/updates"{if $smn_nav_updates_active|default:false} class="is-active"{/if}>Updates</a>
 	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/categories"{if $smn_nav_categories_active|default:false} class="is-active"{/if}>Categories</a>
-	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/gallery-new"{if $smn_nav_gallery_active|default:false} class="is-active"{/if}>Gallery</a>
-	<a href="{$host}chronology.php{$sl|default:'?lng=eng'}">Hronology</a>
-	<a href="{$host}stats.php{$sl|default:'?lng=eng'}">Stats</a>
-	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/guestbook-new"{if $smn_nav_guestbook_active|default:false} class="is-active"{/if}>Guestbook</a>
-	<a href="{$host}whois.php{$sl|default:'?lng=eng'}">?</a>
+	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/gallery"{if $smn_nav_gallery_active|default:false} class="is-active"{/if}>Gallery</a>
+	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/guestbook"{if $smn_nav_guestbook_active|default:false} class="is-active"{/if}>Guestbook</a>
 {else}
 	<a href="{$authors_catalog_url|default:'/ru/authors'}"{if $smn_nav_authors_active|default:false} class="is-active"{/if}>Авторы статей, писем и публикаций</a>
 	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/map"{if $smn_nav_map_active|default:false} class="is-active"{/if}>Карта изданий</a>
@@ -26,12 +23,9 @@
 		<button type="submit">Выйти ({$username})</button>
 	</form>
 	{/if}
-	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/updates-new"{if $smn_nav_updates_active|default:false} class="is-active"{/if}>Обновления</a>
+	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/updates"{if $smn_nav_updates_active|default:false} class="is-active"{/if}>Обновления</a>
 	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/categories"{if $smn_nav_categories_active|default:false} class="is-active"{/if}>Категории</a>
-	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/gallery-new"{if $smn_nav_gallery_active|default:false} class="is-active"{/if}>Галерея</a>
-	<a href="{$host}chronology.php">Хронология</a>
-	<a href="{$host}stats.php">Статистика</a>
-	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/guestbook-new"{if $smn_nav_guestbook_active|default:false} class="is-active"{/if}>Гостевая</a>
-	<a href="{$host}whois.php">?</a>
+	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/gallery"{if $smn_nav_gallery_active|default:false} class="is-active"{/if}>Галерея</a>
+	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/guestbook"{if $smn_nav_guestbook_active|default:false} class="is-active"{/if}>Гостевая</a>
 {/if}
 </div>

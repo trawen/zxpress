@@ -161,24 +161,24 @@ function zxnet_find_subj(mysqli $db, int $echoId, string $key, bool $isEng): ?ar
 
 function zxnet_ui_is_new(): bool
 {
-	return defined('ZXNET_UI_VARIANT') && ZXNET_UI_VARIANT === 'new';
+	return !defined('ZXNET_UI_VARIANT') || ZXNET_UI_VARIANT === 'new';
 }
 
 function zxnet_url_catalog(bool $isEng): string
 {
 	if (zxnet_ui_is_new()) {
-		return ezn_path_prefix($isEng) . '/zxnet-new';
+		return ezn_path_prefix($isEng) . '/zxnet';
 	}
-	return '/zxnet' . ($isEng ? '?lng=eng' : '');
+	return ezn_path_prefix($isEng) . '/zxnet-old';
 }
 
 function zxnet_url_echo(string $title, bool $isEng): string
 {
 	$seg = rawurlencode($title);
 	if (zxnet_ui_is_new()) {
-		return ezn_path_prefix($isEng) . '/zxnet-new/' . $seg;
+		return ezn_path_prefix($isEng) . '/zxnet/' . $seg;
 	}
-	return '/zxnet/' . $seg . ($isEng ? '?lng=eng' : '');
+	return ezn_path_prefix($isEng) . '/zxnet-old/' . $seg;
 }
 
 function zxnet_url_topic(string $echoTitle, string $topicSlug, bool $isEng, int $fallbackId = 0): string
@@ -189,7 +189,7 @@ function zxnet_url_topic(string $echoTitle, string $topicSlug, bool $isEng, int 
 		return zxnet_url_echo($echoTitle, $isEng);
 	}
 	if (zxnet_ui_is_new()) {
-		return ezn_path_prefix($isEng) . '/zxnet-new/' . $seg . '/' . $topicSeg;
+		return ezn_path_prefix($isEng) . '/zxnet/' . $seg . '/' . $topicSeg;
 	}
-	return '/zxnet/' . $seg . '/' . $topicSeg . ($isEng ? '?lng=eng' : '');
+	return ezn_path_prefix($isEng) . '/zxnet-old/' . $seg . '/' . $topicSeg;
 }

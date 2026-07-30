@@ -5,7 +5,7 @@ require_once __DIR__ . '/includes/authors_slugs.php';
 
 function updates_ui_is_new(): bool
 {
-	return defined('UPDATES_UI_VARIANT') && UPDATES_UI_VARIANT === 'new';
+	return !defined('UPDATES_UI_VARIANT') || UPDATES_UI_VARIANT === 'new';
 }
 
 function updates_ui_template(): string
@@ -16,12 +16,9 @@ function updates_ui_template(): string
 function updates_url(bool $isEng, int $page = 1): string
 {
 	$base = updates_ui_is_new()
-		? (ezn_path_prefix($isEng) . '/updates-new')
-		: '/updates.php';
+		? (ezn_path_prefix($isEng) . '/updates')
+		: (ezn_path_prefix($isEng) . '/updates-old');
 	$qs = [];
-	if (!updates_ui_is_new() && $isEng) {
-		$qs['lng'] = 'eng';
-	}
 	if ($page > 1) {
 		$qs['page'] = $page;
 	}
@@ -37,8 +34,8 @@ $page = max(1, (int) ($_GET['page'] ?? 1));
 
 $catalogUrl = updates_url($isEng, 1);
 $smarty->assign('updates_catalog_url', $catalogUrl);
-$smarty->assign('ezines_catalog_url', updates_ui_is_new() ? ezn_url_catalog_new($isEng) : ezn_url_catalog($isEng));
-$smarty->assign('letters_catalog_url', ezn_path_prefix($isEng) . '/snailmail-new');
+$smarty->assign('ezines_catalog_url', ezn_url_catalog($isEng));
+$smarty->assign('letters_catalog_url', letters_url_catalog($isEng));
 $smarty->assign('authors_catalog_url', authors_url_catalog($isEng));
 $smarty->assign('smn_nav_authors_active', false);
 $smarty->assign('smn_nav_ezines_active', false);
@@ -49,7 +46,13 @@ $smarty->assign('smn_nav_updates_active', updates_ui_is_new());
 
 $num = 250;
 $from = ($page - 1) * $num;
-$z = db_select($db, 'SELECT COUNT(*) FROM log WHERE type=1');
+
+$z = db_select(
+	$db,
+	'SELECT COUNT(*) FROM log '
+		. 'INNER JOIN articles ON articles.id = log.id_article '
+		. 'WHERE log.type = 1 AND articles.temp = 0'
+);
 $p = $z ? mysqli_fetch_array($z) : false;
 $total = (int) ($p[0] ?? 0);
 $nm_pages = max(1, (int) ceil($total / $num));
@@ -116,7 +119,8 @@ while ($z && ($t = mysqli_fetch_array($z))) {
 		$t['date'] = '';
 	}
 
-	$articleTitle = ($isEng && trim((string) ($t['title_eng'] ?? '')) !== '')
+	$titleEng = trim((string) ($t['title_eng'] ?? ''));
+	$articleTitle = ($isEng && $titleEng !== '')
 		? (string) ($t['title_eng'] ?? '')
 		: (string) ($t['title'] ?? '');
 	$t['title_list'] = article_title_list_html($articleTitle);
@@ -159,12 +163,12 @@ while ($z && ($t = mysqli_fetch_array($z))) {
 }
 $smarty->assign('updates', $update);
 
-$smarty->assign('title', $isEng ? 'ZXPress updates list' : 'Список последних обновлений');
+$smarty->assign('title', $isEng ? 'Additions and updates on zxpress' : 'Список поступлений и обновлений на zxpress');
 $smarty->assign(
 	'description',
 	$isEng
-		? 'Latest additions to the zxpress library'
-		: 'Список последних поступлений в библиотеку zxpress'
+		? 'Additions and updates on zxpress'
+		: 'Список поступлений и обновлений на zxpress'
 );
 
 $smarty->assign('url_rus', htmlspecialchars(updates_url(false, $page), ENT_QUOTES, 'UTF-8'));

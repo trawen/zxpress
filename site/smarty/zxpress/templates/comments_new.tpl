@@ -50,7 +50,5 @@
 		</article>
 {/foreach}
 	</section>
-{else}
-	<p class="smn-empty-note">{if $lng eq 'eng'}No comments yet.{else}Пока нет комментариев.{/if}</p>
 {/if}
 </section>

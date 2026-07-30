@@ -21,10 +21,9 @@
 				<nav class="smn-nav" aria-label="{if $lng eq 'eng'}Sections{else}Разделы{/if}">
 					<div class="smn-nav-primary">
 						<a class="smn-nav-item" href="{$ezines_catalog_url}">{if $lng eq 'eng'}Diskmags{else}Эл.пресса{/if}</a>
-						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/periodicals">{if $lng eq 'eng'}Periodicals{else}Периодика{/if}</a>
-						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/books-new">{if $lng eq 'eng'}Books{else}Книги{/if}</a>
+						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/books">{if $lng eq 'eng'}Books{else}Книги{/if}</a>
 						<a class="smn-nav-item" href="{$letters_catalog_url}">{if $lng eq 'eng'}Letters{else}Письма{/if}</a>
-						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/zxnet-new">ZXNet</a>
+						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/zxnet">ZXNet</a>
 					</div>
 					<div class="smn-nav-more-wrap">
 						<button type="button" class="smn-nav-more-toggle" aria-expanded="false" aria-controls="smn-nav-more" aria-haspopup="true">
@@ -44,7 +43,7 @@
 					{/if}
 				</div>
 			</div>
-			<form class="smn-search" method="GET" action="{if $lng eq 'eng'}/en{else}/ru{/if}/search-new">
+			<form class="smn-search" method="GET" action="{if $lng eq 'eng'}/en{else}/ru{/if}/search">
 				{if $lng eq 'eng'}<input type="hidden" name="lng" value="eng">{/if}
 				<div class="smn-search-wrap">
 					<label class="smn-search-label" for="input_query_smn">{if $lng eq 'eng'}Search{else}Поиск{/if}</label>
@@ -61,7 +60,7 @@
 
 		<main class="smn-main">
 			<section class="smn-hero smn-hero--compact">
-				<h1>{if $lng eq 'eng'}Latest additions to the zxpress library{else}Список последних поступлений в библиотеку zxpress{/if}</h1>
+				<h1>{if $lng eq 'eng'}Additions and updates on zxpress{else}Список поступлений и обновлений на zxpress{/if}</h1>
 				<p class="smn-lead" id="smn-lead">
 					{if $lng eq 'eng'}
 						Site updates are irregular. Priority is given to non-entertainment publications. At the moment, more than 90% of articles from such publications have been processed and uploaded to the site.
@@ -71,17 +70,8 @@
 				</p>
 			</section>
 
-{if $pages && $pages|@count gt 1}
-			<nav class="smn-pages smn-pages--top" aria-label="{if $lng eq 'eng'}Pages{else}Страницы{/if}">
-{foreach from=$pages item=pnum}
-{if $pnum eq $tk_page}
-				<b>{$pnum}</b>
-{else}
-				<a href="{if $pnum gt 1}{$updates_catalog_url}?page={$pnum}{else}{$updates_catalog_url}{/if}">{$pnum}</a>
-{/if}
-{/foreach}
-			</nav>
-{/if}
+			{assign var=updates_pages_top value=true}
+			{include file="updates_new_pages.tpl"}
 
 {if $updates && $updates|@count gt 0}
 			<section class="smn-updates" aria-label="{if $lng eq 'eng'}Updates{else}Обновления{/if}">
@@ -104,17 +94,8 @@
 			<p class="smn-empty-note">{if $lng eq 'eng'}No updates yet.{else}Пока нет обновлений.{/if}</p>
 {/if}
 
-{if $pages && $pages|@count gt 1}
-			<nav class="smn-pages" aria-label="{if $lng eq 'eng'}Pages{else}Страницы{/if}">
-{foreach from=$pages item=pnum}
-{if $pnum eq $tk_page}
-				<b>{$pnum}</b>
-{else}
-				<a href="{if $pnum gt 1}{$updates_catalog_url}?page={$pnum}{else}{$updates_catalog_url}{/if}">{$pnum}</a>
-{/if}
-{/foreach}
-			</nav>
-{/if}
+			{assign var=updates_pages_top value=false}
+			{include file="updates_new_pages.tpl"}
 		</main>
 
 		<footer class="smn-footer">
@@ -130,6 +111,84 @@
 		</footer>
 	</div>
 {include file="snailmail_new_scripts.tpl"}
+<script>
+(function () {
+	function pageHref(baseUrl, page) {
+		return page > 1 ? (baseUrl + '?page=' + page) : baseUrl;
+	}
+
+	function buildPages(total, current, maxVisible) {
+		if (total <= maxVisible) {
+			var full = [];
+			for (var p = 1; p <= total; p++) full.push(p);
+			return full;
+		}
+		var interiorSlots = Math.max(1, maxVisible - 2);
+		var start = current - Math.floor((interiorSlots - 1) / 2);
+		var end = start + interiorSlots - 1;
+		if (start < 2) {
+			start = 2;
+			end = start + interiorSlots - 1;
+		}
+		if (end > total - 1) {
+			end = total - 1;
+			start = end - interiorSlots + 1;
+		}
+		var out = [1];
+		if (start > 2) out.push('gap');
+		for (var n = start; n <= end; n++) out.push(n);
+		if (end < total - 1) out.push('gap');
+		out.push(total);
+		return out;
+	}
+
+	function renderNav(nav) {
+		var total = parseInt(nav.getAttribute('data-total-pages') || '0', 10);
+		var current = parseInt(nav.getAttribute('data-current-page') || '1', 10);
+		var baseUrl = nav.getAttribute('data-base-url') || '';
+		var list = nav.querySelector('.smn-pages-list');
+		if (!list || total <= 1 || !baseUrl) return;
+
+		var prev = nav.querySelector('.smn-pages-prev, .smn-pages-prev.is-disabled');
+		var next = nav.querySelector('.smn-pages-next, .smn-pages-next.is-disabled');
+		var navWidth = nav.clientWidth || 0;
+		var sideWidth = (prev ? prev.offsetWidth : 0) + (next ? next.offsetWidth : 0) + 48;
+		var free = Math.max(120, navWidth - sideWidth);
+		var maxVisible = Math.max(5, Math.floor(free / 42));
+		var model = buildPages(total, current, maxVisible);
+
+		var html = '';
+		for (var i = 0; i < model.length; i++) {
+			var item = model[i];
+			if (item === 'gap') {
+				html += '<span class="smn-pages-gap" aria-hidden="true">…</span>';
+			} else if (item === current) {
+				html += '<b aria-current="page">' + item + '</b>';
+			} else {
+				html += '<a href="' + pageHref(baseUrl, item) + '">' + item + '</a>';
+			}
+		}
+		list.innerHTML = html;
+	}
+
+	function renderAll() {
+		var navs = document.querySelectorAll('[data-adaptive-pages="updates"]');
+		for (var i = 0; i < navs.length; i++) renderNav(navs[i]);
+	}
+
+	var resizeTimer = 0;
+	window.addEventListener('resize', function () {
+		window.clearTimeout(resizeTimer);
+		resizeTimer = window.setTimeout(renderAll, 120);
+	});
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', renderAll);
+	} else {
+		renderAll();
+	}
+})();
+</script>
 
 </body>
 </html>

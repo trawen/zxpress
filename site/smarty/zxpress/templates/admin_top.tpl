@@ -92,6 +92,8 @@ body {
 <a href="admin_periodicals.php">Периодика</a> /
 <a href="admin_issue.php">Выпуски журналов</a> /
 <a href="admin_articles.php">Статьи журналов</a> /
+<a href="admin_articles_new.php">Статьи журналов (new)</a> /
+<a href="admin_screens.php">Скриншоты журналов</a> /
 <a href="admin_ezine_categories.php">Категории журналов</a> /
 <a href="admin_authors.php">Авторы</a> /
 <a href="admin_book_rubrics.php">Рубрики книг</a> /

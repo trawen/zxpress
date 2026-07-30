@@ -6,7 +6,7 @@ require_once __DIR__ . '/includes/authors_slugs.php';
 
 function gallery_ui_is_new(): bool
 {
-	return defined('GALLERY_UI_VARIANT') && GALLERY_UI_VARIANT === 'new';
+	return !defined('GALLERY_UI_VARIANT') || GALLERY_UI_VARIANT === 'new';
 }
 
 function gallery_ui_template(): string
@@ -17,9 +17,9 @@ function gallery_ui_template(): string
 function gallery_url_catalog(bool $isEng, bool $isNew = false): string
 {
 	if ($isNew) {
-		return ezn_path_prefix($isEng) . '/gallery-new';
+		return ezn_path_prefix($isEng) . '/gallery';
 	}
-	return '/gallery.php' . ($isEng ? '?lng=eng' : '');
+	return ezn_path_prefix($isEng) . '/gallery-old';
 }
 
 function gallery_per_page_default(): int
@@ -136,8 +136,8 @@ $smarty->assign('num', $num);
 
 $catalogUrl = gallery_url_catalog($isEng, gallery_ui_is_new());
 $smarty->assign('gallery_catalog_url', $catalogUrl);
-$smarty->assign('ezines_catalog_url', gallery_ui_is_new() ? ezn_url_catalog_new($isEng) : ezn_url_catalog($isEng));
-$smarty->assign('letters_catalog_url', ezn_path_prefix($isEng) . '/snailmail-new');
+$smarty->assign('ezines_catalog_url', ezn_url_catalog($isEng));
+$smarty->assign('letters_catalog_url', letters_url_catalog($isEng));
 $smarty->assign('authors_catalog_url', authors_url_catalog($isEng));
 $smarty->assign('smn_nav_authors_active', false);
 $smarty->assign('smn_nav_ezines_active', false);

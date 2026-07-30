@@ -1,0 +1,58 @@
+{
+  "summary": {
+    "sitemaps_scanned": 1,
+    "urls_tested": 10,
+    "issues_count": 7,
+    "http_4xx_5xx": 7,
+    "request_errors": 0,
+    "wrong_section_redirects": 0
+  },
+  "status_counts": {
+    "503": 7,
+    "200": 3
+  },
+  "issues": [
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/magazines",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/magazines"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/books",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/books"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/zxnet",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/zxnet"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/snailmail",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/snailmail"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/papers",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/papers"
+    },
+    {
+      "type": "http_error",
+      "url": "https://zxpress.ru/ru/ezines/reports",
+      "status": 503,
+      "final": "https://zxpress.ru/ru/ezines/reports"
+    }
+  ]
+}

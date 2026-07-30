@@ -7,7 +7,7 @@ require_once __DIR__ . '/includes/comments_scope.php';
 
 function issue_ui_is_new(): bool
 {
-	return defined('EZINES_UI_VARIANT') && EZINES_UI_VARIANT === 'new';
+	return !defined('EZINES_UI_VARIANT') || EZINES_UI_VARIANT === 'new';
 }
 
 function issue_ui_template(): string
@@ -17,10 +17,10 @@ function issue_ui_template(): string
 
 function issue_ui_render($smarty, bool $isEng): void
 {
-	$catalogUrl = issue_ui_is_new() ? ezn_url_catalog_new($isEng) : ezn_url_catalog($isEng);
+	$catalogUrl = ezn_url_catalog($isEng);
 	$smarty->assign('ezines_catalog_url', $catalogUrl);
 	$smarty->assign('ezines_classic_url', ezn_url_catalog($isEng));
-	$smarty->assign('letters_catalog_url', ezn_path_prefix($isEng) . '/snailmail-new');
+	$smarty->assign('letters_catalog_url', letters_url_catalog($isEng));
 	$smarty->assign('authors_catalog_url', authors_url_catalog($isEng));
 	$smarty->assign('smn_nav_authors_active', false);
 	$smarty->assign('smn_nav_ezines_active', true);
@@ -59,8 +59,31 @@ $viewMode = 'press';
 
 // Reserved catalog filter segments (must not be treated as press slugs).
 if ($uiNew && $issueSlug === '' && ($pressSlug === 'papers' || $pressSlug === 'magazines' || $pressSlug === 'reports')) {
-	header('Location: ' . ezn_url_catalog_new($isEng, $pressSlug), true, 301);
+	$fallbackUrl = ezn_url_catalog_new($isEng);
+	$fallbackUrl .= '?filter=' . rawurlencode($pressSlug);
+	header('Location: ' . $fallbackUrl, true, 302);
 	exit;
+}
+
+// Reserved section slugs that may be captured by legacy /{lang}/ezines/{slug} rewrites.
+if ($uiNew && $issueSlug === '') {
+	$sectionRedirects = [
+		'books' => '/books',
+		'zxnet' => '/zxnet',
+		'snailmail' => '/snailmail',
+		'authors' => '/authors',
+		'gallery' => '/gallery',
+		'search' => '/search',
+		'updates' => '/updates',
+		'guestbook' => '/guestbook',
+		'map' => '/map',
+		'categories' => '/categories',
+		'periodicals' => '/periodicals',
+	];
+	if (isset($sectionRedirects[$pressSlug])) {
+		header('Location: ' . ezn_path_prefix($isEng) . $sectionRedirects[$pressSlug], true, 302);
+		exit;
+	}
 }
 
 if ($slugRoute) {

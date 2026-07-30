@@ -21,10 +21,9 @@
 				<nav class="smn-nav" aria-label="{if $lng eq 'eng'}Sections{else}Разделы{/if}">
 					<div class="smn-nav-primary">
 						<a class="smn-nav-item{if $smn_nav_ezines_active|default:false} is-active{/if}" href="{$ezines_catalog_url}">{if $lng eq 'eng'}Diskmags{else}Эл.пресса{/if}</a>
-						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/periodicals">{if $lng eq 'eng'}Periodicals{else}Периодика{/if}</a>
-						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/books-new">{if $lng eq 'eng'}Books{else}Книги{/if}</a>
+						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/books">{if $lng eq 'eng'}Books{else}Книги{/if}</a>
 						<a class="smn-nav-item" href="{$letters_catalog_url}">{if $lng eq 'eng'}Letters{else}Письма{/if}</a>
-						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/zxnet-new">ZXNet</a>
+						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/zxnet">ZXNet</a>
 					</div>
 					<div class="smn-nav-more-wrap">
 						<button type="button" class="smn-nav-more-toggle" aria-expanded="false" aria-controls="smn-nav-more" aria-haspopup="true">
@@ -44,7 +43,7 @@
 					{/if}
 				</div>
 			</div>
-			<form class="smn-search" method="GET" action="{if $lng eq 'eng'}/en{else}/ru{/if}/search-new">
+			<form class="smn-search" method="GET" action="{if $lng eq 'eng'}/en{else}/ru{/if}/search">
 				{if $lng eq 'eng'}<input type="hidden" name="lng" value="eng">{/if}
 				<div class="smn-search-wrap">
 					<label class="smn-search-label" for="input_query_smn">{if $lng eq 'eng'}Search{else}Поиск{/if}</label>
@@ -153,8 +152,6 @@
 {/section}
 					</ol>
 				</section>
-{else}
-				<p class="smn-empty-note">{if $lng eq 'eng'}No articles in this issue yet.{else}В этом выпуске пока нет статей.{/if}</p>
 {/if}
 			</article>
 
@@ -224,7 +221,9 @@
 								decoding="async"
 							>
 {else}
-							<span class="smn-gallery-img smn-gallery-img--empty" aria-hidden="true"></span>
+							<span class="smn-gallery-img smn-gallery-img--empty" aria-label="{$press.title_plain|escape:'html'} #{$iss.title|escape:'html'}">
+								<span class="smn-gallery-img-empty-text">{$press.title_plain|escape:'html'}<br>#{$iss.title|escape:'html'}</span>
+							</span>
 {/if}
 {if $iss.date_display}
 							<span class="smn-press-issue-caption-date">{$iss.date_display}</span>
@@ -233,8 +232,6 @@
 					</li>
 {/foreach}
 				</ul>
-{else}
-				<p class="smn-empty-note">{if $lng eq 'eng'}No issues here yet.{else}Здесь пока нет выпусков.{/if}</p>
 {/if}
 
 {if $press.description}

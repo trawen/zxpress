@@ -7,15 +7,15 @@ require_once __DIR__ . '/includes/authors_slugs.php';
 
 function search_ui_is_new(): bool
 {
-	return defined('SEARCH_UI_VARIANT') && SEARCH_UI_VARIANT === 'new';
+	return !defined('SEARCH_UI_VARIANT') || SEARCH_UI_VARIANT === 'new';
 }
 
 function search_catalog_url(bool $isEng): string
 {
 	if (search_ui_is_new()) {
-		return ezn_path_prefix($isEng) . '/search-new';
+		return ezn_path_prefix($isEng) . '/search';
 	}
-	return '/search.php' . ($isEng ? '?lng=eng' : '');
+	return ezn_path_prefix($isEng) . '/search-old';
 }
 
 function search_page_url(bool $isEng, string $q, int $page, string $sort, $from): string
@@ -33,9 +33,6 @@ function search_page_url(bool $isEng, string $q, int $page, string $sort, $from)
 	}
 	if ($from !== '' && $from !== null && (string) $from !== '0') {
 		$params['f'] = $from;
-	}
-	if (!search_ui_is_new() && $isEng && !isset($params['lng'])) {
-		$params['lng'] = 'eng';
 	}
 	if ($params === []) {
 		return $base;
@@ -318,7 +315,7 @@ if (search_ui_is_new()) {
   $catalog = search_catalog_url($isEngPage);
   $smarty->assign('search_catalog_url', $catalog);
   $smarty->assign('ezines_catalog_url', ezn_url_catalog_new($isEngPage));
-  $smarty->assign('letters_catalog_url', ezn_path_prefix($isEngPage) . '/snailmail-new');
+  $smarty->assign('letters_catalog_url', letters_url_catalog($isEngPage));
   $smarty->assign('authors_catalog_url', authors_url_catalog($isEngPage));
   $smarty->assign('smn_nav_authors_active', false);
   $smarty->assign('smn_nav_ezines_active', false);

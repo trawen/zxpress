@@ -182,7 +182,8 @@ function press_map_books_by_coord(mysqli $db, bool $isEng): array
 		$byCoord[$key][] = [
 			'title' => press_map_book_title($row),
 			'url' => press_map_book_url((int) ($row['id'] ?? 0), $isEng),
-			'numbers' => max(1, (int) ($row['pages'] ?? 0)),
+			// Books do not have "issue counts"; keep neutral weight in the cloud list.
+			'numbers' => 1,
 		];
 	}
 

@@ -4,6 +4,16 @@ require_once __DIR__ . '/includes/ezine_slugs.php';
 require_once __DIR__ . '/includes/authors_slugs.php';
 require_once __DIR__ . '/includes/zxnet_slugs.php';
 
+function zxnet_hidden_echo_titles(): array
+{
+	return ['e2e.talk'];
+}
+
+function zxnet_is_hidden_echo_title(string $title): bool
+{
+	return in_array(mb_strtolower(trim($title), 'UTF-8'), zxnet_hidden_echo_titles(), true);
+}
+
 function zxnet_ui_template(): string
 {
 	return zxnet_ui_is_new() ? 'zxnet_new.tpl' : 'zxnet.tpl';
@@ -72,8 +82,8 @@ $smarty->assign('zxnet_lng_qs', $lngQs);
 
 $catalogUrl = zxnet_url_catalog($isEng);
 $smarty->assign('zxnet_catalog_url', $catalogUrl);
-$smarty->assign('ezines_catalog_url', zxnet_ui_is_new() ? ezn_url_catalog_new($isEng) : ezn_url_catalog($isEng));
-$smarty->assign('letters_catalog_url', ezn_path_prefix($isEng) . '/snailmail-new');
+$smarty->assign('ezines_catalog_url', ezn_url_catalog($isEng));
+$smarty->assign('letters_catalog_url', letters_url_catalog($isEng));
 $smarty->assign('authors_catalog_url', authors_url_catalog($isEng));
 $smarty->assign('smn_nav_authors_active', false);
 $smarty->assign('smn_nav_ezines_active', false);
@@ -91,6 +101,9 @@ if (is_array($t)) {
 	$descEn = plain_text_decode_entities((string) ($t['description_en'] ?? ''));
 	$t['description_en'] = $descEn;
 	$t['description'] = ($isEng && $descEn !== '') ? $descEn : $descRu;
+	if (zxnet_is_hidden_echo_title((string) ($t['title'] ?? ''))) {
+		$t = null;
+	}
 }
 $smarty->assign('echo', $t);
 $id = $t ? (int) $t['id'] : 0;
@@ -310,6 +323,9 @@ if ($topicKey !== '') {
 	while ($z && ($t = mysqli_fetch_array($z))) {
 
 		$t['title'] = plain_text_decode_entities((string) ($t['title'] ?? ''));
+		if (zxnet_is_hidden_echo_title((string) ($t['title'] ?? ''))) {
+			continue;
+		}
 		$dateFromTs = (int) ($t['date_from'] ?? 0);
 		$dateToTs = (int) ($t['date_to'] ?? 0);
 		if ($isEng) {

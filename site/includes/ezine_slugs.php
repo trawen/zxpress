@@ -86,10 +86,10 @@ function ezn_url_catalog(bool $isEng): string
     return ezn_public_path_prefix($isEng);
 }
 
-/** Layout-test catalog under /{lang}/ezines-new[/{filter}] */
+/** New main catalog under /{lang}/ezines[/{filter}] */
 function ezn_url_catalog_new(bool $isEng, string $filter = ''): string
 {
-    $base = ezn_path_prefix($isEng) . '/ezines-new';
+    $base = ezn_path_prefix($isEng) . '/ezines';
     if ($filter === 'papers' || $filter === 'magazines' || $filter === 'reports') {
         return $base . '/' . $filter;
     }

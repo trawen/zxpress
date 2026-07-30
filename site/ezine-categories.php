@@ -67,8 +67,8 @@ $smarty->assign('title_only', $titleOnly);
 
 $catalogUrl = categories_page_url($isEng, 0, false);
 $smarty->assign('categories_catalog_url', $catalogUrl);
-$smarty->assign('ezines_catalog_url', categories_ui_is_new() ? ezn_url_catalog_new($isEng) : ezn_url_catalog($isEng));
-$smarty->assign('letters_catalog_url', ezn_path_prefix($isEng) . '/snailmail-new');
+$smarty->assign('ezines_catalog_url', ezn_url_catalog($isEng));
+$smarty->assign('letters_catalog_url', letters_url_catalog($isEng));
 $smarty->assign('authors_catalog_url', authors_url_catalog($isEng));
 $smarty->assign('smn_nav_authors_active', false);
 $smarty->assign('smn_nav_ezines_active', false);

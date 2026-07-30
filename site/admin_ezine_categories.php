@@ -235,10 +235,22 @@ function ec_delete_category(mysqli $db, int $categoryId): bool
     return db_exec($db, 'DELETE FROM ezine_categories WHERE id=? LIMIT 1', 'i', $categoryId);
 }
 
-function ec_read_article_text(int $articleId): string
+function ec_read_article_text(mysqli $db, int $articleId): string
 {
     if ($articleId <= 0) {
         return '';
+    }
+
+    $stmt = $db->prepare('SELECT text_ru FROM articles WHERE id=? LIMIT 1');
+    if ($stmt) {
+        $stmt->bind_param('i', $articleId);
+        $stmt->execute();
+        $res = $stmt->get_result();
+        $row = $res ? mysqli_fetch_array($res) : false;
+        $textRu = is_array($row) ? (string) ($row['text_ru'] ?? '') : '';
+        if ($textRu !== '') {
+            return $textRu;
+        }
     }
 
     $path = zx_storage_path('articles', (string) $articleId);
@@ -305,7 +317,7 @@ if (isset($_GET['article_text'])) {
         'ok' => true,
         'id' => $articleId,
         'title' => article_title_list_html($row['title'] ?? ''),
-        'text' => ec_read_article_text($articleId),
+        'text' => ec_read_article_text($db, $articleId),
     ], JSON_UNESCAPED_UNICODE);
     exit;
 }
@@ -416,10 +428,16 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
             $parent_id = 0;
         }
 
+        // Most legacy rows have empty EN fields — don't block save.
+        if ($name_en === '' && $name_ru !== '') {
+            $name_en = $name_ru;
+        }
+        if ($title_en === '' && $title_ru !== '') {
+            $title_en = $title_ru;
+        }
+
         if ($name_ru === '') {
             $error = 'Название (RU) обязательно';
-        } elseif ($name_en === '') {
-            $error = 'Название (EN) обязательно';
         } else {
             $parentParam = $parent_id > 0 ? $parent_id : null;
             $saved = false;

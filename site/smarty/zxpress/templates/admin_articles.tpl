@@ -42,8 +42,9 @@
 
 <div style="padding: 10px; border: 1px solid #C8C5AC; background-color: #EBE8D7; font: bold 14px Verdana">
 
-
-
+<div style="margin-bottom:8px;font:normal 12px Verdana">
+<a href="admin_articles_new.php?id={$press.id}&amp;issue={$issue.id}">→ Новая админка статей</a>
+</div>
 
 <table width="100%"><tr><td>
 <div style="font: normal 13pt/10pt Verdana">

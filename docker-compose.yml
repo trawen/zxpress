@@ -19,6 +19,7 @@ volumes:
   # NOTE: Existing ./db/mysql_data data must be imported into the named volume
   db_data:
   manticore_data:
+  manticore_run:
 
 services:
   nginx:
@@ -122,6 +123,7 @@ services:
     env_file: .env
     volumes:
       - manticore_data:/var/lib/manticore
+      - manticore_run:/var/run/manticore
       - ./conf/manticore.conf:/etc/manticoresearch/manticore.conf
     expose:
       - "9306"
@@ -137,7 +139,6 @@ services:
         condition: service_healthy
     restart: unless-stopped
     tmpfs:
-      - /var/run/manticore:size=1m,noexec,nosuid,nodev
       - /var/log/manticore:size=16m,noexec,nosuid,nodev
       - /tmp:size=16m,noexec,nosuid,nodev
     cap_drop: [ALL]
@@ -155,6 +156,26 @@ services:
       nofile:
         soft: 2048
         hard: 4096
+
+  manticore_reindex_worker:
+    image: manticoresearch/manticore:17.5.1
+    container_name: zxpress_manticore_reindex_worker
+    env_file: .env
+    volumes:
+      - manticore_data:/var/lib/manticore
+      - manticore_run:/var/run/manticore
+      - ./conf/manticore.conf:/etc/manticoresearch/manticore.conf:ro
+      - ./data:/home/zxpress/web/zxpress.ru/data:rw
+      - ./deploy/scripts/manticore-reindex-articles-worker.sh:/worker.sh:ro
+    command: ["/bin/sh", "-lc", "sh /worker.sh"]
+    networks:
+      - backend
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+      manticore:
+        condition: service_healthy
 
   db:
     image: mysql:8.0
