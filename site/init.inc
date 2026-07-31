@@ -57,6 +57,7 @@ require_once __DIR__ . '/includes/storage_paths.php';
 require_once __DIR__ . '/includes/auth.php';
 require_once __DIR__ . '/includes/locale.php';
 require_once __DIR__ . '/includes/sape_integration.php';
+require_once __DIR__ . '/includes/activity.php';
 
 // DEBUG: always show all PHP errors on screen
 //error_reporting(E_ALL);
@@ -155,6 +156,9 @@ $smarty->escape_html = true;
 $smarty->assign('host', "/");
 
 handle_login($db, $smarty);
+
+// Auto-batch admin POST mutations into activity_batch (legacy log trigger attaches too).
+activity_admin_request_boot($db);
 
 $url = explode("?", $_SERVER['REQUEST_URI']);
 $smarty->assign('url', $url[0]);

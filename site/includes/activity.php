@@ -1,0 +1,921 @@
+<?php
+/**
+ * Universal activity / updates log.
+ *
+ * Tables: activity_batch, activity
+ * Public feed: is_public=1 AND event_scope='content' (usually via batches).
+ */
+
+const ACTIVITY_SCOPE_CONTENT = 'content';
+const ACTIVITY_SCOPE_METADATA = 'metadata';
+const ACTIVITY_SCOPE_SYSTEM = 'system';
+
+/** @var array{batch_id:int,domain:string,root_type:string,root_id:int,source:string}|null */
+$GLOBALS['__activity_request'] = $GLOBALS['__activity_request'] ?? null;
+
+function activity_tables_ready(mysqli $db): bool
+{
+	static $ready = null;
+	if ($ready !== null) {
+		return $ready;
+	}
+	$r = @$db->query("SHOW TABLES LIKE 'activity'");
+	$ready = ($r && $r->num_rows > 0);
+	return $ready;
+}
+
+function activity_json($data): ?string
+{
+	if ($data === null) {
+		return null;
+	}
+	if (is_string($data)) {
+		return $data;
+	}
+	$json = json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+	return $json === false ? null : $json;
+}
+
+function activity_actor_user_id(): int
+{
+	return (int) ($_SESSION['id_username'] ?? 0);
+}
+
+function activity_detect_domain(): string
+{
+	$script = basename((string) ($_SERVER['SCRIPT_NAME'] ?? ''));
+	$map = [
+		'admin_periodical_articles.php' => 'periodical',
+		'admin_periodicals.php' => 'periodical',
+		'admin_publications.php' => 'publication',
+		'admin_pub_articles.php' => 'publication',
+		'admin_books.php' => 'book',
+		'admin_books_light.php' => 'book',
+		'admin_book_rubrics.php' => 'book',
+		'admin_letters.php' => 'letter',
+		'admin_news.php' => 'news',
+		'admin_news_upload.php' => 'news',
+		'admin_authors.php' => 'author',
+		'admin_publishers.php' => 'publisher',
+		'admin_ezine_categories.php' => 'ezine',
+		'admin_screens.php' => 'ezine',
+		'admin_articles.php' => 'ezine',
+		'admin_articles_new.php' => 'ezine',
+		'admin_issue.php' => 'ezine',
+		'gallery_admin.php' => 'gallery',
+	];
+	return $map[$script] ?? 'ezine';
+}
+
+/**
+ * @return array{0:string,1:int}
+ */
+function activity_detect_root(): array
+{
+	$script = basename((string) ($_SERVER['SCRIPT_NAME'] ?? ''));
+	$req = array_merge($_GET ?? [], $_POST ?? []);
+
+	if (str_contains($script, 'periodical_articles')) {
+		return ['periodical_issue', (int) ($req['issue_id'] ?? 0)];
+	}
+	if (str_contains($script, 'periodical')) {
+		return ['periodical', (int) ($req['id'] ?? 0)];
+	}
+	if ($script === 'admin_pub_articles.php' || str_contains($script, 'publication')) {
+		return ['publication', (int) ($req['publication_id'] ?? $req['id'] ?? 0)];
+	}
+	if (str_contains($script, 'book')) {
+		return ['book', (int) ($req['id'] ?? 0)];
+	}
+	if (str_contains($script, 'letter')) {
+		return ['letter', (int) ($req['id'] ?? 0)];
+	}
+	if (str_contains($script, 'news')) {
+		return ['news', (int) ($req['id'] ?? 0)];
+	}
+	$issue = (int) ($req['issue'] ?? $req['issue_id'] ?? 0);
+	if ($issue > 0) {
+		return ['issue', $issue];
+	}
+	$press = (int) ($req['id'] ?? $req['press_id'] ?? 0);
+	return $press > 0 ? ['press', $press] : ['', 0];
+}
+
+function activity_current_batch_id(): int
+{
+	$ctx = $GLOBALS['__activity_request'] ?? null;
+	return is_array($ctx) ? (int) ($ctx['batch_id'] ?? 0) : 0;
+}
+
+function activity_batch_begin(
+	mysqli $db,
+	string $domain = '',
+	string $rootType = '',
+	int $rootId = 0,
+	string $source = '',
+	int $actorUserId = 0
+): int {
+	if (!activity_tables_ready($db)) {
+		return 0;
+	}
+	if ($domain === '') {
+		$domain = activity_detect_domain();
+	}
+	if ($rootType === '' && $rootId <= 0) {
+		[$rootType, $rootId] = activity_detect_root();
+	}
+	if ($actorUserId <= 0) {
+		$actorUserId = activity_actor_user_id();
+	}
+	if ($source === '') {
+		$source = basename((string) ($_SERVER['SCRIPT_NAME'] ?? 'unknown'));
+	}
+
+	$now = time();
+	$stmt = $db->prepare(
+		'INSERT INTO activity_batch (created_at, actor_user_id, domain, root_type, root_id, is_public, source) '
+		. 'VALUES (?, ?, ?, ?, ?, 1, ?)'
+	);
+	if (!$stmt) {
+		return 0;
+	}
+	$stmt->bind_param('iissis', $now, $actorUserId, $domain, $rootType, $rootId, $source);
+	if (!$stmt->execute()) {
+		$stmt->close();
+		return 0;
+	}
+	$batchId = (int) $db->insert_id;
+	$stmt->close();
+
+	$GLOBALS['__activity_request'] = [
+		'batch_id' => $batchId,
+		'domain' => $domain,
+		'root_type' => $rootType,
+		'root_id' => $rootId,
+		'source' => $source,
+	];
+	// Used by trg_log_ai_activity to attach legacy log rows to this batch.
+	$db->query('SET @activity_batch_id := ' . (int) $batchId);
+	return $batchId;
+}
+
+/**
+ * Mirror any legacy `log` rows from this request that the SQL trigger missed.
+ */
+function activity_mirror_pending_logs(mysqli $db, int $sinceTs = 0, int $actorUserId = 0): void
+{
+	if (!activity_tables_ready($db)) {
+		return;
+	}
+	if ($actorUserId <= 0) {
+		$actorUserId = activity_actor_user_id();
+	}
+	if ($sinceTs <= 0) {
+		$sinceTs = time() - 3600;
+	}
+	if ($actorUserId <= 0) {
+		return;
+	}
+
+	$z = db_select(
+		$db,
+		'SELECT l.* FROM log l '
+		. 'LEFT JOIN activity a ON a.legacy_log_id=l.id '
+		. 'WHERE l.id_user=? AND l.date>=? AND a.id IS NULL '
+		. 'ORDER BY l.id ASC LIMIT 200',
+		'ii',
+		$actorUserId,
+		$sinceTs
+	);
+	while ($z && ($row = $z->fetch_assoc())) {
+		activity_log_from_legacy(
+			$db,
+			(int) ($row['type'] ?? 0),
+			(int) ($row['id_press'] ?? 0),
+			(int) ($row['id_article'] ?? 0),
+			(int) ($row['id_issue'] ?? 0),
+			(int) ($row['id_user'] ?? 0),
+			(int) ($row['date'] ?? time()),
+			(int) ($row['id_screen'] ?? 0),
+			(int) ($row['id_cover'] ?? 0),
+			(int) ($row['id'] ?? 0)
+		);
+	}
+}
+
+/**
+ * Resolve human title / url / thumb for an activity object.
+ *
+ * @return array{title_ru:string,title_en:string,url_ru:string,url_en:string,thumb_url:?string}
+ */
+function activity_resolve_object_display(
+	mysqli $db,
+	string $objectType,
+	int $objectId,
+	?string $parentType = null,
+	?int $parentId = null,
+	?array $meta = null
+): array {
+	$out = [
+		'title_ru' => '',
+		'title_en' => '',
+		'url_ru' => '',
+		'url_en' => '',
+		'thumb_url' => null,
+	];
+	$meta = is_array($meta) ? $meta : [];
+
+	if ($objectType === 'screen' || $objectType === 'illustration') {
+		if ($objectId <= 0) {
+			return $out;
+		}
+		$z = db_select(
+			$db,
+			'SELECT s.id, s.format, s.id_press, s.id_issue, p.title AS press_title, i.title AS issue_title '
+			. 'FROM screens s '
+			. 'LEFT JOIN press p ON p.id=s.id_press '
+			. 'LEFT JOIN issue i ON i.id=s.id_issue '
+			. 'WHERE s.id=? LIMIT 1',
+			'i',
+			$objectId
+		);
+		$row = $z ? $z->fetch_assoc() : null;
+		if (!$row && !empty($meta['id_press'])) {
+			$pressId = (int) $meta['id_press'];
+			$issueId = (int) ($meta['id_issue'] ?? 0);
+			$z = db_select($db, 'SELECT title FROM press WHERE id=? LIMIT 1', 'i', $pressId);
+			$pressTitle = ($z && ($p = $z->fetch_assoc())) ? title_plain((string) ($p['title'] ?? '')) : '';
+			$issueTitle = '';
+			if ($issueId > 0) {
+				$z = db_select($db, 'SELECT title FROM issue WHERE id=? LIMIT 1', 'i', $issueId);
+				$issueTitle = ($z && ($i = $z->fetch_assoc())) ? title_plain((string) ($i['title'] ?? '')) : '';
+			}
+			$label = $pressTitle !== '' ? $pressTitle : ('Скриншот #' . $objectId);
+			if ($issueTitle !== '') {
+				$label .= ' · #' . $issueTitle;
+			}
+			$out['title_ru'] = $label;
+			$out['title_en'] = $label;
+			$out['url_ru'] = $issueId > 0 ? ('/issue.php?id=' . $issueId) : ('/press.php?id=' . $pressId);
+			$out['url_en'] = $out['url_ru'];
+			$out['thumb_url'] = '/screens/1/' . $objectId . '.png';
+			return $out;
+		}
+		if ($row) {
+			$pressTitle = title_plain((string) ($row['press_title'] ?? ''));
+			$issueTitle = title_plain((string) ($row['issue_title'] ?? ''));
+			$fmt = (string) ($row['format'] ?? 'png');
+			if ($fmt === '') {
+				$fmt = 'png';
+			}
+			$label = $pressTitle !== '' ? $pressTitle : (($objectType === 'illustration' ? 'Иллюстрация #' : 'Скриншот #') . $objectId);
+			if ($issueTitle !== '') {
+				$label .= ' · #' . $issueTitle;
+			}
+			$issueId = (int) ($row['id_issue'] ?? 0);
+			$pressId = (int) ($row['id_press'] ?? 0);
+			$out['title_ru'] = $label;
+			$out['title_en'] = $label;
+			$out['url_ru'] = $issueId > 0 ? ('/issue.php?id=' . $issueId) : ($pressId > 0 ? ('/press.php?id=' . $pressId) : '');
+			$out['url_en'] = $out['url_ru'];
+			$out['thumb_url'] = '/screens/1/' . $objectId . '.' . $fmt;
+		}
+		return $out;
+	}
+
+	if ($objectType === 'article' && $objectId > 0) {
+		$z = db_select($db, 'SELECT title, title_eng, id_issue FROM articles WHERE id=? LIMIT 1', 'i', $objectId);
+		if ($z && ($a = $z->fetch_assoc())) {
+			$out['title_ru'] = title_plain((string) ($a['title'] ?? ''));
+			$out['title_en'] = title_plain((string) (($a['title_eng'] ?? '') !== '' ? $a['title_eng'] : $a['title']));
+			$out['url_ru'] = '/article.php?id=' . $objectId;
+			$out['url_en'] = $out['url_ru'];
+		}
+		return $out;
+	}
+
+	if ($objectType === 'issue' && $objectId > 0) {
+		$z = db_select(
+			$db,
+			'SELECT i.title AS issue_title, p.title AS press_title, i.id_press '
+			. 'FROM issue i LEFT JOIN press p ON p.id=i.id_press WHERE i.id=? LIMIT 1',
+			'i',
+			$objectId
+		);
+		if ($z && ($row = $z->fetch_assoc())) {
+			$pressTitle = title_plain((string) ($row['press_title'] ?? ''));
+			$issueTitle = title_plain((string) ($row['issue_title'] ?? ''));
+			$label = $pressTitle !== '' ? $pressTitle : ('Выпуск #' . $objectId);
+			if ($issueTitle !== '') {
+				$label .= ' · #' . $issueTitle;
+			}
+			$out['title_ru'] = $label;
+			$out['title_en'] = $label;
+			$out['url_ru'] = '/issue.php?id=' . $objectId;
+			$out['url_en'] = $out['url_ru'];
+		}
+		return $out;
+	}
+
+	if ($objectType === 'press' && $objectId > 0) {
+		$z = db_select($db, 'SELECT title FROM press WHERE id=? LIMIT 1', 'i', $objectId);
+		if ($z && ($p = $z->fetch_assoc())) {
+			$out['title_ru'] = title_plain((string) ($p['title'] ?? ''));
+			$out['title_en'] = $out['title_ru'];
+			$out['url_ru'] = '/press.php?id=' . $objectId;
+			$out['url_en'] = $out['url_ru'];
+		}
+		return $out;
+	}
+
+	if ($objectType === 'book' && $objectId > 0) {
+		$z = db_select($db, 'SELECT title1 FROM books WHERE id=? LIMIT 1', 'i', $objectId);
+		if ($z && ($b = $z->fetch_assoc())) {
+			$out['title_ru'] = title_plain((string) ($b['title1'] ?? ''));
+			$out['title_en'] = $out['title_ru'];
+			$out['url_ru'] = '/book.php?id=' . $objectId;
+			$out['url_en'] = $out['url_ru'];
+		}
+		return $out;
+	}
+
+	if ($parentType === 'issue' && (int) $parentId > 0 && $out['title_ru'] === '') {
+		return activity_resolve_object_display($db, 'issue', (int) $parentId);
+	}
+	if ($parentType === 'press' && (int) $parentId > 0 && $out['title_ru'] === '') {
+		return activity_resolve_object_display($db, 'press', (int) $parentId);
+	}
+
+	return $out;
+}
+
+/**
+ * Fill empty titles/thumbs/urls on activity rows of a batch (e.g. trigger-mirrored).
+ */
+function activity_enrich_batch_events(mysqli $db, int $batchId): void
+{
+	if ($batchId <= 0 || !activity_tables_ready($db)) {
+		return;
+	}
+	$z = db_select(
+		$db,
+		'SELECT id, object_type, object_id, parent_type, parent_id, title_ru, title_en, url_ru, url_en, thumb_url, meta_json '
+		. 'FROM activity WHERE batch_id=? ORDER BY id ASC',
+		'i',
+		$batchId
+	);
+	while ($z && ($row = $z->fetch_assoc())) {
+		$needTitle = trim((string) ($row['title_ru'] ?? '')) === '';
+		$needThumb = empty($row['thumb_url']);
+		$needUrl = trim((string) ($row['url_ru'] ?? '')) === '';
+		if (!$needTitle && !$needThumb && !$needUrl) {
+			continue;
+		}
+		$meta = null;
+		if (!empty($row['meta_json'])) {
+			$decoded = json_decode((string) $row['meta_json'], true);
+			$meta = is_array($decoded) ? $decoded : null;
+		}
+		$disp = activity_resolve_object_display(
+			$db,
+			(string) $row['object_type'],
+			(int) $row['object_id'],
+			isset($row['parent_type']) ? (string) $row['parent_type'] : null,
+			isset($row['parent_id']) ? (int) $row['parent_id'] : null,
+			$meta
+		);
+		$titleRu = $needTitle ? $disp['title_ru'] : (string) $row['title_ru'];
+		$titleEn = $needTitle
+			? ($disp['title_en'] !== '' ? $disp['title_en'] : $disp['title_ru'])
+			: (string) (($row['title_en'] ?? '') !== '' ? $row['title_en'] : $row['title_ru']);
+		$urlRu = $needUrl ? $disp['url_ru'] : (string) $row['url_ru'];
+		$urlEn = $needUrl ? ($disp['url_en'] !== '' ? $disp['url_en'] : $disp['url_ru']) : (string) ($row['url_en'] ?? $row['url_ru']);
+		$thumb = $needThumb ? $disp['thumb_url'] : (string) ($row['thumb_url'] ?? '');
+		if ($titleRu === '' && ($thumb === null || $thumb === '') && $urlRu === '') {
+			continue;
+		}
+		db_exec(
+			$db,
+			'UPDATE activity SET title_ru=?, title_en=?, url_ru=?, url_en=?, thumb_url=? WHERE id=? LIMIT 1',
+			'sssssi',
+			$titleRu,
+			$titleEn,
+			$urlRu,
+			$urlEn,
+			$thumb !== null ? $thumb : '',
+			(int) $row['id']
+		);
+		if ($thumb === null || $thumb === '') {
+			db_exec($db, 'UPDATE activity SET thumb_url=NULL WHERE id=? AND thumb_url=\'\' LIMIT 1', 'i', (int) $row['id']);
+		}
+	}
+}
+
+/**
+ * Build summary + titles for a batch from its events.
+ * Also mirrors any pending legacy `log` rows into this batch first.
+ */
+function activity_batch_finalize(mysqli $db, int $batchId = 0, bool $keepEmpty = false): void
+{
+	if (!activity_tables_ready($db)) {
+		return;
+	}
+	if ($batchId <= 0) {
+		$batchId = activity_current_batch_id();
+	}
+	if ($batchId <= 0) {
+		return;
+	}
+
+	$batchCreated = 0;
+	$zb = db_select($db, 'SELECT created_at, actor_user_id FROM activity_batch WHERE id=? LIMIT 1', 'i', $batchId);
+	if ($zb && ($brow = $zb->fetch_assoc())) {
+		$batchCreated = (int) ($brow['created_at'] ?? 0);
+		activity_mirror_pending_logs($db, max(0, $batchCreated - 5), (int) ($brow['actor_user_id'] ?? 0));
+	}
+
+	activity_enrich_batch_events($db, $batchId);
+
+	$z = db_select(
+		$db,
+		'SELECT object_type, verb, is_public, event_scope, title_ru, title_en, url_ru, url_en, thumb_url, parent_type, parent_id, action '
+		. 'FROM activity WHERE batch_id=? ORDER BY id ASC',
+		'i',
+		$batchId
+	);
+	$rows = [];
+	while ($z && ($row = $z->fetch_assoc())) {
+		$rows[] = $row;
+	}
+
+	if ($rows === [] && !$keepEmpty) {
+		db_exec($db, 'DELETE FROM activity_batch WHERE id=? AND items_count=0 LIMIT 1', 'i', $batchId);
+		if (($GLOBALS['__activity_request']['batch_id'] ?? 0) == $batchId) {
+			$GLOBALS['__activity_request'] = null;
+		}
+		return;
+	}
+
+	$counts = [];
+	$publicCount = 0;
+	$titleRu = '';
+	$titleEn = '';
+	$urlRu = '';
+	$urlEn = '';
+	$thumb = null;
+	$hasPublicContent = false;
+
+	foreach ($rows as $r) {
+		$key = (string) $r['object_type'] . ':' . (string) $r['verb'];
+		$counts[$key] = ($counts[$key] ?? 0) + 1;
+		if ((int) $r['is_public'] === 1 && (string) $r['event_scope'] === ACTIVITY_SCOPE_CONTENT) {
+			$publicCount++;
+			$hasPublicContent = true;
+			if ($titleRu === '' && trim((string) $r['title_ru']) !== '') {
+				$titleRu = (string) $r['title_ru'];
+				$titleEn = (string) ($r['title_en'] ?: $r['title_ru']);
+				$urlRu = (string) ($r['url_ru'] ?? '');
+				$urlEn = (string) ($r['url_en'] ?? $urlRu);
+			}
+			if ($thumb === null && !empty($r['thumb_url'])) {
+				$thumb = (string) $r['thumb_url'];
+			}
+		}
+	}
+
+	$partsRu = [];
+	$partsEn = [];
+	$labelRu = [
+		'article:created' => ['статья', 'статьи', 'статей'],
+		'screen:uploaded' => ['скриншот', 'скриншота', 'скриншотов'],
+		'file:uploaded' => ['файл', 'файла', 'файлов'],
+		'issue:created' => ['выпуск', 'выпуска', 'выпусков'],
+		'press:created' => ['издание', 'издания', 'изданий'],
+		'book:created' => ['книга', 'книги', 'книг'],
+		'chapter:created' => ['глава', 'главы', 'глав'],
+		'periodical_issue:created' => ['номер', 'номера', 'номеров'],
+		'periodical_article:created' => ['статья', 'статьи', 'статей'],
+		'publication:created' => ['публикация', 'публикации', 'публикаций'],
+		'publication_article:created' => ['материал', 'материала', 'материалов'],
+		'letter:created' => ['письмо', 'письма', 'писем'],
+		'letter:published' => ['письмо', 'письма', 'писем'],
+		'news:created' => ['новость', 'новости', 'новостей'],
+	];
+	$labelEn = [
+		'article:created' => ['article', 'articles', 'articles'],
+		'screen:uploaded' => ['screenshot', 'screenshots', 'screenshots'],
+		'file:uploaded' => ['file', 'files', 'files'],
+		'issue:created' => ['issue', 'issues', 'issues'],
+		'press:created' => ['magazine', 'magazines', 'magazines'],
+		'book:created' => ['book', 'books', 'books'],
+		'chapter:created' => ['chapter', 'chapters', 'chapters'],
+		'periodical_issue:created' => ['issue', 'issues', 'issues'],
+		'periodical_article:created' => ['article', 'articles', 'articles'],
+		'publication:created' => ['publication', 'publications', 'publications'],
+		'publication_article:created' => ['item', 'items', 'items'],
+		'letter:created' => ['letter', 'letters', 'letters'],
+		'letter:published' => ['letter', 'letters', 'letters'],
+		'news:created' => ['news item', 'news items', 'news items'],
+	];
+
+	foreach ($counts as $key => $n) {
+		if (!isset($labelRu[$key])) {
+			continue;
+		}
+		$partsRu[] = '+' . $n . ' ' . getNumEnding($n, $labelRu[$key]);
+		$partsEn[] = '+' . $n . ' ' . ($n === 1 ? $labelEn[$key][0] : $labelEn[$key][2]);
+	}
+
+	$summaryRu = $partsRu !== [] ? implode(', ', $partsRu) : ('Событий: ' . count($rows));
+	$summaryEn = $partsEn !== [] ? implode(', ', $partsEn) : ('Events: ' . count($rows));
+	if ($titleRu === '') {
+		$titleRu = 'Обновление';
+		$titleEn = 'Update';
+	}
+
+	$now = time();
+	$isPublic = $hasPublicContent ? 1 : 0;
+	$items = count($rows);
+	$thumbVal = $thumb !== null ? $thumb : '';
+
+	db_exec(
+		$db,
+		'UPDATE activity_batch SET closed_at=?, title_ru=?, title_en=?, url_ru=?, url_en=?, '
+		. 'summary_ru=?, summary_en=?, thumb_url=?, items_count=?, public_items_count=?, is_public=? '
+		. 'WHERE id=? LIMIT 1',
+		'isssssssiiii',
+		$now,
+		$titleRu,
+		$titleEn,
+		$urlRu,
+		$urlEn,
+		$summaryRu,
+		$summaryEn,
+		$thumbVal,
+		$items,
+		$publicCount,
+		$isPublic,
+		$batchId
+	);
+	if ($thumbVal === '') {
+		db_exec($db, 'UPDATE activity_batch SET thumb_url=NULL WHERE id=? LIMIT 1', 'i', $batchId);
+	}
+
+	if (($GLOBALS['__activity_request']['batch_id'] ?? 0) == $batchId) {
+		$GLOBALS['__activity_request'] = null;
+	}
+	$db->query('SET @activity_batch_id := NULL');
+}
+
+/**
+ * Log one activity event. Joins current request batch if any.
+ *
+ * @param array<string,mixed> $opts
+ */
+function activity_log(mysqli $db, array $opts): int
+{
+	if (!activity_tables_ready($db)) {
+		return 0;
+	}
+
+	$verb = (string) ($opts['verb'] ?? 'updated');
+	$objectType = (string) ($opts['object_type'] ?? '');
+	$objectId = (int) ($opts['object_id'] ?? 0);
+	if ($objectType === '') {
+		return 0;
+	}
+
+	$parentType = isset($opts['parent_type']) ? (string) $opts['parent_type'] : null;
+	$parentId = isset($opts['parent_id']) ? (int) $opts['parent_id'] : null;
+	$action = (string) ($opts['action'] ?? ($objectType . '.' . $verb));
+	$scope = (string) ($opts['event_scope'] ?? ACTIVITY_SCOPE_CONTENT);
+	if (!in_array($scope, [ACTIVITY_SCOPE_CONTENT, ACTIVITY_SCOPE_METADATA, ACTIVITY_SCOPE_SYSTEM], true)) {
+		$scope = ACTIVITY_SCOPE_CONTENT;
+	}
+	$isPublic = array_key_exists('is_public', $opts)
+		? ((int) ((bool) $opts['is_public']))
+		: ($scope === ACTIVITY_SCOPE_CONTENT ? 1 : 0);
+
+	$titleRu = (string) ($opts['title_ru'] ?? '');
+	$titleEn = (string) ($opts['title_en'] ?? $titleRu);
+	$urlRu = (string) ($opts['url_ru'] ?? '');
+	$urlEn = (string) ($opts['url_en'] ?? $urlRu);
+	$thumbUrl = isset($opts['thumb_url']) ? (string) $opts['thumb_url'] : null;
+	$beforeJson = activity_json($opts['before'] ?? $opts['before_json'] ?? null);
+	$afterJson = activity_json($opts['after'] ?? $opts['after_json'] ?? null);
+	$metaJson = activity_json($opts['meta'] ?? $opts['meta_json'] ?? null);
+	$legacyLogId = isset($opts['legacy_log_id']) ? (int) $opts['legacy_log_id'] : null;
+	$legacyLogType = isset($opts['legacy_log_type']) ? (int) $opts['legacy_log_type'] : null;
+
+	$batchId = (int) ($opts['batch_id'] ?? 0);
+	if ($batchId <= 0) {
+		$batchId = activity_current_batch_id();
+	}
+	$batchIdParam = $batchId > 0 ? $batchId : null;
+
+	$actor = (int) ($opts['actor_user_id'] ?? 0);
+	if ($actor <= 0) {
+		$actor = activity_actor_user_id();
+	}
+	$createdAt = (int) ($opts['created_at'] ?? time());
+
+	return activity_log_insert_raw($db, [
+		'batch_id' => $batchIdParam,
+		'created_at' => $createdAt,
+		'actor_user_id' => $actor,
+		'verb' => $verb,
+		'object_type' => $objectType,
+		'object_id' => $objectId,
+		'parent_type' => $parentType,
+		'parent_id' => $parentId,
+		'action' => $action,
+		'event_scope' => $scope,
+		'is_public' => $isPublic,
+		'title_ru' => $titleRu,
+		'title_en' => $titleEn,
+		'url_ru' => $urlRu,
+		'url_en' => $urlEn,
+		'thumb_url' => $thumbUrl,
+		'before_json' => $beforeJson,
+		'after_json' => $afterJson,
+		'meta_json' => $metaJson,
+		'legacy_log_id' => $legacyLogId,
+		'legacy_log_type' => $legacyLogType,
+	]);
+}
+
+/**
+ * @param array<string,mixed> $row
+ */
+function activity_log_insert_raw(mysqli $db, array $row): int
+{
+	$cols = [];
+	$placeholders = [];
+	$types = '';
+	$values = [];
+
+	$map = [
+		'batch_id' => 'i',
+		'created_at' => 'i',
+		'actor_user_id' => 'i',
+		'verb' => 's',
+		'object_type' => 's',
+		'object_id' => 'i',
+		'parent_type' => 's',
+		'parent_id' => 'i',
+		'action' => 's',
+		'event_scope' => 's',
+		'is_public' => 'i',
+		'title_ru' => 's',
+		'title_en' => 's',
+		'url_ru' => 's',
+		'url_en' => 's',
+		'thumb_url' => 's',
+		'before_json' => 's',
+		'after_json' => 's',
+		'meta_json' => 's',
+		'legacy_log_id' => 'i',
+		'legacy_log_type' => 'i',
+	];
+
+	foreach ($map as $col => $t) {
+		if (!array_key_exists($col, $row)) {
+			continue;
+		}
+		$val = $row[$col];
+		if ($val === null) {
+			$cols[] = '`' . $col . '`';
+			$placeholders[] = 'NULL';
+			continue;
+		}
+		$cols[] = '`' . $col . '`';
+		$placeholders[] = '?';
+		$types .= $t;
+		$values[] = $val;
+	}
+
+	$sql = 'INSERT INTO activity (' . implode(',', $cols) . ') VALUES (' . implode(',', $placeholders) . ')';
+	$stmt = $db->prepare($sql);
+	if (!$stmt) {
+		error_log('[activity] insert prepare failed: ' . $db->error);
+		return 0;
+	}
+	if ($types !== '') {
+		$stmt->bind_param($types, ...$values);
+	}
+	if (!$stmt->execute()) {
+		error_log('[activity] insert failed: ' . $stmt->error);
+		$stmt->close();
+		return 0;
+	}
+	$id = (int) $db->insert_id;
+	$stmt->close();
+	return $id;
+}
+
+/**
+ * Map legacy `log.type` into activity and write a row.
+ */
+function activity_log_from_legacy(
+	mysqli $db,
+	int $legacyType,
+	int $idPress,
+	int $idArticle,
+	int $idIssue,
+	int $idUser,
+	int $date,
+	int $idScreen = 0,
+	int $idCover = 0,
+	int $legacyLogId = 0
+): int {
+	$map = [
+		1 => ['verb' => 'created', 'object_type' => 'article', 'object_id_from' => 'article', 'parent_type' => 'issue', 'parent_from' => 'issue', 'scope' => ACTIVITY_SCOPE_CONTENT, 'public' => 1, 'action' => 'article.created'],
+		2 => ['verb' => 'uploaded', 'object_type' => 'screen', 'object_id_from' => 'screen', 'parent_type' => 'issue', 'parent_from' => 'issue', 'scope' => ACTIVITY_SCOPE_CONTENT, 'public' => 1, 'action' => 'screen.uploaded'],
+		3 => ['verb' => 'uploaded', 'object_type' => 'illustration', 'object_id_from' => 'screen', 'parent_type' => 'issue', 'parent_from' => 'issue', 'scope' => ACTIVITY_SCOPE_CONTENT, 'public' => 1, 'action' => 'illustration.uploaded'],
+		4 => ['verb' => 'created', 'object_type' => 'chapter', 'object_id_from' => 'article', 'parent_type' => 'book', 'parent_from' => 'press', 'scope' => ACTIVITY_SCOPE_CONTENT, 'public' => 1, 'action' => 'chapter.created'],
+		100 => ['verb' => 'created', 'object_type' => 'book', 'object_id_from' => 'press', 'parent_type' => null, 'parent_from' => null, 'scope' => ACTIVITY_SCOPE_CONTENT, 'public' => 1, 'action' => 'book.created'],
+		101 => ['verb' => 'uploaded', 'object_type' => 'book_file', 'object_id_from' => 'screen', 'parent_type' => 'book', 'parent_from' => 'press', 'scope' => ACTIVITY_SCOPE_CONTENT, 'public' => 1, 'action' => 'book_file.uploaded'],
+		102 => ['verb' => 'uploaded', 'object_type' => 'book_image', 'object_id_from' => 'screen', 'parent_type' => 'book', 'parent_from' => 'press', 'scope' => ACTIVITY_SCOPE_CONTENT, 'public' => 1, 'action' => 'book_image.uploaded'],
+		111 => ['verb' => 'updated', 'object_type' => 'book', 'object_id_from' => 'press', 'parent_type' => null, 'parent_from' => null, 'scope' => ACTIVITY_SCOPE_METADATA, 'public' => 0, 'action' => 'book.updated'],
+		128 => ['verb' => 'updated', 'object_type' => 'book', 'object_id_from' => 'press', 'parent_type' => null, 'parent_from' => null, 'scope' => ACTIVITY_SCOPE_METADATA, 'public' => 0, 'action' => 'book.meta.updated'],
+		160 => ['verb' => 'updated', 'object_type' => 'book', 'object_id_from' => 'press', 'parent_type' => null, 'parent_from' => null, 'scope' => ACTIVITY_SCOPE_METADATA, 'public' => 0, 'action' => 'book.linked'],
+		256 => ['verb' => 'deleted', 'object_type' => 'article', 'object_id_from' => 'article', 'parent_type' => 'issue', 'parent_from' => 'issue', 'scope' => ACTIVITY_SCOPE_CONTENT, 'public' => 0, 'action' => 'article.deleted'],
+	];
+
+	$m = $map[$legacyType] ?? [
+		'verb' => 'updated',
+		'object_type' => 'legacy',
+		'object_id_from' => 'article',
+		'parent_type' => 'issue',
+		'parent_from' => 'issue',
+		'scope' => ACTIVITY_SCOPE_SYSTEM,
+		'public' => 0,
+		'action' => 'legacy.type.' . $legacyType,
+	];
+
+	$objectId = match ($m['object_id_from']) {
+		'screen' => $idScreen > 0 ? $idScreen : ($idCover > 0 ? $idCover : $idArticle),
+		'press' => $idPress,
+		'issue' => $idIssue,
+		default => $idArticle > 0 ? $idArticle : ($idPress > 0 ? $idPress : $idIssue),
+	};
+	$parentId = null;
+	$parentType = $m['parent_type'];
+	if ($parentType !== null) {
+		$parentId = match ($m['parent_from']) {
+			'press' => $idPress,
+			'issue' => $idIssue,
+			default => 0,
+		};
+	}
+
+	$titleRu = '';
+	$titleEn = '';
+	$urlRu = '';
+	$thumb = null;
+	$meta = [
+		'legacy_type' => $legacyType,
+		'id_press' => $idPress,
+		'id_issue' => $idIssue,
+		'id_article' => $idArticle,
+		'id_screen' => $idScreen,
+		'id_cover' => $idCover,
+	];
+
+	$disp = activity_resolve_object_display(
+		$db,
+		(string) $m['object_type'],
+		$objectId,
+		$parentType,
+		$parentId,
+		$meta
+	);
+	$titleRu = $disp['title_ru'];
+	$titleEn = $disp['title_en'];
+	$urlRu = $disp['url_ru'];
+	$thumb = $disp['thumb_url'];
+
+	if ($m['object_type'] === 'chapter' && $idArticle > 0 && $parentId <= 0) {
+		$z = db_select($db, 'SELECT ch_id_book FROM chapters WHERE ch_id=? LIMIT 1', 'i', $idArticle);
+		if ($z && ($c = $z->fetch_assoc())) {
+			$parentId = (int) ($c['ch_id_book'] ?? $parentId);
+		}
+	}
+
+	return activity_log($db, [
+		'verb' => $m['verb'],
+		'object_type' => $m['object_type'],
+		'object_id' => $objectId,
+		'parent_type' => $parentType,
+		'parent_id' => $parentId,
+		'action' => $m['action'],
+		'event_scope' => $m['scope'],
+		'is_public' => $m['public'],
+		'title_ru' => $titleRu,
+		'title_en' => $titleEn,
+		'url_ru' => $urlRu,
+		'url_en' => $urlRu,
+		'thumb_url' => $thumb,
+		'meta' => $meta,
+		'actor_user_id' => $idUser,
+		'created_at' => $date > 0 ? $date : time(),
+		'legacy_log_id' => $legacyLogId > 0 ? $legacyLogId : null,
+		'legacy_log_type' => $legacyType,
+	]);
+}
+
+/**
+ * Boot per-request batch for admin POST mutations.
+ */
+function activity_admin_request_boot(mysqli $db): void
+{
+	if (!activity_tables_ready($db)) {
+		return;
+	}
+	if (($GLOBALS['__activity_request']['batch_id'] ?? 0) > 0) {
+		return;
+	}
+	if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
+		return;
+	}
+	if (empty($_SESSION['login'])) {
+		return;
+	}
+	$script = basename((string) ($_SERVER['SCRIPT_NAME'] ?? ''));
+	if (!(str_starts_with($script, 'admin_') || $script === 'gallery_admin.php')) {
+		return;
+	}
+
+	activity_batch_begin($db);
+	register_shutdown_function(static function () use ($db): void {
+		try {
+			activity_batch_finalize($db);
+		} catch (Throwable $e) {
+			error_log('[activity] finalize failed: ' . $e->getMessage());
+		}
+	});
+}
+
+/**
+ * Human labels for object types (test page / feed).
+ */
+function activity_object_label(string $type, bool $eng = false): string
+{
+	$ru = [
+		'article' => 'Статья',
+		'screen' => 'Скриншот',
+		'illustration' => 'Иллюстрация',
+		'file' => 'Файл',
+		'issue' => 'Выпуск',
+		'press' => 'Издание',
+		'book' => 'Книга',
+		'chapter' => 'Глава',
+		'book_file' => 'Файл книги',
+		'book_image' => 'Обложка/картинка книги',
+		'periodical' => 'Периодика',
+		'periodical_issue' => 'Номер периодики',
+		'periodical_article' => 'Статья периодики',
+		'periodical_issue_image' => 'Скан номера',
+		'periodical_issue_file' => 'Файл номера',
+		'publication' => 'Публикация',
+		'publication_article' => 'Материал публикации',
+		'letter' => 'Письмо',
+		'news' => 'Новость',
+		'news_file' => 'Файл новости',
+		'author' => 'Автор',
+		'publisher' => 'Издательство',
+		'book_rubric' => 'Рубрика книг',
+		'category' => 'Категория',
+		'tag' => 'Тег',
+		'legacy' => 'Служебное',
+	];
+	$en = [
+		'article' => 'Article',
+		'screen' => 'Screenshot',
+		'illustration' => 'Illustration',
+		'file' => 'File',
+		'issue' => 'Issue',
+		'press' => 'Magazine',
+		'book' => 'Book',
+		'chapter' => 'Chapter',
+		'book_file' => 'Book file',
+		'book_image' => 'Book image',
+		'periodical' => 'Periodical',
+		'periodical_issue' => 'Periodical issue',
+		'periodical_article' => 'Periodical article',
+		'periodical_issue_image' => 'Issue scan',
+		'periodical_issue_file' => 'Issue file',
+		'publication' => 'Publication',
+		'publication_article' => 'Publication article',
+		'letter' => 'Letter',
+		'news' => 'News',
+		'news_file' => 'News file',
+		'author' => 'Author',
+		'publisher' => 'Publisher',
+		'book_rubric' => 'Book rubric',
+		'category' => 'Category',
+		'tag' => 'Tag',
+		'legacy' => 'System',
+	];
+	return $eng ? ($en[$type] ?? $type) : ($ru[$type] ?? $type);
+}

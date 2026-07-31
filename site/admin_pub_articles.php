@@ -168,6 +168,21 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
 			);
 		}
 
+		if ($id > 0) {
+			activity_log($db, [
+				'verb' => ((int) ($_POST['id'] ?? 0) === 0) ? 'created' : 'updated',
+				'object_type' => 'publication_article',
+				'object_id' => $id,
+				'parent_type' => 'publication',
+				'parent_id' => $pub_id,
+				'action' => ((int) ($_POST['id'] ?? 0) === 0) ? 'publication_article.created' : 'publication_article.updated',
+				'event_scope' => ACTIVITY_SCOPE_CONTENT,
+				'is_public' => $is_active ? 1 : 0,
+				'title_ru' => $title_ru,
+				'title_en' => $title_en !== '' ? $title_en : $title_ru,
+			]);
+		}
+
 		// Delete selected files
 		if ($id > 0) {
 			$zFiles = db_select($db, "SELECT id, format FROM files_ WHERE entity_type=? AND entity_id=? ORDER BY id ASC", "ii", PA_FILES_ENTITY_TYPE, $id);

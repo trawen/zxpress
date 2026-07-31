@@ -156,6 +156,17 @@ if (($_POST['delete'] ?? '') === '1' && aan_post_int('article_id') > 0) {
 	$ok = db_exec($db, 'DELETE FROM articles WHERE id=? AND id_issue=? LIMIT 1', 'ii', $delId, $delIssue);
 	if ($ok) {
 		db_exec($db, 'DELETE FROM tags_articles WHERE id_article=?', 'i', $delId);
+		activity_log($db, [
+			'verb' => 'deleted',
+			'object_type' => 'article',
+			'object_id' => $delId,
+			'parent_type' => 'issue',
+			'parent_id' => $delIssue,
+			'action' => 'article.deleted',
+			'event_scope' => ACTIVITY_SCOPE_CONTENT,
+			'is_public' => 0,
+			'meta' => ['press_id' => $delPress],
+		]);
 		aan_queue_manticore_reindex();
 		aan_redirect($delPress, $delIssue, 0, '&deleted=1');
 	}
@@ -217,6 +228,14 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
 			);
 
 			$now = time();
+			$wasCreate = ($aid <= 0);
+			$prevTextType = null;
+			if (!$wasCreate && $aid > 0) {
+				$zPrev = db_select($db, 'SELECT text_type FROM articles WHERE id=? LIMIT 1', 'i', $aid);
+				if ($zPrev && ($pr = $zPrev->fetch_assoc())) {
+					$prevTextType = (int) ($pr['text_type'] ?? 0);
+				}
+			}
 			if ($aid <= 0) {
 				$saved = db_exec(
 					$db,
@@ -270,6 +289,52 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
 			}
 
 			if (!empty($saved) && $aid > 0) {
+				if ($wasCreate) {
+					activity_log($db, [
+						'verb' => 'created',
+						'object_type' => 'article',
+						'object_id' => $aid,
+						'parent_type' => 'issue',
+						'parent_id' => $issueId,
+						'action' => 'article.created',
+						'event_scope' => ACTIVITY_SCOPE_CONTENT,
+						'is_public' => $temp === 0 ? 1 : 0,
+						'title_ru' => $title,
+						'title_en' => $titleEng !== '' ? $titleEng : $title,
+						'url_ru' => '/article.php?id=' . $aid,
+						'meta' => ['press_id' => $pressId, 'text_type' => $textType],
+					]);
+				} else {
+					activity_log($db, [
+						'verb' => 'updated',
+						'object_type' => 'article',
+						'object_id' => $aid,
+						'parent_type' => 'issue',
+						'parent_id' => $issueId,
+						'action' => 'article.updated',
+						'event_scope' => ACTIVITY_SCOPE_METADATA,
+						'is_public' => 0,
+						'title_ru' => $title,
+						'title_en' => $titleEng !== '' ? $titleEng : $title,
+						'url_ru' => '/article.php?id=' . $aid,
+					]);
+					if ($prevTextType !== null && $prevTextType !== $textType) {
+						activity_log($db, [
+							'verb' => 'updated',
+							'object_type' => 'article',
+							'object_id' => $aid,
+							'parent_type' => 'issue',
+							'parent_id' => $issueId,
+							'action' => 'article.text_type.changed',
+							'event_scope' => ACTIVITY_SCOPE_METADATA,
+							'is_public' => 0,
+							'title_ru' => $title,
+							'before' => ['text_type' => $prevTextType],
+							'after' => ['text_type' => $textType],
+						]);
+					}
+				}
+
 				// Tags: add existing
 				$addTag = aan_post_int('add_tag_id');
 				if ($addTag > 0) {
@@ -282,6 +347,15 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
 					);
 					if (!($exists && mysqli_fetch_array($exists))) {
 						db_exec($db, 'INSERT INTO tags_articles (id_tag, id_article) VALUES (?,?)', 'ii', $addTag, $aid);
+						activity_log($db, [
+							'verb' => 'updated',
+							'object_type' => 'article',
+							'object_id' => $aid,
+							'action' => 'article.tag.added',
+							'event_scope' => ACTIVITY_SCOPE_METADATA,
+							'is_public' => 0,
+							'after' => ['tag_id' => $addTag],
+						]);
 					}
 				}
 				$newTagName = plain_text_normalize_for_storage(strip_tags(aan_post_string('new_tag')));
@@ -290,6 +364,15 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
 					$newTagId = (int) mysqli_insert_id($db);
 					if ($newTagId > 0) {
 						db_exec($db, 'INSERT INTO tags_articles (id_tag, id_article) VALUES (?,?)', 'ii', $newTagId, $aid);
+						activity_log($db, [
+							'verb' => 'updated',
+							'object_type' => 'article',
+							'object_id' => $aid,
+							'action' => 'article.tag.added',
+							'event_scope' => ACTIVITY_SCOPE_METADATA,
+							'is_public' => 0,
+							'after' => ['tag_id' => $newTagId, 'tag_name' => $newTagName],
+						]);
 					}
 				}
 				if (!empty($_POST['delete_tag']) && is_array($_POST['delete_tag'])) {
@@ -297,6 +380,15 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
 						$taId = (int) $taId;
 						if ($taId > 0) {
 							db_exec($db, 'DELETE FROM tags_articles WHERE id=? AND id_article=? LIMIT 1', 'ii', $taId, $aid);
+							activity_log($db, [
+								'verb' => 'updated',
+								'object_type' => 'article',
+								'object_id' => $aid,
+								'action' => 'article.tag.removed',
+								'event_scope' => ACTIVITY_SCOPE_METADATA,
+								'is_public' => 0,
+								'before' => ['tags_articles_id' => $taId],
+							]);
 						}
 					}
 				}

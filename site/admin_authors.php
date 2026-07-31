@@ -46,6 +46,7 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
         $slug_ru = $slugs['slug_ru'];
         $slug_en = $slugs['slug_en'];
 
+        $wasCreate = ($id === 0);
         if ($id === 0) {
             db_exec(
                 $db,
@@ -80,6 +81,20 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
                 $is_active,
                 $id
             );
+        }
+
+        if ($id > 0) {
+            activity_log($db, [
+                'verb' => $wasCreate ? 'created' : 'updated',
+                'object_type' => 'author',
+                'object_id' => $id,
+                'action' => $wasCreate ? 'author.created' : 'author.updated',
+                'event_scope' => ACTIVITY_SCOPE_METADATA,
+                'is_public' => 0,
+                'title_ru' => $nickname,
+                'title_en' => $nickname,
+                'after' => ['is_active' => $is_active],
+            ]);
         }
 
         header("Location: /admin_authors.php?id=" . $id, true, 303);

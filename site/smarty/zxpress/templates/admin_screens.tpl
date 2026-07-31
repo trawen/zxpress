@@ -33,11 +33,16 @@
 .admin-ascr-sidebar {
 	position: sticky;
 	top: 10px;
+	height: calc(100vh - 20px);
 	max-height: calc(100vh - 20px);
 	display: flex;
 	flex-direction: column;
 	background: #EBE8D7;
 	z-index: 2;
+	box-sizing: border-box;
+}
+.admin-ascr-sidebar-head {
+	flex: 0 0 auto;
 }
 .admin-ascr-list-wrap {
 	font: normal 12px Verdana;
@@ -45,28 +50,41 @@
 	min-height: 0;
 	overflow-y: auto;
 	overflow-x: hidden;
+	overscroll-behavior: contain;
+	-webkit-overflow-scrolling: touch;
+	padding-right: 4px;
+	border-top: 1px solid #C8C5AC;
+	margin-top: 4px;
+	padding-top: 6px;
 }
 .admin-ascr-list-wrap ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px 6px;
+	align-content: flex-start;
 }
 .admin-ascr-list-wrap li {
-	margin: 0 0 5px;
-	line-height: 1.35;
+	margin: 0;
+	line-height: 1.25;
 }
 .admin-ascr-list-wrap a {
 	color: #493C2F;
 	text-decoration: none;
-	display: block;
-	overflow: hidden;
-	text-overflow: ellipsis;
+	display: inline-block;
+	padding: 2px 5px;
+	border: 1px solid #C8C5AC;
+	background: #f5f3e6;
 	white-space: nowrap;
 }
-.admin-ascr-list-wrap a:hover { color: #A41E00; }
+.admin-ascr-list-wrap a:hover { color: #A41E00; border-color: #A41E00; }
 .admin-ascr-list-wrap a.nav-active {
 	font-weight: bold;
 	color: #A41E00;
+	border-color: #A41E00;
+	background: #fff;
 }
 .admin-ascr-muted { font: normal 11px Verdana; color: #666; }
 .admin-ascr-card {
@@ -103,52 +121,9 @@
 
 <table width="100%" cellpadding="6" cellspacing="0">
 <tr>
-<td valign="top" width="320" style="border-right:1px solid #C8C5AC">
-<div class="admin-ascr-sidebar">
-
-{if !$press}
-<div style="font: bold 12px Verdana; margin-bottom:6px">Издания</div>
-<div class="admin-ascr-list-wrap">
-{if $press_list && $press_list|@count gt 0}
-<ul>
-{foreach from=$press_list item=p}
-<li>
-<a href="admin_screens.php?id={$p.id}">{$p.title|escape:'html'}{if $p.screens_count} <span class="admin-ascr-muted">({$p.screens_count})</span>{/if}</a>
-</li>
-{/foreach}
-</ul>
-{else}
-<p style="color:#666;margin:0">Изданий нет</p>
-{/if}
-</div>
-{else}
-<div style="font: bold 12px Verdana; margin-bottom:6px">
-<a href="admin_screens.php" style="font-weight:normal;color:#666">← издания</a><br>
-{$press.title|escape:'html'}
-</div>
-
-<div style="font: bold 12px Verdana; margin-bottom:6px">Выпуски</div>
-<div class="admin-ascr-list-wrap">
-{if $issues && $issues|@count gt 0}
-<ul>
-{section name=n loop=$issues}
-<li>
-<a href="admin_screens.php?id={$press.id}&amp;issue={$issues[n].id}"{if $issues[n].id eq $issue_id} class="nav-active"{/if}>№ {$issues[n].title|escape:'html'}{if $issues[n].screens_count} <span class="admin-ascr-muted">({$issues[n].screens_count})</span>{/if}</a>
-</li>
-{/section}
-</ul>
-{else}
-<p style="color:#666;margin:0">Выпусков нет</p>
-{/if}
-</div>
-{/if}
-
-</div>
-</td>
-
 <td valign="top">
 {if !$press}
-<div style="font: 12px Verdana; color:#666">Выберите издание слева.</div>
+<div style="font: 12px Verdana; color:#666">Выберите издание справа.</div>
 {elseif !$issue}
 <div style="font: 12px Verdana; color:#666">У издания нет выпусков. <a href="admin_issue.php?id={$press.id}">Создать выпуск</a></div>
 {else}
@@ -158,16 +133,17 @@
 <span class="admin-ascr-muted">({$screens|@count})</span>
 </div>
 
-<form method="post" action="admin_screens.php?id={$press.id}&amp;issue={$issue_id}" enctype="multipart/form-data" style="margin-bottom:16px;padding:10px;border:1px solid #C8C5AC;background:#f5f3e6">
+<form method="post" action="admin_screens.php?id={$press.id}&amp;issue={$issue_id}" enctype="multipart/form-data">
 <input type="hidden" name="csrf_token" value="{$csrf_token}">
 <input type="hidden" name="press_id" value="{$press.id}">
 <input type="hidden" name="issue_id" value="{$issue_id}">
-<input type="hidden" name="upload" value="1">
-<div style="font: bold 12px Verdana; margin-bottom:6px">Загрузить скриншот</div>
+
+<div style="margin-bottom:16px;padding:10px;border:1px solid #C8C5AC;background:#f5f3e6">
+<div style="font: bold 12px Verdana; margin-bottom:6px">Загрузить скриншоты</div>
 <table style="font: 12px Verdana" cellpadding="4">
 <tr>
-<td>Файл</td>
-<td><input type="file" name="upload_screen" accept=".png,.jpg,.jpeg,image/png,image/jpeg"></td>
+<td>Файлы</td>
+<td><input type="file" name="upload_screen[]" accept=".png,.jpg,.jpeg,image/png,image/jpeg" multiple></td>
 </tr>
 <tr>
 <td>Тип</td>
@@ -177,19 +153,18 @@
 <option value="1">меню</option>
 <option value="2">текст</option>
 </select>
+<span class="admin-ascr-muted"> — для всех выбранных</span>
 </td>
 </tr>
 <tr>
 <td></td>
-<td><button type="submit" style="font: bold 13px Verdana; padding: 3px 12px">Загрузить</button></td>
+<td>
+<button type="submit" name="upload" value="1" style="font: bold 13px Verdana; padding: 3px 12px">Загрузить</button>
+<span class="admin-ascr-muted"> (можно несколько файлов сразу)</span>
+</td>
 </tr>
 </table>
-</form>
-
-<form method="post" action="admin_screens.php?id={$press.id}&amp;issue={$issue_id}">
-<input type="hidden" name="csrf_token" value="{$csrf_token}">
-<input type="hidden" name="press_id" value="{$press.id}">
-<input type="hidden" name="issue_id" value="{$issue_id}">
+</div>
 
 {if $screens && $screens|@count gt 0}
 {section name=n loop=$screens}
@@ -220,13 +195,58 @@
 <div style="clear:both"></div>
 <p style="margin-top:8px">
 <input type="submit" name="save" value="Сохранить" style="font: bold 14px Verdana; padding: 4px 14px">
+<span class="admin-ascr-muted"> — типы/выпуски/удаление; новые файлы тоже подхватятся</span>
 </p>
 {else}
-<p style="font: 12px Verdana; color:#666;margin:0 0 8px">Скриншотов пока нет — загрузите первый выше.</p>
+<p style="font: 12px Verdana; color:#666;margin:0 0 8px">Скриншотов пока нет — выберите файлы выше и нажмите «Загрузить».</p>
 {/if}
 </form>
 
 {/if}
+</td>
+
+<td valign="top" width="240" style="border-left:1px solid #C8C5AC">
+<div class="admin-ascr-sidebar">
+
+{if !$press}
+<div class="admin-ascr-sidebar-head" style="font: bold 12px Verdana; margin-bottom:6px">Издания</div>
+<div class="admin-ascr-list-wrap">
+{if $press_list && $press_list|@count gt 0}
+<ul>
+{foreach from=$press_list item=p}
+<li>
+<a href="admin_screens.php?id={$p.id}">{$p.title|escape:'html'}{if $p.screens_count} <span class="admin-ascr-muted">({$p.screens_count})</span>{/if}</a>
+</li>
+{/foreach}
+</ul>
+{else}
+<p style="color:#666;margin:0">Изданий нет</p>
+{/if}
+</div>
+{else}
+<div class="admin-ascr-sidebar-head" style="font: bold 12px Verdana; margin-bottom:6px">
+<a href="admin_screens.php" style="font-weight:normal;color:#666">← издания</a><br>
+{$press.title|escape:'html'}
+<span class="admin-ascr-muted"> · {$issues|@count} вып.</span>
+</div>
+
+<div class="admin-ascr-sidebar-head" style="font: bold 12px Verdana; margin-bottom:2px">Выпуски</div>
+<div class="admin-ascr-list-wrap">
+{if $issues && $issues|@count gt 0}
+<ul>
+{section name=n loop=$issues}
+<li>
+<a href="admin_screens.php?id={$press.id}&amp;issue={$issues[n].id}"{if $issues[n].id eq $issue_id} class="nav-active"{/if}>{$issues[n].title|escape:'html'}{if $issues[n].screens_count}<span class="admin-ascr-muted">·{$issues[n].screens_count}</span>{/if}</a>
+</li>
+{/section}
+</ul>
+{else}
+<p style="color:#666;margin:0">Выпусков нет</p>
+{/if}
+</div>
+{/if}
+
+</div>
 </td>
 </tr>
 </table>

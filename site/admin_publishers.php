@@ -63,6 +63,7 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
             $id
         );
         $saved = false;
+        $wasCreate = ($id === 0);
         if ($id === 0) {
             $saved = db_exec(
                 $db,
@@ -111,6 +112,17 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
         }
 
         if ($saved) {
+            activity_log($db, [
+                'verb' => $wasCreate ? 'created' : 'updated',
+                'object_type' => 'publisher',
+                'object_id' => $id,
+                'action' => $wasCreate ? 'publisher.created' : 'publisher.updated',
+                'event_scope' => ACTIVITY_SCOPE_METADATA,
+                'is_public' => 0,
+                'title_ru' => $name_ru,
+                'title_en' => $name_en !== '' ? $name_en : $name_ru,
+                'after' => ['active' => $active],
+            ]);
             header('Location: /admin_publishers.php?id=' . $id, true, 303);
             exit;
         }

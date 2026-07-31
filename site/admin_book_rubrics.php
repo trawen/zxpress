@@ -141,6 +141,7 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
     if ($name_ru === '') {
         $error = 'Название (RU) обязательно';
     } else {
+        $wasCreate = ($id === 0);
         if ($id === 0) {
             db_exec(
                 $db,
@@ -180,6 +181,17 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
         }
 
         if ($error === null) {
+            activity_log($db, [
+                'verb' => $wasCreate ? 'created' : 'updated',
+                'object_type' => 'book_rubric',
+                'object_id' => $id,
+                'action' => $wasCreate ? 'book_rubric.created' : 'book_rubric.updated',
+                'event_scope' => ACTIVITY_SCOPE_METADATA,
+                'is_public' => 0,
+                'title_ru' => $name_ru,
+                'title_en' => $name_en !== '' ? $name_en : $name_ru,
+                'after' => ['is_active' => $is_active, 'book_ids' => $bookIds],
+            ]);
             header('Location: /admin_book_rubrics.php?id=' . $id, true, 303);
             exit;
         }

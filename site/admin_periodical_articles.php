@@ -186,6 +186,18 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
             }
             if ($id > 0) {
                 per_article_image_handle_admin_post($db, $id);
+                activity_log($db, [
+                    'verb' => ((int) ($_POST['id'] ?? 0) === 0) ? 'created' : 'updated',
+                    'object_type' => 'periodical_article',
+                    'object_id' => $id,
+                    'parent_type' => 'periodical_issue',
+                    'parent_id' => $issue_id,
+                    'action' => ((int) ($_POST['id'] ?? 0) === 0) ? 'periodical_article.created' : 'periodical_article.updated',
+                    'event_scope' => ACTIVITY_SCOPE_CONTENT,
+                    'is_public' => $is_active ? 1 : 0,
+                    'title_ru' => $title_ru,
+                    'title_en' => $title_en !== '' ? $title_en : $title_ru,
+                ]);
             }
             header('Location: /admin_periodical_articles.php?issue_id=' . $issue_id . '&id=' . $id, true, 303);
             exit;

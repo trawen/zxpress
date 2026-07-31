@@ -28,6 +28,7 @@ if (isset($_POST['title'])) {
     log_content_plain_normalized('news.source id=' . ($id ?: 'new'), $rawSource, $source);
     $date = $_POST['date'] ?? '';
 
+    $wasUpdate = $id > 0;
     if ($id) {
         $stmt = $db->prepare("UPDATE news SET title=?, text=?, source=?, date=? WHERE id=? LIMIT 1");
         if ($stmt) {
@@ -42,6 +43,20 @@ if (isset($_POST['title'])) {
             $stmt->execute();
             $id = mysqli_insert_id($db);
         }
+    }
+
+    if ($id > 0) {
+        activity_log($db, [
+            'verb' => $wasUpdate ? 'updated' : 'created',
+            'object_type' => 'news',
+            'object_id' => (int) $id,
+            'action' => $wasUpdate ? 'news.updated' : 'news.created',
+            'event_scope' => ACTIVITY_SCOPE_CONTENT,
+            'is_public' => 1,
+            'title_ru' => $title,
+            'title_en' => $title,
+            'url_ru' => '/news.php?id=' . (int) $id,
+        ]);
     }
 
     header("Location: /admin_news.php?id=$id");

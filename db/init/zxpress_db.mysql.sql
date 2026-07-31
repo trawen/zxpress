@@ -548,6 +548,82 @@ CREATE TABLE `log` (
 ) ENGINE=InnoDB AUTO_INCREMENT=20576 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+
+--
+-- Table structure for table `activity_batch`
+--
+
+DROP TABLE IF EXISTS `activity`;
+DROP TABLE IF EXISTS `activity_batch`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `activity_batch` (
+  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `created_at` INT UNSIGNED NOT NULL,
+  `closed_at` INT UNSIGNED NULL DEFAULT NULL,
+  `actor_user_id` INT UNSIGNED NOT NULL DEFAULT 0,
+  `domain` VARCHAR(32) NOT NULL DEFAULT 'ezine',
+  `root_type` VARCHAR(32) NOT NULL DEFAULT '',
+  `root_id` INT UNSIGNED NOT NULL DEFAULT 0,
+  `title_ru` VARCHAR(255) NOT NULL DEFAULT '',
+  `title_en` VARCHAR(255) NOT NULL DEFAULT '',
+  `url_ru` VARCHAR(512) NOT NULL DEFAULT '',
+  `url_en` VARCHAR(512) NOT NULL DEFAULT '',
+  `summary_ru` VARCHAR(512) NOT NULL DEFAULT '',
+  `summary_en` VARCHAR(512) NOT NULL DEFAULT '',
+  `thumb_url` VARCHAR(512) NULL DEFAULT NULL,
+  `items_count` INT UNSIGNED NOT NULL DEFAULT 0,
+  `public_items_count` INT UNSIGNED NOT NULL DEFAULT 0,
+  `is_public` TINYINT(1) NOT NULL DEFAULT 1,
+  `source` VARCHAR(64) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`),
+  KEY `idx_activity_batch_feed` (`is_public`, `created_at`, `id`),
+  KEY `idx_activity_batch_root` (`root_type`, `root_id`, `created_at`),
+  KEY `idx_activity_batch_domain` (`domain`, `created_at`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `activity`
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `activity` (
+  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `batch_id` BIGINT UNSIGNED NULL DEFAULT NULL,
+  `created_at` INT UNSIGNED NOT NULL,
+  `actor_user_id` INT UNSIGNED NOT NULL DEFAULT 0,
+  `verb` VARCHAR(32) NOT NULL,
+  `object_type` VARCHAR(32) NOT NULL,
+  `object_id` INT UNSIGNED NOT NULL DEFAULT 0,
+  `parent_type` VARCHAR(32) NULL DEFAULT NULL,
+  `parent_id` INT UNSIGNED NULL DEFAULT NULL,
+  `action` VARCHAR(64) NOT NULL DEFAULT '',
+  `event_scope` VARCHAR(16) NOT NULL DEFAULT 'content',
+  `is_public` TINYINT(1) NOT NULL DEFAULT 1,
+  `title_ru` VARCHAR(255) NOT NULL DEFAULT '',
+  `title_en` VARCHAR(255) NOT NULL DEFAULT '',
+  `url_ru` VARCHAR(512) NOT NULL DEFAULT '',
+  `url_en` VARCHAR(512) NOT NULL DEFAULT '',
+  `thumb_url` VARCHAR(512) NULL DEFAULT NULL,
+  `before_json` JSON NULL,
+  `after_json` JSON NULL,
+  `meta_json` JSON NULL,
+  `legacy_log_id` INT UNSIGNED NULL DEFAULT NULL,
+  `legacy_log_type` INT NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `idx_activity_feed` (`is_public`, `created_at`, `id`),
+  KEY `idx_activity_batch` (`batch_id`, `created_at`),
+  KEY `idx_activity_object` (`object_type`, `object_id`),
+  KEY `idx_activity_parent` (`parent_type`, `parent_id`, `created_at`),
+  KEY `idx_activity_scope` (`event_scope`, `created_at`),
+  KEY `idx_activity_action` (`action`, `created_at`),
+  KEY `idx_activity_legacy` (`legacy_log_id`),
+  CONSTRAINT `fk_activity_batch` FOREIGN KEY (`batch_id`) REFERENCES `activity_batch` (`id`) ON DELETE SET NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
 --
 -- Table structure for table `menu`
 --

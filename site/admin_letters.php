@@ -442,6 +442,23 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
         }
 
         if ($save_ok) {
+            $reqIdBefore = (int) ($_GET['id'] ?? 0);
+            $letterCreated = ($reqIdBefore === 0);
+            activity_log($db, [
+                'verb' => ($letterCreated ? 'created' : ($publish_status === 1 ? 'published' : 'updated')),
+                'object_type' => 'letter',
+                'object_id' => $id,
+                'action' => $letterCreated ? 'letter.created' : 'letter.updated',
+                'event_scope' => ($publish_status === 1 || $is_active === 1) ? ACTIVITY_SCOPE_CONTENT : ACTIVITY_SCOPE_METADATA,
+                'is_public' => ($publish_status === 1 || $is_active === 1) ? 1 : 0,
+                'title_ru' => $title_ru,
+                'title_en' => $title_en !== '' ? $title_en : $title_ru,
+                'url_ru' => '/snailmail.php?id=' . $id,
+                'after' => [
+                    'publish_status' => $publish_status,
+                    'is_active' => $is_active,
+                ],
+            ]);
 
         // Update sort order for existing images
         if ($id > 0) {

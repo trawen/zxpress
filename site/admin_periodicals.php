@@ -231,6 +231,16 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
 
         if ($saved) {
             per_sync_publishers($db, $id, $publisherIds);
+            activity_log($db, [
+                'verb' => ((int) ($_POST['id'] ?? 0) === 0) ? 'created' : 'updated',
+                'object_type' => 'periodical',
+                'object_id' => $id,
+                'action' => ((int) ($_POST['id'] ?? 0) === 0) ? 'periodical.created' : 'periodical.updated',
+                'event_scope' => ACTIVITY_SCOPE_CONTENT,
+                'is_public' => $is_active ? 1 : 0,
+                'title_ru' => $title_ru,
+                'title_en' => $title_en !== '' ? $title_en : $title_ru,
+            ]);
             header(
                 'Location: /admin_periodicals.php?id=' . $id
                 . ($issue_id > 0 ? '&issue_id=' . $issue_id . '#admin-periodical-issue-form' : ''),
@@ -344,6 +354,19 @@ if (($_POST['save_issue'] ?? '') === 'Сохранить выпуск') {
             }
 
             if ($saved) {
+                activity_log($db, [
+                    'verb' => ((int) ($_POST['issue_id'] ?? 0) === 0) ? 'created' : 'updated',
+                    'object_type' => 'periodical_issue',
+                    'object_id' => $issue_id,
+                    'parent_type' => 'periodical',
+                    'parent_id' => $id,
+                    'action' => ((int) ($_POST['issue_id'] ?? 0) === 0) ? 'periodical_issue.created' : 'periodical_issue.updated',
+                    'event_scope' => ACTIVITY_SCOPE_CONTENT,
+                    'is_public' => $is_active ? 1 : 0,
+                    'title_ru' => $title_ru !== '' ? $title_ru : ('№' . $issue_no),
+                    'title_en' => $title_en !== '' ? $title_en : ('#' . $issue_no),
+                    'meta' => ['issue_no' => $issue_no, 'issue_year' => $issue_year],
+                ]);
                 if ($issue_id > 0) {
                     if (!empty($_POST['delete_issue_cover'])) {
                         per_issue_delete_cover($issue_id);

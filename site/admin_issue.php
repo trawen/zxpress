@@ -19,6 +19,10 @@ $tm = time();
 if ($_POST['save'] == "save") {
     csrf_verify();
 
+    $pressCreated = false;
+    $loggedIssueIds = [];
+    $loggedFileIds = [];
+
     // CREATE NEW PRESS (MySQL strict: all NOT NULL columns must be set)
     if (!$id) {
         $title_ins = (string) ($_POST['title'] ?? '');
@@ -41,6 +45,7 @@ if ($_POST['save'] == "save") {
         if ($id <= 0) {
             error_log('[FIX] admin_issue: mysqli_insert_id after INSERT press is zero');
         } elseif ($id > 0) {
+            $pressCreated = true;
             $stmt_new_press = $db->prepare('SELECT * FROM press WHERE id=? LIMIT 1');
             if ($stmt_new_press) {
                 $stmt_new_press->bind_param('i', $id);
@@ -92,6 +97,7 @@ if ($_POST['save'] == "save") {
             }
             $id_issue = mysqli_insert_id($db);
             if ($id_issue > 0) {
+                $loggedIssueIds[$id_issue] = $title;
                 $issueRow = ['id' => $id_issue, 'id_press' => $id, 'title' => $title];
                 $issueSlugs = per_admin_resolve_slugs(
                     $db,
@@ -130,6 +136,12 @@ if ($_POST['save'] == "save") {
         }
 
         $id_screen = mysqli_insert_id($db);
+        if ($id_screen > 0) {
+            $loggedFileIds[$id_screen] = [
+                'issue_id' => (int) $id_issue,
+                'title' => $file_title !== '' ? $file_title : $name,
+            ];
+        }
         $safe_name = basename($uploadName);
         copy($tmpName, zx_storage_path('files', $safe_name));
 
@@ -147,6 +159,7 @@ if ($_POST['save'] == "save") {
             $stmt_ai->execute();
             $newIssueId = (int) mysqli_insert_id($db);
             if ($newIssueId > 0) {
+                $loggedIssueIds[$newIssueId] = $add_issue;
                 $issueRow = ['id' => $newIssueId, 'id_press' => $id, 'title' => $add_issue];
                 $issueSlugs = per_admin_resolve_slugs(
                     $db,
@@ -318,6 +331,62 @@ if ($_POST['save'] == "save") {
 
         }
 
+    }
+
+    $pressTitle = (string) ($_POST['title'] ?? '');
+    if ($pressCreated && $id > 0) {
+        activity_log($db, [
+            'verb' => 'created',
+            'object_type' => 'press',
+            'object_id' => $id,
+            'action' => 'press.created',
+            'event_scope' => ACTIVITY_SCOPE_CONTENT,
+            'is_public' => 1,
+            'title_ru' => $pressTitle,
+            'title_en' => $pressTitle,
+            'url_ru' => '/press.php?id=' . $id,
+        ]);
+    } elseif (!empty($_POST['press_change']) && $id > 0) {
+        activity_log($db, [
+            'verb' => 'updated',
+            'object_type' => 'press',
+            'object_id' => $id,
+            'action' => 'press.updated',
+            'event_scope' => ACTIVITY_SCOPE_METADATA,
+            'is_public' => 0,
+            'title_ru' => $pressTitle,
+            'title_en' => $pressTitle,
+            'url_ru' => '/press.php?id=' . $id,
+        ]);
+    }
+    foreach ($loggedIssueIds as $issueId => $issueTitle) {
+        activity_log($db, [
+            'verb' => 'created',
+            'object_type' => 'issue',
+            'object_id' => (int) $issueId,
+            'parent_type' => 'press',
+            'parent_id' => $id,
+            'action' => 'issue.created',
+            'event_scope' => ACTIVITY_SCOPE_CONTENT,
+            'is_public' => 1,
+            'title_ru' => (string) $issueTitle,
+            'title_en' => (string) $issueTitle,
+            'url_ru' => '/issue.php?id=' . (int) $issueId,
+        ]);
+    }
+    foreach ($loggedFileIds as $fileId => $fileMeta) {
+        activity_log($db, [
+            'verb' => 'uploaded',
+            'object_type' => 'file',
+            'object_id' => (int) $fileId,
+            'parent_type' => 'issue',
+            'parent_id' => (int) ($fileMeta['issue_id'] ?? 0),
+            'action' => 'file.uploaded',
+            'event_scope' => ACTIVITY_SCOPE_CONTENT,
+            'is_public' => 1,
+            'title_ru' => (string) ($fileMeta['title'] ?? ''),
+            'title_en' => (string) ($fileMeta['title'] ?? ''),
+        ]);
     }
 
     //REDIRECT

@@ -148,6 +148,20 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
 			);
 		}
 
+		if ($id > 0) {
+			activity_log($db, [
+				'verb' => ((int) ($_POST['id'] ?? 0) === 0) ? 'created' : 'updated',
+				'object_type' => 'publication',
+				'object_id' => $id,
+				'action' => ((int) ($_POST['id'] ?? 0) === 0) ? 'publication.created' : 'publication.updated',
+				'event_scope' => ACTIVITY_SCOPE_CONTENT,
+				'is_public' => $is_active ? 1 : 0,
+				'title_ru' => $title_ru,
+				'title_en' => $title_en !== '' ? $title_en : $title_ru,
+				'after' => ['type' => $type],
+			]);
+		}
+
 		// Update sort order for existing images
 		if ($id > 0) {
 			$zImg = db_select(

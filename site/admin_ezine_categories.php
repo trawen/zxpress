@@ -390,6 +390,15 @@ if (isset($_POST['unlink']) && (string) $_POST['unlink'] !== '') {
                 $unlinkCatId,
                 $unlinkArticleId
             );
+            activity_log($db, [
+                'verb' => 'updated',
+                'object_type' => 'article',
+                'object_id' => $unlinkArticleId,
+                'action' => 'article.category.removed',
+                'event_scope' => ACTIVITY_SCOPE_METADATA,
+                'is_public' => 0,
+                'before' => ['category_id' => $unlinkCatId],
+            ]);
             ec_refresh_articles_count($db, $unlinkCatId);
             if ($id > 0) {
                 ec_refresh_articles_count($db, $id);
@@ -482,6 +491,16 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
             }
 
             if ($saved && $id > 0) {
+                activity_log($db, [
+                    'verb' => ((int) ($_POST['id'] ?? 0) === 0) ? 'created' : 'updated',
+                    'object_type' => 'category',
+                    'object_id' => $id,
+                    'action' => ((int) ($_POST['id'] ?? 0) === 0) ? 'category.created' : 'category.updated',
+                    'event_scope' => ACTIVITY_SCOPE_METADATA,
+                    'is_public' => 0,
+                    'title_ru' => $name_ru,
+                    'title_en' => $name_en !== '' ? $name_en : $name_ru,
+                ]);
                 ec_refresh_articles_count($db, $id);
 
                 if (!empty($_POST['delete_image'])) {

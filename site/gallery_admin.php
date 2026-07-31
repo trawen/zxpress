@@ -34,6 +34,20 @@ foreach ($id_pack as $value) {
 		if ($stmt_u) {
 			$stmt_u->bind_param("iiii", $t, $s, $i, $vid);
 			$stmt_u->execute();
+			if ($stmt_u->affected_rows >= 0) {
+				$updatedScreens++;
+				activity_log($db, [
+					'verb' => 'updated',
+					'object_type' => 'screen',
+					'object_id' => $vid,
+					'parent_type' => $i > 0 ? 'issue' : ($s > 0 ? 'press' : null),
+					'parent_id' => $i > 0 ? $i : ($s > 0 ? $s : null),
+					'action' => 'screen.linked',
+					'event_scope' => ACTIVITY_SCOPE_METADATA,
+					'is_public' => 0,
+					'after' => ['type' => $t, 'id_press' => $s, 'id_issue' => $i],
+				]);
+			}
 		}
 		error_log(mysqli_error($db));
 	}

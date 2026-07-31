@@ -30,6 +30,17 @@ if ($_POST['url']) {
 
         db_exec($db, "INSERT INTO news_files (`type`,`name`) VALUES (?,?)", "ss", "youtube", $name);
             $id = mysqli_insert_id($db);
+        activity_log($db, [
+            'verb' => 'uploaded',
+            'object_type' => 'news_file',
+            'object_id' => (int) $id,
+            'action' => 'news_file.uploaded',
+            'event_scope' => ACTIVITY_SCOPE_CONTENT,
+            'is_public' => 0,
+            'title_ru' => 'YouTube: ' . $name,
+            'title_en' => 'YouTube: ' . $name,
+            'meta' => ['type' => 'youtube', 'name' => $name],
+        ]);
         $files[] = Array("name" => $name, "type" => $type);
 
         echo json_encode($files);
@@ -106,6 +117,19 @@ if ($_POST['url']) {
             }
             rename($file, zx_storage_path('news_files', $id.".".$ext));
 
+            activity_log($db, [
+                'verb' => 'uploaded',
+                'object_type' => 'news_file',
+                'object_id' => (int) $id,
+                'action' => 'news_file.uploaded',
+                'event_scope' => ACTIVITY_SCOPE_CONTENT,
+                'is_public' => 0,
+                'title_ru' => $name,
+                'title_en' => $name,
+                'thumb_url' => $type === 'image' ? ('/news_files/' . $id . '.' . $ext) : null,
+                'meta' => ['type' => $type, 'name' => $name],
+            ]);
+
             $files[] = Array("name" => $id.".".$ext, "type" => $type, "original_name" => $name, "w" => $w, "h" => $h);
 
             echo json_encode($files);
@@ -145,6 +169,19 @@ foreach ($_FILES["files"]["error"] as $key => $error) {
 
             }
             move_uploaded_file($_FILES["files"]["tmp_name"][$key], zx_storage_path('news_files', $id.".".$ext));
+
+            activity_log($db, [
+                'verb' => 'uploaded',
+                'object_type' => 'news_file',
+                'object_id' => (int) $id,
+                'action' => 'news_file.uploaded',
+                'event_scope' => ACTIVITY_SCOPE_CONTENT,
+                'is_public' => 0,
+                'title_ru' => $name,
+                'title_en' => $name,
+                'thumb_url' => $type === 'image' ? ('/news_files/' . $id . '.' . $ext) : null,
+                'meta' => ['type' => $type, 'name' => $name],
+            ]);
 
             $files[] = Array("name" => $id.".".$ext, "type" => $type, "original_name" => $name, "w" => $w, "h" => $h);
         }
