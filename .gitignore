@@ -8,6 +8,9 @@ conf/zxpress_db.mysql.*
 .cursor
 .ai-factory
 
+# Local-only Compose overrides (no Traefik; publish localhost ports)
+docker-compose.override.yml
+
 # Database data
 db/mysql_data/
 
