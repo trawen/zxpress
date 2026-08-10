@@ -178,7 +178,7 @@ services:
         condition: service_healthy
 
   db:
-    image: mysql:8.0
+    image: mysql:8.0-debian
     container_name: zxpress_db
     env_file: .env
     volumes:
@@ -211,6 +211,7 @@ services:
       - /tmp:size=64m,noexec,nosuid,nodev
       - /var/run/mysqld:size=1m,noexec,nosuid,nodev
       - /var/log:size=32m,noexec,nosuid,nodev
+      - /var/lib/mysql-files:size=16m,noexec,nosuid,nodev
     cap_drop: [ALL]
     cap_add: [SETGID, SETUID, CHOWN, DAC_OVERRIDE]
     security_opt:
