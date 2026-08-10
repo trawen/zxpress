@@ -46,7 +46,7 @@
 {if $pages[n] eq $tk_page}
 	«{$pages[n]}»
 {else}
-	&nbsp; <a href="{$host}gallery.php?page={$pages[n]}{if $id}&amp;id={$id}{/if}{if $num}&amp;num={$num}{/if}{if $lng eq 'eng'}&amp;lng=eng{/if}">{$pages[n]}</a> 
+	&nbsp; <a href="{$host}gallery.php?page={$pages[n]}{if $id}&amp;id={$id}{/if}{if $num}&amp;num={$num}{/if}{if $lng eq 'eng'}&amp;lng=eng{/if}">{$pages[n]}</a>
 {/if}
 {/section}
 </div>
@@ -68,7 +68,7 @@
 {section name=n loop=$screens}
 
 <div class="gallery-block">
-	<img width="256" height="192" src="{$host}screens/1/{$screens[n].gallery_screen_id}.png" alt="{$screens[n].gallery_label_plain} — {if $screens[n].gallery_screen_type eq 0}{if $lng eq 'eng'}Newspaper{else}Газета{/if}{else}{if $lng eq 'eng'}Magazine{else}Журнал{/if}{/if} {if $lng eq 'eng'}for ZX Spectrum{else}для ZX Spectrum{/if}" title="{$screens[n].gallery_label_plain} — {if $screens[n].gallery_screen_type eq 0}{if $lng eq 'eng'}Newspaper{else}Газета{/if}{else}{if $lng eq 'eng'}Magazine{else}Журнал{/if}{/if} {if $lng eq 'eng'}for ZX Spectrum{else}для ZX Spectrum{/if}" class="gallery-img">
+	<img width="256" height="192" src="{$host}screens/1/{$screens[n].gallery_screen_id}.webp" alt="{$screens[n].gallery_label_plain} — {if $screens[n].gallery_screen_type eq 0}{if $lng eq 'eng'}Newspaper{else}Газета{/if}{else}{if $lng eq 'eng'}Magazine{else}Журнал{/if}{/if} {if $lng eq 'eng'}for ZX Spectrum{else}для ZX Spectrum{/if}" title="{$screens[n].gallery_label_plain} — {if $screens[n].gallery_screen_type eq 0}{if $lng eq 'eng'}Newspaper{else}Газета{/if}{else}{if $lng eq 'eng'}Magazine{else}Журнал{/if}{/if} {if $lng eq 'eng'}for ZX Spectrum{else}для ZX Spectrum{/if}" class="gallery-img">
 	<div class="gallery-title"><a href="{$host}issue.php?id={$screens[n].gallery_press_id}{if $lng eq 'eng'}{$dl}{/if}#{$screens[n].gallery_issue_title}">{$screens[n].gallery_label_plain}</a></div>
 </div>
 
@@ -89,7 +89,7 @@
 {if $pages[n] eq $tk_page}
 	&nbsp;«{$pages[n]}»
 {else}
-	&nbsp; <a href="{$host}gallery.php?page={$pages[n]}{if $id}&amp;id={$id}{/if}{if $num}&amp;num={$num}{/if}{if $lng eq 'eng'}&amp;lng=eng{/if}">{$pages[n]}</a> 
+	&nbsp; <a href="{$host}gallery.php?page={$pages[n]}{if $id}&amp;id={$id}{/if}{if $num}&amp;num={$num}{/if}{if $lng eq 'eng'}&amp;lng=eng{/if}">{$pages[n]}</a>
 {/if}
 {/section}
 </div>

@@ -16,7 +16,12 @@
 
 
 
-{if $subjs}
+{if $zxnet_not_found|default:false}
+
+<h1 class="title">{if $lng eq 'eng'}Page not found{else}Страница не найдена{/if}</h1>
+<p><a href="{$host}zxnet{$zxnet_lng_qs}">{if $lng eq 'eng'}Back to ZXNet archive{else}К архиву ZXNet{/if}</a></p>
+
+{elseif $subjs}
 
 <h1 class="title">{if $lng eq 'eng'}ZXNet echo conference «{else}ZXNet эхоконференция «{/if}<span class="big">{$echo.title}</span>»</h1>
 
@@ -49,7 +54,11 @@
 
 <hr>
 
-<div class="zxnet-topic-body">{$topic[n].text nofilter}</div>
+{if $topic[n].content_type eq 'text/plain'}
+<div class="zxnet-topic-body zxnet-topic-body--plain">{$topic[n].text|escape:'html'}</div>
+{else}
+<div class="zxnet-topic-body zxnet-topic-body--html">{$topic[n].text nofilter}</div>
+{/if}
 <hr>
 
 {/section}
@@ -89,6 +98,8 @@
 
 {/section}
 </table>
+
+<p class="zxnet-thanks">{if $lng eq 'eng'}We thank Vladimir Larkov, Wladimir Bulchukey, Sergey Popov and Alone Coder for their help in restoring the database.{else}Благодарим Vladimir Larkov, Wladimir Bulchukey, Sergey Popov и Alone Coder за помощь в восстановлении базы.{/if}</p>
 
 
 {/if}

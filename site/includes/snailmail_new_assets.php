@@ -51,12 +51,13 @@ function smn_stylesheet_inline_css(): string
  */
 function smarty_function_smn_styles($params, $template): string
 {
+	$boot = '<script>(function(){try{var t=localStorage.getItem("smn-theme");if(t==="dark"||t==="light"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();</script>';
 	$css = smn_stylesheet_inline_css();
 	if ($css === '') {
 		$href = htmlspecialchars(smn_stylesheet_href(), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 
-		return '<link rel="stylesheet" href="' . $href . '">';
+		return $boot . '<link rel="stylesheet" href="' . $href . '">';
 	}
 
-	return '<style id="smn-css">' . $css . '</style>';
+	return $boot . '<style id="smn-css">' . $css . '</style>';
 }

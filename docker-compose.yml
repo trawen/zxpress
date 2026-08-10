@@ -190,6 +190,8 @@ services:
       --collation-server=utf8mb4_unicode_ci
       --innodb-buffer-pool-size=256M
       --innodb-log-file-size=64M
+      --skip-log-bin
+      --slow_query_log_file=/var/lib/mysql/slow.log
       --slow-query-log=1
       --long-query-time=1
       --skip-name-resolve

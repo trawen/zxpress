@@ -258,16 +258,12 @@ function activity_resolve_object_display(
 			$out['title_en'] = $label;
 			$out['url_ru'] = $issueId > 0 ? ('/issue.php?id=' . $issueId) : ('/press.php?id=' . $pressId);
 			$out['url_en'] = $out['url_ru'];
-			$out['thumb_url'] = '/screens/1/' . $objectId . '.png';
+			$out['thumb_url'] = screen_public_url($objectId);
 			return $out;
 		}
 		if ($row) {
 			$pressTitle = title_plain((string) ($row['press_title'] ?? ''));
 			$issueTitle = title_plain((string) ($row['issue_title'] ?? ''));
-			$fmt = (string) ($row['format'] ?? 'png');
-			if ($fmt === '') {
-				$fmt = 'png';
-			}
 			$label = $pressTitle !== '' ? $pressTitle : (($objectType === 'illustration' ? 'Иллюстрация #' : 'Скриншот #') . $objectId);
 			if ($issueTitle !== '') {
 				$label .= ' · #' . $issueTitle;
@@ -278,7 +274,7 @@ function activity_resolve_object_display(
 			$out['title_en'] = $label;
 			$out['url_ru'] = $issueId > 0 ? ('/issue.php?id=' . $issueId) : ($pressId > 0 ? ('/press.php?id=' . $pressId) : '');
 			$out['url_en'] = $out['url_ru'];
-			$out['thumb_url'] = '/screens/1/' . $objectId . '.' . $fmt;
+			$out['thumb_url'] = screen_public_url($objectId);
 		}
 		return $out;
 	}

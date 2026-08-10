@@ -20,7 +20,7 @@
 				</a>
 				<nav class="smn-nav" aria-label="{if $lng eq 'eng'}Sections{else}Разделы{/if}">
 					<div class="smn-nav-primary">
-						<a class="smn-nav-item" href="{$ezines_catalog_url}">{if $lng eq 'eng'}Diskmags{else}Эл.пресса{/if}</a>
+						<a class="smn-nav-item" href="{$ezines_catalog_url}">{if $lng eq 'eng'}Diskmags{else}Электронная пресса{/if}</a>
 						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/books">{if $lng eq 'eng'}Books{else}Книги{/if}</a>
 						<a class="smn-nav-item" href="{$letters_catalog_url}">{if $lng eq 'eng'}Letters{else}Письма{/if}</a>
 						<a class="smn-nav-item is-active" href="{$zxnet_catalog_url}">ZXNet</a>
@@ -71,7 +71,14 @@
 		</header>
 
 		<main class="smn-main">
-{if $zxnet_view eq 'topic'}
+{if $zxnet_not_found|default:false}
+
+			<section class="smn-empty">
+				<h1>{if $lng eq 'eng'}Page not found{else}Страница не найдена{/if}</h1>
+				<p><a href="{$zxnet_catalog_url}">{if $lng eq 'eng'}Back to ZXNet archive{else}К архиву ZXNet{/if}</a></p>
+			</section>
+
+{elseif $zxnet_view eq 'topic'}
 
 			<article class="smn-zxnet-topic">
 				<h1 class="smn-zxnet-topic-title">{$subj_title|default:'###'}</h1>
@@ -96,7 +103,11 @@
 							</span>
 							<span class="smn-zxnet-msg-date">{$msg.date}</span>
 						</p>
-						<div class="smn-zxnet-msg-body">{$msg.text nofilter}</div>
+						{if $msg.content_type eq 'text/plain'}
+							<div class="smn-zxnet-msg-body smn-zxnet-msg-body--plain">{$msg.text|escape:'html'}</div>
+						{else}
+							<div class="smn-zxnet-msg-body smn-zxnet-msg-body--html">{$msg.text nofilter}</div>
+						{/if}
 					</section>
 				{/foreach}
 				</div>
@@ -199,6 +210,14 @@
 			{else}
 			<p class="smn-empty-note">{if $lng eq 'eng'}No echo conferences here yet.{else}Здесь пока нет эхоконференций.{/if}</p>
 			{/if}
+
+			<p class="smn-zxnet-thanks">
+			{if $lng eq 'eng'}
+				We thank Vladimir Larkov, Wladimir Bulchukey, Sergey Popov and Alone Coder for their help in restoring the database.
+			{else}
+				Благодарим Vladimir Larkov, Wladimir Bulchukey, Sergey Popov и Alone Coder за помощь в восстановлении базы.
+			{/if}
+			</p>
 
 {/if}
 		</main>

@@ -20,7 +20,7 @@
 				</a>
 				<nav class="smn-nav" aria-label="{if $lng eq 'eng'}Sections{else}Разделы{/if}">
 					<div class="smn-nav-primary">
-						<a class="smn-nav-item" href="{$ezines_catalog_url}">{if $lng eq 'eng'}Diskmags{else}Эл.пресса{/if}</a>
+						<a class="smn-nav-item" href="{$ezines_catalog_url}">{if $lng eq 'eng'}Diskmags{else}Электронная пресса{/if}</a>
 						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/books">{if $lng eq 'eng'}Books{else}Книги{/if}</a>
 						<a class="smn-nav-item" href="{$letters_catalog_url}">{if $lng eq 'eng'}Letters{else}Письма{/if}</a>
 						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/zxnet">ZXNet</a>
@@ -107,7 +107,7 @@
 						<div class="smn-search-item-thumb">
 {if $search[n].type eq 1}
 {if $search[n].img}
-							<img src="{$host}screens/1/{$search[n].img}.{$search[n].img_format|default:'png'}" width="64" height="48" alt="">
+							<img src="{$host}screens/1/{$search[n].img}.{$search[n].img_format|default:'webp'}" width="64" height="48" alt="">
 {else}
 							<img src="{$host}img/empty_img.png" width="64" height="48" alt="">
 {/if}

@@ -18,7 +18,7 @@
 	{/if}
 	{smn_styles}
 </head>
-<body class="smn">
+<body class="smn smn-page-authors">
 	<div class="smn-frame">
 		<header class="smn-header">
 			<div class="smn-header-bar">
@@ -27,7 +27,7 @@
 				</a>
 				<nav class="smn-nav" aria-label="{if $lng eq 'eng'}Sections{else}Разделы{/if}">
 					<div class="smn-nav-primary">
-						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/ezines">{if $lng eq 'eng'}Diskmags{else}Эл.пресса{/if}</a>
+						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/ezines">{if $lng eq 'eng'}Diskmags{else}Электронная пресса{/if}</a>
 						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/books">{if $lng eq 'eng'}Books{else}Книги{/if}</a>
 						<a class="smn-nav-item is-active" href="{$letters_catalog_url}">{if $lng eq 'eng'}Letters{else}Письма{/if}</a>
 						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/zxnet">ZXNet</a>
@@ -58,6 +58,17 @@
 					<div id="suggest-smn" class="smn-search-suggest"></div>
 				</div>
 			</form>
+			<nav class="smn-breadcrumbs" aria-label="{if $lng eq 'eng'}Breadcrumbs{else}Хлебные крошки{/if}">
+				<a href="{if $lng eq 'eng'}/en{else}/ru{/if}">{if $lng eq 'eng'}Home{else}Главная{/if}</a>
+				<span class="smn-breadcrumb-sep" aria-hidden="true">→</span>
+{if $authors_catalog || $author_not_found}
+				<span class="smn-breadcrumb-current">{if $lng eq 'eng'}Authors{else}Авторы{/if}</span>
+{else}
+				<a href="{$authors_catalog_url}">{if $lng eq 'eng'}Authors{else}Авторы{/if}</a>
+				<span class="smn-breadcrumb-sep" aria-hidden="true">→</span>
+				<span class="smn-breadcrumb-current">{$author_handle}</span>
+{/if}
+			</nav>
 		</header>
 
 		<main class="smn-main">

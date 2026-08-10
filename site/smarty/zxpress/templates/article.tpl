@@ -113,7 +113,7 @@
 {/if}
 <br>
 <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki" data-counter=""
-    {if $screen.id}data-image="{$host}screens/1/{$screen.id}.png" {/if}></div>
+    {if $screens.id}data-image="{$host}screens/1/{$screens.id}.{$screens.format}"{/if}></div>
 
 
 {if $other_articles}

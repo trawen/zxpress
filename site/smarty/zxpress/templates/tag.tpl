@@ -1,27 +1,21 @@
 
 {include file="top.tpl"}
 
+{capture name=tag_qs}id={$tag_id}{if $lng eq 'eng'}&amp;lng=eng{/if}{if $smarty.get.rubrics}&amp;rubrics=1{/if}{/capture}
 
+<h1 class="title">{if $lng eq 'eng'}Articles tagged “{$tag|escape}”{else}Список статей по тегу «{$tag|escape}»{/if}</h1>
 
-<h1 class="title">Список статей по тегу «{$tag}»</h1>
-
-
-<div align=left>
+{if $pages|@count gt 1}
+<div class="search-pages-wrap" align=left>
 {section name=n loop=$pages}
 {if $pages[n] eq $tk_page}
 	«<b>{$pages[n]}</b>»
 {else}
-	&nbsp; <b><a href="{$host}updates.php?page={$pages[n]}">{$pages[n]}</a></b> 
+	&nbsp; <b><a href="{$host}tag.php?{$smarty.capture.tag_qs}&amp;page={$pages[n]}">{$pages[n]}</a></b>
 {/if}
 {/section}
 </div>
-
-
-
-
-
-
-
+{/if}
 
 <table>
 {foreach from=$articles item=a}
@@ -36,7 +30,7 @@
 <td valign=top>
 {if $a.show}
 <div class="tag-press-title">
-<a href="{$host}issue.php?id={$a.id_press}#{$a.id_issue}">{$a.press_name_plain}</a> 
+<a href="{$host}issue.php?id={$a.id_press}#{$a.id_issue}">{$a.press_name_plain}</a>
 <br></div>
 {if $a.date}<div class="date" class="tag-date-pad">{$a.date}</div>{/if}
 {/if}
@@ -57,7 +51,7 @@
 
 	<input type="button" onclick="add(this)" value="+">
 	<div></div>
-	
+
 	{foreachelse}
 	<div class="u-inline">
 	<label for="rubrics-select-new-{$a.id_article}" class="u-sr-only">Рубрика</label>
@@ -88,8 +82,21 @@
 {/foreach}
 </table>
 
-{$count}
+{if $count}
+<div class="tag-count">{if $lng eq 'eng'}{$count} article(s){if $tag_total_pages gt 1}, page {$tk_page} of {$tag_total_pages}{/if}{else}{$count} статей{if $tag_total_pages gt 1}, стр. {$tk_page} из {$tag_total_pages}{/if}{/if}</div>
+{/if}
 
+{if $pages|@count gt 1}
+<div class="search-pages-wrap" align=left>
+{section name=n loop=$pages}
+{if $pages[n] eq $tk_page}
+	«<b>{$pages[n]}</b>»
+{else}
+	&nbsp; <b><a href="{$host}tag.php?{$smarty.capture.tag_qs}&amp;page={$pages[n]}">{$pages[n]}</a></b>
+{/if}
+{/section}
+</div>
+{/if}
 
 {include file="right.tpl"}
 {include file="footer.tpl"}

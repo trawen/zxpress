@@ -57,7 +57,7 @@
 <tr><td class="search-results-thumb" valign=top>
 {if $search[n].type eq 1}
 {if $search[n].img}
-<img src="{$host}screens/1/{$search[n].img}.{$search[n].img_format|default:'png'}" width=64 class="search_img">
+<img src="{$host}screens/1/{$search[n].img}.{$search[n].img_format|default:'webp'}" width=64 class="search_img">
 {else}
 <img src="{$host}img/empty_img.png" width=64 class="search_img">
 {/if}

@@ -143,7 +143,7 @@
 <table style="font: 12px Verdana" cellpadding="4">
 <tr>
 <td>Файлы</td>
-<td><input type="file" name="upload_screen[]" accept=".png,.jpg,.jpeg,image/png,image/jpeg" multiple></td>
+<td><input type="file" name="upload_screen[]" accept=".png,.jpg,.jpeg,.webp,image/png,image/jpeg,image/webp" multiple></td>
 </tr>
 <tr>
 <td>Тип</td>

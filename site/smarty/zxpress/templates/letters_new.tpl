@@ -18,7 +18,7 @@
 	{/if}
 	{smn_styles}
 </head>
-<body class="smn">
+<body class="smn smn-page-letters">
 	<div class="smn-frame">
 		<header class="smn-header">
 			<div class="smn-header-bar">
@@ -27,7 +27,7 @@
 				</a>
 				<nav class="smn-nav" aria-label="{if $lng eq 'eng'}Sections{else}Разделы{/if}">
 					<div class="smn-nav-primary">
-						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/ezines">{if $lng eq 'eng'}Diskmags{else}Эл.пресса{/if}</a>
+						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/ezines">{if $lng eq 'eng'}Diskmags{else}Электронная пресса{/if}</a>
 						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/books">{if $lng eq 'eng'}Books{else}Книги{/if}</a>
 						<a class="smn-nav-item is-active" href="{$letters_catalog_url}">{if $lng eq 'eng'}Letters{else}Письма{/if}</a>
 						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/zxnet">ZXNet</a>

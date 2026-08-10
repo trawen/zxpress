@@ -1,5 +1,14 @@
 {include file="top.tpl"}
 
+{if $press_not_found|default:false || $issue_not_found|default:false}
+<table cellpadding=0 cellspacing=0 class="pad-4" border=0 width="100%"><tr><td>
+<h1 class="h1">{if $issue_not_found|default:false}{if $lng eq 'eng'}Issue not found{else}Выпуск не найден{/if}{else}{if $lng eq 'eng'}Publication not found{else}Издание не найдено{/if}{/if}</h1>
+<p><a href="{$host}ezines.php{if $lng eq 'eng'}?lng=eng{/if}">{if $lng eq 'eng'}Back to catalog{else}К каталогу{/if}</a></p>
+</td></tr></table>
+{include file="right.tpl"}
+{include file="footer.tpl"}
+{else}
+
 <table cellpadding=0 cellspacing=0 class="pad-4 issue-header-table" border=0>
 <tr class="issue-header-row">
 {if $screens[0].id}
@@ -98,3 +107,4 @@ issues
 
 {include file="right.tpl"}
 {include file="footer.tpl"}
+{/if}

@@ -34,32 +34,28 @@
 	font-family: "IBM Plex Sans";
 	font-style: normal;
 	font-weight: 400;
-	src: url("/fonts/IBMPlexSans-Regular.woff2") format("woff2"),
-		url("/fonts/IBMPlexSans-Regular.woff") format("woff");
+	src: url("/fonts/IBMPlexSans-Regular.woff2") format("woff2");
 	font-display: swap;
 }
 @font-face {
 	font-family: "IBM Plex Sans";
 	font-style: italic;
 	font-weight: 400;
-	src: url("/fonts/IBMPlexSans-Italic.woff2") format("woff2"),
-		url("/fonts/IBMPlexSans-Italic.woff") format("woff");
+	src: url("/fonts/IBMPlexSans-Italic.woff2") format("woff2");
 	font-display: swap;
 }
 @font-face {
 	font-family: "IBM Plex Sans";
 	font-style: normal;
 	font-weight: 600;
-	src: url("/fonts/IBMPlexSans-SemiBold.woff2") format("woff2"),
-		url("/fonts/IBMPlexSans-SemiBold.woff") format("woff");
+	src: url("/fonts/IBMPlexSans-SemiBold.woff2") format("woff2");
 	font-display: swap;
 }
 @font-face {
 	font-family: "IBM Plex Sans";
 	font-style: normal;
 	font-weight: 700;
-	src: url("/fonts/IBMPlexSans-Bold.woff2") format("woff2"),
-		url("/fonts/IBMPlexSans-Bold.woff") format("woff");
+	src: url("/fonts/IBMPlexSans-Bold.woff2") format("woff2");
 	font-display: swap;
 }
 .admin-aan-layout {
