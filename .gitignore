@@ -11,6 +11,18 @@ conf/zxpress_db.mysql.*
 # Local-only Compose overrides (no Traefik; publish localhost ports)
 docker-compose.override.yml
 
+# Personal local processing scripts & work files (keep README tracked)
+local/scripts/*
+!local/scripts/README.md
+!local/scripts/*.mjs
+!local/scripts/*.php
+!local/scripts/*.sh
+!local/scripts/lib/
+!local/scripts/lib/*.mjs
+local/scripts/.chrome-profile-issue-desc/
+local/work/*
+!local/work/README.md
+
 # Database data
 db/mysql_data/
 
