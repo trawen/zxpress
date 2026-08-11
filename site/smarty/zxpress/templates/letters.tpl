@@ -1,4 +1,7 @@
 {include file="top.tpl"}
+{if $letters_jsonld}
+<script type="application/ld+json">{$letters_jsonld nofilter}</script>
+{/if}
 
 <br>
 <center>

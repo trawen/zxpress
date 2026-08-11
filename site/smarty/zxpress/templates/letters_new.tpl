@@ -16,6 +16,9 @@
 	<meta property="og:url" content="{$og_url|escape:'html'}">
 	{if $og_image}<meta property="og:image" content="{$og_image|escape:'html'}">{/if}
 	{/if}
+	{if $letters_jsonld}
+	<script type="application/ld+json">{$letters_jsonld nofilter}</script>
+	{/if}
 	{smn_styles}
 </head>
 <body class="smn smn-page-letters">

@@ -2,6 +2,7 @@
 require 'init.inc';
 require_once __DIR__ . '/includes/letters_publish.php';
 require_once __DIR__ . '/includes/letters_public.php';
+require_once __DIR__ . '/includes/letters_jsonld.php';
 
 if (!defined('LETTERS_PER_PAGE')) {
 	define('LETTERS_PER_PAGE', 20);
@@ -75,6 +76,7 @@ if ($letterSlug !== '') {
 		$smarty->assign('og_image', '');
 		$smarty->assign('og_url', '');
 		$smarty->assign('og_type', '');
+		$smarty->assign('letters_jsonld', '');
 		$smarty->assign('letters_catalog_url', letters_url_catalog($isEng));
 		letters_assign_lang_switch_urls($smarty, null);
 		letters_ui_render($smarty);
@@ -126,6 +128,7 @@ if ($id > 0) {
 		$smarty->assign('og_image', '');
 		$smarty->assign('og_url', '');
 		$smarty->assign('og_type', '');
+		$smarty->assign('letters_jsonld', '');
 	} else {
 		$smarty->assign('letter_not_found', false);
 		db_exec($db, 'UPDATE letters SET view_count = view_count + 1 WHERE id = ? LIMIT 1', 'i', $id);
@@ -178,11 +181,18 @@ if ($id > 0) {
 		if (!empty($images)) {
 			$ogImage = $origin . $images[0]['preview_url'];
 		}
+		$canonicalUrl = $origin . $letter['public_url'];
 		$smarty->assign('og_title', $titlePlain);
 		$smarty->assign('og_description', $descPlain);
 		$smarty->assign('og_image', $ogImage);
-		$smarty->assign('og_url', $origin . $letter['public_url']);
+		$smarty->assign('og_url', $canonicalUrl);
 		$smarty->assign('og_type', 'article');
+		$smarty->assign(
+			'letters_jsonld',
+			article_newsarticle_jsonld_encode(
+				letters_message_jsonld($origin, $canonicalUrl, $letter, $images, $isEng, $descPlain)
+			)
+		);
 		$smarty->assign('letters_catalog_url', letters_url_catalog($isEng));
 		letters_assign_lang_switch_urls($smarty, $letter);
 	}
@@ -297,6 +307,12 @@ $smarty->assign('og_description', $catalogDesc);
 $smarty->assign('og_image', $origin . '/img/snailmail.png');
 $smarty->assign('og_url', $origin . $catalogUrl);
 $smarty->assign('og_type', 'website');
+$smarty->assign(
+	'letters_jsonld',
+	article_newsarticle_jsonld_encode(
+		letters_catalog_jsonld($origin, $origin . $catalogUrl, $isEng, $catalogDesc, $letters_rows)
+	)
+);
 $smarty->assign('letters_catalog_url', $catalogUrl);
 letters_assign_lang_switch_urls($smarty, null);
 

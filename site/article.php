@@ -10,6 +10,7 @@ require_once __DIR__ . '/includes/letters_slugs.php';
 require_once __DIR__ . '/includes/authors_slugs.php';
 require_once __DIR__ . '/includes/comments_scope.php';
 require_once __DIR__ . '/includes/article_text_render.php';
+require_once __DIR__ . '/includes/article_jsonld.php';
 
 function article_public_meta_description(array $article, ?string $lng): string
 {
@@ -40,24 +41,16 @@ function article_show_not_found($smarty): void {
 		$article_breadcrumbs = [];
 	}
 	http_response_code(404);
+	$isEng = ($smarty->getTemplateVars('lng') === 'eng');
 	$smarty->assign('article', null);
 	$smarty->assign('article_not_found', true);
+	$smarty->assign('article_jsonld', '');
 	$smarty->assign('title', 'Статья не найдена');
-	if (!article_ui_is_new()) {
-		include 'right.php';
-	}
-	$smarty->display(article_ui_template());
+	$smarty->assign('related_category', null);
+	$smarty->assign('related_category_articles', []);
+	$smarty->assign('comments_enabled', false);
+	article_ui_render($smarty, $isEng);
 	exit;
-}
-
-function article_ui_is_new(): bool
-{
-	return !defined('EZINES_UI_VARIANT') || EZINES_UI_VARIANT === 'new';
-}
-
-function article_ui_template(): string
-{
-	return article_ui_is_new() ? 'article_new.tpl' : 'article.tpl';
 }
 
 function article_ui_render($smarty, bool $isEng): void
@@ -69,12 +62,7 @@ function article_ui_render($smarty, bool $isEng): void
 	$smarty->assign('authors_catalog_url', authors_url_catalog($isEng));
 	$smarty->assign('smn_nav_authors_active', false);
 	$smarty->assign('smn_nav_ezines_active', true);
-
-	if (!article_ui_is_new()) {
-		global $db;
-		include __DIR__ . '/right.php';
-	}
-	$smarty->display(article_ui_template());
+	$smarty->display('article_new.tpl');
 }
 
 function article_read_body_from_disk(int $articleId, bool $isEng): string
@@ -132,7 +120,7 @@ $smarty->assign('id', $id);
 // Explicit columns: body still comes from files; when text_* move to DB, add them here only.
 $stmt = mysqli_prepare(
 	$db,
-	'SELECT id, id_issue, id_press, title, title_eng, temp, name, number, '
+	'SELECT id, id_issue, id_press, title, title_eng, temp, name, number, date, dt, '
 	. 'meta_description_ru, meta_description_en, slug_ru, slug_en, text_ru, text_en, text_type '
 	. 'FROM articles WHERE id=? LIMIT 1'
 );
@@ -243,7 +231,7 @@ $smarty->assign('article_text_mono', $rendered['mono'] ? 1 : 0);
 	if ($article['text'] !== '' && strpos($article['text'], '<') !== false) {
 		static $zxpress_article_markup_diag = 0;
 		if ($zxpress_article_markup_diag < 6 && getenv('LOG_LEVEL') === 'DEBUG') {
-			error_log('[FIX] article.php HTML body loaded id=' . $aid . ' len=' . strlen($article['text']) . ' (article.tpl uses nofilter)');
+			error_log('[FIX] article.php HTML body loaded id=' . $aid . ' len=' . strlen($article['text']) . ' (article_new.tpl uses nofilter)');
 			$zxpress_article_markup_diag++;
 		}
 	}
@@ -296,16 +284,27 @@ $smarty->assign('og_description', $articleDescPlain);
 $smarty->assign('og_type', 'article');
 $smarty->assign('og_url', $origin . $articleCanonical);
 
+$pressPublicUrl = ezn_url_press($pressRow, $isEng);
+$jsonldPayload = article_newsarticle_jsonld(
+	$origin,
+	$origin . $articleCanonical,
+	$article,
+	is_array($screens) ? $screens : null,
+	article_jsonld_fetch_authors($db, $id),
+	is_array($press) ? $press : [],
+	$pressPublicUrl,
+	$dateTs,
+	$isEng,
+	$articleDescPlain
+);
+$smarty->assign('article_jsonld', article_newsarticle_jsonld_encode($jsonldPayload));
+
 $lng = $smarty->getTemplateVars('lng');
 $smarty->assign('ezine_category_branch', ec_article_public_category_branch($db, $id, $lng));
 
-$relatedCategory = null;
-$relatedCategoryArticles = [];
-if (article_ui_is_new()) {
-	$relatedBundle = ec_article_related_from_same_category($db, $id, $lng, 5);
-	$relatedCategory = $relatedBundle['category'];
-	$relatedCategoryArticles = $relatedBundle['articles'];
-}
+$relatedBundle = ec_article_related_from_same_category($db, $id, $lng, 5);
+$relatedCategory = $relatedBundle['category'];
+$relatedCategoryArticles = $relatedBundle['articles'];
 $smarty->assign('related_category', $relatedCategory);
 $smarty->assign('related_category_articles', $relatedCategoryArticles);
 
@@ -355,18 +354,14 @@ if (!$skip) {
 	mysqli_stmt_execute($stmt);
 }
 
-if (article_ui_is_new()) {
-	$comments_target_id = comments_id_ezine_article((int) $id);
-	$comments_target_ids = comments_ezine_article_read_ids($db, (int) $id);
-	$smarty->assign('comments_enabled', true);
-	$smarty->assign('comments_form_action', ezn_url_article($pressRow, $issueRow, $article, $isEng));
-	$smarty->assign('comments_invite', $isEng
-		? 'Share your thoughts about the article'
-		: 'Поделитесь вашим мнением о статье');
-	require __DIR__ . '/comments.php';
-} else {
-	$smarty->assign('comments_enabled', false);
-}
+$comments_target_id = comments_id_ezine_article((int) $id);
+$comments_target_ids = comments_ezine_article_read_ids($db, (int) $id);
+$smarty->assign('comments_enabled', true);
+$smarty->assign('comments_form_action', ezn_url_article($pressRow, $issueRow, $article, $isEng));
+$smarty->assign('comments_invite', $isEng
+	? 'Share your thoughts about the article'
+	: 'Поделитесь вашим мнением о статье');
+require __DIR__ . '/comments.php';
 
 article_ui_render($smarty, $isEng);
 ?>

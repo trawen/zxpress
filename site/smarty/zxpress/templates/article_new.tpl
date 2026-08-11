@@ -29,6 +29,9 @@
 	<link rel="canonical" href="{$canonical_url}">
 	<link rel="alternate" hreflang="ru" href="{$hreflang_ru}">
 	<link rel="alternate" hreflang="en" href="{$hreflang_en}">
+	{if $article_jsonld}
+	<script type="application/ld+json">{$article_jsonld nofilter}</script>
+	{/if}
 </head>
 <body class="smn{if $related_category_articles && $related_category_articles|@count gt 0} smn-has-cat-aside{/if}">
 	<div class="smn-frame">
