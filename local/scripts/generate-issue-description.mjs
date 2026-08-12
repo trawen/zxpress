@@ -10,17 +10,25 @@
  *   # откройте https://gemini.google.com/app и войдите
  *
  * Запуск (из корня репо, Docker DB уже up — только чтение meta статей):
+ *   node local/scripts/generate-issue-description.mjs                 # все издания
  *   node local/scripts/generate-issue-description.mjs --issue=123
- *   node local/scripts/generate-issue-description.mjs --press=spectrofon --issue-slug=01
+ *   node local/scripts/generate-issue-description.mjs --issue=z80          # все выпуски
+ *   node local/scripts/generate-issue-description.mjs --issue=z80,on-line  # несколько изданий
+ *   node local/scripts/generate-issue-description.mjs --issue=z80 --issue=on-line
+ *   node local/scripts/generate-issue-description.mjs --press=z80 --press=spectrofon
  *
  * Опции:
- *   --issue=ID
- *   --press=SLUG --issue-slug=SLUG
- *   --out=PATH           JSON (по умолчанию local/work/issue-desc-{id}.json)
+ *   (без --issue/--press)              все выпуски, у которых есть meta статей
+ *   --issue=ID|PRESS|PRESS/ISSUE[,…]   можно повторять и через запятую
+ *   --press=SLUG[,…] [--issue-slug=SLUG]
+ *   --out=PATH           один выпуск → файл; batch → каталог (или PATH как префикс каталога)
  *   --cdp                подключиться к Chrome :9222 (по умолчанию)
  *   --no-cdp             свой Chrome + профиль .chrome-profile-issue-desc
  *   --cdp-url=URL
  *   --markdown=PATH      путь к zxpress-markdown (playwright + providers.mjs)
+ *   --delay=MS           мин. пауза между выпусками (по умолчанию 8000)
+ *   --delay-max=MS       макс. пауза между выпусками (по умолчанию 25000)
+ *   --force              перезаписывать уже готовые JSON
  *
  * Env: ZXPRESS_MARKDOWN, DB_* (через docker compose run php)
  */
@@ -46,53 +54,56 @@ const PROMPT = `Ты редактор архива ZX Spectrum прессы (zxp
 По meta description статей одного выпуска газеты/журнала напиши краткое описание номера для сайта.
 
 Правила:
-1. description_ru — 3–5 связных предложений по-русски: о чём выпуск, без списка «статья1, статья2».
-2. description_en — тот же смысл по-английски (перевод, не дословный калька).
+1. description_ru — 3–5 связных предложений по-русски о содержании выпуска (без списка «статья 1, статья 2»).
+2. description_en — тот же смысл по-английски (качественный перевод, не дословный калька).
 3. meta_description_ru — SEO-текст до ${META_MAX} символов (можно начать с названия издания и номера).
 4. meta_description_en — то же по-английски, до ${META_MAX} символов.
-5. Не выдумывай факты, которых нет во входных meta.
-6. Не упоминай ИИ, промпт, «на основе описаний».
-7. Верни ТОЛЬКО JSON-объект без markdown-обёртки:
+5. Не трать предложения на «паспорт» выпуска: номер, дату, жанр издания («информационно-развлекательная газета»), платформу («для ZX Spectrum») и прочие факты, уже ясные из названия. Сразу о содержании материалов. Плохо: «Выпуск 126 независимой информационно-развлекательной газеты Nicron для ZX Spectrum от 21 декабря 2003 года».
+6. Избегай штампов и клише о читателях («читатели найдут», «читатели узнают», «вас ждёт»). Пиши обезличенно или обращайся напрямую.
+7. Не упоминай в описаниях технические секции об авторах, контактах и составе редакции (разделы вида «Авторы», «Над номером работали» и т.п.).
+8. Не выдумывай факты, которых нет во входных meta.
+9. Не упоминай ИИ, промпт, «на основе описаний».
+10. Верни ТОЛЬКО JSON-объект без markdown-обёртки:
 {"description_ru":"...","description_en":"...","meta_description_ru":"...","meta_description_en":"..."}`;
 
 const args = parseArgs(process.argv.slice(2));
 
 async function main() {
-  if (!args.issue && !(args.press && args.issueSlug)) {
-    console.error(
-      "Нужно --issue=ID или --press=SLUG --issue-slug=SLUG\n" +
-        "См. --help"
+  const items = await loadAllItems(args);
+  if (items.length === 0) {
+    console.error("Нет выпусков для обработки.");
+    process.exit(1);
+  }
+
+  const isBatch = items.length > 1;
+  console.log(`К обработке: ${items.length} выпуск(ов)`);
+
+  const pending = [];
+  let skippedExisting = 0;
+  for (const item of items) {
+    const issueId = item.issue?.id ?? item.id;
+    const stubIssue = item.issue || { id: issueId };
+    const outPath = resolveOutPath(args.out, stubIssue, isBatch);
+    if (!args.force && (await isDoneOutput(outPath))) {
+      skippedExisting += 1;
+      console.log(
+        `skip #${issueId} (уже есть ${path.relative(ROOT, outPath)})`
+      );
+      continue;
+    }
+    pending.push(item);
+  }
+
+  if (pending.length === 0) {
+    console.log(
+      `Нечего делать: все ${items.length} уже готовы. --force чтобы перегенерировать.`
     );
-    process.exit(1);
+    return;
   }
-
-  const dump = await dbDump(args);
-  const issue = dump.issue;
-  const articles = dump.articles || [];
-
   console.log(
-    `Выпуск #${issue.id} «${issue.press_title}» ${issue.title} — статей с meta: ${articles.length}`
+    `Осталось: ${pending.length}` +
+      (skippedExisting ? ` (пропущено готовых: ${skippedExisting})` : "")
   );
-
-  if (articles.length === 0) {
-    console.error("Нет статей с meta_description_ru/en — сначала импортируйте meta статей.");
-    process.exit(1);
-  }
-
-  const articleBlock = articles
-    .map((a, i) => {
-      const meta = a.meta_description_ru || a.meta_description_en || "";
-      const title = a.title ? ` [${a.title}]` : "";
-      return `${i + 1}. id=${a.id}${title}\n   ${meta}`;
-    })
-    .join("\n");
-
-  const userMessage =
-    `${PROMPT}\n\n` +
-    `Издание: ${issue.press_title}\n` +
-    `Выпуск: ${issue.title}` +
-    (issue.date ? ` (${issue.date})` : "") +
-    `\n\n--- META DESCRIPTION СТАТЕЙ ---\n${articleBlock}\n--- КОНЕЦ ---`;
 
   const { chromium, provider, markdownRoot } = await loadPlaywrightAndProvider(
     args.markdown
@@ -122,66 +133,295 @@ async function main() {
     });
   }
 
-  console.log("Gemini: генерирую описание выпуска…");
-  const raw = await geminiChat(session.page, provider, userMessage, {
-    sourceLen: userMessage.length,
-  });
+  const results = [];
+  let ok = 0;
+  let skipped = skippedExisting;
+  let failed = 0;
+
+  for (let i = 0; i < pending.length; i++) {
+    let item = pending[i];
+    try {
+      item = await hydrateItem(item);
+    } catch (err) {
+      failed += 1;
+      console.error(
+        `\n[${i + 1}/${pending.length}] dump FAIL #${item.issue?.id ?? item.id}: ${err.message || err}`
+      );
+      continue;
+    }
+    const issue = item.issue;
+    const articles = item.articles || [];
+    const label = `[${i + 1}/${pending.length}] #${issue.id} «${issue.press_title}» ${issue.title}`;
+
+    console.log(`\n${label} — статей с meta: ${articles.length}`);
+
+    if (articles.length === 0) {
+      console.warn(`  skip: нет meta_description у статей`);
+      skipped += 1;
+      continue;
+    }
+
+    const articleBlock = articles
+      .map((a, idx) => {
+        const meta = a.meta_description_ru || a.meta_description_en || "";
+        const title = a.title ? ` [${a.title}]` : "";
+        return `${idx + 1}. id=${a.id}${title}\n   ${meta}`;
+      })
+      .join("\n");
+
+    const userMessage =
+      `${PROMPT}\n\n` +
+      `Издание: ${issue.press_title}\n` +
+      `Выпуск: ${issue.title}` +
+      (issue.date ? ` (${issue.date})` : "") +
+      `\n\n--- META DESCRIPTION СТАТЕЙ ---\n${articleBlock}\n--- КОНЕЦ ---`;
+
+    try {
+      console.log("  Gemini: генерирую…");
+      const raw = await geminiChat(session.page, provider, userMessage, {
+        sourceLen: userMessage.length,
+      });
+      const parsed = parseJsonResponse(raw);
+      const descriptions = normalizeResult(parsed, issue);
+      const result = {
+        issue_id: issue.id,
+        press_title: issue.press_title,
+        issue_title: issue.title,
+        press_slug_ru: issue.press_slug_ru || "",
+        issue_slug_ru: issue.slug_ru || "",
+        ...descriptions,
+      };
+
+      const outPath = resolveOutPath(args.out, issue, isBatch);
+      await fs.mkdir(path.dirname(outPath), { recursive: true });
+      await fs.writeFile(
+        outPath,
+        JSON.stringify(result, null, 2) + "\n",
+        "utf8"
+      );
+      console.log(`  saved: ${outPath}`);
+      results.push(result);
+      ok += 1;
+    } catch (err) {
+      failed += 1;
+      console.error(`  FAIL: ${err.message || err}`);
+    }
+
+    if (i < pending.length - 1 && args.delay > 0) {
+      const pause = randomBetween(args.delay, args.delayMax);
+      console.log(`  … пауза ${(pause / 1000).toFixed(1)}с`);
+      await sleep(pause);
+    }
+  }
 
   if (session.owned) {
     await session.context.close().catch(() => {});
   }
 
-  const parsed = parseJsonResponse(raw);
-  const descriptions = normalizeResult(parsed, issue);
-  const result = {
-    issue_id: issue.id,
-    press_title: issue.press_title,
-    issue_title: issue.title,
-    press_slug_ru: issue.press_slug_ru || "",
-    issue_slug_ru: issue.slug_ru || "",
-    ...descriptions,
-  };
+  if (items.length > 1 && args.out && !looksLikeDir(args.out)) {
+    const batchPath = path.isAbsolute(args.out)
+      ? args.out
+      : path.join(ROOT, args.out);
+    // if --out=file.json for batch, also write combined summary next to per-issue files
+    // (per-issue already written to local/work/); write combined only when out is .json file
+    if (batchPath.endsWith(".json")) {
+      await fs.mkdir(path.dirname(batchPath), { recursive: true });
+      await fs.writeFile(
+        batchPath,
+        JSON.stringify({ count: results.length, items: results }, null, 2) +
+          "\n",
+        "utf8"
+      );
+      console.log(`\nbatch summary: ${batchPath}`);
+    }
+  }
 
-  console.log("\n=== result ===");
-  console.log(JSON.stringify(result, null, 2));
+  console.log(`\nГотово: ok=${ok} skip=${skipped} fail=${failed}`);
+  if (ok === 0) process.exit(1);
+}
 
-  const outRel =
-    args.out || `local/work/issue-desc-${issue.id}.json`;
-  const outPath = path.isAbsolute(outRel)
-    ? outRel
-    : path.join(ROOT, outRel);
-  await fs.mkdir(path.dirname(outPath), { recursive: true });
-  await fs.writeFile(outPath, JSON.stringify(result, null, 2) + "\n", "utf8");
-  console.log(`saved: ${outPath}`);
+function looksLikeDir(p) {
+  return !p.endsWith(".json");
+}
+
+async function isDoneOutput(outPath) {
+  try {
+    const st = await fs.stat(outPath);
+    if (st.size < 40) return false;
+    const raw = await fs.readFile(outPath, "utf8");
+    const data = JSON.parse(raw);
+    return (
+      typeof data?.description_ru === "string" &&
+      data.description_ru.trim() !== "" &&
+      typeof data?.meta_description_ru === "string" &&
+      data.meta_description_ru.trim() !== ""
+    );
+  } catch {
+    return false;
+  }
+}
+
+function resolveOutPath(outArg, issue, isBatch) {
+  if (!outArg) {
+    return path.join(ROOT, `local/work/issue-desc-${issue.id}.json`);
+  }
+  const abs = path.isAbsolute(outArg) ? outArg : path.join(ROOT, outArg);
+  if (isBatch) {
+    if (looksLikeDir(outArg)) {
+      return path.join(abs, `issue-desc-${issue.id}.json`);
+    }
+    // --out=foo.json → всё равно пишем per-issue в local/work/
+    return path.join(ROOT, `local/work/issue-desc-${issue.id}.json`);
+  }
+  return abs;
+}
+
+function sleep(ms) {
+  return new Promise((r) => setTimeout(r, ms));
+}
+
+function randomBetween(min, max) {
+  const a = Math.min(min, max);
+  const b = Math.max(min, max);
+  return Math.floor(a + Math.random() * (b - a + 1));
 }
 
 function parseArgs(argv) {
   const out = {
-    issue: null,
-    press: null,
+    issues: [],
+    presses: [],
     issueSlug: null,
     cdp: true,
     cdpUrl: process.env.CDP_URL || "http://127.0.0.1:9222",
     markdown: resolveMarkdownRoot(),
     out: null,
+    delay: 8000,
+    delayMax: 25_000,
+    force: false,
   };
   for (const a of argv) {
     if (a === "--help" || a === "-h") {
-      console.log(`Usage: node local/scripts/generate-issue-description.mjs --issue=ID [--out=PATH] [--cdp]
-  --press=SLUG --issue-slug=SLUG
+      console.log(`Usage: node local/scripts/generate-issue-description.mjs [--issue=…] [--out=PATH] [--cdp]
+  (без --issue/--press)          все выпуски с meta статей
+  --issue=z80                    все выпуски одного издания
+  --issue=z80,on-line            несколько изданий (через запятую)
+  --issue=z80 --issue=on-line    то же, повтором флага
+  --issue=z80/01,on-line/05      конкретные выпуски
+  --press=z80,spectrofon         несколько изданий
+  --press=SLUG --issue-slug=01   один номер у каждого из --press
+  --delay=MS --delay-max=MS      случайная пауза между выпусками (8000–25000)
+  --force                        перезаписать уже готовые JSON
   --no-cdp  --cdp-url=URL  --markdown=PATH
-  По умолчанию пишет local/work/issue-desc-{id}.json (БД не трогает)`);
+  По умолчанию пишет local/work/issue-desc-{id}.json; готовые пропускает`);
       process.exit(0);
     } else if (a === "--cdp") out.cdp = true;
     else if (a === "--no-cdp") out.cdp = false;
-    else if (a.startsWith("--issue=")) out.issue = a.slice(8);
-    else if (a.startsWith("--press=")) out.press = a.slice(8);
-    else if (a.startsWith("--issue-slug=")) out.issueSlug = a.slice(13);
+    else if (a === "--force") out.force = true;
+    else if (a.startsWith("--issue=")) {
+      out.issues.push(...splitList(a.slice(8)));
+    } else if (a.startsWith("--press=")) {
+      out.presses.push(...splitList(a.slice(8)));
+    } else if (a.startsWith("--issue-slug=")) out.issueSlug = a.slice(13);
     else if (a.startsWith("--cdp-url=")) out.cdpUrl = a.slice(10);
     else if (a.startsWith("--markdown=")) out.markdown = a.slice(11);
     else if (a.startsWith("--out=")) out.out = a.slice(6);
+    else if (a.startsWith("--delay-max=")) out.delayMax = Number(a.slice(12));
+    else if (a.startsWith("--delay=")) out.delay = Number(a.slice(8));
   }
+  if (!Number.isFinite(out.delay) || out.delay < 0) out.delay = 8000;
+  if (!Number.isFinite(out.delayMax) || out.delayMax < 0) out.delayMax = 25_000;
+  if (out.delayMax < out.delay) out.delayMax = out.delay;
   return out;
+}
+
+/** @param {string} raw */
+function splitList(raw) {
+  return String(raw || "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
+}
+
+/**
+ * Загружает выпуски по всем --issue / --press (или все, если не указано).
+ * Без дублей по issue.id. Большие выборки — lazy (только id), dump при обработке.
+ * @returns {Promise<Array<{issue: object, articles?: object[], lazy?: boolean, id?: number}>>}
+ */
+async function loadAllItems(args) {
+  /** @type {Map<number, {issue: object, articles?: object[], lazy?: boolean, id?: number}>} */
+  const byId = new Map();
+
+  const addDump = (dump) => {
+    if (dump?.ids_only && Array.isArray(dump.ids)) {
+      for (const id of dump.ids) {
+        const n = Number(id);
+        if (!byId.has(n)) {
+          byId.set(n, { lazy: true, id: n, issue: { id: n } });
+        }
+      }
+      return;
+    }
+    for (const item of dumpItems(dump)) {
+      byId.set(item.issue.id, item);
+    }
+  };
+
+  if (args.issues.length === 0 && args.presses.length === 0) {
+    console.log("dump --all (все выпуски с meta)");
+    addDump(await dbDump({ all: true }));
+    return [...byId.values()].sort(
+      (a, b) => (a.issue?.id ?? a.id) - (b.issue?.id ?? b.id)
+    );
+  }
+
+  for (const issueSpec of args.issues) {
+    console.log(`dump --issue=${issueSpec}`);
+    addDump(
+      await dbDump({
+        issue: issueSpec,
+        press: null,
+        issueSlug: null,
+      })
+    );
+  }
+
+  for (const press of args.presses) {
+    const label = args.issueSlug
+      ? `--press=${press} --issue-slug=${args.issueSlug}`
+      : `--press=${press}`;
+    console.log(`dump ${label}`);
+    addDump(
+      await dbDump({
+        issue: null,
+        press,
+        issueSlug: args.issueSlug,
+      })
+    );
+  }
+
+  return [...byId.values()].sort(
+    (a, b) => (a.issue?.id ?? a.id) - (b.issue?.id ?? b.id)
+  );
+}
+
+async function hydrateItem(item) {
+  if (!item.lazy && item.articles && item.issue?.press_title) {
+    return item;
+  }
+  const id = item.issue?.id ?? item.id;
+  const dump = await dbDump({ issue: String(id) });
+  const full = dumpItems(dump)[0];
+  if (!full) {
+    throw new Error(`issue #${id} not found`);
+  }
+  return full;
+}
+
+function dumpItems(dump) {
+  if (!dump) return [];
+  if (dump.batch) return dump.items || [];
+  if (dump.issue) return [dump];
+  return [];
 }
 
 function parseJsonResponse(raw) {
@@ -225,7 +465,6 @@ function normalizeResult(data, issue) {
   let metaRu = clip(data.meta_description_ru, META_MAX);
   let metaEn = clip(data.meta_description_en, META_MAX);
 
-  // если meta пустой после клипа — собрать короткий fallback
   if (!metaRu) {
     metaRu = clip(
       `«${issue.press_title}» #${issue.title}: ${descRu}`,
@@ -247,16 +486,17 @@ function normalizeResult(data, issue) {
   };
 }
 
-function dbArgs(args) {
+function dbArgs(target) {
   const a = [];
-  if (args.issue) a.push(`--issue=${args.issue}`);
-  if (args.press) a.push(`--press=${args.press}`);
-  if (args.issueSlug) a.push(`--issue-slug=${args.issueSlug}`);
+  if (target.all) a.push("--all");
+  if (target.issue) a.push(`--issue=${target.issue}`);
+  if (target.press) a.push(`--press=${target.press}`);
+  if (target.issueSlug) a.push(`--issue-slug=${target.issueSlug}`);
   return a;
 }
 
-async function dbDump(args) {
-  const text = await runPhpDb(["dump", ...dbArgs(args)]);
+async function dbDump(target) {
+  const text = await runPhpDb(["dump", ...dbArgs(target)]);
   return JSON.parse(text);
 }
 

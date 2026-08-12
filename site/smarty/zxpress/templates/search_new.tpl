@@ -145,13 +145,27 @@
 
 {if $pages}
 			<nav class="smn-pages" aria-label="{if $lng eq 'eng'}Pages{else}Страницы{/if}">
-{section name=n loop=$pages}
-{if $pages[n].num eq $page}
-				<b>{$pages[n].show}</b>
+{if $search_prev_page >= 0}
+				<a class="smn-pages-prev" href="{$search_catalog_url}?q={$query|escape:'url'}&amp;p={$search_prev_page}&amp;s={$sort|escape:'url'}&amp;f={$from|escape:'url'}" rel="prev" aria-label="{if $lng eq 'eng'}Previous page{else}Предыдущая страница{/if}">←</a>
 {else}
-				<a href="{$search_catalog_url}?q={$query|escape:'url'}&amp;p={$pages[n].num}&amp;s={$sort|escape:'url'}&amp;f={$from|escape:'url'}">{$pages[n].show}</a>
+				<span class="smn-pages-prev is-disabled" aria-hidden="true">←</span>
+{/if}
+				<span class="smn-pages-list">
+{section name=n loop=$pages}
+{if $pages[n].gap}
+					<span class="smn-pages-gap" aria-hidden="true">…</span>
+{elseif $pages[n].num eq $page}
+					<b aria-current="page">{$pages[n].show}</b>
+{else}
+					<a href="{$search_catalog_url}?q={$query|escape:'url'}&amp;p={$pages[n].num}&amp;s={$sort|escape:'url'}&amp;f={$from|escape:'url'}">{$pages[n].show}</a>
 {/if}
 {/section}
+				</span>
+{if $search_next_page >= 0}
+				<a class="smn-pages-next" href="{$search_catalog_url}?q={$query|escape:'url'}&amp;p={$search_next_page}&amp;s={$sort|escape:'url'}&amp;f={$from|escape:'url'}" rel="next" aria-label="{if $lng eq 'eng'}Next page{else}Следующая страница{/if}">→</a>
+{else}
+				<span class="smn-pages-next is-disabled" aria-hidden="true">→</span>
+{/if}
 			</nav>
 {/if}
 

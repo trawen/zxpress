@@ -19,12 +19,12 @@
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
   --remote-debugging-port=9222 --user-data-dir="$HOME/chrome-gemini-debug"
 
-# 2) результат → local/work/issue-desc-{id}.json
-./local/scripts/run-generate-issue-description.sh --issue=123
-
-# или по slug / свой путь
-./local/scripts/run-generate-issue-description.sh --press=spectrofon --issue-slug=01
-./local/scripts/run-generate-issue-description.sh --issue=123 --out=local/work/my.json
+# 2) без аргументов — все выпуски с meta; или выборочно
+./local/scripts/run-generate-issue-description.sh
+./local/scripts/run-generate-issue-description.sh --issue=z80/01
+./local/scripts/run-generate-issue-description.sh --issue=z80
+./local/scripts/run-generate-issue-description.sh --issue=z80,on-line
+# → local/work/issue-desc-{id}.json на каждый номер (готовые пропускаются)
 ```
 
 Нужны: поднятый Docker (`db` + `php`), `npm install` в соседнем `../zxpress-markdown` (playwright). Путь к markdown-репо: `ZXPRESS_MARKDOWN` или `--markdown=PATH`.

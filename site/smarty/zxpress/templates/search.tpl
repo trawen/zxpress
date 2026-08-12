@@ -101,13 +101,21 @@
 {if $pages}
 <div class="search-pages-wrap" align=left>
 Страницы: &nbsp;
+{if $search_prev_page >= 0}
+	&nbsp; <b><a href="{$host}search.php?q={$query|escape:'url'}&p={$search_prev_page}&s={$sort}&f={$from}">←</a></b>
+{/if}
 {section name=n loop=$pages}
-{if $pages[n].num eq $page}
+{if $pages[n].gap}
+	&nbsp; …
+{elseif $pages[n].num eq $page}
 	&nbsp; «<b>{$pages[n].show}</b>»
 {else}
 	&nbsp; <b><a href="{$host}search.php?q={$query|escape:'url'}&p={$pages[n].num}&s={$sort}&f={$from}">{$pages[n].show}</a></b>
 {/if}
 {/section}
+{if $search_next_page >= 0}
+	&nbsp; <b><a href="{$host}search.php?q={$query|escape:'url'}&p={$search_next_page}&s={$sort}&f={$from}">→</a></b>
+{/if}
 </div>
 {/if}
 

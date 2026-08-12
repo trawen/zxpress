@@ -112,6 +112,10 @@ $smarty->assign('q', $q);
 $smarty->assign('page', $p);
 $smarty->assign('sort', $s);
 $smarty->assign('from', $f);
+$smarty->assign('pages', []);
+$smarty->assign('search_total_pages', 0);
+$smarty->assign('search_prev_page', -1);
+$smarty->assign('search_next_page', -1);
 
 $hitOpen = search_ui_is_new() ? '<mark class="smn-search-hit">' : "<b class='find'>";
 $hitClose = search_ui_is_new() ? '</mark>' : '</b>';
@@ -349,26 +353,45 @@ if (search_ui_is_new()) {
 
 function count_pages($result) {
 
-  Global $smarty, $limit;
+  global $smarty, $limit, $p;
 
   $smarty->assign('found', $result['total']);
   $smarty->assign('time', $result['time']);
 
-  if ($result['total'] > $limit) {
-
-    $nm_pages = ceil($result['total'] / $limit);
-
-    for ($n=0; $n < $nm_pages; $n++) {
-    
-      $t['num'] = $n;
-      $t['show'] = $n+1;
-      $pg[]=$t;
-
-    }
-    $smarty->assign('pages', $pg);
-    
+  $total = (int) ($result['total'] ?? 0);
+  $nm_pages = $limit > 0 ? (int) ceil($total / $limit) : 0;
+  $current = max(0, (int) $p);
+  if ($nm_pages > 0 && $current >= $nm_pages) {
+    $current = $nm_pages - 1;
   }
 
+  $smarty->assign('search_total_pages', $nm_pages);
+  $smarty->assign('search_prev_page', $current > 0 ? $current - 1 : -1);
+  $smarty->assign('search_next_page', ($nm_pages > 0 && $current < $nm_pages - 1) ? $current + 1 : -1);
+
+  if ($nm_pages <= 1) {
+    $smarty->assign('pages', []);
+    return;
+  }
+
+  // Windowed pages: first, last, and ±2 around current (0-based $p).
+  $want = [];
+  for ($n = 0; $n < $nm_pages; $n++) {
+    if ($n === 0 || $n === $nm_pages - 1 || abs($n - $current) <= 2) {
+      $want[$n] = true;
+    }
+  }
+
+  $pg = [];
+  $prev = null;
+  foreach (array_keys($want) as $n) {
+    if ($prev !== null && $n > $prev + 1) {
+      $pg[] = ['gap' => true, 'num' => -1, 'show' => '…'];
+    }
+    $pg[] = ['gap' => false, 'num' => $n, 'show' => $n + 1];
+    $prev = $n;
+  }
+  $smarty->assign('pages', $pg);
 }
 
 function first_fix($entry) {
