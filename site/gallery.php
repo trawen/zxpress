@@ -6,37 +6,27 @@ require_once __DIR__ . '/includes/authors_slugs.php';
 
 function gallery_ui_is_new(): bool
 {
-	return !defined('GALLERY_UI_VARIANT') || GALLERY_UI_VARIANT === 'new';
+	return true;
 }
 
 function gallery_ui_template(): string
 {
-	return gallery_ui_is_new() ? 'gallery_new.tpl' : 'gallery.tpl';
+	return 'gallery_new.tpl';
 }
 
 function gallery_url_catalog(bool $isEng, bool $isNew = false): string
 {
-	if ($isNew) {
-		return ezn_path_prefix($isEng) . '/gallery';
-	}
-	return ezn_path_prefix($isEng) . '/gallery-old';
+	return ezn_path_prefix($isEng) . '/gallery';
 }
 
 function gallery_per_page_default(): int
 {
-	return gallery_ui_is_new() ? 80 : 100;
+	return 80;
 }
 
 function gallery_normalize_per_page(int $num): int
 {
-	if (gallery_ui_is_new()) {
-		return gallery_per_page_default();
-	}
-	$allowed = [50, 100, 150, 500];
-	if (!in_array($num, $allowed, true)) {
-		return gallery_per_page_default();
-	}
-	return $num;
+	return gallery_per_page_default();
 }
 
 $lng = $smarty->getTemplateVars('lng');
@@ -44,18 +34,11 @@ $isEng = ezn_is_eng(is_string($lng) ? $lng : null);
 
 $page = max(1, (int) ($_GET['page'] ?? ($_GET['p'] ?? 1)));
 $num = gallery_normalize_per_page((int) ($_GET['num'] ?? 0));
-$id = gallery_ui_is_new() ? 0 : max(0, (int) ($_GET['id'] ?? 0));
+$id = 0;
 
 $from = ($page - 1) * $num;
 
-if ($id > 0) {
-	$stmt = mysqli_prepare($db, 'SELECT COUNT(*) FROM screens WHERE id_press=?');
-	mysqli_stmt_bind_param($stmt, 'i', $id);
-	mysqli_stmt_execute($stmt);
-	$z = mysqli_stmt_get_result($stmt);
-} else {
-	$z = db_select($db, 'SELECT COUNT(*) FROM screens');
-}
+$z = db_select($db, 'SELECT COUNT(*) FROM screens');
 
 $p = $z ? mysqli_fetch_array($z) : false;
 $totalScreens = (int) ($p[0] ?? 0);
@@ -86,22 +69,11 @@ $gallerySql = 'SELECT screens.id AS gallery_screen_id, screens.type AS gallery_s
 	. 'press.id AS gallery_press_id, press.title AS gallery_press_title, press.type AS gallery_press_type '
 	. 'FROM screens INNER JOIN issue ON issue.id = screens.id_issue INNER JOIN press ON press.id = screens.id_press ';
 
-if ($id > 0) {
-	$orderBy = 'ORDER BY LENGTH(issue.title) DESC, issue.title DESC, screens.type ASC';
-	$stmt = mysqli_prepare($db, $gallerySql . 'WHERE press.id=? ' . $orderBy . ' LIMIT ?, ?');
-	mysqli_stmt_bind_param($stmt, 'iii', $id, $from, $num);
-	mysqli_stmt_execute($stmt);
-	$z = mysqli_stmt_get_result($stmt);
-} else {
-	// New gallery: by issue date (newest first); classic: alphabetical by press.
-	$orderBy = gallery_ui_is_new()
-		? 'ORDER BY (issue.date = 0) ASC, issue.date DESC, press.title ASC, LENGTH(issue.title) DESC, issue.title DESC, screens.type ASC'
-		: 'ORDER BY press.title ASC, LENGTH(issue.title) ASC, issue.title ASC, screens.type ASC';
-	$stmt = mysqli_prepare($db, $gallerySql . $orderBy . ' LIMIT ?, ?');
-	mysqli_stmt_bind_param($stmt, 'ii', $from, $num);
-	mysqli_stmt_execute($stmt);
-	$z = mysqli_stmt_get_result($stmt);
-}
+$orderBy = 'ORDER BY (issue.date = 0) ASC, issue.date DESC, press.title ASC, LENGTH(issue.title) DESC, issue.title DESC, screens.type ASC';
+$stmt = mysqli_prepare($db, $gallerySql . $orderBy . ' LIMIT ?, ?');
+mysqli_stmt_bind_param($stmt, 'ii', $from, $num);
+mysqli_stmt_execute($stmt);
+$z = mysqli_stmt_get_result($stmt);
 
 $c = [];
 while ($z && ($t = mysqli_fetch_array($z))) {
@@ -134,16 +106,16 @@ $smarty->assign('screens', $c);
 $smarty->assign('id', $id);
 $smarty->assign('num', $num);
 
-$catalogUrl = gallery_url_catalog($isEng, gallery_ui_is_new());
+$catalogUrl = gallery_url_catalog($isEng, true);
 $smarty->assign('gallery_catalog_url', $catalogUrl);
 $smarty->assign('ezines_catalog_url', ezn_url_catalog($isEng));
 $smarty->assign('letters_catalog_url', letters_url_catalog($isEng));
 $smarty->assign('authors_catalog_url', authors_url_catalog($isEng));
 $smarty->assign('smn_nav_authors_active', false);
 $smarty->assign('smn_nav_ezines_active', false);
-$smarty->assign('smn_nav_gallery_active', gallery_ui_is_new());
-$smarty->assign('url_rus', htmlspecialchars(gallery_url_catalog(false, gallery_ui_is_new()), ENT_QUOTES, 'UTF-8'));
-$smarty->assign('url_eng', htmlspecialchars(gallery_url_catalog(true, gallery_ui_is_new()), ENT_QUOTES, 'UTF-8'));
+$smarty->assign('smn_nav_gallery_active', true);
+$smarty->assign('url_rus', htmlspecialchars(gallery_url_catalog(false, true), ENT_QUOTES, 'UTF-8'));
+$smarty->assign('url_eng', htmlspecialchars(gallery_url_catalog(true, true), ENT_QUOTES, 'UTF-8'));
 
 if ($isEng) {
 	$smarty->assign('title', 'Gallery of electronic newspapers and magazines for ZX Spectrum');
@@ -151,10 +123,6 @@ if ($isEng) {
 } else {
 	$smarty->assign('title', 'Галерея электронных газет и журналов для ZX Spectrum');
 	$smarty->assign('description', 'Скриншоты электронных газет и журналов для ZX Spectrum.');
-}
-
-if (!gallery_ui_is_new()) {
-	include __DIR__ . '/right.php';
 }
 
 $smarty->display(gallery_ui_template());

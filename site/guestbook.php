@@ -5,20 +5,17 @@ require_once __DIR__ . '/includes/authors_slugs.php';
 
 function guestbook_ui_is_new(): bool
 {
-	return !defined('GUESTBOOK_UI_VARIANT') || GUESTBOOK_UI_VARIANT === 'new';
+	return true;
 }
 
 function guestbook_ui_template(): string
 {
-	return guestbook_ui_is_new() ? 'guestbook_new.tpl' : 'guestbook.tpl';
+	return 'guestbook_new.tpl';
 }
 
 function guestbook_url(bool $isEng): string
 {
-	if (guestbook_ui_is_new()) {
-		return ezn_path_prefix($isEng) . '/guestbook';
-	}
-	return ezn_path_prefix($isEng) . '/guestbook-old';
+	return ezn_path_prefix($isEng) . '/guestbook';
 }
 
 $_REQUEST['id'] = 0;
@@ -35,7 +32,7 @@ $smarty->assign('smn_nav_authors_active', false);
 $smarty->assign('smn_nav_ezines_active', false);
 $smarty->assign('smn_nav_gallery_active', false);
 $smarty->assign('smn_nav_zxnet_active', false);
-$smarty->assign('smn_nav_guestbook_active', guestbook_ui_is_new());
+$smarty->assign('smn_nav_guestbook_active', true);
 
 $smarty->assign('id_article', 0);
 $smarty->assign('url_rus', htmlspecialchars(guestbook_url(false), ENT_QUOTES, 'UTF-8'));
@@ -50,9 +47,5 @@ $smarty->assign(
 		? 'Your opinion about the project, suggestions, or just say hello'
 		: 'Ваше мнение о проекте, пожелания или просто привет'
 );
-
-if (!guestbook_ui_is_new()) {
-	include __DIR__ . '/right.php';
-}
 
 $smarty->display(guestbook_ui_template());

@@ -7,15 +7,12 @@ require_once __DIR__ . '/includes/authors_slugs.php';
 
 function search_ui_is_new(): bool
 {
-	return !defined('SEARCH_UI_VARIANT') || SEARCH_UI_VARIANT === 'new';
+	return true;
 }
 
 function search_catalog_url(bool $isEng): string
 {
-	if (search_ui_is_new()) {
-		return ezn_path_prefix($isEng) . '/search';
-	}
-	return ezn_path_prefix($isEng) . '/search-old';
+	return ezn_path_prefix($isEng) . '/search';
 }
 
 function search_page_url(bool $isEng, string $q, int $page, string $sort, $from): string
@@ -117,8 +114,8 @@ $smarty->assign('search_total_pages', 0);
 $smarty->assign('search_prev_page', -1);
 $smarty->assign('search_next_page', -1);
 
-$hitOpen = search_ui_is_new() ? '<mark class="smn-search-hit">' : "<b class='find'>";
-$hitClose = search_ui_is_new() ? '</mark>' : '</b>';
+$hitOpen = '<mark class="smn-search-hit">';
+$hitClose = '</mark>';
 
 if (getenv('LOG_LEVEL') === 'DEBUG') {
   error_log('[FIX] search.php: layout — zxpress.ru parity (350/280 toolbar, 210px sidebar, colgroup table) style.css + search.tpl');
@@ -315,41 +312,36 @@ else {
 
 $smarty->assign('search', $search);
 
-if (search_ui_is_new()) {
-  $catalog = search_catalog_url($isEngPage);
-  $smarty->assign('search_catalog_url', $catalog);
-  $smarty->assign('ezines_catalog_url', ezn_url_catalog_new($isEngPage));
-  $smarty->assign('letters_catalog_url', letters_url_catalog($isEngPage));
-  $smarty->assign('authors_catalog_url', authors_url_catalog($isEngPage));
-  $smarty->assign('smn_nav_authors_active', false);
-  $smarty->assign('smn_nav_ezines_active', false);
-  $smarty->assign('smn_nav_gallery_active', false);
-  $smarty->assign('smn_nav_zxnet_active', false);
-  $smarty->assign('smn_nav_guestbook_active', false);
-  $smarty->assign('smn_nav_updates_active', false);
-  $smarty->assign('smn_nav_map_active', false);
-  $smarty->assign('url_rus', htmlspecialchars(search_page_url(false, $q, $p, $s, $f), ENT_QUOTES, 'UTF-8'));
-  $smarty->assign('url_eng', htmlspecialchars(search_page_url(true, $q, $p, $s, $f), ENT_QUOTES, 'UTF-8'));
-  if ($q !== '') {
-    $smarty->assign('title', ($isEngPage ? 'Search: ' : 'Поиск: ') . $q);
-    $smarty->assign('description', $isEngPage
-      ? ('Search results for “' . $q . '” on ZXPRESS')
-      : ('Результаты поиска «' . $q . '» на ZXPRESS'));
-  } else {
-    $smarty->assign('title', $isEngPage ? 'Search' : 'Поиск');
-    $smarty->assign('description', $isEngPage
-      ? 'Search ZX Spectrum magazines, newspapers and books'
-      : 'Поиск по журналам, газетам и книгам для ZX Spectrum');
-  }
-  if ($smarty->getTemplateVars('found') === null && $q === '') {
-    $smarty->assign('found', 0);
-    $smarty->assign('time', '0');
-  }
-  $smarty->display('search_new.tpl');
+$catalog = search_catalog_url($isEngPage);
+$smarty->assign('search_catalog_url', $catalog);
+$smarty->assign('ezines_catalog_url', ezn_url_catalog_new($isEngPage));
+$smarty->assign('letters_catalog_url', letters_url_catalog($isEngPage));
+$smarty->assign('authors_catalog_url', authors_url_catalog($isEngPage));
+$smarty->assign('smn_nav_authors_active', false);
+$smarty->assign('smn_nav_ezines_active', false);
+$smarty->assign('smn_nav_gallery_active', false);
+$smarty->assign('smn_nav_zxnet_active', false);
+$smarty->assign('smn_nav_guestbook_active', false);
+$smarty->assign('smn_nav_updates_active', false);
+$smarty->assign('smn_nav_map_active', false);
+$smarty->assign('url_rus', htmlspecialchars(search_page_url(false, $q, $p, $s, $f), ENT_QUOTES, 'UTF-8'));
+$smarty->assign('url_eng', htmlspecialchars(search_page_url(true, $q, $p, $s, $f), ENT_QUOTES, 'UTF-8'));
+if ($q !== '') {
+  $smarty->assign('title', ($isEngPage ? 'Search: ' : 'Поиск: ') . $q);
+  $smarty->assign('description', $isEngPage
+    ? ('Search results for “' . $q . '” on ZXPRESS')
+    : ('Результаты поиска «' . $q . '» на ZXPRESS'));
 } else {
-  include "right.php";
-  $smarty->display('search.tpl');
+  $smarty->assign('title', $isEngPage ? 'Search' : 'Поиск');
+  $smarty->assign('description', $isEngPage
+    ? 'Search ZX Spectrum magazines, newspapers and books'
+    : 'Поиск по журналам, газетам и книгам для ZX Spectrum');
 }
+if ($smarty->getTemplateVars('found') === null && $q === '') {
+  $smarty->assign('found', 0);
+  $smarty->assign('time', '0');
+}
+$smarty->display('search_new.tpl');
 
 function count_pages($result) {
 

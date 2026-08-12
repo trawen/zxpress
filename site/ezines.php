@@ -6,12 +6,12 @@ require_once __DIR__ . '/includes/authors_slugs.php';
 
 function ezines_ui_is_new(): bool
 {
-	return !defined('EZINES_UI_VARIANT') || EZINES_UI_VARIANT === 'new';
+	return true;
 }
 
 function ezines_ui_template(): string
 {
-	return ezines_ui_is_new() ? 'ezines_new.tpl' : 'ezines.tpl';
+	return 'ezines_new.tpl';
 }
 
 function ezines_public_type_label(int $type, bool $isEng): string
@@ -210,19 +210,15 @@ function ezines_ui_render($smarty, bool $isEng, string $filter = ''): void
 {
 	$filter = ezines_normalize_filter($filter);
 	$classicUrl = ezn_url_catalog($isEng);
-	$smarty->assign('ezines_catalog_url', ezines_ui_is_new() ? ezn_url_catalog_new($isEng) : ezn_url_catalog($isEng));
+	$smarty->assign('ezines_catalog_url', ezn_url_catalog_new($isEng));
 	$smarty->assign('ezines_classic_url', $classicUrl);
 	$smarty->assign('letters_catalog_url', letters_url_catalog($isEng));
 	$smarty->assign('authors_catalog_url', authors_url_catalog($isEng));
 	$smarty->assign('smn_nav_authors_active', false);
 	$smarty->assign('smn_nav_ezines_active', true);
-	$smarty->assign('url_rus', htmlspecialchars(ezines_ui_is_new() ? ezn_url_catalog_new(false, $filter) : ezn_url_catalog(false), ENT_QUOTES, 'UTF-8'));
-	$smarty->assign('url_eng', htmlspecialchars(ezines_ui_is_new() ? ezn_url_catalog_new(true, $filter) : ezn_url_catalog(true), ENT_QUOTES, 'UTF-8'));
+	$smarty->assign('url_rus', htmlspecialchars(ezn_url_catalog_new(false, $filter), ENT_QUOTES, 'UTF-8'));
+	$smarty->assign('url_eng', htmlspecialchars(ezn_url_catalog_new(true, $filter), ENT_QUOTES, 'UTF-8'));
 
-	if (!ezines_ui_is_new()) {
-		global $db;
-		include __DIR__ . '/right.php';
-	}
 	$smarty->display(ezines_ui_template());
 }
 
@@ -232,7 +228,7 @@ $lng = $smarty->getTemplateVars('lng');
 $isEng = ezn_is_eng(is_string($lng) ? $lng : null);
 
 $rawFilter = (string) ($_GET['filter'] ?? '');
-if ($rawFilter === '' && ezines_ui_is_new()) {
+if ($rawFilter === '') {
 	$path = parse_url((string) ($_SERVER['REQUEST_URI'] ?? ''), PHP_URL_PATH);
 	if (is_string($path)) {
 		if (preg_match('#^/(?:ru|en|eng)/ezines/(papers|magazines|reports)/?$#', $path, $m)) {
@@ -259,8 +255,8 @@ if ($rawFilter === '' && ezines_ui_is_new()) {
 		}
 	}
 }
-$filter = ezines_ui_is_new() ? ezines_normalize_filter($rawFilter) : '';
-if (ezines_ui_is_new() && $rawFilter !== '' && $filter === '') {
+$filter = ezines_normalize_filter($rawFilter);
+if ($rawFilter !== '' && $filter === '') {
 	header('Location: ' . ezn_url_catalog_new($isEng), true, 301);
 	exit;
 }
@@ -284,7 +280,7 @@ $f = 0;
 $n = 0;
 $a = '#';
 $c = [];
-$splashMap = ezines_ui_is_new() ? ezines_press_splash_map($db) : [];
+$splashMap = ezines_press_splash_map($db);
 while ($z && ($t = mysqli_fetch_array($z))) {
 	$t['title_plain'] = title_plain($t['title'] ?? '');
 	$t['public_url'] = ezn_url_press($t, $isEng);
@@ -347,55 +343,48 @@ while ($z && ($t = mysqli_fetch_array($z))) {
 }
 $smarty->assign('catalog', $c);
 
-$typeCounts = [0 => 0, 1 => 0, 2 => 0];
-if (ezines_ui_is_new()) {
-	$typeCounts = ezines_type_counts($db);
-	$countAll = $typeCounts[0] + $typeCounts[1] + $typeCounts[2];
-	$yearChart = ezines_catalog_year_chart($db, $typeFilter);
-	if (is_array($yearChart)) {
-		if ($isEng) {
-			$yearChart['total_label'] = $yearChart['total'] . ' ' . ($yearChart['total'] === 1 ? 'issue' : 'issues');
-		} else {
-			$yearChart['total_label'] = $yearChart['total'] . ' ' . getNumEnding($yearChart['total'], ['выпуск', 'выпуска', 'выпусков']);
-		}
+$typeCounts = ezines_type_counts($db);
+$countAll = $typeCounts[0] + $typeCounts[1] + $typeCounts[2];
+$yearChart = ezines_catalog_year_chart($db, $typeFilter);
+if (is_array($yearChart)) {
+	if ($isEng) {
+		$yearChart['total_label'] = $yearChart['total'] . ' ' . ($yearChart['total'] === 1 ? 'issue' : 'issues');
+	} else {
+		$yearChart['total_label'] = $yearChart['total'] . ' ' . getNumEnding($yearChart['total'], ['выпуск', 'выпуска', 'выпусков']);
 	}
-	$smarty->assign('year_chart', $yearChart);
-	$smarty->assign('ezines_filter', $filter);
-	$smarty->assign('ezines_filters', [
-		[
-			'slug' => '',
-			'url' => ezn_url_catalog_new($isEng),
-			'label' => $isEng ? 'All' : 'Все',
-			'count' => $countAll,
-			'active' => $filter === '',
-		],
-		[
-			'slug' => 'papers',
-			'url' => ezn_url_catalog_new($isEng, 'papers'),
-			'label' => $isEng ? 'Newspapers' : 'Газеты',
-			'count' => $typeCounts[0],
-			'active' => $filter === 'papers',
-		],
-		[
-			'slug' => 'magazines',
-			'url' => ezn_url_catalog_new($isEng, 'magazines'),
-			'label' => $isEng ? 'Magazines' : 'Журналы',
-			'count' => $typeCounts[1],
-			'active' => $filter === 'magazines',
-		],
-		[
-			'slug' => 'reports',
-			'url' => ezn_url_catalog_new($isEng, 'reports'),
-			'label' => $isEng ? 'Reports' : 'Отчёты',
-			'count' => $typeCounts[2],
-			'active' => $filter === 'reports',
-		],
-	]);
-} else {
-	$smarty->assign('ezines_filter', '');
-	$smarty->assign('ezines_filters', []);
-	$smarty->assign('year_chart', null);
 }
+$smarty->assign('year_chart', $yearChart);
+$smarty->assign('ezines_filter', $filter);
+$smarty->assign('ezines_filters', [
+	[
+		'slug' => '',
+		'url' => ezn_url_catalog_new($isEng),
+		'label' => $isEng ? 'All' : 'Все',
+		'count' => $countAll,
+		'active' => $filter === '',
+	],
+	[
+		'slug' => 'papers',
+		'url' => ezn_url_catalog_new($isEng, 'papers'),
+		'label' => $isEng ? 'Newspapers' : 'Газеты',
+		'count' => $typeCounts[0],
+		'active' => $filter === 'papers',
+	],
+	[
+		'slug' => 'magazines',
+		'url' => ezn_url_catalog_new($isEng, 'magazines'),
+		'label' => $isEng ? 'Magazines' : 'Журналы',
+		'count' => $typeCounts[1],
+		'active' => $filter === 'magazines',
+	],
+	[
+		'slug' => 'reports',
+		'url' => ezn_url_catalog_new($isEng, 'reports'),
+		'label' => $isEng ? 'Reports' : 'Отчёты',
+		'count' => $typeCounts[2],
+		'active' => $filter === 'reports',
+	],
+]);
 
 $origin = function_exists('zxpress_canonical_origin') ? zxpress_canonical_origin() : 'https://zxpress.ru';
 if ($isEng) {
@@ -432,7 +421,7 @@ $smarty->assign('description', $desc);
 $smarty->assign('og_title', $title);
 $smarty->assign('og_description', $desc);
 $smarty->assign('og_type', 'website');
-$smarty->assign('og_url', $origin . (ezines_ui_is_new() ? ezn_url_catalog_new($isEng, $filter) : ezn_url_catalog($isEng)));
+$smarty->assign('og_url', $origin . ezn_url_catalog_new($isEng, $filter));
 $smarty->assign('og_image', $origin . '/img/banner.png');
 
 ezines_ui_render($smarty, $isEng, $filter);

@@ -5,19 +5,17 @@ require_once __DIR__ . '/includes/authors_slugs.php';
 
 function updates_ui_is_new(): bool
 {
-	return !defined('UPDATES_UI_VARIANT') || UPDATES_UI_VARIANT === 'new';
+	return true;
 }
 
 function updates_ui_template(): string
 {
-	return updates_ui_is_new() ? 'updates_new.tpl' : 'updates.tpl';
+	return 'updates_new.tpl';
 }
 
 function updates_url(bool $isEng, int $page = 1): string
 {
-	$base = updates_ui_is_new()
-		? (ezn_path_prefix($isEng) . '/updates')
-		: (ezn_path_prefix($isEng) . '/updates-old');
+	$base = ezn_path_prefix($isEng) . '/updates';
 	$qs = [];
 	if ($page > 1) {
 		$qs['page'] = $page;
@@ -42,7 +40,7 @@ $smarty->assign('smn_nav_ezines_active', false);
 $smarty->assign('smn_nav_gallery_active', false);
 $smarty->assign('smn_nav_zxnet_active', false);
 $smarty->assign('smn_nav_guestbook_active', false);
-$smarty->assign('smn_nav_updates_active', updates_ui_is_new());
+$smarty->assign('smn_nav_updates_active', true);
 
 $num = 250;
 $from = ($page - 1) * $num;
@@ -148,16 +146,8 @@ while ($z && ($t = mysqli_fetch_array($z))) {
 		'slug_en' => (string) ($t['article_slug_en'] ?? ''),
 	];
 
-	if (updates_ui_is_new()) {
-		$t['issue_public_url'] = ezn_url_issue($pressRow, $issueRow, $isEng);
-		$t['article_public_url'] = ezn_url_article($pressRow, $issueRow, $articleRow, $isEng);
-	} else {
-		$t['issue_public_url'] = '/issue.php?id=' . (int) $pressRow['id']
-			. ($isEng ? '&lng=eng' : '')
-			. '#' . rawurlencode($issueTitle);
-		$t['article_public_url'] = '/article.php?id=' . (int) $articleRow['id']
-			. ($isEng ? '&lng=eng' : '');
-	}
+	$t['issue_public_url'] = ezn_url_issue($pressRow, $issueRow, $isEng);
+	$t['article_public_url'] = ezn_url_article($pressRow, $issueRow, $articleRow, $isEng);
 
 	$update[] = $t;
 }
@@ -173,9 +163,5 @@ $smarty->assign(
 
 $smarty->assign('url_rus', htmlspecialchars(updates_url(false, $page), ENT_QUOTES, 'UTF-8'));
 $smarty->assign('url_eng', htmlspecialchars(updates_url(true, $page), ENT_QUOTES, 'UTF-8'));
-
-if (!updates_ui_is_new()) {
-	include __DIR__ . '/right.php';
-}
 
 $smarty->display(updates_ui_template());

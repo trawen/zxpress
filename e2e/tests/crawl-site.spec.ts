@@ -35,7 +35,7 @@ test.describe('crawl', () => {
     expect(baseURL).toBeTruthy();
     const origin = new URL(baseURL!).origin;
 
-    const seeds = ['/', '/ezines.php'];
+    const seeds = ['/', '/ru', '/ezines.php', '/ru/ezines'];
     const visited = new Set<string>();
     const queue: { path: string; depth: number }[] = seeds.map((p) => ({ path: p, depth: 0 }));
 

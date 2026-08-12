@@ -170,7 +170,6 @@ function letters_url_letter(array $row, bool $isEng): string
 
         $script = match (letters_section()) {
             'snailmail-new' => '/snailmail_new.php',
-            'snailmail-old' => '/snailmail_old.php',
             default => '/snailmail.php',
         };
 

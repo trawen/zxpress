@@ -161,24 +161,18 @@ function zxnet_find_subj(mysqli $db, int $echoId, string $key, bool $isEng): ?ar
 
 function zxnet_ui_is_new(): bool
 {
-	return !defined('ZXNET_UI_VARIANT') || ZXNET_UI_VARIANT === 'new';
+	return true;
 }
 
 function zxnet_url_catalog(bool $isEng): string
 {
-	if (zxnet_ui_is_new()) {
-		return ezn_path_prefix($isEng) . '/zxnet';
-	}
-	return ezn_path_prefix($isEng) . '/zxnet-old';
+	return ezn_path_prefix($isEng) . '/zxnet';
 }
 
 function zxnet_url_echo(string $title, bool $isEng): string
 {
 	$seg = rawurlencode($title);
-	if (zxnet_ui_is_new()) {
-		return ezn_path_prefix($isEng) . '/zxnet/' . $seg;
-	}
-	return ezn_path_prefix($isEng) . '/zxnet-old/' . $seg;
+	return ezn_path_prefix($isEng) . '/zxnet/' . $seg;
 }
 
 function zxnet_url_topic(string $echoTitle, string $topicSlug, bool $isEng, int $fallbackId = 0): string
@@ -188,8 +182,5 @@ function zxnet_url_topic(string $echoTitle, string $topicSlug, bool $isEng, int 
 	if ($topicSeg === '' || $topicSeg === '0') {
 		return zxnet_url_echo($echoTitle, $isEng);
 	}
-	if (zxnet_ui_is_new()) {
-		return ezn_path_prefix($isEng) . '/zxnet/' . $seg . '/' . $topicSeg;
-	}
-	return ezn_path_prefix($isEng) . '/zxnet-old/' . $seg . '/' . $topicSeg;
+	return ezn_path_prefix($isEng) . '/zxnet/' . $seg . '/' . $topicSeg;
 }

@@ -1,5 +1,6 @@
 /**
- * Canonical smoke list for zxpress.ru public PHP entry points (site/*.php).
+ * Canonical smoke list for zxpress.ru public pages.
+ * Includes legacy *.php entry points and pretty /ru|/en|/eng paths.
  * Partials that are not meant to be opened directly (e.g. comments.php without init) are omitted.
  * Admin and hidden tools expect HTTP 403 without a session.
  */
@@ -16,8 +17,8 @@ export type RouteExpectation = {
   note?: string;
 };
 
-/** Pages that must return HTML without PHP fatals (typical 200). */
-export const publicHtmlRoutes: RouteExpectation[] = [
+/** Legacy PHP entry points that must return HTML without PHP fatals (typical 200). */
+export const publicHtmlRoutesLegacy: RouteExpectation[] = [
   { path: '/' },
   { path: '/ezines.php' },
   { path: '/ezines.php?lng=eng' },
@@ -40,6 +41,10 @@ export const publicHtmlRoutes: RouteExpectation[] = [
   { path: '/articles_list.php' },
   { path: '/wanted.php' },
   { path: '/whois.php' },
+  { path: '/periodicals.php' },
+  { path: '/authors.php' },
+  { path: '/categories.php' },
+  { path: '/snailmail.php' },
   { path: '/pure-text.php', expectDownload: true },
   /** /d.php без параметров ведёт себя по-разному (404 или attachment в зависимости от БД) — см. smoke-all-routes «d.php». */
   { path: '/print.php' },
@@ -49,6 +54,42 @@ export const publicHtmlRoutes: RouteExpectation[] = [
   { path: '/article.php?id=1' },
   { path: '/echos_subjs.php?id=1' },
   { path: '/hyperjump.php' },
+];
+
+/** Canonical pretty URLs (new UI) — must open without 5xx / PHP fatals. */
+export const publicHtmlRoutesPretty: RouteExpectation[] = [
+  { path: '/ru' },
+  { path: '/en' },
+  { path: '/ru/ezines' },
+  { path: '/en/ezines' },
+  { path: '/ru/books' },
+  { path: '/en/books' },
+  { path: '/ru/periodicals' },
+  { path: '/en/periodicals' },
+  { path: '/ru/gallery' },
+  { path: '/en/gallery' },
+  { path: '/ru/guestbook' },
+  { path: '/en/guestbook' },
+  { path: '/ru/updates' },
+  { path: '/en/updates' },
+  { path: '/ru/search' },
+  { path: '/en/search' },
+  { path: '/ru/map' },
+  { path: '/en/map' },
+  { path: '/ru/zxnet' },
+  { path: '/en/zxnet' },
+  { path: '/ru/snailmail' },
+  { path: '/en/snailmail' },
+  { path: '/ru/authors' },
+  { path: '/en/authors' },
+  { path: '/ru/categories' },
+  { path: '/en/categories' },
+];
+
+/** All public HTML routes for smoke (legacy + pretty). */
+export const publicHtmlRoutes: RouteExpectation[] = [
+  ...publicHtmlRoutesLegacy,
+  ...publicHtmlRoutesPretty,
 ];
 
 /** Non-HTML OK responses */

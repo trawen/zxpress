@@ -5,7 +5,7 @@ require_once __DIR__ . '/includes/authors_slugs.php';
 
 function book_articles_ui_template(): string
 {
-	return books_ui_is_new() ? 'book_articles_new.tpl' : 'book_articles.tpl';
+	return 'book_articles_new.tpl';
 }
 
 $id = (int) ($_GET['id'] ?? 0);
@@ -27,7 +27,7 @@ $smarty->assign('smn_nav_authors_active', false);
 $smarty->assign('smn_nav_ezines_active', false);
 $smarty->assign('smn_nav_gallery_active', false);
 $smarty->assign('smn_nav_zxnet_active', false);
-$smarty->assign('smn_nav_books_active', books_ui_is_new());
+$smarty->assign('smn_nav_books_active', true);
 
 $stmt = mysqli_prepare($db, 'SELECT * FROM books, chapters WHERE ch_id=? AND books.id=ch_id_book LIMIT 1');
 mysqli_stmt_bind_param($stmt, 'i', $id);
@@ -160,10 +160,6 @@ if (!$skip && !$articleNotFound) {
 	$stmt = mysqli_prepare($db, 'UPDATE chapters SET ch_views=ch_views+1 WHERE ch_id=?');
 	mysqli_stmt_bind_param($stmt, 'i', $id);
 	mysqli_stmt_execute($stmt);
-}
-
-if (!books_ui_is_new()) {
-	include __DIR__ . '/right.php';
 }
 
 $smarty->display(book_articles_ui_template());

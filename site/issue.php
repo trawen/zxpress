@@ -7,12 +7,12 @@ require_once __DIR__ . '/includes/comments_scope.php';
 
 function issue_ui_is_new(): bool
 {
-	return !defined('EZINES_UI_VARIANT') || EZINES_UI_VARIANT === 'new';
+	return true;
 }
 
 function issue_ui_template(): string
 {
-	return issue_ui_is_new() ? 'issue_new.tpl' : 'issue.tpl';
+	return 'issue_new.tpl';
 }
 
 function issue_ui_render($smarty, bool $isEng): void
@@ -25,10 +25,6 @@ function issue_ui_render($smarty, bool $isEng): void
 	$smarty->assign('smn_nav_authors_active', false);
 	$smarty->assign('smn_nav_ezines_active', true);
 
-	if (!issue_ui_is_new()) {
-		global $db;
-		include __DIR__ . '/right.php';
-	}
 	$smarty->display(issue_ui_template());
 }
 
@@ -53,12 +49,11 @@ $slugRoute = ($pressSlug !== '');
 
 $id = (int) ($_GET['id'] ?? 0);
 $isEng = ($_GET['lng'] ?? '') === 'eng';
-$uiNew = issue_ui_is_new();
 $currentIssueId = 0;
 $viewMode = 'press';
 
 // Reserved catalog filter segments (must not be treated as press slugs).
-if ($uiNew && $issueSlug === '' && ($pressSlug === 'papers' || $pressSlug === 'magazines' || $pressSlug === 'reports')) {
+if ($issueSlug === '' && ($pressSlug === 'papers' || $pressSlug === 'magazines' || $pressSlug === 'reports')) {
 	$fallbackUrl = ezn_url_catalog_new($isEng);
 	$fallbackUrl .= '?filter=' . rawurlencode($pressSlug);
 	header('Location: ' . $fallbackUrl, true, 302);
@@ -66,7 +61,7 @@ if ($uiNew && $issueSlug === '' && ($pressSlug === 'papers' || $pressSlug === 'm
 }
 
 // Reserved section slugs that may be captured by legacy /{lang}/ezines/{slug} rewrites.
-if ($uiNew && $issueSlug === '') {
+if ($issueSlug === '') {
 	$sectionRedirects = [
 		'books' => '/books',
 		'zxnet' => '/zxnet',
@@ -98,8 +93,8 @@ if ($slugRoute) {
 		$smarty->assign('view_mode', 'press');
 		$smarty->assign('press_not_found', true);
 		$smarty->assign('title', $isEng ? 'Publication not found' : 'Издание не найдено');
-		$smarty->assign('url_rus', htmlspecialchars($uiNew ? ezn_url_catalog_new(false) : ezn_url_catalog(false), ENT_QUOTES, 'UTF-8'));
-		$smarty->assign('url_eng', htmlspecialchars($uiNew ? ezn_url_catalog_new(true) : ezn_url_catalog(true), ENT_QUOTES, 'UTF-8'));
+		$smarty->assign('url_rus', htmlspecialchars(ezn_url_catalog_new(false), ENT_QUOTES, 'UTF-8'));
+		$smarty->assign('url_eng', htmlspecialchars(ezn_url_catalog_new(true), ENT_QUOTES, 'UTF-8'));
 		issue_ui_render($smarty, $isEng);
 		exit;
 	}
@@ -107,36 +102,21 @@ if ($slugRoute) {
 	if ($issueSlug !== '') {
 		$currentIssueId = ezn_find_issue_id($db, $id, $issueSlug, $isEng);
 		if ($currentIssueId <= 0) {
-			if ($uiNew) {
-				http_response_code(404);
-				$smarty->assign('press', null);
-				$smarty->assign('screens', null);
-				$smarty->assign('articles', null);
-				$smarty->assign('issues_list', []);
-				$smarty->assign('current_issue', null);
-				$smarty->assign('view_mode', 'issue');
-				$smarty->assign('issue_not_found', true);
-				$smarty->assign('title', $isEng ? 'Issue not found' : 'Выпуск не найден');
-				$smarty->assign('url_rus', htmlspecialchars(ezn_url_catalog_new(false), ENT_QUOTES, 'UTF-8'));
-				$smarty->assign('url_eng', htmlspecialchars(ezn_url_catalog_new(true), ENT_QUOTES, 'UTF-8'));
-				issue_ui_render($smarty, $isEng);
-				exit;
-			}
-		} else {
-			$viewMode = 'issue';
-			if (!$uiNew) {
-				$stmt_anchor = $db->prepare('SELECT title FROM issue WHERE id=? LIMIT 1');
-				if ($stmt_anchor) {
-					$stmt_anchor->bind_param('i', $currentIssueId);
-					$stmt_anchor->execute();
-					$anchorRow = $stmt_anchor->get_result()->fetch_assoc();
-					$stmt_anchor->close();
-					if (is_array($anchorRow) && ($anchorRow['title'] ?? '') !== '') {
-						$smarty->assign('issue_anchor', (string) $anchorRow['title']);
-					}
-				}
-			}
+			http_response_code(404);
+			$smarty->assign('press', null);
+			$smarty->assign('screens', null);
+			$smarty->assign('articles', null);
+			$smarty->assign('issues_list', []);
+			$smarty->assign('current_issue', null);
+			$smarty->assign('view_mode', 'issue');
+			$smarty->assign('issue_not_found', true);
+			$smarty->assign('title', $isEng ? 'Issue not found' : 'Выпуск не найден');
+			$smarty->assign('url_rus', htmlspecialchars(ezn_url_catalog_new(false), ENT_QUOTES, 'UTF-8'));
+			$smarty->assign('url_eng', htmlspecialchars(ezn_url_catalog_new(true), ENT_QUOTES, 'UTF-8'));
+			issue_ui_render($smarty, $isEng);
+			exit;
 		}
+		$viewMode = 'issue';
 	}
 } elseif ($id > 0) {
 	ezn_maybe_redirect_press_legacy($db, $id, $isEng, $issueSlug);
@@ -320,9 +300,9 @@ while ($row = mysqli_fetch_array($z)) {
 }
 $smarty->assign('issues', $is);
 
-// Issues index for new press overview (no article dump).
+// Issues index for press overview (no article dump).
 $issuesList = [];
-if ($uiNew && $viewMode === 'press') {
+if ($viewMode === 'press') {
 	$stmtIssues = mysqli_prepare(
 		$db,
 		'SELECT id, id_press, title, date, slug_ru, slug_en FROM issue WHERE id_press=? ORDER BY LENGTH(title) DESC, title DESC'
@@ -359,8 +339,8 @@ if ($uiNew && $viewMode === 'press') {
 }
 $smarty->assign('issues_list', $issuesList);
 
-// Timeline data for new UI
-if ($uiNew && $id > 0) {
+// Timeline data
+if ($id > 0) {
 	$timelineDates = [];
 	$stmtT = mysqli_prepare($db, 'SELECT date FROM issue WHERE id_press=? AND date > 0 ORDER BY date ASC');
 	if ($stmtT) {
@@ -407,19 +387,19 @@ if ($uiNew && $id > 0) {
 	}
 }
 
-// Articles: classic = all; new issue page = one issue; new press page = none.
+// Articles: issue page = one issue; press page = none.
 $art = [];
 $prev_issue = null;
-if (!$uiNew || $viewMode === 'issue') {
+if ($viewMode === 'issue') {
 	$sql = 'SELECT articles.*, issue.title AS issue_title, issue.slug_ru AS issue_slug_ru, issue.slug_en AS issue_slug_en, issue.date AS issue_date, issue.id AS issue_id'
 		. ' FROM articles JOIN issue ON articles.id_issue=issue.id'
 		. ' WHERE articles.temp=0 AND issue.id_press=?';
-	if ($uiNew && $currentIssueId > 0) {
+	if ($currentIssueId > 0) {
 		$sql .= ' AND issue.id=?';
 	}
 	$sql .= ' ORDER BY LENGTH(issue.title) DESC, issue.title DESC, articles.number, articles.title';
 	$stmt = mysqli_prepare($db, $sql);
-	if ($uiNew && $currentIssueId > 0) {
+	if ($currentIssueId > 0) {
 		mysqli_stmt_bind_param($stmt, 'ii', $id, $currentIssueId);
 	} else {
 		mysqli_stmt_bind_param($stmt, 'i', $id);
@@ -472,7 +452,7 @@ $smarty->assign('current_issue', $currentIssue);
 
 $prevIssueNav = null;
 $nextIssueNav = null;
-if ($uiNew && $viewMode === 'issue' && $currentIssueId > 0 && is_array($pressRow)) {
+if ($viewMode === 'issue' && $currentIssueId > 0 && is_array($pressRow)) {
 	$stmtNav = mysqli_prepare(
 		$db,
 		'SELECT id, id_press, title, slug_ru, slug_en FROM issue WHERE id_press=? ORDER BY LENGTH(title) ASC, title ASC'
@@ -512,7 +492,7 @@ if ($uiNew && $viewMode === 'issue' && $currentIssueId > 0 && is_array($pressRow
 $smarty->assign('prev_issue_nav', $prevIssueNav);
 $smarty->assign('next_issue_nav', $nextIssueNav);
 
-if ($uiNew && empty($smarty->getTemplateVars('press_not_found')) && empty($smarty->getTemplateVars('issue_not_found'))) {
+if (empty($smarty->getTemplateVars('press_not_found')) && empty($smarty->getTemplateVars('issue_not_found'))) {
 	if ($viewMode === 'issue' && $currentIssueId > 0 && is_array($currentIssue)) {
 		$comments_target_id = comments_id_ezine_issue($currentIssueId);
 		$commentsFormAction = ezn_url_issue($pressRow, $currentIssue, $isEng);

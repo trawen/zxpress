@@ -16,7 +16,7 @@ function zxnet_is_hidden_echo_title(string $title): bool
 
 function zxnet_ui_template(): string
 {
-	return zxnet_ui_is_new() ? 'zxnet_new.tpl' : 'zxnet.tpl';
+	return 'zxnet_new.tpl';
 }
 
 /** Build a single-line meta description (≈160 chars). */
@@ -64,10 +64,6 @@ function zxnet_date_range(string $from, string $to): array
 
 function zxnet_ui_render($smarty): void
 {
-	if (!zxnet_ui_is_new()) {
-		global $db;
-		include __DIR__ . '/right.php';
-	}
 	$smarty->display(zxnet_ui_template());
 }
 
@@ -88,7 +84,7 @@ $smarty->assign('authors_catalog_url', authors_url_catalog($isEng));
 $smarty->assign('smn_nav_authors_active', false);
 $smarty->assign('smn_nav_ezines_active', false);
 $smarty->assign('smn_nav_gallery_active', false);
-$smarty->assign('smn_nav_zxnet_active', zxnet_ui_is_new());
+$smarty->assign('smn_nav_zxnet_active', true);
 
 $stmt_echo = $db->prepare("SELECT * FROM echos_titles2 WHERE title=? LIMIT 1");
 $stmt_echo->bind_param("s", $e);
@@ -277,8 +273,8 @@ if ($topicKey !== '') {
 
 	}
 
-	// Empty echos (e.g. stale nm) — hide from new UI.
-	if ($subjs === [] && zxnet_ui_is_new()) {
+	// Empty echos (e.g. stale nm) — hide from catalog.
+	if ($subjs === []) {
 		header('Location: ' . $catalogUrl, true, 302);
 		exit;
 	}

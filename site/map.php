@@ -5,15 +5,9 @@ require_once __DIR__ . '/includes/letters_slugs.php';
 require_once __DIR__ . '/includes/authors_slugs.php';
 require_once __DIR__ . '/includes/press_map.php';
 
-function map_ui_is_new(): bool
-{
-	return defined('MAP_UI_VARIANT') && MAP_UI_VARIANT === 'new';
-}
-
 $isEng = (($_GET['lng'] ?? '') === 'eng') || (($smarty->getTemplateVars('lng') ?? '') === 'eng');
 $lng = $isEng ? 'eng' : '';
 
-if (map_ui_is_new()) {
 	$rawFilter = (string) ($_GET['filter'] ?? '');
 	$filter = press_map_normalize_filter($rawFilter);
 	if ($rawFilter !== '' && $filter === '') {
@@ -136,41 +130,3 @@ if (map_ui_is_new()) {
 	$smarty->assign('url_eng', htmlspecialchars(press_map_url(true, $filter), ENT_QUOTES, 'UTF-8'));
 
 	$smarty->display('map_new.tpl');
-	exit;
-}
-
-// Classic map (legacy markers per publication)
-$map = [];
-$z = db_select(
-	$db,
-	"SELECT *, press.id AS idp, screens.id AS map_screen_id, screens.format AS map_screen_format "
-	. "FROM press INNER JOIN cities ON cities.id = press.city "
-	. "LEFT OUTER JOIN countries ON cities.country_id = countries.id "
-	. "LEFT JOIN screens ON screens.id = (SELECT MIN(s2.id) FROM screens s2 WHERE s2.id_press = press.id) "
-	. "WHERE press.type IN (0, 1) AND cities.country_id <> 0 "
-);
-while ($z && ($t = mysqli_fetch_array($z))) {
-	$b = [];
-	$b[0] = $t['lat'];
-	$b[1] = $t['lng'];
-	$thumb = '/img/empty_img.png';
-	if (!empty($t['map_screen_id'])) {
-		$fmt = preg_replace('/[^a-zA-Z0-9]/', '', (string) ($t['map_screen_format'] ?? 'png'));
-		if ($fmt === '') {
-			$fmt = 'png';
-		}
-		$thumb = '/screens/1/' . (int) $t['map_screen_id'] . '.' . $fmt;
-	}
-	$b[2] = "<a href='issue.php?id=" . $t['idp'] . "'>" . $t['title'] . "</a><br><img src='" . $thumb . "' width=64 height=48>";
-	$map[] = $b;
-}
-$smarty->assign('map', json_encode($map, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_UNESCAPED_UNICODE));
-
-if ($_GET['lng'] ?? '') {
-	$smarty->assign('title', 'Map of ZX Spectrum electronic newspapers and magazines');
-} else {
-	$smarty->assign('title', 'Карта электронных газет и журналов для ZX Spectrum');
-}
-
-include 'right.php';
-$smarty->display('map.tpl');

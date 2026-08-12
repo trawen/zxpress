@@ -7,36 +7,17 @@ require_once __DIR__ . '/includes/authors_slugs.php';
 
 function categories_ui_is_new(): bool
 {
-	return defined('CATEGORIES_UI_VARIANT') && CATEGORIES_UI_VARIANT === 'new';
+	return true;
 }
 
 function categories_ui_template(): string
 {
-	return categories_ui_is_new() ? 'categories_new.tpl' : 'ezine_categories.tpl';
+	return 'categories_new.tpl';
 }
 
 function categories_page_url(bool $isEng, int $id = 0, bool $titleOnly = false): string
 {
-	if (categories_ui_is_new()) {
-		return ec_public_category_url($id, $isEng, $titleOnly);
-	}
-
-	$base = '/ezine-categories.php';
-	$qs = [];
-	if ($id > 0) {
-		$qs['id'] = $id;
-	}
-	if ($isEng) {
-		$qs['lng'] = 'eng';
-	}
-	if ($titleOnly) {
-		$qs['title'] = '1';
-	}
-	if ($qs === []) {
-		return $base;
-	}
-
-	return $base . '?' . http_build_query($qs);
+	return ec_public_category_url($id, $isEng, $titleOnly);
 }
 
 /**
@@ -76,7 +57,7 @@ $smarty->assign('smn_nav_gallery_active', false);
 $smarty->assign('smn_nav_zxnet_active', false);
 $smarty->assign('smn_nav_guestbook_active', false);
 $smarty->assign('smn_nav_updates_active', false);
-$smarty->assign('smn_nav_categories_active', categories_ui_is_new());
+$smarty->assign('smn_nav_categories_active', true);
 
 $categories_raw = [];
 $z = db_select($db, 'SELECT * FROM ezine_categories ORDER BY sort_order ASC, name_ru ASC');
@@ -94,7 +75,7 @@ foreach ($categories_raw as $row) {
 }
 
 $category_tree = $id === 0 ? ec_build_category_tree($by_parent, 0) : [];
-if (categories_ui_is_new() && $category_tree !== []) {
+if ($category_tree !== []) {
 	$category_tree = categories_enrich_tree($category_tree, $isEng, $lng, $titleOnly);
 }
 $smarty->assign('category_tree', $category_tree);
@@ -189,16 +170,8 @@ if ($id > 0) {
 				'slug_en' => (string) ($t['article_slug_en'] ?? ''),
 			];
 
-			if (categories_ui_is_new()) {
-				$t['issue_public_url'] = ezn_url_issue($pressRow, $issueRow, $isEng);
-				$t['article_public_url'] = ezn_url_article($pressRow, $issueRow, $articleRow, $isEng);
-			} else {
-				$t['issue_public_url'] = '/issue.php?id=' . (int) $pressRow['id']
-					. ($isEng ? '&lng=eng' : '')
-					. '#' . rawurlencode((string) ($t['issue_title'] ?? ''));
-				$t['article_public_url'] = '/article.php?id=' . $articleId
-					. ($isEng ? '&lng=eng' : '');
-			}
+			$t['issue_public_url'] = ezn_url_issue($pressRow, $issueRow, $isEng);
+			$t['article_public_url'] = ezn_url_article($pressRow, $issueRow, $articleRow, $isEng);
 
 			$articles[] = $t;
 		}
@@ -234,9 +207,5 @@ if ($category) {
 
 $smarty->assign('url_rus', htmlspecialchars(categories_page_url(false, $id, $titleOnly), ENT_QUOTES, 'UTF-8'));
 $smarty->assign('url_eng', htmlspecialchars(categories_page_url(true, $id, $titleOnly), ENT_QUOTES, 'UTF-8'));
-
-if (!categories_ui_is_new()) {
-	include __DIR__ . '/right.php';
-}
 
 $smarty->display(categories_ui_template());

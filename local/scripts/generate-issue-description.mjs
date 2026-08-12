@@ -26,8 +26,8 @@
  *   --no-cdp             свой Chrome + профиль .chrome-profile-issue-desc
  *   --cdp-url=URL
  *   --markdown=PATH      путь к zxpress-markdown (playwright + providers.mjs)
- *   --delay=MS           мин. пауза между выпусками (по умолчанию 8000)
- *   --delay-max=MS       макс. пауза между выпусками (по умолчанию 25000)
+ *   --delay=MS           мин. пауза между выпусками (по умолчанию 6000)
+ *   --delay-max=MS       макс. пауза между выпусками (по умолчанию 18750)
  *   --force              перезаписывать уже готовые JSON
  *
  * Env: ZXPRESS_MARKDOWN, DB_* (через docker compose run php)
@@ -295,8 +295,8 @@ function parseArgs(argv) {
     cdpUrl: process.env.CDP_URL || "http://127.0.0.1:9222",
     markdown: resolveMarkdownRoot(),
     out: null,
-    delay: 8000,
-    delayMax: 25_000,
+    delay: 6000,
+    delayMax: 18_750,
     force: false,
   };
   for (const a of argv) {
@@ -309,7 +309,7 @@ function parseArgs(argv) {
   --issue=z80/01,on-line/05      конкретные выпуски
   --press=z80,spectrofon         несколько изданий
   --press=SLUG --issue-slug=01   один номер у каждого из --press
-  --delay=MS --delay-max=MS      случайная пауза между выпусками (8000–25000)
+  --delay=MS --delay-max=MS      случайная пауза между выпусками (6000–18750)
   --force                        перезаписать уже готовые JSON
   --no-cdp  --cdp-url=URL  --markdown=PATH
   По умолчанию пишет local/work/issue-desc-{id}.json; готовые пропускает`);
@@ -328,8 +328,8 @@ function parseArgs(argv) {
     else if (a.startsWith("--delay-max=")) out.delayMax = Number(a.slice(12));
     else if (a.startsWith("--delay=")) out.delay = Number(a.slice(8));
   }
-  if (!Number.isFinite(out.delay) || out.delay < 0) out.delay = 8000;
-  if (!Number.isFinite(out.delayMax) || out.delayMax < 0) out.delayMax = 25_000;
+  if (!Number.isFinite(out.delay) || out.delay < 0) out.delay = 6000;
+  if (!Number.isFinite(out.delayMax) || out.delayMax < 0) out.delayMax = 18_750;
   if (out.delayMax < out.delay) out.delayMax = out.delay;
   return out;
 }

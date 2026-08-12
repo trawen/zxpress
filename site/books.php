@@ -5,7 +5,7 @@ require_once __DIR__ . '/includes/authors_slugs.php';
 
 function books_ui_template(): string
 {
-	return books_ui_is_new() ? 'books_new.tpl' : 'books.tpl';
+	return 'books_new.tpl';
 }
 
 $lng = $smarty->getTemplateVars('lng');
@@ -20,7 +20,7 @@ $smarty->assign('smn_nav_authors_active', false);
 $smarty->assign('smn_nav_ezines_active', false);
 $smarty->assign('smn_nav_gallery_active', false);
 $smarty->assign('smn_nav_zxnet_active', false);
-$smarty->assign('smn_nav_books_active', books_ui_is_new());
+$smarty->assign('smn_nav_books_active', true);
 $smarty->assign('url_rus', htmlspecialchars(books_url_catalog(false), ENT_QUOTES, 'UTF-8'));
 $smarty->assign('url_eng', htmlspecialchars(books_url_catalog(true), ENT_QUOTES, 'UTF-8'));
 
@@ -57,9 +57,5 @@ while ($z && ($t = mysqli_fetch_array($z))) {
 
 $smarty->assign('books', $books);
 $smarty->assign('books_total', count($books));
-
-if (!books_ui_is_new()) {
-	include __DIR__ . '/right.php';
-}
 
 $smarty->display(books_ui_template());

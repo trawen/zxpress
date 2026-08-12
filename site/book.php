@@ -5,7 +5,7 @@ require_once __DIR__ . '/includes/authors_slugs.php';
 
 function book_ui_template(): string
 {
-	return books_ui_is_new() ? 'book_new.tpl' : 'book.tpl';
+	return 'book_new.tpl';
 }
 
 $smarty->assign('issue_archive_hidden', htmlspecialchars($_GET['issue_archive_hidden'] ?? '', ENT_QUOTES, 'UTF-8'));
@@ -27,7 +27,7 @@ $smarty->assign('smn_nav_authors_active', false);
 $smarty->assign('smn_nav_ezines_active', false);
 $smarty->assign('smn_nav_gallery_active', false);
 $smarty->assign('smn_nav_zxnet_active', false);
-$smarty->assign('smn_nav_books_active', books_ui_is_new());
+$smarty->assign('smn_nav_books_active', true);
 
 $screens = [];
 $z = db_select($db, 'SELECT * FROM pictures WHERE book_id=? ORDER BY pictures.type ASC', 'i', $id);
@@ -116,9 +116,5 @@ $smarty->assign('other_articles', $chapters);
 
 $smarty->assign('url_rus', htmlspecialchars(books_url_book($id, false), ENT_QUOTES, 'UTF-8'));
 $smarty->assign('url_eng', htmlspecialchars(books_url_book($id, true), ENT_QUOTES, 'UTF-8'));
-
-if (!books_ui_is_new()) {
-	include __DIR__ . '/right.php';
-}
 
 $smarty->display(book_ui_template());

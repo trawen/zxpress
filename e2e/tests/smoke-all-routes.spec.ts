@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import {
-  publicHtmlRoutes,
+  publicHtmlRoutesLegacy,
+  publicHtmlRoutesPretty,
   publicNonHtmlRoutes,
   forbiddenAnonymousRoutes,
   staticAssetRoutes,
@@ -31,8 +32,12 @@ function runRouteCase(routes: RouteExpectation[], checkFatal: boolean): void {
   }
 }
 
-test.describe('manifest: public HTML', () => {
-  runRouteCase(publicHtmlRoutes, true);
+test.describe('manifest: public HTML (legacy *.php)', () => {
+  runRouteCase(publicHtmlRoutesLegacy, true);
+});
+
+test.describe('manifest: public HTML (pretty /ru|/en)', () => {
+  runRouteCase(publicHtmlRoutesPretty, true);
 });
 
 test.describe('manifest: RSS / JSON / XML', () => {

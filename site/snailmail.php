@@ -10,12 +10,12 @@ if (!defined('LETTERS_PER_PAGE')) {
 
 function letters_ui_is_new(): bool
 {
-	return !defined('LETTERS_UI_VARIANT') || LETTERS_UI_VARIANT === 'new';
+	return true;
 }
 
 function letters_ui_template(): string
 {
-	return letters_ui_is_new() ? 'letters_new.tpl' : 'letters.tpl';
+	return 'letters_new.tpl';
 }
 
 function letters_ui_render($smarty): void
@@ -27,10 +27,6 @@ function letters_ui_render($smarty): void
 	}
 	if ($smarty->getTemplateVars('smn_nav_authors_active') === null) {
 		$smarty->assign('smn_nav_authors_active', false);
-	}
-	if (!letters_ui_is_new()) {
-		global $db;
-		include __DIR__ . '/right.php';
 	}
 	$smarty->display(letters_ui_template());
 }

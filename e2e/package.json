@@ -7,6 +7,8 @@
   },
   "scripts": {
     "test:e2e": "env -u http_proxy -u https_proxy -u HTTP_PROXY -u HTTPS_PROXY -u ALL_PROXY -u all_proxy playwright test",
+    "test:e2e:smoke": "env -u http_proxy -u https_proxy -u HTTP_PROXY -u HTTPS_PROXY -u ALL_PROXY -u all_proxy playwright test tests/smoke-all-routes.spec.ts",
+    "test:e2e:crawl": "env -u http_proxy -u https_proxy -u HTTP_PROXY -u HTTPS_PROXY -u ALL_PROXY -u all_proxy playwright test tests/crawl-site.spec.ts",
     "test:e2e:ui": "env -u http_proxy -u https_proxy -u HTTP_PROXY -u HTTPS_PROXY -u ALL_PROXY -u all_proxy playwright test --ui"
   }
 }
