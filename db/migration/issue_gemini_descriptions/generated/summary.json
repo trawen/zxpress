@@ -1,0 +1,11 @@
+{
+  "generated_at": "2026-08-14T00:37:20.182145+00:00",
+  "work_dir": "/Users/spectrumism/Projects/zxpress-local/local/work",
+  "json_files": 1970,
+  "updates": 1970,
+  "only_empty": false,
+  "sql": "db/migration/issue_gemini_descriptions/generated/01_update_issue_descriptions.sql",
+  "issue_id_min": 1,
+  "issue_id_max": 2648,
+  "note": "Not applied. Run apply.py when ready."
+}

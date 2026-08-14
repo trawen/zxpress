@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-08-12T22:49:32.379113+00:00",
+  "shots_dir": "/Users/spectrumism/Projects/zxpress-screenshots/screenshots/issues",
+  "total_png": 1136,
+  "matched_pages": 1136,
+  "unmatched_pages": 0,
+  "presses": 104,
+  "screen_id_range": [
+    2483,
+    3618
+  ],
+  "batch_id_range": [
+    11,
+    114
+  ],
+  "source": "migration:issue_emulator_screenshots",
+  "sql": "db/migration/issue_emulator_screenshots/generated/01_screens_activity.sql",
+  "manifest": "db/migration/issue_emulator_screenshots/generated/copy_manifest.tsv",
+  "note": "SQL already applied locally (failed only on ALTER AUTO_INCREMENT). Use apply.py --files-only. Do not re-run full SQL."
+}

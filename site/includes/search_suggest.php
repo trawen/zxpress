@@ -501,7 +501,7 @@ function search_suggest_all(mysqli $db, string $q, bool $isEng, bool $uiNew = fa
 	}
 
 	// Keep entity groups short so later hits stay visible in the dropdown.
-	$maxPress = 2;
+	$maxPress = 5;
 	$maxBooks = 2;
 	$maxLetters = 2;
 	$maxZxnet = 2;

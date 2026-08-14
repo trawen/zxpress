@@ -29,6 +29,22 @@
 
 Нужны: поднятый Docker (`db` + `php`), `npm install` в соседнем `../zxpress-markdown` (playwright). Путь к markdown-репо: `ZXPRESS_MARKDOWN` или `--markdown=PATH`.
 
+## Описание издания из meta выпусков (Gemini)
+
+Берёт `issue.meta_description_*` всех номеров издания и через Gemini пишет JSON для `press`. **В БД ничего не пишет.**
+
+```bash
+# Chrome с remote debugging + открытый gemini.google.com/app (как выше)
+
+./local/scripts/run-generate-press-description.sh
+./local/scripts/run-generate-press-description.sh --press=z80
+./local/scripts/run-generate-press-description.sh --press=z80,on-line,nicron
+# → local/work/press-desc-{id}.json на каждое издание (готовые пропускаются)
+
+# много номеров (Nicron и т.п.) — равномерная выборка meta в промпт:
+./local/scripts/run-generate-press-description.sh --press=nicron --max-issues=80
+```
+
 ## Прочие примеры
 
 ```bash
