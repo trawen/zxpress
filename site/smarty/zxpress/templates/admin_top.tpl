@@ -99,7 +99,7 @@ body {
 <a href="admin_book_rubrics.php">Рубрики книг</a> /
 <a href="admin_letters.php">Письма</a> /
 <a href="admin_publications.php">Публикации</a> /
-<a href="/ru/updates-activity">Activity (тест)</a>
+<a href="/ru/updates-activity">Activity</a>
  —
 <form method="post" action="/logout.php" style="display:inline">
 <input type="hidden" name="csrf_token" value="{$csrf_token}">

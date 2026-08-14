@@ -11,7 +11,7 @@
 	</form>
 	{/if}
 	<a href="{$host}news{$sl|default:'?lng=eng'}">News</a>
-	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/updates"{if $smn_nav_updates_active|default:false} class="is-active"{/if}>What's new</a>
+	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/updates-activity"{if $smn_nav_updates_active|default:false} class="is-active"{/if}>What's new</a>
 	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/gallery"{if $smn_nav_gallery_active|default:false} class="is-active"{/if}>Gallery</a>
 	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/guestbook"{if $smn_nav_guestbook_active|default:false} class="is-active"{/if}>Guestbook</a>
 {else}
@@ -24,7 +24,7 @@
 		<button type="submit">Выйти ({$username})</button>
 	</form>
 	{/if}
-	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/updates"{if $smn_nav_updates_active|default:false} class="is-active"{/if}>Что нового</a>
+	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/updates-activity"{if $smn_nav_updates_active|default:false} class="is-active"{/if}>Что нового</a>
 	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/gallery"{if $smn_nav_gallery_active|default:false} class="is-active"{/if}>Галерея</a>
 	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/guestbook"{if $smn_nav_guestbook_active|default:false} class="is-active"{/if}>Гостевая</a>
 {/if}

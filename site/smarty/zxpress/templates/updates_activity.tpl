@@ -1,144 +1,275 @@
 <!DOCTYPE html>
-<html lang="{if $lng eq 'eng'}en{else}ru{/if}">
+{if $lng eq 'eng'}
+<html lang="en">
+{else}
+<html lang="ru">
+{/if}
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="noindex,nofollow">
 	<title>{$title|strip_tags} — ZXPRESS</title>
-	<style>
-		body { font: 15px/1.45 system-ui, sans-serif; margin: 24px; max-width: 960px; color: #1a1a1a; background: #f7f5ef; }
-		h1 { font-size: 1.4rem; margin: 0 0 8px; }
-		.meta { color: #666; margin-bottom: 16px; }
-		.filters a { margin-right: 10px; }
-		.filters .on { font-weight: 700; }
-		.batch { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 14px 16px; margin: 0 0 12px; }
-		.batch h2 { font-size: 1.05rem; margin: 0 0 6px; }
-		.batch .sum { color: #444; }
-		.batch .when { color: #888; font-size: 13px; margin-top: 4px; }
-		.batch details { margin-top: 10px; }
-		.batch table { width: 100%; border-collapse: collapse; font-size: 13px; }
-		.batch th, .batch td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #eee; vertical-align: top; }
-		.pill { display: inline-block; padding: 1px 7px; border-radius: 999px; background: #eee; font-size: 12px; margin-right: 6px; }
-		.pill.pub { background: #e6f4ea; }
-		.pill.meta { background: #f3e8ff; }
-		.pill.hide { background: #fce8e6; }
-		.pages a { margin-right: 8px; }
-		.warn { padding: 12px; background: #fff3cd; border: 1px solid #ffe69c; border-radius: 6px; }
-		code { font-size: 12px; }
-	</style>
+	{if $description}<meta name="description" content="{$description|strip_tags|escape:'html'}">{/if}
+	{smn_styles}
 </head>
-<body>
-	<h1>{if $lng eq 'eng'}Activity feed (test){else}Лента activity (тест){/if}</h1>
-	<p class="meta">
-		{if $lng eq 'eng'}
-			Reads <code>activity_batch</code> + <code>activity</code>. Not the production /updates page yet.
-		{else}
-			Читает <code>activity_batch</code> + <code>activity</code>. Это не боевая /updates, а тест новой схемы.
-		{/if}
-		—
-		{if $lng eq 'eng'}<a href="{$url_rus}">rus</a>/<b>eng</b>{else}<b>rus</b>/<a href="{$url_eng}">eng</a>{/if}
-	</p>
+<body class="smn">
+	<div class="smn-frame">
+		<header class="smn-header">
+			<div class="smn-header-bar">
+				<a class="smn-brand" href="{$updates_catalog_url}">
+					{include file="snailmail_new_brand.tpl"}
+				</a>
+				<nav class="smn-nav" aria-label="{if $lng eq 'eng'}Sections{else}Разделы{/if}">
+					<div class="smn-nav-primary">
+						<a class="smn-nav-item" href="{$ezines_catalog_url}">{if $lng eq 'eng'}Diskmags{else}Электронная пресса{/if}</a>
+						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/books">{if $lng eq 'eng'}Books{else}Книги{/if}</a>
+						<a class="smn-nav-item" href="{$letters_catalog_url}">{if $lng eq 'eng'}Letters{else}Письма{/if}</a>
+						<a class="smn-nav-item" href="{if $lng eq 'eng'}/en{else}/ru{/if}/zxnet">ZXNet</a>
+					</div>
+					<div class="smn-nav-more-wrap">
+						<button type="button" class="smn-nav-more-toggle" aria-expanded="false" aria-controls="smn-nav-more" aria-haspopup="true">
+							{if $lng eq 'eng'}More...{else}Ещё...{/if}
+						</button>
+						<div id="smn-nav-more" class="smn-nav-more" hidden>
+							<div class="smn-nav-overflow" hidden></div>
+							{include file="snailmail_new_nav_more.tpl"}
+						</div>
+					</div>
+				</nav>
+				<div class="smn-lang">
+					{if $lng eq 'eng'}
+						<a href="{$url_rus}">rus</a><span aria-hidden="true">/</span><b>eng</b>
+					{else}
+						<b>rus</b><span aria-hidden="true">/</span><a href="{$url_eng}">eng</a>
+					{/if}
+				</div>
+			</div>
+			<form class="smn-search" method="GET" action="{if $lng eq 'eng'}/en{else}/ru{/if}/search">
+				{if $lng eq 'eng'}<input type="hidden" name="lng" value="eng">{/if}
+				<div class="smn-search-wrap">
+					<label class="smn-search-label" for="input_query_smn">{if $lng eq 'eng'}Search{else}Поиск{/if}</label>
+					<input class="smn-search-input" id="input_query_smn" name="q" type="search" placeholder="{if $lng eq 'eng'}Search...{else}Поиск...{/if}" value="{$q|default:''|escape:'html'}" autocomplete="off">
+					<div id="suggest-smn" class="smn-search-suggest"></div>
+				</div>
+			</form>
+			<nav class="smn-breadcrumbs" aria-label="{if $lng eq 'eng'}Breadcrumbs{else}Хлебные крошки{/if}">
+				<a href="{if $lng eq 'eng'}/en{else}/ru{/if}">{if $lng eq 'eng'}Home{else}Главная{/if}</a>
+				<span class="smn-breadcrumb-sep" aria-hidden="true">→</span>
+				<span class="smn-breadcrumb-current">{if $lng eq 'eng'}What's new{else}Что нового{/if}</span>
+			</nav>
+		</header>
+
+		<main class="smn-main">
+			<section class="smn-hero smn-hero--compact">
+				<h1>{if $lng eq 'eng'}Activity feed{else}Лента активности{/if}</h1>
+				<p class="smn-lead">
+					{if $lng eq 'eng'}
+						Live stream of uploads and edits across the archive — screenshots, articles, and other site changes.
+					{else}
+						Живая лента загрузок и правок по архиву — скриншоты, статьи и другие изменения на сайте.
+					{/if}
+				</p>
+			</section>
 
 {if !$activity_ready}
-	<div class="warn">Таблицы activity ещё не созданы. Примените <code>db/migration/activity.sql</code>.</div>
+			<p class="smn-empty-note">{if $lng eq 'eng'}Activity tables are not ready yet.{else}Таблицы activity ещё не созданы.{/if}</p>
 {else}
-	<p class="filters">
-		{if $activity_show_all}
-			<a href="{$activity_base_url}{if $activity_domain}?domain={$activity_domain|escape:'url'}{/if}">{if $lng eq 'eng'}Public only{else}Только public{/if}</a>
-			<span class="on">{if $lng eq 'eng'}All batches{else}Все batch{/if}</span>
-		{else}
-			<span class="on">{if $lng eq 'eng'}Public only{else}Только public{/if}</span>
-			<a href="{$activity_base_url}?all=1{if $activity_domain}&amp;domain={$activity_domain|escape:'url'}{/if}">{if $lng eq 'eng'}All batches{else}Все batch{/if}</a>
-		{/if}
-		|
-		<a href="{$activity_base_url}{if $activity_show_all}?all=1{/if}"{if $activity_domain eq ''} class="on"{/if}>{if $lng eq 'eng'}all domains{else}все домены{/if}</a>
-		{foreach from=$activity_domains item=d}
-			<a href="{$activity_base_url}?domain={$d.domain|escape:'url'}{if $activity_show_all}&amp;all=1{/if}"{if $activity_domain eq $d.domain} class="on"{/if}>{$d.domain} ({$d.c})</a>
-		{/foreach}
-	</p>
-	<p class="meta">{if $lng eq 'eng'}Batches{else}Batch-ей{/if}: {$activity_total}</p>
+			{assign var=updates_pages_top value=true}
+			{include file="updates_activity_pages.tpl"}
 
-	{if $activity_total_pages gt 1}
-	<p class="pages">
-		{section name=pg loop=$activity_total_pages}
-			{assign var=pnum value=$smarty.section.pg.index+1}
-			{if $pnum eq $activity_page}
-				<b>{$pnum}</b>
-			{else}
-				<a href="{$activity_base_url}?page={$pnum}{if $activity_show_all}&amp;all=1{/if}{if $activity_domain}&amp;domain={$activity_domain|escape:'url'}{/if}">{$pnum}</a>
-			{/if}
-		{/section}
-	</p>
-	{/if}
-
-	{foreach from=$activity_batches item=b}
-	<section class="batch">
-		<h2>
-			{if $lng eq 'eng'}
-				{if $b.title_en}{$b.title_en|escape:'html'}{else}{$b.title_ru|escape:'html'}{/if}
-			{else}
-				{$b.title_ru|escape:'html'}
-			{/if}
-		</h2>
-		<div class="sum">
-			<span class="pill">{$b.domain|escape:'html'}</span>
-			{if $b.is_public}<span class="pill pub">public</span>{else}<span class="pill hide">hidden</span>{/if}
-			{if $lng eq 'eng'}{$b.summary_en|escape:'html'}{else}{$b.summary_ru|escape:'html'}{/if}
-			· {$b.items_count} / public {$b.public_items_count}
-		</div>
-		<div class="when">{$b.date_label|escape:'html'} · #{$b.id} · {$b.source|escape:'html'}
-			{if $b.root_type} · root {$b.root_type}:{$b.root_id}{/if}
-		</div>
-		{if $b.url_ru || $b.url_en}
-			<p><a href="{if $lng eq 'eng' && $b.url_en}{$b.url_en|escape:'html'}{else}{$b.url_ru|escape:'html'}{/if}">{if $lng eq 'eng'}Open{else}Открыть{/if}</a></p>
-		{/if}
-		{if $b.thumb_url}
-			<p><img src="{$b.thumb_url|escape:'html'}" alt="" style="max-width:180px;height:auto"></p>
-		{/if}
-		<details>
-			<summary>{if $lng eq 'eng'}Events ({$b.events|@count}){else}События ({$b.events|@count}){/if}</summary>
-			<table>
-				<thead>
-					<tr>
-						<th>ID</th>
-						<th>{if $lng eq 'eng'}Type{else}Тип{/if}</th>
-						<th>verb/action</th>
-						<th>{if $lng eq 'eng'}Title{else}Заголовок{/if}</th>
-						<th>scope</th>
-					</tr>
-				</thead>
-				<tbody>
-				{foreach from=$b.events item=e}
-					<tr>
-						<td>{$e.id}</td>
-						<td>{$e.object_label|escape:'html'} #{$e.object_id}</td>
-						<td><code>{$e.verb|escape:'html'}</code> / <code>{$e.action|escape:'html'}</code></td>
-						<td>
-							{if $lng eq 'eng'}
-								{if $e.title_en}{$e.title_en|escape:'html'}{else}{$e.title_ru|escape:'html'}{/if}
-							{else}
-								{$e.title_ru|escape:'html'}
-							{/if}
-							{if $e.url_ru} <a href="{$e.url_ru|escape:'html'}">→</a>{/if}
-							{if $e.thumb_url}
-								<br><img src="{$e.thumb_url|escape:'html'}" alt="" style="max-width:120px;height:auto;margin-top:4px">
-							{/if}
-						</td>
-						<td>
-							{if $e.event_scope eq 'content'}<span class="pill pub">content</span>
-							{elseif $e.event_scope eq 'metadata'}<span class="pill meta">metadata</span>
-							{else}<span class="pill">{$e.event_scope|escape:'html'}</span>{/if}
-							{if !$e.is_public}<span class="pill hide">private</span>{/if}
-						</td>
-					</tr>
-				{/foreach}
-				</tbody>
-			</table>
-		</details>
-	</section>
-	{foreachelse}
-		<p>{if $lng eq 'eng'}No batches yet. Save something in admin.{else}Пока пусто — сохраните что-нибудь в админке.{/if}</p>
-	{/foreach}
+{if $activity_batches && $activity_batches|@count gt 0}
+			<section class="smn-updates smn-activity" aria-label="{if $lng eq 'eng'}Activity{else}Активность{/if}">
+{foreach from=$activity_batches item=b}
+{if $b.show_rule}
+				<div class="smn-updates-rule" aria-hidden="true"></div>
 {/if}
+				<article class="smn-updates-row smn-activity-row">
+					<div class="smn-updates-date">{if $b.date}<span class="smn-activity-date">{$b.date}</span>{/if}</div>
+					<div class="smn-activity-when">{if $b.time_label}<span class="smn-activity-time">{$b.time_label|escape:'html'}</span>{/if}</div>
+					<div class="smn-updates-body">
+						{if !$b.is_public}
+						<span class="smn-activity-meta">
+							<span class="smn-activity-flag">{if $lng eq 'eng'}hidden{else}скрыто{/if}</span>
+						</span>
+						{/if}
+{if $b.is_screens_batch && $b.events && $b.events|@count gt 0}
+						<span class="smn-activity-title">
+{if $b.url_display}
+							<a class="smn-updates-press" href="{$b.url_display|escape:'html'}">{$b.title_press|default:$b.title_display|escape:'html'}</a>
+{else}
+							<span class="smn-updates-press">{$b.title_press|default:$b.title_display|escape:'html'}</span>
+{/if}
+							<span class="smn-activity-title-suffix"> — </span>
+							<details class="smn-activity-details smn-activity-details--inline">
+								<summary>{$b.details_label|escape:'html'}</summary>
+								<ul class="smn-activity-events">
+{foreach from=$b.events item=e}
+									<li class="smn-activity-event">
+{if $e.thumb_url}
+										<a class="smn-activity-thumb" href="{if $e.url_display}{$e.url_display|escape:'html'}{elseif $b.url_display}{$b.url_display|escape:'html'}{else}{$e.thumb_url|escape:'html'}{/if}">
+											<img src="{$e.thumb_url|escape:'html'}" alt="" loading="lazy" width="128" height="96">
+										</a>
+{/if}
+										<div class="smn-activity-event-body">
+{if $e.url_display}
+											<a class="smn-activity-event-title" href="{$e.url_display|escape:'html'}">{$e.title_display|escape:'html'}</a>
+{else}
+											<span class="smn-activity-event-title">{$e.title_display|escape:'html'}</span>
+{/if}
+											<span class="smn-activity-event-meta">{$e.object_label|escape:'html'}</span>
+										</div>
+									</li>
+{/foreach}
+								</ul>
+							</details>
+						</span>
+{else}
+{if $b.url_display}
+						<span class="smn-activity-title"><a class="smn-updates-press" href="{$b.url_display|escape:'html'}">{$b.title_press|default:$b.title_display|escape:'html'}</a>{if $b.title_suffix}<span class="smn-activity-title-suffix">{$b.title_suffix|escape:'html'}</span>{/if}</span>
+{else}
+						<span class="smn-activity-title"><span class="smn-updates-press">{$b.title_press|default:$b.title_display|escape:'html'}</span>{if $b.title_suffix}<span class="smn-activity-title-suffix">{$b.title_suffix|escape:'html'}</span>{/if}</span>
+{/if}
+{if $b.summary_display}
+						<p class="smn-activity-summary">{$b.summary_display|escape:'html'}</p>
+{/if}
+{if $b.events && $b.events|@count gt 0}
+						<details class="smn-activity-details">
+							<summary>
+								{if $b.details_label}
+									{$b.details_label|escape:'html'}
+								{elseif $lng eq 'eng'}
+									{$b.events|@count} {if $b.events|@count == 1}event{else}events{/if}
+								{else}
+									{$b.events|@count} {if $b.events|@count == 1}событие{elseif $b.events|@count < 5}события{else}событий{/if}
+								{/if}
+							</summary>
+							<ul class="smn-activity-events">
+{foreach from=$b.events item=e}
+								<li class="smn-activity-event">
+{if $e.thumb_url}
+									<a class="smn-activity-thumb" href="{if $e.url_display}{$e.url_display|escape:'html'}{elseif $b.url_display}{$b.url_display|escape:'html'}{else}{$e.thumb_url|escape:'html'}{/if}">
+										<img src="{$e.thumb_url|escape:'html'}" alt="" loading="lazy" width="128" height="96">
+									</a>
+{/if}
+									<div class="smn-activity-event-body">
+{if $e.url_display}
+										<a class="smn-activity-event-title" href="{$e.url_display|escape:'html'}">{$e.title_display|escape:'html'}</a>
+{else}
+										<span class="smn-activity-event-title">{$e.title_display|escape:'html'}</span>
+{/if}
+										<span class="smn-activity-event-meta">{$e.object_label|escape:'html'}</span>
+									</div>
+								</li>
+{/foreach}
+							</ul>
+						</details>
+{/if}
+{/if}
+					</div>
+				</article>
+{/foreach}
+			</section>
+{else}
+			<p class="smn-empty-note">{if $lng eq 'eng'}No activity yet.{else}Пока нет записей.{/if}</p>
+{/if}
+
+			{assign var=updates_pages_top value=false}
+			{include file="updates_activity_pages.tpl"}
+{/if}
+		</main>
+
+		<footer class="smn-footer">
+			<div class="smn-copyright">
+				{if $lng eq 'eng'}
+				<p><b>ZXPRESS</b> — Magazines, newspapers and books for ZX Spectrum &nbsp;© 2009–{$smarty.now|date_format:"%Y"}</p>
+				<p class="smn-disclaimer">You may use site materials only with a backlink to the source</p>
+				{else}
+				<p><b>ZXPRESS</b> — Журналы, газеты и книги для ZX Spectrum &nbsp;© 2009–{$smarty.now|date_format:"%Y"}</p>
+				<p class="smn-disclaimer">Использование материалов сайта разрешено только при указании обратной ссылки</p>
+				{/if}
+			</div>
+		</footer>
+	</div>
+{include file="snailmail_new_scripts.tpl"}
+<script>
+(function () {
+	function pageHref(baseUrl, page) {
+		if (page <= 1) return baseUrl;
+		return baseUrl + (baseUrl.indexOf('?') >= 0 ? '&' : '?') + 'page=' + page;
+	}
+
+	function buildPages(total, current, maxVisible) {
+		if (total <= maxVisible) {
+			var full = [];
+			for (var p = 1; p <= total; p++) full.push(p);
+			return full;
+		}
+		var interiorSlots = Math.max(1, maxVisible - 2);
+		var start = current - Math.floor((interiorSlots - 1) / 2);
+		var end = start + interiorSlots - 1;
+		if (start < 2) {
+			start = 2;
+			end = start + interiorSlots - 1;
+		}
+		if (end > total - 1) {
+			end = total - 1;
+			start = end - interiorSlots + 1;
+		}
+		var out = [1];
+		if (start > 2) out.push('gap');
+		for (var n = start; n <= end; n++) out.push(n);
+		if (end < total - 1) out.push('gap');
+		out.push(total);
+		return out;
+	}
+
+	function renderNav(nav) {
+		var total = parseInt(nav.getAttribute('data-total-pages') || '0', 10);
+		var current = parseInt(nav.getAttribute('data-current-page') || '1', 10);
+		var baseUrl = nav.getAttribute('data-base-url') || '';
+		var list = nav.querySelector('.smn-pages-list');
+		if (!list || total <= 1 || !baseUrl) return;
+
+		var prev = nav.querySelector('.smn-pages-prev, .smn-pages-prev.is-disabled');
+		var next = nav.querySelector('.smn-pages-next, .smn-pages-next.is-disabled');
+		var navWidth = nav.clientWidth || 0;
+		var sideWidth = (prev ? prev.offsetWidth : 0) + (next ? next.offsetWidth : 0) + 48;
+		var free = Math.max(120, navWidth - sideWidth);
+		var maxVisible = Math.max(5, Math.floor(free / 42));
+		var model = buildPages(total, current, maxVisible);
+
+		var html = '';
+		for (var i = 0; i < model.length; i++) {
+			var item = model[i];
+			if (item === 'gap') {
+				html += '<span class="smn-pages-gap" aria-hidden="true">…</span>';
+			} else if (item === current) {
+				html += '<b aria-current="page">' + item + '</b>';
+			} else {
+				html += '<a href="' + pageHref(baseUrl, item) + '">' + item + '</a>';
+			}
+		}
+		list.innerHTML = html;
+	}
+
+	function renderAll() {
+		var navs = document.querySelectorAll('[data-adaptive-pages="activity"]');
+		for (var i = 0; i < navs.length; i++) renderNav(navs[i]);
+	}
+
+	var resizeTimer = 0;
+	window.addEventListener('resize', function () {
+		window.clearTimeout(resizeTimer);
+		resizeTimer = window.setTimeout(renderAll, 120);
+	});
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', renderAll);
+	} else {
+		renderAll();
+	}
+})();
+</script>
+
 </body>
 </html>

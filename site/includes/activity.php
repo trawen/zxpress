@@ -915,3 +915,133 @@ function activity_object_label(string $type, bool $eng = false): string
 	];
 	return $eng ? ($en[$type] ?? $type) : ($ru[$type] ?? $type);
 }
+
+/**
+ * Human labels for activity_batch.domain (feed filters / row meta).
+ */
+function activity_domain_label(string $domain, bool $eng = false): string
+{
+	$ru = [
+		'ezine' => 'Электронная пресса',
+		'periodical' => 'Периодика',
+		'publication' => 'Публикации',
+		'book' => 'Книги',
+		'letter' => 'Письма',
+		'news' => 'Новости',
+		'author' => 'Авторы',
+		'publisher' => 'Издательства',
+		'gallery' => 'Галерея',
+	];
+	$en = [
+		'ezine' => 'Diskmags',
+		'periodical' => 'Periodicals',
+		'publication' => 'Publications',
+		'book' => 'Books',
+		'letter' => 'Letters',
+		'news' => 'News',
+		'author' => 'Authors',
+		'publisher' => 'Publishers',
+		'gallery' => 'Gallery',
+	];
+	$key = strtolower(trim($domain));
+	return $eng ? ($en[$key] ?? $domain) : ($ru[$key] ?? $domain);
+}
+
+function activity_plural_ru(int $n, string $one, string $few, string $many): string
+{
+	$n = abs($n);
+	$mod10 = $n % 10;
+	$mod100 = $n % 100;
+	if ($mod10 === 1 && $mod100 !== 11) {
+		return $one;
+	}
+	if ($mod10 >= 2 && $mod10 <= 4 && ($mod100 < 12 || $mod100 > 14)) {
+		return $few;
+	}
+	return $many;
+}
+
+/**
+ * Pretty title / details label for screenshot batches on the public feed.
+ *
+ * @param array<string,mixed> $batch
+ * @param list<array<string,mixed>> $events
+ * @return array{title:string,title_press:string,title_suffix:string,summary:string,details_label:string,is_screens:bool}
+ */
+function activity_feed_present_batch(array $batch, array $events, bool $eng): array
+{
+	$title = $eng
+		? (trim((string) ($batch['title_en'] ?? '')) !== ''
+			? (string) $batch['title_en']
+			: (string) ($batch['title_ru'] ?? ''))
+		: (string) ($batch['title_ru'] ?? '');
+	$summary = $eng
+		? (trim((string) ($batch['summary_en'] ?? '')) !== ''
+			? (string) $batch['summary_en']
+			: (string) ($batch['summary_ru'] ?? ''))
+		: (string) ($batch['summary_ru'] ?? '');
+
+	$empty = [
+		'title' => $title,
+		'title_press' => $title,
+		'title_suffix' => '',
+		'summary' => $summary,
+		'details_label' => '',
+		'is_screens' => false,
+	];
+
+	$screenEvents = 0;
+	foreach ($events as $e) {
+		$action = (string) ($e['action'] ?? '');
+		$type = (string) ($e['object_type'] ?? '');
+		$verb = (string) ($e['verb'] ?? '');
+		if ($action === 'screen.uploaded' || ($type === 'screen' && $verb === 'uploaded')) {
+			$screenEvents++;
+		}
+	}
+	$n = $screenEvents > 0 ? $screenEvents : (int) ($batch['items_count'] ?? 0);
+	$isScreens = $screenEvents > 0 && count($events) > 0 && $screenEvents === count($events);
+	if (!$isScreens) {
+		$src = (string) ($batch['source'] ?? '');
+		$titleHint = mb_strtolower($title);
+		$isScreens = strpos($src, 'issue_emulator_screenshots') !== false
+			|| strpos($titleHint, 'скриншот') !== false
+			|| strpos($titleHint, 'screenshot') !== false;
+		if ($isScreens && $screenEvents === 0) {
+			$n = (int) ($batch['items_count'] ?? 0);
+		}
+	}
+
+	if (!$isScreens || $n <= 0) {
+		return $empty;
+	}
+
+	$press = $title;
+	if (preg_match('/^(.+?)\s*:\s*(скриншот|screenshot)/iu', $title, $m)) {
+		$press = trim($m[1]);
+	} elseif (preg_match('/^(.+?)\s+[—–-]\s+/u', $title, $m)) {
+		$press = trim($m[1]);
+	}
+
+	if ($eng) {
+		$word = activity_plural_en($n, 'screenshot', 'screenshots');
+		$details = '+' . $n . ' ' . $word;
+	} else {
+		$word = activity_plural_ru($n, 'скриншот', 'скриншота', 'скриншотов');
+		$details = '+' . $n . ' ' . $word;
+	}
+
+	return [
+		'title' => $press . ' — ' . $details,
+		'title_press' => $press,
+		'title_suffix' => ' — ',
+		'summary' => '',
+		'details_label' => $details,
+		'is_screens' => true,
+	];
+}
+
+function activity_plural_en(int $n, string $one, string $many): string
+{
+	return abs($n) === 1 ? $one : $many;
+}
