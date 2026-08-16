@@ -481,45 +481,10 @@ function activity_batch_finalize(mysqli $db, int $batchId = 0, bool $keepEmpty =
 
 	$partsRu = [];
 	$partsEn = [];
-	$labelRu = [
-		'article:created' => ['статья', 'статьи', 'статей'],
-		'screen:uploaded' => ['скриншот', 'скриншота', 'скриншотов'],
-		'file:uploaded' => ['файл', 'файла', 'файлов'],
-		'issue:created' => ['выпуск', 'выпуска', 'выпусков'],
-		'press:created' => ['издание', 'издания', 'изданий'],
-		'book:created' => ['книга', 'книги', 'книг'],
-		'chapter:created' => ['глава', 'главы', 'глав'],
-		'periodical_issue:created' => ['номер', 'номера', 'номеров'],
-		'periodical_article:created' => ['статья', 'статьи', 'статей'],
-		'publication:created' => ['публикация', 'публикации', 'публикаций'],
-		'publication_article:created' => ['материал', 'материала', 'материалов'],
-		'letter:created' => ['письмо', 'письма', 'писем'],
-		'letter:published' => ['письмо', 'письма', 'писем'],
-		'news:created' => ['новость', 'новости', 'новостей'],
-	];
-	$labelEn = [
-		'article:created' => ['article', 'articles', 'articles'],
-		'screen:uploaded' => ['screenshot', 'screenshots', 'screenshots'],
-		'file:uploaded' => ['file', 'files', 'files'],
-		'issue:created' => ['issue', 'issues', 'issues'],
-		'press:created' => ['magazine', 'magazines', 'magazines'],
-		'book:created' => ['book', 'books', 'books'],
-		'chapter:created' => ['chapter', 'chapters', 'chapters'],
-		'periodical_issue:created' => ['issue', 'issues', 'issues'],
-		'periodical_article:created' => ['article', 'articles', 'articles'],
-		'publication:created' => ['publication', 'publications', 'publications'],
-		'publication_article:created' => ['item', 'items', 'items'],
-		'letter:created' => ['letter', 'letters', 'letters'],
-		'letter:published' => ['letter', 'letters', 'letters'],
-		'news:created' => ['news item', 'news items', 'news items'],
-	];
-
 	foreach ($counts as $key => $n) {
-		if (!isset($labelRu[$key])) {
-			continue;
-		}
-		$partsRu[] = '+' . $n . ' ' . getNumEnding($n, $labelRu[$key]);
-		$partsEn[] = '+' . $n . ' ' . ($n === 1 ? $labelEn[$key][0] : $labelEn[$key][2]);
+		[$type, $verb] = array_pad(explode(':', $key, 2), 2, '');
+		$partsRu[] = activity_count_phrase($type, $verb, $n, false);
+		$partsEn[] = activity_count_phrase($type, $verb, $n, true);
 	}
 
 	$summaryRu = $partsRu !== [] ? implode(', ', $partsRu) : ('Событий: ' . count($rows));
@@ -962,13 +927,103 @@ function activity_plural_ru(int $n, string $one, string $few, string $many): str
 }
 
 /**
- * Pretty title / details label for screenshot batches on the public feed.
+ * Countable words for object types: [one, few, many].
+ *
+ * @return array{0:string,1:string,2:string}
+ */
+function activity_object_count_words(string $type, bool $eng = false): array
+{
+	$ru = [
+		'article' => ['статья', 'статьи', 'статей'],
+		'screen' => ['скриншот', 'скриншота', 'скриншотов'],
+		'illustration' => ['иллюстрация', 'иллюстрации', 'иллюстраций'],
+		'file' => ['файл', 'файла', 'файлов'],
+		'issue' => ['выпуск', 'выпуска', 'выпусков'],
+		'press' => ['издание', 'издания', 'изданий'],
+		'book' => ['книга', 'книги', 'книг'],
+		'chapter' => ['глава', 'главы', 'глав'],
+		'book_file' => ['файл книги', 'файла книги', 'файлов книги'],
+		'book_image' => ['обложка', 'обложки', 'обложек'],
+		'periodical' => ['издание', 'издания', 'изданий'],
+		'periodical_issue' => ['номер', 'номера', 'номеров'],
+		'periodical_article' => ['статья', 'статьи', 'статей'],
+		'periodical_issue_image' => ['скан', 'скана', 'сканов'],
+		'periodical_issue_file' => ['файл номера', 'файла номера', 'файлов номера'],
+		'publication' => ['публикация', 'публикации', 'публикаций'],
+		'publication_article' => ['материал', 'материала', 'материалов'],
+		'letter' => ['письмо', 'письма', 'писем'],
+		'news' => ['новость', 'новости', 'новостей'],
+		'news_file' => ['файл новости', 'файла новости', 'файлов новости'],
+		'author' => ['автор', 'автора', 'авторов'],
+		'publisher' => ['издательство', 'издательства', 'издательств'],
+		'book_rubric' => ['рубрика', 'рубрики', 'рубрик'],
+		'category' => ['категория', 'категории', 'категорий'],
+		'tag' => ['тег', 'тега', 'тегов'],
+	];
+	$en = [
+		'article' => ['article', 'articles', 'articles'],
+		'screen' => ['screenshot', 'screenshots', 'screenshots'],
+		'illustration' => ['illustration', 'illustrations', 'illustrations'],
+		'file' => ['file', 'files', 'files'],
+		'issue' => ['issue', 'issues', 'issues'],
+		'press' => ['magazine', 'magazines', 'magazines'],
+		'book' => ['book', 'books', 'books'],
+		'chapter' => ['chapter', 'chapters', 'chapters'],
+		'book_file' => ['book file', 'book files', 'book files'],
+		'book_image' => ['cover', 'covers', 'covers'],
+		'periodical' => ['periodical', 'periodicals', 'periodicals'],
+		'periodical_issue' => ['issue', 'issues', 'issues'],
+		'periodical_article' => ['article', 'articles', 'articles'],
+		'periodical_issue_image' => ['scan', 'scans', 'scans'],
+		'periodical_issue_file' => ['issue file', 'issue files', 'issue files'],
+		'publication' => ['publication', 'publications', 'publications'],
+		'publication_article' => ['item', 'items', 'items'],
+		'letter' => ['letter', 'letters', 'letters'],
+		'news' => ['news item', 'news items', 'news items'],
+		'news_file' => ['news file', 'news files', 'news files'],
+		'author' => ['author', 'authors', 'authors'],
+		'publisher' => ['publisher', 'publishers', 'publishers'],
+		'book_rubric' => ['rubric', 'rubrics', 'rubrics'],
+		'category' => ['category', 'categories', 'categories'],
+		'tag' => ['tag', 'tags', 'tags'],
+	];
+	$map = $eng ? $en : $ru;
+	if (isset($map[$type])) {
+		return $map[$type];
+	}
+	$fallback = mb_strtolower(activity_object_label($type, $eng));
+	return [$fallback, $fallback, $fallback];
+}
+
+/**
+ * Short counted phrase for a batch summary: "+3 файла", "правки: 2 статьи".
+ */
+function activity_count_phrase(string $type, string $verb, int $n, bool $eng): string
+{
+	$words = activity_object_count_words($type, $eng);
+	$word = $eng ? ($n === 1 ? $words[0] : $words[2]) : getNumEnding($n, $words);
+	$additive = ['created', 'uploaded', 'published', 'added', 'imported', 'restored'];
+	if (in_array($verb, $additive, true)) {
+		return '+' . $n . ' ' . $word;
+	}
+	if ($verb === 'deleted') {
+		return ($eng ? 'removed' : 'удалено') . ': ' . $n . ' ' . $word;
+	}
+	$prefix = $eng
+		? ($n === 1 ? 'edit' : 'edits')
+		: getNumEnding($n, ['правка', 'правки', 'правок']);
+	return $prefix . ': ' . $n . ' ' . $word;
+}
+
+/**
+ * Pretty title / details label for feed batches: parent name + counted events.
  *
  * @param array<string,mixed> $batch
  * @param list<array<string,mixed>> $events
- * @return array{title:string,title_press:string,title_suffix:string,summary:string,details_label:string,is_screens:bool}
+ * @param array{title?:string,url?:string} $root resolved parent (press / issue / book) of the batch
+ * @return array{title:string,title_press:string,title_suffix:string,summary:string,details_label:string,url_press:string,is_compact:bool}
  */
-function activity_feed_present_batch(array $batch, array $events, bool $eng): array
+function activity_feed_present_batch(array $batch, array $events, bool $eng, array $root = []): array
 {
 	$title = $eng
 		? (trim((string) ($batch['title_en'] ?? '')) !== ''
@@ -987,57 +1042,58 @@ function activity_feed_present_batch(array $batch, array $events, bool $eng): ar
 		'title_suffix' => '',
 		'summary' => $summary,
 		'details_label' => '',
-		'is_screens' => false,
+		'url_press' => '',
+		'is_compact' => false,
 	];
 
-	$screenEvents = 0;
-	foreach ($events as $e) {
-		$action = (string) ($e['action'] ?? '');
-		$type = (string) ($e['object_type'] ?? '');
-		$verb = (string) ($e['verb'] ?? '');
-		if ($action === 'screen.uploaded' || ($type === 'screen' && $verb === 'uploaded')) {
-			$screenEvents++;
-		}
-	}
-	$n = $screenEvents > 0 ? $screenEvents : (int) ($batch['items_count'] ?? 0);
-	$isScreens = $screenEvents > 0 && count($events) > 0 && $screenEvents === count($events);
-	if (!$isScreens) {
-		$src = (string) ($batch['source'] ?? '');
-		$titleHint = mb_strtolower($title);
-		$isScreens = strpos($src, 'issue_emulator_screenshots') !== false
-			|| strpos($titleHint, 'скриншот') !== false
-			|| strpos($titleHint, 'screenshot') !== false;
-		if ($isScreens && $screenEvents === 0) {
-			$n = (int) ($batch['items_count'] ?? 0);
-		}
-	}
-
-	if (!$isScreens || $n <= 0) {
+	if ($events === []) {
 		return $empty;
 	}
 
-	$press = $title;
-	if (preg_match('/^(.+?)\s*:\s*(скриншот|screenshot)/iu', $title, $m)) {
-		$press = trim($m[1]);
-	} elseif (preg_match('/^(.+?)\s+[—–-]\s+/u', $title, $m)) {
-		$press = trim($m[1]);
+	$counts = [];
+	foreach ($events as $e) {
+		$type = (string) ($e['object_type'] ?? '');
+		if ($type === '') {
+			continue;
+		}
+		$key = $type . ':' . (string) ($e['verb'] ?? '');
+		$counts[$key] = ($counts[$key] ?? 0) + 1;
 	}
 
-	if ($eng) {
-		$word = activity_plural_en($n, 'screenshot', 'screenshots');
-		$details = '+' . $n . ' ' . $word;
-	} else {
-		$word = activity_plural_ru($n, 'скриншот', 'скриншота', 'скриншотов');
-		$details = '+' . $n . ' ' . $word;
+	$parts = [];
+	foreach ($counts as $key => $n) {
+		[$type, $verb] = array_pad(explode(':', $key, 2), 2, '');
+		$parts[] = activity_count_phrase($type, $verb, $n, $eng);
+	}
+	$details = $parts !== [] ? implode(', ', $parts) : trim($summary);
+	if ($details === '') {
+		$n = count($events);
+		$details = $eng
+			? $n . ' ' . activity_plural_en($n, 'event', 'events')
+			: $n . ' ' . activity_plural_ru($n, 'событие', 'события', 'событий');
+	}
+
+	$head = trim((string) ($root['title'] ?? ''));
+	if ($head === '') {
+		$head = $title;
+		if (preg_match('/^(.+?)\s*:\s*(скриншот|screenshot)/iu', $title, $m)) {
+			$head = trim($m[1]);
+		} elseif (preg_match('/^(.+?)\s+[—–-]\s+/u', $title, $m)) {
+			$head = trim($m[1]);
+		}
+	}
+	if ($head === '') {
+		return $empty;
 	}
 
 	return [
-		'title' => $press . ' — ' . $details,
-		'title_press' => $press,
+		'title' => $head . ' — ' . $details,
+		'title_press' => $head,
 		'title_suffix' => ' — ',
 		'summary' => '',
 		'details_label' => $details,
-		'is_screens' => true,
+		'url_press' => trim((string) ($root['url'] ?? '')),
+		'is_compact' => true,
 	];
 }
 

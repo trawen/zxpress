@@ -92,7 +92,7 @@
 							<span class="smn-activity-flag">{if $lng eq 'eng'}hidden{else}скрыто{/if}</span>
 						</span>
 						{/if}
-{if $b.is_screens_batch && $b.events && $b.events|@count gt 0}
+{if $b.is_compact && $b.events && $b.events|@count gt 0}
 						<span class="smn-activity-title">
 {if $b.url_display}
 							<a class="smn-updates-press" href="{$b.url_display|escape:'html'}">{$b.title_press|default:$b.title_display|escape:'html'}</a>

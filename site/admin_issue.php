@@ -15,8 +15,24 @@ $id = intval($_GET['id'] ?? 0);
 
 $tm = time();
 
+$nextIssueSortOrder = static function (mysqli $db, int $pressId): int {
+    if ($pressId <= 0) {
+        return 10;
+    }
+    $stmt = $db->prepare('SELECT COALESCE(MAX(sort_order), 0) AS max_sort FROM issue WHERE id_press=?');
+    if (!$stmt) {
+        return 10;
+    }
+    $stmt->bind_param('i', $pressId);
+    $stmt->execute();
+    $row = $stmt->get_result()->fetch_assoc();
+    $stmt->close();
+
+    return max(10, ((int) ($row['max_sort'] ?? 0)) + 10);
+};
+
 // INPUT FORM
-if ($_POST['save'] == "save") {
+if (($_POST['save'] ?? '') === 'save') {
     csrf_verify();
 
     $pressCreated = false;
@@ -88,11 +104,15 @@ if ($_POST['save'] == "save") {
         if ($_POST['upload_file_new_issue']) {
 
             $title = $_POST['upload_file_new_issue'] ?? '';
+            $newIssueSortOrder = (int) ($_POST['upload_file_new_issue_sort_order'] ?? 0);
+            if ($newIssueSortOrder <= 0) {
+                $newIssueSortOrder = $nextIssueSortOrder($db, $id);
+            }
             $stmt_is = $db->prepare(
-                'INSERT INTO issue (`id`, `id_press`, `title`, `date`, `views`) VALUES (NULL, ?, ?, 0, 0)'
+                'INSERT INTO issue (`id`, `id_press`, `title`, `date`, `sort_order`, `views`) VALUES (NULL, ?, ?, 0, ?, 0)'
             );
             if ($stmt_is) {
-                $stmt_is->bind_param('is', $id, $title);
+                $stmt_is->bind_param('isi', $id, $title, $newIssueSortOrder);
                 $stmt_is->execute();
             }
             $id_issue = mysqli_insert_id($db);
@@ -129,7 +149,10 @@ if ($_POST['save'] == "save") {
         $file_title = $_POST['upload_file_title'] ?? '';
         $size = (int)ceil(((int) ($upload['size'] ?? 0)) / 1000);
 
-        $stmt_f = $db->prepare("INSERT INTO files (`id`, `id_issue`, `date`, `name`, `type`, `file_title`, `size`) VALUES (NULL, ?, ?, ?, ?, ?, ?)");
+        $stmt_f = $db->prepare(
+            'INSERT INTO files (`id`, `id_issue`, `date`, `name`, `type`, `file_title`, `size`, `downloads`, `delete`, `file_comment`) '
+            . "VALUES (NULL, ?, ?, ?, ?, ?, ?, 0, 0, '')"
+        );
         if ($stmt_f) {
             $stmt_f->bind_param("iisisi", $id_issue, $tm, $name, $type, $file_title, $size);
             $stmt_f->execute();
@@ -151,11 +174,15 @@ if ($_POST['save'] == "save") {
 
     // ADD ISSUE NUMBER
     if ($add_issue !== "") {
+        $addIssueSortOrder = (int) ($_POST['add_issue_sort_order'] ?? 0);
+        if ($addIssueSortOrder <= 0) {
+            $addIssueSortOrder = $nextIssueSortOrder($db, $id);
+        }
         $stmt_ai = $db->prepare(
-            'INSERT INTO issue (`id`, `id_press`, `title`, `date`, `views`) VALUES (NULL, ?, ?, 0, 0)'
+            'INSERT INTO issue (`id`, `id_press`, `title`, `date`, `sort_order`, `views`) VALUES (NULL, ?, ?, 0, ?, 0)'
         );
         if ($stmt_ai) {
-            $stmt_ai->bind_param('is', $id, $add_issue);
+            $stmt_ai->bind_param('isi', $id, $add_issue, $addIssueSortOrder);
             $stmt_ai->execute();
             $newIssueId = (int) mysqli_insert_id($db);
             if ($newIssueId > 0) {
@@ -199,9 +226,10 @@ if ($_POST['save'] == "save") {
 
             $id_issue = (int)$t['id'];
             $title = $_POST['issue_title_' . $id_issue] ?? '';
-            $stmt_up = $db->prepare("UPDATE issue SET title=? WHERE id=? LIMIT 1");
+            $sortOrder = max(0, (int) ($_POST['issue_sort_order_' . $id_issue] ?? $t['sort_order'] ?? 0));
+            $stmt_up = $db->prepare("UPDATE issue SET title=?, sort_order=? WHERE id=? LIMIT 1");
             if ($stmt_up) {
-                $stmt_up->bind_param("si", $title, $id_issue);
+                $stmt_up->bind_param("sii", $title, $sortOrder, $id_issue);
                 $stmt_up->execute();
             }
 
@@ -237,7 +265,7 @@ if ($_POST['save'] == "save") {
     }
 
     // UPDATE PRESS NUMBER
-    if ($_POST['press_change']) {
+    if (!empty($_POST['press_change'])) {
 
         $stmt_cnt = $db->prepare("SELECT COUNT(*) AS c FROM issue WHERE id_press=?");
         if ($stmt_cnt) {
@@ -406,7 +434,7 @@ if ($id) {
         $smarty->assign('press', mysqli_fetch_array($z));
     }
 
-    $stmt_gi = $db->prepare("SELECT * FROM issue WHERE id_press=? ORDER BY LENGTH(title) ASC, title ASC");
+    $stmt_gi = $db->prepare("SELECT * FROM issue WHERE id_press=? ORDER BY sort_order ASC, id ASC");
     if ($stmt_gi) {
         $stmt_gi->bind_param("i", $id);
         $stmt_gi->execute();

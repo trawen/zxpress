@@ -6,6 +6,7 @@
 require 'init.inc';
 require_once __DIR__ . '/includes/ezine_slugs.php';
 require_once __DIR__ . '/includes/authors_slugs.php';
+require_once __DIR__ . '/includes/books_public.php';
 
 function activity_page_url(bool $isEng, int $page, bool $showAll, string $domain): string
 {
@@ -24,6 +25,114 @@ function activity_page_url(bool $isEng, int $page, bool $showAll, string $domain
 		return $base;
 	}
 	return $base . '?' . http_build_query($qs);
+}
+
+/**
+ * Object the batch belongs to: explicit root, shared parent of all events, or the single event itself.
+ *
+ * @param array<string,mixed> $batch
+ * @return array{0:string,1:int}
+ */
+function activity_feed_batch_root_ref(array $batch): array
+{
+	$rootType = (string) ($batch['root_type'] ?? '');
+	$rootId = (int) ($batch['root_id'] ?? 0);
+	if ($rootType !== '' && $rootId > 0) {
+		return [$rootType, $rootId];
+	}
+
+	$events = $batch['events'] ?? [];
+	if ($events === []) {
+		return ['', 0];
+	}
+
+	$parents = [];
+	foreach ($events as $e) {
+		$parents[(string) ($e['parent_type'] ?? '') . ':' . (int) ($e['parent_id'] ?? 0)] = [
+			(string) ($e['parent_type'] ?? ''),
+			(int) ($e['parent_id'] ?? 0),
+		];
+	}
+	if (count($parents) === 1) {
+		$parent = reset($parents);
+		if ($parent[0] !== '' && $parent[1] > 0) {
+			return $parent;
+		}
+	}
+
+	if (count($events) === 1) {
+		$only = $events[0];
+		return [(string) ($only['object_type'] ?? ''), (int) ($only['object_id'] ?? 0)];
+	}
+
+	return ['', 0];
+}
+
+/**
+ * Titles + public urls for batch parents (press / issue / book), keyed by "type:id".
+ *
+ * @param list<array{0:string,1:int}> $refs
+ * @return array<string,array{title:string,url:string}>
+ */
+function activity_feed_resolve_roots(mysqli $db, array $refs, bool $isEng): array
+{
+	$out = [];
+	$byType = [];
+	foreach ($refs as [$type, $id]) {
+		if ($id > 0 && $type !== '') {
+			$byType[$type][$id] = $id;
+		}
+	}
+
+	if (!empty($byType['press'])) {
+		$ids = implode(',', array_map('intval', $byType['press']));
+		$z = $db->query("SELECT id, title, slug_ru, slug_en FROM press WHERE id IN ($ids)");
+		while ($z && ($row = $z->fetch_assoc())) {
+			$out['press:' . (int) $row['id']] = [
+				'title' => title_plain((string) ($row['title'] ?? '')),
+				'url' => ezn_url_press($row, $isEng),
+			];
+		}
+	}
+
+	if (!empty($byType['issue'])) {
+		$ids = implode(',', array_map('intval', $byType['issue']));
+		$z = $db->query(
+			'SELECT i.id, i.title, i.slug_ru, i.slug_en, p.id AS press_id, p.title AS press_title, '
+			. 'p.slug_ru AS press_slug_ru, p.slug_en AS press_slug_en '
+			. "FROM issue i LEFT JOIN press p ON p.id=i.id_press WHERE i.id IN ($ids)"
+		);
+		while ($z && ($row = $z->fetch_assoc())) {
+			$press = [
+				'id' => (int) ($row['press_id'] ?? 0),
+				'slug_ru' => (string) ($row['press_slug_ru'] ?? ''),
+				'slug_en' => (string) ($row['press_slug_en'] ?? ''),
+			];
+			$pressTitle = title_plain((string) ($row['press_title'] ?? ''));
+			$issueTitle = title_plain((string) ($row['title'] ?? ''));
+			$label = $pressTitle !== '' ? $pressTitle : $issueTitle;
+			if ($pressTitle !== '' && $issueTitle !== '') {
+				$label = $pressTitle . ' · #' . $issueTitle;
+			}
+			$out['issue:' . (int) $row['id']] = [
+				'title' => $label,
+				'url' => $press['id'] > 0 ? ezn_url_issue($press, $row, $isEng) : ('/issue.php?id=' . (int) $row['id']),
+			];
+		}
+	}
+
+	if (!empty($byType['book'])) {
+		$ids = implode(',', array_map('intval', $byType['book']));
+		$z = $db->query("SELECT id, title1 FROM books WHERE id IN ($ids)");
+		while ($z && ($row = $z->fetch_assoc())) {
+			$out['book:' . (int) $row['id']] = [
+				'title' => title_plain((string) ($row['title1'] ?? '')),
+				'url' => books_url_book((int) $row['id'], $isEng),
+			];
+		}
+	}
+
+	return $out;
 }
 
 $lng = $smarty->getTemplateVars('lng');
@@ -139,15 +248,31 @@ if ($ready) {
 		$urlRu = trim((string) ($b['url_ru'] ?? ''));
 		$b['url_display'] = ($isEng && $urlEn !== '') ? $urlEn : $urlRu;
 
-		$present = activity_feed_present_batch($b, $events, $isEng);
+		$batches[] = $b;
+	}
+
+	$rootRefs = [];
+	foreach ($batches as $b) {
+		$rootRefs[] = activity_feed_batch_root_ref($b);
+	}
+	$roots = activity_feed_resolve_roots($db, $rootRefs, $isEng);
+
+	foreach ($batches as &$b) {
+		[$rootType, $rootId] = activity_feed_batch_root_ref($b);
+		$root = $roots[$rootType . ':' . $rootId] ?? [];
+
+		$present = activity_feed_present_batch($b, $b['events'], $isEng, $root);
 		$b['title_display'] = $present['title'];
 		$b['title_press'] = $present['title_press'];
 		$b['title_suffix'] = $present['title_suffix'];
 		$b['summary_display'] = $present['summary'];
 		$b['details_label'] = $present['details_label'];
-		$b['is_screens_batch'] = $present['is_screens'] ? 1 : 0;
-		$batches[] = $b;
+		$b['is_compact'] = $present['is_compact'] ? 1 : 0;
+		if ($present['url_press'] !== '') {
+			$b['url_display'] = $present['url_press'];
+		}
 	}
+	unset($b);
 }
 
 $domains = [];
