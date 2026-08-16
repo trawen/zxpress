@@ -380,7 +380,7 @@ $smarty->assign('ezines_filters', [
 	[
 		'slug' => 'reports',
 		'url' => ezn_url_catalog_new($isEng, 'reports'),
-		'label' => $isEng ? 'Reports' : 'Отчёты',
+		'label' => $isEng ? 'Reports' : 'Другое',
 		'count' => $typeCounts[2],
 		'active' => $filter === 'reports',
 	],

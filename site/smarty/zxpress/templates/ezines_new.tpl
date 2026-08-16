@@ -69,7 +69,7 @@
 {elseif $ezines_filter eq 'magazines'}
 				<span class="smn-breadcrumb-current">{if $lng eq 'eng'}Magazines{else}Журналы{/if}</span>
 {elseif $ezines_filter eq 'reports'}
-				<span class="smn-breadcrumb-current">{if $lng eq 'eng'}Reports{else}Отчёты{/if}</span>
+				<span class="smn-breadcrumb-current">{if $lng eq 'eng'}Reports{else}Другое{/if}</span>
 {/if}
 {else}
 				<span class="smn-breadcrumb-current">{include file="snailmail_bc_ezines_label.tpl"}</span>
