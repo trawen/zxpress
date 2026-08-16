@@ -78,23 +78,34 @@
 {if $press && $view_mode eq 'issue' && $current_issue}
 
 			<article class="smn-press smn-press--issue">
-				<h1 class="smn-press-title">{$press.title_plain} #{$current_issue.title}</h1>
-				<p class="smn-press-type">{if $lng eq 'eng'}{if $press.type eq 0}Diskmag (electronic paper){elseif $press.type eq 2}Diskmag (electronic report){else}Diskmag (electronic magazine){/if}{else}{if $press.type eq 0}Электронная газета{elseif $press.type eq 2}Электронный отчёт{else}Электронный журнал{/if}{/if}</p>
+				<div class="smn-press-headline">
+					<h1 class="smn-press-title">{$press.title_plain} #{$current_issue.title}</h1>
+					<p class="smn-press-type">{if $lng eq 'eng'}{if $press.type eq 0}Diskmag (electronic paper){elseif $press.type eq 2}Diskmag (electronic report){else}Diskmag (electronic magazine){/if}{else}{if $press.type eq 0}Электронная газета{elseif $press.type eq 2}Электронный отчёт{else}Электронный журнал{/if}{/if}</p>
+{if $current_issue.download_url}
+					<a class="smn-press-meta-dl smn-press-dl--beside" href="{$current_issue.download_url}"{if $lng eq 'eng'} aria-label="Download"{else} aria-label="Скачать"{/if}>
+						<svg class="smn-press-meta-dl-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+					</a>
+{elseif $press.id}
+					<a class="smn-press-meta-dl smn-press-dl--beside" href="{$host}d.php?id={$press.id}"{if $lng eq 'eng'} aria-label="Download"{else} aria-label="Скачать"{/if}>
+						<svg class="smn-press-meta-dl-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+					</a>
+{/if}
+				</div>
 				<p class="smn-press-issue-meta">
 {if $current_issue.date_display}
 					<span class="smn-press-issue-date smn-press-issue-date--hero">{$current_issue.date_display}</span>
 {/if}
 {if $current_issue.download_url || $press.id}
-{if $current_issue.date_display}<span class="smn-press-issue-meta-sep" aria-hidden="true">·</span>{/if}
+{if $current_issue.date_display}<span class="smn-press-issue-meta-sep smn-press-issue-meta-sep--dl" aria-hidden="true">·</span>{/if}
 {if $current_issue.download_url}
-					<a class="smn-press-issue-action" href="{$current_issue.download_url}">{if $lng eq 'eng'}Download{else}Скачать{/if}</a>
+					<a class="smn-press-issue-action smn-press-issue-action--dl" href="{$current_issue.download_url}">{if $lng eq 'eng'}Download{else}Скачать{/if}</a>
 {else}
-					<a class="smn-press-issue-action" href="{$host}d.php?id={$press.id}">{if $lng eq 'eng'}Download{else}Скачать{/if}</a>
+					<a class="smn-press-issue-action smn-press-issue-action--dl" href="{$host}d.php?id={$press.id}">{if $lng eq 'eng'}Download{else}Скачать{/if}</a>
 {/if}
 {/if}
 {if $current_issue.emulator_url}
-{if $current_issue.date_display || $current_issue.download_url || $press.id}<span class="smn-press-issue-meta-sep" aria-hidden="true">·</span>{/if}
-					<button type="button" class="smn-press-issue-action" id="smn-emulator-run" data-url="{$current_issue.emulator_url|escape:'html'}">{if $lng eq 'eng'}Launch in ZX Spectrum online emulator{else}Запустить в online эмуляторе ZX Spectrum{/if}</button>
+{if $current_issue.date_display || $current_issue.download_url || $press.id}<span class="smn-press-issue-meta-sep smn-press-issue-meta-sep--emulator" aria-hidden="true">·</span>{/if}
+					<button type="button" class="smn-press-issue-action smn-press-issue-action--emulator" id="smn-emulator-run" data-url="{$current_issue.emulator_url|escape:'html'}">{if $lng eq 'eng'}Launch in ZX Spectrum online emulator{else}Запустить в online эмуляторе ZX Spectrum{/if}</button>
 {/if}
 				</p>
 
@@ -158,14 +169,19 @@
 {elseif $press}
 
 			<article class="smn-press">
-				<h1 class="smn-press-title">{$press.title_plain}</h1>
-				<p class="smn-press-type">{if $lng eq 'eng'}{if $press.type eq 0}Diskmag (electronic paper){elseif $press.type eq 2}Diskmag (electronic report){else}Diskmag (electronic magazine){/if}{else}{if $press.type eq 0}Электронная газета{elseif $press.type eq 2}Электронный отчёт{else}Электронный журнал{/if}{/if}</p>
+				<div class="smn-press-headline">
+					<h1 class="smn-press-title">{$press.title_plain}</h1>
+					<p class="smn-press-type">{if $lng eq 'eng'}{if $press.type eq 0}Diskmag (electronic paper){elseif $press.type eq 2}Diskmag (electronic report){else}Diskmag (electronic magazine){/if}{else}{if $press.type eq 0}Электронная газета{elseif $press.type eq 2}Электронный отчёт{else}Электронный журнал{/if}{/if}</p>
+					<a class="smn-press-meta-dl smn-press-dl--beside" href="{$host}d.php?id={$press.id}"{if $lng eq 'eng'} aria-label="Download archive"{else} aria-label="Скачать архив"{/if}>
+						<svg class="smn-press-meta-dl-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+					</a>
+				</div>
 
 				<p class="smn-press-meta">
 {if $press.name}
 					<span class="smn-press-meta-place">
 {if $press.country_id}<img class="smn-ezine-flag" src="{$host}img/{$press.country_id}.png" width="16" height="10" alt="">{/if}
-						{$press.name}{if $press.country_name} ({$press.country_name}){/if}
+						<span class="smn-press-meta-city">{$press.name}</span>{if $press.country_name}<span class="smn-press-meta-country"> ({$press.country_name})</span>{/if}
 					</span>
 {/if}
 {if $press.years_from}
@@ -176,13 +192,15 @@
 					<span class="smn-press-meta-count">
 						<b>{$press.numbers}</b>
 {if $lng eq 'eng'}
-						issues
+						<span class="smn-press-meta-count-label">issues</span>
 {else}
-						{$num}
+						<span class="smn-press-meta-count-label">{$num}</span>
 {/if}
 					</span>
-					<span class="smn-press-meta-sep" aria-hidden="true">·</span>
-					<a class="smn-press-meta-dl" href="{$host}d.php?id={$press.id}">{if $lng eq 'eng'}Download archive{else}Скачать архив{/if}</a>
+					<span class="smn-press-meta-sep smn-press-meta-sep--dl" aria-hidden="true">·</span>
+					<a class="smn-press-meta-dl smn-press-dl--meta" href="{$host}d.php?id={$press.id}">
+						<span class="smn-press-meta-dl-text">{if $lng eq 'eng'}Download archive{else}Скачать архив{/if}</span>
+					</a>
 				</p>
 
 				{if $timeline}

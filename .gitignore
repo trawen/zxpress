@@ -40,6 +40,7 @@ site/image-archive/
 site/archive/
 site/img/*
 !site/img/style.css
+!site/img/snailmail-new.css
 site/covers/
 site/pictures/
 site/screens/

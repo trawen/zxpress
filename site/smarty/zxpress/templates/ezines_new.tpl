@@ -236,19 +236,19 @@
 				<li class="smn-ezine-index-item{if $catalog[n].online_articles eq 0} is-offline{/if}">
 					<a class="smn-ezine-index-row" href="{$catalog[n].public_url}">
 						<span class="smn-ezine-index-text">
-							<span class="smn-ezine-index-main">
+							<span class="smn-ezine-index-headline">
 								<span class="smn-ezine-index-name">{$catalog[n].title_plain}</span>
-								{if $catalog[n].issues_count_label}<span class="smn-ezine-index-count">{$catalog[n].issues_count_label}</span>{/if}
-							</span>
-							<span class="smn-ezine-index-meta">
 {if !$ezines_filter}
 								{if $catalog[n].type_label}<span class="smn-ezine-index-type">{$catalog[n].type_label}</span>{/if}
 {/if}
+							</span>
+							<span class="smn-ezine-index-meta">
+								{if $catalog[n].issues_count_label}<span class="smn-ezine-index-count">{$catalog[n].issues_count_label}</span>{/if}
 								{if $catalog[n].years_label}<span class="smn-ezine-index-years">{$catalog[n].years_label}</span>{/if}
 								{if $catalog[n].city_name_label || $catalog[n].country_label}
 								<span class="smn-ezine-index-city">
-									{if $catalog[n].country_id}<img class="smn-ezine-flag" src="{$host}img/{$catalog[n].country_id}.png" width="16" height="10" alt="">{/if}
 									{if $catalog[n].city_name_label}<span class="smn-ezine-index-city-name">{$catalog[n].city_name_label}</span>{/if}
+									{if $catalog[n].country_id}<img class="smn-ezine-flag" src="{$host}img/{$catalog[n].country_id}.png" width="16" height="10" alt="">{/if}
 									{if $catalog[n].country_label}<span class="smn-ezine-index-country">({$catalog[n].country_label})</span>{/if}
 								</span>
 								{/if}

@@ -28,17 +28,45 @@ function issue_ui_render($smarty, bool $isEng): void
 	$smarty->display(issue_ui_template());
 }
 
-function issue_format_date(int $ts, bool $isEng): string
+function issue_month_short(string $mm, bool $isEng, bool $genitive = false): string
 {
-	global $months, $mnt;
+	if ($isEng) {
+		static $en = [
+			'01' => 'Jan', '02' => 'Feb', '03' => 'Mar', '04' => 'Apr',
+			'05' => 'May', '06' => 'Jun', '07' => 'Jul', '08' => 'Aug',
+			'09' => 'Sep', '10' => 'Oct', '11' => 'Nov', '12' => 'Dec',
+		];
+		return $en[$mm] ?? '';
+	}
+	static $nom = [
+		'01' => 'янв', '02' => 'фев', '03' => 'мар', '04' => 'апр',
+		'05' => 'май', '06' => 'июн', '07' => 'июл', '08' => 'авг',
+		'09' => 'сен', '10' => 'окт', '11' => 'ноя', '12' => 'дек',
+	];
+	static $gen = [
+		'01' => 'янв', '02' => 'фев', '03' => 'мар', '04' => 'апр',
+		'05' => 'мая', '06' => 'июн', '07' => 'июл', '08' => 'авг',
+		'09' => 'сен', '10' => 'окт', '11' => 'ноя', '12' => 'дек',
+	];
+	return ($genitive ? $gen : $nom)[$mm] ?? '';
+}
+
+function issue_format_month_year(int $ts, bool $isEng): string
+{
 	if ($ts <= 0) {
 		return '';
 	}
-	if ($isEng) {
-		return date('d F Y', $ts);
+	$mm = date('m', $ts);
+	return issue_month_short($mm, $isEng, false) . ' ' . date('Y', $ts);
+}
+
+function issue_format_date(int $ts, bool $isEng): string
+{
+	if ($ts <= 0) {
+		return '';
 	}
-	$m = date('m', $ts);
-	return date('d ' . ($months[$m] ?? '') . ' Y', $ts);
+	$mm = date('m', $ts);
+	return date('d ', $ts) . issue_month_short($mm, $isEng, true) . date(' Y', $ts);
 }
 
 $smarty->assign('issue_archive_hidden', htmlspecialchars($_GET['issue_archive_hidden'] ?? '', ENT_QUOTES, 'UTF-8'));
@@ -126,7 +154,7 @@ if ($slugRoute) {
 
 $c = [];
 $screensByIssue = [];
-$stmt = mysqli_prepare($db, "SELECT * FROM issue, screens WHERE issue.id_press=? AND screens.id_issue=issue.id ORDER BY LENGTH(issue.title) DESC, issue.title DESC, screens.type ASC");
+$stmt = mysqli_prepare($db, "SELECT * FROM issue, screens WHERE issue.id_press=? AND screens.id_issue=issue.id ORDER BY issue.sort_order DESC, screens.type ASC");
 mysqli_stmt_bind_param($stmt, "i", $id);
 mysqli_stmt_execute($stmt);
 $z = mysqli_stmt_get_result($stmt);
@@ -171,21 +199,13 @@ if (($_GET['lng'] ?? '') === 'eng') {
 }
 
 if ($t['years_to'] != $t['years_from']) {
-	if ($_GET['lng']) {
-		$t['years_to'] = date('F Y', $t['years_to']);
-	} else {
-		$t['years_to'] = date('' . $mnt[date('m', $t['years_to'])] . ' Y', $t['years_to']);
-	}
+	$t['years_to'] = issue_format_month_year((int) $t['years_to'], $isEng);
 } else {
 	unset($t['years_to']);
 }
 
 if ($t['years_from']) {
-	if ($_GET['lng']) {
-		$t['years_from'] = date('F Y', $t['years_from']);
-	} else {
-		$t['years_from'] = date($mnt[date('m', $t['years_from'])] . ' Y', $t['years_from']);
-	}
+	$t['years_from'] = issue_format_month_year((int) $t['years_from'], $isEng);
 }
 
 $num = ['выпуск', 'выпуска', 'выпусков'];
@@ -291,7 +311,7 @@ if ($viewMode === 'issue' && $currentIssue) {
 }
 
 $is = [];
-$stmt = mysqli_prepare($db, 'SELECT * FROM issue, files WHERE id_press=? AND files.id_issue=issue.id ORDER BY LENGTH(title) ASC, title ASC');
+$stmt = mysqli_prepare($db, 'SELECT * FROM issue, files WHERE id_press=? AND files.id_issue=issue.id ORDER BY sort_order ASC, title ASC');
 mysqli_stmt_bind_param($stmt, 'i', $id);
 mysqli_stmt_execute($stmt);
 $z = mysqli_stmt_get_result($stmt);
@@ -305,7 +325,7 @@ $issuesList = [];
 if ($viewMode === 'press') {
 	$stmtIssues = mysqli_prepare(
 		$db,
-		'SELECT id, id_press, title, date, slug_ru, slug_en FROM issue WHERE id_press=? ORDER BY LENGTH(title) DESC, title DESC'
+		'SELECT id, id_press, title, date, slug_ru, slug_en FROM issue WHERE id_press=? ORDER BY sort_order DESC, id DESC'
 	);
 	if ($stmtIssues) {
 		$stmtIssues->bind_param('i', $id);
@@ -397,7 +417,7 @@ if ($viewMode === 'issue') {
 	if ($currentIssueId > 0) {
 		$sql .= ' AND issue.id=?';
 	}
-	$sql .= ' ORDER BY LENGTH(issue.title) DESC, issue.title DESC, articles.number, articles.title';
+	$sql .= ' ORDER BY issue.sort_order DESC, articles.number, articles.title';
 	$stmt = mysqli_prepare($db, $sql);
 	if ($currentIssueId > 0) {
 		mysqli_stmt_bind_param($stmt, 'ii', $id, $currentIssueId);
@@ -455,7 +475,7 @@ $nextIssueNav = null;
 if ($viewMode === 'issue' && $currentIssueId > 0 && is_array($pressRow)) {
 	$stmtNav = mysqli_prepare(
 		$db,
-		'SELECT id, id_press, title, slug_ru, slug_en FROM issue WHERE id_press=? ORDER BY LENGTH(title) ASC, title ASC'
+		'SELECT id, id_press, title, slug_ru, slug_en FROM issue WHERE id_press=? ORDER BY sort_order ASC, id ASC'
 	);
 	if ($stmtNav) {
 		$stmtNav->bind_param('i', $id);

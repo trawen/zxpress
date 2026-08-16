@@ -223,6 +223,9 @@
 		) {
 			return;
 		}
+		if (window.matchMedia && window.matchMedia('(max-width: 820px)').matches) {
+			return;
+		}
 		var covers = document.querySelectorAll('.smn-list-cover');
 		for (var i = 0; i < covers.length; i++) {
 			(function (cover) {
@@ -469,21 +472,47 @@
 			header.style.setProperty('--smn-menu-pad-top', Math.ceil(bottom + 14) + 'px');
 		}
 
+		var closeTimer = null;
+
+		function onGuardScroll(e) {
+			if (!header.classList.contains('is-menu-open')) return;
+			if (drawer.contains(e.target)) return;
+			e.preventDefault();
+		}
+
 		function closeMenu() {
+			if (!header.classList.contains('is-menu-open')) {
+				drawer.hidden = true;
+				return;
+			}
 			header.classList.remove('is-menu-open');
 			document.body.classList.remove('smn-menu-open');
 			btn.setAttribute('aria-expanded', 'false');
+			if (closeTimer) {
+				clearTimeout(closeTimer);
+				closeTimer = null;
+			}
+			// Close instantly — no reverse slide.
 			drawer.hidden = true;
 		}
 
 		function openMenu() {
+			if (closeTimer) {
+				clearTimeout(closeTimer);
+				closeTimer = null;
+			}
 			fillDrawer();
 			syncDrawerPad();
-			header.classList.add('is-menu-open');
-			document.body.classList.add('smn-menu-open');
-			btn.setAttribute('aria-expanded', 'true');
 			drawer.hidden = false;
 			drawer.scrollTop = 0;
+			// Two frames: apply closed transform, then open — otherwise no slide.
+			requestAnimationFrame(function () {
+				requestAnimationFrame(function () {
+					header.classList.add('is-menu-open');
+					document.body.classList.add('smn-menu-open');
+				});
+			});
+			btn.setAttribute('aria-expanded', 'true');
 		}
 
 		function toggleMenu(e) {
@@ -499,6 +528,8 @@
 		document.addEventListener('keydown', function (e) {
 			if (e.key === 'Escape') closeMenu();
 		});
+		document.addEventListener('touchmove', onGuardScroll, { passive: false });
+		document.addEventListener('wheel', onGuardScroll, { passive: false });
 		window.addEventListener('resize', function () {
 			if (header.classList.contains('is-menu-open')) syncDrawerPad();
 		});

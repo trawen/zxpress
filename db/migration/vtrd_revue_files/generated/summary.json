@@ -1,0 +1,251 @@
+{
+  "source": "migration:vtrd_revue_files",
+  "files_dir": "/Users/spectrumism/Projects/zxpress-local/local/work/vtrd-books",
+  "count": 40,
+  "missing": 0,
+  "summary_ru": "+40 файлов",
+  "title_ru": "ZX-Ревю: файлы выпусков",
+  "items": [
+    {
+      "book_id": 62,
+      "file_name": "REVU95_1.ZIP",
+      "size_kb": 4711,
+      "bytes": 4710336
+    },
+    {
+      "book_id": 63,
+      "file_name": "REVU9101.ZIP",
+      "size_kb": 237,
+      "bytes": 236198
+    },
+    {
+      "book_id": 64,
+      "file_name": "REVU9102.ZIP",
+      "size_kb": 242,
+      "bytes": 241094
+    },
+    {
+      "book_id": 65,
+      "file_name": "REVU9103.ZIP",
+      "size_kb": 169,
+      "bytes": 168598
+    },
+    {
+      "book_id": 66,
+      "file_name": "REVU9145.ZIP",
+      "size_kb": 443,
+      "bytes": 442813
+    },
+    {
+      "book_id": 67,
+      "file_name": "REVU9106.ZIP",
+      "size_kb": 226,
+      "bytes": 225001
+    },
+    {
+      "book_id": 68,
+      "file_name": "REVU9178.ZIP",
+      "size_kb": 445,
+      "bytes": 444083
+    },
+    {
+      "book_id": 69,
+      "file_name": "REVU9109.ZIP",
+      "size_kb": 269,
+      "bytes": 268628
+    },
+    {
+      "book_id": 70,
+      "file_name": "REVU9110.ZIP",
+      "size_kb": 312,
+      "bytes": 311297
+    },
+    {
+      "book_id": 71,
+      "file_name": "RE911112.ZIP",
+      "size_kb": 371,
+      "bytes": 370441
+    },
+    {
+      "book_id": 72,
+      "file_name": "REVU95_2.ZIP",
+      "size_kb": 1284,
+      "bytes": 1283119
+    },
+    {
+      "book_id": 73,
+      "file_name": "REVU95_3.ZIP",
+      "size_kb": 2526,
+      "bytes": 2525542
+    },
+    {
+      "book_id": 74,
+      "file_name": "REVU95_4.ZIP",
+      "size_kb": 1292,
+      "bytes": 1291615
+    },
+    {
+      "book_id": 75,
+      "file_name": "REVU95_5.ZIP",
+      "size_kb": 3384,
+      "bytes": 3383333
+    },
+    {
+      "book_id": 76,
+      "file_name": "REVU95_6.ZIP",
+      "size_kb": 3055,
+      "bytes": 3054442
+    },
+    {
+      "book_id": 77,
+      "file_name": "REVU9401.ZIP",
+      "size_kb": 1269,
+      "bytes": 1268895
+    },
+    {
+      "book_id": 78,
+      "file_name": "REVU9402.ZIP",
+      "size_kb": 3197,
+      "bytes": 3196334
+    },
+    {
+      "book_id": 79,
+      "file_name": "REVU9403.ZIP",
+      "size_kb": 2405,
+      "bytes": 2404625
+    },
+    {
+      "book_id": 80,
+      "file_name": "REVU9404.ZIP",
+      "size_kb": 2000,
+      "bytes": 1999393
+    },
+    {
+      "book_id": 81,
+      "file_name": "REVU9405.ZIP",
+      "size_kb": 1631,
+      "bytes": 1630715
+    },
+    {
+      "book_id": 82,
+      "file_name": "REVU9406.ZIP",
+      "size_kb": 1523,
+      "bytes": 1522226
+    },
+    {
+      "book_id": 83,
+      "file_name": "REVU9612.ZIP",
+      "size_kb": 2539,
+      "bytes": 2538626
+    },
+    {
+      "book_id": 84,
+      "file_name": "REVU3_96.ZIP",
+      "size_kb": 1640,
+      "bytes": 1639055
+    },
+    {
+      "book_id": 85,
+      "file_name": "REVU9645.ZIP",
+      "size_kb": 1705,
+      "bytes": 1704795
+    },
+    {
+      "book_id": 86,
+      "file_name": "REVU6_96.ZIP",
+      "size_kb": 133,
+      "bytes": 132217
+    },
+    {
+      "book_id": 87,
+      "file_name": "REVU7896.ZIP",
+      "size_kb": 9639,
+      "bytes": 9638950
+    },
+    {
+      "book_id": 88,
+      "file_name": "REVU9_96.ZIP",
+      "size_kb": 5170,
+      "bytes": 5169684
+    },
+    {
+      "book_id": 89,
+      "file_name": "REVU9212.ZIP",
+      "size_kb": 516,
+      "bytes": 515665
+    },
+    {
+      "book_id": 90,
+      "file_name": "REVU9234.ZIP",
+      "size_kb": 459,
+      "bytes": 458147
+    },
+    {
+      "book_id": 91,
+      "file_name": "REVU9256.ZIP",
+      "size_kb": 385,
+      "bytes": 384457
+    },
+    {
+      "book_id": 92,
+      "file_name": "REVU9278.ZIP",
+      "size_kb": 512,
+      "bytes": 511310
+    },
+    {
+      "book_id": 93,
+      "file_name": "REV92910.ZIP",
+      "size_kb": 492,
+      "bytes": 491750
+    },
+    {
+      "book_id": 94,
+      "file_name": "RE921112.ZIP",
+      "size_kb": 383,
+      "bytes": 382272
+    },
+    {
+      "book_id": 95,
+      "file_name": "REVU9312.ZIP",
+      "size_kb": 652,
+      "bytes": 651697
+    },
+    {
+      "book_id": 96,
+      "file_name": "REVU9334.ZIP",
+      "size_kb": 682,
+      "bytes": 681614
+    },
+    {
+      "book_id": 97,
+      "file_name": "REVU9356.ZIP",
+      "size_kb": 337,
+      "bytes": 336013
+    },
+    {
+      "book_id": 98,
+      "file_name": "REVU9378.ZIP",
+      "size_kb": 386,
+      "bytes": 385949
+    },
+    {
+      "book_id": 99,
+      "file_name": "REV93910.ZIP",
+      "size_kb": 467,
+      "bytes": 466464
+    },
+    {
+      "book_id": 100,
+      "file_name": "RE931112.ZIP",
+      "size_kb": 318,
+      "bytes": 317287
+    },
+    {
+      "book_id": 101,
+      "file_name": "REVU1297.ZIP",
+      "size_kb": 17914,
+      "bytes": 17913543
+    }
+  ],
+  "generated_at": "2026-08-15T16:33:42.573974+00:00"
+}
