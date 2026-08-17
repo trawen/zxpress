@@ -1025,16 +1025,20 @@ function activity_count_phrase(string $type, string $verb, int $n, bool $eng): s
  */
 function activity_feed_present_batch(array $batch, array $events, bool $eng, array $root = []): array
 {
-	$title = $eng
-		? (trim((string) ($batch['title_en'] ?? '')) !== ''
-			? (string) $batch['title_en']
-			: (string) ($batch['title_ru'] ?? ''))
-		: (string) ($batch['title_ru'] ?? '');
-	$summary = $eng
-		? (trim((string) ($batch['summary_en'] ?? '')) !== ''
-			? (string) $batch['summary_en']
-			: (string) ($batch['summary_ru'] ?? ''))
-		: (string) ($batch['summary_ru'] ?? '');
+	$title = title_plain(
+		$eng
+			? (trim((string) ($batch['title_en'] ?? '')) !== ''
+				? (string) $batch['title_en']
+				: (string) ($batch['title_ru'] ?? ''))
+			: (string) ($batch['title_ru'] ?? '')
+	);
+	$summary = title_plain(
+		$eng
+			? (trim((string) ($batch['summary_en'] ?? '')) !== ''
+				? (string) $batch['summary_en']
+				: (string) ($batch['summary_ru'] ?? ''))
+			: (string) ($batch['summary_ru'] ?? '')
+	);
 
 	$empty = [
 		'title' => $title,

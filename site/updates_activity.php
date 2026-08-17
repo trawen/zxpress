@@ -196,9 +196,9 @@ if ($ready) {
 			}
 			$e['object_label'] = activity_object_label((string) $e['object_type'], $isEng);
 			$titleEn = trim((string) ($e['title_en'] ?? ''));
-			$e['title_display'] = ($isEng && $titleEn !== '')
-				? $titleEn
-				: (string) ($e['title_ru'] ?? '');
+			$e['title_display'] = title_plain(
+				($isEng && $titleEn !== '') ? $titleEn : (string) ($e['title_ru'] ?? '')
+			);
 			$urlEn = trim((string) ($e['url_en'] ?? ''));
 			$urlRu = trim((string) ($e['url_ru'] ?? ''));
 			$e['url_display'] = ($isEng && $urlEn !== '') ? $urlEn : $urlRu;
@@ -237,13 +237,13 @@ if ($ready) {
 		}
 
 		$titleEn = trim((string) ($b['title_en'] ?? ''));
-		$b['title_display'] = ($isEng && $titleEn !== '')
-			? $titleEn
-			: (string) ($b['title_ru'] ?? '');
+		$b['title_display'] = title_plain(
+			($isEng && $titleEn !== '') ? $titleEn : (string) ($b['title_ru'] ?? '')
+		);
 		$sumEn = trim((string) ($b['summary_en'] ?? ''));
-		$b['summary_display'] = ($isEng && $sumEn !== '')
-			? $sumEn
-			: (string) ($b['summary_ru'] ?? '');
+		$b['summary_display'] = title_plain(
+			($isEng && $sumEn !== '') ? $sumEn : (string) ($b['summary_ru'] ?? '')
+		);
 		$urlEn = trim((string) ($b['url_en'] ?? ''));
 		$urlRu = trim((string) ($b['url_ru'] ?? ''));
 		$b['url_display'] = ($isEng && $urlEn !== '') ? $urlEn : $urlRu;
