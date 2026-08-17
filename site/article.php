@@ -121,7 +121,7 @@ $smarty->assign('id', $id);
 $stmt = mysqli_prepare(
 	$db,
 	'SELECT id, id_issue, id_press, title, title_eng, temp, name, number, date, dt, '
-	. 'meta_description_ru, meta_description_en, slug_ru, slug_en, text_ru, text_en, text_type '
+	. 'meta_description_ru, meta_description_en, slug_ru, slug_en, text_ru, text_en, text_type, text_type_ru, text_type_en '
 	. 'FROM articles WHERE id=? LIMIT 1'
 );
 mysqli_stmt_bind_param($stmt, "i", $id);
@@ -210,7 +210,7 @@ if ($rawDbText === '') {
 	$rawDbText = article_read_body_from_disk($aid, $isEng);
 }
 // Render first (markdown → HTML), then fix relative media URLs in resulting markup.
-$rendered = ezn_render_article_body($rawDbText, (int) ($article['text_type'] ?? 0));
+$rendered = ezn_render_article_body($rawDbText, ezn_article_text_type_for_lang($article, $isEng));
 $article['text'] = ezn_article_root_urls($rendered['html']);
 $smarty->assign('article_text_mode', $rendered['mode']);
 $smarty->assign('article_text_use_pre', $rendered['use_pre'] ? 1 : 0);

@@ -185,7 +185,7 @@ function search_suggest_press(mysqli $db, string $q, bool $isEng, int $limit): a
 	$prefix = $esc . '%';
 	$sql = 'SELECT id, title, type, slug_ru, slug_en'
 		. ' FROM press'
-		. ' WHERE type IN (0, 1) AND title LIKE ?'
+		. ' WHERE title LIKE ?'
 		. ' ORDER BY (title LIKE ?) DESC, title ASC'
 		. ' LIMIT ?';
 	$stmt = $db->prepare($sql);
@@ -198,12 +198,15 @@ function search_suggest_press(mysqli $db, string $q, bool $isEng, int $limit): a
 	$out = [];
 	while ($row = $res->fetch_assoc()) {
 		$type = (int) ($row['type'] ?? 0);
-		if ($isEng) {
-			$kind = $type === 1 ? 'magazine' : 'newspaper';
-			$meta = $type === 1 ? 'Magazine' : 'Newspaper';
+		if ($type === 1) {
+			$kind = 'magazine';
+			$meta = $isEng ? 'Magazine' : 'Журнал';
+		} elseif ($type === 2) {
+			$kind = 'report';
+			$meta = $isEng ? 'Report' : 'Отчёт';
 		} else {
-			$kind = $type === 1 ? 'magazine' : 'newspaper';
-			$meta = $type === 1 ? 'Журнал' : 'Газета';
+			$kind = 'newspaper';
+			$meta = $isEng ? 'Newspaper' : 'Газета';
 		}
 		$url = ezn_url_press([
 			'id' => (int) $row['id'],

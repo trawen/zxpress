@@ -21,6 +21,21 @@ function ezn_normalize_article_text_type(int $raw): int
 }
 
 /**
+ * Pick body format for the active language.
+ * Prefers text_type_ru / text_type_en; falls back to legacy text_type.
+ *
+ * @param array<string,mixed> $article
+ */
+function ezn_article_text_type_for_lang(array $article, bool $isEng): int
+{
+	$key = $isEng ? 'text_type_en' : 'text_type_ru';
+	if (array_key_exists($key, $article)) {
+		return ezn_normalize_article_text_type((int) $article[$key]);
+	}
+	return ezn_normalize_article_text_type((int) ($article['text_type'] ?? 0));
+}
+
+/**
  * Page already has one h1 (article title). Demote markdown headings by one level:
  * # → h2, ## → h3, …; h6 stays h6.
  */

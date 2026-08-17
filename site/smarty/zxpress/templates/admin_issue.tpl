@@ -318,9 +318,9 @@
 			<input class="admin-ai-filter" id="admin-ai-filter" type="search" placeholder="Найти издание…" autocomplete="off">
 			<ul class="admin-ai-press-list" id="admin-ai-press-list">
 			{section name=n loop=$press_list}
-				<li data-title="{$press_list[n].title|escape:'html'}">
+				<li data-title="{$press_list[n].title}">
 					<span class="admin-ai-press-row">
-						<a class="admin-ai-press-link{if $press.id eq $press_list[n].id} is-active{/if}" href="admin_issue.php?id={$press_list[n].id}">{$press_list[n].title|escape:'html'}</a>
+						<a class="admin-ai-press-link{if $press.id eq $press_list[n].id} is-active{/if}" href="admin_issue.php?id={$press_list[n].id}">{$press_list[n].title}</a>
 						{if $press_list[n].slug_ru}
 						<a class="admin-ai-public" href="/ru/ezines/{$press_list[n].slug_ru|escape:'url'}" target="_blank" rel="noopener" title="Открыть на сайте">↗</a>
 						{/if}
@@ -337,7 +337,7 @@
 
 				<header class="admin-ai-page-head">
 					<div>
-						<h1>{if $press.id}{$press.title|escape:'html'}{else}Новое издание{/if}</h1>
+						<h1>{if $press.id}{$press.title}{else}Новое издание{/if}</h1>
 						<div class="admin-ai-subtitle">
 							{if $press.id}ID {$press.id} · {$issues|@count} выпусков · {$files|@count} файлов{else}Создание электронного издания{/if}
 						</div>
@@ -356,7 +356,7 @@
 						<div class="admin-ai-grid">
 							<label class="admin-ai-field admin-ai-field--wide">
 								<span class="admin-ai-label">Название</span>
-								<input type="text" name="title" value="{$press.title|escape:'html'}" data-press-change required>
+								<input type="text" name="title" value="{$press.title}" data-press-change required>
 							</label>
 							<label class="admin-ai-field">
 								<span class="admin-ai-label">Тип</span>
@@ -371,7 +371,7 @@
 								<select name="city" data-press-change>
 									<option value="0"{if !$press.city} selected{/if}>Неизвестен</option>
 									{section name=n loop=$cities}
-									<option value="{$cities[n].id}"{if $cities[n].id eq $press.city} selected{/if}>{$cities[n].name|escape:'html'}</option>
+									<option value="{$cities[n].id}"{if $cities[n].id eq $press.city} selected{/if}>{$cities[n].name}</option>
 									{/section}
 								</select>
 							</label>
@@ -382,11 +382,11 @@
 							</label>
 							<label class="admin-ai-field admin-ai-field--wide">
 								<span class="admin-ai-label">Slug RU</span>
-								<input type="text" name="slug_ru" value="{$press.slug_ru|escape:'html'}" data-press-change>
+								<input type="text" name="slug_ru" value="{$press.slug_ru}" data-press-change>
 							</label>
 							<label class="admin-ai-field admin-ai-field--wide">
 								<span class="admin-ai-label">Slug EN</span>
-								<input type="text" name="slug_en" value="{$press.slug_en|escape:'html'}" data-press-change>
+								<input type="text" name="slug_en" value="{$press.slug_en}" data-press-change>
 							</label>
 						</div>
 					</div>
@@ -414,9 +414,9 @@
 							{section name=n loop=$issues}
 								<tr>
 									<td><input class="admin-ai-order" type="number" min="0" name="issue_sort_order_{$issues[n].id}" value="{$issues[n].sort_order}"></td>
-									<td><input class="admin-ai-number" type="text" name="issue_title_{$issues[n].id}" value="{$issues[n].title|escape:'html'}"></td>
-									<td><input type="text" name="issue_slug_ru_{$issues[n].id}" value="{$issues[n].slug_ru|escape:'html'}"></td>
-									<td><input type="text" name="issue_slug_en_{$issues[n].id}" value="{$issues[n].slug_en|escape:'html'}"></td>
+									<td><input class="admin-ai-number" type="text" name="issue_title_{$issues[n].id}" value="{$issues[n].title}"></td>
+									<td><input type="text" name="issue_slug_ru_{$issues[n].id}" value="{$issues[n].slug_ru}"></td>
+									<td><input type="text" name="issue_slug_en_{$issues[n].id}" value="{$issues[n].slug_en}"></td>
 									<td>
 										<span class="admin-ai-row-links">
 											<a href="admin_articles_new.php?id={$press.id}&amp;issue={$issues[n].id}" title="Статьи">статьи</a>
@@ -473,14 +473,14 @@
 							{section name=n loop=$files}
 								<tr>
 									<td>
-										<a class="admin-ai-file-name" href="files/{$files[n].name|escape:'url'}">{$files[n].name|escape:'html'}</a>
+										<a class="admin-ai-file-name" href="files/{$files[n].name|escape:'url'}">{$files[n].name}</a>
 										<span class="admin-ai-file-meta">{$files[n].size} КБ · {$files[n].date}</span>
 									</td>
-									<td><input type="text" name="file_title_{$files[n][0]}" value="{$files[n].file_title|escape:'html'}" data-file-id="{$files[n][0]}"></td>
+									<td><input type="text" name="file_title_{$files[n][0]}" value="{$files[n].file_title}" data-file-id="{$files[n][0]}"></td>
 									<td>
 										<select name="issue_file_{$files[n][0]}" data-file-id="{$files[n][0]}">
 										{section name=a loop=$issues}
-											<option value="{$issues[a].id}"{if $files[n].id_issue eq $issues[a].id} selected{/if}>#{$issues[a].title|escape:'html'}</option>
+											<option value="{$issues[a].id}"{if $files[n].id_issue eq $issues[a].id} selected{/if}>#{$issues[a].title}</option>
 										{/section}
 										</select>
 									</td>
@@ -527,7 +527,7 @@
 								<span class="admin-ai-label">Привязать к выпуску</span>
 								<select name="upload_file_issue">
 								{section name=n loop=$issues}
-									<option value="{$issues[n].id}">#{$issues[n].title|escape:'html'}</option>
+									<option value="{$issues[n].id}">#{$issues[n].title}</option>
 								{/section}
 								</select>
 							</label>

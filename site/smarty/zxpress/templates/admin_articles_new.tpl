@@ -262,7 +262,7 @@
 
 <div style="font: bold 12px Verdana; margin-bottom:6px">
 {if $article && $article.id}Редактирование статьи #{$article.id}{else}Новая статья{/if}
-<span class="admin-aan-muted"> — выпуск № {$issue.title|escape:'html'}</span>
+<span class="admin-aan-muted"> — выпуск № {$issue.title}</span>
 </div>
 
 <form class="admin-aan-form" method="post" action="admin_articles_new.php?id={$press.id}&amp;issue={$issue_id}&amp;aid={$aid}">
@@ -294,16 +294,28 @@
 </td>
 </tr>
 <tr>
-<td>Формат текста</td>
+<td>Формат текста (RU)</td>
 <td>
-{assign var=tt value=$text_type_html_pre}
-{if $article}{assign var=tt value=$article.text_type_ui}{/if}
-<select class="admin-aan-narrow" id="admin-aan-text-type" name="text_type" style="width:240px">
-<option value="{$text_type_text_pre}"{if $tt eq $text_type_text_pre} selected{/if}>text pre</option>
-<option value="{$text_type_html_pre}"{if $tt eq $text_type_html_pre} selected{/if}>html pre (по умолчанию)</option>
-<option value="{$text_type_markdown}"{if $tt eq $text_type_markdown} selected{/if}>markdown</option>
+{assign var=tt_ru value=$text_type_html_pre}
+{if $article}{assign var=tt_ru value=$article.text_type_ru_ui}{/if}
+<select class="admin-aan-narrow" id="admin-aan-text-type-ru" name="text_type_ru" style="width:240px">
+<option value="{$text_type_text_pre}"{if $tt_ru eq $text_type_text_pre} selected{/if}>text pre</option>
+<option value="{$text_type_html_pre}"{if $tt_ru eq $text_type_html_pre} selected{/if}>html pre (по умолчанию)</option>
+<option value="{$text_type_markdown}"{if $tt_ru eq $text_type_markdown} selected{/if}>markdown</option>
 </select>
-<div class="admin-aan-field-hint">Как отображать текст: text pre / html pre (моноширинный) / markdown (рендер).</div>
+</td>
+</tr>
+<tr>
+<td>Формат текста (EN)</td>
+<td>
+{assign var=tt_en value=$text_type_html_pre}
+{if $article}{assign var=tt_en value=$article.text_type_en_ui}{/if}
+<select class="admin-aan-narrow" id="admin-aan-text-type-en" name="text_type_en" style="width:240px">
+<option value="{$text_type_text_pre}"{if $tt_en eq $text_type_text_pre} selected{/if}>text pre</option>
+<option value="{$text_type_html_pre}"{if $tt_en eq $text_type_html_pre} selected{/if}>html pre (по умолчанию)</option>
+<option value="{$text_type_markdown}"{if $tt_en eq $text_type_markdown} selected{/if}>markdown</option>
+</select>
+<div class="admin-aan-field-hint">RU и EN могут отличаться: text pre / html pre / markdown.</div>
 </td>
 </tr>
 <tr>
@@ -342,7 +354,7 @@
 {if $article_tags && $article_tags|@count gt 0}
 {section name=t loop=$article_tags}
 <span class="admin-aan-tag">
-{$article_tags[t].tag_name|escape:'html'}
+{$article_tags[t].tag_name}
 <label style="margin-left:4px;color:#A41E00;cursor:pointer"><input type="checkbox" name="delete_tag[]" value="{$article_tags[t].ta_id}"> ×</label>
 </span>
 {/section}
@@ -352,7 +364,7 @@
 <select class="admin-aan-narrow" id="admin-aan-add-tag" name="add_tag_id" style="width:260px;height:22px;margin-right:8px">
 <option value="0">---</option>
 {section name=tg loop=$all_tags}
-<option value="{$all_tags[tg].id}">{$all_tags[tg].tag_name|escape:'html'}</option>
+<option value="{$all_tags[tg].id}">{$all_tags[tg].tag_name}</option>
 {/section}
 </select>
 <br>
@@ -461,10 +473,10 @@
 		el.innerHTML = t;
 	}
 
-	function bindPair(textId, previewId) {
+	function bindPair(textId, previewId, typeSelId) {
 		var ta = document.getElementById(textId);
 		var prev = document.getElementById(previewId);
-		var typeSel = document.getElementById('admin-aan-text-type');
+		var typeSel = document.getElementById(typeSelId);
 		if (!ta || !prev) return;
 
 		function update() {
@@ -490,8 +502,8 @@
 	}
 
 	function boot() {
-		bindPair('admin-aan-text-ru', 'admin-aan-preview-ru');
-		bindPair('admin-aan-text-en', 'admin-aan-preview-en');
+		bindPair('admin-aan-text-ru', 'admin-aan-preview-ru', 'admin-aan-text-type-ru');
+		bindPair('admin-aan-text-en', 'admin-aan-preview-en', 'admin-aan-text-type-en');
 	}
 
 	if (document.readyState === 'loading') {
@@ -516,7 +528,7 @@
 <ul>
 {foreach from=$press_list item=p}
 <li>
-<a href="admin_articles_new.php?id={$p.id}">{if $p.online_articles}<span style="color:#A41E00">{$p.title|escape:'html'}</span> <span class="admin-aan-muted">({$p.online_articles})</span>{else}{$p.title|escape:'html'}{/if}</a>
+<a href="admin_articles_new.php?id={$p.id}">{if $p.online_articles}<span style="color:#A41E00">{$p.title}</span> <span class="admin-aan-muted">({$p.online_articles})</span>{else}{$p.title}{/if}</a>
 </li>
 {/foreach}
 </ul>
@@ -527,7 +539,7 @@
 {else}
 <div style="font: bold 12px Verdana; margin-bottom:6px">
 <a href="admin_articles_new.php" style="font-weight:normal;color:#666">← издания</a><br>
-{$press.title|escape:'html'}
+{$press.title}
 </div>
 
 <form method="get" action="admin_articles_new.php" style="margin-bottom:10px">
@@ -535,7 +547,7 @@
 <label for="admin-aan-issue" class="u-sr-only">Выпуск</label>
 <select id="admin-aan-issue" name="issue" style="width:100%;max-width:300px;height:24px" onchange="this.form.submit()">
 {section name=n loop=$issues}
-<option value="{$issues[n].id}"{if $issues[n].id eq $issue_id} selected{/if}>№ {$issues[n].title|escape:'html'}</option>
+<option value="{$issues[n].id}"{if $issues[n].id eq $issue_id} selected{/if}>№ {$issues[n].title}</option>
 {/section}
 </select>
 </form>

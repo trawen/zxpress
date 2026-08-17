@@ -55,7 +55,7 @@ if ($article['temp'] == 0) {
 			$raw = (string) file_get_contents($articlePath);
 		}
 	}
-	$rendered = ezn_render_article_body($raw, (int) ($article['text_type'] ?? 0));
+	$rendered = ezn_render_article_body($raw, ezn_article_text_type_for_lang($article, false));
 	$article['text'] = ezn_article_root_urls($rendered['html']);
 	$smarty->assign('article', $article);
 	$smarty->assign('article_text_mode', $rendered['mode']);

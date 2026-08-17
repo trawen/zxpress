@@ -188,7 +188,9 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
 	$titleEng = plain_text_normalize_for_storage(aan_post_string('title_eng'));
 	$number = max(1, aan_post_int('number'));
 	$temp = !empty($_POST['temp']) ? 1 : 0;
-	$textType = aan_normalize_text_type(aan_post_int('text_type'));
+	$textTypeRu = aan_normalize_text_type(aan_post_int('text_type_ru'));
+	$textTypeEn = aan_normalize_text_type(aan_post_int('text_type_en'));
+	$textType = $textTypeRu; // legacy mirror for older code paths
 	$textRu = (string) ($_POST['text_ru'] ?? '');
 	$textEn = (string) ($_POST['text_en'] ?? '');
 	$metaRu = plain_text_normalize_for_storage(aan_post_string('meta_description_ru'));
@@ -229,21 +231,27 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
 
 			$now = time();
 			$wasCreate = ($aid <= 0);
-			$prevTextType = null;
+			$prevTextTypeRu = null;
+			$prevTextTypeEn = null;
 			if (!$wasCreate && $aid > 0) {
-				$zPrev = db_select($db, 'SELECT text_type FROM articles WHERE id=? LIMIT 1', 'i', $aid);
+				$zPrev = db_select($db, 'SELECT text_type, text_type_ru, text_type_en FROM articles WHERE id=? LIMIT 1', 'i', $aid);
 				if ($zPrev && ($pr = $zPrev->fetch_assoc())) {
-					$prevTextType = (int) ($pr['text_type'] ?? 0);
+					$prevTextTypeRu = array_key_exists('text_type_ru', $pr)
+						? (int) $pr['text_type_ru']
+						: (int) ($pr['text_type'] ?? 0);
+					$prevTextTypeEn = array_key_exists('text_type_en', $pr)
+						? (int) $pr['text_type_en']
+						: (int) ($pr['text_type'] ?? 0);
 				}
 			}
 			if ($aid <= 0) {
 				$saved = db_exec(
 					$db,
 					'INSERT INTO articles '
-					. '(id_issue, title, temp, date, views, number, title_eng, file, name, dt, id_press, text_type, text_ru, text_en, '
+					. '(id_issue, title, temp, date, views, number, title_eng, file, name, dt, id_press, text_type, text_type_ru, text_type_en, text_ru, text_en, '
 					. 'meta_description_ru, meta_description_en, slug_ru, slug_en) '
-					. 'VALUES (?,?,?,?,0,?,?,?,?,0,?,?,?,?,?,?,?,?)',
-					'isiiisssiissssss',
+					. 'VALUES (?,?,?,?,0,?,?,?,?,0,?,?,?,?,?,?,?,?,?,?)',
+					'isiiisssiiiissssss',
 					$issueId,
 					$title,
 					$temp,
@@ -254,6 +262,8 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
 					'',
 					$pressId,
 					$textType,
+					$textTypeRu,
+					$textTypeEn,
 					$textRu,
 					$textEn,
 					$metaRu,
@@ -267,15 +277,17 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
 			} else {
 				$saved = db_exec(
 					$db,
-					'UPDATE articles SET title=?, title_eng=?, number=?, temp=?, text_type=?, text_ru=?, text_en=?, '
+					'UPDATE articles SET title=?, title_eng=?, number=?, temp=?, text_type=?, text_type_ru=?, text_type_en=?, text_ru=?, text_en=?, '
 					. 'meta_description_ru=?, meta_description_en=?, slug_ru=?, slug_en=?, id_press=? '
 					. 'WHERE id=? AND id_issue=? LIMIT 1',
-					'ssiiissssssiii',
+					'ssiiiiissssssiii',
 					$title,
 					$titleEng,
 					$number,
 					$temp,
 					$textType,
+					$textTypeRu,
+					$textTypeEn,
 					$textRu,
 					$textEn,
 					$metaRu,
@@ -302,7 +314,7 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
 						'title_ru' => $title,
 						'title_en' => $titleEng !== '' ? $titleEng : $title,
 						'url_ru' => '/article.php?id=' . $aid,
-						'meta' => ['press_id' => $pressId, 'text_type' => $textType],
+					'meta' => ['press_id' => $pressId, 'text_type_ru' => $textTypeRu, 'text_type_en' => $textTypeEn],
 					]);
 				} else {
 					activity_log($db, [
@@ -318,7 +330,10 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
 						'title_en' => $titleEng !== '' ? $titleEng : $title,
 						'url_ru' => '/article.php?id=' . $aid,
 					]);
-					if ($prevTextType !== null && $prevTextType !== $textType) {
+					if (
+						($prevTextTypeRu !== null && $prevTextTypeRu !== $textTypeRu)
+						|| ($prevTextTypeEn !== null && $prevTextTypeEn !== $textTypeEn)
+					) {
 						activity_log($db, [
 							'verb' => 'updated',
 							'object_type' => 'article',
@@ -329,8 +344,8 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
 							'event_scope' => ACTIVITY_SCOPE_METADATA,
 							'is_public' => 0,
 							'title_ru' => $title,
-							'before' => ['text_type' => $prevTextType],
-							'after' => ['text_type' => $textType],
+							'before' => ['text_type_ru' => $prevTextTypeRu, 'text_type_en' => $prevTextTypeEn],
+							'after' => ['text_type_ru' => $textTypeRu, 'text_type_en' => $textTypeEn],
 						]);
 					}
 				}
@@ -487,11 +502,17 @@ if ($issueId > 0) {
 			$article['title_eng'] = aan_title_for_edit((string) ($article['title_eng'] ?? ''));
 			$article['text_ru'] = aan_read_text_fallback((int) $article['id'], (string) ($article['text_ru'] ?? ''));
 			$article['text_en'] = (string) ($article['text_en'] ?? '');
-			$uiType = (int) ($article['text_type'] ?? 0);
-			if ($uiType === EZN_TEXT_TYPE_LEGACY) {
-				$article['text_type_ui'] = EZN_TEXT_TYPE_HTML_PRE;
+			$uiTypeRu = (int) ($article['text_type_ru'] ?? $article['text_type'] ?? 0);
+			$uiTypeEn = (int) ($article['text_type_en'] ?? $article['text_type'] ?? 0);
+			if ($uiTypeRu === EZN_TEXT_TYPE_LEGACY) {
+				$article['text_type_ru_ui'] = EZN_TEXT_TYPE_HTML_PRE;
 			} else {
-				$article['text_type_ui'] = aan_normalize_text_type($uiType);
+				$article['text_type_ru_ui'] = aan_normalize_text_type($uiTypeRu);
+			}
+			if ($uiTypeEn === EZN_TEXT_TYPE_LEGACY) {
+				$article['text_type_en_ui'] = EZN_TEXT_TYPE_HTML_PRE;
+			} else {
+				$article['text_type_en_ui'] = aan_normalize_text_type($uiTypeEn);
 			}
 
 			$zTags = db_select(
