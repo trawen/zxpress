@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="noindex,nofollow">
 	<title>{$title|strip_tags} — ZXPRESS</title>
-	{if $description}<meta name="description" content="{$description|strip_tags|escape:'html'}">{/if}
+	{if $description}<meta name="description" content="{$description|strip_tags}">{/if}
 	{smn_styles}
 </head>
 <body class="smn">
@@ -48,7 +48,7 @@
 				{if $lng eq 'eng'}<input type="hidden" name="lng" value="eng">{/if}
 				<div class="smn-search-wrap">
 					<label class="smn-search-label" for="input_query_smn">{if $lng eq 'eng'}Search{else}Поиск{/if}</label>
-					<input class="smn-search-input" id="input_query_smn" name="q" type="search" placeholder="{if $lng eq 'eng'}Search...{else}Поиск...{/if}" value="{$q|default:''|escape:'html'}" autocomplete="off">
+					<input class="smn-search-input" id="input_query_smn" name="q" type="search" placeholder="{if $lng eq 'eng'}Search...{else}Поиск...{/if}" value="{$q|default:''}" autocomplete="off">
 					<div id="suggest-smn" class="smn-search-suggest"></div>
 				</div>
 			</form>
@@ -85,7 +85,7 @@
 {/if}
 				<article class="smn-updates-row smn-activity-row">
 					<div class="smn-updates-date">{if $b.date}<span class="smn-activity-date">{$b.date}</span>{/if}</div>
-					<div class="smn-activity-when">{if $b.time_label}<span class="smn-activity-time">{$b.time_label|escape:'html'}</span>{/if}</div>
+					<div class="smn-activity-when">{if $b.time_label}<span class="smn-activity-time">{$b.time_label}</span>{/if}</div>
 					<div class="smn-updates-body">
 						{if !$b.is_public}
 						<span class="smn-activity-meta">
@@ -95,28 +95,28 @@
 {if $b.is_compact && $b.events && $b.events|@count gt 0}
 						<span class="smn-activity-title">
 {if $b.url_display}
-							<a class="smn-updates-press" href="{$b.url_display|escape:'html'}">{$b.title_press|default:$b.title_display|escape:'html'}</a>
+							<a class="smn-updates-press" href="{$b.url_display}">{$b.title_press|default:$b.title_display}</a>
 {else}
-							<span class="smn-updates-press">{$b.title_press|default:$b.title_display|escape:'html'}</span>
+							<span class="smn-updates-press">{$b.title_press|default:$b.title_display}</span>
 {/if}
 							<span class="smn-activity-title-suffix"> — </span>
 							<details class="smn-activity-details smn-activity-details--inline">
-								<summary>{$b.details_label|escape:'html'}</summary>
+								<summary>{$b.details_label}</summary>
 								<ul class="smn-activity-events">
 {foreach from=$b.events item=e}
 									<li class="smn-activity-event">
 {if $e.thumb_url}
-										<a class="smn-activity-thumb" href="{if $e.url_display}{$e.url_display|escape:'html'}{elseif $b.url_display}{$b.url_display|escape:'html'}{else}{$e.thumb_url|escape:'html'}{/if}">
-											<img src="{$e.thumb_url|escape:'html'}" alt="" loading="lazy" width="128" height="96">
+										<a class="smn-activity-thumb" href="{if $e.url_display}{$e.url_display}{elseif $b.url_display}{$b.url_display}{else}{$e.thumb_url}{/if}">
+											<img src="{$e.thumb_url}" alt="" loading="lazy" width="128" height="96">
 										</a>
 {/if}
 										<div class="smn-activity-event-body">
 {if $e.url_display}
-											<a class="smn-activity-event-title" href="{$e.url_display|escape:'html'}">{$e.title_display|escape:'html'}</a>
+											<a class="smn-activity-event-title" href="{$e.url_display}">{$e.title_display}</a>
 {else}
-											<span class="smn-activity-event-title">{$e.title_display|escape:'html'}</span>
+											<span class="smn-activity-event-title">{$e.title_display}</span>
 {/if}
-											<span class="smn-activity-event-meta">{$e.object_label|escape:'html'}</span>
+											<span class="smn-activity-event-meta">{$e.object_label}</span>
 										</div>
 									</li>
 {/foreach}
@@ -125,18 +125,18 @@
 						</span>
 {else}
 {if $b.url_display}
-						<span class="smn-activity-title"><a class="smn-updates-press" href="{$b.url_display|escape:'html'}">{$b.title_press|default:$b.title_display|escape:'html'}</a>{if $b.title_suffix}<span class="smn-activity-title-suffix">{$b.title_suffix|escape:'html'}</span>{/if}</span>
+						<span class="smn-activity-title"><a class="smn-updates-press" href="{$b.url_display}">{$b.title_press|default:$b.title_display}</a>{if $b.title_suffix}<span class="smn-activity-title-suffix">{$b.title_suffix}</span>{/if}</span>
 {else}
-						<span class="smn-activity-title"><span class="smn-updates-press">{$b.title_press|default:$b.title_display|escape:'html'}</span>{if $b.title_suffix}<span class="smn-activity-title-suffix">{$b.title_suffix|escape:'html'}</span>{/if}</span>
+						<span class="smn-activity-title"><span class="smn-updates-press">{$b.title_press|default:$b.title_display}</span>{if $b.title_suffix}<span class="smn-activity-title-suffix">{$b.title_suffix}</span>{/if}</span>
 {/if}
 {if $b.summary_display}
-						<p class="smn-activity-summary">{$b.summary_display|escape:'html'}</p>
+						<p class="smn-activity-summary">{$b.summary_display}</p>
 {/if}
 {if $b.events && $b.events|@count gt 0}
 						<details class="smn-activity-details">
 							<summary>
 								{if $b.details_label}
-									{$b.details_label|escape:'html'}
+									{$b.details_label}
 								{elseif $lng eq 'eng'}
 									{$b.events|@count} {if $b.events|@count == 1}event{else}events{/if}
 								{else}
@@ -147,17 +147,17 @@
 {foreach from=$b.events item=e}
 								<li class="smn-activity-event">
 {if $e.thumb_url}
-									<a class="smn-activity-thumb" href="{if $e.url_display}{$e.url_display|escape:'html'}{elseif $b.url_display}{$b.url_display|escape:'html'}{else}{$e.thumb_url|escape:'html'}{/if}">
-										<img src="{$e.thumb_url|escape:'html'}" alt="" loading="lazy" width="128" height="96">
+									<a class="smn-activity-thumb" href="{if $e.url_display}{$e.url_display}{elseif $b.url_display}{$b.url_display}{else}{$e.thumb_url}{/if}">
+										<img src="{$e.thumb_url}" alt="" loading="lazy" width="128" height="96">
 									</a>
 {/if}
 									<div class="smn-activity-event-body">
 {if $e.url_display}
-										<a class="smn-activity-event-title" href="{$e.url_display|escape:'html'}">{$e.title_display|escape:'html'}</a>
+										<a class="smn-activity-event-title" href="{$e.url_display}">{$e.title_display}</a>
 {else}
-										<span class="smn-activity-event-title">{$e.title_display|escape:'html'}</span>
+										<span class="smn-activity-event-title">{$e.title_display}</span>
 {/if}
-										<span class="smn-activity-event-meta">{$e.object_label|escape:'html'}</span>
+										<span class="smn-activity-event-meta">{$e.object_label}</span>
 									</div>
 								</li>
 {/foreach}
