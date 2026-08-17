@@ -1,5 +1,5 @@
--- Applied automatically by update.sh via db/migrate/20260817194400_files_id_press.sql.
--- Keep this copy for a one-off manual run if needed.
+-- Files may belong to a whole press (id_issue=0) instead of one issue.
+-- Used when a disk/archive is shared by every number of the magazine.
 
 SET @has_col := (
   SELECT COUNT(*) FROM information_schema.COLUMNS

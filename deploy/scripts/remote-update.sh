@@ -26,4 +26,4 @@ if [ "$#" -gt 0 ]; then
 	quoted_args=$(printf '%q ' "$@")
 fi
 
-ssh -t "$REMOTE_SSH" "cd $(printf '%q' "$REMOTE_REPO") && ./deploy/scripts/update.sh ${quoted_args}"
+ssh -t "$REMOTE_SSH" "cd $(printf '%q' "$REMOTE_REPO") && git pull --ff-only && ./deploy/scripts/update.sh ${quoted_args}"

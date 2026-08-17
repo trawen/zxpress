@@ -7,6 +7,7 @@ COMPOSE_FILE="$PROJECT_DIR/docker-compose.yml"
 
 SKIP_BACKUP=0
 SKIP_REINDEX=0
+SKIP_MIGRATIONS=0
 NO_BUILD=0
 
 usage() {
@@ -21,6 +22,7 @@ Options:
   --skip-backup    Skip pre-update MySQL/data backup
   --no-build       Skip `docker compose build php` (restart only)
   --skip-reindex   Skip full Manticore indexer --all
+  --skip-migrations  Skip db/migrate/*.sql (emergency only)
   -h, --help       Show this help
 
 Examples:
@@ -40,6 +42,7 @@ while [ $# -gt 0 ]; do
 		--skip-backup) SKIP_BACKUP=1 ;;
 		--no-build) NO_BUILD=1 ;;
 		--skip-reindex) SKIP_REINDEX=1 ;;
+		--skip-migrations) SKIP_MIGRATIONS=1 ;;
 		-h | --help)
 			usage
 			exit 0
@@ -61,7 +64,7 @@ done
 cd "$PROJECT_DIR"
 
 echo "=== zxpress.ru — Update ==="
-echo "[deploy] INFO flags skip_backup=${SKIP_BACKUP} no_build=${NO_BUILD} skip_reindex=${SKIP_REINDEX}"
+echo "[deploy] INFO flags skip_backup=${SKIP_BACKUP} no_build=${NO_BUILD} skip_reindex=${SKIP_REINDEX} skip_migrations=${SKIP_MIGRATIONS}"
 
 if [ "$SKIP_BACKUP" -eq 1 ]; then
 	echo "[skip] Creating pre-update backup"
@@ -72,6 +75,13 @@ fi
 
 echo "[2/7] Pulling latest code..."
 git pull --ff-only || { echo "ERROR: git pull failed. Resolve conflicts first."; exit 1; }
+
+if [ "$SKIP_MIGRATIONS" -eq 1 ]; then
+	echo "[skip] Applying schema migrations (--skip-migrations)"
+else
+	echo "[2.5/7] Applying schema migrations..."
+	"$SCRIPT_DIR/apply-schema-migrations.sh"
+fi
 
 echo "[3/7] Validating env contract..."
 "$SCRIPT_DIR/../tests/validate_env_contract.sh"
