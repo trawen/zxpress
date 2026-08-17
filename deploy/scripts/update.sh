@@ -89,7 +89,9 @@ fi
 echo "[6/7] Rolling restart..."
 docker compose -f "$COMPOSE_FILE" up -d --no-deps php
 sleep 5
-docker compose -f "$COMPOSE_FILE" up -d --no-deps nginx
+# --force-recreate: nginx bind-mounts conf/nginx-site.conf; if the file was
+# replaced (new inode), a plain restart keeps the stale (deleted) mount.
+docker compose -f "$COMPOSE_FILE" up -d --force-recreate --no-deps nginx
 
 echo "[7/7] Verifying health..."
 "$SCRIPT_DIR/health-check.sh"

@@ -62,6 +62,19 @@ function admin_translate_http_get(string $url): string
 /**
  * @throws RuntimeException
  */
+function admin_translate_is_valid_response(string $raw): bool
+{
+    if ($raw === '' || $raw[0] !== '[') {
+        return false;
+    }
+    $data = json_decode($raw, true);
+
+    return is_array($data) && isset($data[0]) && is_array($data[0]);
+}
+
+/**
+ * @throws RuntimeException
+ */
 function admin_translate_fetch(string $query): string
 {
     $urls = [
@@ -72,7 +85,11 @@ function admin_translate_fetch(string $query): string
     $errors = [];
     foreach ($urls as $url) {
         try {
-            return admin_translate_http_get($url);
+            $raw = admin_translate_http_get($url);
+            if (admin_translate_is_valid_response($raw)) {
+                return $raw;
+            }
+            $errors[] = 'invalid JSON from ' . parse_url($url, PHP_URL_HOST);
         } catch (RuntimeException $e) {
             $errors[] = $e->getMessage();
         }
@@ -95,11 +112,7 @@ function admin_translate_google_chunk(string $text, string $sl = 'ru', string $t
 
     $query = 'client=gtx&sl=' . rawurlencode($sl) . '&tl=' . rawurlencode($tl) . '&dt=t&q=' . rawurlencode($text);
     $raw = admin_translate_fetch($query);
-
     $data = json_decode($raw, true);
-    if (!is_array($data) || !isset($data[0]) || !is_array($data[0])) {
-        throw new RuntimeException('Некорректный ответ сервиса перевода');
-    }
 
     $parts = [];
     foreach ($data[0] as $chunk) {
