@@ -92,6 +92,7 @@ $notice = null;
 
 // --- AJAX: translate RU → EN (title, body, slug) ---
 if (($_GET['action'] ?? '') === 'translate_en') {
+	@set_time_limit(180);
 	header('Content-Type: application/json; charset=utf-8');
 	if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 		http_response_code(405);
@@ -105,6 +106,9 @@ if (($_GET['action'] ?? '') === 'translate_en') {
 	$reqArticleId = aan_post_int('article_id');
 	$titleRu = plain_text_normalize_for_storage(aan_post_string('title'));
 	$textRu = (string) ($_POST['text_ru'] ?? '');
+	if (trim($textRu) === '' && $reqArticleId > 0) {
+		$textRu = aan_read_text_fallback($reqArticleId, '');
+	}
 
 	if ($reqPressId <= 0 || $reqIssueId <= 0) {
 		echo json_encode(['ok' => false, 'error' => 'Выберите издание и выпуск'], JSON_UNESCAPED_UNICODE);
