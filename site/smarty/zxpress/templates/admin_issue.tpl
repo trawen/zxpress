@@ -177,6 +177,10 @@
 .admin-ai-field { grid-column: span 4; min-width: 0; }
 .admin-ai-field--wide { grid-column: span 6; }
 .admin-ai-field--full { grid-column: 1 / -1; }
+.admin-ai-field--press-title { grid-column: span 5; }
+.admin-ai-field--press-type { grid-column: span 2; }
+.admin-ai-field--press-city { grid-column: span 3; }
+.admin-ai-field--press-numbers { grid-column: span 2; }
 .admin-ai-label {
 	display: block;
 	margin: 0 0 4px;
@@ -303,12 +307,20 @@
 	.admin-ai-press-list { max-height: 170px; }
 	.admin-ai-main { padding: 14px; }
 	.admin-ai-field,
-	.admin-ai-field--wide { grid-column: span 6; }
+	.admin-ai-field--wide,
+	.admin-ai-field--press-title,
+	.admin-ai-field--press-type,
+	.admin-ai-field--press-city,
+	.admin-ai-field--press-numbers { grid-column: span 6; }
 }
 @media (max-width: 600px) {
 	.admin-ai-page-head { flex-direction: column; }
 	.admin-ai-field,
-	.admin-ai-field--wide { grid-column: 1 / -1; }
+	.admin-ai-field--wide,
+	.admin-ai-field--press-title,
+	.admin-ai-field--press-type,
+	.admin-ai-field--press-city,
+	.admin-ai-field--press-numbers { grid-column: 1 / -1; }
 	.admin-ai-add-row,
 	.admin-ai-upload-grid { grid-template-columns: 1fr; }
 	.admin-ai-main { padding: 10px; }
@@ -365,11 +377,11 @@
 					<div class="admin-ai-panel-head"><h2>Издание</h2></div>
 					<div class="admin-ai-panel-body">
 						<div class="admin-ai-grid">
-							<label class="admin-ai-field admin-ai-field--wide">
+							<label class="admin-ai-field admin-ai-field--press-title">
 								<span class="admin-ai-label">Название</span>
 								<input type="text" name="title" value="{$press.title}" data-press-change required>
 							</label>
-							<label class="admin-ai-field">
+							<label class="admin-ai-field admin-ai-field--press-type">
 								<span class="admin-ai-label">Тип</span>
 								<select name="type" data-press-change>
 									<option value="0"{if $press.type eq 0} selected{/if}>Газета</option>
@@ -377,7 +389,7 @@
 									<option value="2"{if $press.type eq 2} selected{/if}>Отчёт</option>
 								</select>
 							</label>
-							<label class="admin-ai-field">
+							<label class="admin-ai-field admin-ai-field--press-city">
 								<span class="admin-ai-label">Город</span>
 								<select name="city" data-press-change>
 									<option value="0"{if !$press.city} selected{/if}>Неизвестен</option>
@@ -386,10 +398,9 @@
 									{/section}
 								</select>
 							</label>
-							<label class="admin-ai-field">
-								<span class="admin-ai-label">Количество выпусков</span>
-								<input type="number" min="0" name="numbers" value="{$press.numbers}" data-press-change>
-								<span class="admin-ai-help">0 — пересчитать по базе при сохранении</span>
+							<label class="admin-ai-field admin-ai-field--press-numbers">
+								<span class="admin-ai-label">Кол-во выпусков</span>
+								<input type="number" min="0" name="numbers" value="{$press.numbers}" data-press-change title="0 — пересчитать по базе при сохранении">
 							</label>
 							<label class="admin-ai-field admin-ai-field--wide">
 								<span class="admin-ai-label">Slug RU</span>
