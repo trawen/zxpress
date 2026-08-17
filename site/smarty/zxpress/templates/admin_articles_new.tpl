@@ -248,6 +248,18 @@
 	width: auto !important;
 	max-width: none;
 }
+.admin-aan-translate-btn {
+	font: 12px Verdana;
+	padding: 4px 10px;
+	cursor: pointer;
+}
+.admin-aan-translate-status {
+	font: normal 11px Verdana;
+	color: #666;
+	margin-left: 8px;
+}
+.admin-aan-translate-status.is-error { color: #A41E00; }
+.admin-aan-translate-status.is-ok { color: #2a6a2a; }
 </style>
 {/literal}
 
@@ -274,11 +286,21 @@
 <table style="font: 12px Verdana" cellpadding="4">
 <tr>
 <td>Заголовок (RU) *</td>
-<td><textarea name="title" rows="3">{if $article}{$article.title}{/if}</textarea></td>
+<td><textarea id="admin-aan-title-ru" name="title" rows="3">{if $article}{$article.title}{/if}</textarea></td>
 </tr>
 <tr>
 <td>Заголовок (EN)</td>
-<td><textarea name="title_eng" rows="3">{if $article}{$article.title_eng}{/if}</textarea></td>
+<td>
+<textarea id="admin-aan-title-eng" name="title_eng" rows="3">{if $article}{$article.title_eng}{/if}</textarea>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<button type="button" class="admin-aan-translate-btn" id="admin-aan-translate-en">Перевести RU → EN</button>
+<span class="admin-aan-translate-status" id="admin-aan-translate-status" aria-live="polite"></span>
+<div class="admin-aan-field-hint">Заполняет заголовок EN, текст EN и slug EN из русских полей (Google Translate).</div>
+</td>
 </tr>
 <tr>
 <td>Slug (RU)</td>
@@ -290,7 +312,7 @@
 <tr>
 <td>Slug (EN)</td>
 <td>
-<input type="text" name="slug_en" maxlength="255" pattern="[a-z0-9-]*" value="{if $article}{$article.slug_en}{/if}">
+<input type="text" id="admin-aan-slug-en" name="slug_en" maxlength="255" pattern="[a-z0-9-]*" value="{if $article}{$article.slug_en}{/if}">
 </td>
 </tr>
 <tr>
@@ -504,6 +526,76 @@
 	function boot() {
 		bindPair('admin-aan-text-ru', 'admin-aan-preview-ru', 'admin-aan-text-type-ru');
 		bindPair('admin-aan-text-en', 'admin-aan-preview-en', 'admin-aan-text-type-en');
+		bindTranslateEn();
+	}
+
+	function bindTranslateEn() {
+		var btn = document.getElementById('admin-aan-translate-en');
+		if (!btn) return;
+
+		var statusEl = document.getElementById('admin-aan-translate-status');
+		var titleRu = document.getElementById('admin-aan-title-ru');
+		var titleEng = document.getElementById('admin-aan-title-eng');
+		var textRu = document.getElementById('admin-aan-text-ru');
+		var textEn = document.getElementById('admin-aan-text-en');
+		var slugEn = document.getElementById('admin-aan-slug-en');
+		var form = btn.closest('form');
+		if (!form || !titleRu || !textRu) return;
+
+		function setStatus(text, kind) {
+			if (!statusEl) return;
+			statusEl.textContent = text || '';
+			statusEl.classList.remove('is-error', 'is-ok');
+			if (kind) statusEl.classList.add(kind);
+		}
+
+		btn.addEventListener('click', function () {
+			var hasRu = String(titleRu.value || '').trim() !== '' || String(textRu.value || '').trim() !== '';
+			if (!hasRu) {
+				setStatus('Сначала заполните заголовок или текст RU', 'is-error');
+				return;
+			}
+			var hasEn = (titleEng && String(titleEng.value || '').trim() !== '')
+				|| (textEn && String(textEn.value || '').trim() !== '')
+				|| (slugEn && String(slugEn.value || '').trim() !== '');
+			if (hasEn && !window.confirm('Заменить существующие EN-поля переводом?')) {
+				return;
+			}
+
+			var fd = new FormData(form);
+			fd.set('title', titleRu.value);
+			fd.set('text_ru', textRu.value);
+			var action = form.getAttribute('action') || window.location.pathname;
+			var url = action + (action.indexOf('?') >= 0 ? '&' : '?') + 'action=translate_en';
+
+			btn.disabled = true;
+			setStatus('Перевод…', '');
+
+			fetch(url, { method: 'POST', body: fd, credentials: 'same-origin' })
+				.then(function (r) { return r.json().then(function (j) { return { okHttp: r.ok, body: j }; }); })
+				.then(function (res) {
+					if (!res.body || !res.body.ok) {
+						throw new Error((res.body && res.body.error) || 'Ошибка перевода');
+					}
+					if (titleEng && res.body.title_eng !== undefined) {
+						titleEng.value = res.body.title_eng;
+					}
+					if (textEn && res.body.text_en !== undefined) {
+						textEn.value = res.body.text_en;
+						textEn.dispatchEvent(new Event('input', { bubbles: true }));
+					}
+					if (slugEn && res.body.slug_en !== undefined) {
+						slugEn.value = res.body.slug_en;
+					}
+					setStatus('Готово', 'is-ok');
+				})
+				.catch(function (err) {
+					setStatus(err && err.message ? err.message : 'Ошибка перевода', 'is-error');
+				})
+				.finally(function () {
+					btn.disabled = false;
+				});
+		});
 	}
 
 	if (document.readyState === 'loading') {

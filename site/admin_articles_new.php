@@ -6,6 +6,7 @@
 require 'init.inc';
 require_once __DIR__ . '/includes/ezine_slugs.php';
 require_once __DIR__ . '/includes/article_text_render.php';
+require_once __DIR__ . '/includes/admin_translate.php';
 
 if (!isset($_SESSION['login']) || !$_SESSION['login']) {
 	header('HTTP/1.1 403 Forbidden');
@@ -88,6 +89,72 @@ $issueId = (int) ($_GET['issue'] ?? 0);
 $aid = isset($_GET['aid']) ? (int) $_GET['aid'] : -1;
 $error = null;
 $notice = null;
+
+// --- AJAX: translate RU → EN (title, body, slug) ---
+if (($_GET['action'] ?? '') === 'translate_en') {
+	header('Content-Type: application/json; charset=utf-8');
+	if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+		http_response_code(405);
+		echo json_encode(['ok' => false, 'error' => 'POST required'], JSON_UNESCAPED_UNICODE);
+		exit;
+	}
+	csrf_verify();
+
+	$reqPressId = aan_post_int('press_id');
+	$reqIssueId = aan_post_int('issue_id');
+	$reqArticleId = aan_post_int('article_id');
+	$titleRu = plain_text_normalize_for_storage(aan_post_string('title'));
+	$textRu = (string) ($_POST['text_ru'] ?? '');
+
+	if ($reqPressId <= 0 || $reqIssueId <= 0) {
+		echo json_encode(['ok' => false, 'error' => 'Выберите издание и выпуск'], JSON_UNESCAPED_UNICODE);
+		exit;
+	}
+	if ($titleRu === '' && trim($textRu) === '') {
+		echo json_encode(['ok' => false, 'error' => 'Нечего переводить: заполните заголовок или текст RU'], JSON_UNESCAPED_UNICODE);
+		exit;
+	}
+
+	try {
+		$titleEng = $titleRu !== '' ? admin_translate_title($titleRu) : '';
+		$textEn = trim($textRu) !== '' ? admin_translate_text($textRu) : '';
+
+		$slugEn = '';
+		if ($titleEng !== '') {
+			$articleSeed = [
+				'id' => max(0, $reqArticleId),
+				'id_issue' => $reqIssueId,
+				'title' => $titleRu,
+				'title_eng' => $titleEng,
+				'meta_description_en' => '',
+			];
+			$slugs = ezn_admin_resolve_article_slugs(
+				$db,
+				'',
+				'',
+				static fn (): string => ezn_default_article_ru($articleSeed),
+				static fn (): string => ezn_default_article_en($articleSeed),
+				max(0, $reqArticleId),
+				$reqIssueId
+			);
+			$slugEn = $slugs['slug_en'];
+		}
+
+		echo json_encode([
+			'ok' => true,
+			'title_eng' => $titleEng,
+			'text_en' => $textEn,
+			'slug_en' => $slugEn,
+		], JSON_UNESCAPED_UNICODE);
+	} catch (Throwable $e) {
+		http_response_code(502);
+		echo json_encode([
+			'ok' => false,
+			'error' => $e->getMessage() !== '' ? $e->getMessage() : 'Ошибка перевода',
+		], JSON_UNESCAPED_UNICODE);
+	}
+	exit;
+}
 
 if (isset($_GET['saved'])) {
 	$notice = 'Сохранено.';
