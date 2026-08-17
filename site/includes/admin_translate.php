@@ -1,11 +1,84 @@
 <?php
 /**
  * Admin helpers: RU → EN via Google Translate (gtx, same as tools/fill-articles-*.py).
+ * PHP runs on an internal Docker network — outbound HTTPS goes through nginx proxy.
  */
 
 function admin_translate_has_cyrillic(string $text): bool
 {
     return (bool) preg_match('/[А-Яа-яЁё]/u', $text);
+}
+
+/**
+ * @throws RuntimeException
+ */
+function admin_translate_http_get(string $url): string
+{
+    if (function_exists('curl_init')) {
+        $ch = curl_init($url);
+        curl_setopt_array($ch, [
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_TIMEOUT => 90,
+            CURLOPT_CONNECTTIMEOUT => 15,
+            CURLOPT_HTTPHEADER => ['User-Agent: zxpress-admin-translate/1.0'],
+            CURLOPT_FOLLOWLOCATION => true,
+        ]);
+        $raw = curl_exec($ch);
+        if ($raw === false) {
+            $err = curl_error($ch);
+            curl_close($ch);
+            throw new RuntimeException('HTTP: ' . $err);
+        }
+        $code = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+        if ($code !== 200) {
+            throw new RuntimeException('HTTP ' . $code);
+        }
+
+        return $raw;
+    }
+
+    $ctx = stream_context_create([
+        'http' => [
+            'timeout' => 90,
+            'header' => "User-Agent: zxpress-admin-translate/1.0\r\n",
+        ],
+        'ssl' => [
+            'verify_peer' => true,
+            'verify_peer_name' => true,
+        ],
+    ]);
+
+    $raw = @file_get_contents($url, false, $ctx);
+    if ($raw === false) {
+        $err = error_get_last();
+        $msg = is_array($err) && isset($err['message']) ? $err['message'] : 'unknown error';
+        throw new RuntimeException('HTTP: ' . $msg);
+    }
+
+    return $raw;
+}
+
+/**
+ * @throws RuntimeException
+ */
+function admin_translate_fetch(string $query): string
+{
+    $urls = [
+        'http://nginx/internal/translate-google?' . $query,
+        'https://translate.googleapis.com/translate_a/single?' . $query,
+    ];
+
+    $errors = [];
+    foreach ($urls as $url) {
+        try {
+            return admin_translate_http_get($url);
+        } catch (RuntimeException $e) {
+            $errors[] = $e->getMessage();
+        }
+    }
+
+    throw new RuntimeException('Не удалось связаться с сервисом перевода');
 }
 
 /**
@@ -20,20 +93,8 @@ function admin_translate_google_chunk(string $text, string $sl = 'ru', string $t
         return $text;
     }
 
-    $url = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl='
-        . rawurlencode($sl) . '&tl=' . rawurlencode($tl) . '&dt=t&q=' . rawurlencode($text);
-
-    $ctx = stream_context_create([
-        'http' => [
-            'timeout' => 90,
-            'header' => "User-Agent: zxpress-admin-translate/1.0\r\n",
-        ],
-    ]);
-
-    $raw = @file_get_contents($url, false, $ctx);
-    if ($raw === false) {
-        throw new RuntimeException('Не удалось связаться с сервисом перевода');
-    }
+    $query = 'client=gtx&sl=' . rawurlencode($sl) . '&tl=' . rawurlencode($tl) . '&dt=t&q=' . rawurlencode($text);
+    $raw = admin_translate_fetch($query);
 
     $data = json_decode($raw, true);
     if (!is_array($data) || !isset($data[0]) || !is_array($data[0])) {
