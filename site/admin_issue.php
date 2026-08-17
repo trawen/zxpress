@@ -31,6 +31,95 @@ $nextIssueSortOrder = static function (mysqli $db, int $pressId): int {
     return max(10, ((int) ($row['max_sort'] ?? 0)) + 10);
 };
 
+function admin_issue_format_date(int $ts): string
+{
+    return $ts > 0 ? date('d.m.Y', $ts) : '';
+}
+
+function admin_issue_parse_date(string $raw): int
+{
+    $raw = trim(str_replace('/', '.', $raw));
+    if ($raw === '') {
+        return 0;
+    }
+    $parts = explode('.', $raw);
+    if (count($parts) !== 3) {
+        return 0;
+    }
+    $day = (int) $parts[0];
+    $month = (int) $parts[1];
+    $year = (int) $parts[2];
+    if ($year > 0 && $year < 100) {
+        $year += ($year >= 70) ? 1900 : 2000;
+    }
+    if ($day <= 0 || $month <= 0 || $year <= 0) {
+        return 0;
+    }
+    $ts = mktime(0, 0, 0, $month, $day, $year);
+    return $ts !== false ? (int) $ts : 0;
+}
+
+/** @return list<string> */
+function admin_issue_upload_extensions(): array
+{
+    return ['zip', 'rar', 'trd', 'scl', 'udi', 'fdi', 'tap', 'tzx', 'td0', 'pdf', 'txt', 'html', 'htm', 'djvu'];
+}
+
+function admin_issue_upload_error_message(int $code): string
+{
+    return match ($code) {
+        UPLOAD_ERR_INI_SIZE, UPLOAD_ERR_FORM_SIZE => 'файл слишком большой (лимит загрузки)',
+        UPLOAD_ERR_PARTIAL => 'файл загружен частично',
+        UPLOAD_ERR_NO_TMP_DIR => 'нет временной директории на сервере',
+        UPLOAD_ERR_CANT_WRITE => 'не удалось записать файл во временную директорию',
+        UPLOAD_ERR_EXTENSION => 'загрузка остановлена расширением PHP',
+        default => 'ошибка загрузки #' . $code,
+    };
+}
+
+function admin_issue_normalize_file_name(string $uploadName): string
+{
+    $base = basename($uploadName);
+    if (strlen($base) <= 32) {
+        return $base;
+    }
+    $ext = pathinfo($base, PATHINFO_EXTENSION);
+    if ($ext !== '') {
+        $maxStem = max(1, 32 - strlen($ext) - 1);
+        $stem = substr(pathinfo($base, PATHINFO_FILENAME), 0, $maxStem);
+
+        return $stem . '.' . $ext;
+    }
+
+    return substr($base, 0, 32);
+}
+
+function admin_issue_upload_mime_allowed(string $ext, string $mime): bool
+{
+    $binary = ['trd', 'scl', 'udi', 'fdi', 'tap', 'tzx', 'td0'];
+    if (in_array($ext, $binary, true)) {
+        return true;
+    }
+
+    $allowed = [
+        'zip' => ['application/zip', 'application/x-zip-compressed', 'application/octet-stream'],
+        'rar' => ['application/x-rar-compressed', 'application/x-rar', 'application/vnd.rar', 'application/octet-stream'],
+        'pdf' => ['application/pdf', 'application/octet-stream'],
+        'txt' => ['text/plain', 'application/octet-stream'],
+        'html' => ['text/html', 'application/octet-stream'],
+        'htm' => ['text/html', 'application/octet-stream'],
+        'djvu' => ['image/vnd.djvu', 'application/octet-stream'],
+    ];
+    if (!isset($allowed[$ext])) {
+        return false;
+    }
+    if ($mime === '') {
+        return true;
+    }
+
+    return in_array($mime, $allowed[$ext], true);
+}
+
 // INPUT FORM
 if (($_POST['save'] ?? '') === 'save') {
     csrf_verify();
@@ -92,82 +181,114 @@ if (($_POST['save'] ?? '') === 'save') {
     // UPLOAD FILE (optional — e2e and normal saves may omit $_FILES['upload_file'])
     $upload = (isset($_FILES['upload_file']) && is_array($_FILES['upload_file'])) ? $_FILES['upload_file'] : [];
     $uploadName = (string) ($upload['name'] ?? '');
-    $ext = $uploadName !== '' ? strtolower(substr($uploadName, -3)) : '';
-    $tmpName = (string) ($upload['tmp_name'] ?? '');
-    $mime = ($tmpName !== '' && is_uploaded_file($tmpName))
-        ? finfo_file(finfo_open(FILEINFO_MIME_TYPE), $tmpName)
-        : '';
-    $allowed_mime = ['application/zip', 'application/x-rar-compressed', 'application/x-rar', 'application/octet-stream'];
+    $uploadErrCode = (int) ($upload['error'] ?? UPLOAD_ERR_NO_FILE);
+    if ($uploadName !== '' || $uploadErrCode !== UPLOAD_ERR_NO_FILE) {
+        $uploadError = '';
+        if ($uploadErrCode !== UPLOAD_ERR_OK) {
+            $uploadError = admin_issue_upload_error_message($uploadErrCode);
+        } else {
+            $ext = strtolower(pathinfo($uploadName, PATHINFO_EXTENSION));
+            $tmpName = (string) ($upload['tmp_name'] ?? '');
+            if ($tmpName === '' || !is_uploaded_file($tmpName)) {
+                $uploadError = 'файл не получен сервером';
+            } elseif ($ext === '' || !in_array($ext, admin_issue_upload_extensions(), true)) {
+                $uploadError = 'недопустимое расширение' . ($ext !== '' ? ' .' . $ext : '');
+            } else {
+                $finfo = finfo_open(FILEINFO_MIME_TYPE);
+                $mime = ($finfo && $tmpName !== '') ? (string) (finfo_file($finfo, $tmpName) ?: '') : '';
+                if ($finfo) {
+                    finfo_close($finfo);
+                }
+                if (!admin_issue_upload_mime_allowed($ext, $mime)) {
+                    error_log('admin_issue: rejected upload_file ext=' . $ext . ' MIME=' . $mime);
+                    $uploadError = 'недопустимый тип файла' . ($mime !== '' ? ' (' . $mime . ')' : '');
+                } else {
+                    $id_issue = 0;
+                    if (trim((string) ($_POST['upload_file_new_issue'] ?? '')) !== '') {
+                        $title = (string) $_POST['upload_file_new_issue'];
+                        $newIssueSortOrder = (int) ($_POST['upload_file_new_issue_sort_order'] ?? 0);
+                        if ($newIssueSortOrder <= 0) {
+                            $newIssueSortOrder = $nextIssueSortOrder($db, $id);
+                        }
+                        $newIssueDate = admin_issue_parse_date((string) ($_POST['upload_file_new_issue_date'] ?? ''));
+                        $stmt_is = $db->prepare(
+                            'INSERT INTO issue (`id`, `id_press`, `title`, `date`, `sort_order`, `views`) VALUES (NULL, ?, ?, ?, ?, 0)'
+                        );
+                        if ($stmt_is) {
+                            $stmt_is->bind_param('isii', $id, $title, $newIssueDate, $newIssueSortOrder);
+                            $stmt_is->execute();
+                        }
+                        $id_issue = (int) mysqli_insert_id($db);
+                        if ($id_issue > 0) {
+                            $loggedIssueIds[$id_issue] = $title;
+                            $issueRow = ['id' => $id_issue, 'id_press' => $id, 'title' => $title];
+                            $issueSlugs = per_admin_resolve_slugs(
+                                $db,
+                                'issue',
+                                '',
+                                '',
+                                static fn (): string => ezn_default_issue_ru($issueRow),
+                                static fn (): string => ezn_default_issue_en($issueRow),
+                                $id_issue,
+                                'id_press',
+                                $id
+                            );
+                            $stmt_is_slug = $db->prepare('UPDATE issue SET slug_ru=?, slug_en=? WHERE id=? LIMIT 1');
+                            if ($stmt_is_slug) {
+                                $stmt_is_slug->bind_param('ssi', $issueSlugs['slug_ru'], $issueSlugs['slug_en'], $id_issue);
+                                $stmt_is_slug->execute();
+                                $stmt_is_slug->close();
+                            }
+                        }
+                    } else {
+                        $id_issue = (int) ($_POST['upload_file_issue'] ?? 0);
+                    }
 
-    if ($tmpName !== '' && ($ext == "zip" or $ext == "rar" or $ext == "trd" or $ext == "scl" or $ext == "udi" or $ext == "fdi") and in_array($mime, $allowed_mime, true)) {
+                    if ($id_issue <= 0) {
+                        $uploadError = 'выберите выпуск или укажите номер нового';
+                    } else {
+                        $name = admin_issue_normalize_file_name($uploadName);
+                        $type = (int) ($_POST['upload_file_type'] ?? 0);
+                        $file_title = (string) ($_POST['upload_file_title'] ?? '');
+                        $size = (int) ceil(((int) ($upload['size'] ?? 0)) / 1000);
 
-        if ($_POST['upload_file_new_issue']) {
+                        $stmt_f = $db->prepare(
+                            'INSERT INTO files (`id`, `id_issue`, `date`, `name`, `type`, `file_title`, `size`, `downloads`, `delete`, `file_comment`) '
+                            . "VALUES (NULL, ?, ?, ?, ?, ?, ?, 0, 0, '')"
+                        );
+                        $saved = false;
+                        if ($stmt_f) {
+                            $stmt_f->bind_param('iisisi', $id_issue, $tm, $name, $type, $file_title, $size);
+                            $saved = $stmt_f->execute();
+                            $stmt_f->close();
+                        }
 
-            $title = $_POST['upload_file_new_issue'] ?? '';
-            $newIssueSortOrder = (int) ($_POST['upload_file_new_issue_sort_order'] ?? 0);
-            if ($newIssueSortOrder <= 0) {
-                $newIssueSortOrder = $nextIssueSortOrder($db, $id);
-            }
-            $stmt_is = $db->prepare(
-                'INSERT INTO issue (`id`, `id_press`, `title`, `date`, `sort_order`, `views`) VALUES (NULL, ?, ?, 0, ?, 0)'
-            );
-            if ($stmt_is) {
-                $stmt_is->bind_param('isi', $id, $title, $newIssueSortOrder);
-                $stmt_is->execute();
-            }
-            $id_issue = mysqli_insert_id($db);
-            if ($id_issue > 0) {
-                $loggedIssueIds[$id_issue] = $title;
-                $issueRow = ['id' => $id_issue, 'id_press' => $id, 'title' => $title];
-                $issueSlugs = per_admin_resolve_slugs(
-                    $db,
-                    'issue',
-                    '',
-                    '',
-                    static fn (): string => ezn_default_issue_ru($issueRow),
-                    static fn (): string => ezn_default_issue_en($issueRow),
-                    $id_issue,
-                    'id_press',
-                    $id
-                );
-                $stmt_is_slug = $db->prepare('UPDATE issue SET slug_ru=?, slug_en=? WHERE id=? LIMIT 1');
-                if ($stmt_is_slug) {
-                    $stmt_is_slug->bind_param('ssi', $issueSlugs['slug_ru'], $issueSlugs['slug_en'], $id_issue);
-                    $stmt_is_slug->execute();
-                    $stmt_is_slug->close();
+                        $id_file = (int) mysqli_insert_id($db);
+                        if (!$saved || $id_file <= 0) {
+                            $uploadError = 'не удалось сохранить запись в базе';
+                            error_log('[FIX] admin_issue: INSERT files failed for ' . $name);
+                        } elseif (!zx_storage_copy_uploaded_file('files', $name, $tmpName)) {
+                            $stmt_del = $db->prepare('DELETE FROM files WHERE id=? LIMIT 1');
+                            if ($stmt_del) {
+                                $stmt_del->bind_param('i', $id_file);
+                                $stmt_del->execute();
+                                $stmt_del->close();
+                            }
+                            $uploadError = 'не удалось сохранить файл на диск';
+                        } else {
+                            $loggedFileIds[$id_file] = [
+                                'issue_id' => $id_issue,
+                                'title' => $file_title !== '' ? $file_title : $name,
+                            ];
+                        }
+                    }
                 }
             }
-
-        } else {
-
-            $id_issue = intval($_POST['upload_file_issue']);
-
         }
 
-        $name = $uploadName;
-        $type = intval($_POST['upload_file_type'] ?? 0);
-        $file_title = $_POST['upload_file_title'] ?? '';
-        $size = (int)ceil(((int) ($upload['size'] ?? 0)) / 1000);
-
-        $stmt_f = $db->prepare(
-            'INSERT INTO files (`id`, `id_issue`, `date`, `name`, `type`, `file_title`, `size`, `downloads`, `delete`, `file_comment`) '
-            . "VALUES (NULL, ?, ?, ?, ?, ?, ?, 0, 0, '')"
-        );
-        if ($stmt_f) {
-            $stmt_f->bind_param("iisisi", $id_issue, $tm, $name, $type, $file_title, $size);
-            $stmt_f->execute();
+        if ($uploadError !== '') {
+            $_SESSION['admin_issue_error'] = 'Файл не загружен: ' . $uploadError;
         }
-
-        $id_screen = mysqli_insert_id($db);
-        if ($id_screen > 0) {
-            $loggedFileIds[$id_screen] = [
-                'issue_id' => (int) $id_issue,
-                'title' => $file_title !== '' ? $file_title : $name,
-            ];
-        }
-        $safe_name = basename($uploadName);
-        copy($tmpName, zx_storage_path('files', $safe_name));
-
     }
 
     $add_issue = $_POST['add_issue'] ?? '';
@@ -178,11 +299,12 @@ if (($_POST['save'] ?? '') === 'save') {
         if ($addIssueSortOrder <= 0) {
             $addIssueSortOrder = $nextIssueSortOrder($db, $id);
         }
+        $addIssueDate = admin_issue_parse_date((string) ($_POST['add_issue_date'] ?? ''));
         $stmt_ai = $db->prepare(
-            'INSERT INTO issue (`id`, `id_press`, `title`, `date`, `sort_order`, `views`) VALUES (NULL, ?, ?, 0, ?, 0)'
+            'INSERT INTO issue (`id`, `id_press`, `title`, `date`, `sort_order`, `views`) VALUES (NULL, ?, ?, ?, ?, 0)'
         );
         if ($stmt_ai) {
-            $stmt_ai->bind_param('isi', $id, $add_issue, $addIssueSortOrder);
+            $stmt_ai->bind_param('isii', $id, $add_issue, $addIssueDate, $addIssueSortOrder);
             $stmt_ai->execute();
             $newIssueId = (int) mysqli_insert_id($db);
             if ($newIssueId > 0) {
@@ -227,9 +349,10 @@ if (($_POST['save'] ?? '') === 'save') {
             $id_issue = (int)$t['id'];
             $title = $_POST['issue_title_' . $id_issue] ?? '';
             $sortOrder = max(0, (int) ($_POST['issue_sort_order_' . $id_issue] ?? $t['sort_order'] ?? 0));
-            $stmt_up = $db->prepare("UPDATE issue SET title=?, sort_order=? WHERE id=? LIMIT 1");
+            $issueDate = admin_issue_parse_date((string) ($_POST['issue_date_' . $id_issue] ?? ''));
+            $stmt_up = $db->prepare('UPDATE issue SET title=?, sort_order=?, date=? WHERE id=? LIMIT 1');
             if ($stmt_up) {
-                $stmt_up->bind_param("sii", $title, $sortOrder, $id_issue);
+                $stmt_up->bind_param('siii', $title, $sortOrder, $issueDate, $id_issue);
                 $stmt_up->execute();
             }
 
@@ -445,6 +568,7 @@ if ($id) {
     $n = 0;
     $iss = [];
     while ($z && ($t = mysqli_fetch_array($z))) {
+        $t['date_fmt'] = admin_issue_format_date((int) ($t['date'] ?? 0));
         $iss[$n] = $t;
         $n++;
     }
@@ -498,6 +622,10 @@ while ($z && ($t = mysqli_fetch_array($z))) {
     $ct[] = $t;
 }
 $smarty->assign('cities', $ct);
+
+$adminIssueError = (string) ($_SESSION['admin_issue_error'] ?? '');
+unset($_SESSION['admin_issue_error']);
+$smarty->assign('error', $adminIssueError);
 
 $smarty->display('admin_issue.tpl');
 

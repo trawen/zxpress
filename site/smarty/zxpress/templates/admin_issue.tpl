@@ -235,6 +235,7 @@
 .admin-ai-table select { min-width: 80px; }
 .admin-ai-order { width: 78px !important; min-width: 78px !important; }
 .admin-ai-number { width: 86px !important; min-width: 86px !important; }
+.admin-ai-date { width: 108px !important; min-width: 108px !important; }
 .admin-ai-row-links {
 	display: flex;
 	align-items: center;
@@ -257,7 +258,7 @@
 }
 .admin-ai-add-row {
 	display: grid;
-	grid-template-columns: minmax(110px, 180px) 110px auto;
+	grid-template-columns: minmax(110px, 180px) 110px minmax(108px, 140px) auto;
 	align-items: end;
 	gap: 10px;
 }
@@ -274,6 +275,13 @@
 	display: grid;
 	grid-template-columns: minmax(180px, 1.4fr) minmax(130px, 1fr) minmax(100px, .7fr);
 	gap: 12px;
+}
+.admin-ai-alert {
+	margin: 0 0 14px;
+	padding: 10px 12px;
+	border: 1px solid #d4a574;
+	background: #fff4e8;
+	color: var(--ai-accent);
 }
 .admin-ai-footer {
 	position: sticky;
@@ -331,6 +339,9 @@
 		</aside>
 
 		<main class="admin-ai-main">
+			{if $error}
+			<div class="admin-ai-alert">{$error}</div>
+			{/if}
 			<form method="post" enctype="multipart/form-data" action="admin_issue.php?id={if $press.id}{$press.id}{else}0{/if}">
 				<input type="hidden" name="csrf_token" value="{$csrf_token}">
 				<input type="hidden" name="press_change" id="press_change" value="">
@@ -402,8 +413,9 @@
 						<table class="admin-ai-table">
 							<thead>
 								<tr>
-									<th>Порядок</th>
 									<th>Номер</th>
+									<th>Порядок</th>
+									<th>Дата</th>
 									<th>Slug RU</th>
 									<th>Slug EN</th>
 									<th>Ссылки</th>
@@ -413,8 +425,9 @@
 							<tbody>
 							{section name=n loop=$issues}
 								<tr>
-									<td><input class="admin-ai-order" type="number" min="0" name="issue_sort_order_{$issues[n].id}" value="{$issues[n].sort_order}"></td>
 									<td><input class="admin-ai-number" type="text" name="issue_title_{$issues[n].id}" value="{$issues[n].title}"></td>
+									<td><input class="admin-ai-order" type="number" min="0" name="issue_sort_order_{$issues[n].id}" value="{$issues[n].sort_order}"></td>
+									<td><input class="admin-ai-date" type="text" name="issue_date_{$issues[n].id}" value="{$issues[n].date_fmt}" placeholder="дд.мм.гггг"></td>
 									<td><input type="text" name="issue_slug_ru_{$issues[n].id}" value="{$issues[n].slug_ru}"></td>
 									<td><input type="text" name="issue_slug_en_{$issues[n].id}" value="{$issues[n].slug_en}"></td>
 									<td>
@@ -441,12 +454,16 @@
 					<div class="admin-ai-panel-body" style="border-top:1px solid var(--ai-line)">
 						<div class="admin-ai-add-row">
 							<label>
-								<span class="admin-ai-label">Номер нового выпуска</span>
+								<span class="admin-ai-label">Номер</span>
 								<input type="text" name="add_issue" placeholder="например, 08">
 							</label>
 							<label>
 								<span class="admin-ai-label">Порядок</span>
 								<input type="number" min="0" name="add_issue_sort_order" placeholder="авто">
+							</label>
+							<label>
+								<span class="admin-ai-label">Дата</span>
+								<input class="admin-ai-date" type="text" name="add_issue_date" placeholder="дд.мм.гггг">
 							</label>
 							<div class="admin-ai-help">Пустой порядок = последний + 10</div>
 						</div>
@@ -521,7 +538,7 @@
 						<div class="admin-ai-upload-grid">
 							<label>
 								<span class="admin-ai-label">Файл</span>
-								<input type="file" name="upload_file" accept=".zip,.rar,.trd,.scl,.udi,.fdi">
+								<input type="file" name="upload_file" accept=".zip,.rar,.trd,.scl,.udi,.fdi,.tap,.tzx,.td0,.pdf,.txt,.html,.htm,.djvu">
 							</label>
 							<label>
 								<span class="admin-ai-label">Привязать к выпуску</span>
@@ -553,6 +570,10 @@
 							<label>
 								<span class="admin-ai-label">Или создать выпуск</span>
 								<input type="text" name="upload_file_new_issue" placeholder="номер">
+							</label>
+							<label>
+								<span class="admin-ai-label">Дата выпуска</span>
+								<input class="admin-ai-date" type="text" name="upload_file_new_issue_date" placeholder="дд.мм.гггг">
 							</label>
 							<label>
 								<span class="admin-ai-label">Порядок нового выпуска</span>
