@@ -9,7 +9,7 @@
 <div style="font: bold 14px Verdana">
 <br>
 
-<div style="padding: 10px; border: 1px solid #C8C5AC; background-color: #EBE8D7">
+<div style="padding: 10px; border: 1px solid #C8C5AC; background-color: var(--smn-paper)">
 
 <div style="margin-bottom:10px">
 <a href="admin_periodicals.php?id=0" style="font-weight:bold">+ Новое издание</a>
@@ -33,7 +33,7 @@
 	max-height: calc(100vh - 20px);
 	display: flex;
 	flex-direction: column;
-	background: #EBE8D7;
+	background: var(--smn-paper);
 	z-index: 2;
 }
 .admin-periodicals-list-wrap {
@@ -247,7 +247,7 @@
 {/if}
 
 {if $issue}
-<div id="admin-periodical-issue-form" style="border:1px solid #C8C5AC;padding:10px;background:#F5F2E8">
+<div id="admin-periodical-issue-form" style="border:1px solid #C8C5AC;padding:10px;background:var(--smn-surface)">
 <div style="font:bold 12px Verdana;margin-bottom:8px">
 {if $issue.id}Редактирование выпуска #{$issue.id}{else}Новый выпуск{/if}
 {if $issue.id}<a href="admin_periodical_articles.php?issue_id={$issue.id}" style="font-weight:normal;margin-left:12px">Статьи ({$issue_articles_count}) →</a>{/if}

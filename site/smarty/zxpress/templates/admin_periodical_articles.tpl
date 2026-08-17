@@ -9,7 +9,7 @@
 <div style="font: bold 14px Verdana">
 <br>
 
-<div style="padding: 10px; border: 1px solid #C8C5AC; background-color: #EBE8D7">
+<div style="padding: 10px; border: 1px solid #C8C5AC; background-color: var(--smn-paper)">
 
 <div style="margin-bottom:10px">
 <a href="admin_periodicals.php?id={$periodical.id}&issue_id={$issue_id}#admin-periodical-issue-form">← Назад к выпуску: {$periodical.title_ru|escape:'html'} — {$issue_label|escape:'html'}</a>

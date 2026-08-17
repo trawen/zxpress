@@ -9,7 +9,7 @@
 <div style="font: bold 14px Verdana">
 <br>
 
-<div style="padding: 10px; border: 1px solid #C8C5AC; background-color: #EBE8D7">
+<div style="padding: 10px; border: 1px solid #C8C5AC; background-color: var(--smn-paper)">
 
 <div style="margin-bottom:10px">
 <a href="admin_articles.php{if $id}?id={$id}{if $issue_id}&amp;issue={$issue_id}{/if}{/if}">← Старая админка статей</a>
@@ -79,7 +79,7 @@
 	max-height: calc(100vh - 20px);
 	display: flex;
 	flex-direction: column;
-	background: #EBE8D7;
+	background: var(--smn-paper);
 	z-index: 2;
 	overflow: hidden;
 }
@@ -148,7 +148,7 @@
 	margin: 0 6px 6px 0;
 	padding: 2px 6px;
 	border: 1px solid #C8C5AC;
-	background: #f5f3e6;
+	background: var(--smn-surface);
 	font: normal 11px Verdana;
 }
 .admin-aan-title-input,

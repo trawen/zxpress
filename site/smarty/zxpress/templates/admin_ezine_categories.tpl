@@ -9,7 +9,7 @@
 <div style="font: bold 14px Verdana">
 <br>
 
-<div style="padding: 10px; border: 1px solid #C8C5AC; background-color: #EBE8D7">
+<div style="padding: 10px; border: 1px solid #C8C5AC; background-color: var(--smn-paper)">
 
 <div style="margin-bottom:10px">
 <a href="admin_ezine_categories.php?id=0" style="font-weight:bold">+ Новая категория</a>
@@ -66,11 +66,11 @@
 	text-overflow: ellipsis;
 }
 .admin-ezine-categories-tree-wrap ul.tree li.last {
-	background: #EBE8D7 url(http://odyniec.net/articles/turning-lists-into-trees/lastnode.png) no-repeat;
+	background: var(--smn-paper) url(http://odyniec.net/articles/turning-lists-into-trees/lastnode.png) no-repeat;
 	margin-bottom: 6px;
 }
 .admin-ezine-categories-tree-wrap ul.tree li.first {
-	background: #EBE8D7;
+	background: var(--smn-paper);
 	font-weight: bold;
 	padding: 0;
 }
@@ -339,7 +339,7 @@
 	z-index: 1;
 	width: min(920px, 92vw);
 	max-height: 88vh;
-	background: #EBE8D7;
+	background: var(--smn-paper);
 	border: 1px solid #C8C5AC;
 	display: flex;
 	flex-direction: column;

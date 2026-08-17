@@ -31,7 +31,7 @@
 
 
 
-<div style="padding: 10px; border: 1px solid #C8C5AC; background-color: #EBE8D7">
+<div style="padding: 10px; border: 1px solid #C8C5AC; background-color: var(--smn-paper)">
 
 Информация:<br><br> 
 
@@ -221,7 +221,7 @@ ISBN</td><td><input type="text" style="width: 100px" name="isbn" value="{$book.i
 
 
 
-<div style="padding: 10px; border: 1px solid #C8C5AC; background-color: #EBE8D7; ">
+<div style="padding: 10px; border: 1px solid #C8C5AC; background-color: var(--smn-paper); ">
 
 Картинки обложки:<br><br>
 
@@ -278,7 +278,7 @@ ISBN</td><td><input type="text" style="width: 100px" name="isbn" value="{$book.i
 
 
 
-<div style="padding: 10px; border: 1px solid #C8C5AC;  background-color: #EBE8D7">
+<div style="padding: 10px; border: 1px solid #C8C5AC;  background-color: var(--smn-paper)">
 
 Файлы:<br><br>
 
@@ -382,7 +382,7 @@ ISBN</td><td><input type="text" style="width: 100px" name="isbn" value="{$book.i
 
 
 
-<div style="padding: 10px; border: 1px solid #C8C5AC; background-color: #EBE8D7; font: bold 14px Verdana">
+<div style="padding: 10px; border: 1px solid #C8C5AC; background-color: var(--smn-paper); font: bold 14px Verdana">
 
 Главы или статьи: <br><br>
 

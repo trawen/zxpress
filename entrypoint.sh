@@ -136,9 +136,10 @@ chronology_graph_startup
 DATA_ROOT="${ZXPRESS_DATA_ROOT:-/home/zxpress/web/zxpress.ru/data}"
 FALLBACK_TMP="${DATA_ROOT}/tmp"
 TMP_RETENTION_MIN="${TMP_RETENTION_MIN:-1440}"
+SESSION_RETENTION_MIN="${SESSION_RETENTION_MIN:-1440}"
 (while true; do
     sleep 600
-    find /home/zxpress/tmp -maxdepth 1 -name 'sess_*' -mmin +30 -delete 2>/dev/null || true
+    find /home/zxpress/tmp -maxdepth 1 -name 'sess_*' -mmin +"$SESSION_RETENTION_MIN" -delete 2>/dev/null || true
     if [ -d "$FALLBACK_TMP" ]; then
         removed_count="$(find "$FALLBACK_TMP" -maxdepth 1 -type f -mmin +"$TMP_RETENTION_MIN" -print -delete 2>/dev/null | wc -l | tr -d '[:space:]')"
         if [ "${removed_count:-0}" -gt 0 ]; then

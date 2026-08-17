@@ -9,7 +9,7 @@
 <div style="font: bold 14px Verdana">
 <br>
 
-<div style="padding: 10px; border: 1px solid #C8C5AC; background-color: #EBE8D7">
+<div style="padding: 10px; border: 1px solid #C8C5AC; background-color: var(--smn-paper)">
 
 <div style="margin-bottom:10px">
 <a href="admin_letters.php?id=0" style="font-weight:bold">+ Новое письмо</a>
@@ -233,7 +233,7 @@
 	transform: translate(-50%, -50%);
 	width: min(920px, 94vw);
 	max-height: 92vh;
-	background: #F5F2E8;
+	background: var(--smn-surface);
 	border: 1px solid #C8C5AC;
 	padding: 12px;
 	box-sizing: border-box;
@@ -263,7 +263,7 @@
 	margin-top: 6px;
 	padding: 6px 8px;
 	border: 1px solid #C8C5AC;
-	background: #F5F2E8;
+	background: var(--smn-surface);
 }
 .admin-letter-upload-item button {
 	height: 22px;

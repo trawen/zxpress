@@ -9,7 +9,7 @@
 <div style="font: bold 14px Verdana">
 <br>
 
-<div style="padding: 10px; border: 1px solid #C8C5AC; background-color: #EBE8D7">
+<div style="padding: 10px; border: 1px solid #C8C5AC; background-color: var(--smn-paper)">
 
 <div style="margin-bottom:10px">
 {if $press && $press.id}
@@ -37,7 +37,7 @@
 	max-height: calc(100vh - 20px);
 	display: flex;
 	flex-direction: column;
-	background: #EBE8D7;
+	background: var(--smn-paper);
 	z-index: 2;
 	box-sizing: border-box;
 }
@@ -76,7 +76,7 @@
 	display: inline-block;
 	padding: 2px 5px;
 	border: 1px solid #C8C5AC;
-	background: #f5f3e6;
+	background: var(--smn-surface);
 	white-space: nowrap;
 	line-height: 1.25;
 }
@@ -103,7 +103,7 @@
 	margin: 0 10px 12px 0;
 	padding: 8px;
 	border: 1px dashed #BBB;
-	background: #f5f3e6;
+	background: var(--smn-surface);
 	font: normal 11px Verdana;
 	text-align: center;
 }
@@ -127,8 +127,8 @@
 }
 .admin-ascr-emulator {
 	margin-bottom: 16px;
-	border: 1px solid #8f8a71;
-	background: #dedac5;
+	border: 1px solid var(--smn-line);
+	background: var(--smn-paper);
 }
 .admin-ascr-emulator summary {
 	cursor: pointer;
@@ -181,7 +181,7 @@
 <input type="hidden" name="press_id" value="{$press.id}">
 <input type="hidden" name="issue_id" value="{$issue_id}">
 
-<div style="margin-bottom:16px;padding:10px;border:1px solid #C8C5AC;background:#f5f3e6">
+<div style="margin-bottom:16px;padding:10px;border:1px solid #C8C5AC;background:var(--smn-surface)">
 <div style="font: bold 12px Verdana; margin-bottom:6px">Загрузить скриншоты</div>
 <table style="font: 12px Verdana" cellpadding="4">
 <tr>

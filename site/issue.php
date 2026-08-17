@@ -323,7 +323,7 @@ if ($viewMode === 'issue' && $currentIssue) {
 }
 
 $is = [];
-$stmt = mysqli_prepare($db, 'SELECT * FROM issue, files WHERE id_press=? AND files.id_issue=issue.id ORDER BY sort_order ASC, title ASC');
+$stmt = mysqli_prepare($db, 'SELECT * FROM issue, files WHERE issue.id_press=? AND files.id_issue=issue.id ORDER BY issue.sort_order ASC, issue.title ASC');
 mysqli_stmt_bind_param($stmt, 'i', $id);
 mysqli_stmt_execute($stmt);
 $z = mysqli_stmt_get_result($stmt);

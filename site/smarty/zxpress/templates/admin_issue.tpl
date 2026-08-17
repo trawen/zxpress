@@ -4,17 +4,17 @@
 {literal}
 <style>
 .admin-ai {
-	--ai-bg: #ebe8d7;
-	--ai-card: #f7f5ea;
-	--ai-line: #c8c5ac;
-	--ai-text: #342c24;
-	--ai-muted: #746c62;
-	--ai-accent: #a41e00;
+	--ai-bg: var(--smn-paper);
+	--ai-card: var(--smn-surface);
+	--ai-line: var(--smn-line);
+	--ai-text: var(--smn-ink);
+	--ai-muted: var(--smn-muted);
+	--ai-accent: var(--smn-accent);
 	font: 13px/1.45 "IBM Plex Sans", Verdana, sans-serif;
 	color: var(--ai-text);
 }
 .admin-ai * { box-sizing: border-box; }
-.admin-ai a { color: #493c2f; }
+.admin-ai a { color: var(--smn-lead); }
 .admin-ai a:hover { color: var(--ai-accent); }
 .admin-ai-shell {
 	display: grid;
@@ -157,7 +157,7 @@
 	gap: 12px;
 	padding: 11px 14px;
 	border-bottom: 1px solid var(--ai-line);
-	background: rgba(235,232,215,.72);
+	background: color-mix(in srgb, var(--smn-paper) 72%, transparent);
 }
 .admin-ai-panel-head h2 {
 	margin: 0;
