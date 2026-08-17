@@ -432,6 +432,7 @@ DROP TABLE IF EXISTS `files`;
 CREATE TABLE `files` (
   `id` int NOT NULL AUTO_INCREMENT,
   `id_issue` int NOT NULL,
+  `id_press` int NOT NULL DEFAULT '0',
   `name` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` int NOT NULL,
   `downloads` int NOT NULL DEFAULT '0',
@@ -440,7 +441,8 @@ CREATE TABLE `files` (
   `delete` tinyint NOT NULL DEFAULT '0',
   `file_title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `file_comment` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `idx_files_press_issue` (`id_press`,`id_issue`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2523 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

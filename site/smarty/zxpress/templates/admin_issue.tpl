@@ -444,7 +444,7 @@
 									<td>
 										<span class="admin-ai-row-links">
 											<a href="admin_articles_new.php?id={$press.id}&amp;issue={$issues[n].id}" title="Статьи">статьи</a>
-											<a href="admin_screens.php?id={$press.id}&amp;issue={$issues[n].id}" title="Скриншоты">экраны</a>
+											<a href="admin_screens.php?id={$press.id}&amp;issue={$issues[n].id}#emulator" title="Скриншоты и эмулятор">экраны</a>
 											{if $press.slug_ru && $issues[n].slug_ru}<a href="/ru/ezines/{$press.slug_ru|escape:'url'}/{$issues[n].slug_ru|escape:'url'}" target="_blank" rel="noopener" title="Публичная страница">↗</a>{/if}
 										</span>
 									</td>
@@ -492,7 +492,7 @@
 								<tr>
 									<th>Файл</th>
 									<th>Комментарий</th>
-									<th>Выпуск</th>
+									<th>Привязка</th>
 									<th>Формат</th>
 									<th>Удалить</th>
 								</tr>
@@ -507,6 +507,7 @@
 									<td><input type="text" name="file_title_{$files[n][0]}" value="{$files[n].file_title}" data-file-id="{$files[n][0]}"></td>
 									<td>
 										<select name="issue_file_{$files[n][0]}" data-file-id="{$files[n][0]}">
+											<option value="0"{if $files[n].id_issue eq 0} selected{/if}>все выпуски</option>
 										{section name=a loop=$issues}
 											<option value="{$issues[a].id}"{if $files[n].id_issue eq $issues[a].id} selected{/if}>#{$issues[a].title}</option>
 										{/section}
@@ -552,8 +553,9 @@
 								<input type="file" name="upload_file" accept=".zip,.rar,.trd,.scl,.udi,.fdi,.tap,.tzx,.td0,.pdf,.txt,.html,.htm,.djvu">
 							</label>
 							<label>
-								<span class="admin-ai-label">Привязать к выпуску</span>
+								<span class="admin-ai-label">Привязать</span>
 								<select name="upload_file_issue">
+									<option value="0">все выпуски (общее для издания)</option>
 								{section name=n loop=$issues}
 									<option value="{$issues[n].id}">#{$issues[n].title}</option>
 								{/section}

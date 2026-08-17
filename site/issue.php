@@ -274,6 +274,18 @@ if ($currentIssueId > 0) {
 				$fileRow = $stmtFile->get_result()->fetch_assoc();
 				$stmtFile->close();
 				$fileName = basename((string) ($fileRow['name'] ?? ''));
+				if ($fileName === '' || $fileName === '.' || $fileName === '..') {
+					$stmtPressFile = $db->prepare(
+						'SELECT name FROM files WHERE id_press=? AND id_issue=0 AND `delete`=0 ORDER BY id ASC LIMIT 1'
+					);
+					if ($stmtPressFile) {
+						$stmtPressFile->bind_param('i', $id);
+						$stmtPressFile->execute();
+						$fileRow = $stmtPressFile->get_result()->fetch_assoc();
+						$stmtPressFile->close();
+						$fileName = basename((string) ($fileRow['name'] ?? ''));
+					}
+				}
 				if ($fileName !== '' && $fileName !== '.' && $fileName !== '..') {
 					$fileUrl = '/files/' . rawurlencode($fileName);
 					$currentIssue['download_url'] = $fileUrl;

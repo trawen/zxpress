@@ -120,6 +120,30 @@ function admin_issue_upload_mime_allowed(string $ext, string $mime): bool
     return in_array($mime, $allowed[$ext], true);
 }
 
+function admin_issue_issue_belongs_to_press(mysqli $db, int $issueId, int $pressId): bool
+{
+    if ($issueId <= 0 || $pressId <= 0) {
+        return false;
+    }
+    $z = db_select($db, 'SELECT id FROM issue WHERE id=? AND id_press=? LIMIT 1', 'ii', $issueId, $pressId);
+
+    return (bool) ($z && $z->fetch_assoc());
+}
+
+function admin_issue_list_files(mysqli $db, int $pressId): mysqli_result|false
+{
+    $stmt = $db->prepare(
+        'SELECT * FROM files WHERE id_press=? ORDER BY (id_issue = 0) DESC, id ASC'
+    );
+    if (!$stmt) {
+        return false;
+    }
+    $stmt->bind_param('i', $pressId);
+    $stmt->execute();
+
+    return $stmt->get_result();
+}
+
 // INPUT FORM
 if (($_POST['save'] ?? '') === 'save') {
     csrf_verify();
@@ -244,8 +268,10 @@ if (($_POST['save'] ?? '') === 'save') {
                         $id_issue = (int) ($_POST['upload_file_issue'] ?? 0);
                     }
 
-                    if ($id_issue <= 0) {
-                        $uploadError = 'выберите выпуск или укажите номер нового';
+                    if ($id_issue < 0) {
+                        $uploadError = 'выберите выпуск, издание или укажите номер нового';
+                    } elseif ($id_issue > 0 && !admin_issue_issue_belongs_to_press($db, $id_issue, $id)) {
+                        $uploadError = 'выпуск не относится к этому изданию';
                     } else {
                         $name = admin_issue_normalize_file_name($uploadName);
                         $type = (int) ($_POST['upload_file_type'] ?? 0);
@@ -253,12 +279,12 @@ if (($_POST['save'] ?? '') === 'save') {
                         $size = (int) ceil(((int) ($upload['size'] ?? 0)) / 1000);
 
                         $stmt_f = $db->prepare(
-                            'INSERT INTO files (`id`, `id_issue`, `date`, `name`, `type`, `file_title`, `size`, `downloads`, `delete`, `file_comment`) '
-                            . "VALUES (NULL, ?, ?, ?, ?, ?, ?, 0, 0, '')"
+                            'INSERT INTO files (`id`, `id_issue`, `id_press`, `date`, `name`, `type`, `file_title`, `size`, `downloads`, `delete`, `file_comment`) '
+                            . "VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, 0, 0, '')"
                         );
                         $saved = false;
                         if ($stmt_f) {
-                            $stmt_f->bind_param('iisisi', $id_issue, $tm, $name, $type, $file_title, $size);
+                            $stmt_f->bind_param('iiisisi', $id_issue, $id, $tm, $name, $type, $file_title, $size);
                             $saved = $stmt_f->execute();
                             $stmt_f->close();
                         }
@@ -445,16 +471,8 @@ if (($_POST['save'] ?? '') === 'save') {
     }
 
     //FILES TYPE UPDATE
-    $stmt_fl = $db->prepare("SELECT * FROM files, issue WHERE issue.id_press=? AND files.id_issue=issue.id");
-    if ($stmt_fl) {
-        $stmt_fl->bind_param("i", $id);
-        $stmt_fl->execute();
-        $z = $stmt_fl->get_result();
-    } else {
-        $z = false;
-    }
+    $z = admin_issue_list_files($db, $id);
 
-    $n = 0;
     while ($z && ($t = mysqli_fetch_array($z))) {
 
         if (($_POST['issue_files_change_' . $t[0]] ?? null) == 1) {
@@ -463,18 +481,22 @@ if (($_POST['save'] ?? '') === 'save') {
             $type = intval($_POST['file_type_' . $t[0]] ?? 0);
             $file_title = $_POST['file_title_' . $t[0]] ?? '';
             $issue_file = intval($_POST['issue_file_' . $t[0]] ?? 0);
+            if ($issue_file < 0
+                || ($issue_file > 0 && !admin_issue_issue_belongs_to_press($db, $issue_file, $id))) {
+                $issue_file = (int) ($t['id_issue'] ?? 0);
+            }
 
-            $stmt_fu = $db->prepare("UPDATE files SET type=?, file_title=?, id_issue=? WHERE id=? LIMIT 1");
+            $stmt_fu = $db->prepare("UPDATE files SET type=?, file_title=?, id_issue=?, id_press=? WHERE id=? AND id_press=? LIMIT 1");
             if ($stmt_fu) {
-                $stmt_fu->bind_param("isii", $type, $file_title, $issue_file, $id_file);
+                $stmt_fu->bind_param("isiiii", $type, $file_title, $issue_file, $id, $id_file, $id);
                 $stmt_fu->execute();
             }
 
             if (isset($_POST['file_delete_' . $t[0]])) {
 
-                $stmt_fd = $db->prepare("DELETE FROM files WHERE id=? LIMIT 1");
+                $stmt_fd = $db->prepare("DELETE FROM files WHERE id=? AND id_press=? LIMIT 1");
                 if ($stmt_fd) {
-                    $stmt_fd->bind_param("i", $id_file);
+                    $stmt_fd->bind_param("ii", $id_file, $id);
                     $stmt_fd->execute();
                 }
 
@@ -526,12 +548,13 @@ if (($_POST['save'] ?? '') === 'save') {
         ]);
     }
     foreach ($loggedFileIds as $fileId => $fileMeta) {
+        $fileIssueId = (int) ($fileMeta['issue_id'] ?? 0);
         activity_log($db, [
             'verb' => 'uploaded',
             'object_type' => 'file',
             'object_id' => (int) $fileId,
-            'parent_type' => 'issue',
-            'parent_id' => (int) ($fileMeta['issue_id'] ?? 0),
+            'parent_type' => $fileIssueId > 0 ? 'issue' : 'press',
+            'parent_id' => $fileIssueId > 0 ? $fileIssueId : $id,
             'action' => 'file.uploaded',
             'event_scope' => ACTIVITY_SCOPE_CONTENT,
             'is_public' => 1,
@@ -575,19 +598,12 @@ if ($id) {
     $smarty->assign('issues', $iss);
 
     //FILES
-    $stmt_gf = $db->prepare("SELECT * FROM files, issue WHERE issue.id_press=? AND files.id_issue=issue.id");
-    if ($stmt_gf) {
-        $stmt_gf->bind_param("i", $id);
-        $stmt_gf->execute();
-        $z = $stmt_gf->get_result();
-    } else {
-        $z = false;
-    }
+    $z = admin_issue_list_files($db, $id);
 
     $n = 0;
     $fl = [];
     while ($z && ($t = mysqli_fetch_array($z))) {
-        $t['date'] = date("d.m.y", $t[6]);
+        $t['date'] = date("d.m.y", (int) ($t['date'] ?? 0));
         $fl[$n] = $t;
         $n++;
     }

@@ -78,6 +78,15 @@
 	border: 1px solid #C8C5AC;
 	background: #f5f3e6;
 	white-space: nowrap;
+	line-height: 1.25;
+}
+.admin-ascr-list-wrap a sup {
+	font: normal 9px Verdana;
+	color: #666;
+	line-height: 0;
+	vertical-align: baseline;
+	position: relative;
+	top: -0.45em;
 }
 .admin-ascr-list-wrap a:hover { color: #A41E00; border-color: #A41E00; }
 .admin-ascr-list-wrap a.nav-active {
@@ -116,6 +125,29 @@
 	justify-content: center;
 	font: bold 12px Verdana;
 }
+.admin-ascr-emulator {
+	margin-bottom: 16px;
+	border: 1px solid #8f8a71;
+	background: #dedac5;
+}
+.admin-ascr-emulator summary {
+	cursor: pointer;
+	padding: 10px;
+	font: bold 12px Verdana;
+}
+.admin-ascr-emulator-frame {
+	display: block;
+	width: 100%;
+	height: 470px;
+	border: 0;
+	border-top: 1px solid #8f8a71;
+	background: #15181c;
+}
+.admin-ascr-emulator-note {
+	padding: 7px 10px;
+	font: normal 11px Verdana;
+	color: #2a6a2a;
+}
 </style>
 {/literal}
 
@@ -132,6 +164,17 @@
 Скриншоты выпуска № {$issue.title|escape:'html'}
 <span class="admin-ascr-muted">({$screens|@count})</span>
 </div>
+
+<details class="admin-ascr-emulator" id="admin-ascr-emulator">
+<summary>Запустить эмулятор и сделать скриншоты</summary>
+<iframe
+	class="admin-ascr-emulator-frame"
+	id="admin-ascr-emulator-frame"
+	title="Эмулятор выпуска"
+	data-src="/admin_issue_emulator.php?id={$press.id}&amp;issue={$issue_id}"
+></iframe>
+<div class="admin-ascr-emulator-note" id="admin-ascr-emulator-note"></div>
+</details>
 
 <form method="post" action="admin_screens.php?id={$press.id}&amp;issue={$issue_id}" enctype="multipart/form-data">
 <input type="hidden" name="csrf_token" value="{$csrf_token}">
@@ -236,7 +279,7 @@
 <ul>
 {section name=n loop=$issues}
 <li>
-<a href="admin_screens.php?id={$press.id}&amp;issue={$issues[n].id}"{if $issues[n].id eq $issue_id} class="nav-active"{/if}>{$issues[n].title|escape:'html'}{if $issues[n].screens_count}<span class="admin-ascr-muted">·{$issues[n].screens_count}</span>{/if}</a>
+<a href="admin_screens.php?id={$press.id}&amp;issue={$issues[n].id}"{if $issues[n].id eq $issue_id} class="nav-active"{/if}>{$issues[n].title|escape:'html'}{if $issues[n].screens_count}<sup>{$issues[n].screens_count}</sup>{/if}</a>
 </li>
 {/section}
 </ul>
@@ -250,6 +293,41 @@
 </td>
 </tr>
 </table>
+
+{literal}
+<script>
+(function () {
+	var details = document.getElementById('admin-ascr-emulator');
+	var frame = document.getElementById('admin-ascr-emulator-frame');
+	var note = document.getElementById('admin-ascr-emulator-note');
+	if (!details || !frame) return;
+
+	function loadEmulator() {
+		if (!frame.getAttribute('src')) {
+			frame.setAttribute('src', frame.getAttribute('data-src'));
+		}
+	}
+
+	details.addEventListener('toggle', function () {
+		if (details.open) {
+			loadEmulator();
+		}
+	});
+	if (window.location.hash === '#emulator') {
+		details.open = true;
+		loadEmulator();
+	}
+	var saved = 0;
+	window.addEventListener('message', function (event) {
+		if (event.origin !== window.location.origin || event.source !== frame.contentWindow) return;
+		if (!event.data || event.data.type !== 'zxpress:issue-screenshot-saved') return;
+		saved += 1;
+		note.innerHTML = 'Загружено скриншотов: ' + saved + ' (последний #' + String(event.data.id)
+			+ '). <a href="' + window.location.href.replace(/#.*$/, '') + '">Обновить список скриншотов</a>';
+	});
+})();
+</script>
+{/literal}
 
 </div>
 </div>
