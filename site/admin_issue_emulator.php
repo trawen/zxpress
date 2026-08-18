@@ -172,29 +172,45 @@ $scriptVersion = is_readable($scriptPath) ? (string) filemtime($scriptPath) : '0
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Эмулятор выпуска</title>
+	<script>
+	(function () {
+		try {
+			Object.defineProperty(window, 'devicePixelRatio', {
+				configurable: true,
+				get: function () { return 1; }
+			});
+		} catch (_) {}
+	})();
+	</script>
 	<style>
-		*{box-sizing:border-box}html,body{margin:0;background:#15181c;color:#eceff1;font:13px Verdana,sans-serif}
+		:root{
+			--smn-ink:rgba(10,9,8,.8);
+			--smn-muted:rgb(60,55,50);
+			--smn-paper:rgb(244,238,224);
+			--smn-line:rgb(201,184,150);
+			--smn-surface:#fff;
+			--smn-accent:rgb(164,30,0);
+		}
+		*{box-sizing:border-box}html,body{margin:0;background:var(--smn-paper);color:var(--smn-ink);font:13px Verdana,sans-serif}
 		body{padding:10px}.aiem-layout{display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap}
-		/* Stage shows the 256x192 screen only; the 320x240 USP framebuffer is
-		   shifted so the TV border is cropped exactly like the capture does. */
-		.aiem-stage{width:256px;height:192px;overflow:hidden;background:#000;border:1px solid #3b424b;position:relative}
-		#canvas{display:block;width:320px;height:240px;margin:-24px 0 0 -32px;image-rendering:pixelated;outline:none}
-		#aiem-boot{position:absolute;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.75);color:#aaa}
+		.aiem-stage{width:320px;height:240px;overflow:hidden;background:#000;border:1px solid var(--smn-line);position:relative}
+		#canvas{display:block;width:640px;height:480px;margin:-128px 0 0 -160px;image-rendering:pixelated;outline:none}
+		#aiem-boot{position:absolute;inset:0;display:grid;place-items:center;background:rgba(244,238,224,.88);color:var(--smn-muted)}
 		.aiem-controls{min-width:245px;max-width:340px;display:grid;gap:9px}
-		label{display:grid;gap:4px;color:#aeb6bf}select,button{font:inherit;padding:7px;background:#222831;color:#fff;border:1px solid #48515c}
-		button{cursor:pointer;font-weight:bold}button:disabled{opacity:.45;cursor:default}.primary{background:#243d61}
-		#aiem-status{min-height:34px;color:#aeb6bf}.ok{color:#9dff57!important}.err{color:#ff7373!important}.busy{color:#ffbd52!important}
-		.aiem-hint{font-size:11px;line-height:1.4;color:#89929c}
-		.aiem-empty{padding:24px;border:1px solid #3b424b;color:#bbb}
-		.aiem-queue{margin-top:14px;border-top:1px solid #3b424b;padding-top:10px;display:grid;gap:9px}
+		label{display:grid;gap:4px;color:var(--smn-muted)}select,button{font:inherit;padding:7px;background:var(--smn-surface);color:var(--smn-ink);border:1px solid var(--smn-line)}
+		button{cursor:pointer;font-weight:bold}button:disabled{opacity:.45;cursor:default}.primary{font-weight:bold}
+		#aiem-status{min-height:34px;color:var(--smn-muted)}.ok{color:#2a6a2a!important}.err{color:var(--smn-accent)!important}.busy{color:#8a6a00!important}
+		.aiem-hint{font-size:11px;line-height:1.4;color:var(--smn-muted)}
+		.aiem-empty{padding:24px;border:1px solid var(--smn-line);color:var(--smn-muted)}
+		.aiem-queue{margin-top:14px;border-top:1px solid var(--smn-line);padding-top:10px;display:grid;gap:9px}
 		.aiem-queue-head{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-		.aiem-queue-head span{color:#aeb6bf}
+		.aiem-queue-head span{color:var(--smn-muted)}
 		.aiem-shots{display:flex;gap:10px;flex-wrap:wrap}
-		.aiem-shot{margin:0;padding:6px;display:grid;gap:5px;justify-items:stretch;background:#1c2129;border:1px solid #3b424b}
+		.aiem-shot{margin:0;padding:6px;display:grid;gap:5px;justify-items:stretch;background:var(--smn-surface);border:1px solid var(--smn-line)}
 		/* Smooth downscale of the 256x192 frame: pixelated thumbs look too harsh. */
 		.aiem-shot img{display:block;width:128px;height:96px;image-rendering:auto;background:#000}
 		.aiem-shot button{padding:4px;font-size:11px}
-		.aiem-shot-del{font-weight:normal;color:#ff9c9c}
+		.aiem-shot-del{font-weight:normal;color:var(--smn-accent)}
 	</style>
 </head>
 <body>
@@ -203,7 +219,7 @@ $scriptVersion = is_readable($scriptPath) ? (string) filemtime($scriptPath) : '0
 <?php else: ?>
 	<div class="aiem-layout">
 		<div class="aiem-stage">
-			<canvas id="canvas" tabindex="0" width="320" height="240"></canvas>
+			<canvas id="canvas" tabindex="0" width="640" height="480"></canvas>
 			<div id="aiem-boot">Загрузка USP…</div>
 		</div>
 		<div class="aiem-controls">

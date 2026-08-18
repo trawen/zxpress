@@ -1,6 +1,9 @@
 (function () {
 	'use strict';
 
+	var CANVAS_W = 640;
+	var CANVAS_H = 480;
+
 	var configNode = document.getElementById('aiem-config');
 	if (!configNode) return;
 
@@ -26,6 +29,31 @@
 		gl: null,
 		ok: false
 	};
+
+	var canvasWidthDesc = Object.getOwnPropertyDescriptor(HTMLCanvasElement.prototype, 'width');
+	var canvasHeightDesc = Object.getOwnPropertyDescriptor(HTMLCanvasElement.prototype, 'height');
+
+	// USP/emscripten keeps resetting backing store to cssSize×devicePixelRatio (→1280×960).
+	function hijackCanvasSize(el) {
+		if (!el || el.__aiemSizeLocked || !canvasWidthDesc || !canvasHeightDesc) return;
+		el.__aiemSizeLocked = true;
+		Object.defineProperty(el, 'width', {
+			get: function () { return canvasWidthDesc.get.call(el); },
+			set: function () { canvasWidthDesc.set.call(el, CANVAS_W); },
+			configurable: true,
+			enumerable: true
+		});
+		Object.defineProperty(el, 'height', {
+			get: function () { return canvasHeightDesc.get.call(el); },
+			set: function () { canvasHeightDesc.set.call(el, CANVAS_H); },
+			configurable: true,
+			enumerable: true
+		});
+		canvasWidthDesc.set.call(el, CANVAS_W);
+		canvasHeightDesc.set.call(el, CANVAS_H);
+	}
+
+	hijackCanvasSize(canvas);
 
 	function status(text, className) {
 		statusNode.textContent = text;
@@ -127,8 +155,21 @@
 		});
 	}
 
-	// Never resize the canvas here: USP owns the framebuffer and its GL viewport,
-	// and a resize behind its back shifts the picture inside the buffer.
+	function lockCanvasSize() {
+		if (!canvas) return;
+		canvas.style.width = '';
+		canvas.style.height = '';
+		if (canvas.width !== CANVAS_W) canvas.width = CANVAS_W;
+		if (canvas.height !== CANVAS_H) canvas.height = CANVAS_H;
+	}
+
+	function startCanvasWatchdog() {
+		(function tick() {
+			lockCanvasSize();
+			requestAnimationFrame(tick);
+		})();
+	}
+
 	function applyVideoMode() {
 		if (!window.Module || typeof window.Module.ccall !== 'function') return;
 		['filtering=off', 'full screen=off', 'zoom=none'].forEach(function (command) {
@@ -136,6 +177,7 @@
 				window.Module.ccall('OnCommand', null, ['string'], [command]);
 			} catch (_) {}
 		});
+		lockCanvasSize();
 	}
 
 	// /us/index.html runs the public player with zoom=fill screen, and USP keeps
@@ -165,31 +207,63 @@
 		}
 	}
 
+	function cropScreenTo256(source, srcCtx, cropX, cropY, cropW, cropH) {
+		var output = document.createElement('canvas');
+		output.width = 256;
+		output.height = 192;
+		var ctx = output.getContext('2d', { willReadFrequently: true });
+
+		// 1:1 — без масштабирования (буфер 320×240).
+		if (cropW === 256 && cropH === 192) {
+			ctx.drawImage(source, cropX, cropY, 256, 192, 0, 0, 256, 192);
+			return output;
+		}
+
+		// Nearest-neighbour: один исходный пиксель на выходной, без drawImage blur.
+		var srcData = srcCtx.getImageData(cropX, cropY, cropW, cropH);
+		var dstData = ctx.createImageData(256, 192);
+		for (var y = 0; y < 192; y++) {
+			var sy = ((y + 0.5) * cropH / 192 - 0.5) | 0;
+			if (sy < 0) sy = 0;
+			if (sy >= cropH) sy = cropH - 1;
+			for (var x = 0; x < 256; x++) {
+				var sx = ((x + 0.5) * cropW / 256 - 0.5) | 0;
+				if (sx < 0) sx = 0;
+				if (sx >= cropW) sx = cropW - 1;
+				var si = (sy * cropW + sx) * 4;
+				var di = (y * 256 + x) * 4;
+				dstData.data[di] = srcData.data[si];
+				dstData.data[di + 1] = srcData.data[si + 1];
+				dstData.data[di + 2] = srcData.data[si + 2];
+				dstData.data[di + 3] = srcData.data[si + 3];
+			}
+		}
+		ctx.putImageData(dstData, 0, 0);
+		return output;
+	}
+
 	function framePng() {
 		return waitFrames(3).then(function () {
 			if (mirror.gl) snapshotGl(mirror.gl);
-			if (!mirror.ok || !mirror.canvas) {
+			if (!mirror.ok || !mirror.canvas || !mirror.context) {
 				throw new Error('Кадр WebGL ещё не готов — подождите секунду');
 			}
 
-			// USP may render at 1x/2x depending on restored options, so crop the
-			// TV border by ratio (32/320 and 24/240) instead of fixed pixels.
+			// TV border scales with framebuffer (32/320, 24/240 → 256×192 screen).
 			var sourceWidth = mirror.canvas.width;
 			var sourceHeight = mirror.canvas.height;
-			var cropX = Math.round(sourceWidth * 0.1);
-			var cropY = Math.round(sourceHeight * 0.1);
-			var cropWidth = Math.round(sourceWidth * 0.8);
-			var cropHeight = Math.round(sourceHeight * 0.8);
+			var cropX = Math.round(sourceWidth * 32 / 320);
+			var cropY = Math.round(sourceHeight * 24 / 240);
+			var cropWidth = Math.round(sourceWidth * 256 / 320);
+			var cropHeight = Math.round(sourceHeight * 192 / 240);
 
-			var output = document.createElement('canvas');
-			output.width = 256;
-			output.height = 192;
-			var context = output.getContext('2d');
-			context.imageSmoothingEnabled = false;
-			context.drawImage(
+			var output = cropScreenTo256(
 				mirror.canvas,
-				cropX, cropY, cropWidth, cropHeight,
-				0, 0, 256, 192
+				mirror.context,
+				cropX,
+				cropY,
+				cropWidth,
+				cropHeight
 			);
 
 			return new Promise(function (resolve, reject) {
@@ -379,6 +453,8 @@
 			ready = true;
 			bootNode.style.display = 'none';
 			shotButton.disabled = false;
+			hijackCanvasSize(canvas);
+			startCanvasWatchdog();
 			holdVideoMode(3000);
 			openDisk();
 		}

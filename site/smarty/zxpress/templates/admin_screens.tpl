@@ -141,7 +141,7 @@
 	height: 470px;
 	border: 0;
 	border-top: 1px solid #8f8a71;
-	background: #15181c;
+	background: var(--smn-paper);
 }
 .admin-ascr-emulator-note {
 	padding: 7px 10px;
