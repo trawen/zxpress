@@ -437,7 +437,7 @@
 									<th>Номер</th>
 									<th>Порядок</th>
 									<th>Дата</th>
-									<th>Missing</th>
+									<th>Утерян</th>
 									<th>Slug RU</th>
 									<th>Slug EN</th>
 									<th>Ссылки</th>
