@@ -135,6 +135,39 @@ function activity_feed_resolve_roots(mysqli $db, array $refs, bool $isEng): arra
 	return $out;
 }
 
+/**
+ * Public issue urls keyed by issue id.
+ *
+ * @param list<int> $ids
+ * @return array<int,string>
+ */
+function activity_feed_resolve_issue_urls(mysqli $db, array $ids, bool $isEng): array
+{
+	$out = [];
+	$ids = array_values(array_unique(array_filter(array_map('intval', $ids))));
+	if ($ids === []) {
+		return $out;
+	}
+
+	$idList = implode(',', $ids);
+	$z = $db->query(
+		'SELECT i.id, i.slug_ru, i.slug_en, p.id AS press_id, p.slug_ru AS press_slug_ru, p.slug_en AS press_slug_en '
+		. "FROM issue i LEFT JOIN press p ON p.id=i.id_press WHERE i.id IN ($idList)"
+	);
+	while ($z && ($row = $z->fetch_assoc())) {
+		$press = [
+			'id' => (int) ($row['press_id'] ?? 0),
+			'slug_ru' => (string) ($row['press_slug_ru'] ?? ''),
+			'slug_en' => (string) ($row['press_slug_en'] ?? ''),
+		];
+		$out[(int) $row['id']] = $press['id'] > 0
+			? ezn_url_issue($press, $row, $isEng)
+			: ('/issue.php?id=' . (int) $row['id']);
+	}
+
+	return $out;
+}
+
 function activity_feed_time_bucket_5m(int $ts): int
 {
 	if ($ts <= 0) {
@@ -342,6 +375,19 @@ if ($ready) {
 		$batches[] = $b;
 	}
 
+	$issueUrlIds = [];
+	foreach ($batches as $b) {
+		foreach (($b['events'] ?? []) as $e) {
+			if ((string) ($e['object_type'] ?? '') === 'issue' && (int) ($e['object_id'] ?? 0) > 0) {
+				$issueUrlIds[] = (int) $e['object_id'];
+			}
+			if ((string) ($e['parent_type'] ?? '') === 'issue' && (int) ($e['parent_id'] ?? 0) > 0) {
+				$issueUrlIds[] = (int) $e['parent_id'];
+			}
+		}
+	}
+	$issueUrls = activity_feed_resolve_issue_urls($db, $issueUrlIds, $isEng);
+
 	$rootRefs = [];
 	foreach ($batches as $b) {
 		$rootRefs[] = activity_feed_batch_root_ref($b);
@@ -349,6 +395,19 @@ if ($ready) {
 	$roots = activity_feed_resolve_roots($db, $rootRefs, $isEng);
 
 	foreach ($batches as &$b) {
+		foreach ($b['events'] as &$e) {
+			$eventIssueId = 0;
+			if ((string) ($e['object_type'] ?? '') === 'issue') {
+				$eventIssueId = (int) ($e['object_id'] ?? 0);
+			} elseif ((string) ($e['parent_type'] ?? '') === 'issue') {
+				$eventIssueId = (int) ($e['parent_id'] ?? 0);
+			}
+			if ($eventIssueId > 0 && !empty($issueUrls[$eventIssueId])) {
+				$e['url_display'] = $issueUrls[$eventIssueId];
+			}
+		}
+		unset($e);
+
 		[$rootType, $rootId] = activity_feed_batch_root_ref($b);
 		$root = $roots[$rootType . ':' . $rootId] ?? [];
 
