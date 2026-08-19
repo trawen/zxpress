@@ -52,7 +52,7 @@
 			font-weight: 700;
 			line-height: 1.35;
 		}
-		.smn-comments--no-articles {
+		.smn-comments--no-articles .smn-comments {
 			margin-top: 0;
 			padding-top: 0;
 			border-top: 0;
