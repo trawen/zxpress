@@ -52,11 +52,10 @@
 			font-weight: 700;
 			line-height: 1.35;
 		}
-		.smn-issue-nav--no-articles {
-			border-top: 0;
-			border-bottom: 0;
+		.smn-comments--no-articles {
+			margin-top: 0;
 			padding-top: 0;
-			padding-bottom: 0;
+			border-top: 0;
 		}
 	</style>
 </head>
@@ -183,7 +182,7 @@
 {/if}
 
 {if $prev_issue_nav || $next_issue_nav}
-				<nav class="smn-issue-nav{if !$articles || $articles|@count eq 0} smn-issue-nav--no-articles{/if}" aria-label="{if $lng eq 'eng'}Issues{else}Выпуски{/if}">
+				<nav class="smn-issue-nav" aria-label="{if $lng eq 'eng'}Issues{else}Выпуски{/if}">
 {if $prev_issue_nav}
 					<a class="smn-issue-nav-prev" href="{$prev_issue_nav.public_url}" rel="prev">← {if $lng eq 'eng'}issue{else}выпуск{/if} #{$prev_issue_nav.title}</a>
 {else}
@@ -333,7 +332,9 @@
 
 {/if}
 {if $comments_enabled|default:false}
+			<div class="{if $view_mode eq 'issue' && (!$articles || $articles|@count eq 0)}smn-comments--no-articles{/if}">
 			{include file="comments_new.tpl"}
+			</div>
 {/if}
 		</main>
 
