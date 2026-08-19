@@ -10,6 +10,49 @@
 	<title>{$title|strip_tags} — ZXPRESS</title>
 	{if $description}<meta name="description" content="{$description|strip_tags}">{/if}
 	{smn_styles}
+	<style>
+		.smn-gallery-img--missing,
+		.smn-press-issue-screen--missing {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 128px;
+			height: 96px;
+			background: #f2df56;
+			color: #a41e00;
+			border-style: solid;
+			border-color: #f2df56;
+			border-width: 5px 7px;
+			border-radius: 2px;
+			box-sizing: content-box;
+			text-align: center;
+			overflow: hidden;
+		}
+		.smn-gallery-img-missing-text {
+			display: block;
+			max-width: 110px;
+			color: inherit;
+			font-family: var(--smn-sans);
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 1.15;
+			letter-spacing: -0.02em;
+		}
+		.smn-press-issue-screen--missing {
+			margin: 0;
+			flex: 0 0 auto;
+			position: relative;
+			z-index: 1;
+		}
+		.smn-press-issue-missing-note {
+			margin: 0 0 16px;
+			color: #a41e00;
+			font-family: var(--smn-sans);
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 1.35;
+		}
+	</style>
 </head>
 <body class="smn">
 	<div class="smn-frame">
@@ -81,11 +124,11 @@
 				<div class="smn-press-headline">
 					<h1 class="smn-press-title">{$press.title_plain} #{$current_issue.title}</h1>
 					<p class="smn-press-type">{if $lng eq 'eng'}{if $press.type eq 0}Diskmag (electronic paper){elseif $press.type eq 2}Diskmag (electronic report){else}Diskmag (electronic magazine){/if}{else}{if $press.type eq 0}Электронная газета{elseif $press.type eq 2}Электронный отчёт{else}Электронный журнал{/if}{/if}</p>
-{if $current_issue.download_url}
+{if !$current_issue.missing && $current_issue.download_url}
 					<a class="smn-press-meta-dl smn-press-dl--beside" href="{$current_issue.download_url}"{if $lng eq 'eng'} aria-label="Download"{else} aria-label="Скачать"{/if}>
 						<svg class="smn-press-meta-dl-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
 					</a>
-{elseif $press.id}
+{elseif !$current_issue.missing && $press.id}
 					<a class="smn-press-meta-dl smn-press-dl--beside" href="{$host}d.php?id={$press.id}"{if $lng eq 'eng'} aria-label="Download"{else} aria-label="Скачать"{/if}>
 						<svg class="smn-press-meta-dl-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
 					</a>
@@ -95,7 +138,7 @@
 {if $current_issue.date_display}
 					<span class="smn-press-issue-date smn-press-issue-date--hero">{$current_issue.date_display}</span>
 {/if}
-{if $current_issue.download_url || $press.id}
+{if !$current_issue.missing && ($current_issue.download_url || $press.id)}
 {if $current_issue.date_display}<span class="smn-press-issue-meta-sep smn-press-issue-meta-sep--dl" aria-hidden="true">·</span>{/if}
 {if $current_issue.download_url}
 					<a class="smn-press-issue-action smn-press-issue-action--dl" href="{$current_issue.download_url}">{if $lng eq 'eng'}Download{else}Скачать{/if}</a>
@@ -125,6 +168,8 @@
 					</li>
 {/foreach}
 				</ul>
+{elseif $current_issue.missing}
+				<p class="smn-press-issue-missing-note">{if $lng eq 'eng'}This issue is lost. :(<br>If you have a copy, please contact the administrator.{else}Этот номер утрачен. :(<br>Если у вас сохранилась его копия, пожалуйста, свяжитесь с администратором.{/if}</p>
 {/if}
 
 {if $current_issue.description}
@@ -228,7 +273,7 @@
 					<li class="smn-gallery-item">
 						<a class="smn-gallery-card smn-press-issue-card" href="{$iss.public_url}">
 							<span class="smn-press-issue-num">#{$iss.title}</span>
-{if $iss.cover}
+{if $iss.cover && !$iss.missing}
 							<img
 								class="smn-gallery-img"
 								src="{$host}screens/1/{$iss.cover.id}.{$iss.cover.format}"
@@ -238,6 +283,10 @@
 								loading="lazy"
 								decoding="async"
 							>
+{elseif $iss.missing}
+							<span class="smn-gallery-img smn-gallery-img--missing" aria-label="{$press.title_plain|escape:'html'} #{$iss.title|escape:'html'}">
+								<span class="smn-gallery-img-missing-text">{if $lng eq 'eng'}Wanted!{else}Разыскивается!{/if}</span>
+							</span>
 {else}
 							<span class="smn-gallery-img smn-gallery-img--empty" aria-label="{$press.title_plain|escape:'html'} #{$iss.title|escape:'html'}">
 								<span class="smn-gallery-img-empty-text">{$press.title_plain|escape:'html'}<br>#{$iss.title|escape:'html'}</span>

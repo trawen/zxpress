@@ -226,7 +226,7 @@ $currentIssue = null;
 
 if ($currentIssueId > 0) {
 	$stmtIssueCanon = $db->prepare(
-		'SELECT id, id_press, title, date, slug_ru, slug_en, description_ru, description_en, meta_description_ru, meta_description_en'
+		'SELECT id, id_press, title, date, missing, slug_ru, slug_en, description_ru, description_en, meta_description_ru, meta_description_en'
 		. ' FROM issue WHERE id=? LIMIT 1'
 	);
 	if ($stmtIssueCanon) {
@@ -254,6 +254,7 @@ if ($currentIssueId > 0) {
 			$currentIssue = [
 				'id' => (int) $issueCanonRow['id'],
 				'title' => (string) ($issueCanonRow['title'] ?? ''),
+				'missing' => (int) ($issueCanonRow['missing'] ?? 0),
 				'slug_ru' => (string) ($issueCanonRow['slug_ru'] ?? ''),
 				'slug_en' => (string) ($issueCanonRow['slug_en'] ?? ''),
 				'date_display' => $dateDisplay,
@@ -337,7 +338,7 @@ $issuesList = [];
 if ($viewMode === 'press') {
 	$stmtIssues = mysqli_prepare(
 		$db,
-		'SELECT id, id_press, title, date, slug_ru, slug_en FROM issue WHERE id_press=? ORDER BY sort_order DESC, id DESC'
+		'SELECT id, id_press, title, date, missing, slug_ru, slug_en FROM issue WHERE id_press=? ORDER BY sort_order DESC, id DESC'
 	);
 	if ($stmtIssues) {
 		$stmtIssues->bind_param('i', $id);
@@ -360,6 +361,7 @@ if ($viewMode === 'press') {
 			$issuesList[] = [
 				'id' => $issueId,
 				'title' => (string) ($row['title'] ?? ''),
+				'missing' => (int) ($row['missing'] ?? 0),
 				'date_display' => $dateDisplay,
 				'public_url' => ezn_url_issue($pressRow, $issueRow, $isEng),
 				'screens' => $screensByIssue[$issueId] ?? [],
