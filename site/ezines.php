@@ -242,6 +242,7 @@ if ($rawFilter === '') {
 				'gallery' => '/gallery',
 				'search' => '/search',
 				'updates' => '/updates',
+				'calendar' => '/calendar',
 				'guestbook' => '/guestbook',
 				'map' => '/map',
 				'categories' => '/categories',
