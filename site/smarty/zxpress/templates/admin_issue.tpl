@@ -176,6 +176,7 @@
 }
 .admin-ai-field { grid-column: span 4; min-width: 0; }
 .admin-ai-field--wide { grid-column: span 6; }
+.admin-ai-field--slug { grid-column: span 1; }
 .admin-ai-field--full { grid-column: 1 / -1; }
 .admin-ai-field--press-title { grid-column: span 5; }
 .admin-ai-field--press-type { grid-column: span 2; }
@@ -240,6 +241,7 @@
 .admin-ai-order { width: 78px !important; min-width: 78px !important; }
 .admin-ai-number { width: 86px !important; min-width: 86px !important; }
 .admin-ai-date { width: 108px !important; min-width: 108px !important; }
+.admin-ai-slug { width: 72px !important; min-width: 0 !important; max-width: 72px; }
 .admin-ai-row-links {
 	display: flex;
 	align-items: center;
@@ -247,6 +249,12 @@
 	white-space: nowrap;
 }
 .admin-ai-row-links a { text-decoration: none; }
+.admin-ai-row-links sup {
+	margin-left: 1px;
+	color: var(--ai-muted);
+	font-size: 10px;
+	font-weight: 700;
+}
 .admin-ai-danger {
 	display: inline-flex;
 	align-items: center;
@@ -308,6 +316,7 @@
 	.admin-ai-main { padding: 14px; }
 	.admin-ai-field,
 	.admin-ai-field--wide,
+	.admin-ai-field--slug,
 	.admin-ai-field--press-title,
 	.admin-ai-field--press-type,
 	.admin-ai-field--press-city,
@@ -317,6 +326,7 @@
 	.admin-ai-page-head { flex-direction: column; }
 	.admin-ai-field,
 	.admin-ai-field--wide,
+	.admin-ai-field--slug,
 	.admin-ai-field--press-title,
 	.admin-ai-field--press-type,
 	.admin-ai-field--press-city,
@@ -402,13 +412,13 @@
 								<span class="admin-ai-label">Кол-во выпусков</span>
 								<input type="number" min="0" name="numbers" value="{$press.numbers}" data-press-change title="0 — пересчитать по базе при сохранении">
 							</label>
-							<label class="admin-ai-field admin-ai-field--wide">
+							<label class="admin-ai-field admin-ai-field--slug">
 								<span class="admin-ai-label">Slug RU</span>
-								<input type="text" name="slug_ru" value="{$press.slug_ru}" data-press-change>
+								<input class="admin-ai-slug" type="text" name="slug_ru" value="{$press.slug_ru}" data-press-change>
 							</label>
-							<label class="admin-ai-field admin-ai-field--wide">
+							<label class="admin-ai-field admin-ai-field--slug">
 								<span class="admin-ai-label">Slug EN</span>
-								<input type="text" name="slug_en" value="{$press.slug_en}" data-press-change>
+								<input class="admin-ai-slug" type="text" name="slug_en" value="{$press.slug_en}" data-press-change>
 							</label>
 						</div>
 					</div>
@@ -439,12 +449,12 @@
 									<td><input class="admin-ai-number" type="text" name="issue_title_{$issues[n].id}" value="{$issues[n].title}"></td>
 									<td><input class="admin-ai-order" type="number" min="0" name="issue_sort_order_{$issues[n].id}" value="{$issues[n].sort_order}"></td>
 									<td><input class="admin-ai-date" type="text" name="issue_date_{$issues[n].id}" value="{$issues[n].date_fmt}" placeholder="дд.мм.гггг"></td>
-									<td><input type="text" name="issue_slug_ru_{$issues[n].id}" value="{$issues[n].slug_ru}"></td>
-									<td><input type="text" name="issue_slug_en_{$issues[n].id}" value="{$issues[n].slug_en}"></td>
+									<td><input class="admin-ai-slug" type="text" name="issue_slug_ru_{$issues[n].id}" value="{$issues[n].slug_ru}"></td>
+									<td><input class="admin-ai-slug" type="text" name="issue_slug_en_{$issues[n].id}" value="{$issues[n].slug_en}"></td>
 									<td>
 										<span class="admin-ai-row-links">
-											<a href="admin_articles_new.php?id={$press.id}&amp;issue={$issues[n].id}" title="Статьи">статьи</a>
-											<a href="admin_screens.php?id={$press.id}&amp;issue={$issues[n].id}#emulator" title="Скриншоты и эмулятор">экраны</a>
+											<a href="admin_articles_new.php?id={$press.id}&amp;issue={$issues[n].id}" title="Статьи">статьи</a><sup>{$issues[n].articles_count|default:0}</sup>
+											<a href="admin_screens.php?id={$press.id}&amp;issue={$issues[n].id}#emulator" title="Скриншоты и эмулятор">экраны</a><sup>{$issues[n].screens_count|default:0}</sup>
 											{if $press.slug_ru && $issues[n].slug_ru}<a href="/ru/ezines/{$press.slug_ru|escape:'url'}/{$issues[n].slug_ru|escape:'url'}" target="_blank" rel="noopener" title="Публичная страница">↗</a>{/if}
 										</span>
 									</td>

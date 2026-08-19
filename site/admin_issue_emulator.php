@@ -193,8 +193,8 @@ $scriptVersion = is_readable($scriptPath) ? (string) filemtime($scriptPath) : '0
 		}
 		*{box-sizing:border-box}html,body{margin:0;background:var(--smn-paper);color:var(--smn-ink);font:13px Verdana,sans-serif}
 		body{padding:10px}.aiem-layout{display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap}
-		.aiem-stage{width:320px;height:240px;overflow:hidden;background:#000;border:1px solid var(--smn-line);position:relative}
-		#canvas{display:block;width:640px;height:480px;margin:-128px 0 0 -160px;image-rendering:pixelated;outline:none}
+		.aiem-stage{width:256px;height:192px;overflow:hidden;background:#000;border:1px solid var(--smn-line);position:relative}
+		#canvas{display:block;width:320px;height:240px;margin:-24px 0 0 -32px;image-rendering:pixelated;outline:none}
 		#aiem-boot{position:absolute;inset:0;display:grid;place-items:center;background:rgba(244,238,224,.88);color:var(--smn-muted)}
 		.aiem-controls{min-width:245px;max-width:340px;display:grid;gap:9px}
 		label{display:grid;gap:4px;color:var(--smn-muted)}select,button{font:inherit;padding:7px;background:var(--smn-surface);color:var(--smn-ink);border:1px solid var(--smn-line)}
@@ -207,8 +207,7 @@ $scriptVersion = is_readable($scriptPath) ? (string) filemtime($scriptPath) : '0
 		.aiem-queue-head span{color:var(--smn-muted)}
 		.aiem-shots{display:flex;gap:10px;flex-wrap:wrap}
 		.aiem-shot{margin:0;padding:6px;display:grid;gap:5px;justify-items:stretch;background:var(--smn-surface);border:1px solid var(--smn-line)}
-		/* Smooth downscale of the 256x192 frame: pixelated thumbs look too harsh. */
-		.aiem-shot img{display:block;width:128px;height:96px;image-rendering:auto;background:#000}
+		.aiem-shot img{display:block;width:128px;height:96px;image-rendering:pixelated;background:#000}
 		.aiem-shot button{padding:4px;font-size:11px}
 		.aiem-shot-del{font-weight:normal;color:var(--smn-accent)}
 	</style>
@@ -219,7 +218,7 @@ $scriptVersion = is_readable($scriptPath) ? (string) filemtime($scriptPath) : '0
 <?php else: ?>
 	<div class="aiem-layout">
 		<div class="aiem-stage">
-			<canvas id="canvas" tabindex="0" width="640" height="480"></canvas>
+			<canvas id="canvas" tabindex="0" width="320" height="240"></canvas>
 			<div id="aiem-boot">Загрузка USP…</div>
 		</div>
 		<div class="aiem-controls">

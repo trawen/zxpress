@@ -580,7 +580,12 @@ if ($id) {
         $smarty->assign('press', mysqli_fetch_array($z));
     }
 
-    $stmt_gi = $db->prepare("SELECT * FROM issue WHERE id_press=? ORDER BY sort_order ASC, id ASC");
+    $stmt_gi = $db->prepare(
+        'SELECT issue.*,'
+        . ' (SELECT COUNT(*) FROM articles a WHERE a.id_issue=issue.id) AS articles_count,'
+        . ' (SELECT COUNT(*) FROM screens s WHERE s.id_issue=issue.id) AS screens_count'
+        . ' FROM issue WHERE id_press=? ORDER BY sort_order ASC, id ASC'
+    );
     if ($stmt_gi) {
         $stmt_gi->bind_param("i", $id);
         $stmt_gi->execute();
@@ -592,6 +597,8 @@ if ($id) {
     $iss = [];
     while ($z && ($t = mysqli_fetch_array($z))) {
         $t['date_fmt'] = admin_issue_format_date((int) ($t['date'] ?? 0));
+        $t['articles_count'] = (int) ($t['articles_count'] ?? 0);
+        $t['screens_count'] = (int) ($t['screens_count'] ?? 0);
         $iss[$n] = $t;
         $n++;
     }

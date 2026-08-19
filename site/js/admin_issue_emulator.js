@@ -1,8 +1,8 @@
 (function () {
 	'use strict';
 
-	var CANVAS_W = 640;
-	var CANVAS_H = 480;
+	var CANVAS_W = 320;
+	var CANVAS_H = 240;
 
 	var configNode = document.getElementById('aiem-config');
 	if (!configNode) return;
@@ -207,38 +207,19 @@
 		}
 	}
 
-	function cropScreenTo256(source, srcCtx, cropX, cropY, cropW, cropH) {
+	function cropScreenTo256(source, sw, sh) {
+		// Spectrum screen is 256×192 at (32,24) inside 320×240 USP framebuffer.
+		var cropX = Math.min(32, Math.max(0, sw - 256));
+		var cropY = Math.min(24, Math.max(0, sh - 192));
+		var cropW = Math.min(256, sw - cropX);
+		var cropH = Math.min(192, sh - cropY);
+
 		var output = document.createElement('canvas');
 		output.width = 256;
 		output.height = 192;
 		var ctx = output.getContext('2d', { willReadFrequently: true });
-
-		// 1:1 — без масштабирования (буфер 320×240).
-		if (cropW === 256 && cropH === 192) {
-			ctx.drawImage(source, cropX, cropY, 256, 192, 0, 0, 256, 192);
-			return output;
-		}
-
-		// Nearest-neighbour: один исходный пиксель на выходной, без drawImage blur.
-		var srcData = srcCtx.getImageData(cropX, cropY, cropW, cropH);
-		var dstData = ctx.createImageData(256, 192);
-		for (var y = 0; y < 192; y++) {
-			var sy = ((y + 0.5) * cropH / 192 - 0.5) | 0;
-			if (sy < 0) sy = 0;
-			if (sy >= cropH) sy = cropH - 1;
-			for (var x = 0; x < 256; x++) {
-				var sx = ((x + 0.5) * cropW / 256 - 0.5) | 0;
-				if (sx < 0) sx = 0;
-				if (sx >= cropW) sx = cropW - 1;
-				var si = (sy * cropW + sx) * 4;
-				var di = (y * 256 + x) * 4;
-				dstData.data[di] = srcData.data[si];
-				dstData.data[di + 1] = srcData.data[si + 1];
-				dstData.data[di + 2] = srcData.data[si + 2];
-				dstData.data[di + 3] = srcData.data[si + 3];
-			}
-		}
-		ctx.putImageData(dstData, 0, 0);
+		ctx.imageSmoothingEnabled = false;
+		ctx.drawImage(source, cropX, cropY, cropW, cropH, 0, 0, 256, 192);
 		return output;
 	}
 
@@ -249,21 +230,10 @@
 				throw new Error('Кадр WebGL ещё не готов — подождите секунду');
 			}
 
-			// TV border scales with framebuffer (32/320, 24/240 → 256×192 screen).
-			var sourceWidth = mirror.canvas.width;
-			var sourceHeight = mirror.canvas.height;
-			var cropX = Math.round(sourceWidth * 32 / 320);
-			var cropY = Math.round(sourceHeight * 24 / 240);
-			var cropWidth = Math.round(sourceWidth * 256 / 320);
-			var cropHeight = Math.round(sourceHeight * 192 / 240);
-
 			var output = cropScreenTo256(
 				mirror.canvas,
-				mirror.context,
-				cropX,
-				cropY,
-				cropWidth,
-				cropHeight
+				mirror.canvas.width,
+				mirror.canvas.height
 			);
 
 			return new Promise(function (resolve, reject) {

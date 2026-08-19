@@ -42,7 +42,7 @@ function screen_apply_public_format(array &$row, string $idKey = 'id', string $f
 }
 
 /**
- * Save upload as RGB WebP (no alpha). Accepts png/jpeg/webp.
+ * Save upload as lossless RGB WebP (no alpha). Accepts png/jpeg/webp.
  *
  * @return array{ok:bool,error?:string}
  */
@@ -101,7 +101,8 @@ function screen_save_upload_as_webp(string $tmpPath, int $screenId): array
 		return ['ok' => false, 'error' => 'не удалось создать каталог'];
 	}
 
-	$ok = @imagewebp($dst, $outPath, 100);
+	$webpQuality = defined('IMG_WEBP_LOSSLESS') ? IMG_WEBP_LOSSLESS : 100;
+	$ok = @imagewebp($dst, $outPath, $webpQuality);
 	imagedestroy($dst);
 	if (!$ok || !is_file($outPath)) {
 		error_log('[FIX] screen_images: imagewebp failed path=' . $outPath);
