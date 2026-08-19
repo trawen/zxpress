@@ -99,24 +99,27 @@
 {else}
 							<span class="smn-updates-press">{$b.title_press|default:$b.title_display}</span>
 {/if}
-							<span class="smn-activity-title-suffix"> — </span>
-							<details class="smn-activity-details smn-activity-details--inline">
-								<summary>{$b.details_label}</summary>
+							<details class="smn-activity-details smn-activity-details--inline" open>
+								<summary style="display:none" aria-hidden="true">{$b.details_label}</summary>
 								<ul class="smn-activity-events">
-{foreach from=$b.events item=e}
+{foreach from=$b.events item=e name=screen_ev}
 									<li class="smn-activity-event">
 {if $e.thumb_url}
 										<a class="smn-activity-thumb" href="{if $e.url_display}{$e.url_display}{elseif $b.url_display}{$b.url_display}{else}{$e.thumb_url}{/if}">
-											<img src="{$e.thumb_url}" alt="" loading="lazy" width="128" height="96">
+											<img src="{$e.thumb_url}" alt="" loading="eager" width="128" height="96">
 										</a>
 {/if}
 										<div class="smn-activity-event-body">
+{if $e.object_label neq 'Скриншот' && $e.object_label neq 'Screenshot'}
 {if $e.url_display}
 											<a class="smn-activity-event-title" href="{$e.url_display}">{$e.title_display}</a>
 {else}
 											<span class="smn-activity-event-title">{$e.title_display}</span>
 {/if}
+{/if}
+											{if $e.object_label neq 'Скриншот' && $e.object_label neq 'Screenshot'}
 											<span class="smn-activity-event-meta">{$e.object_label}</span>
+											{/if}
 										</div>
 									</li>
 {/foreach}
@@ -125,16 +128,16 @@
 						</span>
 {else}
 {if $b.url_display}
-						<span class="smn-activity-title"><a class="smn-updates-press" href="{$b.url_display}">{$b.title_press|default:$b.title_display}</a>{if $b.title_suffix}<span class="smn-activity-title-suffix">{$b.title_suffix}</span>{/if}</span>
+						<span class="smn-activity-title"><a class="smn-updates-press" href="{$b.url_display}">{$b.title_press|default:$b.title_display}</a></span>
 {else}
-						<span class="smn-activity-title"><span class="smn-updates-press">{$b.title_press|default:$b.title_display}</span>{if $b.title_suffix}<span class="smn-activity-title-suffix">{$b.title_suffix}</span>{/if}</span>
+						<span class="smn-activity-title"><span class="smn-updates-press">{$b.title_press|default:$b.title_display}</span></span>
 {/if}
 {if $b.summary_display}
 						<p class="smn-activity-summary">{$b.summary_display}</p>
 {/if}
 {if $b.events && $b.events|@count gt 0}
-						<details class="smn-activity-details">
-							<summary>
+						<details class="smn-activity-details" open>
+							<summary style="display:none" aria-hidden="true">
 								{if $b.details_label}
 									{$b.details_label}
 								{elseif $lng eq 'eng'}
@@ -144,20 +147,24 @@
 								{/if}
 							</summary>
 							<ul class="smn-activity-events">
-{foreach from=$b.events item=e}
+{foreach from=$b.events item=e name=screen_ev2}
 								<li class="smn-activity-event">
 {if $e.thumb_url}
 									<a class="smn-activity-thumb" href="{if $e.url_display}{$e.url_display}{elseif $b.url_display}{$b.url_display}{else}{$e.thumb_url}{/if}">
-										<img src="{$e.thumb_url}" alt="" loading="lazy" width="128" height="96">
+										<img src="{$e.thumb_url}" alt="" loading="eager" width="128" height="96">
 									</a>
 {/if}
 									<div class="smn-activity-event-body">
+{if $e.object_label neq 'Скриншот' && $e.object_label neq 'Screenshot'}
 {if $e.url_display}
 										<a class="smn-activity-event-title" href="{$e.url_display}">{$e.title_display}</a>
 {else}
 										<span class="smn-activity-event-title">{$e.title_display}</span>
 {/if}
+{/if}
+										{if $e.object_label neq 'Скриншот' && $e.object_label neq 'Screenshot'}
 										<span class="smn-activity-event-meta">{$e.object_label}</span>
+										{/if}
 									</div>
 								</li>
 {/foreach}

@@ -135,6 +135,132 @@ function activity_feed_resolve_roots(mysqli $db, array $refs, bool $isEng): arra
 	return $out;
 }
 
+function activity_feed_time_bucket_5m(int $ts): int
+{
+	if ($ts <= 0) {
+		return 0;
+	}
+
+	return (int) (floor($ts / 300) * 300);
+}
+
+/**
+ * Prefer screenshots/scans first, keep original order внутри группы.
+ *
+ * @param list<array<string,mixed>> $events
+ * @return list<array<string,mixed>>
+ */
+function activity_feed_group_events(array $events): array
+{
+	$visual = [];
+	$other = [];
+	foreach ($events as $e) {
+		$type = (string) ($e['object_type'] ?? '');
+		if (!empty($e['thumb_url']) || $type === 'screen' || $type === 'illustration' || $type === 'periodical_issue_image') {
+			$visual[] = $e;
+		} else {
+			$other[] = $e;
+		}
+	}
+
+	return array_merge($visual, $other);
+}
+
+/**
+ * Merge adjacent feed batches by edition title + 5-minute bucket.
+ *
+ * @param list<array<string,mixed>> $batches
+ * @return list<array<string,mixed>>
+ */
+function activity_feed_merge_batches(array $batches, bool $isEng): array
+{
+	$merged = [];
+	foreach ($batches as $b) {
+		$titleKey = trim((string) ($b['title_press'] ?? $b['title_display'] ?? ''));
+		$bucket = activity_feed_time_bucket_5m((int) ($b['created_at'] ?? 0));
+		$domain = (string) ($b['domain'] ?? '');
+		$isPublic = (int) ($b['is_public'] ?? 0);
+
+		$canMerge = $titleKey !== '' && $bucket > 0 && $merged !== [];
+		if ($canMerge) {
+			$lastIndex = count($merged) - 1;
+			$prev = $merged[$lastIndex];
+			if (
+				(string) ($prev['_merge_title'] ?? '') === $titleKey
+				&& (int) ($prev['_merge_bucket'] ?? 0) === $bucket
+				&& (string) ($prev['domain'] ?? '') === $domain
+			) {
+				$prevEvents = $prev['events'] ?? [];
+				$curEvents = $b['events'] ?? [];
+				$prev['events'] = activity_feed_group_events(array_merge($prevEvents, $curEvents));
+				$prev['is_public'] = $isPublic && (int) ($prev['is_public'] ?? 0) ? 1 : 0;
+				$prev['public_items_count'] = count($prev['events']);
+
+				$present = activity_feed_present_batch($prev, $prev['events'], $isEng, [
+					'title' => (string) ($prev['title_press'] ?? ''),
+					'url' => (string) ($prev['url_display'] ?? ''),
+				]);
+				$prev['title_display'] = $present['title'];
+				$prev['title_press'] = $present['title_press'];
+				$prev['title_suffix'] = $present['title_suffix'];
+				$prev['summary_display'] = $present['summary'];
+				$prev['details_label'] = $present['details_label'];
+				$prev['is_compact'] = $present['is_compact'] ? 1 : 0;
+
+				$merged[$lastIndex] = $prev;
+				continue;
+			}
+		}
+
+		$b['_merge_title'] = $titleKey;
+		$b['_merge_bucket'] = $bucket;
+		$b['events'] = activity_feed_group_events($b['events'] ?? []);
+		$merged[] = $b;
+	}
+
+	$lastDateKey = null;
+	$lastTimeLabel = null;
+	$lastDomainLabel = null;
+	$groupIndex = 0;
+	foreach ($merged as &$b) {
+		$created = (int) ($b['created_at'] ?? 0);
+		$dateKey = date('Y-m-d', $created);
+		$dateLabel = $isEng
+			? date('j F', $created)
+			: (date('d ', $created) . ($GLOBALS['months'][date('m', $created)] ?? ''));
+		$timeLabel = date('H:i', $created);
+		$domainLabel = activity_domain_label((string) ($b['domain'] ?? ''), $isEng);
+
+		if ($lastDateKey !== $dateKey) {
+			$b['date'] = $dateLabel;
+			$b['show_rule'] = $groupIndex > 0 ? 1 : 0;
+			$lastDateKey = $dateKey;
+			$lastTimeLabel = null;
+			$lastDomainLabel = null;
+			$groupIndex++;
+		} else {
+			$b['date'] = '';
+			$b['show_rule'] = 0;
+		}
+		if ($lastTimeLabel !== $timeLabel) {
+			$b['time_label'] = $timeLabel;
+			$lastTimeLabel = $timeLabel;
+		} else {
+			$b['time_label'] = '';
+		}
+		if ($lastDomainLabel !== $domainLabel) {
+			$b['domain_label'] = $domainLabel;
+			$lastDomainLabel = $domainLabel;
+		} else {
+			$b['domain_label'] = '';
+		}
+		unset($b['_merge_title'], $b['_merge_bucket']);
+	}
+	unset($b);
+
+	return $merged;
+}
+
 $lng = $smarty->getTemplateVars('lng');
 $isEng = ($lng === 'eng');
 $page = max(1, (int) ($_GET['page'] ?? 1));
@@ -176,13 +302,8 @@ if ($ready) {
 		$types . 'ii',
 		...array_merge($params, [$from, $perPage])
 	);
-	$lastDateKey = null;
-	$groupIndex = 0;
-	$lastTimeLabel = null;
-	$lastDomainLabel = null;
 	while ($z && ($b = $z->fetch_assoc())) {
 		$bid = (int) $b['id'];
-		$created = (int) $b['created_at'];
 		$events = [];
 		$ze = db_select(
 			$db,
@@ -205,36 +326,6 @@ if ($ready) {
 			$events[] = $e;
 		}
 		$b['events'] = $events;
-
-		$dateKey = date('Y-m-d', $created);
-		$dateLabel = $isEng
-			? date('j F', $created)
-			: (date('d ', $created) . ($months[date('m', $created)] ?? ''));
-		$timeLabel = date('H:i', $created);
-		$domainLabel = activity_domain_label((string) ($b['domain'] ?? ''), $isEng);
-		if ($lastDateKey !== $dateKey) {
-			$b['date'] = $dateLabel;
-			$b['show_rule'] = $groupIndex > 0 ? 1 : 0;
-			$lastDateKey = $dateKey;
-			$lastTimeLabel = null;
-			$lastDomainLabel = null;
-			$groupIndex++;
-		} else {
-			$b['date'] = '';
-			$b['show_rule'] = 0;
-		}
-		if ($lastTimeLabel !== $timeLabel) {
-			$b['time_label'] = $timeLabel;
-			$lastTimeLabel = $timeLabel;
-		} else {
-			$b['time_label'] = '';
-		}
-		if ($lastDomainLabel !== $domainLabel) {
-			$b['domain_label'] = $domainLabel;
-			$lastDomainLabel = $domainLabel;
-		} else {
-			$b['domain_label'] = '';
-		}
 
 		$titleEn = trim((string) ($b['title_en'] ?? ''));
 		$b['title_display'] = title_plain(
@@ -273,6 +364,8 @@ if ($ready) {
 		}
 	}
 	unset($b);
+
+	$batches = activity_feed_merge_batches($batches, $isEng);
 }
 
 $domains = [];

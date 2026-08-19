@@ -228,7 +228,7 @@ $scriptVersion = is_readable($scriptPath) ? (string) filemtime($scriptPath) : '0
 			<button type="button" class="primary" id="aiem-shot" disabled>Снять кадр</button>
 			<button type="button" id="aiem-focus">Фокус в эмулятор</button>
 			<div id="aiem-status">Загрузка эмулятора…</div>
-			<div class="aiem-hint">Кликните по экрану и управляйте как обычно. Экран показан 1:1 без бордюра — кадр сохраняется ровно таким, 256×192.</div>
+			<div class="aiem-hint">Кликните по экрану и управляйте как обычно.</div>
 		</div>
 	</div>
 	<div class="aiem-queue">
@@ -239,7 +239,7 @@ $scriptVersion = is_readable($scriptPath) ? (string) filemtime($scriptPath) : '0
 			<button type="button" id="aiem-clear" disabled>Очистить очередь</button>
 		</div>
 		<div class="aiem-shots" id="aiem-shots"></div>
-		<div class="aiem-hint">Кадры хранятся только в браузере. На сервер уходят и конвертируются в WebP лишь те, что останутся в очереди после удаления лишних. Тип скриншота потом задаётся в списке экранов.</div>
+		
 	</div>
 	<script id="aiem-config" type="application/json"><?= $configJson ?></script>
 	<script src="/js/admin_issue_emulator.js?v=<?= $scriptVersion ?>"></script>
