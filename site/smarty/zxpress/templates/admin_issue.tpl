@@ -437,6 +437,7 @@
 									<th>Номер</th>
 									<th>Порядок</th>
 									<th>Дата</th>
+									<th>Missing</th>
 									<th>Slug RU</th>
 									<th>Slug EN</th>
 									<th>Ссылки</th>
@@ -449,6 +450,12 @@
 									<td><input class="admin-ai-number" type="text" name="issue_title_{$issues[n].id}" value="{$issues[n].title}"></td>
 									<td><input class="admin-ai-order" type="number" min="0" name="issue_sort_order_{$issues[n].id}" value="{$issues[n].sort_order}"></td>
 									<td><input class="admin-ai-date" type="text" name="issue_date_{$issues[n].id}" value="{$issues[n].date_fmt}" placeholder="дд.мм.гггг"></td>
+									<td>
+										<label class="admin-ai-danger">
+											<input type="checkbox" value="1" name="issue_missing_{$issues[n].id}"{if $issues[n].missing} checked{/if}>
+											утерян
+										</label>
+									</td>
 									<td><input class="admin-ai-slug" type="text" name="issue_slug_ru_{$issues[n].id}" value="{$issues[n].slug_ru}"></td>
 									<td><input class="admin-ai-slug" type="text" name="issue_slug_en_{$issues[n].id}" value="{$issues[n].slug_en}"></td>
 									<td>
@@ -486,6 +493,13 @@
 								<span class="admin-ai-label">Дата</span>
 								<input class="admin-ai-date" type="text" name="add_issue_date" placeholder="дд.мм.гггг">
 							</label>
+							<div>
+								<span class="admin-ai-label">Статус</span>
+								<label class="admin-ai-danger">
+									<input type="checkbox" value="1" name="add_issue_missing">
+									утерян
+								</label>
+							</div>
 							<div class="admin-ai-help">Пустой порядок = последний + 10</div>
 						</div>
 					</div>

@@ -326,16 +326,17 @@ if (($_POST['save'] ?? '') === 'save') {
             $addIssueSortOrder = $nextIssueSortOrder($db, $id);
         }
         $addIssueDate = admin_issue_parse_date((string) ($_POST['add_issue_date'] ?? ''));
+        $addIssueMissing = !empty($_POST['add_issue_missing']) ? 1 : 0;
         $stmt_ai = $db->prepare(
-            'INSERT INTO issue (`id`, `id_press`, `title`, `date`, `sort_order`, `views`) VALUES (NULL, ?, ?, ?, ?, 0)'
+            'INSERT INTO issue (`id`, `id_press`, `title`, `date`, `sort_order`, `views`, `missing`) VALUES (NULL, ?, ?, ?, ?, 0, ?)'
         );
         if ($stmt_ai) {
-            $stmt_ai->bind_param('isii', $id, $add_issue, $addIssueDate, $addIssueSortOrder);
+            $stmt_ai->bind_param('isiii', $id, $add_issue, $addIssueDate, $addIssueSortOrder, $addIssueMissing);
             $stmt_ai->execute();
             $newIssueId = (int) mysqli_insert_id($db);
             if ($newIssueId > 0) {
                 $loggedIssueIds[$newIssueId] = $add_issue;
-                $issueRow = ['id' => $newIssueId, 'id_press' => $id, 'title' => $add_issue];
+                $issueRow = ['id' => $newIssueId, 'id_press' => $id, 'title' => $add_issue, 'missing' => $addIssueMissing];
                 $issueSlugs = per_admin_resolve_slugs(
                     $db,
                     'issue',
@@ -376,15 +377,16 @@ if (($_POST['save'] ?? '') === 'save') {
             $title = $_POST['issue_title_' . $id_issue] ?? '';
             $sortOrder = max(0, (int) ($_POST['issue_sort_order_' . $id_issue] ?? $t['sort_order'] ?? 0));
             $issueDate = admin_issue_parse_date((string) ($_POST['issue_date_' . $id_issue] ?? ''));
-            $stmt_up = $db->prepare('UPDATE issue SET title=?, sort_order=?, date=? WHERE id=? LIMIT 1');
+            $issueMissing = !empty($_POST['issue_missing_' . $id_issue]) ? 1 : 0;
+            $stmt_up = $db->prepare('UPDATE issue SET title=?, sort_order=?, date=?, missing=? WHERE id=? LIMIT 1');
             if ($stmt_up) {
-                $stmt_up->bind_param('siii', $title, $sortOrder, $issueDate, $id_issue);
+                $stmt_up->bind_param('siiii', $title, $sortOrder, $issueDate, $issueMissing, $id_issue);
                 $stmt_up->execute();
             }
 
             $slugInputRu = trim((string) ($_POST['issue_slug_ru_' . $id_issue] ?? ''));
             $slugInputEn = trim((string) ($_POST['issue_slug_en_' . $id_issue] ?? ''));
-            $issueRow = array_merge($t, ['title' => $title]);
+            $issueRow = array_merge($t, ['title' => $title, 'missing' => $issueMissing]);
             $issueSlugs = per_admin_resolve_slugs(
                 $db,
                 'issue',
