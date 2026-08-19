@@ -332,7 +332,7 @@
 
 {/if}
 {if $comments_enabled|default:false}
-			<div class="{if $view_mode eq 'issue' && (!$articles || $articles|@count eq 0)}smn-comments--no-articles{/if}">
+			<div class="{if $view_mode eq 'issue' && ($current_issue.missing || !$articles || $articles|@count eq 0)}smn-comments--no-articles{/if}">
 			{include file="comments_new.tpl"}
 			</div>
 {/if}
