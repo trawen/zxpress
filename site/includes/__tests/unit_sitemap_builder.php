@@ -34,10 +34,15 @@ sitemap_test_assert($entry['loc'] === 'https://zxpress.ru/article.php?id=42', 'u
 sitemap_test_assert($entry['lastmod'] === $today, 'url entry lastmod');
 
 ob_start();
-sitemap_emit_url('https://zxpress.ru/books.php', '2024-06-01', 'weekly', '0.9');
+sitemap_emit_url('https://zxpress.ru/ru/books', '2024-06-01', 'weekly', '0.9');
 $xml = ob_get_clean();
-sitemap_test_assert(strpos($xml, '<loc>https://zxpress.ru/books.php</loc>') !== false, 'emit url loc');
+sitemap_test_assert(strpos($xml, '<loc>https://zxpress.ru/ru/books</loc>') !== false, 'emit url loc');
 sitemap_test_assert(strpos($xml, '<lastmod>2024-06-01</lastmod>') !== false, 'emit url lastmod');
 sitemap_test_assert(strpos($xml, 'lng=eng') === false, 'no english locale in urls');
+
+sitemap_test_assert(sitemap_is_pretty_ru_path('/ru/calendar') === true, 'pretty ru path ok');
+sitemap_test_assert(sitemap_is_pretty_ru_path('/books.php') === false, 'legacy books.php rejected');
+sitemap_test_assert(sitemap_is_pretty_ru_path('/article.php?id=1') === false, 'legacy article.php rejected');
+sitemap_test_assert(sitemap_is_pretty_ru_path('/ru/ezines/foo#bar') === false, 'hash urls rejected');
 
 exit($failures > 0 ? 1 : 0);

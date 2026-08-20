@@ -1,6 +1,6 @@
 <?php
 /**
- * Dynamic sitemap.xml — Russian URLs for articles (ezines), books, and snailmail.
+ * Dynamic sitemap.xml — Russian pretty URLs of the new public site.
  * Served as /sitemap.xml via nginx rewrite.
  */
 require 'init.inc';

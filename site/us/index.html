@@ -5,7 +5,7 @@
     <title>ZXPRESS Emulator</title>
     <style>
         body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000; }
-        #canvas { display: block; width: 100vw; height: 100vh; object-fit: contain; }
+        #canvas { display: block; width: 100vw; height: 100vh; object-fit: contain; image-rendering: pixelated; }
     </style>
 </head>
 <body>
@@ -16,15 +16,38 @@
             var filePath = params.get('file');
             if (!filePath) return;
 
+            // Admin USP sets zoom=none and USP persists options in IDBFS for this origin.
+            // Re-assert public zoom while that restore finishes (same pattern as admin).
+            function applyPublicVideoMode() {
+                if (!window.Module || typeof window.Module.ccall !== 'function') return;
+                ['filtering=off', 'zoom=fill screen'].forEach(function (command) {
+                    try {
+                        window.Module.ccall('OnCommand', null, ['string'], [command]);
+                    } catch (_) {}
+                });
+            }
+
+            function holdPublicVideoMode(durationMs) {
+                var until = Date.now() + durationMs;
+                (function tick() {
+                    applyPublicVideoMode();
+                    if (Date.now() < until) setTimeout(tick, 150);
+                })();
+            }
+
             window.Module = {
                 preRun: [],
                 postRun: [],
                 onInit: function () {
-                    Module.ccall('OnCommand', null, ['string'], ['filtering=off']);
-                    Module.ccall('OnCommand', null, ['string'], ['zoom=fill screen']);
+                    applyPublicVideoMode();
+                    holdPublicVideoMode(3000);
                 },
                 onReady: function() {
-                    Module.ccall('OpenFile', null, ['string'], [filePath]);
+                    applyPublicVideoMode();
+                    try {
+                        Module.ccall('OpenFile', null, ['string'], [filePath]);
+                    } catch (_) {}
+                    holdPublicVideoMode(3000);
                 },
                 canvas: document.getElementById('canvas'),
                 locateFile: function (file) {

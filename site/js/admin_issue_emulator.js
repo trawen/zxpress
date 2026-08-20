@@ -180,9 +180,10 @@
 		lockCanvasSize();
 	}
 
-	// /us/index.html runs the public player with zoom=fill screen, and USP keeps
-	// its options in IDBFS per origin, so admin inherits them and restores the
-	// stored zoom shortly after start. Re-assert zoom=none while that happens.
+	// Public /us/index.html uses zoom=fill screen. USP stores options in IDBFS
+	// per origin, so admin inherits them and restores the stored zoom shortly
+	// after start. Re-assert zoom=none while that happens. Public player does
+	// the inverse hold for zoom=fill screen — no second WASM build needed.
 	function holdVideoMode(durationMs) {
 		var until = Date.now() + durationMs;
 		(function tick() {
