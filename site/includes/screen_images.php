@@ -21,6 +21,7 @@ function screen_storage_path(int $screenId, string $format = 'webp'): string
 
 function screen_public_url(int $screenId, ?string $format = null): string
 {
+	unset($format);
 	if ($screenId <= 0) {
 		return '';
 	}
@@ -108,6 +109,67 @@ function screen_save_upload_as_webp(string $tmpPath, int $screenId): array
 		error_log('[FIX] screen_images: imagewebp failed path=' . $outPath);
 
 		return ['ok' => false, 'error' => 'не удалось сохранить WebP'];
+	}
+
+	return ['ok' => true];
+}
+
+/**
+ * Convert an existing on-disk screenshot (png/jpg/jpeg/webp) to lossless WebP.
+ * Source files are kept by default; pass $deleteSource=true to remove non-webp originals.
+ *
+ * @return array{ok:bool,error?:string,skipped?:bool}
+ */
+function screen_convert_existing_to_webp(int $screenId, ?string $format = null, bool $deleteSource = false): array
+{
+	if ($screenId <= 0) {
+		return ['ok' => false, 'error' => 'bad id'];
+	}
+
+	$webpPath = screen_storage_path($screenId, 'webp');
+	if (is_file($webpPath)) {
+		if ($deleteSource) {
+			foreach (['png', 'jpg', 'jpeg'] as $ext) {
+				$path = screen_storage_path($screenId, $ext);
+				if (is_file($path)) {
+					@unlink($path);
+				}
+			}
+		}
+
+		return ['ok' => true, 'skipped' => true];
+	}
+
+	$srcPath = '';
+	$srcExt = '';
+	$try = [];
+	if ($format !== null && $format !== '') {
+		$try[] = screen_normalize_format($format);
+	}
+	$try = array_merge($try, ['png', 'jpg', 'jpeg', 'webp']);
+	foreach (array_unique($try) as $ext) {
+		$path = screen_storage_path($screenId, $ext);
+		if (is_file($path)) {
+			$srcPath = $path;
+			$srcExt = $ext;
+			break;
+		}
+	}
+	if ($srcPath === '') {
+		return ['ok' => false, 'error' => 'source missing'];
+	}
+
+	if ($srcExt === 'webp' && $srcPath === $webpPath) {
+		return ['ok' => true, 'skipped' => true];
+	}
+
+	$converted = screen_save_upload_as_webp($srcPath, $screenId);
+	if (empty($converted['ok'])) {
+		return $converted;
+	}
+
+	if ($deleteSource && $srcExt !== 'webp' && is_file($srcPath)) {
+		@unlink($srcPath);
 	}
 
 	return ['ok' => true];

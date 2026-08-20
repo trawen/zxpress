@@ -5,6 +5,7 @@
  */
 require 'init.inc';
 require_once __DIR__ . '/includes/admin_helpers.php';
+require_once __DIR__ . '/includes/screen_images.php';
 
 if (!isset($_SESSION['login']) || !$_SESSION['login']) {
 	header('HTTP/1.1 403 Forbidden');
@@ -36,20 +37,12 @@ function ascr_redirect(int $pressId, int $issueId, string $extra = ''): void
 
 function ascr_screen_path(int $screenId, string $format): string
 {
-	$format = strtolower(preg_replace('/[^a-z0-9]/', '', $format) ?? '');
-	if ($format === '') {
-		$format = 'png';
-	}
-	return zx_storage_path('screens', '1/' . $screenId . '.' . $format);
+	return screen_storage_path($screenId, $format);
 }
 
 function ascr_screen_public_url(int $screenId, string $format): string
 {
-	$format = strtolower(preg_replace('/[^a-z0-9]/', '', $format) ?? '');
-	if ($format === '') {
-		$format = 'png';
-	}
-	return '/screens/1/' . $screenId . '.' . $format;
+	return screen_public_url($screenId, $format);
 }
 
 /**
@@ -119,17 +112,18 @@ function ascr_process_uploads(mysqli $db, int $pressId, int $issueId, int $type,
 			$issueId,
 			$type,
 			$tm,
-			$ext
+			'webp'
 		);
 		if (!$saved) {
 			$errors[] = $origName . ': не удалось создать запись';
 			continue;
 		}
 		$screenId = (int) mysqli_insert_id($db);
-		$okCopy = zx_storage_copy_uploaded_file('screens', '1/' . $screenId . '.' . $ext, $tmp);
-		if (!$okCopy) {
+		$converted = screen_save_upload_as_webp($tmp, $screenId);
+		if (empty($converted['ok'])) {
 			db_exec($db, 'DELETE FROM screens WHERE id=? LIMIT 1', 'i', $screenId);
-			$errors[] = $origName . ': не удалось сохранить на диск';
+			screen_delete_files($screenId);
+			$errors[] = $origName . ': ' . (string) ($converted['error'] ?? 'не удалось сохранить WebP');
 			continue;
 		}
 		admin_log($db, $pressId, $idUsername, $tm, 2, 0, $issueId, $screenId);
@@ -208,10 +202,7 @@ if ($doSave || $doUpload) {
 
 				if (!empty($_POST['delete_screen'][$sid])) {
 					db_exec($db, 'DELETE FROM screens WHERE id=? AND id_press=? LIMIT 1', 'ii', $sid, $pressId);
-					$path = ascr_screen_path($sid, $fmt);
-					if (is_file($path)) {
-						@unlink($path);
-					}
+					screen_delete_files($sid, $fmt);
 					continue;
 				}
 
