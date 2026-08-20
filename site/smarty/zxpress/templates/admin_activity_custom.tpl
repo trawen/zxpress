@@ -108,6 +108,50 @@
 	font-weight: 400;
 	letter-spacing: normal;
 }
+.admin-ai-feed-item {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	gap: 4px 6px;
+	align-items: start;
+	padding: 5px 4px 5px 7px;
+	border-radius: 3px;
+}
+.admin-ai-feed-item.is-active {
+	background: color-mix(in srgb, var(--smn-accent) 10%, transparent);
+}
+.admin-ai-feed-item .admin-ai-press-link {
+	padding: 0;
+	min-width: 0;
+}
+.admin-ai-feed-delete {
+	appearance: none;
+	border: 0;
+	background: transparent;
+	color: var(--ai-muted);
+	font: 600 11px/1 inherit;
+	padding: 4px 6px;
+	cursor: pointer;
+	border-radius: 3px;
+}
+.admin-ai-feed-delete:hover {
+	color: #A41E00;
+	background: #fde8e8;
+}
+.admin-ai-feed-badge {
+	display: inline-block;
+	margin-right: 4px;
+	padding: 0 4px;
+	border-radius: 2px;
+	background: color-mix(in srgb, var(--smn-line) 55%, transparent);
+	font-size: 9px;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}
+.admin-ai-feed-badge--private {
+	background: #fde8e8;
+	color: #A41E00;
+}
 .admin-ai-main {
 	min-width: 0;
 	padding: 20px;
@@ -337,16 +381,39 @@
 <div class="admin-ai-shell">
 <aside class="admin-ai-sidebar">
 <div class="admin-ai-sidebar-head">
-<h2 class="admin-ai-sidebar-title">Записи</h2>
+<h2 class="admin-ai-sidebar-title">Лента</h2>
 <a class="admin-ai-new" href="admin_activity_custom.php">+ Новая</a>
 </div>
 <ul class="admin-ai-press-list">
-{foreach from=$custom_activity_items item=item}
+{foreach from=$activity_feed_batches item=batch}
 <li>
-<a class="admin-ai-press-link{if $custom_activity_id eq $item.id} is-active{/if}" href="admin_activity_custom.php?id={$item.id}">
-<span class="admin-ai-press-label">{$item.title_preview|escape:'html'}</span>
-<span class="admin-ai-press-meta">{$item.created_at_display|escape:'html'}</span>
+<div class="admin-ai-feed-item{if $batch.custom_edit_id gt 0 && $custom_activity_id eq $batch.custom_edit_id} is-active{/if}">
+{if $batch.custom_edit_id gt 0}
+<a class="admin-ai-press-link{if $custom_activity_id eq $batch.custom_edit_id} is-active{/if}" href="admin_activity_custom.php?id={$batch.custom_edit_id}">
+<span class="admin-ai-press-label">{$batch.title_preview|escape:'html'}</span>
+<span class="admin-ai-press-meta">
+<span class="admin-ai-feed-badge">{$batch.domain_label|escape:'html'}</span>
+{$batch.created_at_display|escape:'html'} · #{$batch.id} · {$batch.items_count} соб.
+{if !$batch.is_public || $batch.public_items_count lt 1} · <span class="admin-ai-feed-badge admin-ai-feed-badge--private">скрыто</span>{/if}
+</span>
 </a>
+{else}
+<div class="admin-ai-press-link">
+<span class="admin-ai-press-label">{$batch.title_preview|escape:'html'}</span>
+<span class="admin-ai-press-meta">
+<span class="admin-ai-feed-badge">{$batch.domain_label|escape:'html'}</span>
+{$batch.created_at_display|escape:'html'} · #{$batch.id} · {$batch.items_count} соб.
+{if !$batch.is_public || $batch.public_items_count lt 1} · <span class="admin-ai-feed-badge admin-ai-feed-badge--private">скрыто</span>{/if}
+</span>
+</div>
+{/if}
+<form method="post" onsubmit="return confirm('Удалить эту запись из ленты?');">
+<input type="hidden" name="csrf_token" value="{$csrf_token}">
+<input type="hidden" name="batch_id" value="{$batch.id|escape:'html'}">
+<input type="hidden" name="custom_activity_id" value="{$custom_activity_id|escape:'html'}">
+<button class="admin-ai-feed-delete" type="submit" name="delete_activity_batch" value="1" title="Удалить из ленты">×</button>
+</form>
+</div>
 </li>
 {foreachelse}
 <li class="admin-ai-empty">Пока пусто</li>
@@ -358,6 +425,12 @@
 {if !$custom_activity_table_ready}
 <div class="admin-ai-alert admin-ai-alert--warn">
 Сначала примени миграцию `db/migrate/20260819162000_custom_activity_updates.sql`.
+</div>
+{/if}
+
+{if $custom_activity_show_deleted}
+<div class="admin-ai-alert admin-ai-alert--ok">
+Запись удалена из ленты.
 </div>
 {/if}
 

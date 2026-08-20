@@ -141,6 +141,25 @@ if (($_GET['action'] ?? '') === 'translate_en') {
 	exit;
 }
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_activity_batch'])) {
+	csrf_verify();
+	$batchId = (int) ($_POST['batch_id'] ?? 0);
+	if ($batchId > 0 && activity_tables_ready($db) && activity_batch_delete($db, $batchId)) {
+		$redirectId = (int) ($_POST['custom_activity_id'] ?? 0);
+		// If we deleted the currently edited custom entry, go to blank form.
+		if ($redirectId > 0 && admin_custom_activity_fetch($db, $redirectId) === null) {
+			$redirectId = 0;
+		}
+		$url = '/admin_activity_custom.php?deleted=1';
+		if ($redirectId > 0) {
+			$url .= '&id=' . $redirectId;
+		}
+		header('Location: ' . $url);
+		exit;
+	}
+	$errors[] = 'Не удалось удалить запись ленты.';
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_custom_activity'])) {
 	csrf_verify();
 	$editId = (int) ($_POST['custom_activity_id'] ?? 0);
@@ -310,14 +329,63 @@ if (admin_custom_activity_table_ready($db)) {
 	}
 }
 
+$feedBatches = [];
+if (activity_tables_ready($db)) {
+	$customByActivity = [];
+	if (admin_custom_activity_table_ready($db)) {
+		$zc = db_select($db, 'SELECT id, activity_id FROM custom_activity_updates WHERE activity_id IS NOT NULL');
+		while ($zc && ($crow = $zc->fetch_assoc())) {
+			$aid = (int) ($crow['activity_id'] ?? 0);
+			if ($aid > 0) {
+				$customByActivity[$aid] = (int) $crow['id'];
+			}
+		}
+	}
+
+	$z = db_select(
+		$db,
+		'SELECT b.*, '
+		. '(SELECT a.id FROM activity a WHERE a.batch_id=b.id AND a.object_type=\'custom_update\' ORDER BY a.id ASC LIMIT 1) AS custom_activity_row_id, '
+		. '(SELECT a.object_id FROM activity a WHERE a.batch_id=b.id AND a.object_type=\'custom_update\' ORDER BY a.id ASC LIMIT 1) AS custom_object_id '
+		. 'FROM activity_batch b ORDER BY b.created_at DESC, b.id DESC LIMIT 500'
+	);
+	while ($z && ($row = $z->fetch_assoc())) {
+		$batchId = (int) ($row['id'] ?? 0);
+		$title = trim((string) ($row['title_ru'] ?? ''));
+		$summary = trim((string) ($row['summary_ru'] ?? ''));
+		$label = $title !== '' ? $title : ($summary !== '' ? $summary : ('Батч #' . $batchId));
+		$row['title_preview'] = admin_custom_activity_list_preview($label, 90);
+		if ($row['title_preview'] === '') {
+			$row['title_preview'] = 'Батч #' . $batchId;
+		}
+		$row['created_at_display'] = date('d.m.Y H:i', (int) ($row['created_at'] ?? 0));
+		$row['domain_label'] = activity_domain_label((string) ($row['domain'] ?? ''), false);
+		$row['is_public'] = (int) ($row['is_public'] ?? 0);
+		$row['public_items_count'] = (int) ($row['public_items_count'] ?? 0);
+		$row['items_count'] = (int) ($row['items_count'] ?? 0);
+
+		$customId = (int) ($row['custom_object_id'] ?? 0);
+		if ($customId <= 0) {
+			$customActId = (int) ($row['custom_activity_row_id'] ?? 0);
+			if ($customActId > 0 && isset($customByActivity[$customActId])) {
+				$customId = $customByActivity[$customActId];
+			}
+		}
+		$row['custom_edit_id'] = $customId;
+		$feedBatches[] = $row;
+	}
+}
+
 $smarty->assign('title', 'Апдейты — админка');
 $smarty->assign('custom_activity_form', $form);
 $smarty->assign('custom_activity_errors', $errors);
 $smarty->assign('custom_activity_items', $items);
+$smarty->assign('activity_feed_batches', $feedBatches);
 $smarty->assign('custom_activity_id', $editId);
 $smarty->assign('custom_activity_record', $record);
 $smarty->assign('custom_activity_show_created', (int) ($_GET['created'] ?? 0) === 1);
 $smarty->assign('custom_activity_show_saved', (int) ($_GET['saved'] ?? 0) === 1);
+$smarty->assign('custom_activity_show_deleted', (int) ($_GET['deleted'] ?? 0) === 1);
 $smarty->assign('custom_activity_table_ready', admin_custom_activity_table_ready($db));
 
 $smarty->display('admin_activity_custom.tpl');

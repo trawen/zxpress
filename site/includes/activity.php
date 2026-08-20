@@ -563,6 +563,53 @@ function activity_batch_finalize(mysqli $db, int $batchId = 0, bool $keepEmpty =
 }
 
 /**
+ * Delete a batch and its events. Also removes linked custom_activity_updates rows
+ * (and their image files) when present.
+ */
+function activity_batch_delete(mysqli $db, int $batchId): bool
+{
+	if ($batchId <= 0 || !activity_tables_ready($db)) {
+		return false;
+	}
+
+	$customIds = [];
+	$z = db_select(
+		$db,
+		'SELECT object_id FROM activity WHERE batch_id=? AND object_type=\'custom_update\' AND object_id>0',
+		'i',
+		$batchId
+	);
+	while ($z && ($row = $z->fetch_assoc())) {
+		$cid = (int) ($row['object_id'] ?? 0);
+		if ($cid > 0) {
+			$customIds[$cid] = $cid;
+		}
+	}
+
+	$r = @$db->query("SHOW TABLES LIKE 'custom_activity_updates'");
+	if ($r && $r->num_rows > 0 && $customIds !== []) {
+		$idList = implode(',', array_map('intval', $customIds));
+		$zc = $db->query('SELECT id, image_url FROM custom_activity_updates WHERE id IN (' . $idList . ')');
+		while ($zc && ($crow = $zc->fetch_assoc())) {
+			$imageUrl = (string) ($crow['image_url'] ?? '');
+			if ($imageUrl !== '' && preg_match('#^/activity-images/([^/]+)$#', $imageUrl, $m)) {
+				$leaf = rawurldecode($m[1]);
+				$path = zx_storage_path('activity_images', $leaf);
+				if (is_file($path)) {
+					@unlink($path);
+				}
+			}
+		}
+		$db->query('DELETE FROM custom_activity_updates WHERE id IN (' . $idList . ')');
+	}
+
+	db_exec($db, 'DELETE FROM activity WHERE batch_id=?', 'i', $batchId);
+	db_exec($db, 'DELETE FROM activity_batch WHERE id=? LIMIT 1', 'i', $batchId);
+
+	return true;
+}
+
+/**
  * Log one activity event. Joins current request batch if any.
  *
  * @param array<string,mixed> $opts
