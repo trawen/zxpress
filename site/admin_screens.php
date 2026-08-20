@@ -4,6 +4,7 @@
  * Old screenshot UI remains in admin_articles.php.
  */
 require 'init.inc';
+require_once __DIR__ . '/includes/admin_helpers.php';
 
 if (!isset($_SESSION['login']) || !$_SESSION['login']) {
 	header('HTTP/1.1 403 Forbidden');
@@ -131,17 +132,7 @@ function ascr_process_uploads(mysqli $db, int $pressId, int $issueId, int $type,
 			$errors[] = $origName . ': не удалось сохранить на диск';
 			continue;
 		}
-		db_exec(
-			$db,
-			'INSERT INTO log (id_press, id_article, id_issue, id_user, date, type, id_screen, id_cover) '
-			. 'VALUES (?,0,?,?,?,2,?,0)',
-			'iiiii',
-			$pressId,
-			$issueId,
-			$idUsername,
-			$tm,
-			$screenId
-		);
+		admin_log($db, $pressId, $idUsername, $tm, 2, 0, $issueId, $screenId);
 		$uploaded++;
 	}
 	if ($finfo) {
@@ -243,6 +234,7 @@ if ($doSave || $doUpload) {
 			// Save without successful new files — still redirect, but keep errors visible via notice path.
 			$notice = 'Сохранено, но файлы не загружены: ' . implode('; ', $uploadErrors);
 		} elseif ($doSave || $uploaded > 0) {
+			activity_batch_finalize($db);
 			$extra = '';
 			if ($doSave) {
 				$extra .= '&saved=1';

@@ -60,6 +60,7 @@ function activity_detect_domain(): string
 		'admin_publishers.php' => 'publisher',
 		'admin_ezine_categories.php' => 'ezine',
 		'admin_screens.php' => 'ezine',
+		'admin_issue_emulator.php' => 'ezine',
 		'admin_articles.php' => 'ezine',
 		'admin_articles_new.php' => 'ezine',
 		'admin_issue.php' => 'ezine',
@@ -158,6 +159,32 @@ function activity_batch_begin(
 	// Used by trg_log_ai_activity to attach legacy log rows to this batch.
 	$db->query('SET @activity_batch_id := ' . (int) $batchId);
 	return $batchId;
+}
+
+/**
+ * Attach activity rows created without batch_id (e.g. trigger missed @activity_batch_id).
+ */
+function activity_attach_orphan_events_to_batch(
+	mysqli $db,
+	int $batchId,
+	int $sinceTs,
+	int $actorUserId
+): void {
+	if ($batchId <= 0 || $sinceTs <= 0 || $actorUserId <= 0) {
+		return;
+	}
+
+	db_exec(
+		$db,
+		'UPDATE activity a '
+		. 'INNER JOIN log l ON l.id = a.legacy_log_id '
+		. 'SET a.batch_id = ? '
+		. 'WHERE a.batch_id IS NULL AND l.id_user = ? AND l.date >= ?',
+		'iii',
+		$batchId,
+		$actorUserId,
+		$sinceTs
+	);
 }
 
 /**
@@ -425,10 +452,14 @@ function activity_batch_finalize(mysqli $db, int $batchId = 0, bool $keepEmpty =
 	}
 
 	$batchCreated = 0;
+	$batchActor = 0;
 	$zb = db_select($db, 'SELECT created_at, actor_user_id FROM activity_batch WHERE id=? LIMIT 1', 'i', $batchId);
 	if ($zb && ($brow = $zb->fetch_assoc())) {
 		$batchCreated = (int) ($brow['created_at'] ?? 0);
-		activity_mirror_pending_logs($db, max(0, $batchCreated - 5), (int) ($brow['actor_user_id'] ?? 0));
+		$batchActor = (int) ($brow['actor_user_id'] ?? 0);
+		$sinceTs = max(0, $batchCreated - 10);
+		activity_attach_orphan_events_to_batch($db, $batchId, $sinceTs, $batchActor);
+		activity_mirror_pending_logs($db, $sinceTs, $batchActor);
 	}
 
 	activity_enrich_batch_events($db, $batchId);

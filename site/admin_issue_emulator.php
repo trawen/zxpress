@@ -110,6 +110,9 @@ if (($_GET['action'] ?? '') === 'shot') {
 		$type,
 		(int) ($_SESSION['id_username'] ?? 0)
 	);
+	if (!empty($result['ok'])) {
+		activity_batch_finalize($db);
+	}
 	aiem_json(!empty($result['ok']) ? 200 : 422, $result);
 }
 
