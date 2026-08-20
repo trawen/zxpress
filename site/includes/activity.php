@@ -6,6 +6,8 @@
  * Public feed: is_public=1 AND event_scope='content' (usually via batches).
  */
 
+require_once __DIR__ . '/screen_images.php';
+
 const ACTIVITY_SCOPE_CONTENT = 'content';
 const ACTIVITY_SCOPE_METADATA = 'metadata';
 const ACTIVITY_SCOPE_SYSTEM = 'system';
