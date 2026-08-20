@@ -361,9 +361,9 @@
 				<h1>{if $lng eq 'eng'}Emags release calendar for the ZX Spectrum{else}Календарь выхода прессы для ZX Spectrum{/if}</h1>
 				<p class="smn-lead">
 					{if $lng eq 'eng'}
-						It's hard to imagine, but in the mid-1990s, Russian-language electronic newspapers and magazines were published almost daily. Unfortunately, most of them became publicly known only years later—after they were discovered in personal floppy disk collections, copied, and published on websites like Virtual TR-DOS and ZXPress. And some publications are only now being rediscovered.
+						It's hard to imagine, but in the mid-1990s, Russian-language electronic newspapers and magazines were published almost daily. Unfortunately, most of them became publicly known only years later—after they were discovered in personal floppy disk collections, copied, and published on websites like Virtual TR-DOS and ZXPress. And some publications are only now being rediscovered. We also recommend exploring the geography of these releases on the <a href="/en/map">map</a>.
 					{else}
-			Сложно представить, но в середине 90-х рускоязычныеэлектронные газеты и журналы выходили едва ли не каждый день. К сожалению, о большинстве из них широкая публика узнала лишь спустя годы — после того как они были обнаружены в личных коллекциях дискет, скопированы и опубликованы на сайтах  Virtual TR-DOS и ZXPress. А некоторые издания открываются заново только сейчас.
+			Сложно представить, но в середине 90-х рускоязычныеэлектронные газеты и журналы выходили едва ли не каждый день. К сожалению, о большинстве из них широкая публика узнала лишь спустя годы — после того как они были обнаружены в личных коллекциях дискет, скопированы и опубликованы на сайтах  Virtual TR-DOS и ZXPress. А некоторые издания открываются заново только сейчас. Рекомендуем ознакомиться так же и с географией выхода этих изданий на <a href="/ru/map">карте</a>.
 					{/if}
 				</p>
 			</section>
