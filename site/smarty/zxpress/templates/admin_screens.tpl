@@ -13,11 +13,11 @@
 
 <div style="margin-bottom:10px">
 {if $press && $press.id}
-<a href="admin_articles_new.php?id={$press.id}&amp;issue={$issue_id}">← Статьи (new)</a>
+<a href="admin_articles_new.php?id={$press.id}&amp;issue={$issue_id}">← Статьи журналов</a>
 &nbsp;&nbsp;
 <a href="admin_articles.php?id={$press.id}&amp;issue={$issue_id}">Старая админка</a>
 {else}
-<a href="admin_articles_new.php">← Статьи (new)</a>
+<a href="admin_articles_new.php">← Статьи журналов</a>
 {/if}
 </div>
 

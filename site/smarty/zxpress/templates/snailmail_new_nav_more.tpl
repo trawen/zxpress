@@ -1,8 +1,8 @@
 <div class="smn-nav-secondary">
 {if $lng eq 'eng'}
 	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/categories"{if $smn_nav_categories_active|default:false} class="is-active"{/if}>Article categories</a>
-	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/map"{if $smn_nav_map_active|default:false} class="is-active"{/if}>ZX-press map</a>
-	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/calendar"{if $smn_nav_calendar_active|default:false} class="is-active"{/if}>Release calendar</a>
+	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/map"{if $smn_nav_map_active|default:false} class="is-active"{/if}>Map of ZX publications</a>
+	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/calendar"{if $smn_nav_calendar_active|default:false} class="is-active"{/if}>Publication release calendar</a>
 	<a href="{$authors_catalog_url|default:'/en/authors'}"{if $smn_nav_authors_active|default:false} class="is-active"{/if}>Authors of articles, letters and publications</a>
 	<a href="{$host}">Library</a>
 	{if $login eq 1}
@@ -18,7 +18,7 @@
 {else}
 	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/categories"{if $smn_nav_categories_active|default:false} class="is-active"{/if}>Категории статей</a>
 	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/map"{if $smn_nav_map_active|default:false} class="is-active"{/if}>Карта ZX-прессы</a>
-	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/calendar"{if $smn_nav_calendar_active|default:false} class="is-active"{/if}>Календарь выпусков</a>
+	<a href="{if $lng eq 'eng'}/en{else}/ru{/if}/calendar"{if $smn_nav_calendar_active|default:false} class="is-active"{/if}>Календарь выпуска изданий</a>
 	<a href="{$authors_catalog_url|default:'/ru/authors'}"{if $smn_nav_authors_active|default:false} class="is-active"{/if}>Авторы статей, писем и публикаций</a>
 	{if $login eq 1}
 	<form method="post" action="{$host}logout.php" class="smn-nav-more-logout">

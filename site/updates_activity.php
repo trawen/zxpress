@@ -350,9 +350,12 @@ if ($ready) {
 			}
 			$e['object_label'] = activity_object_label((string) $e['object_type'], $isEng);
 			$titleEn = trim((string) ($e['title_en'] ?? ''));
-			$e['title_display'] = title_plain(
-				($isEng && $titleEn !== '') ? $titleEn : (string) ($e['title_ru'] ?? '')
-			);
+			$rawTitle = ($isEng && $titleEn !== '') ? $titleEn : (string) ($e['title_ru'] ?? '');
+			$e['title_display'] = title_plain($rawTitle);
+			if ((string) ($e['object_type'] ?? '') === 'custom_update') {
+				$e['title_html'] = activity_custom_update_markdown_html($rawTitle);
+				$e['is_custom_update'] = 1;
+			}
 			$urlEn = trim((string) ($e['url_en'] ?? ''));
 			$urlRu = trim((string) ($e['url_ru'] ?? ''));
 			$e['url_display'] = ($isEng && $urlEn !== '') ? $urlEn : $urlRu;
@@ -425,6 +428,10 @@ if ($ready) {
 	unset($b);
 
 	$batches = activity_feed_merge_batches($batches, $isEng);
+	foreach ($batches as &$b) {
+		activity_feed_apply_custom_update_batch($b, $isEng);
+	}
+	unset($b);
 }
 
 $domains = [];

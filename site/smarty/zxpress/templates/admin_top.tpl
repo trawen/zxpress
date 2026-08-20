@@ -31,6 +31,10 @@ body {
 	color: var(--smn-ink);
 	background: var(--smn-body-bg);
 }
+.admin-top-page {
+	box-sizing: border-box;
+	padding: 0 20px 32px;
+}
 .admin-top-bar {
 	display: flex;
 	align-items: center;
@@ -85,6 +89,22 @@ body {
 .admin-top-nav a.is-active {
 	color: var(--smn-accent);
 }
+.admin-top-nav-stack {
+	display: inline-flex;
+	flex-direction: row;
+	align-items: baseline;
+	gap: 4px;
+	line-height: 1.15;
+}
+.admin-top-nav-stack a {
+	white-space: nowrap;
+	padding: 4px 0;
+}
+.admin-top-nav-stack-suffix {
+	font-size: 11px;
+	font-weight: 600;
+	color: var(--smn-muted);
+}
 .admin-top-bar form { margin: 0; }
 .admin-top-bar button {
 	appearance: none;
@@ -129,7 +149,7 @@ body {
 
 <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
 <TR>
-<TD vAlign=top>
+<TD vAlign=top class="admin-top-page">
 
 {if $login neq 1 or $username eq ""}
 
@@ -150,15 +170,17 @@ body {
 <a href="admin_publishers.php">Издательства</a>
 <a href="admin_periodicals.php">Периодика</a>
 <a href="admin_issue.php">Выпуски журналов</a>
-<a href="admin_articles.php">Статьи журналов</a>
-<a href="admin_articles_new.php">Статьи журналов (new)</a>
+<span class="admin-top-nav-stack">
+	<a href="admin_articles_new.php">Статьи журналов</a>
+	<a href="admin_articles.php" class="admin-top-nav-stack-suffix">(old)</a>
+</span>
 <a href="admin_screens.php">Скриншоты журналов</a>
 <a href="admin_ezine_categories.php">Категории журналов</a>
 <a href="admin_authors.php">Авторы</a>
 <a href="admin_book_rubrics.php">Рубрики книг</a>
 <a href="admin_letters.php">Письма</a>
 <a href="admin_publications.php">Публикации</a>
-<a href="/ru/updates-activity">Activity</a>
+<a href="admin_activity_custom.php">Апдейты</a>
 </nav>
 <form method="post" action="/logout.php">
 <input type="hidden" name="csrf_token" value="{$csrf_token}">

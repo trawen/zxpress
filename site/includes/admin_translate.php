@@ -240,6 +240,110 @@ function admin_translate_text(string $text): string
     return $out;
 }
 
+/**
+ * Translate markdown: keep code/URLs, translate labels and text inside formatting.
+ *
+ * @throws RuntimeException
+ */
+function admin_translate_markdown(string $text): string
+{
+    $text = admin_translate_normalize_input($text);
+    if ($text === '' || !admin_translate_has_cyrillic($text)) {
+        return $text;
+    }
+
+    $codeStore = [];
+    $ci = 0;
+    $stashCode = static function (array $m) use (&$codeStore, &$ci): string {
+        $key = '⟦C' . ($ci++) . '⟧';
+        $codeStore[$key] = $m[0];
+        return $key;
+    };
+
+    $text = preg_replace_callback('/```[\s\S]*?```/', $stashCode, $text) ?? $text;
+    $text = preg_replace_callback('/`[^`\n]+`/', $stashCode, $text) ?? $text;
+
+    $translateInline = null;
+    $translateInline = static function (string $chunk) use (&$translateInline): string {
+        if ($chunk === '' || !admin_translate_has_cyrillic($chunk)) {
+            return $chunk;
+        }
+
+        $chunk = preg_replace_callback(
+            '/!\[([^\]]*)\]\(([^)]*)\)/',
+            static fn (array $m): string => '![' . admin_translate_text($m[1]) . '](' . $m[2] . ')',
+            $chunk
+        ) ?? $chunk;
+
+        $chunk = preg_replace_callback(
+            '/\[([^\]]*)\]\(([^)]*)\)/',
+            static fn (array $m): string => '[' . admin_translate_text($m[1]) . '](' . $m[2] . ')',
+            $chunk
+        ) ?? $chunk;
+
+        $chunk = preg_replace_callback(
+            '/\*\*(.+?)\*\*/s',
+            static fn (array $m): string => '**' . $translateInline($m[1]) . '**',
+            $chunk
+        ) ?? $chunk;
+
+        $chunk = preg_replace_callback(
+            '/__(.+?)__/s',
+            static fn (array $m): string => '__' . $translateInline($m[1]) . '__',
+            $chunk
+        ) ?? $chunk;
+
+        $chunk = preg_replace_callback(
+            '/(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)/s',
+            static fn (array $m): string => '*' . $translateInline($m[1]) . '*',
+            $chunk
+        ) ?? $chunk;
+
+        if (admin_translate_has_cyrillic($chunk)) {
+            return admin_translate_text($chunk);
+        }
+
+        return $chunk;
+    };
+
+    $lines = explode("\n", $text);
+    $out = [];
+    foreach ($lines as $line) {
+        if ($line === '') {
+            $out[] = $line;
+            continue;
+        }
+        if (preg_match('/^(#{1,6}\s+)(.+)$/', $line, $m)) {
+            $out[] = $m[1] . $translateInline($m[2]);
+            continue;
+        }
+        if (preg_match('/^(>\s?)(.*)$/', $line, $m)) {
+            $out[] = $m[1] . $translateInline($m[2]);
+            continue;
+        }
+        if (preg_match('/^(\s*[-*+]\s+)(.+)$/', $line, $m)) {
+            $out[] = $m[1] . $translateInline($m[2]);
+            continue;
+        }
+        if (preg_match('/^(\s*\d+\.\s+)(.+)$/', $line, $m)) {
+            $out[] = $m[1] . $translateInline($m[2]);
+            continue;
+        }
+        if (preg_match('/^-{3,}$/', $line)) {
+            $out[] = $line;
+            continue;
+        }
+        $out[] = $translateInline($line);
+    }
+
+    $text = implode("\n", $out);
+    foreach ($codeStore as $key => $original) {
+        $text = str_replace($key, $original, $text);
+    }
+
+    return $text;
+}
+
 function admin_translate_title(string $title): string
 {
     $title = admin_translate_normalize_input(trim($title));

@@ -634,5 +634,5 @@ $smarty->assign('notice', $notice);
 $smarty->assign('text_type_text_pre', EZN_TEXT_TYPE_TEXT_PRE);
 $smarty->assign('text_type_html_pre', EZN_TEXT_TYPE_HTML_PRE);
 $smarty->assign('text_type_markdown', EZN_TEXT_TYPE_MARKDOWN);
-$smarty->assign('title', 'Админка: Статьи журналов (новая)');
+$smarty->assign('title', 'Админка: Статьи журналов');
 $smarty->display('admin_articles_new.tpl');

@@ -75,6 +75,43 @@ function calendar_format_day_label(int $ts, bool $isEng): string
 	return date('d ', $ts) . ($GLOBALS['months'][date('m', $ts)] ?? '') . date(' Y', $ts);
 }
 
+function calendar_format_today_parts(bool $isEng): array
+{
+	$ts = time();
+	if ($isEng) {
+		return [
+			'prefix' => 'Today',
+			'date' => date('j F Y', $ts),
+		];
+	}
+
+	return [
+		'prefix' => 'Сегодня',
+		'date' => date('d ', $ts) . ($GLOBALS['months'][date('m', $ts)] ?? '') . date(' Y', $ts),
+	];
+}
+
+function calendar_today_item_label(array $item, bool $isEng): string
+{
+	$label = (string) ($item['title'] ?? '');
+	$issueTitle = trim((string) ($item['issue_title'] ?? ''));
+	if ($issueTitle !== '') {
+		$label .= ' #' . $issueTitle;
+	}
+
+	return $label;
+}
+
+function calendar_city_label(array $row, bool $isEng): string
+{
+	$city = trim((string) ($isEng ? ($row['city_name_eng'] ?? '') : ($row['city_name_ru'] ?? '')));
+	if ($city === '') {
+		$city = trim((string) ($row['city_name_ru'] ?? ''));
+	}
+
+	return $city;
+}
+
 function calendar_location_label(array $row, bool $isEng): string
 {
 	$city = trim((string) ($isEng ? ($row['city_name_eng'] ?? '') : ($row['city_name_ru'] ?? '')));
@@ -101,7 +138,7 @@ function calendar_location_label(array $row, bool $isEng): string
 }
 
 /**
- * @return array{years:list<array<string,mixed>>,days:array<string,array<string,mixed>>,total_issues:int,start_year:int,end_year:int}
+ * @return array{years:list<array<string,mixed>>,days:array<string,array<string,mixed>>,today:array{label:string,items:list<array<string,mixed>>},total_issues:int,start_year:int,end_year:int}
  */
 function calendar_build_view(mysqli $db, bool $isEng): array
 {
@@ -110,6 +147,10 @@ function calendar_build_view(mysqli $db, bool $isEng): array
 	$dayCounts = [];
 	$dayDetails = [];
 	$totalIssues = 0;
+	$todayMonth = (int) date('n');
+	$todayDay = (int) date('j');
+	$todayItems = [];
+	$todayParts = calendar_format_today_parts($isEng);
 
 	$z = db_select(
 		$db,
@@ -167,7 +208,22 @@ function calendar_build_view(mysqli $db, bool $isEng): array
 			'issue_title' => $issueTitle,
 			'url' => ezn_url_issue($pressRow, $issueRow, $isEng),
 			'location' => $location,
+			'city' => calendar_city_label($row, $isEng),
 		];
+
+		if ($month === $todayMonth && $day === $todayDay) {
+			$todayItems[] = [
+				'title' => $pressTitle,
+				'issue_title' => $issueTitle,
+				'year' => $year,
+				'url' => ezn_url_issue($pressRow, $issueRow, $isEng),
+				'label' => calendar_today_item_label([
+					'title' => $pressTitle,
+					'issue_title' => $issueTitle,
+					'year' => $year,
+				], $isEng),
+			];
+		}
 
 		$dayCounts[$year][$month][$day] = ($dayCounts[$year][$month][$day] ?? 0) + 1;
 		$totalIssues++;
@@ -177,11 +233,30 @@ function calendar_build_view(mysqli $db, bool $isEng): array
 		return [
 			'years' => [],
 			'days' => [],
+			'today' => [
+				'prefix' => $todayParts['prefix'],
+				'date' => $todayParts['date'],
+				'label' => $todayParts['prefix'] . ' ' . $todayParts['date'],
+				'items' => [],
+			],
 			'total_issues' => 0,
 			'start_year' => 0,
 			'end_year' => 0,
 		];
 	}
+
+	usort($todayItems, static function (array $a, array $b): int {
+		$yearCmp = ((int) ($b['year'] ?? 0)) <=> ((int) ($a['year'] ?? 0));
+		if ($yearCmp !== 0) {
+			return $yearCmp;
+		}
+		$titleCmp = strcasecmp((string) ($a['title'] ?? ''), (string) ($b['title'] ?? ''));
+		if ($titleCmp !== 0) {
+			return $titleCmp;
+		}
+
+		return strcasecmp((string) ($a['issue_title'] ?? ''), (string) ($b['issue_title'] ?? ''));
+	});
 
 	$yearKeys = array_keys($dayCounts);
 	sort($yearKeys, SORT_NUMERIC);
@@ -249,6 +324,12 @@ function calendar_build_view(mysqli $db, bool $isEng): array
 	return [
 		'years' => $years,
 		'days' => $dayDetails,
+		'today' => [
+			'prefix' => $todayParts['prefix'],
+			'date' => $todayParts['date'],
+			'label' => $todayParts['prefix'] . ' ' . $todayParts['date'],
+			'items' => $todayItems,
+		],
 		'total_issues' => $totalIssues,
 		'start_year' => $startYear,
 		'end_year' => $endYear,
@@ -279,6 +360,10 @@ $smarty->assign('calendar_total_issues', $data['total_issues']);
 $smarty->assign('calendar_total_issues_label', calendar_issue_count_label((int) $data['total_issues'], $isEng));
 $smarty->assign('calendar_start_year', $data['start_year']);
 $smarty->assign('calendar_end_year', $data['end_year']);
+$smarty->assign('calendar_today_prefix', $data['today']['prefix']);
+$smarty->assign('calendar_today_date', $data['today']['date']);
+$smarty->assign('calendar_today_label', $data['today']['label']);
+$smarty->assign('calendar_today_items', $data['today']['items']);
 
 $smarty->assign(
 	'title',

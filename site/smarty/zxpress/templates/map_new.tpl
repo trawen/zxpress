@@ -56,11 +56,11 @@
 				<a href="{if $lng eq 'eng'}/en{else}/ru{/if}">{if $lng eq 'eng'}Home{else}Главная{/if}</a>
 				<span class="smn-breadcrumb-sep" aria-hidden="true">→</span>
 {if $map_filter}
-				<a href="{$map_catalog_url}">{if $lng eq 'eng'}ZX-press map{else}Карта ZX-прессы{/if}</a>
+				<a href="{$map_catalog_url}">{if $lng eq 'eng'}Map of ZX publications{else}Карта ZX-прессы{/if}</a>
 				<span class="smn-breadcrumb-sep" aria-hidden="true">→</span>
 				<span class="smn-breadcrumb-current">{$map_filter_label|escape:'html'}</span>
 {else}
-				<span class="smn-breadcrumb-current">{if $lng eq 'eng'}ZX-press map{else}Карта ZX-прессы{/if}</span>
+				<span class="smn-breadcrumb-current">{if $lng eq 'eng'}Map of ZX publications{else}Карта ZX-прессы{/if}</span>
 {/if}
 			</nav>
 		</header>

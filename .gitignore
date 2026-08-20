@@ -107,3 +107,6 @@ e2e/test-results/
 test-results/
 e2e/.env.e2e
 tools/_fonttools_venv/
+
+# Milkdown local build (node_modules + entry; ship only site/js/*.bundle.js)
+tools/milkdown-vendor/

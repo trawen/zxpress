@@ -11,18 +11,70 @@
 	{if $description}<meta name="description" content="{$description|strip_tags|escape:'html'}">{/if}
 	{smn_styles}
 	<style>
-		.smn-calendar-meta {
-			margin: 10px 0 0;
+		.smn-calendar-today {
+			margin: 0 0 28px;
+			padding: 14px 16px;
+			border: 1px solid var(--smn-line);
+			background: var(--smn-surface);
+		}
+		.smn-calendar-today-body {
+			margin: 0;
 			font-family: var(--smn-sans);
-			font-size: 14px;
-			font-weight: 600;
+			font-size: 15px;
+			font-weight: 400;
+			line-height: 1.5;
+			color: var(--smn-ink);
+		}
+		.smn-calendar-today-date {
+			font-weight: 700;
+		}
+		.smn-calendar-today-list {
+			display: inline;
+		}
+		.smn-calendar-today-list .smn-updates-press {
+			position: relative;
+			display: inline-block;
+			padding-bottom: 2px;
+			text-decoration: none;
+		}
+		.smn-calendar-today-list .smn-updates-press::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 2px;
+			background: var(--smn-accent);
+			transform: scaleX(0);
+			transform-origin: left;
+			transition: transform 0.25s ease;
+		}
+		.smn-calendar-today-list .smn-updates-press:hover::after {
+			transform: scaleX(1);
+		}
+		.smn-calendar-today-empty {
 			color: var(--smn-muted);
 		}
 		.smn-calendar-years {
 			display: flex;
 			flex-wrap: wrap;
-			gap: 8px;
+			align-items: center;
+			gap: 0;
 			margin: 0 0 20px;
+			padding: 0 8px;
+		}
+		.smn-calendar-year-sep {
+			display: inline-flex;
+			align-items: center;
+			align-self: center;
+			height: 1em;
+			padding-bottom: 4px;
+			margin: 0 4px;
+			color: var(--smn-line);
+			font-size: 14px;
+			font-weight: 900;
+			line-height: 1;
+			user-select: none;
 		}
 		.smn-calendar-year-link {
 			display: inline-flex;
@@ -160,17 +212,18 @@
 			width: 100%;
 			min-height: 30px;
 			padding: 4px 5px 3px;
-			border-radius: 6px;
 			font-family: var(--smn-sans);
 			font-size: 11px;
 			line-height: 1;
 		}
 		.smn-calendar-day-plain {
+			border-radius: 6px;
 			border: 1px solid transparent;
 			color: var(--smn-muted);
 			background: transparent;
 		}
 		.smn-calendar-day-btn {
+			border-radius: 3px;
 			cursor: pointer;
 			border: 1px solid var(--smn-line);
 			background: #fff;
@@ -200,22 +253,15 @@
 			width: min(360px, calc(100vw - 24px));
 			padding: 14px;
 			border: 1px solid var(--smn-line);
-			border-radius: 16px;
-			background: var(--smn-paper);
+			border-radius: 0;
+			background: var(--smn-surface);
 			box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
 		}
 		.smn-calendar-popover-title {
-			margin: 0 0 4px;
+			margin: 0 0 12px;
 			font-family: var(--smn-sans);
 			font-size: 16px;
 			font-weight: 800;
-		}
-		.smn-calendar-popover-meta {
-			margin: 0 0 12px;
-			font-family: var(--smn-sans);
-			font-size: 13px;
-			font-weight: 700;
-			color: var(--smn-muted);
 		}
 		.smn-calendar-popover-list {
 			margin: 0;
@@ -224,9 +270,12 @@
 			display: grid;
 			gap: 10px;
 		}
-		.smn-calendar-popover-item a {
+		.smn-calendar-popover-item {
 			font-family: var(--smn-sans);
 			font-size: 14px;
+			line-height: 1.4;
+		}
+		.smn-calendar-popover-item a {
 			font-weight: 700;
 			text-decoration: none;
 		}
@@ -234,10 +283,10 @@
 			color: var(--smn-accent);
 		}
 		.smn-calendar-popover-loc {
-			margin-top: 3px;
-			font-family: var(--smn-sans);
-			font-size: 12px;
+			font-size: 14px;
+			font-weight: 400;
 			color: var(--smn-muted);
+			white-space: nowrap;
 		}
 		.smn-calendar-empty {
 			padding: 24px 0;
@@ -303,37 +352,48 @@
 			<nav class="smn-breadcrumbs" aria-label="{if $lng eq 'eng'}Breadcrumbs{else}Хлебные крошки{/if}">
 				<a href="{if $lng eq 'eng'}/en{else}/ru{/if}">{if $lng eq 'eng'}Home{else}Главная{/if}</a>
 				<span class="smn-breadcrumb-sep" aria-hidden="true">→</span>
-				<span class="smn-breadcrumb-current">{if $lng eq 'eng'}Release calendar{else}Календарь выпусков{/if}</span>
+				<span class="smn-breadcrumb-current">{if $lng eq 'eng'}Publication release calendar{else}Календарь выпуска изданий{/if}</span>
 			</nav>
 		</header>
 
 		<main class="smn-main">
 			<section class="smn-hero smn-hero--compact">
-				<h1>{if $lng eq 'eng'}Release calendar by year{else}Календарь выхода по годам{/if}</h1>
+				<h1>{if $lng eq 'eng'}Emags release calendar for the ZX Spectrum{else}Календарь выхода прессы для ZX Spectrum{/if}</h1>
 				<p class="smn-lead">
 					{if $lng eq 'eng'}
-						A year-by-year calendar of ZX Spectrum electronic publications. Click a day to see which issues came out on that date.
+						It's hard to imagine, but in the mid-1990s, Russian-language electronic newspapers and magazines were published almost daily. Unfortunately, most of them became publicly known only years later—after they were discovered in personal floppy disk collections, copied, and published on websites like Virtual TR-DOS and ZXPress. And some publications are only now being rediscovered.
 					{else}
-						Календарь выхода электронных изданий для ZX Spectrum по годам. Нажмите на день, чтобы увидеть, какие выпуски вышли в эту дату.
-					{/if}
-				</p>
-				<p class="smn-calendar-meta">
-					{if $calendar_total_issues gt 0}
-						{$calendar_start_year}—{$calendar_end_year} · {$calendar_total_issues_label}
-					{else}
-						{if $lng eq 'eng'}No dated issues yet.{else}Пока нет выпусков с датой.{/if}
+			Сложно представить, но в середине 90-х рускоязычныеэлектронные газеты и журналы выходили едва ли не каждый день. К сожалению, о большинстве из них широкая публика узнала лишь спустя годы — после того как были обнаружены в личных коллекциях дискет, скопированы и опубликованы на сайтах  Virtual TR-DOS и ZXPress. А некоторые издания открываются заново только сейчас.
 					{/if}
 				</p>
 			</section>
 
+			<section class="smn-calendar-today" aria-labelledby="smn-calendar-today-title">
+{if $calendar_today_items && $calendar_today_items|@count gt 0}
+				<p class="smn-calendar-today-body" id="smn-calendar-today-title">
+					{$calendar_today_prefix|escape:'html'} <strong class="smn-calendar-today-date">{$calendar_today_date|escape:'html'}</strong><br>
+					{if $lng eq 'eng'}The following issues were released:{else}Вышли следующие издания:{/if}
+					<span class="smn-calendar-today-list">
+{foreach from=$calendar_today_items item=item name=todayDay}
+						<a class="smn-updates-press" href="{$item.url|escape:'html'}">{$item.label|escape:'html'}</a>{if $item.year gt 0} ({$item.year}){/if}{if !$smarty.foreach.todayDay.last}, {/if}
+{/foreach}
+					</span>
+				</p>
+{else}
+				<p class="smn-calendar-today-body smn-calendar-today-empty" id="smn-calendar-today-title">
+					{$calendar_today_prefix|escape:'html'} <strong class="smn-calendar-today-date">{$calendar_today_date|escape:'html'}</strong> {if $lng eq 'eng'}No issues on this day in the archive.{else}В этот день в архиве пока нет выпусков.{/if}
+				</p>
+{/if}
+			</section>
+
 {if $calendar_years && $calendar_years|@count gt 0}
 			<nav class="smn-calendar-years" aria-label="{if $lng eq 'eng'}Jump to year{else}Перейти к году{/if}">
-{foreach from=$calendar_years item=yearBlock}
+{foreach from=$calendar_years item=yearBlock name=yearNav}
 				<a class="smn-calendar-year-link" href="#calendar-year-{$yearBlock.year}">
 					<span class="smn-calendar-year-label">
 						{$yearBlock.year}<sup class="smn-filter-count">{$yearBlock.total}</sup>
 					</span>
-				</a>
+				</a>{if !$smarty.foreach.yearNav.last}<span class="smn-calendar-year-sep" aria-hidden="true">·</span>{/if}
 {/foreach}
 			</nav>
 
@@ -438,14 +498,13 @@
 
 		function renderItems(day) {
 			var html = '<h3 class="smn-calendar-popover-title">' + escapeHtml(day.label || '') + '</h3>';
-			html += '<p class="smn-calendar-popover-meta">' + escapeHtml(String(day.count || 0)) + '</p>';
 			html += '<ul class="smn-calendar-popover-list">';
 			for (var i = 0; i < (day.items || []).length; i++) {
 				var item = day.items[i] || {};
 				html += '<li class="smn-calendar-popover-item">';
 				html += '<a href="' + escapeHtml(item.url || '#') + '">' + escapeHtml((item.title || '') + ' #' + (item.issue_title || '')) + '</a>';
-				if (item.location) {
-					html += '<div class="smn-calendar-popover-loc">' + escapeHtml(item.location) + '</div>';
+				if (item.city) {
+					html += ' <span class="smn-calendar-popover-loc">(' + escapeHtml(item.city) + ')</span>';
 				}
 				html += '</li>';
 			}

@@ -55,6 +55,7 @@ function activity_detect_domain(): string
 		'admin_letters.php' => 'letter',
 		'admin_news.php' => 'news',
 		'admin_news_upload.php' => 'news',
+		'admin_activity_custom.php' => 'custom',
 		'admin_authors.php' => 'author',
 		'admin_publishers.php' => 'publisher',
 		'admin_ezine_categories.php' => 'ezine',
@@ -843,6 +844,7 @@ function activity_object_label(string $type, bool $eng = false): string
 		'letter' => 'Письмо',
 		'news' => 'Новость',
 		'news_file' => 'Файл новости',
+		'custom_update' => 'Обновление',
 		'author' => 'Автор',
 		'publisher' => 'Издательство',
 		'book_rubric' => 'Рубрика книг',
@@ -871,6 +873,7 @@ function activity_object_label(string $type, bool $eng = false): string
 		'letter' => 'Letter',
 		'news' => 'News',
 		'news_file' => 'News file',
+		'custom_update' => 'Update',
 		'author' => 'Author',
 		'publisher' => 'Publisher',
 		'book_rubric' => 'Book rubric',
@@ -893,6 +896,7 @@ function activity_domain_label(string $domain, bool $eng = false): string
 		'book' => 'Книги',
 		'letter' => 'Письма',
 		'news' => 'Новости',
+		'custom' => 'Ручные апдейты',
 		'author' => 'Авторы',
 		'publisher' => 'Издательства',
 		'gallery' => 'Галерея',
@@ -904,6 +908,7 @@ function activity_domain_label(string $domain, bool $eng = false): string
 		'book' => 'Books',
 		'letter' => 'Letters',
 		'news' => 'News',
+		'custom' => 'Manual updates',
 		'author' => 'Authors',
 		'publisher' => 'Publishers',
 		'gallery' => 'Gallery',
@@ -954,6 +959,7 @@ function activity_object_count_words(string $type, bool $eng = false): array
 		'letter' => ['письмо', 'письма', 'писем'],
 		'news' => ['новость', 'новости', 'новостей'],
 		'news_file' => ['файл новости', 'файла новости', 'файлов новости'],
+		'custom_update' => ['обновление', 'обновления', 'обновлений'],
 		'author' => ['автор', 'автора', 'авторов'],
 		'publisher' => ['издательство', 'издательства', 'издательств'],
 		'book_rubric' => ['рубрика', 'рубрики', 'рубрик'],
@@ -981,6 +987,7 @@ function activity_object_count_words(string $type, bool $eng = false): array
 		'letter' => ['letter', 'letters', 'letters'],
 		'news' => ['news item', 'news items', 'news items'],
 		'news_file' => ['news file', 'news files', 'news files'],
+		'custom_update' => ['update', 'updates', 'updates'],
 		'author' => ['author', 'authors', 'authors'],
 		'publisher' => ['publisher', 'publishers', 'publishers'],
 		'book_rubric' => ['rubric', 'rubrics', 'rubrics'],
@@ -1099,6 +1106,80 @@ function activity_feed_present_batch(array $batch, array $events, bool $eng, arr
 		'url_press' => trim((string) ($root['url'] ?? '')),
 		'is_compact' => true,
 	];
+}
+
+/**
+ * Pick RU/EN title field for a feed row (batch or event).
+ *
+ * @param array<string,mixed> $row
+ */
+function activity_feed_custom_update_raw_title(array $row, bool $isEng): string
+{
+	$titleEn = trim((string) ($row['title_en'] ?? ''));
+	return ($isEng && $titleEn !== '') ? $titleEn : (string) ($row['title_ru'] ?? '');
+}
+
+/** Render admin-authored custom update markdown for the public feed. */
+function activity_custom_update_markdown_html(string $raw): string
+{
+	$raw = trim($raw);
+	if ($raw === '') {
+		return '';
+	}
+
+	static $pd = null;
+	if ($pd === null) {
+		require_once __DIR__ . '/Parsedown.php';
+		$pd = new Parsedown();
+		$pd->setSafeMode(true);
+		$pd->setBreaksEnabled(true);
+	}
+
+	return $pd->text($raw);
+}
+
+/**
+ * @param array<string,mixed> $batch
+ */
+function activity_feed_apply_custom_update_batch(array &$batch, bool $isEng): void
+{
+	$events = $batch['events'] ?? [];
+	if ($events === []) {
+		return;
+	}
+
+	$onlyCustom = count($events) === 1
+		&& (string) ($events[0]['object_type'] ?? '') === 'custom_update';
+	if (!$onlyCustom) {
+		foreach ($events as &$e) {
+			if ((string) ($e['object_type'] ?? '') !== 'custom_update') {
+				continue;
+			}
+			$raw = activity_feed_custom_update_raw_title($e, $isEng);
+			$e['title_html'] = activity_custom_update_markdown_html($raw);
+			$e['is_custom_update'] = 1;
+		}
+		unset($e);
+		return;
+	}
+
+	$raw = activity_feed_custom_update_raw_title($events[0], $isEng);
+	if ($raw === '') {
+		$raw = activity_feed_custom_update_raw_title($batch, $isEng);
+	}
+	$html = activity_custom_update_markdown_html($raw);
+
+	$batch['title_html'] = $html;
+	$batch['title_display'] = title_plain($raw);
+	$batch['title_press'] = $batch['title_display'];
+	$batch['title_suffix'] = '';
+	$batch['summary_display'] = '';
+	$batch['is_custom_update'] = 1;
+	$batch['is_compact'] = 0;
+
+	$events[0]['title_html'] = $html;
+	$events[0]['is_custom_update'] = 1;
+	$batch['events'] = $events;
 }
 
 function activity_plural_en(int $n, string $one, string $many): string

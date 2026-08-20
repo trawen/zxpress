@@ -55,6 +55,7 @@ function zx_storage_rel_map(): array
 		'books_files' => 'uploads/books-files',
 		'files' => 'uploads/files',
 		'news_files' => 'uploads/news-files',
+		'activity_images' => 'uploads/activity-images',
 		'archive' => 'legacy/archive',
 		'cat' => 'legacy/cat',
 		'chapters_images' => 'image-archive',

@@ -92,7 +92,7 @@
 							<span class="smn-activity-flag">{if $lng eq 'eng'}hidden{else}скрыто{/if}</span>
 						</span>
 						{/if}
-{if $b.is_compact && $b.events && $b.events|@count gt 0}
+{if $b.is_compact && $b.events && $b.events|@count gt 0 && !$b.is_custom_update}
 						<span class="smn-activity-title">
 {if $b.url_display}
 							<a class="smn-updates-press" href="{$b.url_display}">{$b.title_press|default:$b.title_display}</a>
@@ -110,14 +110,14 @@
 										</a>
 {/if}
 										<div class="smn-activity-event-body">
-{if $e.object_label neq 'Скриншот' && $e.object_label neq 'Screenshot'}
+{if $e.object_label neq 'Скриншот' && $e.object_label neq 'Screenshot' && !$e.is_custom_update}
 {if $e.url_display}
 											<a class="smn-activity-event-title" href="{$e.url_display}">{$e.title_display}</a>
 {else}
 											<span class="smn-activity-event-title">{$e.title_display}</span>
 {/if}
 {/if}
-											{if $e.object_label neq 'Скриншот' && $e.object_label neq 'Screenshot'}
+											{if $e.object_label neq 'Скриншот' && $e.object_label neq 'Screenshot' && !$e.is_custom_update}
 											<span class="smn-activity-event-meta">{$e.object_label}</span>
 											{/if}
 										</div>
@@ -127,7 +127,11 @@
 							</details>
 						</span>
 {else}
-{if $b.url_display}
+{if $b.is_custom_update && $b.title_html}
+						<div class="smn-activity-title smn-activity-title--custom">
+							<div class="smn-updates-press smn-activity-markdown">{$b.title_html nofilter}</div>
+						</div>
+{elseif $b.url_display}
 						<span class="smn-activity-title"><a class="smn-updates-press" href="{$b.url_display}">{$b.title_press|default:$b.title_display}</a></span>
 {else}
 						<span class="smn-activity-title"><span class="smn-updates-press">{$b.title_press|default:$b.title_display}</span></span>
@@ -155,14 +159,14 @@
 									</a>
 {/if}
 									<div class="smn-activity-event-body">
-{if $e.object_label neq 'Скриншот' && $e.object_label neq 'Screenshot'}
+{if $e.object_label neq 'Скриншот' && $e.object_label neq 'Screenshot' && !$e.is_custom_update}
 {if $e.url_display}
 										<a class="smn-activity-event-title" href="{$e.url_display}">{$e.title_display}</a>
 {else}
 										<span class="smn-activity-event-title">{$e.title_display}</span>
 {/if}
 {/if}
-										{if $e.object_label neq 'Скриншот' && $e.object_label neq 'Screenshot'}
+										{if $e.object_label neq 'Скриншот' && $e.object_label neq 'Screenshot' && !$e.is_custom_update}
 										<span class="smn-activity-event-meta">{$e.object_label}</span>
 										{/if}
 									</div>
