@@ -188,7 +188,7 @@
 <option value="{$letter_status_deleted}" {if $cur_status eq $letter_status_deleted}selected{/if}>Удалено (корзина)</option>
 </select>
 <div style="font-size:11px;font-weight:normal;margin-top:4px;color:#555">
-Очередь публикуется при заходе на snailmail: не больше одного письма в сутки (таймзона Europe/Moscow).
+Очередь публикуется при заходе на snailmail/authors: не больше одного письма за календарные сутки (Europe/Moscow). Ручная «Опубликовано сейчас» тоже засчитывается в этот день.
 {if $letter && $letter.queued_at}<br>В очереди с: {$letter.queued_at}{/if}
 {if $letter && $letter.published_at}<br>Опубликовано: {$letter.published_at}{/if}
 {if $letter && $letter.deleted_at}<br>Удалено: {$letter.deleted_at}{/if}

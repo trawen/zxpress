@@ -1,0 +1,246 @@
+{
+  "echoes": [
+    {
+      "title": "zx.spectrum",
+      "echo_id": 18
+    },
+    {
+      "title": "real.speccy",
+      "echo_id": 15
+    }
+  ],
+  "rows": 121869,
+  "parts": [
+    {
+      "file": "00_setup.sql.gz",
+      "kind": "setup",
+      "rows": 0,
+      "bytes_uncompressed": 448
+    },
+    {
+      "file": "01_data.sql.gz",
+      "kind": "data",
+      "rows": 3788,
+      "bytes_uncompressed": 4194945
+    },
+    {
+      "file": "02_data.sql.gz",
+      "kind": "data",
+      "rows": 4960,
+      "bytes_uncompressed": 4194920
+    },
+    {
+      "file": "03_data.sql.gz",
+      "kind": "data",
+      "rows": 4392,
+      "bytes_uncompressed": 4194277
+    },
+    {
+      "file": "04_data.sql.gz",
+      "kind": "data",
+      "rows": 4569,
+      "bytes_uncompressed": 4194451
+    },
+    {
+      "file": "05_data.sql.gz",
+      "kind": "data",
+      "rows": 4637,
+      "bytes_uncompressed": 4187133
+    },
+    {
+      "file": "06_data.sql.gz",
+      "kind": "data",
+      "rows": 5036,
+      "bytes_uncompressed": 4185004
+    },
+    {
+      "file": "07_data.sql.gz",
+      "kind": "data",
+      "rows": 4068,
+      "bytes_uncompressed": 4194557
+    },
+    {
+      "file": "08_data.sql.gz",
+      "kind": "data",
+      "rows": 4659,
+      "bytes_uncompressed": 4192374
+    },
+    {
+      "file": "09_data.sql.gz",
+      "kind": "data",
+      "rows": 5318,
+      "bytes_uncompressed": 4194550
+    },
+    {
+      "file": "10_data.sql.gz",
+      "kind": "data",
+      "rows": 5686,
+      "bytes_uncompressed": 4194490
+    },
+    {
+      "file": "11_data.sql.gz",
+      "kind": "data",
+      "rows": 5571,
+      "bytes_uncompressed": 4194917
+    },
+    {
+      "file": "12_data.sql.gz",
+      "kind": "data",
+      "rows": 5230,
+      "bytes_uncompressed": 4194850
+    },
+    {
+      "file": "13_data.sql.gz",
+      "kind": "data",
+      "rows": 4943,
+      "bytes_uncompressed": 4189553
+    },
+    {
+      "file": "14_data.sql.gz",
+      "kind": "data",
+      "rows": 4275,
+      "bytes_uncompressed": 4191587
+    },
+    {
+      "file": "15_data.sql.gz",
+      "kind": "data",
+      "rows": 3857,
+      "bytes_uncompressed": 4194235
+    },
+    {
+      "file": "16_data.sql.gz",
+      "kind": "data",
+      "rows": 3771,
+      "bytes_uncompressed": 4194849
+    },
+    {
+      "file": "17_data.sql.gz",
+      "kind": "data",
+      "rows": 4862,
+      "bytes_uncompressed": 4193559
+    },
+    {
+      "file": "18_data.sql.gz",
+      "kind": "data",
+      "rows": 4068,
+      "bytes_uncompressed": 4194951
+    },
+    {
+      "file": "19_data.sql.gz",
+      "kind": "data",
+      "rows": 3872,
+      "bytes_uncompressed": 4194472
+    },
+    {
+      "file": "20_data.sql.gz",
+      "kind": "data",
+      "rows": 2588,
+      "bytes_uncompressed": 4193343
+    },
+    {
+      "file": "21_data.sql.gz",
+      "kind": "data",
+      "rows": 1842,
+      "bytes_uncompressed": 4187359
+    },
+    {
+      "file": "22_data.sql.gz",
+      "kind": "data",
+      "rows": 1286,
+      "bytes_uncompressed": 4193589
+    },
+    {
+      "file": "23_data.sql.gz",
+      "kind": "data",
+      "rows": 1167,
+      "bytes_uncompressed": 4192525
+    },
+    {
+      "file": "24_data.sql.gz",
+      "kind": "data",
+      "rows": 2375,
+      "bytes_uncompressed": 4185992
+    },
+    {
+      "file": "25_data.sql.gz",
+      "kind": "data",
+      "rows": 1242,
+      "bytes_uncompressed": 4174428
+    },
+    {
+      "file": "26_data.sql.gz",
+      "kind": "data",
+      "rows": 1160,
+      "bytes_uncompressed": 4194434
+    },
+    {
+      "file": "27_data.sql.gz",
+      "kind": "data",
+      "rows": 2236,
+      "bytes_uncompressed": 4190643
+    },
+    {
+      "file": "28_data.sql.gz",
+      "kind": "data",
+      "rows": 983,
+      "bytes_uncompressed": 4192058
+    },
+    {
+      "file": "29_data.sql.gz",
+      "kind": "data",
+      "rows": 935,
+      "bytes_uncompressed": 4194519
+    },
+    {
+      "file": "30_data.sql.gz",
+      "kind": "data",
+      "rows": 1749,
+      "bytes_uncompressed": 4187508
+    },
+    {
+      "file": "31_data.sql.gz",
+      "kind": "data",
+      "rows": 1129,
+      "bytes_uncompressed": 4167088
+    },
+    {
+      "file": "32_data.sql.gz",
+      "kind": "data",
+      "rows": 4490,
+      "bytes_uncompressed": 4194870
+    },
+    {
+      "file": "33_data.sql.gz",
+      "kind": "data",
+      "rows": 5009,
+      "bytes_uncompressed": 4194355
+    },
+    {
+      "file": "34_data.sql.gz",
+      "kind": "data",
+      "rows": 4516,
+      "bytes_uncompressed": 4194345
+    },
+    {
+      "file": "35_data.sql.gz",
+      "kind": "data",
+      "rows": 1600,
+      "bytes_uncompressed": 2396922
+    },
+    {
+      "file": "zz_finish.sql.gz",
+      "kind": "finish",
+      "rows": 0,
+      "bytes_uncompressed": 68
+    }
+  ],
+  "max_insert_bytes": 524288,
+  "max_part_bytes": 4194304,
+  "max_rows_per_insert": 80,
+  "parts_dir": "db/migration/echos_zxnet_text_en_fill/generated/parts",
+  "parts_gz_bytes": 51907249,
+  "generated_at_utc": "20260821150925",
+  "apply": "python3 db/migration/echos_zxnet_text_en_fill/apply.py",
+  "tarball": "db/migration/echos_zxnet_text_en_fill/generated/echos_zxnet_text_en_parts.tar.gz",
+  "tarball_bytes": 51880175
+}

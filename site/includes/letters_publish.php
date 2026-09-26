@@ -50,7 +50,7 @@ function letters_publish_status_from_input(string $raw): int
  */
 function letters_publish_apply_status(int $status, array $prev = []): array
 {
-    $now = date('Y-m-d H:i:s');
+    $now = letters_publish_now();
     $prevStatus = (int) ($prev['publish_status'] ?? LETTER_STATUS_DRAFT);
     $queuedAt = isset($prev['queued_at']) && $prev['queued_at'] !== '' && $prev['queued_at'] !== null
         ? (string) $prev['queued_at']
@@ -101,38 +101,71 @@ function letters_publish_apply_status(int $status, array $prev = []): array
     ];
 }
 
+function letters_publish_tz(): DateTimeZone
+{
+    return new DateTimeZone(LETTERS_PUBLISH_TZ);
+}
+
+/** Current datetime in Europe/Moscow (naive DATETIME string for MySQL). */
+function letters_publish_now(?DateTimeZone $tz = null): string
+{
+    $tz = $tz ?? letters_publish_tz();
+
+    return (new DateTimeImmutable('now', $tz))->format('Y-m-d H:i:s');
+}
+
 function letters_publish_day_start(?DateTimeZone $tz = null): string
 {
-    $tz = $tz ?? new DateTimeZone(LETTERS_PUBLISH_TZ);
-    $dt = new DateTime('now', $tz);
-    $dt->setTime(0, 0, 0);
+    $tz = $tz ?? letters_publish_tz();
+    $dt = new DateTimeImmutable('now', $tz);
+    $dt = $dt->setTime(0, 0, 0);
 
     return $dt->format('Y-m-d H:i:s');
 }
 
 /**
  * Publish at most one queued letter per calendar day (Europe/Moscow).
- * Safe for concurrent requests via transaction + FOR UPDATE.
+ * Serialized via GET_LOCK so concurrent snailmail/authors hits cannot each publish one.
  *
  * @return int|null published letter id, or null if nothing published
  */
 function letters_maybe_publish_next(mysqli $db): ?int
 {
-    if (!$db->begin_transaction()) {
-        error_log('[letters_publish] begin_transaction failed: ' . $db->error);
+    $lockName = 'zxpress_letters_daily_publish';
+    $lockStmt = $db->prepare('SELECT GET_LOCK(?, 5)');
+    if (!$lockStmt) {
+        error_log('[letters_publish] prepare GET_LOCK failed: ' . $db->error);
+        return null;
+    }
+    $lockStmt->bind_param('s', $lockName);
+    $lockStmt->execute();
+    $lockRow = $lockStmt->get_result()->fetch_row();
+    $lockStmt->close();
+    if ((int) ($lockRow[0] ?? 0) !== 1) {
+        // Another request is publishing, or lock wait timed out — skip.
         return null;
     }
 
     try {
+        if (!$db->begin_transaction()) {
+            throw new RuntimeException('begin_transaction failed: ' . $db->error);
+        }
+
         $dayStart = letters_publish_day_start();
+        $dayEnd = (new DateTimeImmutable($dayStart, letters_publish_tz()))
+            ->modify('+1 day')
+            ->format('Y-m-d H:i:s');
         $statusPublished = LETTER_STATUS_PUBLISHED;
+
+        // Any publish today (auto or manual) blocks another auto-publish.
         $stmtToday = $db->prepare(
-            'SELECT id FROM letters WHERE publish_status = ? AND published_at IS NOT NULL AND published_at >= ? LIMIT 1'
+            'SELECT id FROM letters WHERE publish_status = ? AND published_at IS NOT NULL '
+            . 'AND published_at >= ? AND published_at < ? LIMIT 1'
         );
         if (!$stmtToday) {
             throw new RuntimeException('prepare today failed: ' . $db->error);
         }
-        $stmtToday->bind_param('is', $statusPublished, $dayStart);
+        $stmtToday->bind_param('iss', $statusPublished, $dayStart, $dayEnd);
         $stmtToday->execute();
         $todayRow = $stmtToday->get_result()->fetch_assoc();
         $stmtToday->close();
@@ -163,7 +196,7 @@ function letters_maybe_publish_next(mysqli $db): ?int
             return null;
         }
 
-        $now = date('Y-m-d H:i:s');
+        $now = letters_publish_now();
         $stmtUp = $db->prepare(
             'UPDATE letters SET publish_status = ?, is_active = 1, published_at = ?, queued_at = NULL, deleted_at = NULL '
             . 'WHERE id = ? AND publish_status = ? LIMIT 1'
@@ -182,8 +215,15 @@ function letters_maybe_publish_next(mysqli $db): ?int
 
         return $letterId;
     } catch (Throwable $e) {
-        $db->rollback();
+        @$db->rollback();
         error_log('[letters_publish] maybe_publish_next failed: ' . $e->getMessage());
         return null;
+    } finally {
+        $rel = $db->prepare('SELECT RELEASE_LOCK(?)');
+        if ($rel) {
+            $rel->bind_param('s', $lockName);
+            $rel->execute();
+            $rel->close();
+        }
     }
 }

@@ -1,0 +1,18 @@
+{
+  "echoes": [
+    {
+      "title": "zx.spectrum",
+      "echo_id": 18,
+      "rows": 23408
+    },
+    {
+      "title": "real.speccy",
+      "echo_id": 15,
+      "rows": 2951
+    }
+  ],
+  "rows_total": 26359,
+  "sql": "db/migration/echos_subjs2_zx_spectrum_title_en/generated/01_update_title_en.sql",
+  "migrate": "db/migrate/20260820232353_echos_subjs2_zxnet_title_en.sql",
+  "generated_at_utc": "20260820232353"
+}

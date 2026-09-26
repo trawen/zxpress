@@ -54,6 +54,7 @@ site/**/*.jpg
 site/**/*.jpeg
 site/**/*.gif
 site/**/*.ico
+!site/favicon.ico
 site/**/*.webp
 site/**/*.rar
 site/**/*.zip

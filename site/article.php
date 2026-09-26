@@ -45,6 +45,8 @@ function article_show_not_found($smarty): void {
 	$smarty->assign('article', null);
 	$smarty->assign('article_not_found', true);
 	$smarty->assign('article_jsonld', '');
+	$smarty->assign('article_has_md', false);
+	$smarty->assign('article_md_html', '');
 	$smarty->assign('title', 'Статья не найдена');
 	$smarty->assign('related_category', null);
 	$smarty->assign('related_category_articles', []);
@@ -92,6 +94,29 @@ function article_read_body_from_disk(int $articleId, bool $isEng): string
 		return (string) file_get_contents($resolved);
 	}
 	return '';
+}
+
+/**
+ * Optional Markdown rewrite from content-store/articles-md/{id}.md
+ * (synced from zxpress-markdown/articles_md on deploy / local mount).
+ */
+function article_read_markdown_variant(int $articleId): string
+{
+	if ($articleId <= 0) {
+		return '';
+	}
+	$baseDir = realpath(zx_storage_dir('articles_md'));
+	if ($baseDir === false) {
+		return '';
+	}
+	$candidate = $baseDir . '/' . $articleId . '.md';
+	$resolved = realpath($candidate);
+	if ($resolved === false || !is_file($resolved)
+		|| strpos($resolved, $baseDir . DIRECTORY_SEPARATOR) !== 0) {
+		return '';
+	}
+	$raw = (string) file_get_contents($resolved);
+	return trim($raw);
 }
 
 $pressSlug = per_slug_normalize_path((string) ($_GET['press_slug'] ?? ''));
@@ -210,11 +235,26 @@ if ($rawDbText === '') {
 	$rawDbText = article_read_body_from_disk($aid, $isEng);
 }
 // Render first (markdown → HTML), then fix relative media URLs in resulting markup.
-$rendered = ezn_render_article_body($rawDbText, ezn_article_text_type_for_lang($article, $isEng));
+$textType = ezn_article_text_type_for_lang($article, $isEng);
+$rendered = ezn_render_article_body($rawDbText, $textType);
 $article['text'] = ezn_article_root_urls($rendered['html']);
 $smarty->assign('article_text_mode', $rendered['mode']);
 $smarty->assign('article_text_use_pre', $rendered['use_pre'] ? 1 : 0);
 $smarty->assign('article_text_mono', $rendered['mono'] ? 1 : 0);
+
+// Alternate Markdown rewrite (file), only when primary body is not already markdown.
+$articleHasMd = false;
+$articleMdHtml = '';
+if ($rendered['mode'] !== 'markdown') {
+	$mdRaw = article_read_markdown_variant($aid);
+	if ($mdRaw !== '') {
+		$mdRendered = ezn_render_article_body($mdRaw, EZN_TEXT_TYPE_MARKDOWN);
+		$articleMdHtml = ezn_article_root_urls($mdRendered['html']);
+		$articleHasMd = $articleMdHtml !== '';
+	}
+}
+$smarty->assign('article_has_md', $articleHasMd);
+$smarty->assign('article_md_html', $articleMdHtml);
 
 	$article['title_plain_meta'] = title_plain($article['title'] ?? '');
 	$article['title_eng_plain_meta'] = title_plain($article['title_eng'] ?? '');

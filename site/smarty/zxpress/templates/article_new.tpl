@@ -97,7 +97,27 @@
 			<article class="smn-article">
 				<header class="smn-article-hero">
 					<div class="smn-article-header">
-						<h1 class="smn-article-title">{if $lng eq 'eng'}{$article.title_eng_html nofilter}{else}{$article.title_html nofilter}{/if}</h1>
+						<div class="smn-article-title-row">
+							<h1 class="smn-article-title">{if $lng eq 'eng'}{$article.title_eng_html nofilter}{else}{$article.title_html nofilter}{/if}</h1>
+							{if $article_has_md|default:false}
+							<button
+								type="button"
+								class="smn-article-md-toggle"
+								id="smn-article-md-toggle"
+								aria-pressed="false"
+								aria-controls="text text-md"
+								title="{if $lng eq 'eng'}Show Markdown version{else}Показать Markdown-версию{/if}"
+							>
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+									<path d="M15 12h-5"/>
+									<path d="M15 8h-5"/>
+									<path d="M19 17V5a2 2 0 0 0-2-2H4"/>
+									<path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/>
+								</svg>
+								<span class="smn-visually-hidden">{if $lng eq 'eng'}Toggle Markdown text{else}Переключить Markdown-текст{/if}</span>
+							</button>
+							{/if}
+						</div>
 						{if $issue.date && $issue.date neq "01 января 1970" && $issue.date neq "01 January 1970"}
 							<div class="smn-article-meta">
 								<span class="smn-article-meta-date">{$issue.date}</span>
@@ -141,9 +161,12 @@
 						</div>
 					{else}
 						{if $article_text_use_pre}
-						<pre class="smn-article-text{if $article_text_mono} article-text-mono{/if}" id="text">{$article.text nofilter}</pre>
+						<pre class="smn-article-text{if $article_text_mono} article-text-mono{/if}" id="text" data-article-view="original">{$article.text nofilter}</pre>
 						{else}
-						<div class="smn-article-text article-text-md" id="text">{$article.text nofilter}</div>
+						<div class="smn-article-text article-text-md" id="text" data-article-view="original">{$article.text nofilter}</div>
+						{/if}
+						{if $article_has_md|default:false}
+						<div class="smn-article-text article-text-md" id="text-md" data-article-view="markdown" hidden>{$article_md_html nofilter}</div>
 						{/if}
 					{/if}
 				</div>
@@ -214,5 +237,25 @@
 	</div>
 
 	{include file="snailmail_new_scripts.tpl"}
+{if $article_has_md|default:false}
+	<script>
+	(function () {
+		var btn = document.getElementById('smn-article-md-toggle');
+		var original = document.getElementById('text');
+		var md = document.getElementById('text-md');
+		if (!btn || !original || !md) return;
+		var labelMd = {if $lng eq 'eng'}'Show original text'{else}'Показать оригинальный текст'{/if};
+		var labelOrig = {if $lng eq 'eng'}'Show Markdown version'{else}'Показать Markdown-версию'{/if};
+		btn.addEventListener('click', function () {
+			var showMd = btn.getAttribute('aria-pressed') !== 'true';
+			btn.setAttribute('aria-pressed', showMd ? 'true' : 'false');
+			btn.title = showMd ? labelMd : labelOrig;
+			btn.classList.toggle('is-active', showMd);
+			original.hidden = showMd;
+			md.hidden = !showMd;
+		});
+	})();
+	</script>
+{/if}
 </body>
 </html>
