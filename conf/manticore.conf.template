@@ -14,7 +14,8 @@ source articles_src
                CONCAT_WS(" ", IFNULL(a.text_ru, ""), IFNULL(a.text_en, "")) AS ft_text, \
                a.title AS title, CONCAT(IFNULL(p.title, ""), " ", IFNULL(i.title, "")) AS name, \
                a.id AS id1, a.id_issue AS id2, COALESCE(i.id_press, a.id_press, 0) AS id3, \
-               a.date, CONCAT(COALESCE(i.id_press, a.id_press, 0), "/", a.id) AS img, 1 AS type \
+               COALESCE(NULLIF(i.date, 0), a.date) AS date, \
+               CONCAT(COALESCE(i.id_press, a.id_press, 0), "/", a.id) AS img, 1 AS type \
         FROM articles a \
         LEFT JOIN issue i ON a.id_issue = i.id \
         LEFT JOIN press p ON p.id = i.id_press \

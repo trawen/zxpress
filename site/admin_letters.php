@@ -3,9 +3,79 @@ require 'init.inc';
 require_once __DIR__ . '/includes/letters_publish.php';
 require_once __DIR__ . '/includes/letters_slugs.php';
 require_once __DIR__ . '/includes/letters_images.php';
+require_once __DIR__ . '/includes/letters_ocr.php';
 
 if (!isset($_SESSION['login']) || !$_SESSION['login']) {
     header('HTTP/1.1 403 Forbidden');
+    exit;
+}
+
+// AJAX: OCR cropped scans → fill letter form fields
+if (($_POST['action'] ?? '') === 'ocr') {
+    header('Content-Type: application/json; charset=utf-8');
+    try {
+        $token = (string) ($_POST['csrf_token'] ?? '');
+        if ($token === '' || !hash_equals(csrf_token(), $token)) {
+            http_response_code(403);
+            echo json_encode(['ok' => false, 'error' => 'CSRF token mismatch'], JSON_UNESCAPED_UNICODE);
+            exit;
+        }
+        @set_time_limit(LETTERS_OCR_TIMEOUT_SEC + 30);
+
+        $files = $_FILES['ocr_files'] ?? null;
+        if (!is_array($files) || !isset($files['tmp_name']) || !is_array($files['tmp_name'])) {
+            throw new InvalidArgumentException('Загрузите хотя бы один скан');
+        }
+
+        $images = [];
+        $n = count($files['tmp_name']);
+        if ($n > 12) {
+            throw new InvalidArgumentException('Слишком много файлов (макс. 12 страниц)');
+        }
+        for ($i = 0; $i < $n; $i++) {
+            $err = (int) ($files['error'][$i] ?? UPLOAD_ERR_NO_FILE);
+            if ($err === UPLOAD_ERR_NO_FILE) {
+                continue;
+            }
+            if ($err !== UPLOAD_ERR_OK) {
+                throw new RuntimeException('Ошибка загрузки файла #' . ($i + 1) . ': code ' . $err);
+            }
+            $tmp = (string) ($files['tmp_name'][$i] ?? '');
+            $name = (string) ($files['name'][$i] ?? ('page-' . ($i + 1) . '.jpg'));
+            if ($tmp === '' || !is_uploaded_file($tmp)) {
+                throw new RuntimeException('Некорректный upload: ' . $name);
+            }
+            $info = @getimagesize($tmp);
+            $mime = is_array($info) ? (string) ($info['mime'] ?? '') : '';
+            $allowed = ['image/jpeg', 'image/png', 'image/webp', 'image/gif'];
+            if (!in_array($mime, $allowed, true)) {
+                throw new RuntimeException('Недопустимый тип ' . $mime . ' (' . $name . ')');
+            }
+            $images[] = ['path' => $tmp, 'mime' => $mime, 'name' => $name];
+        }
+        if ($images === []) {
+            throw new InvalidArgumentException('Нет валидных изображений');
+        }
+
+        $result = letters_ocr_analyze($images);
+
+        // Optional: resolve author selects by nickname
+        $authors = [];
+        $za = db_select($db, 'SELECT id, nickname FROM authors ORDER BY nickname ASC');
+        if ($za) {
+            while ($row = mysqli_fetch_assoc($za)) {
+                $authors[] = $row;
+            }
+        }
+        $result['author_from'] = letters_ocr_match_author_id($authors, (string) ($result['from_nick'] ?? ''));
+        $result['author_to'] = letters_ocr_match_author_id($authors, (string) ($result['to_nick'] ?? ''));
+
+        echo json_encode(['ok' => true, 'data' => $result], JSON_UNESCAPED_UNICODE);
+    } catch (Throwable $e) {
+        http_response_code(400);
+        error_log('[letters_ocr] ' . $e->getMessage());
+        echo json_encode(['ok' => false, 'error' => $e->getMessage()], JSON_UNESCAPED_UNICODE);
+    }
     exit;
 }
 

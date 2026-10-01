@@ -195,6 +195,8 @@ else {
   count_pages($result);
 
   $n = 0;
+  $issueDateById = [];
+  $stmtIssueDate = $db->prepare('SELECT date FROM issue WHERE id=? LIMIT 1');
   if ( ! empty($result["matches"]) ) {
 
      foreach ( $result["matches"] as $id1 => $info ) {
@@ -214,8 +216,8 @@ else {
         $inf[$n]['id1'] = intval($result["matches"][$id]['attrs']['id1']);
         $inf[$n]['id2'] = intval($result["matches"][$id]['attrs']['id2']);
         $inf[$n]['id3'] = intval($result["matches"][$id]['attrs']['id3']);
-        $d = $result["matches"][$id]['attrs']['date'];
-        $inf[$n]['date'] = $d ? date("d ".$months[date("m", $d)]." Y", $d ) : "";
+        // Prefer magazine issue date over articles.date (site import/publish stamp).
+        $d = (int) ($result["matches"][$id]['attrs']['date'] ?? 0);
         $img = explode("/", (string) ($result["matches"][$id]['attrs']['img'] ?? ''));
         $inf[$n]['type'] = intval($result["matches"][$id]['attrs']['type']);
         $inf[$n]['img'] = '';
@@ -225,6 +227,20 @@ else {
           // Manticore img is "id_press/article_id" — not a screen id. Resolve cover by issue.
           $pressId = $inf[$n]['id3'];
           $issueId = $inf[$n]['id2'];
+          if ($issueId > 0) {
+            if (!array_key_exists($issueId, $issueDateById)) {
+              $issueDateById[$issueId] = 0;
+              if ($stmtIssueDate) {
+                $stmtIssueDate->bind_param('i', $issueId);
+                $stmtIssueDate->execute();
+                $issueRow = $stmtIssueDate->get_result()->fetch_assoc();
+                $issueDateById[$issueId] = (int) ($issueRow['date'] ?? 0);
+              }
+            }
+            if ($issueDateById[$issueId] > 0) {
+              $d = $issueDateById[$issueId];
+            }
+          }
           $screen = null;
           if ($pressId > 0 && $issueId > 0) {
             $stmtScr = $db->prepare('SELECT id, format FROM screens WHERE id_press=? AND id_issue=? ORDER BY type ASC, id ASC LIMIT 1');
@@ -263,11 +279,16 @@ else {
           $inf[$n]['book_url'] = books_url_book($inf[$n]['id2'], $isEngPage);
         }
 
+        $inf[$n]['date'] = $d ? date("d ".$months[date("m", $d)]." Y", $d ) : "";
+
         $docs[] = search_source_doc_from_match($result["matches"][$id]['attrs'], $inf[$n]['type']);
 
         $n++;
      }
                   
+  }
+  if ($stmtIssueDate) {
+    $stmtIssueDate->close();
   }
 
   if ($result['total'] && !empty($docs)) {

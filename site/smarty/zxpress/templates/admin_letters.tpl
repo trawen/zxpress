@@ -53,14 +53,14 @@
 {if $letter && $letter.id}Редактирование письма #{$letter.id}{else}Новое письмо{/if}
 </div>
 
-<form method="post" enctype="multipart/form-data" action="admin_letters.php?id={if $letter && $letter.id}{$letter.id}{else}0{/if}">
+<form class="admin-letter-form" method="post" enctype="multipart/form-data" action="admin_letters.php?id={if $letter && $letter.id}{$letter.id}{else}0{/if}">
 <input type="hidden" name="csrf_token" value="{$csrf_token}">
 
-<table style="font: 12px Verdana" cellpadding="4">
+<table class="admin-letter-fields" style="font: 12px Verdana" cellpadding="4">
 <tr>
 <td><label for="admin-letter-from">От кого *</label></td>
 <td>
-<select id="admin-letter-from" name="author_from" style="width:340px">
+<select id="admin-letter-from" name="author_from">
 <option value="0">---</option>
 {section name=n loop=$authors}
 <option value="{$authors[n].id}" {if $letter && $authors[n].id eq $letter.author_from}selected{/if}>
@@ -74,7 +74,7 @@
 <tr>
 <td><label for="admin-letter-to">Кому *</label></td>
 <td>
-<select id="admin-letter-to" name="author_to" style="width:340px">
+<select id="admin-letter-to" name="author_to">
 <option value="0">---</option>
 {section name=n loop=$authors}
 <option value="{$authors[n].id}" {if $letter && $authors[n].id eq $letter.author_to}selected{/if}>
@@ -87,18 +87,18 @@
 
 <tr>
 <td>Заголовок (RU) *</td>
-<td><input type="text" name="title_ru" style="width:520px" value="{if $letter}{$letter.title_ru}{/if}"></td>
+<td><input type="text" name="title_ru" value="{if $letter}{$letter.title_ru}{/if}"></td>
 </tr>
 
 <tr>
 <td>Заголовок (EN)</td>
-<td><input type="text" name="title_en" style="width:520px" value="{if $letter}{$letter.title_en}{/if}"></td>
+<td><input type="text" name="title_en" value="{if $letter}{$letter.title_en}{/if}"></td>
 </tr>
 
 <tr>
 <td>Slug (RU)</td>
 <td>
-<input type="text" name="slug_ru" style="width:520px" maxlength="191" pattern="[a-z0-9-]*" value="{if $letter}{$letter.slug_ru}{/if}">
+<input type="text" name="slug_ru" maxlength="191" pattern="[a-z0-9-]*" value="{if $letter}{$letter.slug_ru}{/if}">
 <div style="font-size:11px;font-weight:normal;color:#555">Пустое поле генерируется из заголовка RU. Разрешены только a-z, 0-9 и дефис.</div>
 </td>
 </tr>
@@ -106,44 +106,44 @@
 <tr>
 <td>Slug (EN)</td>
 <td>
-<input type="text" name="slug_en" style="width:520px" maxlength="191" pattern="[a-z0-9-]*" value="{if $letter}{$letter.slug_en}{/if}">
+<input type="text" name="slug_en" maxlength="191" pattern="[a-z0-9-]*" value="{if $letter}{$letter.slug_en}{/if}">
 <div style="font-size:11px;font-weight:normal;color:#555">Пустое поле генерируется из заголовка EN (или RU, если EN пуст).</div>
 </td>
 </tr>
 
 <tr>
 <td>Дата</td>
-<td><input type="text" name="date" style="width:140px" value="{if $letter}{$letter.date}{/if}" placeholder="дд.мм.гггг"></td>
+<td><input class="admin-letter-narrow" type="text" name="date" value="{if $letter}{$letter.date}{/if}" placeholder="дд.мм.гггг"></td>
 </tr>
 
 <tr>
 <td valign="top">Кратко (RU)</td>
-<td><textarea name="summary_ru" rows="4" style="width:520px">{if $letter}{$letter.summary_ru nofilter}{/if}</textarea></td>
+<td><textarea name="summary_ru" rows="4">{if $letter}{$letter.summary_ru nofilter}{/if}</textarea></td>
 </tr>
 
 <tr>
 <td valign="top">Кратко (EN)</td>
-<td><textarea name="summary_en" rows="4" style="width:520px">{if $letter}{$letter.summary_en nofilter}{/if}</textarea></td>
+<td><textarea name="summary_en" rows="4">{if $letter}{$letter.summary_en nofilter}{/if}</textarea></td>
 </tr>
 
 <tr>
 <td valign="top">Meta description (RU)</td>
-<td><textarea name="meta_description_ru" rows="2" style="width:520px" maxlength="512">{if $letter}{$letter.meta_description_ru}{/if}</textarea></td>
+<td><textarea name="meta_description_ru" rows="2" maxlength="512">{if $letter}{$letter.meta_description_ru}{/if}</textarea></td>
 </tr>
 
 <tr>
 <td valign="top">Meta description (EN)</td>
-<td><textarea name="meta_description_en" rows="2" style="width:520px" maxlength="512">{if $letter}{$letter.meta_description_en}{/if}</textarea></td>
+<td><textarea name="meta_description_en" rows="2" maxlength="512">{if $letter}{$letter.meta_description_en}{/if}</textarea></td>
 </tr>
 
 <tr>
 <td valign="top">Текст (RU)</td>
-<td><textarea name="body_ru" rows="10" style="width:520px">{if $letter}{$letter.body_ru nofilter}{/if}</textarea></td>
+<td><textarea name="body_ru" rows="10">{if $letter}{$letter.body_ru nofilter}{/if}</textarea></td>
 </tr>
 
 <tr>
 <td valign="top">Текст (EN)</td>
-<td><textarea name="body_en" rows="10" style="width:520px">{if $letter}{$letter.body_en nofilter}{/if}</textarea></td>
+<td><textarea name="body_en" rows="10">{if $letter}{$letter.body_en nofilter}{/if}</textarea></td>
 </tr>
 
 <tr>
@@ -152,9 +152,14 @@
 <input type="file" id="admin-letter-upload" name="upload_files[]" multiple accept="image/jpeg,image/png,image/webp,image/gif">
 <div style="font-size:11px;font-weight:normal;margin-top:4px">
 После выбора файла откроется окно обрезки. «Применить обрезку» — в форму попадёт уже обрезанный файл;
-«Без обрезки» — загрузится целиком. На сервере оригинал сохраняется как WebP 85%, превью — JPEG до 1280px.
+«Без обрезки» — загрузится целиком. Затем «Обработать (AI OCR)» отправит кропы в AI и заполнит поля формы.
+При сохранении письма оригинал на сервере — WebP 85%, превью — JPEG до 1280px.
 </div>
 <div id="admin-letter-upload-queue" style="font-size:11px;font-weight:normal;margin-top:8px"></div>
+<div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+<button type="button" id="admin-letter-ocr-btn" disabled style="height:26px;cursor:pointer">Обработать (AI OCR)</button>
+<span id="admin-letter-ocr-status" style="font-size:11px;color:#555"></span>
+</div>
 {if $images && $images|@count gt 0}
 <div style="font-size:11px;font-weight:normal;margin-top:8px">
 <b>Загруженные страницы:</b><br>
@@ -167,7 +172,7 @@
 <div style="margin-left:18px">
 <a href="{$images[n].original_url}" target="_blank">оригинал</a> —
 <a href="{$images[n].preview_url}" target="_blank">превью</a><br>
-<img src="{$images[n].preview_url}" style="max-width:420px; height:auto; border:1px solid #C8C5AC; margin-top:4px">
+<img src="{$images[n].preview_url}" style="max-width:100%; height:auto; border:1px solid #C8C5AC; margin-top:4px">
 </div>
 </div>
 {/section}
@@ -181,7 +186,7 @@
 <td>
 {assign var=cur_status value=$letter_status_draft}
 {if $letter}{assign var=cur_status value=$letter.publish_status}{/if}
-<select name="publish_status" style="width:340px">
+<select name="publish_status">
 <option value="{$letter_status_draft}" {if $cur_status eq $letter_status_draft}selected{/if}>Черновик</option>
 <option value="{$letter_status_queued}" {if $cur_status eq $letter_status_queued}selected{/if}>В очереди (автопубликация ≤1/сутки)</option>
 <option value="{$letter_status_published}" {if $cur_status eq $letter_status_published}selected{/if}>Опубликовано сейчас</option>
@@ -219,6 +224,39 @@
 <link rel="stylesheet" href="/js/cropper.min.css">
 {literal}
 <style type="text/css">
+.admin-letter-form {
+	width: 100%;
+}
+.admin-letter-fields {
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+.admin-letter-fields td:first-child {
+	width: 160px;
+	vertical-align: top;
+	padding-top: 8px;
+	white-space: nowrap;
+}
+.admin-letter-fields td:last-child {
+	width: auto;
+}
+.admin-letter-form input[type="text"],
+.admin-letter-form textarea,
+.admin-letter-form select {
+	width: 100%;
+	max-width: none;
+	box-sizing: border-box;
+}
+.admin-letter-form input.admin-letter-narrow {
+	width: 140px;
+	max-width: 100%;
+}
+.admin-letter-form input[type="file"] {
+	width: 100%;
+	max-width: none;
+	box-sizing: border-box;
+}
 .admin-letter-crop-modal {
 	display: none;
 	position: fixed;
@@ -272,6 +310,9 @@
 }
 .admin-letter-upload-status { color: #555; }
 .admin-letter-upload-status.is-cropped { color: #2a5a1a; font-weight: bold; }
+#admin-letter-ocr-btn:disabled { opacity: 0.55; cursor: default; }
+#admin-letter-ocr-status.is-error { color: #A41E00; }
+#admin-letter-ocr-status.is-ok { color: #2a5a1a; }
 </style>
 {/literal}
 
@@ -299,6 +340,9 @@
 	var titleEl = document.getElementById('admin-letter-crop-title');
 	var hintEl = document.getElementById('admin-letter-crop-hint');
 	var applyBtn = document.getElementById('admin-letter-crop-apply');
+	var ocrBtn = document.getElementById('admin-letter-ocr-btn');
+	var ocrStatus = document.getElementById('admin-letter-ocr-status');
+	var formEl = document.querySelector('.admin-letter-form');
 	if (!input || !queueEl || !modal || !imgEl || !applyBtn) {
 		return;
 	}
@@ -313,6 +357,24 @@
 	var croppedFlags = []; // bool per index
 	var cropper = null;
 	var activeIndex = -1;
+	var ocrBusy = false;
+
+	function csrfToken() {
+		var el = formEl && formEl.querySelector('[name="csrf_token"]');
+		return el ? String(el.value || '') : '';
+	}
+
+	function setOcrStatus(msg, kind) {
+		if (!ocrStatus) return;
+		ocrStatus.textContent = msg || '';
+		ocrStatus.classList.remove('is-error', 'is-ok');
+		if (kind) ocrStatus.classList.add(kind);
+	}
+
+	function syncOcrButton() {
+		if (!ocrBtn) return;
+		ocrBtn.disabled = ocrBusy || uploadFiles.length === 0;
+	}
 
 	function clearCropper() {
 		if (cropper) {
@@ -337,11 +399,13 @@
 			dt.items.add(uploadFiles[i]);
 		}
 		input.files = dt.files;
+		syncOcrButton();
 	}
 
 	function renderQueue() {
 		if (!uploadFiles.length) {
 			queueEl.innerHTML = '';
+			syncOcrButton();
 			return;
 		}
 		var html = '<b>К загрузке (' + uploadFiles.length + '):</b>';
@@ -359,6 +423,7 @@
 				+ '</div>';
 		}
 		queueEl.innerHTML = html;
+		syncOcrButton();
 	}
 
 	function openCrop(index) {
@@ -374,7 +439,7 @@
 			imgEl.onload = function () {
 				cropper = new Cropper(imgEl, {
 					viewMode: 1,
-					autoCropArea: 0.85,
+					autoCropArea: 1,
 					responsive: true,
 					background: false,
 					checkOrientation: false,
@@ -392,6 +457,101 @@
 		modal.setAttribute('aria-hidden', 'false');
 	}
 
+	function setField(name, value) {
+		if (value === undefined || value === null) return;
+		var el = document.querySelector('.admin-letter-form [name="' + name + '"]');
+		if (!el) return;
+		el.value = String(value);
+	}
+
+	function applyOcrResult(data) {
+		if (!data || typeof data !== 'object') return;
+		setField('title_ru', data.title_ru || '');
+		setField('title_en', data.title_en || '');
+		setField('summary_ru', data.summary_ru || '');
+		setField('summary_en', data.summary_en || '');
+		setField('meta_description_ru', data.meta_description_ru || '');
+		setField('meta_description_en', data.meta_description_en || '');
+		setField('body_ru', data.body_ru || '');
+		setField('body_en', data.body_en || '');
+		if (data.date) setField('date', data.date);
+		if (data.author_from) {
+			var fromSel = document.getElementById('admin-letter-from');
+			if (fromSel) fromSel.value = String(data.author_from);
+		}
+		if (data.author_to) {
+			var toSel = document.getElementById('admin-letter-to');
+			if (toSel) toSel.value = String(data.author_to);
+		}
+	}
+
+	function runOcr() {
+		if (ocrBusy || !uploadFiles.length) return;
+		var token = csrfToken();
+		if (!token) {
+			setOcrStatus('Нет CSRF-токена — обнови страницу', 'is-error');
+			return;
+		}
+		ocrBusy = true;
+		syncOcrButton();
+		setOcrStatus('Отправляю ' + uploadFiles.length + ' стр. в AI…', '');
+		if (ocrBtn) ocrBtn.textContent = 'Обрабатываю…';
+
+		var fd = new FormData();
+		fd.append('action', 'ocr');
+		fd.append('csrf_token', token);
+		for (var i = 0; i < uploadFiles.length; i++) {
+			fd.append('ocr_files[]', uploadFiles[i], uploadFiles[i].name || ('page-' + (i + 1) + '.jpg'));
+		}
+
+		var ocrUrl = (formEl && formEl.getAttribute('action')) || 'admin_letters.php';
+		fetch(ocrUrl, {
+			method: 'POST',
+			body: fd,
+			credentials: 'same-origin'
+		})
+			.then(function (r) {
+				return r.text().then(function (t) {
+					var j = null;
+					try { j = JSON.parse(t); } catch (e) { /* plain error */ }
+					if (!r.ok || !j || !j.ok) {
+						var msg = (j && j.error) ? j.error : '';
+						if (!msg) {
+							if (r.status === 504 || /upstream timed out/i.test(t)) {
+								msg = 'Таймаут OCR (сервер ждал ответа AI слишком долго)';
+							} else if (/<!DOCTYPE|<html/i.test(t)) {
+								msg = 'HTTP ' + r.status + ' — ответ сервера не JSON (часто таймаут/ошибка nginx)';
+							} else {
+								msg = (t || ('HTTP ' + r.status)).slice(0, 400);
+							}
+						}
+						throw new Error(msg);
+					}
+					return j.data;
+				});
+			})
+			.then(function (data) {
+				applyOcrResult(data);
+				var note = data && data.note ? (' ' + data.note) : '';
+				setOcrStatus('Готово — поля формы заполнены.' + note, 'is-ok');
+			})
+			.catch(function (err) {
+				setOcrStatus(String(err && err.message ? err.message : err), 'is-error');
+			})
+			.finally(function () {
+				ocrBusy = false;
+				if (ocrBtn) ocrBtn.textContent = 'Обработать (AI OCR)';
+				syncOcrButton();
+			});
+	}
+
+	if (ocrBtn) {
+		ocrBtn.addEventListener('click', function (e) {
+			e.preventDefault();
+			runOcr();
+		});
+	}
+
 	input.addEventListener('change', function () {
 		sourceFiles = Array.prototype.slice.call(input.files || [], 0);
 		uploadFiles = sourceFiles.slice();
@@ -399,6 +559,7 @@
 		for (var i = 0; i < sourceFiles.length; i++) {
 			croppedFlags[i] = false;
 		}
+		setOcrStatus('', '');
 		renderQueue();
 		if (sourceFiles.length) {
 			openCrop(0);
@@ -492,6 +653,8 @@
 			closeModal();
 		}
 	});
+
+	syncOcrButton();
 })();
 </script>
 {/literal}
