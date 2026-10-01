@@ -60,7 +60,8 @@
 <tr>
 <td><label for="admin-letter-from">От кого *</label></td>
 <td>
-<select id="admin-letter-from" name="author_from">
+<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+<select id="admin-letter-from" name="author_from" style="width:auto;min-width:180px;max-width:60%">
 <option value="0">---</option>
 {section name=n loop=$authors}
 <option value="{$authors[n].id}" {if $letter && $authors[n].id eq $letter.author_from}selected{/if}>
@@ -68,13 +69,16 @@
 </option>
 {/section}
 </select>
+<input type="text" id="admin-letter-from-new" name="author_from_new" class="admin-letter-narrow" value="" placeholder="новый ник" maxlength="100" title="Если автора нет в списке — впиши ник, он создастся при сохранении">
+</div>
 </td>
 </tr>
 
 <tr>
 <td><label for="admin-letter-to">Кому *</label></td>
 <td>
-<select id="admin-letter-to" name="author_to">
+<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+<select id="admin-letter-to" name="author_to" style="width:auto;min-width:180px;max-width:60%">
 <option value="0">---</option>
 {section name=n loop=$authors}
 <option value="{$authors[n].id}" {if $letter && $authors[n].id eq $letter.author_to}selected{/if}>
@@ -82,6 +86,8 @@
 </option>
 {/section}
 </select>
+<input type="text" id="admin-letter-to-new" name="author_to_new" class="admin-letter-narrow" value="" placeholder="новый ник" maxlength="100" title="Если автора нет в списке — впиши ник, он создастся при сохранении">
+</div>
 </td>
 </tr>
 
@@ -475,13 +481,23 @@
 		setField('body_ru', data.body_ru || '');
 		setField('body_en', data.body_en || '');
 		if (data.date) setField('date', data.date);
-		if (data.author_from) {
-			var fromSel = document.getElementById('admin-letter-from');
-			if (fromSel) fromSel.value = String(data.author_from);
+		var fromSel = document.getElementById('admin-letter-from');
+		var toSel = document.getElementById('admin-letter-to');
+		var fromNew = document.getElementById('admin-letter-from-new');
+		var toNew = document.getElementById('admin-letter-to-new');
+		if (data.author_from && fromSel) {
+			fromSel.value = String(data.author_from);
+			if (fromNew) fromNew.value = '';
+		} else if (fromNew && data.from_nick) {
+			fromNew.value = String(data.from_nick);
+			if (fromSel) fromSel.value = '0';
 		}
-		if (data.author_to) {
-			var toSel = document.getElementById('admin-letter-to');
-			if (toSel) toSel.value = String(data.author_to);
+		if (data.author_to && toSel) {
+			toSel.value = String(data.author_to);
+			if (toNew) toNew.value = '';
+		} else if (toNew && data.to_nick) {
+			toNew.value = String(data.to_nick);
+			if (toSel) toSel.value = '0';
 		}
 	}
 

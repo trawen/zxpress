@@ -4,10 +4,71 @@ require_once __DIR__ . '/includes/letters_publish.php';
 require_once __DIR__ . '/includes/letters_slugs.php';
 require_once __DIR__ . '/includes/letters_images.php';
 require_once __DIR__ . '/includes/letters_ocr.php';
+require_once __DIR__ . '/includes/authors_slugs.php';
 
 if (!isset($_SESSION['login']) || !$_SESSION['login']) {
     header('HTTP/1.1 403 Forbidden');
     exit;
+}
+
+/**
+ * Resolve author id from select and/or "new nick" input.
+ * Non-empty nick wins: find by nickname (case-insensitive) or create.
+ */
+function letters_resolve_author_id(mysqli $db, int $selectedId, string $newNick): int
+{
+    $newNick = plain_text_normalize_for_storage(trim($newNick));
+    if ($newNick !== '') {
+        $stmt = $db->prepare('SELECT id FROM authors WHERE LOWER(nickname)=LOWER(?) LIMIT 1');
+        if ($stmt) {
+            $stmt->bind_param('s', $newNick);
+            $stmt->execute();
+            $row = $stmt->get_result()->fetch_assoc();
+            $stmt->close();
+            if ($row && (int) $row['id'] > 0) {
+                return (int) $row['id'];
+            }
+        }
+
+        $slugs = authors_resolve_slugs($db, '', '', $newNick, '', '', 0);
+        $ok = db_exec(
+            $db,
+            'INSERT INTO authors (nickname, name_ru, name_en, group_name, slug_ru, slug_en, country_id, city_id, user_id, is_active) VALUES (?,?,?,?,?,?,?,?,?,?)',
+            'ssssssiiii',
+            $newNick,
+            null,
+            null,
+            null,
+            $slugs['slug_ru'],
+            $slugs['slug_en'],
+            null,
+            null,
+            null,
+            1
+        );
+        if (!$ok) {
+            throw new RuntimeException('Не удалось создать автора «' . $newNick . '»: ' . $db->error);
+        }
+        $id = (int) mysqli_insert_id($db);
+        if ($id <= 0) {
+            throw new RuntimeException('Не удалось создать автора «' . $newNick . '»');
+        }
+        activity_log($db, [
+            'verb' => 'created',
+            'object_type' => 'author',
+            'object_id' => $id,
+            'action' => 'author.created',
+            'event_scope' => ACTIVITY_SCOPE_METADATA,
+            'is_public' => 0,
+            'title_ru' => $newNick,
+            'title_en' => $newNick,
+            'after' => ['is_active' => 1, 'source' => 'admin_letters'],
+        ]);
+
+        return $id;
+    }
+
+    return $selectedId > 0 ? $selectedId : 0;
 }
 
 // AJAX: OCR cropped scans → fill letter form fields
@@ -383,8 +444,24 @@ $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 if (($_POST['save'] ?? '') === 'Сохранить') {
     csrf_verify();
 
-    $author_from = zx_post_int('author_from');
-    $author_to = zx_post_int('author_to');
+    $author_from = 0;
+    $author_to = 0;
+    try {
+        $author_from = letters_resolve_author_id(
+            $db,
+            zx_post_int('author_from'),
+            zx_post_string('author_from_new')
+        );
+        $author_to = letters_resolve_author_id(
+            $db,
+            zx_post_int('author_to'),
+            zx_post_string('author_to_new')
+        );
+    } catch (Throwable $e) {
+        $smarty->assign('error', $e->getMessage());
+        $author_from = 0;
+        $author_to = 0;
+    }
     $title_ru = plain_text_normalize_for_storage(zx_post_string('title_ru'));
     $title_en = plain_text_normalize_for_storage(zx_post_string('title_en'));
     if ($title_en === '') {
@@ -438,8 +515,10 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
     $deleted_at = $publishFields['deleted_at'];
     $publish_status = (int) $publishFields['publish_status'];
 
-    if ($author_from <= 0 || $author_to <= 0 || $title_ru === '') {
-        $smarty->assign('error', 'Заполни: От кого, Кому, Заголовок (RU)');
+    if (!empty($smarty->getTemplateVars('error'))) {
+        // author create failed above
+    } elseif ($author_from <= 0 || $author_to <= 0 || $title_ru === '') {
+        $smarty->assign('error', 'Заполни: От кого, Кому (выбор или новый ник), Заголовок (RU)');
     } else {
         $save_ok = false;
         try {
