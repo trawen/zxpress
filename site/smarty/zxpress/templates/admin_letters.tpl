@@ -267,24 +267,35 @@
 	display: none;
 	position: fixed;
 	z-index: 10000;
-	left: 0; top: 0; right: 0; bottom: 0;
-	background: rgba(0,0,0,0.55);
+	inset: 0;
+	background: rgba(0,0,0,0.72);
 }
 .admin-letter-crop-modal.is-open { display: block; }
+body.admin-letter-crop-open { overflow: hidden; }
 .admin-letter-crop-dialog {
 	position: absolute;
-	left: 50%; top: 50%;
-	transform: translate(-50%, -50%);
-	width: min(920px, 94vw);
-	max-height: 92vh;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	max-width: none;
+	max-height: none;
+	display: flex;
+	flex-direction: column;
 	background: var(--smn-surface);
-	border: 1px solid #C8C5AC;
-	padding: 12px;
+	border: 0;
+	padding: 10px 12px;
 	box-sizing: border-box;
 }
+.admin-letter-crop-title {
+	flex: 0 0 auto;
+	font: bold 12px Verdana;
+	margin-bottom: 8px;
+}
 .admin-letter-crop-stage {
+	flex: 1 1 auto;
+	min-height: 0;
 	width: 100%;
-	height: min(62vh, 520px);
+	height: auto;
 	background: #222;
 	overflow: hidden;
 }
@@ -293,6 +304,7 @@
 	max-width: 100%;
 }
 .admin-letter-crop-actions {
+	flex: 0 0 auto;
 	margin-top: 10px;
 	display: flex;
 	gap: 8px;
@@ -324,7 +336,7 @@
 
 <div id="admin-letter-crop-modal" class="admin-letter-crop-modal" aria-hidden="true">
 	<div class="admin-letter-crop-dialog" role="dialog" aria-modal="true" aria-labelledby="admin-letter-crop-title">
-		<div id="admin-letter-crop-title" style="font:bold 12px Verdana;margin-bottom:8px">Обрезка скана</div>
+		<div id="admin-letter-crop-title" class="admin-letter-crop-title">Обрезка скана</div>
 		<div class="admin-letter-crop-stage"><img id="admin-letter-crop-img" alt=""></div>
 		<div class="admin-letter-crop-actions">
 			<button type="button" id="admin-letter-crop-apply">Применить обрезку</button>
@@ -393,6 +405,7 @@
 	function closeModal() {
 		modal.classList.remove('is-open');
 		modal.setAttribute('aria-hidden', 'true');
+		document.body.classList.remove('admin-letter-crop-open');
 		clearCropper();
 		activeIndex = -1;
 		applyBtn.disabled = false;
@@ -461,6 +474,7 @@
 		reader.readAsDataURL(sourceFiles[index]);
 		modal.classList.add('is-open');
 		modal.setAttribute('aria-hidden', 'false');
+		document.body.classList.add('admin-letter-crop-open');
 	}
 
 	function setField(name, value) {
