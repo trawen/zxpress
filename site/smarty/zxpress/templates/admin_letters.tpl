@@ -290,6 +290,23 @@ body.admin-letter-crop-open { overflow: hidden; }
 	flex: 0 0 auto;
 	font: bold 12px Verdana;
 	margin-bottom: 8px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+.admin-letter-crop-sheets {
+	display: none;
+	align-items: center;
+	gap: 6px;
+	font: normal 11px Verdana;
+	color: #555;
+}
+.admin-letter-crop-sheets.is-visible { display: inline-flex; }
+.admin-letter-crop-sheets button {
+	height: 22px;
+	min-width: 28px;
+	cursor: pointer;
 }
 .admin-letter-crop-stage {
 	flex: 1 1 auto;
@@ -315,6 +332,8 @@ body.admin-letter-crop-open { overflow: hidden; }
 	height: 26px;
 	cursor: pointer;
 }
+#admin-letter-crop-apply-all { display: none; }
+#admin-letter-crop-apply-all.is-visible { display: inline-block; }
 .admin-letter-upload-item {
 	margin-top: 6px;
 	padding: 6px 8px;
@@ -336,10 +355,18 @@ body.admin-letter-crop-open { overflow: hidden; }
 
 <div id="admin-letter-crop-modal" class="admin-letter-crop-modal" aria-hidden="true">
 	<div class="admin-letter-crop-dialog" role="dialog" aria-modal="true" aria-labelledby="admin-letter-crop-title">
-		<div id="admin-letter-crop-title" class="admin-letter-crop-title">Обрезка скана</div>
+		<div id="admin-letter-crop-title" class="admin-letter-crop-title">
+			<span id="admin-letter-crop-title-text">Обрезка скана</span>
+			<span id="admin-letter-crop-sheets" class="admin-letter-crop-sheets" aria-live="polite">
+				<button type="button" id="admin-letter-crop-sheet-prev" title="Предыдущий лист">◀</button>
+				<span id="admin-letter-crop-sheet-label">Лист 1/1</span>
+				<button type="button" id="admin-letter-crop-sheet-next" title="Следующий лист">▶</button>
+			</span>
+		</div>
 		<div class="admin-letter-crop-stage"><img id="admin-letter-crop-img" alt=""></div>
 		<div class="admin-letter-crop-actions">
 			<button type="button" id="admin-letter-crop-apply">Применить обрезку</button>
+			<button type="button" id="admin-letter-crop-apply-all">Применить все листы</button>
 			<button type="button" id="admin-letter-crop-skip">Без обрезки</button>
 			<button type="button" id="admin-letter-crop-cancel">Отмена</button>
 			<span id="admin-letter-crop-hint" style="font:11px Verdana;color:#555"></span>
@@ -348,6 +375,7 @@ body.admin-letter-crop-open { overflow: hidden; }
 </div>
 
 <script src="/js/cropper.min.js"></script>
+<script src="/js/admin_letter_sheet_detect.js"></script>
 {literal}
 <script type="text/javascript">
 (function () {
@@ -355,9 +383,14 @@ body.admin-letter-crop-open { overflow: hidden; }
 	var queueEl = document.getElementById('admin-letter-upload-queue');
 	var modal = document.getElementById('admin-letter-crop-modal');
 	var imgEl = document.getElementById('admin-letter-crop-img');
-	var titleEl = document.getElementById('admin-letter-crop-title');
+	var titleTextEl = document.getElementById('admin-letter-crop-title-text') || document.getElementById('admin-letter-crop-title');
 	var hintEl = document.getElementById('admin-letter-crop-hint');
 	var applyBtn = document.getElementById('admin-letter-crop-apply');
+	var applyAllBtn = document.getElementById('admin-letter-crop-apply-all');
+	var sheetBar = document.getElementById('admin-letter-crop-sheets');
+	var sheetLabel = document.getElementById('admin-letter-crop-sheet-label');
+	var sheetPrevBtn = document.getElementById('admin-letter-crop-sheet-prev');
+	var sheetNextBtn = document.getElementById('admin-letter-crop-sheet-next');
 	var ocrBtn = document.getElementById('admin-letter-ocr-btn');
 	var ocrStatus = document.getElementById('admin-letter-ocr-status');
 	var formEl = document.querySelector('.admin-letter-form');
@@ -376,6 +409,10 @@ body.admin-letter-crop-open { overflow: hidden; }
 	var cropper = null;
 	var activeIndex = -1;
 	var ocrBusy = false;
+	var detectedSheets = []; // [{x,y,width,height}]
+	var activeSheet = 0;
+	var detectBusy = false;
+	var rawCropImage = null; // HTMLImageElement for canvas crops (unwrapped)
 
 	function csrfToken() {
 		var el = formEl && formEl.querySelector('[name="csrf_token"]');
@@ -400,6 +437,10 @@ body.admin-letter-crop-open { overflow: hidden; }
 			cropper = null;
 		}
 		imgEl.removeAttribute('src');
+		rawCropImage = null;
+		detectedSheets = [];
+		activeSheet = 0;
+		updateSheetUi();
 	}
 
 	function closeModal() {
@@ -410,6 +451,86 @@ body.admin-letter-crop-open { overflow: hidden; }
 		activeIndex = -1;
 		applyBtn.disabled = false;
 		applyBtn.textContent = 'Применить обрезку';
+		if (applyAllBtn) {
+			applyAllBtn.disabled = false;
+			applyAllBtn.textContent = 'Применить все листы';
+		}
+	}
+
+	function updateSheetUi() {
+		var n = detectedSheets.length;
+		if (sheetBar) {
+			if (n > 1) {
+				sheetBar.classList.add('is-visible');
+			} else {
+				sheetBar.classList.remove('is-visible');
+			}
+		}
+		if (sheetLabel) {
+			sheetLabel.textContent = n ? ('Лист ' + (activeSheet + 1) + '/' + n) : 'Лист —';
+		}
+		if (sheetPrevBtn) sheetPrevBtn.disabled = n < 2 || activeSheet <= 0 || detectBusy;
+		if (sheetNextBtn) sheetNextBtn.disabled = n < 2 || activeSheet >= n - 1 || detectBusy;
+		if (applyAllBtn) {
+			if (n > 1) {
+				applyAllBtn.classList.add('is-visible');
+			} else {
+				applyAllBtn.classList.remove('is-visible');
+			}
+		}
+	}
+
+	function selectSheet(index) {
+		if (!cropper || !detectedSheets.length) return;
+		if (index < 0 || index >= detectedSheets.length) return;
+		activeSheet = index;
+		var box = detectedSheets[activeSheet];
+		cropper.setData({
+			x: box.x,
+			y: box.y,
+			width: box.width,
+			height: box.height,
+			rotate: 0,
+			scaleX: 1,
+			scaleY: 1
+		});
+		updateSheetUi();
+		if (hintEl) {
+			hintEl.textContent = detectedSheets.length > 1
+				? ('Авто-область листа ' + (activeSheet + 1) + '/' + detectedSheets.length + '. Можно подправить вручную.')
+				: 'Авто-область письма. Можно подправить вручную.';
+		}
+	}
+
+	function runSheetDetect(img) {
+		detectBusy = true;
+		updateSheetUi();
+		if (hintEl) hintEl.textContent = 'Ищу листы на чёрном фоне…';
+		var detectFn = typeof detectLetterSheetsFromImage === 'function'
+			? detectLetterSheetsFromImage
+			: null;
+		if (!detectFn) {
+			detectBusy = false;
+			detectedSheets = [];
+			updateSheetUi();
+			if (hintEl) hintEl.textContent = 'Выделите область и нажмите «Применить обрезку».';
+			return;
+		}
+		detectFn(img).then(function (boxes) {
+			detectBusy = false;
+			detectedSheets = Array.isArray(boxes) ? boxes : [];
+			updateSheetUi();
+			if (detectedSheets.length) {
+				selectSheet(0);
+			} else if (hintEl) {
+				hintEl.textContent = 'Листы не найдены — выделите область вручную.';
+			}
+		}).catch(function () {
+			detectBusy = false;
+			detectedSheets = [];
+			updateSheetUi();
+			if (hintEl) hintEl.textContent = 'Автодетект не удался — выделите область вручную.';
+		});
 	}
 
 	function syncInputFromUploadFiles() {
@@ -451,30 +572,152 @@ body.admin-letter-crop-open { overflow: hidden; }
 		}
 		activeIndex = index;
 		clearCropper();
-		titleEl.textContent = 'Обрезка: ' + sourceFiles[index].name;
-		hintEl.textContent = 'Выделите область и нажмите «Применить обрезку».';
+		if (titleTextEl) titleTextEl.textContent = 'Обрезка: ' + sourceFiles[index].name;
+		if (hintEl) hintEl.textContent = 'Загрузка…';
 		var reader = new FileReader();
 		reader.onload = function () {
-			imgEl.onload = function () {
-				cropper = new Cropper(imgEl, {
-					viewMode: 1,
-					autoCropArea: 1,
-					responsive: true,
-					background: false,
-					checkOrientation: false,
-					guides: true,
-					movable: true,
-					zoomable: true,
-					rotatable: false,
-					scalable: false
-				});
+			var url = String(reader.result || '');
+			var probe = new Image();
+			probe.onload = function () {
+				rawCropImage = probe;
+				imgEl.onload = function () {
+					cropper = new Cropper(imgEl, {
+						viewMode: 1,
+						autoCropArea: 1,
+						responsive: true,
+						background: false,
+						checkOrientation: false,
+						guides: true,
+						movable: true,
+						zoomable: true,
+						rotatable: false,
+						scalable: false,
+						ready: function () {
+							runSheetDetect(probe);
+						}
+					});
+				};
+				imgEl.src = url;
 			};
-			imgEl.src = String(reader.result || '');
+			probe.onerror = function () {
+				if (hintEl) hintEl.textContent = 'Не удалось загрузить изображение.';
+			};
+			probe.src = url;
 		};
 		reader.readAsDataURL(sourceFiles[index]);
 		modal.classList.add('is-open');
 		modal.setAttribute('aria-hidden', 'false');
 		document.body.classList.add('admin-letter-crop-open');
+	}
+
+	function fileBaseName(idx) {
+		var base = (sourceFiles[idx] && sourceFiles[idx].name) ? sourceFiles[idx].name : ('scan-' + idx);
+		return base.replace(/\.[^.]+$/, '');
+	}
+
+	function applyCurrentCrop() {
+		if (!cropper || activeIndex < 0) {
+			closeModal();
+			return;
+		}
+		var done = activeIndex;
+		var data = cropper.getData(true);
+		var maxSide = 3500;
+		var canvasOpts = {
+			imageSmoothingEnabled: true,
+			imageSmoothingQuality: 'high'
+		};
+		var srcW = Math.max(1, Math.round(data.width || 0));
+		var srcH = Math.max(1, Math.round(data.height || 0));
+		if (srcW >= srcH && srcW > maxSide) {
+			canvasOpts.width = maxSide;
+		} else if (srcH > maxSide) {
+			canvasOpts.height = maxSide;
+		}
+		var canvas = cropper.getCroppedCanvas(canvasOpts);
+		if (!canvas) {
+			hintEl.textContent = 'Не удалось получить область обрезки.';
+			return;
+		}
+		applyBtn.disabled = true;
+		applyBtn.textContent = 'Обрезаю…';
+		canvas.toBlob(function (blob) {
+			if (!blob) {
+				applyBtn.disabled = false;
+				applyBtn.textContent = 'Применить обрезку';
+				hintEl.textContent = 'Ошибка создания файла обрезки.';
+				return;
+			}
+			var base = fileBaseName(done);
+			uploadFiles[done] = new File([blob], base + '-crop.jpg', { type: 'image/jpeg', lastModified: Date.now() });
+			croppedFlags[done] = true;
+			syncInputFromUploadFiles();
+			closeModal();
+			renderQueue();
+			if (done + 1 < sourceFiles.length && !croppedFlags[done + 1]) {
+				openCrop(done + 1);
+			}
+		}, 'image/jpeg', 0.85);
+	}
+
+	function applyAllSheets() {
+		if (!detectedSheets.length || activeIndex < 0) return;
+		var cropFn = typeof cropImageRegionToBlob === 'function' ? cropImageRegionToBlob : null;
+		var img = rawCropImage || imgEl;
+		if (!cropFn || !img) {
+			hintEl.textContent = 'Нельзя применить все листы — нет helper/изображения.';
+			return;
+		}
+		var done = activeIndex;
+		var sheets = detectedSheets.slice();
+		var original = sourceFiles[done];
+		applyBtn.disabled = true;
+		if (applyAllBtn) {
+			applyAllBtn.disabled = true;
+			applyAllBtn.textContent = 'Обрезаю…';
+		}
+		if (hintEl) hintEl.textContent = 'Обрезаю ' + sheets.length + ' лист(а)…';
+
+		var chain = Promise.resolve([]);
+		sheets.forEach(function (region, i) {
+			chain = chain.then(function (acc) {
+				return cropFn(img, region, 3500, 0.85).then(function (blob) {
+					var base = fileBaseName(done);
+					var suffix = sheets.length > 1 ? ('-p' + (i + 1)) : '';
+					acc.push(new File([blob], base + suffix + '-crop.jpg', {
+						type: 'image/jpeg',
+						lastModified: Date.now()
+					}));
+					return acc;
+				});
+			});
+		});
+
+		chain.then(function (files) {
+			uploadFiles.splice(done, 1);
+			croppedFlags.splice(done, 1);
+			sourceFiles.splice(done, 1);
+			for (var i = 0; i < files.length; i++) {
+				uploadFiles.splice(done + i, 0, files[i]);
+				croppedFlags.splice(done + i, 0, true);
+				sourceFiles.splice(done + i, 0, original);
+			}
+			syncInputFromUploadFiles();
+			closeModal();
+			renderQueue();
+			var next = done + files.length;
+			if (next < sourceFiles.length && !croppedFlags[next]) {
+				openCrop(next);
+			}
+		}).catch(function (err) {
+			applyBtn.disabled = false;
+			applyBtn.textContent = 'Применить обрезку';
+			if (applyAllBtn) {
+				applyAllBtn.disabled = false;
+				applyAllBtn.textContent = 'Применить все листы';
+			}
+			if (hintEl) hintEl.textContent = 'Ошибка: ' + (err && err.message ? err.message : err);
+		});
 	}
 
 	function setField(name, value) {
@@ -615,49 +858,35 @@ body.admin-letter-crop-open { overflow: hidden; }
 	});
 
 	applyBtn.addEventListener('click', function () {
-		if (!cropper || activeIndex < 0) {
-			closeModal();
-			return;
+		applyCurrentCrop();
+	});
+
+	if (applyAllBtn) {
+		applyAllBtn.addEventListener('click', function () {
+			applyAllSheets();
+		});
+	}
+
+	if (sheetPrevBtn) {
+		sheetPrevBtn.addEventListener('click', function () {
+			selectSheet(activeSheet - 1);
+		});
+	}
+	if (sheetNextBtn) {
+		sheetNextBtn.addEventListener('click', function () {
+			selectSheet(activeSheet + 1);
+		});
+	}
+
+	document.addEventListener('keydown', function (e) {
+		if (!modal.classList.contains('is-open')) return;
+		if (e.key === 'ArrowLeft') {
+			e.preventDefault();
+			selectSheet(activeSheet - 1);
+		} else if (e.key === 'ArrowRight') {
+			e.preventDefault();
+			selectSheet(activeSheet + 1);
 		}
-		var done = activeIndex;
-		var data = cropper.getData(true);
-		var maxSide = 3500;
-		var canvasOpts = {
-			imageSmoothingEnabled: true,
-			imageSmoothingQuality: 'high'
-		};
-		var srcW = Math.max(1, Math.round(data.width || 0));
-		var srcH = Math.max(1, Math.round(data.height || 0));
-		if (srcW >= srcH && srcW > maxSide) {
-			canvasOpts.width = maxSide;
-		} else if (srcH > maxSide) {
-			canvasOpts.height = maxSide;
-		}
-		var canvas = cropper.getCroppedCanvas(canvasOpts);
-		if (!canvas) {
-			hintEl.textContent = 'Не удалось получить область обрезки.';
-			return;
-		}
-		applyBtn.disabled = true;
-		applyBtn.textContent = 'Обрезаю…';
-		canvas.toBlob(function (blob) {
-			if (!blob) {
-				applyBtn.disabled = false;
-				applyBtn.textContent = 'Применить обрезку';
-				hintEl.textContent = 'Ошибка создания файла обрезки.';
-				return;
-			}
-			var base = (sourceFiles[done] && sourceFiles[done].name) ? sourceFiles[done].name : ('scan-' + done);
-			base = base.replace(/\.[^.]+$/, '');
-			uploadFiles[done] = new File([blob], base + '-crop.jpg', { type: 'image/jpeg', lastModified: Date.now() });
-			croppedFlags[done] = true;
-			syncInputFromUploadFiles();
-			closeModal();
-			renderQueue();
-			if (done + 1 < sourceFiles.length && !croppedFlags[done + 1]) {
-				openCrop(done + 1);
-			}
-		}, 'image/jpeg', 0.85);
 	});
 
 	document.getElementById('admin-letter-crop-skip').addEventListener('click', function () {

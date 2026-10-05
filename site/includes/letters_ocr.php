@@ -52,7 +52,8 @@ function letters_ocr_prompt(): string
    - Начинай с подлежащего: кто отправитель (по подписи/нику) и что он делает/пишет. Не пиши «автор письма».
    - Пиши в настоящем времени (как будто письмо читают сейчас): «присылает», «предлагает», «спрашивает», не «прислал»/«предложил».
    - Развёрнутая суть письма: что отправлено/предложено/спрашивают/просят, важные детали (программы, диски, города, условия обмена), без воды.
-   - Без приветствий, прощаний, «желает удачи», без домыслов о ролях.
+   - Без приветствий, прощаний, пожеланий удачи и без домыслов о ролях.
+   - Не заканчивай и не добавляй в конец клише вроде «передаёт приветы», «передаёт привет», «ждёт ответа», «ждёт ответ», «надеется на ответ», «просит ответить», «пишет с уважением» — даже если так есть в письме. Саммери обрывай на содержательной сути.
 
 4) meta_description_* — одно предложение ~до 155 символов, с ключевыми словами (ZX Spectrum, город, год, суть).
 
@@ -321,8 +322,8 @@ function letters_ocr_parse_json_payload(string $text): array
     return [
         'body_ru' => $pick($data, 'body_ru'),
         'body_en' => $pick($data, 'body_en'),
-        'summary_ru' => $pick($data, 'summary_ru'),
-        'summary_en' => $pick($data, 'summary_en'),
+        'summary_ru' => letters_ocr_strip_summary_closing($pick($data, 'summary_ru')),
+        'summary_en' => letters_ocr_strip_summary_closing($pick($data, 'summary_en')),
         'meta_description_ru' => $pick($data, 'meta_description_ru'),
         'meta_description_en' => $pick($data, 'meta_description_en'),
         'title_ru' => $pick($data, 'title_ru'),
@@ -332,6 +333,40 @@ function letters_ocr_parse_json_payload(string $text): array
         'to_nick' => $pick($data, 'to_nick'),
         'note' => $pick($data, 'note'),
     ];
+}
+
+/**
+ * Drop trailing greeting/closing fluff often appended to OCR summaries.
+ */
+function letters_ocr_strip_summary_closing(string $text): string
+{
+    $text = trim($text);
+    if ($text === '') {
+        return '';
+    }
+
+    $patterns = [
+        // RU: «… а также передаёт приветы и ждёт ответ.»
+        '/(?:[.,;:\s]+|\s+)(?:а\s+также\s+)?передаёт\s+привет(?:ы|ик)?(?:\s+и\s+ждёт\s+ответ(?:а)?)?[.!]?\s*$/iu',
+        '/(?:[.,;:\s]+|\s+)ждёт\s+ответ(?:а)?[.!]?\s*$/iu',
+        '/(?:[.,;:\s]+|\s+)надеется\s+на\s+ответ[.!]?\s*$/iu',
+        '/(?:[.,;:\s]+|\s+)просит\s+ответить[.!]?\s*$/iu',
+        // EN equivalents
+        '/(?:[.,;:\s]+|\s+)(?:and\s+)?(?:also\s+)?sends?\s+(?:his\s+|her\s+|their\s+)?regards?(?:\s+and\s+(?:awaits?|waits?\s+for)\s+(?:a\s+)?reply)?[.!]?\s*$/i',
+        '/(?:[.,;:\s]+|\s+)(?:and\s+)?(?:awaits?|waits?\s+for)\s+(?:a\s+)?reply[.!]?\s*$/i',
+        '/(?:[.,;:\s]+|\s+)(?:and\s+)?hopes?\s+for\s+(?:a\s+)?reply[.!]?\s*$/i',
+    ];
+
+    $prev = null;
+    while ($prev !== $text) {
+        $prev = $text;
+        foreach ($patterns as $re) {
+            $text = trim((string) preg_replace($re, '', $text));
+        }
+        $text = rtrim($text, " \t.,;");
+    }
+
+    return $text;
 }
 
 /**

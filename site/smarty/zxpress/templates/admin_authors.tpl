@@ -1,43 +1,144 @@
 {include file="admin_top.tpl"}
 {if $login eq 1 and $username}
 
-<TABLE cellSpacing=0 cellPadding=0 align="center" width="100%">
-<TBODY>
-<TR>
-<TD>
+{literal}
+<style>
+.admin-authors-page-shell {
+	box-sizing: border-box;
+	height: calc(100vh - 88px);
+	max-height: calc(100vh - 88px);
+	min-height: 420px;
+	padding: 0 10px 10px;
+	display: flex;
+	flex-direction: column;
+}
+.admin-authors-panel {
+	flex: 1 1 auto;
+	min-height: 0;
+	padding: 10px;
+	border: 1px solid #C8C5AC;
+	background-color: var(--smn-paper);
+	display: flex;
+	flex-direction: column;
+	font: bold 14px Verdana;
+}
+.admin-authors-toolbar {
+	flex: 0 0 auto;
+	margin-bottom: 10px;
+}
+.admin-authors-layout {
+	flex: 1 1 auto;
+	min-height: 0;
+	width: 100%;
+	display: flex;
+	gap: 0;
+}
+.admin-authors-sidebar {
+	flex: 0 0 280px;
+	width: 280px;
+	border-right: 1px solid #C8C5AC;
+	padding-right: 10px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	min-height: 0;
+}
+.admin-authors-sidebar-head {
+	flex: 0 0 auto;
+	font: bold 12px Verdana;
+	margin-bottom: 6px;
+}
+.admin-authors-list-wrap {
+	flex: 1 1 auto;
+	min-height: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	overscroll-behavior: contain;
+	-webkit-overflow-scrolling: touch;
+	font: normal 12px Verdana;
+	padding-right: 4px;
+	border: 1px solid #C8C5AC;
+	background: var(--smn-surface);
+}
+.admin-authors-list-wrap ul {
+	list-style: none;
+	margin: 0;
+	padding: 4px 0;
+}
+.admin-authors-list-wrap li {
+	margin: 0;
+	line-height: 1.35;
+}
+.admin-authors-list-wrap a {
+	color: #493C2F;
+	text-decoration: none;
+	display: block;
+	padding: 5px 8px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.admin-authors-list-wrap a:hover { color: #A41E00; background: rgba(164,30,0,0.06); }
+.admin-authors-list-wrap a.nav-active {
+	font-weight: bold;
+	color: #A41E00;
+	background: rgba(164,30,0,0.1);
+}
+.admin-authors-list-wrap a.is-inactive { opacity: 0.55; }
+.admin-authors-main {
+	flex: 1 1 auto;
+	min-width: 0;
+	min-height: 0;
+	padding-left: 12px;
+	overflow: auto;
+}
+.admin-authors-main-head {
+	font: bold 12px Verdana;
+	margin-bottom: 6px;
+}
+</style>
+{/literal}
 
-<div style="font: bold 14px Verdana">
-<br>
+<script type="text/javascript">
+(function () {
+	var active = document.querySelector('.admin-authors-list-wrap a.nav-active');
+	if (active && typeof active.scrollIntoView === 'function') {
+		active.scrollIntoView({ block: 'nearest' });
+	}
+})();
+</script>
 
-<div style="padding: 10px; border: 1px solid #C8C5AC; background-color: var(--smn-paper)">
+<div class="admin-authors-page-shell">
+<div class="admin-authors-panel">
 
-<div style="margin-bottom:10px">
+<div class="admin-authors-toolbar">
 <a href="admin_authors.php?id=0" style="font-weight:bold">+ Новый автор</a>
 </div>
 
 {if $error}
-<div style="color:#A41E00;margin-bottom:10px">{$error}</div>
+<div style="color:#A41E00;margin-bottom:10px;flex:0 0 auto">{$error}</div>
 {/if}
 
-<table width="100%" cellpadding="6" cellspacing="0">
-<tr>
-<td valign="top" width="260" style="border-right:1px solid #C8C5AC">
-<div style="font: bold 12px Verdana; margin-bottom:6px">Авторы</div>
-<form method="get" action="admin_authors.php">
-<label for="admin-author-list" class="u-sr-only">Выбрать автора</label>
-<select id="admin-author-list" name="id" style="width:240px;height:22px" onchange="this.form.submit()">
-<option value="0" {if !$author || !$author.id}selected{/if}>— выбрать —</option>
+<div class="admin-authors-layout">
+<aside class="admin-authors-sidebar">
+<div class="admin-authors-sidebar-head">Авторы</div>
+<div class="admin-authors-list-wrap" id="admin-author-list" role="navigation" aria-label="Список авторов">
+{if $authors_list && $authors_list|@count gt 0}
+<ul>
 {section name=n loop=$authors_list}
-<option value="{$authors_list[n].id}" {if $author && $authors_list[n].id eq $author.id}selected{/if}>
-{$authors_list[n].nickname}{if $authors_list[n].name_ru} ({$authors_list[n].name_ru}){elseif $authors_list[n].name_en} ({$authors_list[n].name_en}){/if}
-</option>
+<li>
+<a href="admin_authors.php?id={$authors_list[n].id}"{if ($author && $authors_list[n].id eq $author.id) || $authors_list[n].is_active eq 0} class="{if $author && $authors_list[n].id eq $author.id}nav-active{/if}{if $authors_list[n].is_active eq 0}{if $author && $authors_list[n].id eq $author.id} {/if}is-inactive{/if}"{/if}>{if $authors_list[n].is_active eq 0}[×] {/if}{$authors_list[n].nickname|escape:'html'}{if $authors_list[n].name_ru} ({$authors_list[n].name_ru|escape:'html'}){elseif $authors_list[n].name_en} ({$authors_list[n].name_en|escape:'html'}){/if}</a>
+</li>
 {/section}
-</select>
-</form>
-</td>
+</ul>
+{else}
+<p style="color:#666;margin:8px">Авторов пока нет</p>
+{/if}
+</div>
+</aside>
 
-<td valign="top">
-<div style="font: bold 12px Verdana; margin-bottom:6px">
+<div class="admin-authors-main">
+<div class="admin-authors-main-head">
 {if $author && $author.id}Редактирование автора #{$author.id}{else}Новый автор{/if}
 </div>
 
@@ -122,18 +223,10 @@
 
 </form>
 
-</td>
-</tr>
-</table>
-
+</div>
 </div>
 
 </div>
-
-</TD>
-</TR>
-</TBODY>
-</TABLE>
+</div>
 
 {/if}
-
