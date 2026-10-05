@@ -3,6 +3,9 @@
 /**
  * Letter scan OCR via OdiRouter (Gemini vision).
  * Used by admin_letters.php?action=ocr
+ *
+ * PHP runs on an internal Docker network — default URL goes through nginx
+ * (/internal/odirouter/…), same pattern as admin_translate.php.
  */
 
 declare(strict_types=1);
@@ -161,7 +164,8 @@ function letters_ocr_analyze(array $images): array
     if ($apiKey === '') {
         throw new RuntimeException('ODIROUTER_API_KEY не задан в окружении PHP');
     }
-    $baseUrl = rtrim((string) (getenv('ODIROUTER_BASE_URL') ?: 'https://api.odirouter.ai/v1'), '/');
+    // Prefer in-cluster nginx proxy; override with ODIROUTER_BASE_URL if needed.
+    $baseUrl = rtrim((string) (getenv('ODIROUTER_BASE_URL') ?: 'http://nginx/internal/odirouter/v1'), '/');
     $model = trim((string) (getenv('ODIROUTER_MODEL_LETTER') ?: LETTERS_OCR_MODEL_DEFAULT));
     if ($model === '') {
         $model = LETTERS_OCR_MODEL_DEFAULT;
