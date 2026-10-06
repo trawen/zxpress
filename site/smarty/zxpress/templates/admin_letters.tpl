@@ -1,37 +1,156 @@
 {include file="admin_top.tpl"}
 {if $login eq 1 and $username}
 
-<TABLE cellSpacing=0 cellPadding=0 align="center" width="100%">
-<TBODY>
-<TR>
-<TD>
+{literal}
+<style>
+.admin-letters-page-shell {
+	box-sizing: border-box;
+	height: calc(100vh - 88px);
+	max-height: calc(100vh - 88px);
+	min-height: 420px;
+	padding: 0 10px 10px;
+	display: flex;
+	flex-direction: column;
+}
+.admin-letters-panel {
+	flex: 1 1 auto;
+	min-height: 0;
+	padding: 10px;
+	border: 1px solid #C8C5AC;
+	background-color: var(--smn-paper);
+	display: flex;
+	flex-direction: column;
+	font: bold 14px Verdana;
+}
+.admin-letters-toolbar {
+	flex: 0 0 auto;
+	margin-bottom: 10px;
+}
+.admin-letters-layout {
+	flex: 1 1 auto;
+	min-height: 0;
+	width: 100%;
+	display: flex;
+	gap: 0;
+}
+.admin-letters-sidebar {
+	flex: 0 0 600px;
+	width: 600px;
+	border-right: 1px solid #C8C5AC;
+	padding-right: 10px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	min-height: 0;
+}
+.admin-letters-sidebar-head {
+	flex: 0 0 auto;
+	font: bold 12px Verdana;
+	margin-bottom: 6px;
+}
+.admin-letters-sidebar-filters {
+	flex: 0 0 auto;
+	margin-bottom: 8px;
+	font: normal 11px Verdana;
+	color: #555;
+}
+.admin-letters-sidebar-filters select {
+	width: 100%;
+	height: 22px;
+	box-sizing: border-box;
+	margin-top: 4px;
+}
+.admin-letters-sidebar-filters a { color: #A41E00; }
+.admin-letters-list-wrap {
+	flex: 1 1 auto;
+	min-height: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	overscroll-behavior: contain;
+	-webkit-overflow-scrolling: touch;
+	font: normal 12px Verdana;
+	padding-right: 4px;
+	border: 1px solid #C8C5AC;
+	background: var(--smn-surface);
+}
+.admin-letters-list-wrap ul {
+	list-style: none;
+	margin: 0;
+	padding: 4px 0;
+}
+.admin-letters-list-wrap li {
+	margin: 0;
+	line-height: 1.35;
+	display: flex;
+	align-items: baseline;
+	gap: 6px;
+}
+.admin-letters-list-wrap a.admin-letters-list-name {
+	color: #493C2F;
+	text-decoration: none;
+	display: block;
+	flex: 1 1 auto;
+	min-width: 0;
+	padding: 5px 8px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.admin-letters-list-wrap a.admin-letters-list-name:hover { color: #A41E00; background: rgba(164,30,0,0.06); }
+.admin-letters-list-wrap a.admin-letters-list-name.nav-active {
+	font-weight: bold;
+	color: #A41E00;
+	background: rgba(164,30,0,0.1);
+}
+.admin-letters-list-wrap a.admin-letters-list-name.is-deleted { opacity: 0.55; }
+.admin-letters-list-status {
+	flex: 0 0 auto;
+	font: normal 11px Verdana;
+	padding: 5px 8px 5px 0;
+	white-space: nowrap;
+	color: #555;
+	max-width: 120px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.admin-letters-main {
+	flex: 1 1 auto;
+	min-width: 0;
+	min-height: 0;
+	padding-left: 12px;
+	overflow: auto;
+}
+.admin-letters-main-head {
+	font: bold 12px Verdana;
+	margin-bottom: 6px;
+}
+</style>
+{/literal}
 
-<div style="font: bold 14px Verdana">
-<br>
+<div class="admin-letters-page-shell">
+<div class="admin-letters-panel">
 
-<div style="padding: 10px; border: 1px solid #C8C5AC; background-color: var(--smn-paper)">
-
-<div style="margin-bottom:10px">
-<a href="admin_letters.php?id=0" style="font-weight:bold">+ Новое письмо</a>
+<div class="admin-letters-toolbar">
+<a href="admin_letters.php?id=0{if $status_filter neq 'all'}&amp;status={$status_filter|escape:'url'}{/if}{if $author_filter_id gt 0}&amp;author_id={$author_filter_id}{/if}" style="font-weight:bold">+ Новое письмо</a>
 </div>
 
 {if $error}
-<div style="color:#A41E00;margin-bottom:10px">{$error}</div>
+<div style="color:#A41E00;margin-bottom:10px;flex:0 0 auto">{$error}</div>
 {/if}
 
-<table width="100%" cellpadding="6" cellspacing="0">
-<tr>
-<td valign="top" width="360" style="border-right:1px solid #C8C5AC">
-<div style="font: bold 12px Verdana; margin-bottom:6px">Письма</div>
+<div class="admin-letters-layout">
+<aside class="admin-letters-sidebar">
+<div class="admin-letters-sidebar-head">Письма</div>
+<div class="admin-letters-sidebar-filters">
 {if $author_filter_id gt 0}
-<div style="font:normal 11px Verdana;margin-bottom:8px;color:#555">
-От автора / к автору: <b>{$author_filter_nick}</b>
- — <a href="admin_letters.php?status={$status_filter|escape:'url'}">сбросить фильтр</a>
+<div style="margin-bottom:6px">
+От / к: <b>{$author_filter_nick}</b>
+ — <a href="admin_letters.php?status={$status_filter|escape:'url'}">сбросить</a>
 </div>
 {/if}
-<form method="get" action="admin_letters.php" style="margin-bottom:8px">
+<form method="get" action="admin_letters.php">
 <label for="admin-letter-status-filter" class="u-sr-only">Фильтр статуса</label>
-<select id="admin-letter-status-filter" name="status" style="width:340px;height:22px;margin-bottom:6px" onchange="this.form.submit()">
+<select id="admin-letter-status-filter" name="status" onchange="this.form.submit()">
 <option value="all" {if $status_filter eq 'all'}selected{/if}>все статусы</option>
 <option value="{$letter_status_draft}" {if $status_filter eq $letter_status_draft}selected{/if}>черновики</option>
 <option value="{$letter_status_queued}" {if $status_filter eq $letter_status_queued}selected{/if}>в очереди</option>
@@ -41,23 +160,25 @@
 {if $author_filter_id gt 0}<input type="hidden" name="author_id" value="{$author_filter_id}">{/if}
 {if $letter && $letter.id}<input type="hidden" name="id" value="{$letter.id}">{/if}
 </form>
-<form method="get" action="admin_letters.php">
-{if $status_filter neq 'all'}<input type="hidden" name="status" value="{$status_filter}">{/if}
-{if $author_filter_id gt 0}<input type="hidden" name="author_id" value="{$author_filter_id}">{/if}
-<label for="admin-letter-list" class="u-sr-only">Выбрать письмо</label>
-<select id="admin-letter-list" name="id" style="width:340px;height:22px" onchange="this.form.submit()">
-<option value="0" {if !$letter || !$letter.id}selected{/if}>— новое письмо —</option>
+</div>
+<div class="admin-letters-list-wrap" id="admin-letter-list" role="navigation" aria-label="Список писем">
+{if $letters_list && $letters_list|@count gt 0}
+<ul>
 {section name=n loop=$letters_list}
-<option value="{$letters_list[n].id}" {if $letter && $letters_list[n].id eq $letter.id}selected{/if}>
-#{$letters_list[n].id} [{$letters_list[n].publish_label}] {$letters_list[n].from_nick} → {$letters_list[n].to_nick}: {$letters_list[n].title_ru}
-</option>
+<li>
+<a class="admin-letters-list-name{if $letter && $letters_list[n].id eq $letter.id} nav-active{/if}{if $letters_list[n].publish_status eq $letter_status_deleted} is-deleted{/if}" href="admin_letters.php?id={$letters_list[n].id}{if $status_filter neq 'all'}&amp;status={$status_filter|escape:'url'}{/if}{if $author_filter_id gt 0}&amp;author_id={$author_filter_id}{/if}" title="#{$letters_list[n].id} {$letters_list[n].from_nick} → {$letters_list[n].to_nick}: {$letters_list[n].title_ru}">#{$letters_list[n].id} {$letters_list[n].from_nick} → {$letters_list[n].to_nick}: {$letters_list[n].title_ru}</a>
+<span class="admin-letters-list-status" title="{$letters_list[n].publish_label}">{$letters_list[n].publish_label}</span>
+</li>
 {/section}
-</select>
-</form>
-</td>
+</ul>
+{else}
+<p style="color:#666;margin:8px">Писем пока нет</p>
+{/if}
+</div>
+</aside>
 
-<td valign="top">
-<div style="font: bold 12px Verdana; margin-bottom:6px">
+<div class="admin-letters-main">
+<div class="admin-letters-main-head">
 {if $letter && $letter.id}Редактирование письма #{$letter.id}{else}Новое письмо{/if}
 </div>
 
@@ -224,18 +345,11 @@
 
 </form>
 
-</td>
-</tr>
-</table>
-
+</div>
 </div>
 
 </div>
-
-</TD>
-</TR>
-</TBODY>
-</TABLE>
+</div>
 
 <link rel="stylesheet" href="/js/cropper.min.css">
 {literal}

@@ -34,8 +34,8 @@
 	gap: 0;
 }
 .admin-authors-sidebar {
-	flex: 0 0 420px;
-	width: 420px;
+	flex: 0 0 600px;
+	width: 600px;
 	border-right: 1px solid #C8C5AC;
 	padding-right: 10px;
 	box-sizing: border-box;
