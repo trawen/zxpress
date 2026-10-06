@@ -874,6 +874,12 @@ while ($z && ($t = mysqli_fetch_array($z))) {
 }
 $smarty->assign('press_list', $press_list);
 
+$letterDetectJs = __DIR__ . '/js/admin_letter_sheet_detect.js';
+$smarty->assign(
+    'letter_sheet_detect_js_v',
+    is_file($letterDetectJs) ? (string) filemtime($letterDetectJs) : '1'
+);
+
 $smarty->assign('title', 'Админка: Письма');
 $smarty->display('admin_letters.tpl');
 

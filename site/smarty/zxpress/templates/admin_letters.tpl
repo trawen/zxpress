@@ -375,7 +375,7 @@ body.admin-letter-crop-open { overflow: hidden; }
 </div>
 
 <script src="/js/cropper.min.js"></script>
-<script src="/js/admin_letter_sheet_detect.js"></script>
+<script src="/js/admin_letter_sheet_detect.js?v={$letter_sheet_detect_js_v|escape:'url'}"></script>
 {literal}
 <script type="text/javascript">
 (function () {
