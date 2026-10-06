@@ -841,7 +841,7 @@ if (!$filterAll) {
     $where[] = 'l.publish_status=' . (int) $statusFilter;
 }
 if ($authorFilterId > 0) {
-    $where[] = 'l.author_from=' . $authorFilterId;
+    $where[] = '(l.author_from=' . $authorFilterId . ' OR l.author_to=' . $authorFilterId . ')';
 }
 if ($where !== []) {
     $listSql .= ' WHERE ' . implode(' AND ', $where);

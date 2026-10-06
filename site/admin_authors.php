@@ -129,7 +129,7 @@ $authors_list = [];
 $z = db_select(
     $db,
     'SELECT a.*, c.name AS city_name,
-            (SELECT COUNT(*) FROM letters l WHERE l.author_from = a.id) AS letters_from_count
+            (SELECT COUNT(*) FROM letters l WHERE l.author_from = a.id OR l.author_to = a.id) AS letters_from_count
      FROM authors a
      LEFT JOIN cities c ON c.id = a.city_id
      ORDER BY a.nickname ASC'

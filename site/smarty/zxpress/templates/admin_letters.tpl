@@ -25,7 +25,7 @@
 <div style="font: bold 12px Verdana; margin-bottom:6px">Письма</div>
 {if $author_filter_id gt 0}
 <div style="font:normal 11px Verdana;margin-bottom:8px;color:#555">
-От автора: <b>{$author_filter_nick}</b>
+От автора / к автору: <b>{$author_filter_nick}</b>
  — <a href="admin_letters.php?status={$status_filter|escape:'url'}">сбросить фильтр</a>
 </div>
 {/if}
