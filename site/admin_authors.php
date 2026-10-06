@@ -167,10 +167,11 @@ $smarty->assign('users', $users);
 $authors_list = [];
 $z = db_select(
     $db,
-    'SELECT a.*, c.name AS city_name,
+    'SELECT a.*, c.name AS city_name, co.country_name,
             (SELECT COUNT(*) FROM letters l WHERE l.author_from = a.id OR l.author_to = a.id) AS letters_from_count
      FROM authors a
      LEFT JOIN cities c ON c.id = a.city_id
+     LEFT JOIN countries co ON co.id = COALESCE(NULLIF(a.country_id, 0), c.country_id)
      ORDER BY a.nickname ASC'
 );
 while ($z && ($t = mysqli_fetch_array($z))) {
@@ -180,8 +181,10 @@ while ($z && ($t = mysqli_fetch_array($z))) {
             $t[$field] = plain_text_normalize_for_storage($t[$field]);
         }
     }
-    if (isset($t['city_name']) && is_string($t['city_name']) && $t['city_name'] !== '') {
-        $t['city_name'] = plain_text_normalize_for_storage($t['city_name']);
+    foreach (['city_name', 'country_name'] as $field) {
+        if (isset($t[$field]) && is_string($t[$field]) && $t[$field] !== '') {
+            $t[$field] = plain_text_normalize_for_storage($t[$field]);
+        }
     }
     $t['letters_from_count'] = (int) ($t['letters_from_count'] ?? 0);
     $authors_list[] = $t;

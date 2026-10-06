@@ -145,7 +145,7 @@
 <ul>
 {section name=n loop=$authors_list}
 <li>
-<a class="admin-authors-list-name{if $author && $authors_list[n].id eq $author.id} nav-active{/if}{if $authors_list[n].is_active eq 0} is-inactive{/if}" href="admin_authors.php?id={$authors_list[n].id}">{if $authors_list[n].is_active eq 0}[×] {/if}{$authors_list[n].nickname}{if $authors_list[n].name_ru} ({$authors_list[n].name_ru}){elseif $authors_list[n].name_en} ({$authors_list[n].name_en}){/if}{if $authors_list[n].city_name} — {$authors_list[n].city_name}{/if}</a>
+<a class="admin-authors-list-name{if $author && $authors_list[n].id eq $author.id} nav-active{/if}{if $authors_list[n].is_active eq 0} is-inactive{/if}" href="admin_authors.php?id={$authors_list[n].id}">{if $authors_list[n].is_active eq 0}[×] {/if}{$authors_list[n].nickname}{if $authors_list[n].name_ru} ({$authors_list[n].name_ru}){elseif $authors_list[n].name_en} ({$authors_list[n].name_en}){/if}{if $authors_list[n].group_name} / {$authors_list[n].group_name}{/if}{if $authors_list[n].city_name || $authors_list[n].country_name} — {if $authors_list[n].city_name}{$authors_list[n].city_name}{if $authors_list[n].country_name}, {/if}{/if}{if $authors_list[n].country_name}{$authors_list[n].country_name}{/if}{/if}</a>
 <span class="admin-authors-list-letters">{if $authors_list[n].letters_from_count gt 0}<a href="admin_letters.php?status=all&amp;author_id={$authors_list[n].id}" title="Письма с участием этого автора">{$authors_list[n].letters_from_count}</a>{else}<span class="is-zero">0</span>{/if}</span>
 </li>
 {/section}
