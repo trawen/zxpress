@@ -54,13 +54,43 @@
 	font: normal 11px Verdana;
 	color: #555;
 }
-.admin-letters-sidebar-filters select {
-	width: 100%;
-	height: 22px;
-	box-sizing: border-box;
+.admin-letters-sidebar-filters a { color: #A41E00; }
+.admin-letters-status-filters {
+	display: flex;
+	gap: 4px;
 	margin-top: 4px;
 }
-.admin-letters-sidebar-filters a { color: #A41E00; }
+.admin-letters-status-filters a {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 28px;
+	height: 28px;
+	border: 1px solid #C8C5AC;
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: #666;
+	background: var(--smn-surface);
+	text-decoration: none;
+}
+.admin-letters-status-filters a svg,
+.admin-letters-list-status svg {
+	display: block;
+	width: 15px;
+	height: 15px;
+	stroke: currentColor;
+	fill: none;
+}
+.admin-letters-status-filters a:hover {
+	color: #A41E00;
+	border-color: #A41E00;
+	background: rgba(164,30,0,0.06);
+}
+.admin-letters-status-filters a.is-active {
+	color: #A41E00;
+	border-color: #A41E00;
+	background: rgba(164,30,0,0.1);
+}
 .admin-letters-list-wrap {
 	flex: 1 1 auto;
 	min-height: 0;
@@ -77,6 +107,24 @@
 	list-style: none;
 	margin: 0;
 	padding: 4px 0;
+}
+.admin-letters-list-group {
+	margin: 0;
+	padding: 0;
+}
+.admin-letters-list-group-head {
+	font: bold 11px Verdana;
+	color: #493C2F;
+	padding: 8px 8px 3px;
+	border-top: 1px solid #C8C5AC;
+	background: rgba(73, 60, 47, 0.05);
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+.admin-letters-list-group:first-child .admin-letters-list-group-head {
+	border-top: 0;
+	padding-top: 5px;
 }
 .admin-letters-list-wrap li {
 	margin: 0;
@@ -96,22 +144,28 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
+.admin-letters-list-wrap a.admin-letters-list-name .admin-letters-list-date {
+	color: #9a9084;
+	margin-right: 8px;
+}
 .admin-letters-list-wrap a.admin-letters-list-name:hover { color: #A41E00; background: rgba(164,30,0,0.06); }
+.admin-letters-list-wrap a.admin-letters-list-name:hover .admin-letters-list-date { color: #c4a090; }
 .admin-letters-list-wrap a.admin-letters-list-name.nav-active {
 	font-weight: bold;
 	color: #A41E00;
 	background: rgba(164,30,0,0.1);
 }
+.admin-letters-list-wrap a.admin-letters-list-name.nav-active .admin-letters-list-date { color: #c4877a; font-weight: normal; }
 .admin-letters-list-wrap a.admin-letters-list-name.is-deleted { opacity: 0.55; }
 .admin-letters-list-status {
 	flex: 0 0 auto;
-	font: normal 11px Verdana;
-	padding: 5px 8px 5px 0;
-	white-space: nowrap;
-	color: #555;
-	max-width: 120px;
-	overflow: hidden;
-	text-overflow: ellipsis;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 22px;
+	height: 22px;
+	margin: 2px 6px 2px 0;
+	color: #666;
 }
 .admin-letters-main {
 	flex: 1 1 auto;
@@ -148,29 +202,40 @@
  — <a href="admin_letters.php?status={$status_filter|escape:'url'}">сбросить</a>
 </div>
 {/if}
-<form method="get" action="admin_letters.php">
-<label for="admin-letter-status-filter" class="u-sr-only">Фильтр статуса</label>
-<select id="admin-letter-status-filter" name="status" onchange="this.form.submit()">
-<option value="all" {if $status_filter eq 'all'}selected{/if}>все статусы</option>
-<option value="{$letter_status_draft}" {if $status_filter eq $letter_status_draft}selected{/if}>черновики</option>
-<option value="{$letter_status_queued}" {if $status_filter eq $letter_status_queued}selected{/if}>в очереди</option>
-<option value="{$letter_status_published}" {if $status_filter eq $letter_status_published}selected{/if}>опубликованные</option>
-<option value="{$letter_status_deleted}" {if $status_filter eq $letter_status_deleted}selected{/if}>удалённые</option>
-</select>
-{if $author_filter_id gt 0}<input type="hidden" name="author_id" value="{$author_filter_id}">{/if}
-{if $letter && $letter.id}<input type="hidden" name="id" value="{$letter.id}">{/if}
-</form>
+{capture name=letter_filter_qs}{if $author_filter_id gt 0}&amp;author_id={$author_filter_id}{/if}{if $letter && $letter.id}&amp;id={$letter.id}{/if}{/capture}
+<nav class="admin-letters-status-filters" aria-label="Фильтр статуса">
+{* Lucide icons (ISC) — https://lucide.dev *}
+<a class="is-all{if $status_filter eq 'all'} is-active{/if}" href="admin_letters.php?status=all{$smarty.capture.letter_filter_qs}" title="Все статусы" aria-label="Все статусы"{if $status_filter eq 'all'} aria-current="true"{/if}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg></a>
+<a class="is-draft{if $status_filter eq $letter_status_draft} is-active{/if}" href="admin_letters.php?status={$letter_status_draft}{$smarty.capture.letter_filter_qs}" title="Черновики" aria-label="Черновики"{if $status_filter eq $letter_status_draft} aria-current="true"{/if}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></svg></a>
+<a class="is-queued{if $status_filter eq $letter_status_queued} is-active{/if}" href="admin_letters.php?status={$letter_status_queued}{$smarty.capture.letter_filter_qs}" title="В очереди" aria-label="В очереди"{if $status_filter eq $letter_status_queued} aria-current="true"{/if}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></a>
+<a class="is-published{if $status_filter eq $letter_status_published} is-active{/if}" href="admin_letters.php?status={$letter_status_published}{$smarty.capture.letter_filter_qs}" title="Опубликованные" aria-label="Опубликованные"{if $status_filter eq $letter_status_published} aria-current="true"{/if}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a>
+<a class="is-deleted{if $status_filter eq $letter_status_deleted} is-active{/if}" href="admin_letters.php?status={$letter_status_deleted}{$smarty.capture.letter_filter_qs}" title="Удалённые" aria-label="Удалённые"{if $status_filter eq $letter_status_deleted} aria-current="true"{/if}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/></svg></a>
+</nav>
 </div>
 <div class="admin-letters-list-wrap" id="admin-letter-list" role="navigation" aria-label="Список писем">
-{if $letters_list && $letters_list|@count gt 0}
+{if $letters_groups && $letters_groups|@count gt 0}
+{section name=g loop=$letters_groups}
+<div class="admin-letters-list-group">
+<div class="admin-letters-list-group-head">{$letters_groups[g].nick}</div>
 <ul>
-{section name=n loop=$letters_list}
+{section name=n loop=$letters_groups[g].letters}
+{assign var=row value=$letters_groups[g].letters[n]}
 <li>
-<a class="admin-letters-list-name{if $letter && $letters_list[n].id eq $letter.id} nav-active{/if}{if $letters_list[n].publish_status eq $letter_status_deleted} is-deleted{/if}" href="admin_letters.php?id={$letters_list[n].id}{if $status_filter neq 'all'}&amp;status={$status_filter|escape:'url'}{/if}{if $author_filter_id gt 0}&amp;author_id={$author_filter_id}{/if}" title="#{$letters_list[n].id} {$letters_list[n].from_nick} → {$letters_list[n].to_nick}: {$letters_list[n].title_ru}">#{$letters_list[n].id} {$letters_list[n].from_nick} → {$letters_list[n].to_nick}: {$letters_list[n].title_ru}</a>
-<span class="admin-letters-list-status" title="{$letters_list[n].publish_label}">{$letters_list[n].publish_label}</span>
+<a class="admin-letters-list-name{if $letter && $row.id eq $letter.id} nav-active{/if}{if $row.publish_status eq $letter_status_deleted} is-deleted{/if}" href="admin_letters.php?id={$row.id}{if $status_filter neq 'all'}&amp;status={$status_filter|escape:'url'}{/if}{if $author_filter_id gt 0}&amp;author_id={$author_filter_id}{/if}" title="#{$row.id} {$row.from_nick} → {$row.to_nick}: {$row.title_ru}"><span class="admin-letters-list-date">{$row.list_published}</span>{$row.list_text}</a>
+{if $row.publish_status eq $letter_status_queued}
+<span class="admin-letters-list-status is-queued" title="{$row.publish_label}" aria-label="{$row.publish_label}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+{elseif $row.publish_status eq $letter_status_published}
+<span class="admin-letters-list-status is-published" title="{$row.publish_label}" aria-label="{$row.publish_label}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+{elseif $row.publish_status eq $letter_status_deleted}
+<span class="admin-letters-list-status is-deleted" title="{$row.publish_label}" aria-label="{$row.publish_label}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/></svg></span>
+{else}
+<span class="admin-letters-list-status is-draft" title="{$row.publish_label}" aria-label="{$row.publish_label}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></svg></span>
+{/if}
 </li>
 {/section}
 </ul>
+</div>
+{/section}
 {else}
 <p style="color:#666;margin:8px">Писем пока нет</p>
 {/if}

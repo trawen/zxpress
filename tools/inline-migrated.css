@@ -94,8 +94,6 @@
 .articles-date { font: 9pt Georgia; padding-right: 8px; color: #796C5F; }
 .articles-row { padding-bottom: 2px; padding-left: 8px; }
 .articles-link { font: 10pt Verdana; }
-.articles-sape { padding-bottom: 2px; padding-left: 8px; font: 10pt Verdana; color: black; }
-
 /* tag.tpl */
 .tag-press-title { font: normal 15pt Times; }
 .tag-date-pad { padding-bottom: 8px; }
@@ -155,7 +153,6 @@
 
 /* issue.tpl */
 .issue-cover { border: 8px solid #242321; border-radius: 2px; }
-.issue-sape { padding: 4px; font: normal 10px Verdana; }
 .issue-type-label { display: inline; font-size: 15pt; }
 .issue-meta { font-size: 13pt; line-height: 150%; }
 .issue-download-icon { padding-right: 4px; }

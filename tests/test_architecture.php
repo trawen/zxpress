@@ -22,7 +22,7 @@ $init = file_get_contents($base . 'init.inc');
 
 test('init.inc requires includes/auth.php', strpos($init, "includes/auth.php") !== false);
 test('init.inc requires includes/locale.php', strpos($init, "includes/locale.php") !== false);
-test('init.inc requires includes/sape_integration.php', strpos($init, "includes/sape_integration.php") !== false);
+test('init.inc does not load SAPE', stripos($init, 'sape') === false);
 test('init.inc enables Smarty escape_html', strpos($init, '$smarty->escape_html = true') !== false);
 
 $functions = file_get_contents($base . 'includes/functions.php');

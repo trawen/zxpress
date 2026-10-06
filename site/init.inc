@@ -58,7 +58,6 @@ require_once __DIR__ . '/includes/functions.php';
 require_once __DIR__ . '/includes/storage_paths.php';
 require_once __DIR__ . '/includes/auth.php';
 require_once __DIR__ . '/includes/locale.php';
-require_once __DIR__ . '/includes/sape_integration.php';
 require_once __DIR__ . '/includes/activity.php';
 
 // DEBUG: always show all PHP errors on screen
@@ -152,7 +151,7 @@ $smarty->compile_dir = zx_storage_dir('smarty_templates_c') . '/';
 $smarty->config_dir = __DIR__ . '/smarty/zxpress/configs/';
 $smarty->cache_dir = zx_storage_dir('smarty_cache') . '/';
 
-// Auto-escape HTML in {$vars}; use |nofilter for trusted HTML (Sape, Manticore excerpts, etc.)
+// Auto-escape HTML in {$vars}; use |nofilter for trusted HTML (Manticore excerpts, etc.)
 $smarty->escape_html = true;
 
 $smarty->assign('host', "/");
@@ -164,8 +163,6 @@ activity_admin_request_boot($db);
 
 $url = explode("?", $_SERVER['REQUEST_URI']);
 $smarty->assign('url', $url[0]);
-
-setup_sape($smarty, $url);
 
 setup_locale($smarty, $db, $months);
 

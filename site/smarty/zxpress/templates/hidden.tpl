@@ -32,7 +32,6 @@
 <a class="articles-link" href="article.php?id={$articles[n][0]}&show=1">{$articles[n].title_list nofilter}</a>
 </div>
 {/section}
-<div class="articles-sape">{$sape1 nofilter}</div>
 
 
 </td>

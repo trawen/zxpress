@@ -33,7 +33,7 @@ echo "  → $BACKUP_DIR/zxpress_db_${TIMESTAMP}.sql.gz"
 
 echo "[2/3] Archiving critical data directories..."
 TAR_PATHS=()
-for rel in data/uploads data/legacy data/integrations/sape; do
+for rel in data/uploads data/legacy; do
 	if [ -e "$PROJECT_DIR/$rel" ]; then
 		TAR_PATHS+=("$rel")
 	else

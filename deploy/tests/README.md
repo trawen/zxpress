@@ -38,7 +38,7 @@ LOG_LEVEL=STANDARD ./deploy/tests/smoke_http.sh
   - `/chapters/` -> `data/content-store/chapters/`
 - PHP startup chronology PNG: recent `php` container logs must show `cache/chronology/zxpress_dinamic.png` and must not reference legacy `data/generated/zxpress_dinamic.png`.
 - Manticore indexer: `deploy/scripts/manticore-index-all.sh` completes without `Permission denied` / `FATAL: failed to open` (full reindex; slower).
-- Environment contract has all required runtime variables (`DB_*`, `MANTICORE_*`, `APP_*`, `SAPE_USER_HASH`)
+- Environment contract has all required runtime variables (`DB_*`, `MANTICORE_*`, `APP_*`)
 
 Notes:
 - The script uses a non-bot `User-Agent` (`SmokeTest/1.0`) so `init.inc` does not disable sessions.

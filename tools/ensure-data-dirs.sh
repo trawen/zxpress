@@ -63,7 +63,6 @@ ensure_dir "book_rubrics"
 ensure_dir "cache/chronology"
 ensure_dir "cache/smarty/templates_c"
 ensure_dir "cache/smarty/cache"
-ensure_dir "integrations/sape"
 ensure_dir "tmp"
 
 # Chronology PNG runtime target; entrypoint regenerates content.

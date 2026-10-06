@@ -847,6 +847,8 @@ if ($where !== []) {
     $listSql .= ' WHERE ' . implode(' AND ', $where);
 }
 $listSql .= ' ORDER BY
+     COALESCE(af.nickname, \'\') ASC,
+     af.id ASC,
      CASE l.publish_status
        WHEN ' . LETTER_STATUS_QUEUED . ' THEN 0
        WHEN ' . LETTER_STATUS_DRAFT . ' THEN 1
@@ -870,6 +872,8 @@ while ($queuedRows && ($qr = mysqli_fetch_assoc($queuedRows))) {
     $queueIndexById[(int) $qr['id']] = $queuePos;
 }
 
+$letters_groups = [];
+$groupIndexByKey = [];
 while ($z && ($t = mysqli_fetch_array($z))) {
     $st = (int) ($t['publish_status'] ?? LETTER_STATUS_DRAFT);
     $t['publish_status'] = $st;
@@ -879,9 +883,68 @@ while ($z && ($t = mysqli_fetch_array($z))) {
         $t['queue_pos'] = $queueIndexById[$lid];
         $t['publish_label'] = 'очередь #' . $queueIndexById[$lid];
     }
+
+    $fromId = (int) ($t['author_from'] ?? 0);
+    $toId = (int) ($t['author_to'] ?? 0);
+    $fromNick = trim((string) ($t['from_nick'] ?? ''));
+    $toNick = trim((string) ($t['to_nick'] ?? ''));
+
+    $pubRaw = trim((string) ($t['published_at'] ?? ''));
+    $pubLabel = '—';
+    if ($pubRaw !== '' && $pubRaw !== '0000-00-00 00:00:00') {
+        $ts = strtotime($pubRaw);
+        if ($ts !== false) {
+            $pubLabel = date('d.m.Y', $ts);
+        }
+    }
+    $titleRu = trim((string) ($t['title_ru'] ?? ''));
+
+    // With author filter: group by the other party. Otherwise by sender.
+    if ($authorFilterId > 0) {
+        if ($fromId === $authorFilterId) {
+            $peerId = $toId;
+            $groupNick = $toNick !== '' ? $toNick : ('#' . $toId);
+            $t['list_direction'] = 'to';
+        } else {
+            $peerId = $fromId;
+            $groupNick = $fromNick !== '' ? $fromNick : ('#' . $fromId);
+            $t['list_direction'] = 'from';
+        }
+        $groupKey = 'peer:' . $peerId;
+        $t['list_peer'] = $groupNick;
+        $t['list_text'] = $titleRu;
+    } else {
+        $groupKey = 'from:' . $fromId;
+        $groupNick = $fromNick !== '' ? $fromNick : '—';
+        $t['list_direction'] = 'from';
+        $t['list_peer'] = $groupNick;
+        $peer = $toNick !== '' ? $toNick : '—';
+        $t['list_text'] = $peer . ': ' . $titleRu;
+    }
+    $t['list_published'] = $pubLabel;
+    $t['list_label'] = $pubLabel . '  ' . (string) ($t['list_text'] ?? '');
+
+    if (!isset($groupIndexByKey[$groupKey])) {
+        $groupIndexByKey[$groupKey] = count($letters_groups);
+        $letters_groups[] = [
+            'key' => $groupKey,
+            'nick' => $groupNick,
+            'letters' => [],
+        ];
+    }
+    $letters_groups[$groupIndexByKey[$groupKey]]['letters'][] = $t;
     $letters_list[] = $t;
 }
+
+// When filtered by author, sort groups by counterpart nick.
+if ($authorFilterId > 0 && $letters_groups !== []) {
+    usort($letters_groups, static function (array $a, array $b): int {
+        return strcasecmp((string) ($a['nick'] ?? ''), (string) ($b['nick'] ?? ''));
+    });
+}
+
 $smarty->assign('letters_list', $letters_list);
+$smarty->assign('letters_groups', $letters_groups);
 $smarty->assign('status_filter', $filterAll ? 'all' : (string) $statusFilter);
 $smarty->assign('author_filter_id', $authorFilterId);
 $smarty->assign('author_filter_nick', $authorFilterNick);
