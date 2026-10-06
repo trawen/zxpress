@@ -48,7 +48,10 @@
 	function detectFromImageData(imageData, naturalW, naturalH, opts) {
 		var thr = opts.threshold != null ? opts.threshold : 48;
 		var minAreaFrac = opts.minAreaFrac != null ? opts.minAreaFrac : 0.012;
-		var padFrac = opts.padFrac != null ? opts.padFrac : 0.015;
+		// Prefer tight fit to paper; tiny absolute pad after scale (not % of box).
+		var padFrac = opts.padFrac != null ? opts.padFrac : 0;
+		var padPx = opts.padPx != null ? opts.padPx : 4;
+		var edgePaperMin = opts.edgePaperMin != null ? opts.edgePaperMin : 0.35;
 		var w = imageData.width;
 		var h = imageData.height;
 		var data = imageData.data;
@@ -58,9 +61,9 @@
 			mask[i] = luminance(data[p], data[p + 1], data[p + 2]) > thr ? 1 : 0;
 		}
 
-		var m = morph3x3(morph3x3(mask, w, h, 'dilate'), w, h, 'dilate');
-		m = morph3x3(morph3x3(m, w, h, 'erode'), w, h, 'erode');
-		m = morph3x3(m, w, h, 'dilate');
+		// Mild closing to bridge tiny gaps in paper — no extra dilate (that grew black margins).
+		var m = morph3x3(mask, w, h, 'dilate');
+		m = morph3x3(m, w, h, 'erode');
 
 		var labels = new Int32Array(w * h);
 		var nlab = 0;
@@ -152,6 +155,48 @@
 			}
 		}
 
+		function edgePaperFrac(x0, y0, x1, y1) {
+			var on = 0;
+			var tot = 0;
+			var yy, xx;
+			for (yy = y0; yy <= y1; yy++) {
+				for (xx = x0; xx <= x1; xx++) {
+					tot++;
+					if (mask[yy * w + xx]) {
+						on++;
+					}
+				}
+			}
+			return tot ? on / tot : 0;
+		}
+
+		// Trim black borders using the original (non-dilated) threshold mask.
+		function tightenBox(box) {
+			var x = box.x;
+			var y = box.y;
+			var width = box.width;
+			var height = box.height;
+			while (height > 10 && edgePaperFrac(x, y, x + width - 1, y) < edgePaperMin) {
+				y++;
+				height--;
+			}
+			while (height > 10 && edgePaperFrac(x, y + height - 1, x + width - 1, y + height - 1) < edgePaperMin) {
+				height--;
+			}
+			while (width > 10 && edgePaperFrac(x, y, x, y + height - 1) < edgePaperMin) {
+				x++;
+				width--;
+			}
+			while (width > 10 && edgePaperFrac(x + width - 1, y, x + width - 1, y + height - 1) < edgePaperMin) {
+				width--;
+			}
+			return { x: x, y: y, width: width, height: height, area: width * height };
+		}
+
+		for (i = 0; i < kept.length; i++) {
+			kept[i] = tightenBox(kept[i]);
+		}
+
 		var rowH = h * 0.2;
 		kept.sort(function (a, b) {
 			var ra = Math.floor(a.y / rowH);
@@ -163,12 +208,12 @@
 		var scaleX = naturalW / w;
 		var scaleY = naturalH / h;
 		return kept.map(function (b) {
-			var px = Math.round(b.width * padFrac);
-			var py = Math.round(b.height * padFrac);
-			var x = Math.max(0, Math.round((b.x - px) * scaleX));
-			var y = Math.max(0, Math.round((b.y - py) * scaleY));
-			var width = Math.min(naturalW - x, Math.round((b.width + 2 * px) * scaleX));
-			var height = Math.min(naturalH - y, Math.round((b.height + 2 * py) * scaleY));
+			var px = Math.round(b.width * padFrac) + padPx;
+			var py = Math.round(b.height * padFrac) + padPx;
+			var x = Math.max(0, Math.round(b.x * scaleX) - px);
+			var y = Math.max(0, Math.round(b.y * scaleY) - py);
+			var width = Math.min(naturalW - x, Math.round(b.width * scaleX) + 2 * px);
+			var height = Math.min(naturalH - y, Math.round(b.height * scaleY) + 2 * py);
 			return { x: x, y: y, width: width, height: height };
 		});
 	}
