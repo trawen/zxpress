@@ -17,6 +17,8 @@ const LETTERS_OCR_MAX_EDGE = 1800;
 const LETTERS_OCR_JPEG_QUALITY = 82;
 const LETTERS_OCR_MAX_TOKENS = 16384;
 const LETTERS_OCR_TIMEOUT_SEC = 120;
+/** Max images per OdiRouter vision call — larger packs often 504 upstream. */
+const LETTERS_OCR_BATCH_SIZE = 2;
 
 function letters_ocr_prompt(): string
 {
@@ -63,6 +65,70 @@ function letters_ocr_prompt(): string
 
 Отвечай сразу JSON-ом, без оправданий.
 PROMPT;
+}
+
+function letters_ocr_prompt_continuation(int $pageFrom, int $pageTo, int $pageTotal): string
+{
+    return <<<PROMPT
+Ты продолжаешь OCR старого письма (ZX Spectrum, 90-е/2000-е).
+Сейчас страницы {$pageFrom}–{$pageTo} из {$pageTotal} ОДНОГО письма. Не повторяй уже распознанный текст предыдущих страниц.
+
+Верни ТОЛЬКО JSON:
+{
+  "body_ru": "текст только этих страниц RU",
+  "body_en": "перевод только этих страниц EN",
+  "summary_ru": "",
+  "summary_en": "",
+  "meta_description_ru": "",
+  "meta_description_en": "",
+  "title_ru": "",
+  "title_en": "",
+  "date": "",
+  "from_nick": "",
+  "to_nick": "",
+  "note": "сомнения по чтению или пустая строка"
+}
+
+Правила body как обычно: дословно, склейка переносов через дефис, абзацы по смыслу через \\n\\n, (?) на сомнительном.
+Отвечай сразу JSON-ом.
+PROMPT;
+}
+
+function letters_ocr_prompt_finalize_meta(): string
+{
+    return <<<'PROMPT'
+По полному тексту старого письма (ZX Spectrum) заполни метаданные.
+
+Верни ТОЛЬКО JSON:
+{
+  "body_ru": "",
+  "body_en": "",
+  "summary_ru": "саммери RU 300–500 символов",
+  "summary_en": "summary EN 300–500 chars",
+  "meta_description_ru": "meta RU ≤155 символов",
+  "meta_description_en": "meta EN ≤155 chars",
+  "title_ru": "лучший заголовок RU",
+  "title_en": "лучший title EN ≤60 символов",
+  "date": "дд.мм.гггг или пустая строка",
+  "from_nick": "ник отправителя или пустая строка",
+  "to_nick": "ник адресата или пустая строка",
+  "note": ""
+}
+
+Правила summary: настоящее время; начинай с подлежащего (ник); без приветствий/прощаний и клише «передаёт приветы» / «ждёт ответ».
+Отвечай сразу JSON-ом.
+PROMPT;
+}
+
+/**
+ * Budget for multi-batch OCR (vision batches + optional meta finalize).
+ */
+function letters_ocr_wall_timeout_sec(int $imageCount): int
+{
+    $batchSize = max(1, LETTERS_OCR_BATCH_SIZE);
+    $batches = (int) max(1, (int) ceil($imageCount / $batchSize));
+    // Each vision batch up to TIMEOUT; +1 finalize; +60s slack.
+    return ($batches + 1) * LETTERS_OCR_TIMEOUT_SEC + 60;
 }
 
 /**
@@ -165,15 +231,115 @@ function letters_ocr_analyze(array $images): array
     if ($apiKey === '') {
         throw new RuntimeException('ODIROUTER_API_KEY не задан в окружении PHP');
     }
-    // Prefer in-cluster nginx proxy; override with ODIROUTER_BASE_URL if needed.
     $baseUrl = rtrim((string) (getenv('ODIROUTER_BASE_URL') ?: 'http://nginx/internal/odirouter/v1'), '/');
     $model = trim((string) (getenv('ODIROUTER_MODEL_LETTER') ?: LETTERS_OCR_MODEL_DEFAULT));
     if ($model === '') {
         $model = LETTERS_OCR_MODEL_DEFAULT;
     }
+    $batchSize = (int) (getenv('ODIROUTER_LETTER_BATCH') ?: LETTERS_OCR_BATCH_SIZE);
+    if ($batchSize < 1) {
+        $batchSize = LETTERS_OCR_BATCH_SIZE;
+    }
 
+    $total = count($images);
+    $batches = array_chunk($images, $batchSize);
+    $merged = [
+        'body_ru' => '',
+        'body_en' => '',
+        'summary_ru' => '',
+        'summary_en' => '',
+        'meta_description_ru' => '',
+        'meta_description_en' => '',
+        'title_ru' => '',
+        'title_en' => '',
+        'date' => '',
+        'from_nick' => '',
+        'to_nick' => '',
+        'note' => '',
+        'model' => $model,
+        'usage' => null,
+    ];
+    $notes = [];
+    $usageSum = ['input_tokens' => 0, 'output_tokens' => 0];
+    $haveUsage = false;
+    $pageCursor = 1;
+
+    foreach ($batches as $batchIndex => $batch) {
+        $pageFrom = $pageCursor;
+        $pageTo = $pageCursor + count($batch) - 1;
+        $pageCursor = $pageTo + 1;
+        $isFirst = ($batchIndex === 0);
+        $prompt = $isFirst
+            ? letters_ocr_prompt()
+            : letters_ocr_prompt_continuation($pageFrom, $pageTo, $total);
+
+        $parsed = letters_ocr_request_vision($baseUrl, $apiKey, $model, $prompt, $batch);
+        $merged['body_ru'] = letters_ocr_join_text($merged['body_ru'], (string) ($parsed['body_ru'] ?? ''));
+        $merged['body_en'] = letters_ocr_join_text($merged['body_en'], (string) ($parsed['body_en'] ?? ''));
+        foreach (['date', 'from_nick', 'to_nick', 'title_ru', 'title_en', 'summary_ru', 'summary_en', 'meta_description_ru', 'meta_description_en'] as $key) {
+            if ($merged[$key] === '' && trim((string) ($parsed[$key] ?? '')) !== '') {
+                $merged[$key] = trim((string) $parsed[$key]);
+            }
+        }
+        $note = trim((string) ($parsed['note'] ?? ''));
+        if ($note !== '') {
+            $notes[] = $note;
+        }
+        if (is_array($parsed['usage'] ?? null)) {
+            $haveUsage = true;
+            $usageSum['input_tokens'] += (int) ($parsed['usage']['input_tokens'] ?? $parsed['usage']['prompt_tokens'] ?? 0);
+            $usageSum['output_tokens'] += (int) ($parsed['usage']['output_tokens'] ?? $parsed['usage']['completion_tokens'] ?? 0);
+        }
+    }
+
+    // Multi-batch: rebuild titles/summaries from the full recognized text (text-only, cheap).
+    if (count($batches) > 1 && trim($merged['body_ru']) !== '') {
+        try {
+            $meta = letters_ocr_request_text_meta($baseUrl, $apiKey, $model, $merged['body_ru'], $merged['body_en']);
+            foreach (['summary_ru', 'summary_en', 'meta_description_ru', 'meta_description_en', 'title_ru', 'title_en', 'date', 'from_nick', 'to_nick'] as $key) {
+                $v = trim((string) ($meta[$key] ?? ''));
+                if ($v !== '') {
+                    $merged[$key] = $v;
+                }
+            }
+            if (is_array($meta['usage'] ?? null)) {
+                $haveUsage = true;
+                $usageSum['input_tokens'] += (int) ($meta['usage']['input_tokens'] ?? $meta['usage']['prompt_tokens'] ?? 0);
+                $usageSum['output_tokens'] += (int) ($meta['usage']['output_tokens'] ?? $meta['usage']['completion_tokens'] ?? 0);
+            }
+        } catch (Throwable $e) {
+            error_log('[letters_ocr] finalize meta skipped: ' . $e->getMessage());
+        }
+    }
+
+    $merged['note'] = implode('; ', $notes);
+    $merged['usage'] = $haveUsage ? $usageSum : null;
+
+    return $merged;
+}
+
+function letters_ocr_join_text(string $a, string $b): string
+{
+    $a = trim($a);
+    $b = trim($b);
+    if ($a === '') {
+        return $b;
+    }
+    if ($b === '') {
+        return $a;
+    }
+
+    return $a . "\n\n" . $b;
+}
+
+/**
+ * @param list<array{path:string,mime:string,name?:string}> $images
+ * @return array<string,mixed>
+ */
+function letters_ocr_request_vision(string $baseUrl, string $apiKey, string $model, string $prompt, array $images): array
+{
     $content = [
-        ['type' => 'text', 'text' => letters_ocr_prompt()],
+        ['type' => 'text', 'text' => $prompt],
     ];
     $tmpToClean = [];
 
@@ -202,61 +368,86 @@ function letters_ocr_analyze(array $images): array
             ];
         }
 
-        $payload = [
-            'model' => $model,
-            'max_tokens' => LETTERS_OCR_MAX_TOKENS,
-            'temperature' => 0.2,
-            'messages' => [
-                ['role' => 'user', 'content' => $content],
-            ],
-        ];
-
-        $ch = curl_init($baseUrl . '/messages');
-        if ($ch === false) {
-            throw new RuntimeException('curl_init failed');
-        }
-        curl_setopt_array($ch, [
-            CURLOPT_POST => true,
-            CURLOPT_HTTPHEADER => [
-                'Authorization: Bearer ' . $apiKey,
-                'Content-Type: application/json',
-            ],
-            CURLOPT_POSTFIELDS => json_encode($payload, JSON_UNESCAPED_UNICODE),
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_TIMEOUT => LETTERS_OCR_TIMEOUT_SEC,
-            CURLOPT_CONNECTTIMEOUT => 20,
-        ]);
-        $raw = curl_exec($ch);
-        $errno = curl_errno($ch);
-        $err = curl_error($ch);
-        $status = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
-
-        if ($errno !== 0) {
-            throw new RuntimeException('OCR network error: ' . $err);
-        }
-        if (!is_string($raw) || $raw === '') {
-            throw new RuntimeException('OCR: пустой ответ HTTP ' . $status);
-        }
-        $data = json_decode($raw, true);
-        if ($status < 200 || $status >= 300) {
-            $msg = is_array($data)
-                ? (string) ($data['error']['message'] ?? $data['message'] ?? substr($raw, 0, 400))
-                : substr($raw, 0, 400);
-            throw new RuntimeException('OCR HTTP ' . $status . ': ' . $msg);
-        }
-
-        $text = letters_ocr_extract_assistant_text(is_array($data) ? $data : []);
-        $parsed = letters_ocr_parse_json_payload($text);
-        $parsed['model'] = $model;
-        $parsed['usage'] = is_array($data['usage'] ?? null) ? $data['usage'] : null;
-
-        return $parsed;
+        return letters_ocr_post_messages($baseUrl, $apiKey, $model, $content);
     } finally {
         foreach ($tmpToClean as $p) {
             @unlink($p);
         }
     }
+}
+
+/**
+ * @return array<string,mixed>
+ */
+function letters_ocr_request_text_meta(string $baseUrl, string $apiKey, string $model, string $bodyRu, string $bodyEn): array
+{
+    $text = letters_ocr_prompt_finalize_meta()
+        . "\n\n--- body_ru ---\n"
+        . mb_substr($bodyRu, 0, 12000)
+        . "\n\n--- body_en ---\n"
+        . mb_substr($bodyEn, 0, 12000);
+
+    return letters_ocr_post_messages($baseUrl, $apiKey, $model, [
+        ['type' => 'text', 'text' => $text],
+    ]);
+}
+
+/**
+ * @param list<array<string,mixed>> $content
+ * @return array<string,mixed>
+ */
+function letters_ocr_post_messages(string $baseUrl, string $apiKey, string $model, array $content): array
+{
+    $payload = [
+        'model' => $model,
+        'max_tokens' => LETTERS_OCR_MAX_TOKENS,
+        'temperature' => 0.2,
+        'messages' => [
+            ['role' => 'user', 'content' => $content],
+        ],
+    ];
+
+    $ch = curl_init($baseUrl . '/messages');
+    if ($ch === false) {
+        throw new RuntimeException('curl_init failed');
+    }
+    curl_setopt_array($ch, [
+        CURLOPT_POST => true,
+        CURLOPT_HTTPHEADER => [
+            'Authorization: Bearer ' . $apiKey,
+            'Content-Type: application/json',
+        ],
+        CURLOPT_POSTFIELDS => json_encode($payload, JSON_UNESCAPED_UNICODE),
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_TIMEOUT => LETTERS_OCR_TIMEOUT_SEC,
+        CURLOPT_CONNECTTIMEOUT => 20,
+    ]);
+    $raw = curl_exec($ch);
+    $errno = curl_errno($ch);
+    $err = curl_error($ch);
+    $status = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    if ($errno !== 0) {
+        throw new RuntimeException('OCR network error: ' . $err);
+    }
+    if (!is_string($raw) || $raw === '') {
+        throw new RuntimeException('OCR: пустой ответ HTTP ' . $status);
+    }
+    $data = json_decode($raw, true);
+    if ($status < 200 || $status >= 300) {
+        $msg = is_array($data)
+            ? (string) ($data['error']['message'] ?? $data['message'] ?? substr($raw, 0, 400))
+            : substr($raw, 0, 400);
+        throw new RuntimeException('OCR HTTP ' . $status . ': ' . $msg);
+    }
+
+    $text = letters_ocr_extract_assistant_text(is_array($data) ? $data : []);
+    $parsed = letters_ocr_parse_json_payload($text);
+    $parsed['model'] = $model;
+    $parsed['usage'] = is_array($data['usage'] ?? null) ? $data['usage'] : null;
+
+    return $parsed;
 }
 
 /**

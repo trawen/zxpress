@@ -774,10 +774,11 @@ body.admin-letter-crop-open { overflow: hidden; }
 		ocrBusy = true;
 		syncOcrButton();
 		var pages = useUploads ? uploadFiles.length : savedImageCount;
+		var batches = Math.ceil(pages / 2);
 		setOcrStatus(
 			useUploads
-				? ('Отправляю ' + pages + ' новых стр. в AI…')
-				: ('Отправляю ' + pages + ' сохранённых стр. письма #' + letterId + ' в AI…'),
+				? ('Отправляю ' + pages + ' новых стр. в AI (' + batches + ' порц.)…')
+				: ('Отправляю ' + pages + ' сохранённых стр. письма #' + letterId + ' в AI (' + batches + ' порц.)…'),
 			''
 		);
 		if (ocrBtn) ocrBtn.textContent = 'Обрабатываю…';

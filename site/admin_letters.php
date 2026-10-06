@@ -81,7 +81,6 @@ if (($_POST['action'] ?? '') === 'ocr') {
             echo json_encode(['ok' => false, 'error' => 'CSRF token mismatch'], JSON_UNESCAPED_UNICODE);
             exit;
         }
-        @set_time_limit(LETTERS_OCR_TIMEOUT_SEC + 30);
 
         $images = [];
         $files = $_FILES['ocr_files'] ?? null;
@@ -162,6 +161,12 @@ if (($_POST['action'] ?? '') === 'ocr') {
                 throw new InvalidArgumentException('У письма #' . $letterId . ' нет файлов оригиналов на диске');
             }
         }
+
+        if ($images === []) {
+            throw new InvalidArgumentException('Нет валидных изображений');
+        }
+
+        @set_time_limit(letters_ocr_wall_timeout_sec(count($images)));
 
         $result = letters_ocr_analyze($images);
 
