@@ -814,14 +814,37 @@ $statusFilter = letters_publish_status_from_input((string) ($_GET['status'] ?? '
 // Empty GET status means "all" — detect by raw presence.
 $filterRaw = trim((string) ($_GET['status'] ?? ''));
 $filterAll = ($filterRaw === '' || $filterRaw === 'all');
+$authorFilterId = (int) ($_GET['author_id'] ?? 0);
+if ($authorFilterId < 0) {
+    $authorFilterId = 0;
+}
+$authorFilterNick = '';
+if ($authorFilterId > 0) {
+    foreach ($authors as $aRow) {
+        if ((int) ($aRow['id'] ?? 0) === $authorFilterId) {
+            $authorFilterNick = plain_text_normalize_for_storage((string) ($aRow['nickname'] ?? ''));
+            break;
+        }
+    }
+    if ($authorFilterNick === '') {
+        $authorFilterId = 0;
+    }
+}
 
 $letters_list = [];
 $listSql = "SELECT l.*, af.nickname AS from_nick, at.nickname AS to_nick
      FROM letters l
      LEFT JOIN authors af ON af.id=l.author_from
      LEFT JOIN authors at ON at.id=l.author_to";
+$where = [];
 if (!$filterAll) {
-    $listSql .= ' WHERE l.publish_status=' . (int) $statusFilter;
+    $where[] = 'l.publish_status=' . (int) $statusFilter;
+}
+if ($authorFilterId > 0) {
+    $where[] = 'l.author_from=' . $authorFilterId;
+}
+if ($where !== []) {
+    $listSql .= ' WHERE ' . implode(' AND ', $where);
 }
 $listSql .= ' ORDER BY
      CASE l.publish_status
@@ -860,6 +883,8 @@ while ($z && ($t = mysqli_fetch_array($z))) {
 }
 $smarty->assign('letters_list', $letters_list);
 $smarty->assign('status_filter', $filterAll ? 'all' : (string) $statusFilter);
+$smarty->assign('author_filter_id', $authorFilterId);
+$smarty->assign('author_filter_nick', $authorFilterNick);
 $smarty->assign('letter_status_draft', LETTER_STATUS_DRAFT);
 $smarty->assign('letter_status_queued', LETTER_STATUS_QUEUED);
 $smarty->assign('letter_status_published', LETTER_STATUS_PUBLISHED);

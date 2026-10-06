@@ -34,8 +34,8 @@
 	gap: 0;
 }
 .admin-authors-sidebar {
-	flex: 0 0 280px;
-	width: 280px;
+	flex: 0 0 420px;
+	width: 420px;
 	border-right: 1px solid #C8C5AC;
 	padding-right: 10px;
 	box-sizing: border-box;
@@ -68,23 +68,41 @@
 .admin-authors-list-wrap li {
 	margin: 0;
 	line-height: 1.35;
+	display: flex;
+	align-items: baseline;
+	gap: 6px;
 }
-.admin-authors-list-wrap a {
+.admin-authors-list-wrap a.admin-authors-list-name {
 	color: #493C2F;
 	text-decoration: none;
 	display: block;
+	flex: 1 1 auto;
+	min-width: 0;
 	padding: 5px 8px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-.admin-authors-list-wrap a:hover { color: #A41E00; background: rgba(164,30,0,0.06); }
-.admin-authors-list-wrap a.nav-active {
+.admin-authors-list-wrap a.admin-authors-list-name:hover { color: #A41E00; background: rgba(164,30,0,0.06); }
+.admin-authors-list-wrap a.admin-authors-list-name.nav-active {
 	font-weight: bold;
 	color: #A41E00;
 	background: rgba(164,30,0,0.1);
 }
-.admin-authors-list-wrap a.is-inactive { opacity: 0.55; }
+.admin-authors-list-wrap a.admin-authors-list-name.is-inactive { opacity: 0.55; }
+.admin-authors-list-letters {
+	flex: 0 0 auto;
+	font: normal 11px Verdana;
+	padding: 5px 8px 5px 0;
+	white-space: nowrap;
+	color: #555;
+}
+.admin-authors-list-letters a {
+	color: #A41E00;
+	text-decoration: none;
+}
+.admin-authors-list-letters a:hover { text-decoration: underline; }
+.admin-authors-list-letters .is-zero { color: #999; }
 .admin-authors-main {
 	flex: 1 1 auto;
 	min-width: 0;
@@ -127,7 +145,8 @@
 <ul>
 {section name=n loop=$authors_list}
 <li>
-<a href="admin_authors.php?id={$authors_list[n].id}"{if ($author && $authors_list[n].id eq $author.id) || $authors_list[n].is_active eq 0} class="{if $author && $authors_list[n].id eq $author.id}nav-active{/if}{if $authors_list[n].is_active eq 0}{if $author && $authors_list[n].id eq $author.id} {/if}is-inactive{/if}"{/if}>{if $authors_list[n].is_active eq 0}[×] {/if}{$authors_list[n].nickname|escape:'html'}{if $authors_list[n].name_ru} ({$authors_list[n].name_ru|escape:'html'}){elseif $authors_list[n].name_en} ({$authors_list[n].name_en|escape:'html'}){/if}</a>
+<a class="admin-authors-list-name{if $author && $authors_list[n].id eq $author.id} nav-active{/if}{if $authors_list[n].is_active eq 0} is-inactive{/if}" href="admin_authors.php?id={$authors_list[n].id}">{if $authors_list[n].is_active eq 0}[×] {/if}{$authors_list[n].nickname}{if $authors_list[n].name_ru} ({$authors_list[n].name_ru}){elseif $authors_list[n].name_en} ({$authors_list[n].name_en}){/if}{if $authors_list[n].city_name} — {$authors_list[n].city_name}{/if}</a>
+<span class="admin-authors-list-letters">{if $authors_list[n].letters_from_count gt 0}<a href="admin_letters.php?status=all&amp;author_id={$authors_list[n].id}" title="Письма от этого автора">{$authors_list[n].letters_from_count}</a>{else}<span class="is-zero">0</span>{/if}</span>
 </li>
 {/section}
 </ul>

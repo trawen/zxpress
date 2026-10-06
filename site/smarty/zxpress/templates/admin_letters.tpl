@@ -23,6 +23,12 @@
 <tr>
 <td valign="top" width="360" style="border-right:1px solid #C8C5AC">
 <div style="font: bold 12px Verdana; margin-bottom:6px">Письма</div>
+{if $author_filter_id gt 0}
+<div style="font:normal 11px Verdana;margin-bottom:8px;color:#555">
+От автора: <b>{$author_filter_nick}</b>
+ — <a href="admin_letters.php?status={$status_filter|escape:'url'}">сбросить фильтр</a>
+</div>
+{/if}
 <form method="get" action="admin_letters.php" style="margin-bottom:8px">
 <label for="admin-letter-status-filter" class="u-sr-only">Фильтр статуса</label>
 <select id="admin-letter-status-filter" name="status" style="width:340px;height:22px;margin-bottom:6px" onchange="this.form.submit()">
@@ -32,10 +38,12 @@
 <option value="{$letter_status_published}" {if $status_filter eq $letter_status_published}selected{/if}>опубликованные</option>
 <option value="{$letter_status_deleted}" {if $status_filter eq $letter_status_deleted}selected{/if}>удалённые</option>
 </select>
+{if $author_filter_id gt 0}<input type="hidden" name="author_id" value="{$author_filter_id}">{/if}
 {if $letter && $letter.id}<input type="hidden" name="id" value="{$letter.id}">{/if}
 </form>
 <form method="get" action="admin_letters.php">
 {if $status_filter neq 'all'}<input type="hidden" name="status" value="{$status_filter}">{/if}
+{if $author_filter_id gt 0}<input type="hidden" name="author_id" value="{$author_filter_id}">{/if}
 <label for="admin-letter-list" class="u-sr-only">Выбрать письмо</label>
 <select id="admin-letter-list" name="id" style="width:340px;height:22px" onchange="this.form.submit()">
 <option value="0" {if !$letter || !$letter.id}selected{/if}>— новое письмо —</option>

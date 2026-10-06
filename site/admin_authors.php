@@ -126,8 +126,25 @@ $smarty->assign('users', $users);
 
 // Authors list
 $authors_list = [];
-$z = db_select($db, "SELECT * FROM authors ORDER BY nickname ASC");
+$z = db_select(
+    $db,
+    'SELECT a.*, c.name AS city_name,
+            (SELECT COUNT(*) FROM letters l WHERE l.author_from = a.id) AS letters_from_count
+     FROM authors a
+     LEFT JOIN cities c ON c.id = a.city_id
+     ORDER BY a.nickname ASC'
+);
 while ($z && ($t = mysqli_fetch_array($z))) {
+    foreach (['nickname', 'name_ru', 'name_en', 'group_name'] as $field) {
+        if (isset($t[$field]) && is_string($t[$field]) && $t[$field] !== '') {
+            // Legacy rows may store HTML entities (Ice&#039;Di); Smarty escape_html would show them literally.
+            $t[$field] = plain_text_normalize_for_storage($t[$field]);
+        }
+    }
+    if (isset($t['city_name']) && is_string($t['city_name']) && $t['city_name'] !== '') {
+        $t['city_name'] = plain_text_normalize_for_storage($t['city_name']);
+    }
+    $t['letters_from_count'] = (int) ($t['letters_from_count'] ?? 0);
     $authors_list[] = $t;
 }
 $smarty->assign('authors_list', $authors_list);
@@ -139,11 +156,18 @@ if ($id === 0 && count($authors_list) > 0 && !isset($_GET['id'])) {
 
 $author = null;
 if ($id > 0) {
-    $stmt = $db->prepare("SELECT * FROM authors WHERE id=? LIMIT 1");
+    $stmt = $db->prepare('SELECT * FROM authors WHERE id=? LIMIT 1');
     if ($stmt) {
-        $stmt->bind_param("i", $id);
+        $stmt->bind_param('i', $id);
         $stmt->execute();
         $author = $stmt->get_result()->fetch_assoc();
+        if (is_array($author)) {
+            foreach (['nickname', 'name_ru', 'name_en', 'group_name'] as $field) {
+                if (isset($author[$field]) && is_string($author[$field]) && $author[$field] !== '') {
+                    $author[$field] = plain_text_normalize_for_storage($author[$field]);
+                }
+            }
+        }
     }
 }
 $smarty->assign('author', $author);
