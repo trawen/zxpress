@@ -1,6 +1,7 @@
 <?php
 require 'init.inc';
 require_once __DIR__ . '/includes/authors_slugs.php';
+require_once __DIR__ . '/includes/admin_translate.php';
 
 if (!isset($_SESSION['login']) || !$_SESSION['login']) {
     header('HTTP/1.1 403 Forbidden');
@@ -17,6 +18,20 @@ function zx_post_int(string $key): int
     return (int) ($_POST[$key] ?? 0);
 }
 
+/**
+ * Resolve country_id from cities.country_id when city is set.
+ */
+function authors_country_id_for_city(mysqli $db, int $cityId): int
+{
+    if ($cityId <= 0) {
+        return 0;
+    }
+    $z = db_select($db, 'SELECT country_id FROM cities WHERE id=? LIMIT 1', 'i', $cityId);
+    $row = $z ? mysqli_fetch_assoc($z) : null;
+
+    return (int) ($row['country_id'] ?? 0);
+}
+
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 
 if (($_POST['save'] ?? '') === 'Сохранить') {
@@ -30,9 +45,33 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
     $city_id = zx_post_int('city_id');
     $user_id = zx_post_int('user_id');
     $is_active = !empty($_POST['is_active']) ? 1 : 0;
+    $error = '';
 
-    if ($nickname === '') {
-        $smarty->assign('error', 'Ник обязателен');
+    if ($city_id > 0) {
+        $cityCountry = authors_country_id_for_city($db, $city_id);
+        if ($cityCountry > 0) {
+            $country_id = $cityCountry;
+        }
+    }
+
+    if ($name_en === '' && $name_ru !== '') {
+        try {
+            $translated = plain_text_normalize_for_storage(admin_translate_title($name_ru));
+            if ($translated !== '') {
+                $name_en = $translated;
+            }
+        } catch (Throwable $e) {
+            error_log('[admin_authors] name_en translate failed: ' . $e->getMessage());
+            $error = 'Имя EN не перевелось через Google: ' . $e->getMessage();
+        }
+    }
+
+    if ($error === '' && $nickname === '') {
+        $error = 'Ник обязателен';
+    }
+
+    if ($error !== '') {
+        $smarty->assign('error', $error);
     } else {
         $slugs = authors_resolve_slugs(
             $db,

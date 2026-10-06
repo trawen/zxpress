@@ -175,7 +175,10 @@
 </tr>
 <tr>
 <td>Имя (EN)</td>
-<td><input type="text" name="name_en" style="width:420px" value="{if $author}{$author.name_en}{/if}"></td>
+<td>
+<input type="text" name="name_en" style="width:420px" value="{if $author}{$author.name_en}{/if}">
+<div style="font-size:11px;font-weight:normal;color:#555">Пустое поле при сохранении переводится из Имя (RU) через Google.</div>
+</td>
 </tr>
 <tr>
 <td>Группа</td>
@@ -212,9 +215,9 @@
 <td><label for="admin-author-city">Город</label></td>
 <td>
 <select id="admin-author-city" name="city_id" style="width:240px">
-<option value="0">---</option>
+<option value="0" data-country-id="0">---</option>
 {section name=n loop=$cities}
-<option value="{$cities[n].id}" {if $author && $cities[n].id eq $author.city_id}selected{/if}>{$cities[n].name}</option>
+<option value="{$cities[n].id}" data-country-id="{$cities[n].country_id}" {if $author && $cities[n].id eq $author.city_id}selected{/if}>{$cities[n].name}</option>
 {/section}
 </select>
 </td>
@@ -241,6 +244,29 @@
 </div>
 
 </form>
+
+{literal}
+<script type="text/javascript">
+(function () {
+	var citySel = document.getElementById('admin-author-city');
+	var countrySel = document.getElementById('admin-author-country');
+	if (!citySel || !countrySel) return;
+
+	function syncCountryFromCity() {
+		var opt = citySel.options[citySel.selectedIndex];
+		if (!opt) return;
+		var countryId = opt.getAttribute('data-country-id') || '0';
+		if (countryId === '0') return;
+		countrySel.value = String(countryId);
+	}
+
+	citySel.addEventListener('change', syncCountryFromCity);
+	if (citySel.value && citySel.value !== '0') {
+		syncCountryFromCity();
+	}
+})();
+</script>
+{/literal}
 
 </div>
 </div>
