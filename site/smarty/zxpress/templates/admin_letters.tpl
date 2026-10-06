@@ -158,12 +158,14 @@
 <input type="file" id="admin-letter-upload" name="upload_files[]" multiple accept="image/jpeg,image/png,image/webp,image/gif">
 <div style="font-size:11px;font-weight:normal;margin-top:4px">
 После выбора файла откроется окно обрезки. «Применить обрезку» — в форму попадёт уже обрезанный файл;
-«Без обрезки» — загрузится целиком. Затем «Обработать (AI OCR)» отправит кропы в AI и заполнит поля формы.
+«Без обрезки» — загрузится целиком. «Обработать (AI OCR)» шлёт в AI либо новые кропы, либо уже сохранённые страницы письма.
 При сохранении письма оригинал на сервере — WebP 85%, превью — JPEG до 1280px.
 </div>
 <div id="admin-letter-upload-queue" style="font-size:11px;font-weight:normal;margin-top:8px"></div>
 <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
-<button type="button" id="admin-letter-ocr-btn" disabled style="height:26px;cursor:pointer">Обработать (AI OCR)</button>
+<button type="button" id="admin-letter-ocr-btn" style="height:26px;cursor:pointer"{if !$images || $images|@count eq 0} disabled{/if}
+	data-letter-id="{if $letter && $letter.id}{$letter.id}{else}0{/if}"
+	data-saved-count="{if $images}{$images|@count}{else}0{/if}">Обработать (AI OCR)</button>
 <span id="admin-letter-ocr-status" style="font-size:11px;color:#555"></span>
 </div>
 {if $images && $images|@count gt 0}
@@ -413,6 +415,8 @@ body.admin-letter-crop-open { overflow: hidden; }
 	var activeSheet = 0;
 	var detectBusy = false;
 	var rawCropImage = null; // HTMLImageElement for canvas crops (unwrapped)
+	var savedImageCount = ocrBtn ? (parseInt(ocrBtn.getAttribute('data-saved-count') || '0', 10) || 0) : 0;
+	var letterId = ocrBtn ? (parseInt(ocrBtn.getAttribute('data-letter-id') || '0', 10) || 0) : 0;
 
 	function csrfToken() {
 		var el = formEl && formEl.querySelector('[name="csrf_token"]');
@@ -428,7 +432,7 @@ body.admin-letter-crop-open { overflow: hidden; }
 
 	function syncOcrButton() {
 		if (!ocrBtn) return;
-		ocrBtn.disabled = ocrBusy || uploadFiles.length === 0;
+		ocrBtn.disabled = ocrBusy || (uploadFiles.length === 0 && (savedImageCount <= 0 || letterId <= 0));
 	}
 
 	function clearCropper() {
@@ -759,7 +763,9 @@ body.admin-letter-crop-open { overflow: hidden; }
 	}
 
 	function runOcr() {
-		if (ocrBusy || !uploadFiles.length) return;
+		if (ocrBusy) return;
+		var useUploads = uploadFiles.length > 0;
+		if (!useUploads && (letterId <= 0 || savedImageCount <= 0)) return;
 		var token = csrfToken();
 		if (!token) {
 			setOcrStatus('Нет CSRF-токена — обнови страницу', 'is-error');
@@ -767,14 +773,24 @@ body.admin-letter-crop-open { overflow: hidden; }
 		}
 		ocrBusy = true;
 		syncOcrButton();
-		setOcrStatus('Отправляю ' + uploadFiles.length + ' стр. в AI…', '');
+		var pages = useUploads ? uploadFiles.length : savedImageCount;
+		setOcrStatus(
+			useUploads
+				? ('Отправляю ' + pages + ' новых стр. в AI…')
+				: ('Отправляю ' + pages + ' сохранённых стр. письма #' + letterId + ' в AI…'),
+			''
+		);
 		if (ocrBtn) ocrBtn.textContent = 'Обрабатываю…';
 
 		var fd = new FormData();
 		fd.append('action', 'ocr');
 		fd.append('csrf_token', token);
-		for (var i = 0; i < uploadFiles.length; i++) {
-			fd.append('ocr_files[]', uploadFiles[i], uploadFiles[i].name || ('page-' + (i + 1) + '.jpg'));
+		if (useUploads) {
+			for (var i = 0; i < uploadFiles.length; i++) {
+				fd.append('ocr_files[]', uploadFiles[i], uploadFiles[i].name || ('page-' + (i + 1) + '.jpg'));
+			}
+		} else {
+			fd.append('letter_id', String(letterId));
 		}
 
 		var ocrUrl = (formEl && formEl.getAttribute('action')) || 'admin_letters.php';
