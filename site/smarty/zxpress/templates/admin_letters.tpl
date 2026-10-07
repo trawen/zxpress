@@ -191,6 +191,9 @@
 {if $error}
 <div style="color:#A41E00;margin-bottom:10px;flex:0 0 auto">{$error}</div>
 {/if}
+{if $flash_ok}
+<div style="color:#2f6b3a;margin-bottom:10px;flex:0 0 auto">{$flash_ok}</div>
+{/if}
 
 <div class="admin-letters-layout">
 <aside class="admin-letters-sidebar">
@@ -395,7 +398,9 @@
 <option value="{$letter_status_deleted}" {if $cur_status eq $letter_status_deleted}selected{/if}>Удалено (корзина)</option>
 </select>
 <div style="font-size:11px;font-weight:normal;margin-top:4px;color:#555">
-Очередь публикуется при заходе на snailmail/authors: не больше одного письма за календарные сутки (Europe/Moscow). Ручная «Опубликовано сейчас» тоже засчитывается в этот день.
+Автопубликация ≤1 письма за сутки (Europe/Moscow): при заходе в админку писем, на snailmail/authors, либо cron
+<code style="font-size:10px">cli/letters-publish-queued.php</code>.
+Ручная «Опубликовано сейчас» тоже занимает слот на сегодня.
 {if $letter && $letter.queued_at}<br>В очереди с: {$letter.queued_at}{/if}
 {if $letter && $letter.published_at}<br>Опубликовано: {$letter.published_at}{/if}
 {if $letter && $letter.deleted_at}<br>Удалено: {$letter.deleted_at}{/if}

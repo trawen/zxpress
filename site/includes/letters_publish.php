@@ -127,13 +127,16 @@ function letters_publish_day_start(?DateTimeZone $tz = null): string
  * Publish at most one queued letter per calendar day (Europe/Moscow).
  * Serialized via GET_LOCK so concurrent snailmail/authors hits cannot each publish one.
  *
+ * @param-out string|null $reason Diagnostic: published|already_today|empty_queue|lock_busy|error
  * @return int|null published letter id, or null if nothing published
  */
-function letters_maybe_publish_next(mysqli $db): ?int
+function letters_maybe_publish_next(mysqli $db, ?string &$reason = null): ?int
 {
+    $reason = null;
     $lockName = 'zxpress_letters_daily_publish';
     $lockStmt = $db->prepare('SELECT GET_LOCK(?, 5)');
     if (!$lockStmt) {
+        $reason = 'error';
         error_log('[letters_publish] prepare GET_LOCK failed: ' . $db->error);
         return null;
     }
@@ -143,6 +146,7 @@ function letters_maybe_publish_next(mysqli $db): ?int
     $lockStmt->close();
     if ((int) ($lockRow[0] ?? 0) !== 1) {
         // Another request is publishing, or lock wait timed out — skip.
+        $reason = 'lock_busy';
         return null;
     }
 
@@ -171,12 +175,14 @@ function letters_maybe_publish_next(mysqli $db): ?int
         $stmtToday->close();
         if ($todayRow) {
             $db->commit();
+            $reason = 'already_today';
             return null;
         }
 
         $statusQueued = LETTER_STATUS_QUEUED;
         $stmtNext = $db->prepare(
-            'SELECT id FROM letters WHERE publish_status = ? ORDER BY queued_at ASC, id ASC LIMIT 1 FOR UPDATE'
+            'SELECT id, title_ru, title_en FROM letters WHERE publish_status = ? '
+            . 'ORDER BY queued_at ASC, id ASC LIMIT 1 FOR UPDATE'
         );
         if (!$stmtNext) {
             throw new RuntimeException('prepare next failed: ' . $db->error);
@@ -187,12 +193,14 @@ function letters_maybe_publish_next(mysqli $db): ?int
         $stmtNext->close();
         if (!$nextRow) {
             $db->commit();
+            $reason = 'empty_queue';
             return null;
         }
 
         $letterId = (int) ($nextRow['id'] ?? 0);
         if ($letterId <= 0) {
             $db->commit();
+            $reason = 'empty_queue';
             return null;
         }
 
@@ -208,14 +216,47 @@ function letters_maybe_publish_next(mysqli $db): ?int
         if (!$stmtUp->execute() || $stmtUp->affected_rows < 1) {
             $stmtUp->close();
             $db->commit();
+            $reason = 'error';
             return null;
         }
         $stmtUp->close();
         $db->commit();
 
+        $titleRu = trim((string) ($nextRow['title_ru'] ?? ''));
+        $titleEn = trim((string) ($nextRow['title_en'] ?? ''));
+        if ($titleRu === '') {
+            $titleRu = 'Письмо #' . $letterId;
+        }
+        if (function_exists('activity_log')) {
+            try {
+                activity_log($db, [
+                    'verb' => 'published',
+                    'object_type' => 'letter',
+                    'object_id' => $letterId,
+                    'action' => 'letter.published',
+                    'event_scope' => defined('ACTIVITY_SCOPE_CONTENT') ? ACTIVITY_SCOPE_CONTENT : 'content',
+                    'is_public' => 1,
+                    'title_ru' => $titleRu,
+                    'title_en' => $titleEn !== '' ? $titleEn : $titleRu,
+                    'url_ru' => '/snailmail.php?id=' . $letterId,
+                    'after' => [
+                        'publish_status' => LETTER_STATUS_PUBLISHED,
+                        'is_active' => 1,
+                        'published_at' => $now,
+                        'source' => 'auto_queue',
+                    ],
+                ]);
+            } catch (Throwable $e) {
+                error_log('[letters_publish] activity_log failed id=' . $letterId . ': ' . $e->getMessage());
+            }
+        }
+
+        error_log('[letters_publish] auto-published letter id=' . $letterId . ' at=' . $now);
+        $reason = 'published';
         return $letterId;
     } catch (Throwable $e) {
         @$db->rollback();
+        $reason = 'error';
         error_log('[letters_publish] maybe_publish_next failed: ' . $e->getMessage());
         return null;
     } finally {

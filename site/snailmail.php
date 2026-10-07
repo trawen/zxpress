@@ -34,6 +34,9 @@ function letters_ui_render($smarty): void
 $lng = $smarty->getTemplateVars('lng');
 $isEng = letters_public_is_eng($lng);
 
+// Lazy auto-publish first — before any redirects that might exit early.
+letters_maybe_publish_next($db);
+
 $letterSlug = trim((string) ($_GET['letter_slug'] ?? ''));
 $id = (int) ($_GET['id'] ?? 0);
 $authorParam = trim((string) ($_GET['author'] ?? ''));
@@ -55,9 +58,6 @@ if (
 	header('Location: ' . authors_url($authorFilter['row'], $isEng, $page), true, 301);
 	exit;
 }
-
-// Lazy auto-publish: at most one queued letter per calendar day.
-letters_maybe_publish_next($db);
 
 if ($letterSlug !== '') {
 	$id = letters_find_id_by_slug($db, $letterSlug, $isEng);

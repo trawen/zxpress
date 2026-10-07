@@ -11,6 +11,16 @@ if (!isset($_SESSION['login']) || !$_SESSION['login']) {
     exit;
 }
 
+// Drain queue here too — don't rely only on rare public page hits.
+$lettersAutoPublishReason = null;
+$lettersAutoPublishedId = letters_maybe_publish_next($db, $lettersAutoPublishReason);
+if ($lettersAutoPublishedId) {
+    $smarty->assign(
+        'flash_ok',
+        'Автопубликация из очереди: письмо #' . $lettersAutoPublishedId
+    );
+}
+
 /**
  * Resolve author id from select and/or "new nick" input.
  * Non-empty nick wins: find by nickname (case-insensitive) or create.
@@ -644,12 +654,12 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
             $reqIdBefore = (int) ($_GET['id'] ?? 0);
             $letterCreated = ($reqIdBefore === 0);
             activity_log($db, [
-                'verb' => ($letterCreated ? 'created' : ($publish_status === 1 ? 'published' : 'updated')),
+                'verb' => ($letterCreated ? 'created' : ($publish_status === LETTER_STATUS_PUBLISHED ? 'published' : 'updated')),
                 'object_type' => 'letter',
                 'object_id' => $id,
                 'action' => $letterCreated ? 'letter.created' : 'letter.updated',
-                'event_scope' => ($publish_status === 1 || $is_active === 1) ? ACTIVITY_SCOPE_CONTENT : ACTIVITY_SCOPE_METADATA,
-                'is_public' => ($publish_status === 1 || $is_active === 1) ? 1 : 0,
+                'event_scope' => ($publish_status === LETTER_STATUS_PUBLISHED || $is_active === 1) ? ACTIVITY_SCOPE_CONTENT : ACTIVITY_SCOPE_METADATA,
+                'is_public' => ($publish_status === LETTER_STATUS_PUBLISHED || $is_active === 1) ? 1 : 0,
                 'title_ru' => $title_ru,
                 'title_en' => $title_en !== '' ? $title_en : $title_ru,
                 'url_ru' => '/snailmail.php?id=' . $id,
