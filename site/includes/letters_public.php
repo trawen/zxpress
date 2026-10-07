@@ -228,7 +228,11 @@ function letters_public_enrich_row(array $row, bool $isEng): array
 	$row['summary_html'] = letters_public_summary_html($summary !== '' ? $summary : null);
 	$row['body_html'] = letters_public_summary_html($body !== '' ? $body : null);
 	$row['date_display'] = letters_public_date_display($row['date'] ?? null, $isEng);
-	$row['published_display'] = letters_public_date_display($row['created_at'] ?? null, $isEng);
+	$publishedAt = $row['published_at'] ?? null;
+	if ($publishedAt === null || trim((string) $publishedAt) === '') {
+		$publishedAt = $row['created_at'] ?? null;
+	}
+	$row['published_display'] = letters_public_date_display($publishedAt, $isEng);
 	$row['from_author_display'] = letters_public_author_from_row($row, 'from', $isEng);
 	$row['to_author_display'] = letters_public_author_from_row($row, 'to', $isEng);
 	$fromParts = letters_public_author_parts_from_row($row, 'from', $isEng);
