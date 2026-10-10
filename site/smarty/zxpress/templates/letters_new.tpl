@@ -151,13 +151,13 @@
 				<div class="smn-filters-list">
 				{foreach from=$letter_author_filters item=auth}
 					{if $filter_author && $auth.id == $filter_author}
-						<span class="smn-filter is-active">{$auth.author_display}<sup class="smn-filter-count">{$auth.letter_count}</sup></span>
+						<span class="smn-filter is-active">{if $auth.author_nick neq '' && $auth.author_group neq ''}<span class="smn-filter-nick">{$auth.author_nick}</span><span class="smn-filter-group">^{$auth.author_group}</span>{else}<span class="smn-filter-nick">{$auth.author_display}</span>{/if}<sup class="smn-filter-count">{$auth.letter_count}</sup></span>
 					{else}
-						<a class="smn-filter" href="{$auth.author_url}">{$auth.author_display}<sup class="smn-filter-count">{$auth.letter_count}</sup></a>
+						<a class="smn-filter" href="{$auth.author_url}">{if $auth.author_nick neq '' && $auth.author_group neq ''}<span class="smn-filter-nick">{$auth.author_nick}</span><span class="smn-filter-group">^{$auth.author_group}</span>{else}<span class="smn-filter-nick">{$auth.author_display}</span>{/if}<sup class="smn-filter-count">{$auth.letter_count}</sup></a>
 					{/if}
 				{/foreach}
 				{if $filter_author}
-					<a class="smn-filter smn-filter--all" href="{$letters_catalog_url}">{if $lng eq 'eng'}all{else}все{/if}</a>
+					<a class="smn-filter smn-filter--all" href="{$letters_catalog_url}"><span class="smn-filter-nick">{if $lng eq 'eng'}all{else}все{/if}</span></a>
 				{/if}
 				</div>
 			</nav>
@@ -167,22 +167,22 @@
 			<ul class="smn-list">
 			{foreach from=$letters_rows item=row}
 				<li class="smn-list-item">
-					<a class="smn-list-card" href="{$row.public_url}">
-						<h2 class="smn-list-title">{$row.title_display}</h2>
+					<div class="smn-list-card">
+						<h2><a class="smn-list-title" href="{$row.public_url}">{$row.title_display}</a></h2>
 						{if $row.summary_html || $row.cover}
 						<span class="smn-list-summary">{if $row.cover}<span class="smn-list-cover"><img src="{$row.cover.thumb_src}" alt="" width="256" loading="lazy" decoding="async"></span>{/if}{if $row.summary_html}<span class="smn-list-summary-text">{$row.summary_html nofilter}</span>{/if}</span>
 						{/if}
 						<span class="smn-list-meta">
 							<span class="smn-list-meta-main">
-								{$row.from_author_name}{if $row.from_author_geo} <span class="smn-list-meta-geo">{$row.from_author_geo}</span>{/if}
+								<span class="smn-list-meta-name">{if $row.from_author_nick neq '' && $row.from_author_group neq ''}{$row.from_author_nick}<span class="smn-list-meta-group">^{$row.from_author_group}</span>{else}{$row.from_author_name}{/if}</span>{if $row.from_author_geo} <span class="smn-list-meta-geo">{$row.from_author_geo}</span>{/if}
 								→
-								{$row.to_author_name}{if $row.to_author_geo} <span class="smn-list-meta-geo">{$row.to_author_geo}</span>{/if}
+								<span class="smn-list-meta-name">{if $row.to_author_nick neq '' && $row.to_author_group neq ''}{$row.to_author_nick}<span class="smn-list-meta-group">^{$row.to_author_group}</span>{else}{$row.to_author_name}{/if}</span>{if $row.to_author_geo} <span class="smn-list-meta-geo">{$row.to_author_geo}</span>{/if}
 							</span>
 							{if $row.published_display}
 							<span class="smn-list-meta-date">{if $lng eq 'eng'}published{else}опубликовано{/if} {$row.published_display}</span>
 							{/if}
 						</span>
-					</a>
+					</div>
 				</li>
 			{/foreach}
 			</ul>

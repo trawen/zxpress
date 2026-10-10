@@ -960,23 +960,38 @@ html:not([data-theme="dark"]) .smn-theme-icon--sun {
 	gap: 8px 10px;
 }
 .smn-filter {
+	position: relative;
 	font-family: var(--smn-sans);
 	font-size: 13px;
 	font-weight: 600;
 	color: var(--smn-ink);
 	text-decoration: none;
 	padding: 4px 0;
-	border-bottom: 1px solid transparent;
 }
-.smn-filter:hover {
-	border-bottom-color: var(--smn-accent);
+.smn-filter::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 2px;
+	background: var(--smn-accent);
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.25s ease;
+}
+.smn-filter:hover::after,
+.smn-filter.is-active::after {
+	transform: scaleX(1);
 }
 .smn-filter.is-active {
 	color: var(--smn-accent);
-	border-bottom-color: var(--smn-accent);
 }
 .smn-filter--all {
 	color: var(--smn-muted);
+}
+.smn-filter-group {
+	font-weight: 400;
 }
 .smn-filter-count {
 	font-size: 0.62em;
@@ -1051,8 +1066,14 @@ html:not([data-theme="dark"]) .smn-theme-icon--sun {
 .smn-list-item.is-zoomed {
 	z-index: 40;
 }
+.smn-list-card > h2:not(.smn-list-title) {
+	margin: 0;
+	font: inherit;
+}
 .smn-list-title {
-	display: block;
+	display: inline-block;
+	max-width: 100%;
+	position: relative;
 	margin: 0 0 8px;
 	font-family: var(--smn-sans);
 	font-weight: 700;
@@ -1060,8 +1081,28 @@ html:not([data-theme="dark"]) .smn-theme-icon--sun {
 	line-height: 1.25;
 	letter-spacing: -0.015em;
 	color: var(--smn-brand);
+	text-decoration: none;
+	padding-bottom: 2px;
 }
-.smn-list-card:hover .smn-list-title {
+a.smn-list-title:hover {
+	color: var(--smn-brand);
+}
+a.smn-list-title::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 2px;
+	background: var(--smn-accent);
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.25s ease;
+}
+a.smn-list-title:hover::after {
+	transform: scaleX(1);
+}
+a.smn-list-card:hover .smn-list-title {
 	color: var(--smn-accent);
 }
 .smn-list-summary {
@@ -1113,6 +1154,13 @@ html:not([data-theme="dark"]) .smn-theme-icon--sun {
 }
 .smn-list-meta-main {
 	min-width: 0;
+}
+.smn-list-meta-name {
+	font-weight: 600;
+	color: var(--smn-ink);
+}
+.smn-list-meta-group {
+	font-weight: 400;
 }
 .smn-list-meta-geo {
 	font-weight: 400;

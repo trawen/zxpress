@@ -585,3 +585,112 @@ function letters_ocr_match_author_id(array $authors, string $nick): int
 
     return 0;
 }
+
+/**
+ * OCR uploaded scans, or the saved originals of an existing letter.
+ *
+ * @return array<string,mixed>
+ */
+function letters_ocr_from_request(mysqli $db): array
+{
+    require_once __DIR__ . '/letters_images.php';
+
+    $images = [];
+    $files = $_FILES['ocr_files'] ?? null;
+    if (is_array($files) && isset($files['tmp_name']) && is_array($files['tmp_name'])) {
+        $n = count($files['tmp_name']);
+        if ($n > 12) {
+            throw new InvalidArgumentException('Слишком много файлов (макс. 12 страниц)');
+        }
+        for ($i = 0; $i < $n; $i++) {
+            $err = (int) ($files['error'][$i] ?? UPLOAD_ERR_NO_FILE);
+            if ($err === UPLOAD_ERR_NO_FILE) {
+                continue;
+            }
+            if ($err !== UPLOAD_ERR_OK) {
+                throw new RuntimeException('Ошибка загрузки файла #' . ($i + 1) . ': code ' . $err);
+            }
+            $tmp = (string) ($files['tmp_name'][$i] ?? '');
+            $name = (string) ($files['name'][$i] ?? ('page-' . ($i + 1) . '.jpg'));
+            if ($tmp === '' || !is_uploaded_file($tmp)) {
+                throw new RuntimeException('Некорректный upload: ' . $name);
+            }
+            $info = @getimagesize($tmp);
+            $mime = is_array($info) ? (string) ($info['mime'] ?? '') : '';
+            $allowed = ['image/jpeg', 'image/png', 'image/webp', 'image/gif'];
+            if (!in_array($mime, $allowed, true)) {
+                throw new RuntimeException('Недопустимый тип ' . $mime . ' (' . $name . ')');
+            }
+            $images[] = ['path' => $tmp, 'mime' => $mime, 'name' => $name];
+        }
+    }
+
+    if ($images === []) {
+        $letterId = (int) ($_POST['letter_id'] ?? 0);
+        if ($letterId <= 0) {
+            throw new InvalidArgumentException('Загрузите сканы или откройте сохранённое письмо с фото');
+        }
+        $chk = db_select($db, 'SELECT id FROM letters WHERE id=? LIMIT 1', 'i', $letterId);
+        $row = $chk ? mysqli_fetch_assoc($chk) : null;
+        if (!$row) {
+            throw new InvalidArgumentException('Письмо #' . $letterId . ' не найдено');
+        }
+        $entityTypeLetter = 1;
+        $zImg = db_select(
+            $db,
+            'SELECT id FROM images WHERE entity_type=? AND entity_id=? AND is_active=1 ORDER BY sort_order ASC, id ASC',
+            'ii',
+            $entityTypeLetter,
+            $letterId
+        );
+        while ($zImg && ($img = mysqli_fetch_assoc($zImg))) {
+            $imgId = (int) ($img['id'] ?? 0);
+            $path = letters_original_path_for_id($imgId);
+            if ($path === null) {
+                continue;
+            }
+            $info = @getimagesize($path);
+            $mime = is_array($info) ? (string) ($info['mime'] ?? '') : '';
+            if ($mime === '') {
+                $ext = strtolower((string) pathinfo($path, PATHINFO_EXTENSION));
+                $mime = match ($ext) {
+                    'png' => 'image/png',
+                    'webp' => 'image/webp',
+                    'gif' => 'image/gif',
+                    default => 'image/jpeg',
+                };
+            }
+            $images[] = [
+                'path' => $path,
+                'mime' => $mime,
+                'name' => basename($path),
+            ];
+            if (count($images) >= 12) {
+                break;
+            }
+        }
+        if ($images === []) {
+            throw new InvalidArgumentException('У письма #' . $letterId . ' нет файлов оригиналов на диске');
+        }
+    }
+
+    if ($images === []) {
+        throw new InvalidArgumentException('Нет валидных изображений');
+    }
+
+    @set_time_limit(letters_ocr_wall_timeout_sec(count($images)));
+
+    $result = letters_ocr_analyze($images);
+
+    $authors = [];
+    $za = db_select($db, 'SELECT id, nickname FROM authors ORDER BY nickname ASC');
+    if ($za) {
+        while ($author = mysqli_fetch_assoc($za)) {
+            $authors[] = $author;
+        }
+    }
+    $result['author_from'] = letters_ocr_match_author_id($authors, (string) ($result['from_nick'] ?? ''));
+    $result['author_to'] = letters_ocr_match_author_id($authors, (string) ($result['to_nick'] ?? ''));
+
+    return $result;
+}

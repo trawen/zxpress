@@ -123,22 +123,22 @@
 			<ul class="smn-list">
 			{foreach from=$letters_rows item=row}
 				<li class="smn-list-item">
-					<a class="smn-list-card" href="{$row.public_url}">
-						<h2 class="smn-list-title">{$row.title_display}</h2>
+					<div class="smn-list-card">
+						<h2><a class="smn-list-title" href="{$row.public_url}">{$row.title_display}</a></h2>
 						{if $row.summary_html || $row.cover}
 						<span class="smn-list-summary">{if $row.cover}<span class="smn-list-cover"><img src="{$row.cover.thumb_src}" alt="" width="256" loading="lazy" decoding="async"></span>{/if}{if $row.summary_html}<span class="smn-list-summary-text">{$row.summary_html nofilter}</span>{/if}</span>
 						{/if}
 						<span class="smn-list-meta">
 							<span class="smn-list-meta-main">
-								{$row.from_author_name}{if $row.from_author_geo} <span class="smn-list-meta-geo">{$row.from_author_geo}</span>{/if}
+								<span class="smn-list-meta-name">{if $row.from_author_nick neq '' && $row.from_author_group neq ''}{$row.from_author_nick}<span class="smn-list-meta-group">^{$row.from_author_group}</span>{else}{$row.from_author_name}{/if}</span>{if $row.from_author_geo} <span class="smn-list-meta-geo">{$row.from_author_geo}</span>{/if}
 								→
-								{$row.to_author_name}{if $row.to_author_geo} <span class="smn-list-meta-geo">{$row.to_author_geo}</span>{/if}
+								<span class="smn-list-meta-name">{if $row.to_author_nick neq '' && $row.to_author_group neq ''}{$row.to_author_nick}<span class="smn-list-meta-group">^{$row.to_author_group}</span>{else}{$row.to_author_name}{/if}</span>{if $row.to_author_geo} <span class="smn-list-meta-geo">{$row.to_author_geo}</span>{/if}
 							</span>
 							{if $row.published_display}
 							<span class="smn-list-meta-date">{if $lng eq 'eng'}published{else}опубликовано{/if} {$row.published_display}</span>
 							{/if}
 						</span>
-					</a>
+					</div>
 				</li>
 			{/foreach}
 			</ul>

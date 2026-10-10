@@ -45,13 +45,23 @@ function activity_actor_user_id(): int
 
 function activity_detect_domain(): string
 {
-	$script = basename((string) ($_SERVER['SCRIPT_NAME'] ?? ''));
+	$scriptName = (string) ($_SERVER['SCRIPT_NAME'] ?? '');
+	$script = basename($scriptName);
+	if (str_contains($scriptName, '/admin2/')) {
+		if ($script === 'letters.php' || $script === 'letter.php') {
+			return 'letter';
+		}
+		if (in_array($script, ['books.php', 'work.php', 'edition.php', 'chapter.php'], true)) {
+			return 'book';
+		}
+	}
 	$map = [
 		'admin_periodical_articles.php' => 'periodical',
 		'admin_periodicals.php' => 'periodical',
 		'admin_publications.php' => 'publication',
 		'admin_pub_articles.php' => 'publication',
 		'admin_books.php' => 'book',
+		'admin_books_v2.php' => 'book',
 		'admin_books_light.php' => 'book',
 		'admin_book_rubrics.php' => 'book',
 		'admin_letters.php' => 'letter',

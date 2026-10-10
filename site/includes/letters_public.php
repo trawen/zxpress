@@ -239,8 +239,12 @@ function letters_public_enrich_row(array $row, bool $isEng): array
 	$toParts = letters_public_author_parts_from_row($row, 'to', $isEng);
 	$row['from_author_name'] = $fromParts['name'];
 	$row['from_author_geo'] = $fromParts['geo'];
+	$row['from_author_nick'] = trim((string) ($row['from_nick'] ?? ''));
+	$row['from_author_group'] = trim((string) ($row['from_group_name'] ?? ''));
 	$row['to_author_name'] = $toParts['name'];
 	$row['to_author_geo'] = $toParts['geo'];
+	$row['to_author_nick'] = trim((string) ($row['to_nick'] ?? ''));
+	$row['to_author_group'] = trim((string) ($row['to_group_name'] ?? ''));
 	$fromSlugRow = [
 		'id' => (int) ($row['author_from'] ?? 0),
 		'slug_ru' => $row['from_slug_ru'] ?? '',

@@ -215,6 +215,8 @@ $z = db_select(
 	. 'ORDER BY a.nickname ASC'
 );
 while ($z && ($row = mysqli_fetch_assoc($z))) {
+	$row['author_nick'] = trim((string) ($row['nickname'] ?? ''));
+	$row['author_group'] = trim((string) ($row['group_name'] ?? ''));
 	$row['author_display'] = letters_public_author_line(
 		$row['nickname'] ?? null,
 		$row['group_name'] ?? null,
