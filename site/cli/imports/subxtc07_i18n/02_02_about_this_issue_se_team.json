@@ -1,0 +1,21 @@
+{
+  "title_cs": "About this Issue (Subliminal Extacy #07)",
+  "title_ru": "О седьмом выпуске Subliminal Extacy",
+  "title_en": "About this Issue (Subliminal Extacy #07)",
+  "meta_description_cs": "An editorial introduction to the 7th issue of Subliminal Extacy diskmag, featuring updates on the engine, contributor credits, and usage instructions.",
+  "meta_description_ru": "Редакционное вступление к 7-му выпуску дисмага Subliminal Extacy, включающее обновления движка, список авторов и инструкцию по управлению.",
+  "meta_description_en": "An editorial introduction to the 7th issue of Subliminal Extacy diskmag, featuring updates on the engine, contributor credits, and usage instructions.",
+  "tags_ru": [
+    "subliminal extacy",
+    "zx spectrum",
+    "дисмаг",
+    "редакторская колонка",
+    "z80",
+    "qr-код",
+    "lordcoxis",
+    "mr.spiv",
+    "baze"
+  ],
+  "body_ru": "## О седьмом выпуске\n(c) SE Team 2026\n\nПривет всем, добро пожаловать в седьмой выпуск Subliminal Extacy!\n\nЭтот номер готовился гораздо дольше, чем планировалось. Причиной тому стала доработка движка (назовем это ленью lordcoxis), чтобы внедрить генератор QR-кодов от Mr.Spiv. Да, именно так: отныне мы поддерживаем гиперссылки через QR-коды, чтобы вам не приходилось тратить драгоценное время на ввод длинных URL-адресов на мобильном телефоне ;)\n\nВ этом выпуске вас также ждет множество отличных статей, включая крутые материалы по кодингу от тяжеловесов сцены z80, не говоря уже о байках с пати и здоровой порции безумия SE ;)\n\nМы хотим поблагодарить всех, кто прислал статьи, музыку, графику и ASCII-арт, особенно baze/3SC, который подготовил целых три статьи и потрясающий экран загрузки!\n\nИ, как всегда, не забывайте, что выпуск SE возможен только благодаря вкладу читателей. Так что если хотите, чтобы SE выходил чаще, присылайте свои статьи! Поддерживайте SE! Поддерживайте сцену!\n\n### Управление\n- Курсор вверх/вниз: выбор статьи (меню) или гиперссылки\n- Курсор влево/вправо: предыдущая/следующая страница\n- Enter: открыть статью (меню), показать QR-код выбранной ссылки или текущий номер страницы\n- Space: возврат в меню\n\n### Авторы\n**Код:**\n- Основной код: lordcoxis\n- Процедура очистки экрана: ub880d\n- Упаковщик + QR-кодер: Mr. Spiv\n\n**Музыка:**\n1. Almost Still от n1k-o\n2. Chip'n'Cheap (Subliminal Version) от JosSs\n3. Early Autumn от Gasman\n\n**Арт:**\n- Экран загрузки: baze\n- Фронтенд: H7\n- ASCII: k-0s, H7\n\n**Шрифты:**\n- 8x4: \"subxtc\" от k-0s и baze\n- 8x8: \"mO'sOul Remix\" от k-0s (оригинал Desoto/Mo'Soul)\n\n```text\n<subxtc engine v1.2>\n```",
+  "body_en": "## About this Issue\n(c) SE Team 2026\n\nHello one and all, and welcome to the 7th issue of Subliminal Extacy!\n\nThis issue took way longer than anticipated, this time due to a revision of the engine (aka lordcoxis slacking) to include Mr.Spiv's QR-code generator. That's right, from now on we support hyperlinks with QR-codes, so that you don't have to waste your precious time typing long URLs on your mobile phone ;)\n\nWe also have a lot of great articles this time around, with knockout coding articles from heavyweights of the z80 scene, not to mention some party tales and a healthy dose of SE silliness ;)\n\nWe'd like to thank all those who sent in articles, music, gfx and ascii art - especially baze/3SC who sent 3 articles and a fabulous loading screen!\n\nAnd as always, don't forget that SE is only possible due to reader contributions. So if you want to see SE released more often, send in your articles! Support SE! Support the scene!\n\n### Controls\n- Cursor up/down: choose an article (menu) or a hyperlink\n- Cursor left/right: previous/next page\n- Enter: open the article (menu), show the QR code of the selected hyperlink, or show the current page number\n- Space: back to the menu\n\n### Credits\n**Code:**\n- Main code: lordcoxis\n- Screen clear routine: ub880d\n- Cruncher + QR Coder: Mr. Spiv\n\n**Musics:**\n1. Almost Still by n1k-o\n2. Chip'n'Cheap (Subliminal Version) by JosSs\n3. Early Autumn by Gasman\n\n**Art:**\n- Loading screen: baze\n- Frontend: H7\n- ASCII: k-0s, H7\n\n**Fonts:**\n- 8x4: \"subxtc\" by k-0s + baze\n- 8x8: \"mO'sOul Remix\" by k-0s (original by Desoto/Mo'Soul)\n\n```text\n<subxtc engine v1.2>\n```"
+}

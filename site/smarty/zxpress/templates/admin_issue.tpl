@@ -420,6 +420,22 @@
 								<span class="admin-ai-label">Slug EN</span>
 								<input class="admin-ai-slug" type="text" name="slug_en" value="{$press.slug_en}" data-press-change>
 							</label>
+							<label class="admin-ai-field" style="grid-column:1/-1">
+								<span class="admin-ai-label">Описание RU</span>
+								<textarea name="description_ru" rows="3" data-press-change>{$press.description_ru|escape}</textarea>
+							</label>
+							<label class="admin-ai-field" style="grid-column:1/-1">
+								<span class="admin-ai-label">Описание EN</span>
+								<textarea name="description_en" rows="3" data-press-change>{$press.description_en|escape}</textarea>
+							</label>
+							<label class="admin-ai-field">
+								<span class="admin-ai-label">Meta RU</span>
+								<input type="text" name="meta_description_ru" maxlength="256" value="{$press.meta_description_ru|escape}" data-press-change>
+							</label>
+							<label class="admin-ai-field">
+								<span class="admin-ai-label">Meta EN</span>
+								<input type="text" name="meta_description_en" maxlength="256" value="{$press.meta_description_en|escape}" data-press-change>
+							</label>
 						</div>
 					</div>
 				</section>
@@ -469,6 +485,26 @@
 										<label class="admin-ai-danger">
 											<input type="checkbox" value="1" name="issue_delete_{$issues[n].id}">
 											удалить
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="8">
+										<label class="admin-ai-field">
+											<span class="admin-ai-label">Описание RU #{$issues[n].title|escape}</span>
+											<textarea name="issue_description_ru_{$issues[n].id}" rows="2">{$issues[n].description_ru|escape}</textarea>
+										</label>
+										<label class="admin-ai-field">
+											<span class="admin-ai-label">Описание EN</span>
+											<textarea name="issue_description_en_{$issues[n].id}" rows="2">{$issues[n].description_en|escape}</textarea>
+										</label>
+										<label class="admin-ai-field">
+											<span class="admin-ai-label">Meta RU</span>
+											<input type="text" name="issue_meta_description_ru_{$issues[n].id}" maxlength="256" value="{$issues[n].meta_description_ru|escape}">
+										</label>
+										<label class="admin-ai-field">
+											<span class="admin-ai-label">Meta EN</span>
+											<input type="text" name="issue_meta_description_en_{$issues[n].id}" maxlength="256" value="{$issues[n].meta_description_en|escape}">
 										</label>
 									</td>
 								</tr>

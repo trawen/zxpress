@@ -7,6 +7,7 @@ require 'init.inc';
 require_once __DIR__ . '/includes/ezine_slugs.php';
 require_once __DIR__ . '/includes/article_text_render.php';
 require_once __DIR__ . '/includes/admin_translate.php';
+require_once __DIR__ . '/includes/ezines_v2_sync.php';
 
 if (!isset($_SESSION['login']) || !$_SESSION['login']) {
 	header('HTTP/1.1 403 Forbidden');
@@ -372,6 +373,48 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
 			}
 
 			if (!empty($saved) && $aid > 0) {
+				// Dual-write into ezines_v2 (legacy tables remain source of truth for old code paths).
+				$v2Issue = ezines_v2_find_by_legacy_issue($db, $issueId);
+				$v2IssueId = $v2Issue ? (int) $v2Issue['id'] : 0;
+				if ($v2IssueId <= 0) {
+					$zPress = db_select($db, 'SELECT * FROM press WHERE id=? LIMIT 1', 'i', $pressId);
+					$pressRowSync = ($zPress && ($pr = mysqli_fetch_assoc($zPress))) ? $pr : null;
+					if (is_array($pressRowSync)) {
+						$ezineIdSync = ezines_v2_sync_press($db, $pressRowSync, 'ru');
+						$zIssue = db_select($db, 'SELECT * FROM issue WHERE id=? LIMIT 1', 'i', $issueId);
+						$issueRowSync = ($zIssue && ($ir = mysqli_fetch_assoc($zIssue))) ? $ir : null;
+						if ($ezineIdSync > 0 && is_array($issueRowSync)) {
+							$v2IssueId = ezines_v2_sync_issue($db, $issueRowSync, $ezineIdSync);
+						}
+					}
+				}
+				if ($v2IssueId > 0) {
+					$articleSync = [
+						'id' => $aid,
+						'title' => $title,
+						'title_eng' => $titleEng,
+						'number' => $number,
+						'temp' => $temp,
+						'views' => 0,
+						'file' => '',
+						'name' => '',
+						'date' => $now,
+						'text_ru' => $textRu,
+						'text_en' => $textEn,
+						'text_type' => $textType,
+						'text_type_ru' => $textTypeRu,
+						'text_type_en' => $textTypeEn,
+						'meta_description_ru' => $metaRu,
+						'meta_description_en' => $metaEn,
+						'slug_ru' => $slugs['slug_ru'],
+						'slug_en' => $slugs['slug_en'],
+					];
+					$v2ArticleId = ezines_v2_sync_article($db, $articleSync, $v2IssueId, 'ru');
+					if ($v2ArticleId > 0) {
+						ezines_v2_sync_article_authors($db, $aid, $v2ArticleId);
+					}
+				}
+
 				if ($wasCreate) {
 					activity_log($db, [
 						'verb' => 'created',

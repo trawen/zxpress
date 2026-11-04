@@ -225,7 +225,7 @@ function admin_translate_split_chunks(string $text, int $limit = 4500): array
 /**
  * @throws RuntimeException
  */
-function admin_translate_text(string $text): string
+function admin_translate_text(string $text, string $tl = 'en'): string
 {
     $text = admin_translate_normalize_input($text);
     if ($text === '' || !admin_translate_has_cyrillic($text)) {
@@ -234,7 +234,7 @@ function admin_translate_text(string $text): string
 
     $out = '';
     foreach (admin_translate_split_chunks($text) as $chunk) {
-        $out .= admin_translate_google_chunk($chunk);
+        $out .= admin_translate_google_chunk($chunk, 'auto', $tl);
     }
 
     return $out;
@@ -245,7 +245,7 @@ function admin_translate_text(string $text): string
  *
  * @throws RuntimeException
  */
-function admin_translate_markdown(string $text): string
+function admin_translate_markdown(string $text, string $tl = 'en'): string
 {
     $text = admin_translate_normalize_input($text);
     if ($text === '' || !admin_translate_has_cyrillic($text)) {
@@ -264,20 +264,20 @@ function admin_translate_markdown(string $text): string
     $text = preg_replace_callback('/`[^`\n]+`/', $stashCode, $text) ?? $text;
 
     $translateInline = null;
-    $translateInline = static function (string $chunk) use (&$translateInline): string {
+    $translateInline = static function (string $chunk) use (&$translateInline, $tl): string {
         if ($chunk === '' || !admin_translate_has_cyrillic($chunk)) {
             return $chunk;
         }
 
         $chunk = preg_replace_callback(
             '/!\[([^\]]*)\]\(([^)]*)\)/',
-            static fn (array $m): string => '![' . admin_translate_text($m[1]) . '](' . $m[2] . ')',
+            static fn (array $m): string => '![' . admin_translate_text($m[1], $tl) . '](' . $m[2] . ')',
             $chunk
         ) ?? $chunk;
 
         $chunk = preg_replace_callback(
             '/\[([^\]]*)\]\(([^)]*)\)/',
-            static fn (array $m): string => '[' . admin_translate_text($m[1]) . '](' . $m[2] . ')',
+            static fn (array $m): string => '[' . admin_translate_text($m[1], $tl) . '](' . $m[2] . ')',
             $chunk
         ) ?? $chunk;
 
@@ -300,7 +300,7 @@ function admin_translate_markdown(string $text): string
         ) ?? $chunk;
 
         if (admin_translate_has_cyrillic($chunk)) {
-            return admin_translate_text($chunk);
+            return admin_translate_text($chunk, $tl);
         }
 
         return $chunk;

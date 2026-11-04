@@ -27,8 +27,46 @@ function zxpress_user_is_admin_level(mixed $level): bool
 	return (int) $level === 1;
 }
 
+/**
+ * Local docker only. Production sets SITE_URL / CANONICAL_BASE_URL to zxpress.ru,
+ * which keeps this off even if the flag is copied into that environment.
+ */
+function zxpress_local_admin_bypass_enabled(): bool
+{
+	if (getenv('ZXPRESS_LOCAL_ADMIN') !== '1') {
+		return false;
+	}
+	foreach (['SITE_URL', 'CANONICAL_BASE_URL'] as $key) {
+		$value = getenv($key);
+		if (!is_string($value) || $value === '') {
+			continue;
+		}
+		if (preg_match('#(^|//)(www\.)?zxpress\.ru($|[:/])#i', $value)) {
+			error_log('[FIX] ZXPRESS_LOCAL_ADMIN ignored because ' . $key . ' points at zxpress.ru');
+			return false;
+		}
+	}
+
+	return true;
+}
+
+function zxpress_local_admin_session(): void
+{
+	if (!zxpress_local_admin_bypass_enabled() || session_status() !== PHP_SESSION_ACTIVE) {
+		return;
+	}
+	if (!empty($_SESSION['login'])) {
+		return;
+	}
+	$_SESSION['login'] = 1;
+	$_SESSION['username'] = 'local';
+	$_SESSION['admin_last_activity'] = time();
+}
+
 function handle_login($db, $smarty): void
 {
+	zxpress_local_admin_session();
+
 	if (!empty($_SESSION['login'])) {
 		// Default: keep admin session alive at least 1 day.
 		$idle_sec_raw = (int) (getenv('ADMIN_SESSION_IDLE_SECONDS') ?: '86400');

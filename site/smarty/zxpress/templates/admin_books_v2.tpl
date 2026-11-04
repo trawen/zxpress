@@ -259,6 +259,10 @@
 <td><input type="text" name="i18n[{$lc}][subtitle]" style="width:480px" value="{$work_i18n_by_lang[$lc].subtitle}"></td>
 </tr>
 <tr>
+<td>Импринт (MD)</td>
+<td><textarea name="i18n[{$lc}][imprint]" style="width:480px;height:90px">{$work_i18n_by_lang[$lc].imprint}</textarea></td>
+</tr>
+<tr>
 <td>Slug ({$lc})</td>
 <td>
 <input type="text" name="i18n[{$lc}][slug]" style="width:480px" maxlength="191" pattern="[a-z0-9-]*" value="{$work_i18n_by_lang[$lc].slug}">

@@ -106,7 +106,11 @@
 {/if}
 
 				<div class="smn-article-body">
+{if $article.text_mode eq 'md'}
+					<div class="smn-article-text article-text-md" id="text">{$article.text nofilter}</div>
+{else}
 					<pre class="smn-article-text" id="text">{$article.text nofilter}</pre>
+{/if}
 				</div>
 
 				<footer class="smn-article-footer">

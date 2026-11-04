@@ -130,6 +130,19 @@
 								<dd>{if $lng eq 'eng'}{$press.circulation} copies{else}{$press.circulation} экземпляров{/if}</dd>
 							</div>
 						{/if}
+						{if isset($printings) && $printings && $printings|@count gt 0}
+							<div class="smn-book-fact">
+								<dt>{if $lng eq 'eng'}Later printings{else}Доп. тиражи{/if}</dt>
+								<dd>
+								{foreach from=$printings item=pr name=prloop}
+									{if !$smarty.foreach.prloop.first}; {/if}
+									{if $pr.year}{$pr.year}{/if}
+									{if $pr.year && $pr.circulation} — {/if}
+									{if $pr.circulation}{if $lng eq 'eng'}{$pr.circulation} copies{else}{$pr.circulation} экз.{/if}{/if}
+								{/foreach}
+								</dd>
+							</div>
+						{/if}
 						{if $press.isbn}
 							<div class="smn-book-fact">
 								<dt>ISBN</dt>
@@ -142,6 +155,13 @@
 						<div class="smn-book-annotation">
 							<h2 class="smn-book-section-title">{if $lng eq 'eng'}Publisher’s summary{else}Аннотация издательства{/if}</h2>
 							<div class="smn-book-annotation-body">{$press.annotation nofilter}</div>
+						</div>
+						{/if}
+
+						{if isset($press.imprint_html) && $press.imprint_html}
+						<div class="smn-book-annotation">
+							<h2 class="smn-book-section-title">{if $lng eq 'eng'}Imprint{else}Выходные данные{/if}</h2>
+							<div class="smn-book-annotation-body">{$press.imprint_html nofilter}</div>
 						</div>
 						{/if}
 

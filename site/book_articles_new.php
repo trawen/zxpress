@@ -1,9 +1,8 @@
 <?php
 /**
- * Layout test entry for a book chapter (new chrome / typography).
+ * books_v2 chapter page (same renderer as legacy; TOC links stay under /books-new).
  * Public URL: /{lang}/books-new/chapter/{id}
  */
-define('BOOK_ARTICLE_UI_VARIANT', 'new');
-define('BOOKS_UI_VARIANT', 'new');
+define('BOOKS_V2_CHAPTER_UI', true);
 
 require __DIR__ . '/book_articles.php';

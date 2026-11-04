@@ -1,6 +1,7 @@
 <?php
 require 'init.inc';
 require_once __DIR__ . '/includes/ezine_slugs.php';
+require_once __DIR__ . '/includes/ezines_v2_sync.php';
 
 if (!isset($_SESSION['login']) || !$_SESSION['login']) {
     header('HTTP/1.1 403 Forbidden');
@@ -405,6 +406,51 @@ if (($_POST['save'] ?? '') === 'save') {
                 $stmt_issue_slug->close();
             }
 
+            $issueDescRu = (string) ($_POST['issue_description_ru_' . $id_issue] ?? $t['description_ru'] ?? '');
+            $issueDescEn = (string) ($_POST['issue_description_en_' . $id_issue] ?? $t['description_en'] ?? '');
+            $issueMetaRu = (string) ($_POST['issue_meta_description_ru_' . $id_issue] ?? $t['meta_description_ru'] ?? '');
+            $issueMetaEn = (string) ($_POST['issue_meta_description_en_' . $id_issue] ?? $t['meta_description_en'] ?? '');
+            if (
+                array_key_exists('issue_description_ru_' . $id_issue, $_POST)
+                || array_key_exists('issue_meta_description_ru_' . $id_issue, $_POST)
+            ) {
+                $stmt_issue_desc = $db->prepare(
+                    'UPDATE issue SET description_ru=?, description_en=?, meta_description_ru=?, meta_description_en=? WHERE id=? LIMIT 1'
+                );
+                if ($stmt_issue_desc) {
+                    $stmt_issue_desc->bind_param('ssssi', $issueDescRu, $issueDescEn, $issueMetaRu, $issueMetaEn, $id_issue);
+                    $stmt_issue_desc->execute();
+                    $stmt_issue_desc->close();
+                }
+            }
+
+            $ezineForIssue = ezines_v2_find_by_legacy_press($db, $id);
+            $ezineIdForIssue = $ezineForIssue ? (int) $ezineForIssue['id'] : 0;
+            if ($ezineIdForIssue <= 0) {
+                $zPressSync = db_select($db, 'SELECT * FROM press WHERE id=? LIMIT 1', 'i', $id);
+                $pressSync = ($zPressSync && ($pr = mysqli_fetch_assoc($zPressSync))) ? $pr : null;
+                if (is_array($pressSync)) {
+                    $ezineIdForIssue = ezines_v2_sync_press($db, $pressSync, 'ru');
+                }
+            }
+            if ($ezineIdForIssue > 0) {
+                $issueSync = array_merge($issueRow, [
+                    'id' => $id_issue,
+                    'title' => $title,
+                    'sort_order' => $sortOrder,
+                    'date' => $issueDate,
+                    'missing' => $issueMissing,
+                    'slug_ru' => $issueSlugs['slug_ru'],
+                    'slug_en' => $issueSlugs['slug_en'],
+                    'description_ru' => $issueDescRu,
+                    'description_en' => $issueDescEn,
+                    'meta_description_ru' => $issueMetaRu,
+                    'meta_description_en' => $issueMetaEn,
+                    'views' => (int) ($t['views'] ?? 0),
+                ]);
+                ezines_v2_sync_issue($db, $issueSync, $ezineIdForIssue);
+            }
+
             if (($_POST['issue_delete_' . $id_issue] ?? null) == 1) {
                 $stmt_del = $db->prepare("DELETE FROM issue WHERE id=? LIMIT 1");
                 if ($stmt_del) {
@@ -468,6 +514,29 @@ if (($_POST['save'] ?? '') === 'save') {
                 $stmt_press_slug->execute();
                 $stmt_press_slug->close();
             }
+
+            $descRu = (string) ($_POST['description_ru'] ?? $pressRow['description_ru'] ?? '');
+            $descEn = (string) ($_POST['description_en'] ?? $pressRow['description_en'] ?? '');
+            $metaRu = (string) ($_POST['meta_description_ru'] ?? $pressRow['meta_description_ru'] ?? '');
+            $metaEn = (string) ($_POST['meta_description_en'] ?? $pressRow['meta_description_en'] ?? '');
+            if (array_key_exists('description_ru', $_POST) || array_key_exists('meta_description_ru', $_POST)) {
+                $stmt_press_desc = $db->prepare(
+                    'UPDATE press SET description_ru=?, description_en=?, meta_description_ru=?, meta_description_en=? WHERE id=? LIMIT 1'
+                );
+                if ($stmt_press_desc) {
+                    $stmt_press_desc->bind_param('ssssi', $descRu, $descEn, $metaRu, $metaEn, $id);
+                    $stmt_press_desc->execute();
+                    $stmt_press_desc->close();
+                }
+            }
+
+            $pressRow['slug_ru'] = $pressSlugs['slug_ru'];
+            $pressRow['slug_en'] = $pressSlugs['slug_en'];
+            $pressRow['description_ru'] = $descRu;
+            $pressRow['description_en'] = $descEn;
+            $pressRow['meta_description_ru'] = $metaRu;
+            $pressRow['meta_description_en'] = $metaEn;
+            ezines_v2_sync_press($db, $pressRow, 'ru');
         }
 
     }

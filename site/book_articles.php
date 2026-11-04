@@ -17,8 +17,11 @@ $skip = (int) ($_GET['skip'] ?? 0);
 
 $lng = $smarty->getTemplateVars('lng');
 $isEng = ($lng === 'eng');
+$booksV2Ui = defined('BOOKS_V2_CHAPTER_UI') && BOOKS_V2_CHAPTER_UI;
 
-$catalogUrl = books_url_catalog($isEng);
+$catalogUrl = $booksV2Ui ? books_v2_url_catalog($isEng) : books_url_catalog($isEng);
+$bookUrlFn = $booksV2Ui ? 'books_v2_url_book' : 'books_url_book';
+$chapterUrlFn = $booksV2Ui ? 'books_v2_url_chapter' : 'books_url_chapter';
 $smarty->assign('books_catalog_url', $catalogUrl);
 $smarty->assign('ezines_catalog_url', ezn_url_catalog($isEng));
 $smarty->assign('letters_catalog_url', letters_url_catalog($isEng));
@@ -55,7 +58,7 @@ if ($press) {
 		? ('/pictures/thumbs/' . $imageId . '.jpg')
 		: '';
 	$chIdBook = (int) ($press['ch_id_book'] ?? 0);
-	$press['public_url'] = books_url_book((int) ($press['id'] ?? 0), $isEng);
+	$press['public_url'] = $bookUrlFn((int) ($press['id'] ?? 0), $isEng);
 } else {
 	$articleNotFound = true;
 	http_response_code(404);
@@ -81,6 +84,21 @@ if ($article) {
 		$article['text'] = '';
 		error_log('book_articles.php: path traversal attempt for ch_id=' . $article['ch_id']);
 	}
+	$article['text_mode'] = 'html';
+	$wantLang = books_public_lang_code(is_string($lng) ? $lng : '');
+	$v2row = books_public_chapter_translation($db, (int) $article['ch_id'], $wantLang);
+	if ($v2row && (string) $v2row['lang'] === $wantLang) {
+		$trTitle = trim((string) ($v2row['title'] ?? ''));
+		if ($trTitle !== '') {
+			$article['ch_title'] = $trTitle;
+			$article['ch_title_plain'] = title_plain(strip_tags($trTitle));
+		}
+	}
+	if ($v2row && trim((string) $v2row['body']) !== '') {
+		$rendered = books_render_chapter_body((string) $v2row['body'], (string) $v2row['format']);
+		$article['text'] = $rendered['html'];
+		$article['text_mode'] = $rendered['mode'];
+	}
 } else {
 	$articleNotFound = true;
 	http_response_code(404);
@@ -90,6 +108,7 @@ if ($article) {
 		'ch_title' => '',
 		'ch_title_plain' => $isEng ? 'Chapter not found' : 'Глава не найдена',
 		'text' => '',
+		'text_mode' => 'html',
 	];
 }
 
@@ -128,7 +147,7 @@ if ($chIdBook > 0) {
 	$z = mysqli_stmt_get_result($stmt);
 	while ($z && ($t = mysqli_fetch_array($z))) {
 		$t['ch_title'] = plain_text_decode_entities((string) ($t['ch_title'] ?? ''));
-		$t['public_url'] = books_url_chapter((int) $t['ch_id'], $isEng);
+		$t['public_url'] = $chapterUrlFn((int) $t['ch_id'], $isEng);
 		$t['current'] = ((int) $t['ch_id'] === $id);
 		$otherArticles[] = $t;
 	}
@@ -136,8 +155,8 @@ if ($chIdBook > 0) {
 $smarty->assign('other_articles', $otherArticles);
 $smarty->assign('id_article', $id);
 
-$smarty->assign('url_rus', htmlspecialchars(books_url_chapter($id, false), ENT_QUOTES, 'UTF-8'));
-$smarty->assign('url_eng', htmlspecialchars(books_url_chapter($id, true), ENT_QUOTES, 'UTF-8'));
+$smarty->assign('url_rus', htmlspecialchars($chapterUrlFn($id, false), ENT_QUOTES, 'UTF-8'));
+$smarty->assign('url_eng', htmlspecialchars($chapterUrlFn($id, true), ENT_QUOTES, 'UTF-8'));
 
 if (!empty($_POST['submit'])) {
 	error_log('[FIX] book_articles.php comment submit detected for id=' . $id);
@@ -147,7 +166,7 @@ if (!$articleNotFound) {
 	require_once __DIR__ . '/includes/comments_scope.php';
 	$comments_target_id = comments_id_book_chapter($id);
 	$smarty->assign('comments_enabled', true);
-	$smarty->assign('comments_form_action', books_url_chapter($id, $isEng));
+	$smarty->assign('comments_form_action', $chapterUrlFn($id, $isEng));
 	$smarty->assign('comments_invite', $isEng
 		? 'Share your thoughts about this chapter'
 		: 'Поделитесь вашим мнением о главе');

@@ -4,6 +4,140 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/books_v2.php';
 
+/**
+ * Fill EN and ES book fields from the Russian tab via Google Translate.
+ * Slug is built from the translated title.
+ *
+ * @param array{title?:string,subtitle?:string,imprint?:string,annotation?:string,meta_description?:string} $source
+ * @return array<string,array{title:string,subtitle:string,imprint:string,slug:string,annotation:string,meta_description:string}>
+ */
+function books_v2_admin_translate_from_ru(mysqli $db, int $workId, array $source): array
+{
+    require_once __DIR__ . '/admin_translate.php';
+
+    $fields = [
+        'title' => 255,
+        'subtitle' => 255,
+        'imprint' => 0,
+        'annotation' => 0,
+        'meta_description' => 255,
+    ];
+    $clean = [];
+    foreach ($fields as $field => $_max) {
+        $clean[$field] = trim((string) ($source[$field] ?? ''));
+    }
+    if (
+        $clean['title'] === ''
+        && $clean['subtitle'] === ''
+        && $clean['imprint'] === ''
+        && $clean['annotation'] === ''
+        && $clean['meta_description'] === ''
+    ) {
+        throw new RuntimeException('Нечего переводить: заполните русскую вкладку');
+    }
+
+    $out = [];
+    foreach (['en', 'es'] as $lang) {
+        $row = [];
+        foreach ($fields as $field => $max) {
+            $text = $clean[$field];
+            if ($text === '') {
+                $row[$field] = '';
+                continue;
+            }
+            $translated = $field === 'imprint'
+                ? trim(admin_translate_markdown($text, $lang))
+                : trim(admin_translate_text($text, $lang));
+            if ($max > 0 && mb_strlen($translated) > $max) {
+                $translated = rtrim(mb_substr($translated, 0, $max));
+            }
+            $row[$field] = $translated;
+        }
+        $slugSource = $row['title'] !== '' ? $row['title'] : $row['subtitle'];
+        $row['slug'] = $slugSource !== '' ? books_v2_admin_unique_work_slug($db, $lang, $slugSource, $workId) : '';
+        $out[$lang] = $row;
+    }
+
+    return $out;
+}
+
+/**
+ * Keep HTML tags, translate the text between them.
+ */
+function books_v2_admin_translate_html(string $html, string $tl): string
+{
+    require_once __DIR__ . '/admin_translate.php';
+    if ($html === '' || !admin_translate_has_cyrillic($html)) {
+        return $html;
+    }
+    $store = [];
+    $i = 0;
+    $stashed = preg_replace_callback(
+        '/<[^>]*>/',
+        static function (array $m) use (&$store, &$i): string {
+            $key = '⟦T' . ($i++) . '⟧';
+            $store[$key] = $m[0];
+
+            return $key;
+        },
+        $html
+    );
+    $translated = admin_translate_text(is_string($stashed) ? $stashed : $html, $tl);
+    foreach ($store as $key => $tag) {
+        $translated = str_replace($key, $tag, $translated);
+    }
+
+    return $translated;
+}
+
+/**
+ * Fill EN and ES chapter title and body from the Russian tab.
+ * Slug is built from the translated title. Format is copied.
+ *
+ * @param array{title?:string,body?:string,format?:string} $source
+ * @return array<string,array{title:string,slug:string,body:string,format:string}>
+ */
+function books_v2_admin_translate_chapter_from_ru(array $source): array
+{
+    require_once __DIR__ . '/admin_translate.php';
+
+    $title = trim((string) ($source['title'] ?? ''));
+    $body = trim((string) ($source['body'] ?? ''));
+    $format = (string) ($source['format'] ?? 'html');
+    if (!isset(books_v2_admin_body_formats()[$format])) {
+        $format = 'html';
+    }
+    if ($title === '' && $body === '') {
+        throw new RuntimeException('Нечего переводить: заполните русскую вкладку');
+    }
+
+    $out = [];
+    foreach (['en', 'es'] as $lang) {
+        $translatedTitle = $title === '' ? '' : trim(admin_translate_text($title, $lang));
+        if (mb_strlen($translatedTitle) > 512) {
+            $translatedTitle = rtrim(mb_substr($translatedTitle, 0, 512));
+        }
+        if ($body === '') {
+            $translatedBody = '';
+        } elseif ($format === 'markdown') {
+            $translatedBody = admin_translate_markdown($body, $lang);
+        } elseif ($format === 'html') {
+            $translatedBody = books_v2_admin_translate_html($body, $lang);
+        } else {
+            $translatedBody = admin_translate_text($body, $lang);
+        }
+        $slug = $translatedTitle !== '' ? books_v2_slugify($translatedTitle) : '';
+        $out[$lang] = [
+            'title' => $translatedTitle,
+            'slug' => $slug,
+            'body' => $translatedBody,
+            'format' => $format,
+        ];
+    }
+
+    return $out;
+}
+
 function books_v2_admin_unique_work_slug(mysqli $db, string $lang, string $base, int $workId): string
 {
     $base = books_v2_slugify($base);
@@ -88,7 +222,7 @@ function books_v2_admin_work_i18n(mysqli $db, int $workId, array $languages): ar
     $by = [];
     foreach ($languages as $lang) {
         $code = (string) $lang['code'];
-        $by[$code] = ['title' => '', 'subtitle' => '', 'slug' => '', 'annotation' => '', 'meta_description' => ''];
+        $by[$code] = ['title' => '', 'subtitle' => '', 'imprint' => '', 'slug' => '', 'annotation' => '', 'meta_description' => ''];
     }
     if ($workId <= 0) {
         return $by;
@@ -102,6 +236,7 @@ function books_v2_admin_work_i18n(mysqli $db, int $workId, array $languages): ar
         $by[$code] = [
             'title' => (string) ($row['title'] ?? ''),
             'subtitle' => (string) ($row['subtitle'] ?? ''),
+            'imprint' => (string) ($row['imprint'] ?? ''),
             'slug' => (string) ($row['slug'] ?? ''),
             'annotation' => (string) ($row['annotation'] ?? ''),
             'meta_description' => (string) ($row['meta_description'] ?? ''),
@@ -128,6 +263,7 @@ function books_v2_admin_posted_i18n(array $codes): array
         $out[$code] = [
             'title' => plain_text_normalize_for_storage(trim((string) ($row['title'] ?? ''))),
             'subtitle' => plain_text_normalize_for_storage(trim((string) ($row['subtitle'] ?? ''))),
+            'imprint' => (string) ($row['imprint'] ?? ''),
             'slug' => trim((string) ($row['slug'] ?? '')),
             'annotation' => (string) ($row['annotation'] ?? ''),
             'meta_description' => plain_text_normalize_for_storage(trim((string) ($row['meta_description'] ?? ''))),
@@ -164,19 +300,17 @@ function books_v2_admin_save_work(mysqli $db, int $id, array $langById): array
     if ($title === '') {
         return ['id' => $id, 'error' => 'Название на языке оригинала обязательно'];
     }
-    $active = !empty($_POST['is_active']) ? 1 : 0;
     $wasCreate = $id <= 0;
 
     if ($id <= 0) {
         $db->query(
             'INSERT INTO book_works (original_language_id, is_active) VALUES ('
-            . (int) $langId . ',' . $active . ')'
+            . (int) $langId . ',1)'
         );
         $id = (int) $db->insert_id;
     } else {
         $db->query(
             'UPDATE book_works SET original_language_id=' . (int) $langId
-            . ', is_active=' . $active
             . ' WHERE id=' . $id . ' LIMIT 1'
         );
     }
@@ -195,12 +329,22 @@ function books_v2_admin_save_work(mysqli $db, int $id, array $langById): array
         }
         $slug = books_v2_admin_unique_work_slug($db, $code, $row['slug'] !== '' ? $row['slug'] : $row['title'], $id);
         $stmt = $db->prepare(
-            'INSERT INTO book_work_i18n (work_id, lang, title, subtitle, slug, annotation, meta_description)
-             VALUES (?,?,?,?,?,?,?)
-             ON DUPLICATE KEY UPDATE title=VALUES(title), subtitle=VALUES(subtitle), slug=VALUES(slug),
-               annotation=VALUES(annotation), meta_description=VALUES(meta_description)'
+            'INSERT INTO book_work_i18n (work_id, lang, title, subtitle, imprint, slug, annotation, meta_description)
+             VALUES (?,?,?,?,?,?,?,?)
+             ON DUPLICATE KEY UPDATE title=VALUES(title), subtitle=VALUES(subtitle), imprint=VALUES(imprint),
+               slug=VALUES(slug), annotation=VALUES(annotation), meta_description=VALUES(meta_description)'
         );
-        $stmt->bind_param('issssss', $id, $code, $row['title'], $row['subtitle'], $slug, $row['annotation'], $row['meta_description']);
+        $stmt->bind_param(
+            'isssssss',
+            $id,
+            $code,
+            $row['title'],
+            $row['subtitle'],
+            $row['imprint'],
+            $slug,
+            $row['annotation'],
+            $row['meta_description']
+        );
         $stmt->execute();
         $stmt->close();
     }
@@ -241,6 +385,8 @@ function books_v2_admin_save_work(mysqli $db, int $id, array $langById): array
 
     $editionId = books_v2_admin_save_main_edition($db, $id, $langId, $orig);
     $coverError = books_v2_admin_save_covers($db, $editionId);
+    $fileError = books_v2_admin_save_files($db, $editionId);
+    $saveError = trim($coverError . ($coverError !== '' && $fileError !== '' ? ' ' : '') . $fileError);
 
     activity_log($db, [
         'verb' => $wasCreate ? 'created' : 'updated',
@@ -253,7 +399,7 @@ function books_v2_admin_save_work(mysqli $db, int $id, array $langById): array
         'title_en' => $i18n['en']['title'] ?? $title,
     ]);
 
-    return ['id' => $id, 'error' => $coverError];
+    return ['id' => $id, 'error' => $saveError];
 }
 
 /**
@@ -366,12 +512,6 @@ function books_v2_admin_save_covers(mysqli $db, int $editionId): string
     }
     require_once __DIR__ . '/letters_admin.php';
 
-    $nextSort = 0;
-    $rowMax = db_select($db, 'SELECT COALESCE(MAX(sort_order), 0) AS mx FROM book_edition_images WHERE edition_id=?', 'i', $editionId);
-    $maxRow = $rowMax ? mysqli_fetch_assoc($rowMax) : null;
-    if ($maxRow) {
-        $nextSort = (int) $maxRow['mx'];
-    }
     $errors = [];
     $tmps = (isset($upl['tmp_name']) && is_array($upl['tmp_name'])) ? $upl['tmp_name'] : [];
     foreach ($names as $i => $origName) {
@@ -384,55 +524,351 @@ function books_v2_admin_save_covers(mysqli $db, int $editionId): string
             }
             continue;
         }
-        $finfo = finfo_open(FILEINFO_MIME_TYPE);
-        $mime = $finfo ? (string) finfo_file($finfo, $tmp) : '';
-        if ($finfo) {
-            finfo_close($finfo);
-        }
-        $allowed = ['image/jpeg' => true, 'image/png' => true, 'image/webp' => true, 'image/gif' => true];
-        if (!isset($allowed[$mime])) {
-            $errors[] = $origName . ': недопустимый тип';
-            continue;
-        }
-        $nextSort++;
-        $blank = '';
-        $ins = $db->prepare(
-            'INSERT INTO book_edition_images (edition_id, image_type, path, sort_order) VALUES (?,\'cover_front\',?,?)'
-        );
-        $ins->bind_param('isi', $editionId, $blank, $nextSort);
-        $ins->execute();
-        $imageId = (int) $ins->insert_id;
-        $ins->close();
-        if ($imageId <= 0) {
-            $errors[] = $origName . ': не удалось создать запись';
-            continue;
-        }
-        $leaf = 'book-' . $imageId;
-        $originalPath = zx_storage_path('pictures', $leaf . '.webp');
-        $saved = letters_save_original_webp($tmp, $originalPath, null);
-        if (!$saved['ok']) {
-            db_exec($db, 'DELETE FROM book_edition_images WHERE id=? LIMIT 1', 'i', $imageId);
-            $errors[] = $origName . ': не удалось сохранить файл';
-            continue;
-        }
-        $path = 'pictures/' . $leaf . '.webp';
-        $width = (int) $saved['width'];
-        $height = (int) $saved['height'];
-        db_exec(
-            $db,
-            'UPDATE book_edition_images SET path=?, width=?, height=? WHERE id=? LIMIT 1',
-            'siii',
-            $path,
-            $width,
-            $height,
-            $imageId
-        );
-        if (!letters_make_jpeg_preview($originalPath, zx_storage_path('pictures', 'thumbs/' . $leaf . '.jpg'), 480, 85)) {
-            $errors[] = $origName . ': файл сохранён, но превью не создалось';
+        $added = books_v2_admin_add_cover($db, $editionId, $origName, $tmp);
+        if ($added['error'] !== '') {
+            $errors[] = $added['error'];
         }
     }
 
     return $errors === [] ? '' : ('Обложки: ' . implode('; ', $errors));
+}
+
+/**
+ * Store one cover image on the edition.
+ *
+ * @return array{error:string,id:int,preview_url:string,original_url:string,sort_order:int}
+ */
+function books_v2_admin_add_cover(mysqli $db, int $editionId, string $origName, string $tmpPath): array
+{
+    $fail = static function (string $message): array {
+        return ['error' => $message, 'id' => 0, 'preview_url' => '', 'original_url' => '', 'sort_order' => 0];
+    };
+    if ($editionId <= 0 || !is_file($tmpPath)) {
+        return $fail($origName . ': не удалось сохранить файл');
+    }
+    require_once __DIR__ . '/letters_admin.php';
+    $finfo = finfo_open(FILEINFO_MIME_TYPE);
+    $mime = $finfo ? (string) finfo_file($finfo, $tmpPath) : '';
+    if ($finfo) {
+        finfo_close($finfo);
+    }
+    $allowed = ['image/jpeg' => true, 'image/png' => true, 'image/webp' => true, 'image/gif' => true];
+    if (!isset($allowed[$mime])) {
+        return $fail($origName . ': недопустимый тип');
+    }
+    $nextSort = 1;
+    $rowMax = db_select($db, 'SELECT COALESCE(MAX(sort_order), 0) AS mx FROM book_edition_images WHERE edition_id=?', 'i', $editionId);
+    $maxRow = $rowMax ? mysqli_fetch_assoc($rowMax) : null;
+    if ($maxRow) {
+        $nextSort = (int) $maxRow['mx'] + 1;
+    }
+    $blank = '';
+    $ins = $db->prepare(
+        'INSERT INTO book_edition_images (edition_id, image_type, path, sort_order) VALUES (?,\'cover_front\',?,?)'
+    );
+    $ins->bind_param('isi', $editionId, $blank, $nextSort);
+    $ins->execute();
+    $imageId = (int) $ins->insert_id;
+    $ins->close();
+    if ($imageId <= 0) {
+        return $fail($origName . ': не удалось создать запись');
+    }
+    $leaf = 'book-' . $imageId;
+    $originalPath = zx_storage_path('pictures', $leaf . '.webp');
+    $saved = letters_save_original_webp($tmpPath, $originalPath, null);
+    if (!$saved['ok']) {
+        db_exec($db, 'DELETE FROM book_edition_images WHERE id=? LIMIT 1', 'i', $imageId);
+
+        return $fail($origName . ': не удалось сохранить файл');
+    }
+    $path = 'pictures/' . $leaf . '.webp';
+    $width = (int) $saved['width'];
+    $height = (int) $saved['height'];
+    db_exec(
+        $db,
+        'UPDATE book_edition_images SET path=?, width=?, height=? WHERE id=? LIMIT 1',
+        'siii',
+        $path,
+        $width,
+        $height,
+        $imageId
+    );
+    $previewError = '';
+    if (!letters_make_jpeg_preview($originalPath, zx_storage_path('pictures', 'thumbs/' . $leaf . '.jpg'), 480, 85)) {
+        $previewError = $origName . ': файл сохранён, но превью не создалось';
+    }
+    $urls = books_v2_admin_cover_urls([
+        'path' => $path,
+        'id' => $imageId,
+    ]);
+
+    return [
+        'error' => $previewError,
+        'id' => $imageId,
+        'preview_url' => $urls['preview_url'],
+        'original_url' => $urls['original_url'],
+        'sort_order' => $nextSort,
+    ];
+}
+
+/** @return array<string,int> */
+function books_v2_admin_book_file_types(): array
+{
+    return [
+        'pdf' => 1,
+        'djvu' => 2,
+        'html' => 3,
+        'htm' => 3,
+        'txt' => 4,
+        'jpg' => 5,
+        'jpeg' => 5,
+        'png' => 5,
+        'doc' => 6,
+        'docx' => 6,
+        'rtf' => 6,
+        'odt' => 6,
+        'zip' => 0,
+        'rar' => 0,
+        'epub' => 0,
+        'fb2' => 0,
+    ];
+}
+
+function books_v2_admin_book_file_label(int $type, string $ext): string
+{
+    $map = [1 => 'PDF', 2 => 'DJVU', 3 => 'HTML', 4 => 'TXT', 5 => 'JPG', 6 => 'Word'];
+    if (isset($map[$type])) {
+        return $map[$type];
+    }
+
+    return $ext !== '' ? strtoupper($ext) : 'Файл';
+}
+
+/**
+ * @return list<array<string,mixed>>
+ */
+function books_v2_admin_files(mysqli $db, int $editionId): array
+{
+    if ($editionId <= 0) {
+        return [];
+    }
+    $files = [];
+    $z = db_select(
+        $db,
+        'SELECT id, file_name, file_type, file_size, sort_order
+         FROM book_edition_files WHERE edition_id=? ORDER BY sort_order, id',
+        'i',
+        $editionId
+    );
+    while ($z && ($row = mysqli_fetch_assoc($z))) {
+        $name = (string) $row['file_name'];
+        $ext = strtolower(pathinfo($name, PATHINFO_EXTENSION));
+        $row['type_label'] = books_v2_admin_book_file_label((int) $row['file_type'], $ext);
+        $row['public_url'] = '/books_files/' . rawurlencode($name);
+        $files[] = $row;
+    }
+
+    return $files;
+}
+
+function books_v2_admin_book_filename(string $origName): string
+{
+    $ext = strtolower(pathinfo($origName, PATHINFO_EXTENSION));
+    $base = pathinfo($origName, PATHINFO_FILENAME);
+    $base = strtolower((string) preg_replace('/[^a-z0-9._-]+/i', '_', $base));
+    $base = trim($base, '._-');
+    if ($base === '') {
+        $base = 'file';
+    }
+    $max = 64 - strlen($ext) - 1;
+    if (strlen($base) > $max) {
+        $base = rtrim(substr($base, 0, max(1, $max)), '._-');
+    }
+    $name = $base . '.' . $ext;
+    $n = 1;
+    while (is_file(zx_storage_path('books_files', $name))) {
+        $suffix = '_' . $n;
+        $room = 64 - strlen($ext) - 1 - strlen($suffix);
+        $stem = rtrim(substr($base, 0, max(1, $room)), '._-');
+        $name = $stem . $suffix . '.' . $ext;
+        $n++;
+        if ($n > 200) {
+            break;
+        }
+    }
+
+    return $name;
+}
+
+/**
+ * @return array{error:string,id:int,file_name:string,type_label:string,file_size:int,public_url:string}
+ */
+function books_v2_admin_file_fail(string $message): array
+{
+    return ['error' => $message, 'id' => 0, 'file_name' => '', 'type_label' => '', 'file_size' => 0, 'public_url' => ''];
+}
+
+/**
+ * Copy one uploaded document onto the edition.
+ *
+ * @return array{error:string,id:int,file_name:string,type_label:string,file_size:int,public_url:string}
+ */
+function books_v2_admin_add_edition_file(mysqli $db, int $editionId, string $origName, string $tmpPath): array
+{
+    $types = books_v2_admin_book_file_types();
+    $ext = strtolower(pathinfo($origName, PATHINFO_EXTENSION));
+    if (!isset($types[$ext]) || !is_file($tmpPath)) {
+        return books_v2_admin_file_fail($origName . ': недопустимый тип');
+    }
+    $finfo = finfo_open(FILEINFO_MIME_TYPE);
+    $mime = $finfo ? (string) finfo_file($finfo, $tmpPath) : '';
+    if ($finfo) {
+        finfo_close($finfo);
+    }
+    if (in_array($mime, ['application/x-php', 'text/x-php', 'application/x-httpd-php'], true)) {
+        return books_v2_admin_file_fail($origName . ': недопустимый тип');
+    }
+
+    $filename = books_v2_admin_book_filename($origName);
+    $dest = zx_storage_path('books_files', $filename);
+    $dir = dirname($dest);
+    if (!is_dir($dir) && !@mkdir($dir, 0775, true) && !is_dir($dir)) {
+        return books_v2_admin_file_fail($origName . ': не удалось сохранить файл');
+    }
+    if (!@copy($tmpPath, $dest)) {
+        return books_v2_admin_file_fail($origName . ': не удалось сохранить файл');
+    }
+
+    $type = $types[$ext];
+    $sizeKb = (int) max(1, (int) ceil(filesize($dest) / 1000));
+    $uploaded = time();
+    $nextSort = 0;
+    $rowMax = db_select($db, 'SELECT COALESCE(MAX(sort_order), 0) AS mx FROM book_edition_files WHERE edition_id=?', 'i', $editionId);
+    $maxRow = $rowMax ? mysqli_fetch_assoc($rowMax) : null;
+    if ($maxRow) {
+        $nextSort = (int) $maxRow['mx'] + 1;
+    }
+    $author = '';
+    $ins = $db->prepare(
+        'INSERT INTO book_edition_files
+         (edition_id, file_name, file_type, file_size, downloads, author, upload_date, sort_order)
+         VALUES (?,?,?,?,0,?,?,?)'
+    );
+    $ins->bind_param('isiisii', $editionId, $filename, $type, $sizeKb, $author, $uploaded, $nextSort);
+    $ins->execute();
+    $fileId = (int) $ins->insert_id;
+    $ins->close();
+    if ($fileId <= 0) {
+        @unlink($dest);
+        return books_v2_admin_file_fail($origName . ': не удалось создать запись');
+    }
+
+    $work = db_select(
+        $db,
+        'SELECT w.legacy_book_id FROM book_editions e INNER JOIN book_works w ON w.id=e.work_id WHERE e.id=? LIMIT 1',
+        'i',
+        $editionId
+    );
+    $workRow = $work ? mysqli_fetch_assoc($work) : null;
+    $legacyBookId = (int) ($workRow['legacy_book_id'] ?? 0);
+    if ($legacyBookId > 0) {
+        $comment = '';
+        $legacy = $db->prepare(
+            'INSERT INTO books_files (book_id, file_name, file_type, author, downloads, file_size, comment, upload_date)
+             VALUES (?,?,?,?,0,?,?,?)'
+        );
+        $legacy->bind_param('isisisi', $legacyBookId, $filename, $type, $author, $sizeKb, $comment, $uploaded);
+        $legacy->execute();
+        $legacyId = (int) $legacy->insert_id;
+        $legacy->close();
+        if ($legacyId > 0) {
+            db_exec($db, 'UPDATE book_edition_files SET legacy_file_id=? WHERE id=? LIMIT 1', 'ii', $legacyId, $fileId);
+        }
+    }
+
+    return [
+        'error' => '',
+        'id' => $fileId,
+        'file_name' => $filename,
+        'type_label' => books_v2_admin_book_file_label($type, $ext),
+        'file_size' => $sizeKb,
+        'public_url' => '/books_files/' . rawurlencode($filename),
+    ];
+}
+
+function books_v2_admin_file_name_used(mysqli $db, string $name): bool
+{
+    $z = db_select($db, 'SELECT id FROM book_edition_files WHERE file_name=? LIMIT 1', 's', $name);
+    if ($z && mysqli_fetch_assoc($z)) {
+        return true;
+    }
+    $z = db_select($db, 'SELECT id FROM books_files WHERE file_name=? LIMIT 1', 's', $name);
+
+    return (bool) ($z && mysqli_fetch_assoc($z));
+}
+
+function books_v2_admin_delete_file(mysqli $db, int $workId, int $fileId): bool
+{
+    if ($workId <= 0 || $fileId <= 0) {
+        return false;
+    }
+    $z = db_select(
+        $db,
+        'SELECT f.id, f.file_name, f.legacy_file_id
+         FROM book_edition_files f
+         INNER JOIN book_editions e ON e.id=f.edition_id
+         WHERE f.id=? AND e.work_id=? LIMIT 1',
+        'ii',
+        $fileId,
+        $workId
+    );
+    $row = $z ? mysqli_fetch_assoc($z) : null;
+    if (!$row) {
+        return false;
+    }
+    $name = (string) $row['file_name'];
+    db_exec($db, 'DELETE FROM book_edition_files WHERE id=? LIMIT 1', 'i', $fileId);
+    $legacyId = (int) ($row['legacy_file_id'] ?? 0);
+    if ($legacyId > 0) {
+        db_exec($db, 'DELETE FROM books_files WHERE id=? LIMIT 1', 'i', $legacyId);
+    }
+    if ($name !== '' && !books_v2_admin_file_name_used($db, $name)) {
+        @unlink(zx_storage_path('books_files', $name));
+    }
+
+    return true;
+}
+
+/** Store documents uploaded with the book form. Returns an error string. */
+function books_v2_admin_save_files(mysqli $db, int $editionId): string
+{
+    if ($editionId <= 0) {
+        return '';
+    }
+    $upl = (isset($_FILES['upload_files']) && is_array($_FILES['upload_files'])) ? $_FILES['upload_files'] : [];
+    $names = (isset($upl['name']) && is_array($upl['name'])) ? $upl['name'] : [];
+    if ($names === []) {
+        return '';
+    }
+    $errors = [];
+    $tmps = (isset($upl['tmp_name']) && is_array($upl['tmp_name'])) ? $upl['tmp_name'] : [];
+    foreach ($names as $i => $origName) {
+        $origName = (string) $origName;
+        $tmp = (string) ($tmps[$i] ?? '');
+        $errCode = (int) ($upl['error'][$i] ?? UPLOAD_ERR_NO_FILE);
+        if ($errCode !== UPLOAD_ERR_OK || $tmp === '' || !is_uploaded_file($tmp) || $origName === '') {
+            if ($origName !== '' && $errCode !== UPLOAD_ERR_NO_FILE) {
+                $errors[] = $origName . ': не удалось загрузить';
+            }
+            continue;
+        }
+        $added = books_v2_admin_add_edition_file($db, $editionId, $origName, $tmp);
+        if ($added['error'] !== '') {
+            $errors[] = $added['error'];
+        }
+    }
+
+    return $errors === [] ? '' : ('Файлы: ' . implode('; ', $errors));
 }
 
 function books_v2_admin_main_edition_id(mysqli $db, int $workId): int
@@ -532,9 +968,73 @@ function books_v2_admin_save_main_edition(mysqli $db, int $workId, int $langId, 
     }
 
     books_v2_admin_save_edition_links($db, $editionId);
+    books_v2_admin_save_printings($db, $editionId);
     books_v2_admin_sync_work_year($db, $workId);
 
     return $editionId;
+}
+
+/**
+ * Extra print runs of the same edition (same content/page). Not separate public pages.
+ *
+ * @return list<array{printing_no:int,year:?int,circulation:?int}>
+ */
+function books_v2_admin_printings(mysqli $db, int $editionId): array
+{
+    if ($editionId <= 0) {
+        return [];
+    }
+    $out = [];
+    $z = db_select(
+        $db,
+        'SELECT printing_no, year, circulation FROM book_edition_printings
+          WHERE edition_id=? ORDER BY printing_no ASC, id ASC',
+        'i',
+        $editionId
+    );
+    while ($z && ($row = mysqli_fetch_assoc($z))) {
+        $out[] = [
+            'printing_no' => (int) ($row['printing_no'] ?? 0),
+            'year' => isset($row['year']) && $row['year'] !== null && $row['year'] !== '' ? (int) $row['year'] : null,
+            'circulation' => isset($row['circulation']) && $row['circulation'] !== null && $row['circulation'] !== ''
+                ? (int) $row['circulation']
+                : null,
+        ];
+    }
+
+    return $out;
+}
+
+function books_v2_admin_save_printings(mysqli $db, int $editionId): void
+{
+    if ($editionId <= 0) {
+        return;
+    }
+    $db->query('DELETE FROM book_edition_printings WHERE edition_id=' . (int) $editionId);
+    $years = $_POST['printing_year'] ?? [];
+    $circs = $_POST['printing_circulation'] ?? [];
+    if (!is_array($years)) {
+        $years = [];
+    }
+    if (!is_array($circs)) {
+        $circs = [];
+    }
+    $n = 1;
+    $count = max(count($years), count($circs));
+    for ($i = 0; $i < $count; $i++) {
+        $year = (int) ($years[$i] ?? 0);
+        $circ = (int) ($circs[$i] ?? 0);
+        if ($year <= 0 && $circ <= 0) {
+            continue;
+        }
+        $yearSql = $year > 0 ? (string) $year : 'NULL';
+        $circSql = $circ > 0 ? (string) $circ : 'NULL';
+        $db->query(
+            'INSERT INTO book_edition_printings (edition_id, printing_no, year, circulation, note) VALUES ('
+            . (int) $editionId . ',' . $n . ',' . $yearSql . ',' . $circSql . ",'')"
+        );
+        $n++;
+    }
 }
 
 function books_v2_admin_save_edition_links(mysqli $db, int $id): void
@@ -664,7 +1164,6 @@ function books_v2_admin_save_edition(mysqli $db, int $id, int $workId): array
     $city = (int) ($_POST['city_id'] ?? 0);
     $contentId = (int) ($_POST['content_edition_id'] ?? 0);
     $basedId = (int) ($_POST['based_on_edition_id'] ?? 0);
-    $active = !empty($_POST['is_active']) ? 1 : 0;
 
     $map = [];
     $z = db_select($db, 'SELECT id, content_edition_id FROM book_editions WHERE work_id=' . (int) $workId);
@@ -691,7 +1190,7 @@ function books_v2_admin_save_edition(mysqli $db, int $id, int $workId): array
         $db->query(
             'INSERT INTO book_editions (work_id, edition_kind, based_on_edition_id, content_edition_id, language_id, publish_year, signed_for_print, city_id, pages, circulation, is_active, sort_order)
              VALUES (' . $workId . ',' . $kindSql . ',' . $basedSql . ',' . $contentSql . ',' . $langId . ','
-            . $yearSql . ',' . $signedSql . ',' . $citySql . ',' . $pagesSql . ',' . $circSql . ',' . $active . ',0)'
+            . $yearSql . ',' . $signedSql . ',' . $citySql . ',' . $pagesSql . ',' . $circSql . ',1,0)'
         );
         $id = (int) $db->insert_id;
     } else {
@@ -705,7 +1204,6 @@ function books_v2_admin_save_edition(mysqli $db, int $id, int $workId): array
             . ', city_id=' . $citySql
             . ', pages=' . $pagesSql
             . ', circulation=' . $circSql
-            . ', is_active=' . $active
             . ' WHERE id=' . $id . ' AND work_id=' . $workId . ' LIMIT 1'
         );
     }
@@ -733,12 +1231,24 @@ function books_v2_admin_save_edition(mysqli $db, int $id, int $workId): array
     $ei->close();
 
     books_v2_admin_save_edition_links($db, $id);
+    $coverError = books_v2_admin_save_covers($db, $id);
+    $fileError = books_v2_admin_save_files($db, $id);
     books_v2_admin_sync_work_year($db, $workId);
+    $saveError = trim($coverError . ($coverError !== '' && $fileError !== '' ? ' ' : '') . $fileError);
 
-    return ['id' => $id, 'error' => ''];
+    return ['id' => $id, 'error' => $saveError];
 }
 
 /** @return array<string,string> */
+function books_v2_admin_body_formats(): array
+{
+    return [
+        'html' => 'HTML',
+        'markdown' => 'MD',
+        'txt' => 'TXT',
+    ];
+}
+
 function books_v2_admin_chapter_types(): array
 {
     return [
@@ -769,68 +1279,96 @@ function books_v2_admin_save_chapter(mysqli $db, int $id, int $editionId): array
     if ($pageStart > 0 && $pageEnd > 0 && $pageEnd < $pageStart) {
         return ['id' => $id, 'error' => 'Страница «до» меньше страницы «от»'];
     }
-    $active = !empty($_POST['is_active']) ? 1 : 0;
-    $title = plain_text_normalize_for_storage(trim((string) ($_POST['title'] ?? '')));
-    if ($title === '') {
+    $formats = books_v2_admin_body_formats();
+    $codes = [];
+    foreach (books_v2_admin_languages($db) as $lang) {
+        $codes[] = (string) $lang['code'];
+    }
+    $posted = $_POST['i18n'] ?? [];
+    if (!is_array($posted)) {
+        $posted = [];
+    }
+    $rows = [];
+    $hasTitle = false;
+    foreach ($codes as $code) {
+        $raw = $posted[$code] ?? [];
+        if (!is_array($raw)) {
+            $raw = [];
+        }
+        $title = plain_text_normalize_for_storage(trim((string) ($raw['title'] ?? '')));
+        $body = (string) ($raw['body'] ?? '');
+        $format = (string) ($raw['body_format'] ?? 'html');
+        if (!isset($formats[$format])) {
+            $format = 'html';
+        }
+        if ($title !== '') {
+            $hasTitle = true;
+        }
+        $rows[$code] = [
+            'title' => $title,
+            'slug' => trim((string) ($raw['slug'] ?? '')),
+            'body' => $body,
+            'format' => $format,
+        ];
+    }
+    if (!$hasTitle) {
         return ['id' => $id, 'error' => 'Название главы обязательно'];
     }
-    $body = (string) ($_POST['body'] ?? '');
 
     $startSql = $pageStart > 0 ? (string) $pageStart : 'NULL';
     $endSql = $pageEnd > 0 ? (string) $pageEnd : 'NULL';
     if ($id <= 0) {
         $stmt = $db->prepare(
-            'INSERT INTO book_chapters (edition_id, chapter_type, sort_order, page_start, page_end, is_active) VALUES (?,?,?,' . $startSql . ',' . $endSql . ',?)'
+            'INSERT INTO book_chapters (edition_id, chapter_type, sort_order, page_start, page_end, is_active) VALUES (?,?,?,' . $startSql . ',' . $endSql . ',1)'
         );
-        $stmt->bind_param('isii', $editionId, $type, $sort, $active);
+        $stmt->bind_param('isi', $editionId, $type, $sort);
         $stmt->execute();
         $id = (int) $stmt->insert_id;
         $stmt->close();
     } else {
         $stmt = $db->prepare(
-            'UPDATE book_chapters SET chapter_type=?, sort_order=?, page_start=' . $startSql . ', page_end=' . $endSql . ', is_active=? WHERE id=? AND edition_id=? LIMIT 1'
+            'UPDATE book_chapters SET chapter_type=?, sort_order=?, page_start=' . $startSql . ', page_end=' . $endSql . ' WHERE id=? AND edition_id=? LIMIT 1'
         );
-        $stmt->bind_param('siiii', $type, $sort, $active, $id, $editionId);
+        $stmt->bind_param('siii', $type, $sort, $id, $editionId);
         $stmt->execute();
         $stmt->close();
     }
 
-    $langId = 1;
-    $ls = $db->prepare('SELECT language_id FROM book_editions WHERE id=? LIMIT 1');
-    $ls->bind_param('i', $editionId);
-    $ls->execute();
-    $er = $ls->get_result()->fetch_assoc();
-    $ls->close();
-    if ($er) {
-        $langId = (int) $er['language_id'];
-    }
-    $cs = $db->prepare('SELECT code FROM languages WHERE id=? LIMIT 1');
-    $cs->bind_param('i', $langId);
-    $cs->execute();
-    $cr = $cs->get_result()->fetch_assoc();
-    $cs->close();
-    $code = (string) ($cr['code'] ?? 'ru');
-    $slug = books_v2_slugify(trim((string) ($_POST['slug'] ?? '')) !== '' ? (string) $_POST['slug'] : $title);
-    if ($slug === '') {
-        $slug = 'ch-' . $id;
-    }
-    $ci = $db->prepare(
-        'INSERT INTO book_chapter_i18n (chapter_id, lang, title, slug, meta_description)
-         VALUES (?,?,?,?,\'\')
-         ON DUPLICATE KEY UPDATE title=VALUES(title), slug=VALUES(slug)'
-    );
-    $ci->bind_param('isss', $id, $code, $title, $slug);
-    $ci->execute();
-    $ci->close();
+    foreach ($codes as $code) {
+        $row = $rows[$code];
+        if ($row['title'] === '' && trim($row['body']) === '') {
+            $del = $db->prepare('DELETE FROM book_chapter_i18n WHERE chapter_id=? AND lang=? LIMIT 1');
+            $del->bind_param('is', $id, $code);
+            $del->execute();
+            $del->close();
+            $delBody = $db->prepare('DELETE FROM book_chapter_bodies WHERE chapter_id=? AND lang=? LIMIT 1');
+            $delBody->bind_param('is', $id, $code);
+            $delBody->execute();
+            $delBody->close();
+            continue;
+        }
+        $slug = books_v2_slugify($row['slug'] !== '' ? $row['slug'] : $row['title']);
+        if ($slug === '') {
+            $slug = 'ch-' . $id;
+        }
+        $ci = $db->prepare(
+            'INSERT INTO book_chapter_i18n (chapter_id, lang, title, slug, meta_description)
+             VALUES (?,?,?,?,\'\')
+             ON DUPLICATE KEY UPDATE title=VALUES(title), slug=VALUES(slug)'
+        );
+        $ci->bind_param('isss', $id, $code, $row['title'], $slug);
+        $ci->execute();
+        $ci->close();
 
-    $hash = sha1($body);
-    $bs = $db->prepare(
-        'INSERT INTO book_chapter_bodies (chapter_id, format, body, source_hash) VALUES (?,\'html\',?,?)
-         ON DUPLICATE KEY UPDATE body=VALUES(body), source_hash=VALUES(source_hash)'
-    );
-    $bs->bind_param('iss', $id, $body, $hash);
-    $bs->execute();
-    $bs->close();
+        $hash = sha1($row['format'] . "\n" . $row['body']);
+        $bs = $db->prepare(
+            'INSERT INTO book_chapter_bodies (chapter_id, lang, format, body, source_hash) VALUES (?,?,?,?,?)
+             ON DUPLICATE KEY UPDATE format=VALUES(format), body=VALUES(body), source_hash=VALUES(source_hash)'
+        );
+        $bs->bind_param('issss', $id, $code, $row['format'], $row['body'], $hash);
+        $bs->execute();
+        $bs->close();
+    }
 
     return ['id' => $id, 'error' => ''];
 }

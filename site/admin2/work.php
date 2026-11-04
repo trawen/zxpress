@@ -13,6 +13,96 @@ foreach ($languages as $lang) {
     $langById[(int) $lang['id']] = (string) $lang['code'];
 }
 
+if (($_GET['action'] ?? '') === 'translate_i18n') {
+    header('Content-Type: application/json; charset=utf-8');
+    if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
+        http_response_code(405);
+        echo json_encode(['ok' => false, 'error' => 'POST required'], JSON_UNESCAPED_UNICODE);
+        exit;
+    }
+    try {
+        $translated = books_v2_admin_translate_from_ru($db, $id, [
+            'title' => (string) ($_POST['title'] ?? ''),
+            'subtitle' => (string) ($_POST['subtitle'] ?? ''),
+            'imprint' => (string) ($_POST['imprint'] ?? ''),
+            'annotation' => (string) ($_POST['annotation'] ?? ''),
+            'meta_description' => (string) ($_POST['meta_description'] ?? ''),
+        ]);
+    } catch (Throwable $e) {
+        http_response_code(502);
+        echo json_encode(['ok' => false, 'error' => $e->getMessage()], JSON_UNESCAPED_UNICODE);
+        exit;
+    }
+    echo json_encode(['ok' => true, 'i18n' => $translated], JSON_UNESCAPED_UNICODE);
+    exit;
+}
+
+if (($_POST['action'] ?? '') === 'upload_cover') {
+    header('Content-Type: application/json; charset=utf-8');
+    $editionId = books_v2_admin_main_edition_id($db, $id);
+    $upl = (isset($_FILES['file']) && is_array($_FILES['file'])) ? $_FILES['file'] : [];
+    $origName = (string) ($upl['name'] ?? '');
+    $tmp = (string) ($upl['tmp_name'] ?? '');
+    $errCode = (int) ($upl['error'] ?? UPLOAD_ERR_NO_FILE);
+    if ($editionId <= 0) {
+        http_response_code(409);
+        echo json_encode(['ok' => false, 'error' => 'Сначала сохраните книгу'], JSON_UNESCAPED_UNICODE);
+        exit;
+    }
+    if ($errCode !== UPLOAD_ERR_OK || $tmp === '' || !is_uploaded_file($tmp) || $origName === '') {
+        http_response_code(400);
+        echo json_encode(['ok' => false, 'error' => 'Не удалось загрузить обложку'], JSON_UNESCAPED_UNICODE);
+        exit;
+    }
+    $added = books_v2_admin_add_cover($db, $editionId, $origName, $tmp);
+    if ($added['id'] <= 0) {
+        http_response_code(400);
+        echo json_encode(['ok' => false, 'error' => $added['error'] !== '' ? $added['error'] : 'Не удалось сохранить обложку'], JSON_UNESCAPED_UNICODE);
+        exit;
+    }
+    echo json_encode(['ok' => true, 'cover' => $added], JSON_UNESCAPED_UNICODE);
+    exit;
+}
+
+if (($_POST['action'] ?? '') === 'upload_file') {
+    header('Content-Type: application/json; charset=utf-8');
+    $editionId = books_v2_admin_main_edition_id($db, $id);
+    $upl = (isset($_FILES['file']) && is_array($_FILES['file'])) ? $_FILES['file'] : [];
+    $origName = (string) ($upl['name'] ?? '');
+    $tmp = (string) ($upl['tmp_name'] ?? '');
+    $errCode = (int) ($upl['error'] ?? UPLOAD_ERR_NO_FILE);
+    if ($editionId <= 0) {
+        http_response_code(409);
+        echo json_encode(['ok' => false, 'error' => 'Сначала сохраните книгу'], JSON_UNESCAPED_UNICODE);
+        exit;
+    }
+    if ($errCode !== UPLOAD_ERR_OK || $tmp === '' || !is_uploaded_file($tmp) || $origName === '') {
+        http_response_code(400);
+        echo json_encode(['ok' => false, 'error' => 'Не удалось загрузить файл'], JSON_UNESCAPED_UNICODE);
+        exit;
+    }
+    $added = books_v2_admin_add_edition_file($db, $editionId, $origName, $tmp);
+    if ($added['error'] !== '') {
+        http_response_code(400);
+        echo json_encode(['ok' => false, 'error' => $added['error']], JSON_UNESCAPED_UNICODE);
+        exit;
+    }
+    echo json_encode(['ok' => true, 'file' => $added], JSON_UNESCAPED_UNICODE);
+    exit;
+}
+
+if (($_POST['action'] ?? '') === 'delete_file') {
+    header('Content-Type: application/json; charset=utf-8');
+    $fileId = (int) ($_POST['file_id'] ?? 0);
+    if (!books_v2_admin_delete_file($db, $id, $fileId)) {
+        http_response_code(404);
+        echo json_encode(['ok' => false, 'error' => 'Файл не найден'], JSON_UNESCAPED_UNICODE);
+        exit;
+    }
+    echo json_encode(['ok' => true], JSON_UNESCAPED_UNICODE);
+    exit;
+}
+
 if (($_POST['action'] ?? '') === 'delete_image') {
     header('Content-Type: application/json; charset=utf-8');
     $imageId = (int) ($_POST['image_id'] ?? 0);
@@ -64,6 +154,8 @@ $publishersLinked = [];
 $seriesLink = ['series_id' => 0, 'number_in_series' => ''];
 $chapters = [];
 $covers = [];
+$bookFiles = [];
+$printings = [];
 $mainEditionId = 0;
 if ($work) {
     $z = db_select($db, 'SELECT author_id, role, sort_order FROM book_credits WHERE work_id=' . $id . ' ORDER BY sort_order, id');
@@ -103,15 +195,21 @@ if ($mainEditionId > 0) {
     }
     $z = db_select(
         $db,
-        "SELECT c.id, c.sort_order, c.chapter_type, COALESCE(ci.title, CONCAT('#', c.id)) AS title
+        "SELECT c.id, c.sort_order, c.chapter_type,
+            COALESCE(
+              (SELECT ci.title FROM book_chapter_i18n ci WHERE ci.chapter_id=c.id AND ci.lang='ru' LIMIT 1),
+              (SELECT ci.title FROM book_chapter_i18n ci WHERE ci.chapter_id=c.id ORDER BY ci.lang LIMIT 1),
+              CONCAT('#', c.id)
+            ) AS title
          FROM book_chapters c
-         LEFT JOIN book_chapter_i18n ci ON ci.chapter_id=c.id
          WHERE c.edition_id=" . $mainEditionId . ' ORDER BY c.sort_order, c.id'
     );
     while ($z && ($row = mysqli_fetch_assoc($z))) {
         $chapters[] = $row;
     }
     $covers = books_v2_admin_covers($db, $mainEditionId);
+    $bookFiles = books_v2_admin_files($db, $mainEditionId);
+    $printings = books_v2_admin_printings($db, $mainEditionId);
 }
 
 $authors = [];
@@ -150,6 +248,8 @@ $smarty->assign('publishers_linked', $publishersLinked);
 $smarty->assign('series_link', $seriesLink);
 $smarty->assign('chapters', $chapters);
 $smarty->assign('covers', $covers);
+$smarty->assign('book_files', $bookFiles);
+$smarty->assign('printings', $printings);
 $smarty->assign('chapter_types', books_v2_admin_chapter_types());
 $smarty->assign('authors', $authors);
 $smarty->assign('rubrics', $rubrics);
@@ -183,5 +283,6 @@ if ($work) {
     if ($bookTitle !== '') {
         $title .= ' — ' . $bookTitle;
     }
+    $smarty->assign('admin2_status', !empty($work['is_active']) ? 'on' : 'off');
 }
 admin2_render('admin2/work_form.tpl', $title, 'books');

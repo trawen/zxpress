@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>{$admin2_title} | Админка — ZXPress</title>
-<link rel="stylesheet" href="/css/admin-v2.css?v=20261009z">
+<link rel="stylesheet" href="/css/admin-v2.css?v=20261101d">
 </head>
 <body class="admin">
 {include file="admin2/icon_sprite.tpl"}
@@ -19,6 +19,7 @@
 </a>
 <nav class="admin-sidebar__nav" aria-label="Разделы">
 <a class="admin-sidebar__link{if $admin2_section eq 'letters'} is-active{/if}" href="/admin2/letters.php">{include file="admin2/icon.tpl" name="mail"}<span>Письма</span></a>
+<a class="admin-sidebar__link{if $admin2_section eq 'ezines'} is-active{/if}" href="/admin2/ezines.php">{include file="admin2/icon.tpl" name="book-open"}<span>Эзины v2</span></a>
 <a class="admin-sidebar__link{if $admin2_section eq 'books'} is-active{/if}" href="/admin2/books.php">{include file="admin2/icon.tpl" name="book-open"}<span>Книги</span></a>
 </nav>
 <div class="admin-sidebar__foot">
@@ -33,10 +34,23 @@
 </aside>
 <div class="admin-main">
 <header class="admin-topbar">
+<div class="admin-topbar__heading">
+<div class="admin-topbar__stack">
+{if isset($admin2_kicker) && $admin2_kicker ne ''}
+<a class="admin-topbar__kicker" href="{$admin2_kicker_url}">{$admin2_kicker}</a>
+{/if}
+<div class="admin-topbar__titleline">
 <h1 class="admin-topbar__title">{$admin2_title}</h1>
+{if isset($admin2_status) && $admin2_status ne ''}
+<span class="admin-status admin-status--{$admin2_status}" title="{if $admin2_status eq 'on'}активна{else}скрыта{/if}" aria-label="{if $admin2_status eq 'on'}активна{else}скрыта{/if}">{include file="admin2/icon.tpl" name="check"}</span>
+{/if}
+</div>
+</div>
+</div>
 <div class="admin-topbar__actions">
 <div class="admin-topbar__search">
-<input type="search" id="admin-rewind" class="admin-topbar__search-input" placeholder="Быстрый поиск…" aria-label="Быстрый поиск" autocomplete="off">
+<input type="search" id="admin-rewind" class="admin-topbar__search-input" placeholder="Быстрый поиск…" aria-label="Быстрый поиск" autocomplete="off" role="combobox" aria-autocomplete="list" aria-controls="admin-suggest" aria-expanded="false">
+<div class="admin-suggest" id="admin-suggest" role="listbox" hidden></div>
 </div>
 </div>
 </header>
@@ -51,6 +65,6 @@
 </main>
 </div>
 </div>
-<script src="/js/admin-v2.js?v=20261009z"></script>
+<script src="/js/admin-v2.js?v=20261016d"></script>
 </body>
 </html>

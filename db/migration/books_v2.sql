@@ -23,6 +23,7 @@ CREATE TABLE IF NOT EXISTS `book_work_i18n` (
   `lang` CHAR(2) NOT NULL,
   `title` VARCHAR(255) NOT NULL,
   `subtitle` VARCHAR(255) NOT NULL DEFAULT '',
+  `imprint` TEXT NULL,
   `slug` VARCHAR(191) NOT NULL,
   `annotation` TEXT NULL,
   `meta_description` VARCHAR(255) NOT NULL DEFAULT '',
@@ -255,13 +256,16 @@ CREATE TABLE IF NOT EXISTS `book_chapter_i18n` (
 
 CREATE TABLE IF NOT EXISTS `book_chapter_bodies` (
   `chapter_id` INT UNSIGNED NOT NULL,
-  `format` ENUM('html','markdown') NOT NULL DEFAULT 'html',
+  `lang` CHAR(2) NOT NULL DEFAULT 'ru',
+  `format` ENUM('html','markdown','txt') NOT NULL DEFAULT 'html',
   `body` MEDIUMTEXT NOT NULL,
   `source_hash` CHAR(40) NOT NULL DEFAULT '',
   `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`chapter_id`),
+  PRIMARY KEY (`chapter_id`, `lang`),
   CONSTRAINT `fk_book_chapter_bodies_chapter`
-    FOREIGN KEY (`chapter_id`) REFERENCES `book_chapters` (`id`) ON DELETE CASCADE
+    FOREIGN KEY (`chapter_id`) REFERENCES `book_chapters` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `fk_book_chapter_bodies_lang`
+    FOREIGN KEY (`lang`) REFERENCES `languages` (`code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS `book_work_rubrics` (

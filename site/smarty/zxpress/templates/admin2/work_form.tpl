@@ -12,7 +12,7 @@
 </label>
 <label class="admin-field admin-field--xs"><input type="number" name="publish_year" placeholder=" " value="{if $edition}{$edition.publish_year}{/if}"><span>Год</span></label>
 <label class="admin-field admin-field--date"><input type="date" name="signed_for_print" value="{if $edition}{$edition.signed_for_print}{/if}"><span>Подписано в печать</span></label>
-<label class="admin-field admin-field--xs"><input type="number" name="pages" placeholder=" " value="{if $edition}{$edition.pages}{/if}"><span>Страниц</span></label>
+<label class="admin-field admin-field--pages"><input type="number" name="pages" placeholder=" " value="{if $edition}{$edition.pages}{/if}"><span>Страниц</span></label>
 <label class="admin-field admin-field--xs"><input type="number" name="circulation" placeholder=" " value="{if $edition}{$edition.circulation}{/if}"><span>Тираж</span></label>
 <label class="admin-field admin-field--isbn"><input type="text" name="isbn_raw[]" maxlength="32" placeholder=" " value="{if $isbns.0}{$isbns.0}{/if}"><span>ISBN</span></label>
 <label class="admin-field admin-field--grow">
@@ -25,12 +25,37 @@
 </select>
 <span>Серия</span>
 </label>
-<label class="admin-field admin-field--xs"><input type="text" name="number_in_series" maxlength="16" placeholder=" " value="{$series_link.number_in_series}"><span>Номер</span></label>
+<label class="admin-field admin-field--series-num"><input type="text" name="number_in_series" maxlength="16" placeholder=" " value="{$series_link.number_in_series}"><span>Номер</span></label>
+</div>
+<div class="admin-field admin-group">
+<div class="admin-pairs" id="printing-rows">
+{foreach from=$printings item=pr}
+<div class="admin-pair">
+<input class="admin-pair__num" type="number" name="printing_year[]" min="1" placeholder="Год" value="{if $pr.year}{$pr.year}{/if}" aria-label="Год доп. тиража">
+<input class="admin-pair__side" type="number" name="printing_circulation[]" min="1" placeholder="Тираж" value="{if $pr.circulation}{$pr.circulation}{/if}" aria-label="Тираж">
+</div>
+{foreachelse}
+<div class="admin-pair">
+<input class="admin-pair__num" type="number" name="printing_year[]" min="1" placeholder="Год" value="" aria-label="Год доп. тиража">
+<input class="admin-pair__side" type="number" name="printing_circulation[]" min="1" placeholder="Тираж" value="" aria-label="Тираж">
+</div>
+{/foreach}
+<button type="button" class="admin-btn admin-btn--ghost admin-pair-add" data-repeat="printing-rows" data-repeat-tpl="printing-row-tpl">+1</button>
+</div>
+<template id="printing-row-tpl">
+<div class="admin-pair">
+<input class="admin-pair__num" type="number" name="printing_year[]" min="1" placeholder="Год" value="" aria-label="Год доп. тиража">
+<input class="admin-pair__side" type="number" name="printing_circulation[]" min="1" placeholder="Тираж" value="" aria-label="Тираж">
+</div>
+</template>
+<span>Доп. тиражи</span>
 </div>
 <div class="admin-lang-tabs">
 {foreach from=$languages item=lang name=langs}
 <button type="button" data-lang-tab="{$lang.code}" class="{if $smarty.foreach.langs.first}is-active{/if}{if $work_i18n[$lang.code].title} has-data{/if}">{$lang.code|upper}</button>
 {/foreach}
+<button type="button" class="admin-btn admin-btn--ghost admin-lang-translate" id="admin-work-translate">Перевести</button>
+<span class="admin-lang-translate-status" id="admin-work-translate-status" aria-live="polite"></span>
 </div>
 {foreach from=$languages item=lang name=langs}
 <div class="admin-lang-panel{if $smarty.foreach.langs.first} is-active{/if}" data-lang-panel="{$lang.code}">
@@ -39,16 +64,16 @@
 <label class="admin-field admin-field--lg"><input type="text" name="i18n[{$lang.code}][subtitle]" placeholder=" " value="{$work_i18n[$lang.code].subtitle}"><span>Подзаголовок {$lang.code|upper}</span></label>
 <label class="admin-field admin-field--lg"><input type="text" name="i18n[{$lang.code}][slug]" placeholder=" " maxlength="191" pattern="[a-z0-9-]*" value="{$work_i18n[$lang.code].slug}"><span>Slug {$lang.code|upper}</span></label>
 </div>
-<label class="admin-field admin-field--wide"><textarea name="i18n[{$lang.code}][annotation]" placeholder=" ">{$work_i18n[$lang.code].annotation}</textarea><span>Аннотация {$lang.code|upper}</span></label>
+<label class="admin-field admin-field--wide admin-field--imprint"><textarea name="i18n[{$lang.code}][imprint]" placeholder=" ">{$work_i18n[$lang.code].imprint}</textarea><span>Импринт MD {$lang.code|upper}</span></label>
+<label class="admin-field admin-field--wide admin-field--autosize"><textarea name="i18n[{$lang.code}][annotation]" placeholder=" " data-autosize>{$work_i18n[$lang.code].annotation}</textarea><span>Аннотация {$lang.code|upper}</span></label>
 <label class="admin-field admin-field--wide"><input type="text" name="i18n[{$lang.code}][meta_description]" placeholder=" " maxlength="255" value="{$work_i18n[$lang.code].meta_description}"><span>Meta {$lang.code|upper}</span></label>
 </div>
 {/foreach}
 
-<label class="admin-field admin-field--lg admin-cover-upload"><input type="file" id="admin-cover-upload" name="upload_covers[]" multiple accept="image/jpeg,image/png,image/webp,image/gif"><span>Обложки</span></label>
 <link rel="stylesheet" href="/js/cropper.min.css">
 <script src="/js/cropper.min.js"></script>
-{if $covers}
-<div class="admin-field admin-letter-box">
+<div class="admin-media-row">
+<div class="admin-field admin-letter-box admin-media">
 <div class="admin-letter-pages" data-remove-confirm="удалить обложку?">
 {foreach from=$covers item=img}
 <div class="admin-letter-page" draggable="true" data-image-id="{$img.id}">
@@ -57,10 +82,34 @@
 <input type="hidden" name="sort_order_{$img.id}" value="{$img.sort_order}">
 </div>
 {/foreach}
+<label class="admin-btn admin-btn--ghost admin-pair-add admin-media__add">
+<input type="file" id="admin-cover-upload" name="upload_covers[]" multiple accept="image/jpeg,image/png,image/webp,image/gif">
+<span>+1</span>
+</label>
 </div>
 <span>Обложки</span>
 </div>
+<div class="admin-field admin-letter-box admin-media admin-media--files">
+<div class="admin-media__docs">
+{if $book_files}
+<ul class="admin-file-list">
+{foreach from=$book_files item=file}
+<li class="admin-file-chip">
+<a class="admin-file-chip__name" href="{$file.public_url}">{$file.file_name}</a>
+<span class="admin-file-chip__meta">{$file.type_label} · {$file.file_size} КБ</span>
+<button type="button" class="admin-file-chip__remove admin-file-delete" data-file-id="{$file.id}" aria-label="Удалить файл">×</button>
+</li>
+{/foreach}
+</ul>
 {/if}
+<label class="admin-btn admin-btn--ghost admin-pair-add admin-media__add admin-media__add--doc">
+<input type="file" name="upload_files[]" multiple accept=".pdf,.doc,.docx,.djvu,.html,.htm,.txt,.rtf,.odt,.zip,.rar,.epub,.fb2">
+<span>+1</span>
+</label>
+</div>
+<span>Файлы</span>
+</div>
+</div>
 
 <div class="admin-field admin-group">
 <div class="admin-pairs" id="credit-rows">
@@ -174,12 +223,11 @@
 </div>
 <div class="admin-actions">
 <div class="admin-actions__start">
-<label class="admin-check"><input type="checkbox" name="is_active" value="1" {if !$work || $work.is_active}checked{/if}> активно</label>
 <button type="submit" name="save" value="Сохранить" class="admin-btn admin-btn--success">{include file="admin2/icon.tpl" name="save"}<span>Сохранить</span></button>
 <button type="submit" name="save" value="Сохранить и добавить еще" class="admin-btn admin-btn--info">{include file="admin2/icon.tpl" name="plus"}<span>Сохранить и добавить еще</span></button>
 <a class="admin-btn admin-btn--primary" href="/admin2/work.php">{include file="admin2/icon.tpl" name="plus"}<span>Новая книга</span></a>
 {if $main_edition_id}<a class="admin-btn admin-btn--ghost" href="/admin2/chapter.php?edition_id={$main_edition_id}">{include file="admin2/icon.tpl" name="plus"}<span>Новая глава</span></a>{/if}
-{if $work}<a class="admin-btn admin-btn--ghost" href="/admin2/edition.php?work_id={$work.id}">{include file="admin2/icon.tpl" name="plus"}<span>Ещё издание</span></a>{/if}
+{if $work}<a class="admin-btn admin-btn--ghost" href="/admin2/edition.php?work_id={$work.id}">{include file="admin2/icon.tpl" name="plus"}<span>Другое издание</span></a>{/if}
 </div>
 {if $work}
 <div class="admin-actions__end">
@@ -208,9 +256,9 @@
 {if $chapters}
 <div class="admin-list admin-list--chapters">
 <div class="admin-list__row admin-list__row--head"><div class="admin-list__num">№</div><div class="admin-list__title">Глава</div><div class="admin-list__badge">Тип</div><div class="admin-list__count">Порядок</div><div></div></div>
-{foreach from=$chapters item=ch}
+{foreach from=$chapters item=ch name=chapters}
 <div class="admin-list__row">
-<div class="admin-list__num"><a href="/admin2/chapter.php?id={$ch.id}&amp;edition_id={$main_edition_id}">{include file="admin2/icon.tpl" name="square-pen" class="admin-icon admin-icon--action"}</a>{$ch.id}</div>
+<div class="admin-list__num"><a href="/admin2/chapter.php?id={$ch.id}&amp;edition_id={$main_edition_id}">{include file="admin2/icon.tpl" name="square-pen" class="admin-icon admin-icon--action"}</a>{$smarty.foreach.chapters.iteration}</div>
 <div class="admin-list__title"><a href="/admin2/chapter.php?id={$ch.id}&amp;edition_id={$main_edition_id}">{$ch.title}</a></div>
 <div class="admin-list__badge">{$chapter_types[$ch.chapter_type]}</div>
 <div class="admin-list__count">{$ch.sort_order}</div>

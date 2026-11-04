@@ -19,7 +19,7 @@ function bv2_admin_post_int(string $key): int
 }
 
 /**
- * @return array<string, array{title:string,subtitle:string,slug:string,annotation:string,meta_description:string}>
+ * @return array<string, array{title:string,subtitle:string,imprint:string,slug:string,annotation:string,meta_description:string}>
  */
 function bv2_admin_post_work_i18n(array $langCodes): array
 {
@@ -33,6 +33,7 @@ function bv2_admin_post_work_i18n(array $langCodes): array
         $out[$code] = [
             'title' => plain_text_normalize_for_storage(trim((string) ($row['title'] ?? ''))),
             'subtitle' => plain_text_normalize_for_storage(trim((string) ($row['subtitle'] ?? ''))),
+            'imprint' => (string) ($row['imprint'] ?? ''),
             'slug' => trim((string) ($row['slug'] ?? '')),
             'annotation' => (string) ($row['annotation'] ?? ''),
             'meta_description' => plain_text_normalize_for_storage(trim((string) ($row['meta_description'] ?? ''))),
@@ -100,7 +101,7 @@ function bv2_admin_unique_work_slug(mysqli $db, string $lang, string $base, int 
 
 function bv2_admin_i18n_row_empty(array $row): bool
 {
-    foreach (['title', 'subtitle', 'slug', 'annotation', 'meta_description', 'title_override', 'edition_statement', 'note'] as $k) {
+    foreach (['title', 'subtitle', 'imprint', 'slug', 'annotation', 'meta_description', 'title_override', 'edition_statement', 'note'] as $k) {
         if (trim((string) ($row[$k] ?? '')) !== '') {
             return false;
         }
@@ -295,17 +296,18 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
                 $primarySlug = $slug;
             }
             $i18n = $db->prepare(
-                'INSERT INTO book_work_i18n (work_id, lang, title, subtitle, slug, annotation, meta_description)
-                 VALUES (?,?,?,?,?,?,?)
-                 ON DUPLICATE KEY UPDATE title=VALUES(title), subtitle=VALUES(subtitle),
+                'INSERT INTO book_work_i18n (work_id, lang, title, subtitle, imprint, slug, annotation, meta_description)
+                 VALUES (?,?,?,?,?,?,?,?)
+                 ON DUPLICATE KEY UPDATE title=VALUES(title), subtitle=VALUES(subtitle), imprint=VALUES(imprint),
                    slug=VALUES(slug), annotation=VALUES(annotation), meta_description=VALUES(meta_description)'
             );
             $i18n->bind_param(
-                'issssss',
+                'isssssss',
                 $id,
                 $code,
                 $row['title'],
                 $row['subtitle'],
+                $row['imprint'],
                 $slug,
                 $row['annotation'],
                 $row['meta_description']
@@ -470,6 +472,7 @@ foreach ($langCodes as $code) {
     $work_i18n_by_lang[$code] = [
         'title' => '',
         'subtitle' => '',
+        'imprint' => '',
         'slug' => '',
         'annotation' => '',
         'meta_description' => '',
@@ -503,6 +506,7 @@ if ($id > 0) {
             $work_i18n_by_lang[$code] = [
                 'title' => (string) ($row['title'] ?? ''),
                 'subtitle' => (string) ($row['subtitle'] ?? ''),
+                'imprint' => (string) ($row['imprint'] ?? ''),
                 'slug' => (string) ($row['slug'] ?? ''),
                 'annotation' => (string) ($row['annotation'] ?? ''),
                 'meta_description' => (string) ($row['meta_description'] ?? ''),
