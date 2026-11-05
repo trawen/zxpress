@@ -1,0 +1,17 @@
+{
+  "title_cs": "Classified Adverts Section in Sinclair Classic #07",
+  "title_ru": "Раздел частных объявлений в Sinclair Classic #07",
+  "title_en": "Classified Adverts Section in Sinclair Classic #07",
+  "meta_description_cs": "Information on the free classifieds section in Sinclair Classic #07: how to submit ads, technical details on loading artwork, and tips for disk users.",
+  "meta_description_ru": "Информация о разделе бесплатных объявлений в Sinclair Classic #07: как подать объявление, технические особенности загрузки графики и рекомендации для пользователей дисковых накопителей.",
+  "meta_description_en": "Information on the free classifieds section in Sinclair Classic #07: how to submit ads, technical details on loading artwork, and tips for disk users.",
+  "tags_ru": [
+    "Spectrum",
+    "Diskmag",
+    "Реклама",
+    "Объявления",
+    "Справка"
+  ],
+  "body_ru": "РАЗДЕЛ ЧАСТНЫХ ОБЪЯВЛЕНИЙ\n\nОбъявления в Sinclair Classic размещаются бесплатно. Текстовые объявления сохраняются в основной программе (если позволяет память). Вы также можете прислать нам файл экрана с вашим собственным рисунком и т.д. Мы будем только рады оформить его для вас, если у вас нет времени или технических возможностей (и если это не какая-то ерунда!). Всего имеется 2 файла экрана для загрузки, пронумерованные как A1 и A2. Следующий файл scr$ будет загружаться каждый раз, когда вы выбираете опцию 7.\n\nПользователям дисковых накопителей следует изменить строку 3550. Нажмите любую клавишу, а затем воспроизведите загрузку следующего файла экрана.",
+  "body_en": "CLASSIFIED ADVERTS SECTION\n\nAdverts are free in Sinclair Classic. Lineage ads are stored in the main program (memory permitting). Or send us a screen file with your own artwork etc. We would be only too pleased to design it for you if you didn't have the time/facilities (and it wasn't crap gear!) There are 2 screen files to LOAD, numbered A1 & A2. The next scr$ will LOAD everytime you choose option 7.\n\nDisk users should alter line 3550. Press any key then play to LOAD in the next screen file."
+}

@@ -1,0 +1,17 @@
+{
+  "title_cs": "Technophobia: Manic Miner Level Editor",
+  "title_ru": "Technophobia: Редактор уровней для Manic Miner",
+  "title_en": "Technophobia: Manic Miner Level Editor",
+  "meta_description_cs": "Troubleshooting a reader's issue with entering a Manic Miner level editor listing on the ZX Spectrum, specifically regarding variable naming conflicts with BASIC keywords.",
+  "meta_description_ru": "Разбор проблемы с вводом листинга редактора уровней для классики 80-х Manic Miner на ZX Spectrum. Почему использование ключевых слов в качестве переменных вызывает ошибки.",
+  "meta_description_en": "Troubleshooting a reader's issue with entering a Manic Miner level editor listing on the ZX Spectrum, specifically regarding variable naming conflicts with BASIC keywords.",
+  "tags_ru": [
+    "Manic Miner",
+    "BASIC",
+    "ZX Spectrum",
+    "Юмор",
+    "Аппаратура"
+  ],
+  "body_ru": "### Technophobia: Редактор уровней для Manic Miner\n\nК нам пришло письмо от одного сбитого с толку молодого человека из Южного Лондона. Он хочет понять, почему его старый Speccy отказывается принимать некоторые строки из листинга программы для этой классической платформенной игры начала восьмидесятых. Проблема кроется в том, что в листинге КЛЮЧЕВЫЕ СЛОВА используются в качестве имен ПЕРЕМЕННЫХ, и Speccy, вполне справедливо, начинает из-за этого нервничать.\n\nМы давно подозревали, что Richard Swann — законченный неудачник по жизни, но вряд ли даже он стал бы совершать такую глупость нарочно. Замените переменные peek, opeek и step на ponce, piss и shite. Потому что именно таким и является Ricky...",
+  "body_en": "### Technophobia: Manic Miner Level Editor\n\nWe've had a letter from a confused young man in South London who wants to know why his old Speccy refuses to accept certain lines from his listing for this early eighties platform classic. The problem stems from the listing having used KEYWORDS as VARIABLE names and the Speccy, quite rightly gets a bit upset over this.\n\nWe've long suspected Richard Swann as being a complete social loser but surely even he would not make a cock up like this on purpose. Change variables peek, opeek and step to ponce, piss and shite. Because that's what Ricky is..."
+}

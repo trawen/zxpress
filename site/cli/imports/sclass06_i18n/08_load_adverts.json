@@ -1,0 +1,15 @@
+{
+  "title_cs": "Classified Adverts in Sinclair Classic",
+  "title_ru": "Раздел частных объявлений в Sinclair Classic",
+  "title_en": "Classified Adverts in Sinclair Classic",
+  "meta_description_cs": "Free classified ads section for Sinclair Classic readers. Instructions on how to submit ads and technical notes for disk users.",
+  "meta_description_ru": "Раздел бесплатных частных объявлений для читателей журнала Sinclair Classic. Инструкции по подаче рекламы и технические примечания для пользователей дисковых накопителей.",
+  "meta_description_en": "Free classified ads section for Sinclair Classic readers. Instructions on how to submit ads and technical notes for disk users.",
+  "tags_ru": [
+    "Реклама",
+    "Объявления",
+    "Обмен ПО"
+  ],
+  "body_ru": "РАЗДЕЛ ЧАСТНЫХ ОБЪЯВЛЕНИЙ\n\nОбъявления в Sinclair Classic публикуются бесплатно. Присылайте нам текст объявления или ваш собственный файл экрана на адрес, указанный на странице с письмами (пожалуйста, только на кассетах). Один экран будет загружаться каждый раз, когда вы выбираете опцию 8. Всего существует четыре различных экрана (объявления).\n\n***ПОЛЬЗОВАТЕЛИ ДИСКОВЫХ НАКОПИТЕЛЕЙ: ИЗМЕНИТЕ СТРОКУ 4050***\n\n...нажмите любую клавишу, затем воспроизведите кассету. ad.1",
+  "body_en": "CLASSIFIED ADVERTS SECTION\n\nAdverts are free in Sinclair Classic. Either send us a lineage ad or your own screen file to the address on the letters page (tapes only please). One screen will be loaded every time you select option 8. There are four different screens (adverts) in total.\n\n***DISK USERS ALTER LINE 4050***\n\n...press any key then play tape. ad.1"
+}

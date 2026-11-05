@@ -1,0 +1,18 @@
+{
+  "title_cs": "Review: The Working Spectrum (1982 book)",
+  "title_ru": "Рецензия: The Working Spectrum (книга 1982 года)",
+  "title_en": "Review: The Working Spectrum (1982 book)",
+  "meta_description_cs": "An acerbic 1990s review of a 1982 Sinclair BASIC programming book. CLAIRE vents about boring listings and impractical code.",
+  "meta_description_ru": "Едкий обзор книги по программированию на BASIC 1982 года из Sinclair Classic. CLAIRE негодует по поводу скучных листингов и бесполезного кода.",
+  "meta_description_en": "An acerbic 1990s review of a 1982 Sinclair BASIC programming book. CLAIRE vents about boring listings and impractical code.",
+  "tags_ru": [
+    "BASIC",
+    "Книги",
+    "Sinclair",
+    "ZX Spectrum",
+    "Рецензия",
+    "Юмор"
+  ],
+  "body_ru": "Издания: The Working Spectrum, автор David Lawrence. Рекомендуемая розничная цена 5.95 фунтов. Опубликовано в 1982 году издательством Sunshine Books. Книга носит подзаголовок «Библиотека практических подпрограмм и программ» и содержит двадцать одну программу, которые вам предлагается набрать вручную и использовать по своему усмотрению. Среди них: работа с файлами, финансовые органайзеры, графические редакторы, викторины, разнообразные подпрограммы и несколько игр.\n\nКаждая программа представлена в стиле, который, как я полагаю, присущ всем программам для BBC... умопомрачительно скучно. Набирая эти листинги, можно легко представить себя на вечерних курсах в Эшере, где какой-нибудь остолоп в кричащем рождественском свитере учит вас компьютерному Basic. Каждый листинг настолько лишен характера и человечности, что остается лишь молить Бога, чтобы вам никогда в жизни не довелось встретить Lawrence на вечеринке (странно, у Amanda те же опасения насчет Richard Swann).\n\n«Banker» выглядит довольно многообещающе, пока не понимаешь, что программа не переносит остаток баланса на следующий месяц. Очень полезная вещь, не правда ли? Из плюсов: каждый раздел Basic объяснен очень хорошо, но доберетесь ли вы до конца первого же листинга, не впав при этом в кому? Если увидите эту книгу в библиотеке — попробуйте её сжечь. (CLAIRE)",
+  "body_en": "Publications: The Working Spectrum by David Lawrence. R.R.P £5.95. Published 1982 by Sunshine Books. Subtitled 'A library of practical subroutines and programs', this book contains twenty-one programs for you to type in and use as you will. Programs include two files, financial organizers, graphic designers, quizzes, various routines and some games.\n\nEach program is presented in a style that I imagine all BBC programs to look...........mind numbingly boring. When typing in these programs you can imagine yourself sitting in some evening class in Esher being taught computer Basic by some twat wearing a loud christmas jumper. Each listing is so devoid of character and humanity that you just hope to God that you will never ever meet Lawrence at a party (that's strange, Amanda has the same fear about Richard Swann.)\n\nBanker looks fairly promising until you realise it doesn't carry forward a balance to the following month. Pretty useful stuff or what? On the plus side each section of Basic is explained very well but will you get past the first program listing without falling into a coma first? If you see this book in a library, try to burn it. (CLAIRE)"
+}

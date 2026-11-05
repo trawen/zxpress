@@ -1,0 +1,19 @@
+{
+  "title_cs": "Sinclair Classic #07: Loading Part 2",
+  "title_ru": "Sinclair Classic #07: Загрузка второй части журнала",
+  "title_en": "Sinclair Classic #07: Loading Part 2",
+  "meta_description_cs": "Loader instructions for Sinclair Classic issue 7 part two for tape and disk drive users.",
+  "meta_description_ru": "Инструкция по загрузке второй части журнала Sinclair Classic #07 для пользователей кассет и дисководов (+3, +D).",
+  "meta_description_en": "Loader instructions for Sinclair Classic issue 7 part two for tape and disk drive users.",
+  "tags_ru": [
+    "+D",
+    "Spectrum +3",
+    "Загрузка",
+    "Загрузчик",
+    "Кассета",
+    "Бейсик",
+    "Юмор"
+  ],
+  "body_ru": "# ЗАГРУЗКА SINCLAIR CLASSIC, ЧАСТЬ 2\n\nПользователи магнитофонов — просто нажмите любую клавишу и запускайте свои раздолбанные кассетники.\n\nВладельцы дисководов (+3 / +D) — исправьте строку 3530 под свой собственный сладкозвучный загрузчик.\n\nSearching for... SC#7.B\n\nПроцедура загрузки написана V.LazyBastard. SC#7.B",
+  "body_en": "# LOAD SINCLAIR CLASSIC PART 2\n\nTape users just press any key and start your knackered tape decks.\n\nDisk Drivers (+3/+D) alter line 3530 for your own honey coated loader.\n\nSearching for... SC#7.B\n\nLOAD ROUTINE coded by V.LazyBastard. SC#7.B"
+}

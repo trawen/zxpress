@@ -1,0 +1,15 @@
+{
+  "title_cs": "Technophobia: Extra colours on your Spectrum",
+  "title_ru": "Technophobia: Дополнительные цвета на вашем ZX Spectrum",
+  "title_en": "Technophobia: Extra colours on your Spectrum",
+  "meta_description_cs": "A short routine to generate custom colours on the ZX Spectrum using UDG, originally seen in Your Sinclair.",
+  "meta_description_ru": "Короткая процедура для создания пользовательских цветов на ZX Spectrum с использованием UDG, впервые опубликованная в Your Sinclair.",
+  "meta_description_en": "A short routine to generate custom colours on the ZX Spectrum using UDG, originally seen in Your Sinclair.",
+  "tags_ru": [
+    "ZX Spectrum",
+    "BASIC",
+    "Your Sinclair"
+  ],
+  "body_ru": "Technophobia\n\nДОПОЛНИТЕЛЬНЫЕ ЦВЕТА НА ВАШЕМ SEXY SPECTRUM\n\nВ номере журнала Your Sinclair за июнь 1992 года была опубликована короткая процедура для создания UDG-квадрата розового цвета. Эту программу можно использовать для получения дополнительных цветов.\n\n```basic\n10 FOR N=0 TO 7\n20 READ A:POKE USR \"a\"+N,A\n30 NEXT N\n40 PRINT PAPER P;INK K;CHR$ 144\n50 DATA 170,85,170,85,170,85,170,85\n```\n\nP=PAPER K=INK",
+  "body_en": "Technophobia\n\nEXTRA COLOURS ON YOUR SEXY SPECTRUM\n\nA short routine was published in Your Sinclair June 92 to create a UDG square of pink. The program can be used to create extra colours.\n\n```basic\n10 FOR N=0 TO 7\n20 READ A:POKE USR \"a\"+N,A\n30 NEXT N\n40 PRINT PAPER P;INK K;CHR$ 144\n50 DATA 170,85,170,85,170,85,170,85\n```\n\nP=PAPER K=INK"
+}
