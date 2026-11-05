@@ -399,11 +399,20 @@ if ($id > 0) {
 					'is_edge' => ($idx === 0 || $idx === count($timelineDates) - 1),
 				];
 			}
+			// Year ticks only for years that actually have an issue (skip empty gaps).
+			$yearsWithIssues = [];
+			foreach ($timelineDates as $d) {
+				$yearsWithIssues[(int) date('Y', $d)] = true;
+			}
 			$years = [];
 			$startYear = (int) date('Y', $minT);
 			$endYear = (int) date('Y', $maxT);
-			for ($y = $startYear + 1; $y <= $endYear; $y++) {
-				$yTs = strtotime("$y-01-01");
+			foreach (array_keys($yearsWithIssues) as $y) {
+				// Edges already shown as start/end dates — no duplicate year label.
+				if ($y <= $startYear || $y >= $endYear) {
+					continue;
+				}
+				$yTs = strtotime($y . '-01-01');
 				if ($yTs > $minT && $yTs < $maxT) {
 					$years[] = [
 						'year' => $y,
@@ -411,6 +420,7 @@ if ($id > 0) {
 					];
 				}
 			}
+			usort($years, static fn (array $a, array $b): int => $a['year'] <=> $b['year']);
 			$smarty->assign('timeline', [
 				'dots' => $dots,
 				'years' => $years,
