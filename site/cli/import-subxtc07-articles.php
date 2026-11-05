@@ -29,6 +29,7 @@ const SE07_TEXT_TYPE = 3; // markdown
 
 $dryRun = true;
 $force = false;
+$withTags = false; // AI tags_ru are noisy; opt-in only
 $pressId = SE07_PRESS_ID;
 $issueId = SE07_ISSUE_ID;
 $source = '';
@@ -40,6 +41,8 @@ foreach (array_slice($argv, 1) as $arg) {
         $dryRun = true;
     } elseif ($arg === '--force') {
         $force = true;
+    } elseif ($arg === '--with-tags') {
+        $withTags = true;
     } elseif (str_starts_with($arg, '--press-id=')) {
         $pressId = max(0, (int) substr($arg, 11));
     } elseif (str_starts_with($arg, '--issue-id=')) {
@@ -47,7 +50,7 @@ foreach (array_slice($argv, 1) as $arg) {
     } elseif (str_starts_with($arg, '--source=')) {
         $source = rtrim(substr($arg, 9), '/');
     } elseif ($arg === '--help' || $arg === '-h') {
-        fwrite(STDOUT, "Usage: {$argv[0]} [--dry-run|--apply] [--force] [--press-id=213] [--issue-id=2665] [--source=DIR]\n");
+        fwrite(STDOUT, "Usage: {$argv[0]} [--dry-run|--apply] [--force] [--with-tags] [--press-id=213] [--issue-id=2665] [--source=DIR]\n");
         exit(0);
     } else {
         fwrite(STDERR, "Unknown arg: {$arg}\n");
@@ -341,7 +344,7 @@ foreach ($articles as $item) {
     $bodyEn = (string) ($data['body_en'] ?? '');
     /** @var list<string> $tags */
     $tags = [];
-    if (!empty($data['tags_ru']) && is_array($data['tags_ru'])) {
+    if ($withTags && !empty($data['tags_ru']) && is_array($data['tags_ru'])) {
         foreach ($data['tags_ru'] as $t) {
             $t = trim((string) $t);
             if ($t !== '') {

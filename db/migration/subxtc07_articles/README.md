@@ -9,7 +9,7 @@
 - тексты: `site/cli/imports/subxtc07_i18n/*.json`
 - `text_type` / `text_type_ru` / `text_type_en` = `3` (markdown)
 - dual-write в `ezines_v2`
-- теги из `tags_ru`
+- теги **не** ставятся по умолчанию (AI `tags_ru` шумные); только с `--with-tags`
 - нумерация по TOC (пропуски `#10` и `#13` — статей в TAP нет; bonus Big Belly = `#16`)
 
 Повторный запуск идемпотентен: статья с тем же `number` в выпуске пропускается. Перезапись: `--force`.

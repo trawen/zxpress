@@ -194,7 +194,8 @@
 .admin-ai input[type="text"],
 .admin-ai input[type="number"],
 .admin-ai input[type="file"],
-.admin-ai select {
+.admin-ai select,
+.admin-ai textarea {
 	width: 100%;
 	min-height: 34px;
 	padding: 6px 8px;
@@ -204,10 +205,21 @@
 	color: var(--ai-text);
 	font: inherit;
 }
+.admin-ai textarea {
+	min-height: 4.5rem;
+	resize: vertical;
+	display: block;
+}
 .admin-ai input:focus,
-.admin-ai select:focus {
+.admin-ai select:focus,
+.admin-ai textarea:focus {
 	outline: 2px solid rgba(164,30,0,.18);
 	border-color: var(--ai-accent);
+}
+.admin-ai-table .admin-ai-field {
+	display: block;
+	width: 100%;
+	margin: 0 0 8px;
 }
 .admin-ai-help {
 	margin-top: 3px;
