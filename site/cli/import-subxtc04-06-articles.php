@@ -798,13 +798,61 @@ foreach ($only as $issueNum) {
 }
 
 if (!$dryRun) {
-    // Keep press.numbers in sync with actual issue count.
+    // Keep press.numbers + years_from/years_to (smn-press-meta-years) in sync with issues.
     $zCnt = db_select($db, 'SELECT COUNT(*) AS c FROM issue WHERE id_press=?', 'i', $pressId);
     $cntRow = $zCnt ? $zCnt->fetch_assoc() : null;
     $cnt = (int) ($cntRow['c'] ?? 0);
-    if ($cnt > 0 && (int) ($press['numbers'] ?? 0) !== $cnt) {
-        db_exec($db, 'UPDATE press SET numbers=? WHERE id=? LIMIT 1', 'ii', $cnt, $pressId);
-        fwrite(STDOUT, "\npress.numbers → {$cnt}\n");
+
+    $zRange = db_select(
+        $db,
+        'SELECT MIN(date) AS y_from, MAX(date) AS y_to FROM issue WHERE id_press=? AND date > 0',
+        'i',
+        $pressId
+    );
+    $rangeRow = $zRange ? $zRange->fetch_assoc() : null;
+    $yearsFrom = (int) ($rangeRow['y_from'] ?? 0);
+    $yearsTo = (int) ($rangeRow['y_to'] ?? 0);
+
+    if ($cnt > 0 || ($yearsFrom > 0 && $yearsTo > 0)) {
+        if ($cnt > 0 && $yearsFrom > 0 && $yearsTo > 0) {
+            db_exec(
+                $db,
+                'UPDATE press SET numbers=?, years_from=?, years_to=? WHERE id=? LIMIT 1',
+                'iiii',
+                $cnt,
+                $yearsFrom,
+                $yearsTo,
+                $pressId
+            );
+        } elseif ($cnt > 0) {
+            db_exec($db, 'UPDATE press SET numbers=? WHERE id=? LIMIT 1', 'ii', $cnt, $pressId);
+        } elseif ($yearsFrom > 0 && $yearsTo > 0) {
+            db_exec(
+                $db,
+                'UPDATE press SET years_from=?, years_to=? WHERE id=? LIMIT 1',
+                'iii',
+                $yearsFrom,
+                $yearsTo,
+                $pressId
+            );
+        }
+        fwrite(
+            STDOUT,
+            sprintf(
+                "\npress.meta → numbers=%d years_from=%s years_to=%s\n",
+                $cnt,
+                $yearsFrom > 0 ? gmdate('Y-m-d', $yearsFrom) : '—',
+                $yearsTo > 0 ? gmdate('Y-m-d', $yearsTo) : '—'
+            )
+        );
+
+        if (ezines_v2_ready($db)) {
+            $zPressFresh = db_select($db, 'SELECT * FROM press WHERE id=? LIMIT 1', 'i', $pressId);
+            $pressFresh = ($zPressFresh && ($pr = mysqli_fetch_assoc($zPressFresh))) ? $pr : null;
+            if (is_array($pressFresh)) {
+                ezines_v2_sync_press($db, $pressFresh, 'en');
+            }
+        }
     }
     if ($totalCreated > 0 || $totalUpdated > 0) {
         se456_queue_manticore_reindex();
