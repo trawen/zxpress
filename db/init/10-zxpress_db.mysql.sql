@@ -40,6 +40,7 @@ CREATE TABLE `articles` (
   `text_type_en` int NOT NULL DEFAULT '2' COMMENT '0=legacy,1=text_pre,2=html_pre,3=markdown',
   `text_ru` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `text_en` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `search_text` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`),
   KEY `temp` (`temp`),
   KEY `id_issue` (`id_issue`),

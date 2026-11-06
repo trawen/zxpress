@@ -65,4 +65,11 @@ docker run --rm \
   php:8.5-fpm \
   php /app/includes/__tests/unit_sitemap_builder.php
 
+log INFO "Running article_search_text tests"
+docker run --rm \
+  -e LOG_LEVEL="$LOG_LEVEL" \
+  -v "${INCLUDES_HOST_DIR}:/app/includes:ro" \
+  php:8.5-fpm \
+  php /app/includes/__tests/unit_article_search_text.php
+
 log INFO "Unit tests completed"

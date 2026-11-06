@@ -1,4 +1,5 @@
-# Fulltext: title + issue/press name + article body from DB fields text_ru/text_en.
+# Fulltext: title + issue/press name + prepared plain body (articles.search_text).
+# search_text is built by site/includes/article_search_text.php (md→plain / txt dehyphen / strip UTF-8 pseudographics).
 source articles_src
 {
     type            = mysql
@@ -11,7 +12,7 @@ source articles_src
 
     sql_query       = \
         SELECT a.id, a.title AS ft_title, CONCAT(IFNULL(p.title, ""), " ", IFNULL(i.title, "")) AS ft_name, \
-               CONCAT_WS(" ", IFNULL(a.text_ru, ""), IFNULL(a.text_en, "")) AS ft_text, \
+               IFNULL(a.search_text, "") AS ft_text, \
                a.title AS title, CONCAT(IFNULL(p.title, ""), " ", IFNULL(i.title, "")) AS name, \
                a.id AS id1, a.id_issue AS id2, COALESCE(i.id_press, a.id_press, 0) AS id3, \
                COALESCE(NULLIF(i.date, 0), a.date) AS date, \

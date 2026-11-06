@@ -70,6 +70,7 @@ require_once $siteRoot . '/includes/article_text_render.php';
 require_once $siteRoot . '/includes/admin_helpers.php';
 require_once $siteRoot . '/includes/ezines_v2.php';
 require_once $siteRoot . '/includes/ezines_v2_sync.php';
+require_once $siteRoot . '/includes/article_search_text.php';
 
 if ($source === '') {
     $candidates = [
@@ -558,6 +559,8 @@ foreach ($articles as $item) {
             $tagLinks++;
         }
     }
+
+    article_search_text_refresh($db, $aid);
 }
 
 if (!$dryRun && ($created > 0 || $updated > 0)) {

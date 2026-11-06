@@ -75,6 +75,7 @@ require_once $siteRoot . '/includes/article_text_render.php';
 require_once $siteRoot . '/includes/admin_helpers.php';
 require_once $siteRoot . '/includes/ezines_v2.php';
 require_once $siteRoot . '/includes/ezines_v2_sync.php';
+require_once $siteRoot . '/includes/article_search_text.php';
 
 function se0003_resolve_source(int $issueNum, string $siteRoot): string
 {
@@ -478,6 +479,8 @@ foreach ($only as $issueNum) {
                 $tagLinks++;
             }
         }
+
+        article_search_text_refresh($db, $aid);
     }
 }
 

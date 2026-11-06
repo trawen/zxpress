@@ -7,6 +7,7 @@ if (!isset($_SESSION['login']) || !$_SESSION['login']) {
 }
 require 'html_fix.php';
 require_once __DIR__ . '/includes/ezine_slugs.php';
+require_once __DIR__ . '/includes/article_search_text.php';
 //error_reporting(E_ALL);
 
 function admin_articles_read_text_from_disk(int $articleId): string
@@ -47,8 +48,10 @@ function admin_articles_write_text(mysqli $db, int $articleId, string $text): bo
 	$ok = $stmt->execute();
 	if (!$ok) {
 		error_log('[FIX] admin_articles: text_ru update failed id=' . $articleId . ' err=' . $stmt->error);
+		return false;
 	}
-	return $ok;
+	article_search_text_refresh($db, $articleId);
+	return true;
 }
 
 function admin_articles_copy_upload(string $key, string $leaf, string $tmpPath, string $context): bool

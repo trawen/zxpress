@@ -119,6 +119,9 @@ fi
 if [ "$SKIP_REINDEX" -eq 1 ]; then
 	echo "[skip] Re-indexing ManticoreSearch (--skip-reindex)"
 else
+	echo "[deploy] [INFO] Preparing articles.search_text for Manticore..."
+	docker compose -f "$COMPOSE_FILE" exec -T php php /home/zxpress/web/zxpress.ru/public_html/cli/manticore-prepare-articles.php --apply \
+		|| echo "[manticore-fix] WARN search_text prepare returned non-zero"
 	echo "[deploy] [INFO] Re-indexing ManticoreSearch..."
 	docker compose -f "$COMPOSE_FILE" exec -T -u manticore manticore indexer --all --rotate 2>/dev/null || echo "[manticore-fix] WARN indexer returned non-zero"
 	sleep 2

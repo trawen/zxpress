@@ -111,6 +111,7 @@ require_once $siteRoot . '/includes/article_text_render.php';
 require_once $siteRoot . '/includes/admin_helpers.php';
 require_once $siteRoot . '/includes/ezines_v2.php';
 require_once $siteRoot . '/includes/ezines_v2_sync.php';
+require_once $siteRoot . '/includes/article_search_text.php';
 
 /**
  * @return string absolute dir or ''
@@ -581,6 +582,8 @@ function sclass_import_articles(
                 $tagLinks++;
             }
         }
+
+        article_search_text_refresh($db, $aid);
     }
 
     return [

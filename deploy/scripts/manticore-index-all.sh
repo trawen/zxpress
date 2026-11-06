@@ -12,6 +12,13 @@ cd "$PROJECT_DIR"
 log_info() { echo "[restore] INFO $*" >&2; }
 log_warn() { echo "[restore] WARN $*" >&2; }
 
+log_info "manticore_search_text_prepare"
+if docker compose exec -T php php /home/zxpress/web/zxpress.ru/public_html/cli/manticore-prepare-articles.php --apply; then
+	:
+else
+	log_warn "search_text prepare failed; indexer will use existing articles.search_text"
+fi
+
 log_info "manticore_permissions_prepare path=/var/lib/manticore"
 if ! docker compose exec -T -u 0 manticore sh -lc '
 	set -eu

@@ -8,6 +8,7 @@ require_once __DIR__ . '/includes/ezine_slugs.php';
 require_once __DIR__ . '/includes/article_text_render.php';
 require_once __DIR__ . '/includes/admin_translate.php';
 require_once __DIR__ . '/includes/ezines_v2_sync.php';
+require_once __DIR__ . '/includes/article_search_text.php';
 
 if (!isset($_SESSION['login']) || !$_SESSION['login']) {
 	header('HTTP/1.1 403 Forbidden');
@@ -29,8 +30,12 @@ function aan_normalize_text_type(int $raw): int
 	return ezn_normalize_article_text_type($raw);
 }
 
-function aan_queue_manticore_reindex(): void
+function aan_queue_manticore_reindex(?int $articleId = null): void
 {
+	global $db;
+	if ($articleId !== null && $articleId > 0 && isset($db) && $db instanceof mysqli) {
+		article_search_text_refresh($db, $articleId);
+	}
 	$dir = zx_data_root() . '/manticore-reindex';
 	@mkdir($dir, 0775, true);
 	@file_put_contents($dir . '/articles.pending', (string) time(), LOCK_EX);
@@ -522,7 +527,7 @@ if (($_POST['save'] ?? '') === 'Сохранить') {
 					}
 				}
 
-				aan_queue_manticore_reindex();
+				aan_queue_manticore_reindex($aid);
 				aan_redirect($pressId, $issueId, $aid, '&saved=1');
 			}
 

@@ -41,7 +41,9 @@ if [ "$smoke_code" -ne 0 ]; then
   exit "$smoke_code"
 fi
 
-echo "[6/6] Indexing ManticoreSearch..."
+echo "[6/6] Preparing articles.search_text + indexing ManticoreSearch..."
+docker compose -f "$COMPOSE_FILE" exec -T php php /home/zxpress/web/zxpress.ru/public_html/cli/manticore-prepare-articles.php --apply \
+  || echo "[manticore-fix] WARN search_text prepare returned non-zero"
 docker compose -f "$COMPOSE_FILE" exec -T -u manticore manticore indexer --all --rotate 2>/dev/null || echo "[manticore-fix] WARN indexer returned non-zero (may need manual indexing)"
 sleep 2
 echo "[manticore-fix] INFO sending RELOAD TABLES to pick up indexes on fresh volume..."
