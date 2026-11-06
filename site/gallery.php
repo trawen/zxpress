@@ -3,6 +3,7 @@ require 'init.inc';
 require_once __DIR__ . '/includes/ezine_slugs.php';
 require_once __DIR__ . '/includes/letters_slugs.php';
 require_once __DIR__ . '/includes/authors_slugs.php';
+require_once __DIR__ . '/includes/screen_images.php';
 
 function gallery_ui_is_new(): bool
 {
@@ -98,7 +99,7 @@ while ($z && ($t = mysqli_fetch_array($z))) {
 	$t['gallery_issue_url'] = '/issue.php?id=' . (int) $t['gallery_press_id']
 		. ($isEng ? '&lng=eng' : '')
 		. '#' . (string) ($t['gallery_issue_title'] ?? '');
-	$t['gallery_img_src'] = '/screens/1/' . (int) $t['gallery_screen_id'] . '.png';
+	$t['gallery_img_src'] = screen_public_url((int) $t['gallery_screen_id']);
 	$c[] = $t;
 }
 $smarty->assign('screens', $c);

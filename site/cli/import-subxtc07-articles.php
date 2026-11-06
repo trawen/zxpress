@@ -92,14 +92,14 @@ if ($source === '' || !is_dir($source)) {
 }
 
 /**
- * TOC number from stem: 01_01_foo → 1, 10_11_foo → 11, 14_big_belly → 16.
+ * TOC number from stem: 01_01_foo → 1, 10_11_foo → 11, 15_big_belly → 16.
  */
 function se07_toc_number(string $stem): int
 {
     if (preg_match('/^(\d+)_(\d+)_/', $stem, $m)) {
         return (int) $m[2];
     }
-    if (str_starts_with($stem, '14_big_belly')) {
+    if (preg_match('/^\d+_big_belly/', $stem)) {
         return 16;
     }
     if (preg_match('/^(\d+)_/', $stem, $m)) {
