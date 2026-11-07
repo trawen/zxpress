@@ -122,6 +122,7 @@ function ascr_process_uploads(mysqli $db, int $pressId, int $issueId, int $type,
 		$converted = screen_save_upload_as_webp($tmp, $screenId);
 		if (empty($converted['ok'])) {
 			db_exec($db, 'DELETE FROM screens WHERE id=? LIMIT 1', 'i', $screenId);
+			screen_after_deleted($db, $screenId);
 			screen_delete_files($screenId);
 			$errors[] = $origName . ': ' . (string) ($converted['error'] ?? 'не удалось сохранить WebP');
 			continue;
@@ -203,6 +204,7 @@ if ($doSave || $doUpload) {
 				if (!empty($_POST['delete_screen'][$sid])) {
 					db_exec($db, 'DELETE FROM screens WHERE id=? AND id_press=? LIMIT 1', 'ii', $sid, $pressId);
 					screen_delete_files($sid, $fmt);
+					screen_after_deleted($db, $sid);
 					continue;
 				}
 

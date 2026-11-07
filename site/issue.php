@@ -4,6 +4,7 @@ require_once __DIR__ . '/includes/ezine_slugs.php';
 require_once __DIR__ . '/includes/letters_slugs.php';
 require_once __DIR__ . '/includes/authors_slugs.php';
 require_once __DIR__ . '/includes/comments_scope.php';
+require_once __DIR__ . '/includes/screen_images.php';
 
 function issue_ui_is_new(): bool
 {
@@ -365,7 +366,7 @@ if ($viewMode === 'press') {
 				'date_display' => $dateDisplay,
 				'public_url' => ezn_url_issue($pressRow, $issueRow, $isEng),
 				'screens' => $screensByIssue[$issueId] ?? [],
-				'cover' => ($screensByIssue[$issueId][0] ?? null),
+				'cover' => issue_press_list_cover($screensByIssue[$issueId] ?? []),
 			];
 		}
 		$stmtIssues->close();

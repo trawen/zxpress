@@ -191,3 +191,45 @@ function screen_delete_files(int $screenId, ?string $format = null): void
 		}
 	}
 }
+
+/**
+ * Thumbnail on the press issues list — only from this issue's screens; null if none.
+ *
+ * @param list<array<string,mixed>> $screens
+ * @return array<string,mixed>|null
+ */
+function issue_press_list_cover(array $screens): ?array
+{
+	if ($screens === []) {
+		return null;
+	}
+	$pick = $screens[0];
+	foreach ($screens as $row) {
+		$rowType = (int) ($row['type'] ?? 99);
+		$pickType = (int) ($pick['type'] ?? 99);
+		if ($rowType < $pickType) {
+			$pick = $row;
+		}
+	}
+	screen_apply_public_format($pick);
+
+	return $pick;
+}
+
+/** Drop activity thumbs that still point at a removed screen (feed / batches). */
+function screen_after_deleted(mysqli $db, int $screenId): void
+{
+	if ($screenId <= 0) {
+		return;
+	}
+	$publicUrl = screen_public_url($screenId);
+	if ($publicUrl !== '') {
+		db_exec($db, 'UPDATE activity SET thumb_url=NULL WHERE thumb_url=? LIMIT 100', 's', $publicUrl);
+	}
+	db_exec(
+		$db,
+		"UPDATE activity SET thumb_url=NULL WHERE object_type='screen' AND object_id=? LIMIT 100",
+		'i',
+		$screenId
+	);
+}
