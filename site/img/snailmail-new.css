@@ -1572,9 +1572,6 @@ a.smn-letter-meta-author:hover {
 	object-fit: contain;
 	object-position: left top;
 	background: #1a1814;
-	border-style: solid;
-	border-color: #000;
-	border-width: 5px 7px;
 	border-radius: 2px;
 	outline: none;
 	image-rendering: auto;
@@ -1604,9 +1601,6 @@ a.smn-letter-meta-author:hover {
 	width: 128px;
 	height: 96px;
 	background: #1a1814;
-	border-style: solid;
-	border-color: #000;
-	border-width: 5px 7px;
 	border-radius: 2px;
 	box-sizing: content-box;
 }
