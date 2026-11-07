@@ -130,9 +130,21 @@ function screen_probe_file_dimensions(string $path): array
 	return [(int) ($info[0] ?? 0), (int) ($info[1] ?? 0)];
 }
 
+function screen_table_has_dimensions(mysqli $db): bool
+{
+	static $cached = null;
+	if ($cached !== null) {
+		return $cached;
+	}
+	$z = $db->query("SHOW COLUMNS FROM screens LIKE 'width'");
+	$cached = (bool) ($z && $z->num_rows > 0);
+
+	return $cached;
+}
+
 function screen_set_dimensions(mysqli $db, int $screenId, int $width, int $height): bool
 {
-	if ($screenId <= 0 || $width <= 0 || $height <= 0) {
+	if ($screenId <= 0 || $width <= 0 || $height <= 0 || !screen_table_has_dimensions($db)) {
 		return false;
 	}
 

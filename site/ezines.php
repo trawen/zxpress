@@ -94,9 +94,10 @@ function ezines_type_counts(mysqli $db): array
 function ezines_press_splash_map(mysqli $db): array
 {
 	$map = [];
+	$dimCols = screen_table_has_dimensions($db) ? ', s.width, s.height' : '';
 	$z = db_select(
 		$db,
-		'SELECT s.id_press, s.id, s.format, s.type, s.width, s.height'
+		'SELECT s.id_press, s.id, s.format, s.type' . $dimCols
 		. ' FROM screens s'
 		. ' INNER JOIN issue i ON i.id = s.id_issue'
 		. ' ORDER BY s.id_press ASC,'
