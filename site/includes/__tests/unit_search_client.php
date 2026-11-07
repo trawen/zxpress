@@ -22,27 +22,25 @@ function assertEq($actual, $expected, string $msg): void
     }
 }
 
-// Transliteration basics
-assertEq(transliterate_word('sh'), 'ш', 'transliterate_word(sh)');
-assertEq(transliterate_word('spectrum'), 'спектрум', 'transliterate_word(spectrum)');
-
 // Escaping for Manticore SQL single-quoted context
 $input = "a'b\\c"; // a ' b \ c
 $expected = "a\\'b\\\\c"; // a\'b\\c (string contents)
 assertEq(manticore_escape($input), $expected, 'manticore_escape');
 
-// normalize_query: ё -> е and whitespace collapse
+// normalize_query: ё -> е, whitespace, no translit
 assertEq(normalize_query("ёлка"), 'елка', 'normalize_query(ё->е)');
+assertEq(normalize_query('spectrum'), 'spectrum', 'normalize_query single latin unchanged');
+assertEq(normalize_query('BASIC spectrum ZX'), 'BASIC spectrum ZX', 'normalize_query mixed latin unchanged');
 assertEq(
     normalize_query("  hello   world "),
-    '(hello | хелло) (world | ворлд)',
-    'normalize_query whitespace collapse + latin expansion'
+    '"hello world"',
+    'normalize_query multi-word latin → phrase'
 );
-
-// normalize_query: expands latin 3+ words to (orig | translit)
-$norm = normalize_query('BASIC spectrum ZX');
-$expectedNorm = '(BASIC | БАСИК) (spectrum | спектрум) ZX';
-assertEq($norm, $expectedNorm, 'normalize_query latin expansion');
+assertEq(
+    normalize_query('The Royal Archer'),
+    '"The Royal Archer"',
+    'normalize_query English phrase'
+);
 
 echo "[unit_search_client] INFO PASS unit_search_client\n";
 exit(0);

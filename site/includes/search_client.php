@@ -26,59 +26,24 @@ function manticore_escape(string $s): string
 }
 
 /**
- * Transliterate a single latin word to cyrillic.
- */
-function transliterate_word(string $word): string
-{
-    // Digraphs first (strtr handles longest-match-first)
-    $word = strtr($word, [
-        'sh' => 'ш', 'Sh' => 'Ш', 'SH' => 'Ш',
-        'sch' => 'щ', 'Sch' => 'Щ', 'SCH' => 'Щ',
-        'ch' => 'ч', 'Ch' => 'Ч', 'CH' => 'Ч',
-        'zh' => 'ж', 'Zh' => 'Ж', 'ZH' => 'Ж',
-        'kh' => 'х', 'Kh' => 'Х', 'KH' => 'Х',
-        'ts' => 'ц', 'Ts' => 'Ц', 'TS' => 'Ц',
-        'yu' => 'ю', 'Yu' => 'Ю', 'YU' => 'Ю',
-        'ya' => 'я', 'Ya' => 'Я', 'YA' => 'Я',
-    ]);
-    // Single letters
-    $word = strtr($word, [
-        'a' => 'а', 'b' => 'б', 'c' => 'к', 'v' => 'в', 'g' => 'г',
-        'd' => 'д', 'e' => 'е', 'z' => 'з', 'i' => 'и', 'y' => 'й',
-        'k' => 'к', 'l' => 'л', 'm' => 'м', 'n' => 'н', 'o' => 'о',
-        'p' => 'п', 'r' => 'р', 's' => 'с', 't' => 'т', 'u' => 'у',
-        'f' => 'ф', 'h' => 'х', 'w' => 'в', 'x' => 'кс',
-        'A' => 'А', 'B' => 'Б', 'C' => 'К', 'V' => 'В', 'G' => 'Г',
-        'D' => 'Д', 'E' => 'Е', 'Z' => 'З', 'I' => 'И', 'Y' => 'Й',
-        'K' => 'К', 'L' => 'Л', 'M' => 'М', 'N' => 'Н', 'O' => 'О',
-        'P' => 'П', 'R' => 'Р', 'S' => 'С', 'T' => 'Т', 'U' => 'У',
-        'F' => 'Ф', 'H' => 'Х', 'W' => 'В', 'X' => 'КС',
-    ]);
-    return $word;
-}
-
-/**
- * Normalize query: fold ё→е, transliterate latin words, trim, collapse whitespace.
- * Latin words of 3+ chars are expanded to (original | transliterated) so that
- * both English ("BASIC") and transliterated Russian ("spectrum"→"спектрум") match.
- * Short latin words (1-2 chars like "ZX") are kept as-is.
+ * Normalize query: fold ё→е, trim, collapse whitespace.
+ * Multi-word Latin-only queries become a phrase ("The Royal Archer") for tighter ranking.
+ * No Latin→Cyrillic transliteration.
  */
 function normalize_query(string $q): string
 {
     $q = str_replace(['ё', 'Ё'], ['е', 'Е'], $q);
-    // Per-word: expand latin 3+ char words to (original | transliterated)
-    $q = preg_replace_callback('/\b([a-zA-Z]{3,})\b/', function ($m) {
-        $original = $m[1];
-        $transliterated = transliterate_word($original);
-        if ($transliterated === $original) {
-            return $original;
-        }
-        if (getenv('LOG_LEVEL') === 'DEBUG') {
-            error_log("[FIX] transliterate: '{$original}' → '({$original} | {$transliterated})'");
-        }
-        return '(' . $original . ' | ' . $transliterated . ')';
-    }, $q);
-    $q = preg_replace('/\s+/u', ' ', trim($q));
+    $q = preg_replace('/\s+/u', ' ', trim($q)) ?? trim($q);
+    if ($q === '') {
+        return '';
+    }
+
+    $latinWords = preg_match_all('/\b[a-zA-Z]{3,}\b/', $q) ?: 0;
+    $hasCyrillic = (bool) preg_match('/\p{Cyrillic}/u', $q);
+    if (!$hasCyrillic && $latinWords >= 2) {
+        return '"' . str_replace('"', '', $q) . '"';
+    }
+
     return $q;
 }
 

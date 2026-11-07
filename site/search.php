@@ -4,6 +4,7 @@ require 'init.inc'; // MARKER_12345
 require_once __DIR__ . '/includes/ezine_slugs.php';
 require_once __DIR__ . '/includes/books_public.php';
 require_once __DIR__ . '/includes/authors_slugs.php';
+require_once __DIR__ . '/includes/article_search_text.php';
 
 function search_ui_is_new(): bool
 {
@@ -204,13 +205,8 @@ else {
         $id = $id1;
         
         $inf[$n]['id'] = $id;
-        $inf[$n]['title'] = title_plain(cutString((string) $result["matches"][$id]['attrs']['title'], 64));
-
-        if (mb_substr($inf[$n]['title'], -1, 1) == ".") {
-
-        //  $inf[$n]['title'] = mb_substr($inf[$n]['title'], 0, mb_strlen($inf[$n]['title'])-1);
-
-        }
+        $titleAttr = title_plain(cutString((string) $result["matches"][$id]['attrs']['title'], 64));
+        $inf[$n]['title'] = $titleAttr;
 
         $inf[$n]['name'] = title_plain((string) $result["matches"][$id]['attrs']['name']);
         $inf[$n]['id1'] = intval($result["matches"][$id]['attrs']['id1']);
@@ -224,6 +220,15 @@ else {
         $inf[$n]['img_format'] = 'png';
 
         if ($inf[$n]['type'] === 1) {
+          // Manticore stores RU title only; EN UI needs title_eng.
+          if ($isEngPage && $inf[$n]['id1'] > 0) {
+            $zTitle = db_select($db, 'SELECT title_eng FROM articles WHERE id=? LIMIT 1', 'i', $inf[$n]['id1']);
+            $titleRow = $zTitle ? $zTitle->fetch_assoc() : null;
+            $titleEng = title_plain(cutString((string) ($titleRow['title_eng'] ?? ''), 64));
+            if ($titleEng !== '') {
+              $inf[$n]['title'] = $titleEng;
+            }
+          }
           // Manticore img is "id_press/article_id" — not a screen id. Resolve cover by issue.
           $pressId = $inf[$n]['id3'];
           $issueId = $inf[$n]['id2'];
@@ -281,7 +286,7 @@ else {
 
         $inf[$n]['date'] = $d ? date("d ".$months[date("m", $d)]." Y", $d ) : "";
 
-        $docs[] = search_source_doc_from_match($result["matches"][$id]['attrs'], $inf[$n]['type']);
+        $docs[] = search_source_doc_from_match($result["matches"][$id]['attrs'], $inf[$n]['type'], $isEngPage);
 
         $n++;
      }
@@ -409,43 +414,51 @@ function count_pages($result) {
 
 function first_fix($entry) {
 
-    $entry = trim((string)($entry ?? ''));
+    $entry = trim((string) ($entry ?? ''));
     if (mb_strlen($entry) < 3) {
         return $entry;
     }
-    $padded = " " . $entry;
-    $b = mb_strpos($entry, "<b");
+    // Drop leading magazine rules / ASCII separators (-------------).
+    $entry = preg_replace('/^(?:[\s\-_=~*#.]{3,}\R)+/u', '', $entry) ?? $entry;
+    $entry = preg_replace('/^[\-_=~*#.]{3,}\s*/u', '', $entry) ?? $entry;
+    $entry = trim($entry);
+
+    $padded = ' ' . $entry;
+    $b = mb_strpos($entry, '<b');
     if ($b === false) {
-      $b = mb_strpos($entry, "<mark");
+        $b = mb_strpos($entry, '<mark');
     }
-    $f1 = mb_strlen($padded) > 4 ? mb_strpos($padded, ". ", 4) : false;
-    $f2 = mb_strpos($padded, "!", 0);
-    $f3 = mb_strpos($padded, "?", 0);
-    $f4 = mb_strpos($padded, ",", 0);
-    $f5 = mb_strpos($padded, "-", 0);
-    $f6 = mb_strpos($padded, ":", 0);
-    $f7 = mb_strpos($padded, ";", 0);
+    $f1 = mb_strlen($padded) > 4 ? mb_strpos($padded, '. ', 4) : false;
+    $f2 = mb_strpos($padded, '!', 0);
+    $f3 = mb_strpos($padded, '?', 0);
+    $f4 = mb_strpos($padded, ',', 0);
+    // Do not treat raw "-" as a boundary — peels ASCII rules one dash at a time.
+    $f6 = mb_strpos($padded, ':', 0);
+    $f7 = mb_strpos($padded, ';', 0);
 
-    if ($f2 and $f2 < $f1) {$f1 = $f2;}
-    if ($f3 and $f3 < $f1) {$f1 = $f3;}
-    if ($f4 and $f4 < $f1) {$f1 = $f4;}
-    if ($f5 and $f5 < $f1) {$f1 = $f5;}
-    if ($f6 and $f6 < $f1) {$f1 = $f6;}
-    if ($f7 and $f7 < $f1) {$f1 = $f7;}
-
-    if ($f1 and $f1 < $b) {
-
-        $entry = mb_substr($entry, $f1+1);
-        
+    if ($f2 && ($f1 === false || $f2 < $f1)) {
+        $f1 = $f2;
     }
-    elseif ($b == 5 or mb_substr($entry, 0,4) == "... ") {
+    if ($f3 && ($f1 === false || $f3 < $f1)) {
+        $f1 = $f3;
+    }
+    if ($f4 && ($f1 === false || $f4 < $f1)) {
+        $f1 = $f4;
+    }
+    if ($f6 && ($f1 === false || $f6 < $f1)) {
+        $f1 = $f6;
+    }
+    if ($f7 && ($f1 === false || $f7 < $f1)) {
+        $f1 = $f7;
+    }
 
+    if ($f1 !== false && $b !== false && $f1 < $b) {
+        $entry = mb_substr($entry, $f1 + 1);
+    } elseif ($b === 5 || mb_substr($entry, 0, 4) === '... ') {
         $entry = mb_substr($entry, 4);
-
     }
 
     return trim($entry);
-
 }
 
 function get_sort_mode($s) {
@@ -475,14 +488,46 @@ function cutString($string, $maxlen) {
     ;
 }
 
-function search_source_doc_from_match(array $attrs, int $type): string {
+function search_source_doc_from_match(array $attrs, int $type, bool $isEng = false): string {
     $id1 = isset($attrs['id1']) ? (int) $attrs['id1'] : 0;
     if ($id1 <= 0) {
         return '';
     }
 
-    $key = ($type === 1) ? 'articles' : 'chapters';
+    // Articles: language-specific cleaned body (not bilingual search_text blob).
+    if ($type === 1) {
+        global $db;
+        if (isset($db) && $db instanceof mysqli) {
+            $stmt = $db->prepare(
+                'SELECT id, text_ru, text_en, text_type, text_type_ru, text_type_en '
+                . 'FROM articles WHERE id=? LIMIT 1'
+            );
+            if ($stmt) {
+                $stmt->bind_param('i', $id1);
+                $stmt->execute();
+                $row = $stmt->get_result()->fetch_assoc();
+                $stmt->close();
+                if (is_array($row)) {
+                    $row['id'] = $id1;
+                    [$raw, $isMd] = article_search_resolve_lang_body($row, $isEng);
+                    if ($raw === '' && $isEng) {
+                        [$raw, $isMd] = article_search_resolve_lang_body($row, false);
+                    }
+                    if ($raw !== '') {
+                        return article_search_prepare_source($raw, $isMd);
+                    }
+                }
+            }
+        }
+    }
+
+    $key = ($type === 1)
+        ? ($isEng ? 'articles_eng' : 'articles')
+        : 'chapters';
     $path = zx_storage_path($key, (string) $id1);
+    if (!is_readable($path) && $type === 1 && $isEng) {
+        $path = zx_storage_path('articles', (string) $id1);
+    }
     if (!is_readable($path)) {
         error_log('[search] WARN missing source doc key=' . $key . ' id=' . $id1 . ' path=' . $path);
         return '';
@@ -493,7 +538,8 @@ function search_source_doc_from_match(array $attrs, int $type): string {
         return '';
     }
 
-    return plain_text_decode_entities(strip_tags($raw));
+    $plain = plain_text_decode_entities(strip_tags($raw));
+    return article_search_prepare_source($plain, false);
 }
 
 
