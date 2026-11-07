@@ -3147,7 +3147,7 @@ body.smn-modal-open {
 }
 .smn-article-text.article-text-md {
 	font-family: var(--smn-md);
-	font-size: 17px;
+	font-size: 15px;
 	white-space: normal;
 	line-height: 1.5;
 	text-align: justify;
