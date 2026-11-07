@@ -129,6 +129,7 @@ while ($row = (is_object($z) && method_exists($z, 'fetch_assoc') ? $z->fetch_ass
 	$result = screen_convert_existing_to_webp($id, $format !== '' ? $format : null, $deleteSource);
 	if (!empty($result['ok'])) {
 		db_exec($db, 'UPDATE screens SET format=? WHERE id=? LIMIT 1', 'si', 'webp', $id);
+		screen_after_saved_webp($db, $id, $result);
 		if (!empty($result['skipped'])) {
 			$skipped++;
 			fwrite(STDOUT, "#{$id}: skipped (webp present), format set\n");

@@ -812,6 +812,8 @@ CREATE TABLE `screens` (
   `type` int NOT NULL DEFAULT '0',
   `date` int NOT NULL,
   `format` varchar(4) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `width` smallint unsigned DEFAULT NULL,
+  `height` smallint unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `id_press` (`id_press`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2469 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

@@ -96,7 +96,7 @@ function ezines_press_splash_map(mysqli $db): array
 	$map = [];
 	$z = db_select(
 		$db,
-		'SELECT s.id_press, s.id, s.format, s.type'
+		'SELECT s.id_press, s.id, s.format, s.type, s.width, s.height'
 		. ' FROM screens s'
 		. ' INNER JOIN issue i ON i.id = s.id_issue'
 		. ' ORDER BY s.id_press ASC,'
@@ -120,6 +120,8 @@ function ezines_press_splash_map(mysqli $db): array
 		$map[$pressId] = [
 			'id' => $screenId,
 			'format' => $format,
+			'width' => (int) ($row['width'] ?? 0),
+			'height' => (int) ($row['height'] ?? 0),
 			'src' => '/screens/1/' . $screenId . '.' . $format,
 		];
 	}

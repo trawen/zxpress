@@ -45,7 +45,7 @@ function screen_apply_public_format(array &$row, string $idKey = 'id', string $f
 /**
  * Save upload as lossless RGB WebP (no alpha). Accepts png/jpeg/webp.
  *
- * @return array{ok:bool,error?:string}
+ * @return array{ok:bool,error?:string,width?:int,height?:int}
  */
 function screen_save_upload_as_webp(string $tmpPath, int $screenId): array
 {
@@ -111,7 +111,45 @@ function screen_save_upload_as_webp(string $tmpPath, int $screenId): array
 		return ['ok' => false, 'error' => 'не удалось сохранить WebP'];
 	}
 
-	return ['ok' => true];
+	return ['ok' => true, 'width' => $w, 'height' => $h];
+}
+
+/**
+ * @return array{0:int,1:int}
+ */
+function screen_probe_file_dimensions(string $path): array
+{
+	if ($path === '' || !is_file($path)) {
+		return [0, 0];
+	}
+	$info = @getimagesize($path);
+	if (!$info) {
+		return [0, 0];
+	}
+
+	return [(int) ($info[0] ?? 0), (int) ($info[1] ?? 0)];
+}
+
+function screen_set_dimensions(mysqli $db, int $screenId, int $width, int $height): bool
+{
+	if ($screenId <= 0 || $width <= 0 || $height <= 0) {
+		return false;
+	}
+
+	return (bool) db_exec($db, 'UPDATE screens SET width=?, height=? WHERE id=? LIMIT 1', 'iii', $width, $height, $screenId);
+}
+
+/** Persist width/height after a successful WebP write (upload / replace). */
+function screen_after_saved_webp(mysqli $db, int $screenId, array $saveResult): void
+{
+	if (empty($saveResult['ok'])) {
+		return;
+	}
+	$w = (int) ($saveResult['width'] ?? 0);
+	$h = (int) ($saveResult['height'] ?? 0);
+	if ($w > 0 && $h > 0) {
+		screen_set_dimensions($db, $screenId, $w, $h);
+	}
 }
 
 /**
@@ -136,8 +174,9 @@ function screen_convert_existing_to_webp(int $screenId, ?string $format = null, 
 				}
 			}
 		}
+		[$pw, $ph] = screen_probe_file_dimensions($webpPath);
 
-		return ['ok' => true, 'skipped' => true];
+		return ['ok' => true, 'skipped' => true, 'width' => $pw, 'height' => $ph];
 	}
 
 	$srcPath = '';
@@ -160,7 +199,9 @@ function screen_convert_existing_to_webp(int $screenId, ?string $format = null, 
 	}
 
 	if ($srcExt === 'webp' && $srcPath === $webpPath) {
-		return ['ok' => true, 'skipped' => true];
+		[$pw, $ph] = screen_probe_file_dimensions($webpPath);
+
+		return ['ok' => true, 'skipped' => true, 'width' => $pw, 'height' => $ph];
 	}
 
 	$converted = screen_save_upload_as_webp($srcPath, $screenId);
@@ -172,7 +213,11 @@ function screen_convert_existing_to_webp(int $screenId, ?string $format = null, 
 		@unlink($srcPath);
 	}
 
-	return ['ok' => true];
+	return [
+		'ok' => true,
+		'width' => (int) ($converted['width'] ?? 0),
+		'height' => (int) ($converted['height'] ?? 0),
+	];
 }
 
 function screen_delete_files(int $screenId, ?string $format = null): void
@@ -204,36 +249,31 @@ function screen_gallery_thumb_height(): int
 }
 
 /**
- * CSS class for 4:3 (320×240, 256×192) vs letterboxed (e.g. 256×128) inside the frame.
+ * CSS class for thumb framing inside 160×120 + 1px line:
+ * — 320×240 emu → full bleed; 256×192 SCREEN$ → 128×96 + black pad; other → letterbox.
  */
 function screen_gallery_frame_class(int $w, int $h): string
 {
 	if ($w <= 0 || $h <= 0) {
 		return '';
 	}
-	// 4:3 — half-scale emu / Speccy shots fill 160×120.
+	// Turbo80 / bordered emu capture (2× display size).
+	if ($w >= 300 && $h >= 220) {
+		return 'smn-gallery-img--frame-emu';
+	}
+	// Native Spectrum bitmap (or exact half-scale export).
+	if (($w === 256 && $h === 192) || ($w === 128 && $h === 96)) {
+		return 'smn-gallery-img--frame-spectrum';
+	}
 	if (abs($w * 3 - $h * 4) <= max(4, (int) round($w * 0.02))) {
-		return 'smn-gallery-img--frame-4x3';
+		if ($w > 280) {
+			return 'smn-gallery-img--frame-emu';
+		}
+
+		return 'smn-gallery-img--frame-spectrum';
 	}
 
 	return 'smn-gallery-img--frame-letterbox';
-}
-
-function screen_gallery_frame_class_for_id(int $screenId): string
-{
-	if ($screenId <= 0) {
-		return '';
-	}
-	$path = screen_storage_path($screenId, 'webp');
-	if (!is_file($path)) {
-		return '';
-	}
-	$info = @getimagesize($path);
-	if (!$info) {
-		return '';
-	}
-
-	return screen_gallery_frame_class((int) ($info[0] ?? 0), (int) ($info[1] ?? 0));
 }
 
 /**
@@ -242,8 +282,9 @@ function screen_gallery_frame_class_for_id(int $screenId): string
 function screen_enrich_gallery_thumb(array &$row, string $idKey = 'id'): void
 {
 	screen_apply_public_format($row, $idKey, 'format');
-	$screenId = (int) ($row[$idKey] ?? 0);
-	$row['gallery_frame_class'] = screen_gallery_frame_class_for_id($screenId);
+	$w = (int) ($row['width'] ?? 0);
+	$h = (int) ($row['height'] ?? 0);
+	$row['gallery_frame_class'] = screen_gallery_frame_class($w, $h);
 	$row['gallery_img_width'] = screen_gallery_thumb_width();
 	$row['gallery_img_height'] = screen_gallery_thumb_height();
 }

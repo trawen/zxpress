@@ -1583,8 +1583,22 @@ a.smn-letter-meta-author:hover {
 	box-sizing: border-box;
 }
 
-/* 320×240, 256×192 — fills 160×120 frame */
-:is(.smn-gallery-img, .smn-press-issue-screen-img).smn-gallery-img--frame-4x3 {
+/* 320×240 emu — bitmap fills 160×120 */
+:is(.smn-gallery-img, .smn-press-issue-screen-img).smn-gallery-img--frame-emu {
+	width: 160px;
+	height: 120px;
+	padding: 0;
+	object-fit: fill;
+	object-position: center center;
+	background: #000;
+}
+
+/* 256×192 SCREEN$ — 128×96 picture + black margin inside 160×120 frame */
+:is(.smn-gallery-img, .smn-press-issue-screen-img).smn-gallery-img--frame-spectrum {
+	box-sizing: border-box;
+	width: 160px;
+	height: 120px;
+	padding: 11px 15px;
 	object-fit: fill;
 	object-position: center center;
 	background: #000;
@@ -1592,6 +1606,7 @@ a.smn-letter-meta-author:hover {
 
 /* e.g. 256×128 — black letterbox inside 160×120 */
 :is(.smn-gallery-img, .smn-press-issue-screen-img).smn-gallery-img--frame-letterbox {
+	padding: 0;
 	object-fit: contain;
 	object-position: center center;
 	background: #000;
@@ -2363,6 +2378,17 @@ body.smn-modal-open {
 .smn-ezine-index-splash .smn-gallery-img {
 	width: 80px;
 	height: 60px;
+}
+.smn-ezine-index-splash .smn-gallery-img--frame-spectrum {
+	box-sizing: border-box;
+	width: 80px;
+	height: 60px;
+	padding: 5px 7px;
+}
+.smn-ezine-index-splash .smn-gallery-img--frame-emu {
+	width: 80px;
+	height: 60px;
+	padding: 0;
 }
 .smn-ezine-index-splash .smn-gallery-img:hover {
 	transform: scale(2);

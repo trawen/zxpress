@@ -120,6 +120,9 @@ function ascr_process_uploads(mysqli $db, int $pressId, int $issueId, int $type,
 		}
 		$screenId = (int) mysqli_insert_id($db);
 		$converted = screen_save_upload_as_webp($tmp, $screenId);
+		if (!empty($converted['ok'])) {
+			screen_after_saved_webp($db, $screenId, $converted);
+		}
 		if (empty($converted['ok'])) {
 			db_exec($db, 'DELETE FROM screens WHERE id=? LIMIT 1', 'i', $screenId);
 			screen_after_deleted($db, $screenId);
