@@ -192,6 +192,62 @@ function screen_delete_files(int $screenId, ?string $format = null): void
 	}
 }
 
+/** Display frame for gallery thumbs: 160×120 px + 1px line (see .smn-gallery-img). */
+function screen_gallery_thumb_width(): int
+{
+	return 160;
+}
+
+function screen_gallery_thumb_height(): int
+{
+	return 120;
+}
+
+/**
+ * CSS class for 4:3 (320×240, 256×192) vs letterboxed (e.g. 256×128) inside the frame.
+ */
+function screen_gallery_frame_class(int $w, int $h): string
+{
+	if ($w <= 0 || $h <= 0) {
+		return '';
+	}
+	// 4:3 — half-scale emu / Speccy shots fill 160×120.
+	if (abs($w * 3 - $h * 4) <= max(4, (int) round($w * 0.02))) {
+		return 'smn-gallery-img--frame-4x3';
+	}
+
+	return 'smn-gallery-img--frame-letterbox';
+}
+
+function screen_gallery_frame_class_for_id(int $screenId): string
+{
+	if ($screenId <= 0) {
+		return '';
+	}
+	$path = screen_storage_path($screenId, 'webp');
+	if (!is_file($path)) {
+		return '';
+	}
+	$info = @getimagesize($path);
+	if (!$info) {
+		return '';
+	}
+
+	return screen_gallery_frame_class((int) ($info[0] ?? 0), (int) ($info[1] ?? 0));
+}
+
+/**
+ * @param array<string,mixed> $row
+ */
+function screen_enrich_gallery_thumb(array &$row, string $idKey = 'id'): void
+{
+	screen_apply_public_format($row, $idKey, 'format');
+	$screenId = (int) ($row[$idKey] ?? 0);
+	$row['gallery_frame_class'] = screen_gallery_frame_class_for_id($screenId);
+	$row['gallery_img_width'] = screen_gallery_thumb_width();
+	$row['gallery_img_height'] = screen_gallery_thumb_height();
+}
+
 /**
  * Thumbnail on the press issues list — only from this issue's screens; null if none.
  *
@@ -211,7 +267,7 @@ function issue_press_list_cover(array $screens): ?array
 			$pick = $row;
 		}
 	}
-	screen_apply_public_format($pick);
+	screen_enrich_gallery_thumb($pick);
 
 	return $pick;
 }

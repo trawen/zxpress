@@ -1567,11 +1567,12 @@ a.smn-letter-meta-author:hover {
 
 .smn-gallery-img {
 	display: block;
-	width: 128px; /* 50% of Spectrum 256×192 */
-	height: 96px;
+	width: 160px;
+	height: 120px;
 	object-fit: contain;
-	object-position: left top;
-	background: #1a1814;
+	object-position: center center;
+	background: #000;
+	border: 1px solid var(--smn-line);
 	border-radius: 2px;
 	outline: none;
 	image-rendering: auto;
@@ -1579,7 +1580,21 @@ a.smn-letter-meta-author:hover {
 	transform-origin: center center;
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
 	will-change: transform;
-	box-sizing: content-box;
+	box-sizing: border-box;
+}
+
+/* 320×240, 256×192 — fills 160×120 frame */
+:is(.smn-gallery-img, .smn-press-issue-screen-img).smn-gallery-img--frame-4x3 {
+	object-fit: fill;
+	object-position: center center;
+	background: #000;
+}
+
+/* e.g. 256×128 — black letterbox inside 160×120 */
+:is(.smn-gallery-img, .smn-press-issue-screen-img).smn-gallery-img--frame-letterbox {
+	object-fit: contain;
+	object-position: center center;
+	background: #000;
 }
 
 .smn-gallery-img:hover {
@@ -1588,7 +1603,7 @@ a.smn-letter-meta-author:hover {
 }
 
 .smn-gallery-caption {
-	max-width: 128px;
+	max-width: 160px;
 	font-family: var(--smn-sans);
 	font-size: 12px;
 	font-weight: 600;
@@ -1598,11 +1613,12 @@ a.smn-letter-meta-author:hover {
 }
 .smn-gallery-img--empty {
 	display: block;
-	width: 128px;
-	height: 96px;
+	width: 160px;
+	height: 120px;
 	background: #1a1814;
+	border: 1px solid var(--smn-line);
 	border-radius: 2px;
-	box-sizing: content-box;
+	box-sizing: border-box;
 }
 .smn-press-issues {
 	margin-top: 8px;
@@ -2174,20 +2190,18 @@ body.smn-modal-open {
 }
 .smn-press-issue-screen-img {
 	display: block;
-	width: 128px;
-	height: 96px;
+	width: 160px;
+	height: 120px;
 	object-fit: contain;
-	object-position: left top;
-	background: #1a1814;
-	border-style: solid;
-	border-color: #000;
-	border-width: 5px 7px;
+	object-position: center center;
+	background: #000;
+	border: 1px solid var(--smn-line);
 	border-radius: 2px;
 	image-rendering: auto;
 	image-rendering: smooth;
 	transform-origin: center center;
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
-	box-sizing: content-box;
+	box-sizing: border-box;
 }
 .smn-press-issue-screen-img:hover {
 	transform: scale(2);
@@ -2345,17 +2359,13 @@ body.smn-modal-open {
 	line-height: 0;
 	position: relative;
 	z-index: 1;
-	/* Same Spectrum thumb as gallery: 128×96 → scale(2) = 256×192 */
 }
 .smn-ezine-index-splash .smn-gallery-img {
-	/* keep gallery hover zoom; slightly denser in the index */
-	width: 64px;
-	height: 48px;
-	border-width: 3px 4px;
+	width: 80px;
+	height: 60px;
 }
 .smn-ezine-index-splash .smn-gallery-img:hover {
-	/* 64×48 → 256×192 */
-	transform: scale(4);
+	transform: scale(2);
 }
 .smn-ezine-index-name {
 	position: relative;

@@ -100,6 +100,11 @@ while ($z && ($t = mysqli_fetch_array($z))) {
 		. ($isEng ? '&lng=eng' : '')
 		. '#' . (string) ($t['gallery_issue_title'] ?? '');
 	$t['gallery_img_src'] = screen_public_url((int) $t['gallery_screen_id']);
+	$thumbMeta = ['id' => (int) $t['gallery_screen_id'], 'format' => (string) ($t['gallery_format'] ?? 'webp')];
+	screen_enrich_gallery_thumb($thumbMeta);
+	$t['gallery_frame_class'] = (string) ($thumbMeta['gallery_frame_class'] ?? '');
+	$t['gallery_img_width'] = (int) ($thumbMeta['gallery_img_width'] ?? screen_gallery_thumb_width());
+	$t['gallery_img_height'] = (int) ($thumbMeta['gallery_img_height'] ?? screen_gallery_thumb_height());
 	$c[] = $t;
 }
 $smarty->assign('screens', $c);

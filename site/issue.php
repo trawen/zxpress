@@ -155,11 +155,16 @@ if ($slugRoute) {
 
 $c = [];
 $screensByIssue = [];
-$stmt = mysqli_prepare($db, "SELECT * FROM issue, screens WHERE issue.id_press=? AND screens.id_issue=issue.id ORDER BY issue.sort_order DESC, screens.type ASC");
+$stmt = mysqli_prepare(
+	$db,
+	'SELECT screens.*, issue.id AS id_issue FROM issue INNER JOIN screens ON screens.id_issue = issue.id '
+	. 'WHERE issue.id_press=? ORDER BY issue.sort_order DESC, screens.type ASC'
+);
 mysqli_stmt_bind_param($stmt, "i", $id);
 mysqli_stmt_execute($stmt);
 $z = mysqli_stmt_get_result($stmt);
 while ($t = mysqli_fetch_array($z)) {
+	screen_enrich_gallery_thumb($t);
 	$c[] = $t;
 	$issueId = (int) ($t['id_issue'] ?? 0);
 	if ($issueId > 0) {

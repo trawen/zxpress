@@ -11,6 +11,7 @@ require_once __DIR__ . '/includes/authors_slugs.php';
 require_once __DIR__ . '/includes/comments_scope.php';
 require_once __DIR__ . '/includes/article_text_render.php';
 require_once __DIR__ . '/includes/article_jsonld.php';
+require_once __DIR__ . '/includes/screen_images.php';
 
 function article_public_meta_description(array $article, ?string $lng): string
 {
@@ -202,6 +203,10 @@ if ($screens == NULL) {
 	mysqli_stmt_execute($stmt);
 	$z = mysqli_stmt_get_result($stmt);
 	$screens = mysqli_fetch_array($z);
+}
+
+if (is_array($screens)) {
+	screen_enrich_gallery_thumb($screens);
 }
 
 $smarty->assign('screens', $screens);

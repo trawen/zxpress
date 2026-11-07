@@ -257,11 +257,11 @@
 {if $catalog[n].splash}
 						<span class="smn-ezine-index-splash">
 							<img
-								class="smn-gallery-img"
+								class="smn-gallery-img{if $catalog[n].splash.gallery_frame_class} {$catalog[n].splash.gallery_frame_class}{/if}"
 								src="{$host}screens/1/{$catalog[n].splash.id}.{$catalog[n].splash.format}"
 								alt=""
-								width="256"
-								height="192"
+								width="80"
+								height="60"
 								loading="lazy"
 								decoding="async"
 							>

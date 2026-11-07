@@ -81,11 +81,11 @@
 					<a class="smn-gallery-card" href="{$shot.gallery_issue_url}">
 						<figure class="smn-gallery-figure">
 							<img
-								class="smn-gallery-img"
+								class="smn-gallery-img{if $shot.gallery_frame_class} {$shot.gallery_frame_class}{/if}"
 								src="{$shot.gallery_img_src}"
 								alt="{$shot.gallery_alt}"
-								width="256"
-								height="192"
+								width="{$shot.gallery_img_width|default:160}"
+								height="{$shot.gallery_img_height|default:120}"
 								loading="lazy"
 								decoding="async"
 							>

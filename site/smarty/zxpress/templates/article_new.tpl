@@ -127,11 +127,11 @@
 					{if $screens.id}
 						<div class="smn-article-cover">
 							<img
-								class="smn-gallery-img"
+								class="smn-gallery-img{if $screens.gallery_frame_class} {$screens.gallery_frame_class}{/if}"
 								src="{$host}screens/1/{$screens.id}.{$screens.format}"
 								alt="{$press.title_plain} #{$issue.title}"
-								width="256"
-								height="192"
+								width="{$screens.gallery_img_width|default:160}"
+								height="{$screens.gallery_img_height|default:120}"
 								loading="lazy"
 								decoding="async"
 							>

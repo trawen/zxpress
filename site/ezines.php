@@ -3,6 +3,7 @@ require 'init.inc';
 require_once __DIR__ . '/includes/ezine_slugs.php';
 require_once __DIR__ . '/includes/letters_slugs.php';
 require_once __DIR__ . '/includes/authors_slugs.php';
+require_once __DIR__ . '/includes/screen_images.php';
 
 function ezines_ui_is_new(): bool
 {
@@ -287,6 +288,9 @@ while ($z && ($t = mysqli_fetch_array($z))) {
 	$t['public_url'] = ezn_url_press($t, $isEng);
 	$pressId = (int) ($t['id'] ?? 0);
 	$t['splash'] = $splashMap[$pressId] ?? null;
+	if (is_array($t['splash']) && (int) ($t['splash']['id'] ?? 0) > 0) {
+		screen_enrich_gallery_thumb($t['splash']);
+	}
 	$s = strtoupper(mb_substr($t['title_plain'], 0, 1, 'UTF-8'));
 	$isAlphaLetter = ($s < '0' || $s > '9');
 	if ($isAlphaLetter && (!$f || $a !== $s)) {

@@ -16,15 +16,13 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			width: 128px;
-			height: 96px;
+			width: 160px;
+			height: 120px;
 			background: #f2df56;
 			color: #a41e00;
-			border-style: solid;
-			border-color: #f2df56;
-			border-width: 5px 7px;
+			border: 1px solid var(--smn-line);
 			border-radius: 2px;
-			box-sizing: content-box;
+			box-sizing: border-box;
 			text-align: center;
 			overflow: hidden;
 		}
@@ -162,11 +160,11 @@
 {foreach from=$current_issue.screens item=shot}
 					<li class="smn-press-issue-screen">
 						<img
-							class="smn-press-issue-screen-img"
+							class="smn-press-issue-screen-img{if $shot.gallery_frame_class} {$shot.gallery_frame_class}{/if}"
 							src="{$host}screens/1/{$shot.id}.{$shot.format}"
 							alt="{$press.title_plain} #{$current_issue.title}"
-							width="256"
-							height="192"
+							width="{$shot.gallery_img_width|default:160}"
+							height="{$shot.gallery_img_height|default:120}"
 							loading="eager"
 							decoding="async"
 						>
@@ -280,11 +278,11 @@
 							<span class="smn-press-issue-num">#{$iss.title}</span>
 {if $iss.cover && !$iss.missing}
 							<img
-								class="smn-gallery-img"
+								class="smn-gallery-img{if $iss.cover.gallery_frame_class} {$iss.cover.gallery_frame_class}{/if}"
 								src="{$host}screens/1/{$iss.cover.id}.{$iss.cover.format}"
 								alt="{$press.title_plain} #{$iss.title}"
-								width="256"
-								height="192"
+								width="{$iss.cover.gallery_img_width|default:160}"
+								height="{$iss.cover.gallery_img_height|default:120}"
 								loading="lazy"
 								decoding="async"
 							>
