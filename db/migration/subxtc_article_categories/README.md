@@ -24,17 +24,16 @@ node db/migration/subxtc_article_categories/build_sql.mjs   # пересобра
 
 Источник текстов: `site/cli/imports/subxtc{00..07}_i18n/*.json`.
 
-## Применение
+## Применение (прод)
+
+На сервере данные накатываются **`db/migrate/`** при обычном деплое:
+
+- `20261107213000_ezine_article_categories.sql` — таблица (IF NOT EXISTS)
+- `20261107213100_subxtc_article_categories_data.sql` — привязки SE#00–#07
 
 ```bash
-python3 db/migration/subxtc_article_categories/apply.py
+./deploy/scripts/remote-update.sh --fast
 ```
 
-На сервере после `git pull`:
-
-```bash
-cd /home/dockeruser/zxpress
-python3 db/migration/subxtc_article_categories/apply.py
-```
-
-Повторный `apply` идемпотентен (`INSERT IGNORE`).
+Локально / вручную: `python3 db/migration/subxtc_article_categories/apply.py` или пересборка
+`node db/migration/subxtc_article_categories/build_sql.mjs` → скопировать в `db/migrate/`.

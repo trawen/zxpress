@@ -342,7 +342,9 @@ function buildSql(assignments) {
     lines.push("FROM articles a");
     lines.push("INNER JOIN issue i ON i.id = a.id_issue");
     lines.push(`WHERE i.id_press = ${PRESS_ID}`);
-    lines.push(`  AND i.title = ${sqlQuote(a.issue)}`);
+    lines.push(
+      `  AND (i.title = ${sqlQuote(a.issue)} OR LPAD(i.title, 2, '0') = ${sqlQuote(a.issue)} OR i.slug_ru = ${sqlQuote(a.issue)} OR i.slug_en = ${sqlQuote(a.issue)})`
+    );
     lines.push(`  AND a.number = ${a.number};`);
     lines.push("");
   }

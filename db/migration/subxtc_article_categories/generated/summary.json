@@ -1,9 +1,6 @@
 {
-  "generated_at": "2026-11-07T15:25:17.216Z",
+  "generated_at": "2026-11-07T22:04:56.318Z",
   "press_id": 213,
-  "total_manifest": 186,
-  "classified": 186,
-  "ok": 185,
-  "fail": 1,
-  "model": "gemini-3.1-flash-lite"
+  "articles": 186,
+  "unique_categories": 32
 }
