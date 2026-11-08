@@ -19,7 +19,12 @@ $res = $zip->open($filename, ZipArchive::CREATE);
 if ($res === TRUE) {
 	chmod($filename, 0644);
 
-	$s = db_select($db, "SELECT * FROM issue,files WHERE id_press=? AND id_issue=issue.id", "i", $id);
+	$s = db_select(
+		$db,
+		'SELECT files.* FROM issue INNER JOIN files ON files.id_issue=issue.id WHERE issue.id_press=?',
+		'i',
+		$id
+	);
 	while ($s && ($t = mysqli_fetch_array($s))) {
 
 		$safeName = basename((string)($t['name'] ?? ''));
