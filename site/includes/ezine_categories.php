@@ -300,19 +300,8 @@ function ec_article_related_from_same_category(mysqli $db, int $articleId, ?stri
     $stmt->bind_param('iii', $articleId, $leafId, $limit);
     $stmt->execute();
     $res = $stmt->get_result();
-    $rows = [];
-    while ($res && ($t = $res->fetch_assoc())) {
-        $rows[] = $t;
-    }
-    $stmt->close();
-
-    if (!$isEng) {
-        $rows = ezn_filter_en_toc_variants_for_ru($rows, $articleId);
-        // Related list is capped; refill was already LIMIT'd — keep remaining.
-    }
-
     $articles = [];
-    foreach ($rows as $t) {
+    while ($res && ($t = $res->fetch_assoc())) {
         $pressRow = [
             'id' => (int) ($t['id_press'] ?? 0),
             'title' => (string) ($t['press_title'] ?? ''),
@@ -335,6 +324,7 @@ function ec_article_related_from_same_category(mysqli $db, int $articleId, ?stri
             'public_url' => ezn_url_article($pressRow, $issueRow, $t, $isEng),
         ];
     }
+    $stmt->close();
 
     return ['category' => $category, 'articles' => $articles];
 }
