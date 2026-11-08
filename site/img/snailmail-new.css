@@ -2258,9 +2258,10 @@ body.smn-modal-open {
 .smn-press-article span {
 	color: var(--smn-ink);
 	text-decoration: none;
-	position: relative;
 	padding-bottom: 2px;
-	transition: color 0.25s ease;
+	/* inset shadow underline — no ::after hit-target (scaleX flicker) */
+	box-shadow: inset 0 -2px 0 0 transparent;
+	transition: color 0.25s ease, box-shadow 0.25s ease;
 	min-width: 0;
 	max-width: 100%;
 	width: max-content;
@@ -2273,32 +2274,14 @@ body.smn-modal-open {
 .smn-press-article a {
 	cursor: pointer;
 }
-.smn-press-article a::after,
-.smn-press-article span::after {
-	content: "";
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	height: 2px;
-	background: var(--smn-accent);
-	transform: scaleX(0);
-	transform-origin: left;
-	transition: transform 0.25s ease;
-	pointer-events: none;
-}
 .smn-press-article a:hover {
 	color: var(--smn-accent);
-}
-.smn-press-article a:hover::after {
-	transform: scaleX(1);
+	box-shadow: inset 0 -2px 0 0 var(--smn-accent);
 }
 .smn-press-article span.is-active {
 	color: var(--smn-accent);
 	font-weight: 700;
-}
-.smn-press-article span.is-active::after {
-	transform: scaleX(1);
+	box-shadow: inset 0 -2px 0 0 var(--smn-accent);
 }
 
 .smn-ezine-index {
