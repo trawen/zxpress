@@ -481,6 +481,9 @@ if ($viewMode === 'issue') {
 		$art[$a] = $t2;
 		$a++;
 	}
+	if (!$isEng) {
+		$art = ezn_filter_en_toc_variants_for_ru(array_values($art));
+	}
 }
 $smarty->assign('articles', $art);
 

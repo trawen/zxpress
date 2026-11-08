@@ -386,10 +386,14 @@ while ($t = mysqli_fetch_array($z)) {
 	if ($id == $t['id']) {
 		$t['current'] = 1;
 	}
+	$t['id_issue'] = (int) $id_issue;
 	$t['title_html'] = article_title_list_html($t['title'] ?? '');
 	$t['title_eng_html'] = article_title_list_html($t['title_eng'] ?? '');
 	$t['public_url'] = ezn_url_article($pressRow, $issueRow, $t, $isEng);
 	$art[] = $t;
+}
+if (!$isEng) {
+	$art = ezn_filter_en_toc_variants_for_ru($art, (int) $id);
 }
 $smarty->assign('other_articles', $art);
 
