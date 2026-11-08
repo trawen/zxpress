@@ -1,0 +1,116 @@
+
+==========================================
+************************************
+*  ЧАСТЬ 11 — SPECTRUM В СЕТИ  *
+************************************
+
+Несколько интересных спектрумных сайтов,
+которые стоит посетить. Если найдёте ещё
+или у вас есть свой — напишите полный адрес
+и краткое описание содержимого.
+
+РАЗНОЕ
+http://www.nvg.unit.no:80/spectrum
+/search.html  ПОИСК ИГР
+http://www.nvg.unit.no/spectrum/jmg7
+/intro.html SPECTRUM PD
+http://www.earth.ox.ac.uk/~steve
+/spectrum/      SPECTRUM ADS
+
+ZX81
+http://www.maths.nott.ac.uk/personal/cpg
+/zx81/
+
+БЫСТРЫЕ ССЫЛКИ НА ДРУГИЕ SPECTRUM-САЙТЫ
+http://relcom.eu.net/zx/ZXLinks.html
+http://www.io.org/~diehl/speccy2.html
+
+СПИСКИ СНИМКОВ
+http://osiris.sund.ac.uk/~caЧaba
+/snaps.html
+
+ТОП-100 ИГР
+http://grelb.src.gla.ac.uk:8000/~webster
+
+БАЗА ДАННЫХ SPECTRUM
+http://www.catalog.com/sjr/www/ss/gamedbs
+(СПИСОК ЗАПИСЕЙ)
+ftp://ftp.nvg.unit.no/pub/sinclair/docs
+/games-database/ (СОБСТВЕННО ЗАПИСИ)
+
+МУЗЕЙ SPECTRUM
+http://relcom.eu.net/zx/
+
+ДОМАШНИЕ СТРАНИЦЫ SPECTRUM
+IAN COLLIER  http://www.comlab.ox.ac.uk
+/oucl/users/ian.collier/index.html
+MARAT FAYZULLIN  http://www.cs.umd.edu
+/users/fms/
+
+FTP-САЙТЫ
+
+Ниже — адреса, где лежат файлы, связанные
+со Spectrum, обычно снимки. В специализированной
+FTP-программе уберите «ftp://» в начале
+каждого адреса.
+
+ftp://ftp.ijs.si/pub/zx
+ftp://ftp.nvg.unit.no/pub/sinclair
+ftp://topkapi.cc.itu.edu.tr/pub/spectrum
+ftp://ftp.dcc.uchile.cl/pub/OS/sinclair
+ftp://ftp.ijs.si/pub/zx
+ftp://ftp.inf.tu-dresden.de/pub/zxspectrum
+ftp://spodbox.ehche.ac.uk/pub/users/majik
+ftp://ftp.gui.uva.es/pub/sinclair
+ftp://akira.ucЗm.es/pub/sinclair
+ftp://virgo/inesc.pt.pub/games/ZX
+ftp://lst.informatik.uni-erlangen.de
+      /incoming/kio/readme
+ftp://ftp.gmd.de/if-archive
+ftp://ftp.funet.fi:/pub/misc/if-archive
+ftp://ftp.sun.ac.za/pub/msdos/zx
+ftp://oak.oakland.edu/pub/msdos/emulator
+
+SPECTRUM COOL SITE OF THE MONTH
+В этом месяце — сайт автора FAQ, создателя
+Spectrum Database и общего друга Speccy
+Stephen Smith. У него четыре интересные
+страницы — загляните!
+
+SPECTRUM FAQ
+Свежий Spectrum Games FAQ отвечает на
+вопросы вроде «Что на самом деле означают
+названия комнат Jet Set Willy?», «Есть ли
+трейлер в Lunar Jetman?» и «В каких играх
+есть скрытые под-игры?» Актуальная версия
+(подробнее в Spectrum News) здесь:
+http://www.catalog.com/sjr/www/ss
+/gamefaq.htm
+
+SPECTRUM DATABASE
+Огромный проект Stephen — сбор инструкций
+и сведений об играх в Spectrum Games
+Database. Подробнее в отдельной статье; сами
+записи:
+http://www.catalog.com/sjr/www/ss/gamedbs
+ftp://ftp.nvg.unit.no/pub/sinclair/docs
+/games-database/
+
+ВЫ НАСТОЯЩИЙ ВЛАДЕЛЕЦ SPECTRUM?
+Набор вопросов, проверяющий, настоящий ли
+вы Speccy User. Остроумно (по крайней мере
+для нас):
+http://www.catalog.com/sjr/www/ss
+/specuser.htm
+
+Есть и INSTANT SPECTRUM USERS COURSE — я
+ещё не смотрел, но уверен, что на том же
+уровне:
+http://www.catalog.com/sjr/www/ss
+/specstrt.htm
+
+Хотите, чтобы ваш сайт или любимый ресурс
+попали в список — пришлите адрес и краткое
+описание.
+
+==========================================

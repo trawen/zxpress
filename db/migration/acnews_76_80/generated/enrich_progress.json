@@ -1,0 +1,64 @@
+{
+  "done": {
+    "76/02_chess": {
+      "ok": true,
+      "file": "76_02_chess.json"
+    },
+    "78/01_news": {
+      "ok": true,
+      "file": "78_01_news.json"
+    },
+    "76/01_news": {
+      "ok": true,
+      "file": "76_01_news.json"
+    },
+    "77/01_news": {
+      "ok": true,
+      "file": "77_01_news.json"
+    },
+    "79/02_ling": {
+      "ok": true,
+      "file": "79_02_ling.json"
+    },
+    "78/02_planned_russian": {
+      "ok": true,
+      "file": "78_02_planned_russian.json"
+    },
+    "76/03_linguistics": {
+      "ok": true,
+      "file": "76_03_linguistics.json"
+    },
+    "80/01_news": {
+      "ok": true,
+      "file": "80_01_news.json"
+    },
+    "76/04_game": {
+      "ok": true,
+      "file": "76_04_game.json"
+    },
+    "79/01_news": {
+      "ok": true,
+      "file": "79_01_news.json"
+    },
+    "78/03_wordlist": {
+      "ok": true,
+      "file": "78_03_wordlist.json"
+    },
+    "80/03_books": {
+      "ok": true,
+      "file": "80_03_books.json"
+    },
+    "77/02_p2666_part1": {
+      "ok": true,
+      "file": "77_02_p2666_part1.json"
+    },
+    "77/03_p2666_part2": {
+      "ok": true,
+      "file": "77_03_p2666_part2.json"
+    },
+    "80/02_tech": {
+      "ok": true,
+      "file": "80_02_tech.json"
+    }
+  }
+}

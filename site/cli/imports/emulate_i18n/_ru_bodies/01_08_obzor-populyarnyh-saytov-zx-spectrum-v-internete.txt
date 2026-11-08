@@ -1,0 +1,99 @@
+
+***********************************
+*  ЧАСТЬ 8  - SPECTRUM В СЕТИ  *
+***********************************
+
+Вот несколько интересных интернет-сайтов
+о Spectrum, которые стоит изучить.
+Если вы найдёте другие сайты или у вас есть
+свой, который хотите включить в список,
+просто напишите нам полный адрес и краткое
+описание содержимого.
+
+РАЗНОЕ
+http://www.nvg.unit.no:80/spectrum/search.
+html
+ПОИСК ИГР
+http://www.nvg.unit.no/spectrum/jmg7/intro
+.html SPECTRUM PD
+http://www.earth.ox.ac.uk/~steve/spectrum/
+РЕКЛАМА SPECTRUM
+ZX81
+http://www.maths.nott.ac.uk/personal/cpg/
+zx81/
+
+БЫСТРЫЕ ССЫЛКИ НА ДРУГИЕ САЙТЫ SPECTRUM
+http://relcom.eu.net/zx/ZXLinks.html
+http://www.io.org/~diehl/speccy2.html
+
+СПИСКИ СНИМКОВ
+http://osiris.sund.ac.uk/~caЧaba/snaps
+.html
+
+САЙТ ТОП-100 ИГР
+http://grelb.src.gla.ac.uk:8000
+/~webster
+
+БАЗА ДАННЫХ SPECTRUM
+http://www.catalog.com/sjr/www/ss/gamedbs
+
+МУЗЕЙ SPECTRUM
+http://relcom.eu.net/zx/
+
+ДОМАШНИЕ СТРАНИЦЫ SPECTRUM
+IAN COLLIERhttp://www.comlab.ox.ac.uk/oucl
+/users/ian.collier/index.html
+MARAT FAYZULLINhttp://www.cs.umd.edu/users
+/fms/
+
+FTP-САЙТЫ
+
+Все перечисленные ниже адреса — площадки,
+где хранятся файлы, связанные со Spectrum,
+обычно снимки. Если вы используете
+специализированную FTP-программу, уберите
+«ftp://» в начале каждого адреса.
+
+ftp://ftp.ijs.si/pub/zx
+ftp://ftp.nvg.unit.no/pub/sinclair
+ftp://topkapi.cc.itu.edu.tr/pub/spectrum
+ftp://ftp.dcc.uchile.cl/pub/OS/sinclair
+ftp://ftp.ijs.si/pub/zx
+ftp://ftp.inf.tu-dresden.de/pub/zxspectrum
+ftp://spodbox.ehche.ac.uk/pub/users/majik
+ftp://ftp.gui.uva.es/pub/sinclair
+ftp://akira.ucЗm.es/pub/sinclair
+ftp://virgo/inesc.pt.pub/games/ZX
+ftp://lst.informatik.uni-erlangen.de
+    /incoming/kio/readme
+ftp://ftp.gmd.de/if-archive
+ftp://ftp.funet.fi:/pub/misc/if-archive
+ftp://ftp.sun.ac.za/pub/msdos/zx
+ftp://oak.oakland.edu/pub/msdos/emulator
+
+КРУТОЙ САЙТ SPECTRUM МЕСЯЦА
+
+В каждом выпуске мы позаимствуем идею
+«крутого сайта» и посмотрим на самые
+популярные сайты Spectrum в Сети. Начнём
+с неизменно популярных архивов NVG UNIT.
+Базируясь в Норвегии, этот ресурс существует
+и как FTP-сайт, и как набор WWW-страниц.
+FTP-сайт, хотя и не содержит самую большую
+коллекцию снимков, опережает все остальные
+площадки по прочим spectrum-связанным
+файлам. Там большой выбор картинок о
+Speccy, включая JPG обложек старого Crash
+и вкладышей кассет, а также схемы старых
+машин. Также там большой набор инструкций
+к играм. WWW-страницы тоже отличные и
+охватывают множество тем, включая Spectrum PD
+и превосходную поисковую систему, которая
+ищет по всем FTP-сайтам нужную программу.
+Стоит заглянуть — смотрите:
+
+FTP.NVG.UNIT.NO/PUB/SINCLAIR
+HTTP://WWW/NVG.UNIT.NO/SPECTRUM
+
+==========================================
+==========================================

@@ -1,0 +1,131 @@
+
+==========================================
+************************************
+*  ЧАСТЬ 12 — SPECTRUM В СЕТИ  *
+************************************
+
+Обычный путеводитель по Интернету — теперь
+с номерами BBS, где лежат спектрумные файлы.
+
+EMULATE! MAGAZINE В СЕТИ!
+Http://www.cs.bham.ac.uk/~dmb/speccy
+                       /emulate/index.html
+
+РАЗНОЕ
+http://www.nvg.unit.no:80/spectrum
+                /search.html  ПОИСК ИГР
+http://drson.vse.cz/snapsearch/
+                              ПОИСК ИГР
+http://www.nvg.unit.no/spectrum/jmg7
+                   /intro.html SPECTRUM PD
+http://www.earth.ox.ac.uk/~steve/spectrum/
+                              SPECTRUM ADS
+http://osiris.sund.ac.uk/~caЧaba
+                /snaps.html     СПИСОК СНАПОВ
+http://www.cs.bham.ac.uk/~dmb/speccy/
+                                 SNAPSHOTS
+
+КОЛЛЕКЦИЯ STEPHEN SMITH
+
+Spectrum Database, FAQ, Instant Users и
+многое другое:
+http://www.nvg.unit.no/spectrum/stevo/
+далее:-
+
+gamefaq/gamefaq.htm    -
+                        Spectrum Games FAQ
+gamedbs/gamedbs.htm    -
+                   Spectrum Games Database
+specstrt/specstrt.htm  -
+           Spectrum Instant Starter Course
+gameplay/gameplay.htm  -
+    Spectrum Games you can physically play
+moments/moments.htm    -
+         Great Moments in Spectrum History
+specuser/specuser.htm  -
+              Are you a true Spectrum User
+
+YS SMASH TIPS *NEW*
+HTML-версия нашего первого Emulate Special
+http://www.cs.ucl.ac.uk/students/zcacbb1
+                      /spectrum/smashtips/
+
+TOLKIEN GAMES *NEW*
+Поклонникам The Hobbit и Lord of the Rings:
+сайт о компьютерных играх по Толкienу!
+
+http://www.lysator.liu.se/tolkien-games/
+http://www.lysator.liu.se/tolkien-games
+                            /spectrum.html
+
+ZX81
+http://www.maths.nott.ac.uk/personal/cpg
+                                    /zx81/
+
+SAM COUPE
+http://www.soton.ac.uk/~tsp9Зma/Coupe/
+
+БЫСТРЫЕ ССЫЛКИ НА ДРУГИЕ SPECTRUM-САЙТЫ
+http://relcom.eu.net/zx/ZXLinks.html
+http://www.io.org/~diehl/speccy2.html
+
+ТОП-100 ИГР
+http://grelb.src.gla.ac.uk:8000/~webster
+
+БАЗА ДАННЫХ SPECTRUM
+http://www.nvg.unit.no/spectrum/stevo
+    /gamedbs/gamedbs.htm (СПИСОК ЗАПИСЕЙ)
+ftp://ftp.nvg.unit.no/pub/sinclair/docs
+     /game-database/    (СКАЧИВАНИЕ ЗАПИСЕЙ)
+
+МУЗЕЙ SPECTRUM
+http://relcom.eu.net/zx/
+
+ДОМАШНИЕ СТРАНИЦЫ SPECTRUM
+IAN COLLIER  http://www.comlab.ox.ac.uk
+        /oucl/users/ian.collier/index.html
+MARAT FAYZULLIN  http://www.cs.umd.edu
+                               /users/fms/
+
+SPECTRUM FAQ
+http://www.nvg.unit.no/spectrum/stevo
+   /gamefaq/gamefaq.htm SPECTRUM GAMES FAQ
+http://www.cs.umd.edu/users/fms/stuff
+    /spectrum.faq        SPECTRUM TECH FAQ
+
+FTP-САЙТЫ
+Ниже — адреса, где лежат файлы Spectrum,
+обычно снимки. В FTP-клиенте уберите
+«ftp://» в начале адреса.
+
+ftp://ftp.ijs.si/pub/zx
+ftp://ftp.nvg.unit.no/pub/sinclair
+ftp://topkapi.cc.itu.edu.tr/pub/spectrum
+ftp://ftp.dcc.uchile.cl/pub/OS/sinclair
+ftp://ftp.ijs.si/pub/zx
+ftp://ftp.inf.tu-dresden.de/pub/zxspectrum
+ftp://spodbox.ehche.ac.uk/pub/users/majik
+ftp://ftp.gui.uva.es/pub/sinclair
+ftp://akira.ucЗm.es/pub/sinclair
+ftp://virgo/inesc.pt.pub/games/ZX
+ftp://lst.informatik.uni-erlangen.de
+                      /incoming/kio/readme
+ftp://ftp.gmd.de/if-archive
+ftp://ftp.funet.fi:/pub/misc/if-archive
+ftp://ftp.sun.ac.za/pub/msdos/zx
+ftp://oak.oakland.edu/pub/msdos/emulator
+
+==========================================
+СРОЧНО!!
+Новый сайт на Demon из новостей одобрен:
+ftp://ftp.demon.co.uk/pub/emulators
+                                 /spectrum
+==========================================
+
+BBS ДЛЯ ПОСЕЩЕНИЯ:
+
+FRAZZLE PROJECT BBS  +44 1562 827019-24 ч
+GARGAMELS LAIR BBS   +44 1224 873783-24 ч
+VIRTUAL MADDNESS BBS +44 1344 422575-24 ч
+
+==========================================

@@ -133,19 +133,36 @@ chronology_graph_startup
 # `exec php-fpm` replaces this shell — FPM becomes PID 1. The cleanup loop
 # remains a child of the old shell process; trade-off: one extra long-lived
 # process vs. in-process timers inside php-fpm (not available by default).
+# /home/zxpress/tmp is a 256m tmpfs shared with upload_tmp_dir — if sess_* fill it,
+# multipart uploads fail with UPLOAD_ERR_NO_TMP_DIR / CANT_WRITE ("PNG-кадр не получен").
 DATA_ROOT="${ZXPRESS_DATA_ROOT:-/home/zxpress/web/zxpress.ru/data}"
 FALLBACK_TMP="${DATA_ROOT}/tmp"
 TMP_RETENTION_MIN="${TMP_RETENTION_MIN:-1440}"
+# Logged-in admin sessions keep the full cookie lifetime; anonymous/csrf/captcha
+# sessions are the bulk of tmpfs pressure and get a short TTL.
 SESSION_RETENTION_MIN="${SESSION_RETENTION_MIN:-1440}"
-(while true; do
-    sleep 600
-    find /home/zxpress/tmp -maxdepth 1 -name 'sess_*' -mmin +"$SESSION_RETENTION_MIN" -delete 2>/dev/null || true
+SESSION_ANON_RETENTION_MIN="${SESSION_ANON_RETENTION_MIN:-60}"
+# Serialized marker for $_SESSION['login'] = 1 (see site/includes/auth.php).
+SESSION_LOGIN_MARKER='login|i:1;'
+cleanup_zxpress_tmp() {
+    # Empty sessions never become valid; drop them regardless of age.
+    find /home/zxpress/tmp -maxdepth 1 -type f -name 'sess_*' -size 0 -delete 2>/dev/null || true
+    # Anonymous / captcha / csrf-only: short TTL. Keep files that contain a login.
+    find /home/zxpress/tmp -maxdepth 1 -type f -name 'sess_*' -mmin +"$SESSION_ANON_RETENTION_MIN" \
+        ! -exec grep -qF "$SESSION_LOGIN_MARKER" {} \; -delete 2>/dev/null || true
+    # Absolute ceiling for everyone, including logged-in admins.
+    find /home/zxpress/tmp -maxdepth 1 -type f -name 'sess_*' -mmin +"$SESSION_RETENTION_MIN" -delete 2>/dev/null || true
     if [ -d "$FALLBACK_TMP" ]; then
         removed_count="$(find "$FALLBACK_TMP" -maxdepth 1 -type f -mmin +"$TMP_RETENTION_MIN" -print -delete 2>/dev/null | wc -l | tr -d '[:space:]')"
         if [ "${removed_count:-0}" -gt 0 ]; then
             log_info "[FIX] fallback tmp cleanup removed=${removed_count} path=$FALLBACK_TMP age_min=$TMP_RETENTION_MIN"
         fi
     fi
+}
+cleanup_zxpress_tmp
+(while true; do
+    sleep 600
+    cleanup_zxpress_tmp
 done) &
 
 # Start PHP-FPM in foreground

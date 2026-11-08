@@ -1,0 +1,98 @@
+
+==========================================
+**********************************
+*  ЧАСТЬ 1 — РЕДАКЦИЯ И НОВОСТИ  *
+**********************************
+
+Добро пожаловать в очередной номер
+спектрумного журнала Emulate!
+Я думаю в ближайшие месяцы немного изменить
+журнал, чтобы улучшить и внешний вид, и
+назойливую нерегулярность выхода. Я решил,
+что после выпуска 6 немного уменьшу размер
+журнала. Надеюсь, это позволит выпускать
+новый номер КАЖДЫЙ месяц, а не раз в 6–8
+недель. Уверен, разницы будет немного: тот
+же контент, но регулярнее — кому-то из вас
+это понравится!
+Ещё одна задумка — сделать спектрумную
+версию Emulate для просмотра в любом
+эмуляторе, возможно со скриншотами,
+небольшими играми и т. п.
+
+В этом номере немало материалов. Есть
+решения и для Three Weeks in Paradise, и для
+The Time Machine. По многочисленным просьбам
+я добавил и заветное управление к той игре!
+Расширен раздел об интернет-ресурсах: я
+недавно обошёл Сеть и, кажется, составил
+довольно полный путеводитель по спектрумным
+сайтам.
+Также — путеводитель по Spectrum FTP-сайтам
+с описанием содержимого и скорости
+соединения!
+
+Так зачем вы всё ещё читаете эту
+скучную часть?
+
+==========================================
+==========================================
+
+ЗАПРОСЫ НА СНИМКИ
+
+Ещё один список просьб читателей. Он уже
+довольно длинный — если вы получили
+нужную игру, сообщите, чтобы я мог убрать
+ваше имя из списка! Список немного
+подчистил; ниже — игры, которых, на мой
+взгляд, сейчас нет на FTP-сайтах.
+
+ИГРА                  ФОРМАТ ЗАПРОСИЛ     E-MAIL
+==========================================
+Advanced Pinball Sim  48/128 David Crick
+   D.A.CRICK@EX.AC.UK
+Dynamite Dux          48/128 David Crick
+   D.A.CRICK@EX.AC.UK
+Heroes Of The Lance   48/128 David Crick
+   D.A.CRICK@EX.AC.UK
+Int 3D Tennis         128K   David Crick
+   D.A.CRICK@EX.AC.UK
+Knight Orc            48/128 Shaun Crouch
+   SCROUCH@LARK.RU.AC.ZA
+Lemmings Demo         48/128 David Crick
+   D.A.CRICK@EX.AC.UK
+Lotus Turbo Challenge 48/128 David Crick
+   D.A.CRICK@EX.AC.UK
+Moria                 48/128 Fredrik Ekman
+   EKMAN@LYSATOR.LIU.SE
+On the Bench          48/128 Dave Mills
+   DAVE@MILLS.DEMON.CO.UK
+Orc Attack           48/128 Andy Maccallum
+   MINDBOMB_BBS@DELPHI.COM
+Renegade III Final Ch 48/128 David Crick
+   D.A.CRICK@EX.AC.UK
+Rod Land              48/128 Anton Belenki
+   ANTON@GYM11.PERM.SU
+Shadow Warriors       48/128 David Crick
+   D.A.CRICK@EX.AC.UK
+Splitting Images     48/128 Richard Hallas
+   RICHARD@HALLAS.DEMON.CO.UK
+Street Fighter 2      128k   Barry Plewa
+   DOCTOR@DOCBARRY.DEMON.CO.UK
+The Boss              48/128 Dave Mills
+   DAVE@MILLS.DEMON.CO.UK
+The Double            48/128 Dave Mills
+   DAVE@MILLS.DEMON.CO.UK
+The Tebbit            48/128 Fredrik Ekman
+   EKMAN@LYSATOR.LIU.SE
+Tobor                 48/128 Jon Taylor
+   JON@BIRKHALL.DEMON.CO.UK
+Valley, The         48/128 Philip Reynolds
+   PHIL@HEDGFORD.DEMON.CO.UK
+Wonderboy             48/128 David Crick
+   D.A.CRICK@EX.AC.UK
+
+Ещё раз спасибо всем, кто откликнулся
+на эти запросы!
+
+==========================================

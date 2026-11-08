@@ -376,7 +376,8 @@ $art = [];
 $stmt = mysqli_prepare(
 	$db,
 	'SELECT id, title, title_eng, slug_ru, slug_en, number '
-	. 'FROM articles WHERE id_issue=? ORDER BY number, title'
+	. 'FROM articles WHERE id_issue=? AND temp=0 AND TRIM(COALESCE(title, \'\')) <> \'\' '
+	. 'ORDER BY number, title'
 );
 mysqli_stmt_bind_param($stmt, "i", $id_issue);
 mysqli_stmt_execute($stmt);

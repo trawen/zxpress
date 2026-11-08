@@ -33,11 +33,31 @@ function aiem_issue_exists(mysqli $db, int $pressId, int $issueId): bool
 	return (bool) ($z && $z->fetch_assoc());
 }
 
+function aiem_upload_error_message(int $code): string
+{
+	return match ($code) {
+		UPLOAD_ERR_INI_SIZE, UPLOAD_ERR_FORM_SIZE => 'PNG-кадр слишком большой',
+		UPLOAD_ERR_PARTIAL => 'PNG-кадр загружен частично',
+		UPLOAD_ERR_NO_FILE => 'PNG-кадр не получен',
+		UPLOAD_ERR_NO_TMP_DIR => 'Нет временной папки для загрузки (tmp переполнен?)',
+		UPLOAD_ERR_CANT_WRITE => 'Не удалось записать кадр во временную папку (tmp переполнен?)',
+		UPLOAD_ERR_EXTENSION => 'Загрузка PNG заблокирована расширением PHP',
+		default => 'PNG-кадр не получен (код ' . $code . ')',
+	};
+}
+
 function aiem_save_screenshot(mysqli $db, int $pressId, int $issueId, int $type, int $userId): array
 {
 	$file = $_FILES['screenshot'] ?? null;
-	if (!is_array($file) || (int) ($file['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_OK) {
+	if (!is_array($file)) {
 		return ['ok' => false, 'error' => 'PNG-кадр не получен'];
+	}
+	$uploadError = (int) ($file['error'] ?? UPLOAD_ERR_NO_FILE);
+	if ($uploadError !== UPLOAD_ERR_OK) {
+		error_log('[FIX] admin_issue_emulator upload error=' . $uploadError
+			. ' files=' . json_encode(array_keys($_FILES))
+			. ' post_keys=' . json_encode(array_keys($_POST)));
+		return ['ok' => false, 'error' => aiem_upload_error_message($uploadError)];
 	}
 	$tmp = (string) ($file['tmp_name'] ?? '');
 	if ($tmp === '' || !is_uploaded_file($tmp)) {

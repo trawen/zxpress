@@ -896,6 +896,7 @@ html:not([data-theme="dark"]) .smn-theme-icon--sun {
 	transform: scaleX(0);
 	transform-origin: left;
 	transition: transform 0.25s ease;
+	pointer-events: none;
 }
 .smn-breadcrumbs a:hover::after {
 	transform: scaleX(1);
@@ -1934,6 +1935,7 @@ a.smn-letter-meta-author:hover {
 	transform: scaleX(0);
 	transform-origin: left;
 	transition: transform 0.25s ease;
+	pointer-events: none;
 }
 .smn-press-issue-title a:hover {
 	color: var(--smn-accent);
@@ -1985,6 +1987,7 @@ a.smn-letter-meta-author:hover {
 	transform: scaleX(0);
 	transform-origin: left;
 	transition: transform 0.25s ease;
+	pointer-events: none;
 }
 .smn-press-issue-action:hover {
 	color: var(--smn-accent);
@@ -2161,6 +2164,7 @@ body.smn-modal-open {
 	transform: scaleX(0);
 	transform-origin: left;
 	transition: transform 0.25s ease;
+	pointer-events: none;
 }
 .smn-issue-nav a:hover {
 	color: var(--smn-accent);
@@ -2258,11 +2262,16 @@ body.smn-modal-open {
 	padding-bottom: 2px;
 	transition: color 0.25s ease;
 	min-width: 0;
+	max-width: 100%;
+	width: max-content;
 	overflow-wrap: break-word;
 	word-break: normal;
 	hyphens: auto;
 	-webkit-hyphens: auto;
 	-ms-hyphens: auto;
+}
+.smn-press-article a {
+	cursor: pointer;
 }
 .smn-press-article a::after,
 .smn-press-article span::after {
@@ -2276,6 +2285,10 @@ body.smn-modal-open {
 	transform: scaleX(0);
 	transform-origin: left;
 	transition: transform 0.25s ease;
+	pointer-events: none;
+}
+.smn-press-article a:hover {
+	color: var(--smn-accent);
 }
 .smn-press-article a:hover::after {
 	transform: scaleX(1);

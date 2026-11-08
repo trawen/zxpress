@@ -1,0 +1,89 @@
+
+==========================================
+***************************
+*  ЧАСТЬ 15 — ПРИКЛЮЧЕНИЯ  *
+***************************
+
+THE BARDS TALE
+
+Несколько подсказок, как продвинуться через
+первые уровни этой эпической RPG из
+выпуска 2.
+
+SKARA BRAE
+Город, с которого начинается квест, можно
+долго исследовать. Разумно быстро найти
+Review Board (на Trumpet Street) и лавку
+Garth's Equipment Shoppe (чуть севернее
+Guild). Интересны также храмы на городской
+площади, Roscoes Energy Emporium (на севере
+города) и многочисленные трактиры. Важнее
+всего Scarlet Bard на юго-востоке — оттуда
+путь в первое подземелье. Ищите что-то
+необычное в продаже...
+
+THE CELLARS
+Подвалы устроены очень просто — хороший
+разгон перед исследованием. По сути четыре
+секции. Не спешите, осматривайтесь и
+набирайте опыт, прежде чем идти в нижние
+уровни канализации.
+
+THE SEWERS
+Три уровня канализации, каждый сложнее
+предыдущего. Не лезьте, пока отряд не
+опытен и хорошо экипирован. Здесь
+нападают сразу несколько групп монстров —
+до четырёх одновременно. Лучшая тактика:
+бойцы бьют меньшую из первых двух групп, а
+огненный рог барда (важнейшее оружие!)
+сносит большую. Третью и четвёртую группу
+можно не трогать, если это не магические
+существа — физически они не атакуют. В
+канализации много интересного, но критичен
+уровень 3: там мощный предмет для квеста и
+лестница в закрытую часть Skara Brae.
+
+Продолжение в следующем выпуске......
+
+==========================================
+
+DEMON FROM THE DARKSIDE
+
+Walkthrough к приключению прошлого месяца:
+
+Ne, examine body, pull arrow, take ruby,
+sw, s, take sword, examine statue, read
+symbols, say mecla, e, take life, s, d,
+examine puddle, cast life, l, l, use
+plank, climb plank, examine slime, take
+mask, wear mask, n, examine statue, insert
+ruby, s, d, smash stairs, in, take torch,
+take   rope,   take  bone,  out,  s,  take
+teleport,  light  torch,  n,  throw  rope,
+climb  rope,  n, n, e, e, se, kill dragon,
+s,  in,  take fire, d, d, help, take wise,
+take  key,  unlock  door,  drop  key, cast
+fire,  light  torch, take wise, w, examine
+body, take gloves, wear gloves, take coin,
+e, drop torch, e, e, take horn, blow horn,
+give  coin,  ne,  ne,  throw bone, n, take
+cream, s, climb stalagmire, use cream, ne,
+n,  n,  w, take wise, e, s, s, ne, examine
+figure, give horn, examine fire, drop all,
+take  sword,  take wise, take gloves, take
+teleport,  wear gloves, d, e, e, call sid,
+e,  call sid, cross bridge, s, take smoke,
+s, examine pond, take root, n, give sword,
+take root, n, n, cross bridge, w, w, n, n,
+take  owl,  examine  owl,  use  root, take
+stone, throw stone, n, n, n, e, take rope,
+take hook, tie rope to hook, take hook, w,
+n,  e,  open door, e, d, throw hook, d, e,
+examine sacks, drop all, take stodge, take
+smoke,  take  teleport, s, examine leaves,
+take  staff, cast smoke, take staff, w, n,
+w, up, climb rope, w, close door, w, s, w,
+u,  w,  cast  teleport,  in, n. И всё!!!
+
+==========================================
