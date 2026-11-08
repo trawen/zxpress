@@ -2243,6 +2243,7 @@ body.smn-modal-open {
 	font-weight: 500;
 	line-height: 1.45;
 	counter-increment: smn-press-art;
+	min-width: 0;
 }
 .smn-press-article::before {
 	content: counter(smn-press-art) ".";
@@ -2262,9 +2263,9 @@ body.smn-modal-open {
 	/* inset shadow underline — no ::after hit-target (scaleX flicker) */
 	box-shadow: inset 0 -2px 0 0 transparent;
 	transition: color 0.25s ease, box-shadow 0.25s ease;
+	flex: 1 1 auto;
 	min-width: 0;
 	max-width: 100%;
-	width: max-content;
 	overflow-wrap: break-word;
 	word-break: normal;
 	hyphens: auto;
