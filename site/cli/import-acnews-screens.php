@@ -62,8 +62,13 @@ foreach (glob($dir . '/acn*_*.png') ?: [] as $path) {
 	if (!preg_match('/^acn(\d+)_(menu|0|2)\.png$/i', $base, $m)) {
 		continue;
 	}
-	$issueKey = (string) (int) $m[1];
-	if ($only !== [] && !in_array($issueKey, $only, true)) {
+	$n = (int) $m[1];
+	$issueKey = (string) $n;
+	$onlyKeys = [];
+	foreach ($only as $o) {
+		$onlyKeys[] = (string) (int) $o;
+	}
+	if ($onlyKeys !== [] && !in_array($issueKey, $onlyKeys, true)) {
 		continue;
 	}
 	$type = ($m[2] === 'menu') ? 1 : 2;
@@ -77,12 +82,27 @@ $created = 0;
 $skipped = 0;
 
 foreach ($byIssue as $issueKey => $shots) {
-	$z = db_select($db, 'SELECT id FROM issue WHERE id_press=? AND title=? LIMIT 1', 'is', ACN_PRESS_ID, $issueKey);
-	$row = $z ? $z->fetch_assoc() : null;
+	// ACNews titles are often zero-padded ("01"); also try unpadded.
+	$candidates = array_values(array_unique([
+		sprintf('%02d', (int) $issueKey),
+		(string) (int) $issueKey,
+		$issueKey,
+	]));
+	$row = null;
+	$matchedTitle = '';
+	foreach ($candidates as $title) {
+		$z = db_select($db, 'SELECT id FROM issue WHERE id_press=? AND title=? LIMIT 1', 'is', ACN_PRESS_ID, $title);
+		$row = $z ? $z->fetch_assoc() : null;
+		if ($row) {
+			$matchedTitle = $title;
+			break;
+		}
+	}
 	if (!$row) {
 		fwrite(STDERR, "  #{$issueKey}: issue not found\n");
 		continue;
 	}
+	$issueKey = $matchedTitle;
 	$issueId = (int) $row['id'];
 
 	$zCnt = db_select($db, 'SELECT COUNT(*) AS c FROM screens WHERE id_issue=?', 'i', $issueId);
