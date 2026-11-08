@@ -131,26 +131,18 @@
 					<a class="smn-press-meta-dl smn-press-dl--beside" href="{$current_issue.download_url}"{if $lng eq 'eng'} aria-label="Download"{else} aria-label="Скачать"{/if}>
 						<svg class="smn-press-meta-dl-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
 					</a>
-{elseif !$current_issue.missing && $press.id}
-					<a class="smn-press-meta-dl smn-press-dl--beside" href="{$host}d.php?id={$press.id}"{if $lng eq 'eng'} aria-label="Download"{else} aria-label="Скачать"{/if}>
-						<svg class="smn-press-meta-dl-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
-					</a>
 {/if}
 				</div>
 				<p class="smn-press-issue-meta">
 {if $current_issue.date_display}
 					<span class="smn-press-issue-date smn-press-issue-date--hero">{$current_issue.date_display}</span>
 {/if}
-{if !$current_issue.missing && ($current_issue.download_url || $press.id)}
+{if !$current_issue.missing && $current_issue.download_url}
 {if $current_issue.date_display}<span class="smn-press-issue-meta-sep smn-press-issue-meta-sep--dl" aria-hidden="true">·</span>{/if}
-{if $current_issue.download_url}
 					<a class="smn-press-issue-action smn-press-issue-action--dl" href="{$current_issue.download_url}">{if $lng eq 'eng'}Download{else}Скачать{/if}</a>
-{else}
-					<a class="smn-press-issue-action smn-press-issue-action--dl" href="{$host}d.php?id={$press.id}">{if $lng eq 'eng'}Download{else}Скачать{/if}</a>
-{/if}
 {/if}
 {if $current_issue.emulator_url}
-{if $current_issue.date_display || $current_issue.download_url || $press.id}<span class="smn-press-issue-meta-sep smn-press-issue-meta-sep--emulator" aria-hidden="true">·</span>{/if}
+{if $current_issue.date_display || $current_issue.download_url}<span class="smn-press-issue-meta-sep smn-press-issue-meta-sep--emulator" aria-hidden="true">·</span>{/if}
 					<button type="button" class="smn-press-issue-action smn-press-issue-action--emulator" id="smn-emulator-run" data-url="{$current_issue.emulator_url|escape:'html'}">{if $lng eq 'eng'}Launch in ZX Spectrum online emulator{else}Запустить в online эмуляторе ZX Spectrum{/if}</button>
 {/if}
 				</p>
