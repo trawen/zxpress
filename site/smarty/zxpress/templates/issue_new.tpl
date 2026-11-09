@@ -296,16 +296,14 @@
 				</ul>
 {/if}
 
-{* Temporarily hidden: magazine history block
 {if $press.description}
-				<section class="smn-press-history" aria-labelledby="smn-press-history-heading">
-					<h2 class="smn-press-history-heading" id="smn-press-history-heading">{if $lng eq 'eng'}Magazine history{else}История журнала{/if}</h2>
+				<section class="smn-press-history">
+{*					<h2 class="smn-press-history-heading" id="smn-press-history-heading">{if $lng eq 'eng'}Magazine history{else}История журнала{/if}</h2> *}
 					<div class="smn-lead is-collapsible" id="smn-lead" data-collapsed-label="{if $lng eq 'eng'}Show more{else}Показать полностью{/if}" data-expanded-label="{if $lng eq 'eng'}Show less{else}Свернуть{/if}">
 						<p>{$press.description|escape:'html'|nl2br nofilter}</p>
 					</div>
 				</section>
 {/if}
-*}
 			</article>
 
 {elseif $issue_not_found}
