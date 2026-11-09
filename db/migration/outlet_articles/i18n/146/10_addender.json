@@ -1,0 +1,38 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "146",
+  "article_id": "10_addender",
+  "title_en": "Addender",
+  "title_ru": "Дополнение",
+  "meta_description_en": "Editorial note on the Add-Enders section in Outlet magazine featuring reader contributions and an announcement for the Indiana Jones & The Last Crusade sampler.",
+  "meta_description_ru": "Пояснение редакции Outlet к разделу Add-Enders с архивными и читательскими материалами, а также анонс сэмплера игры Indiana Jones & The Last Crusade.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet-magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "add-enders",
+      "tag_alias": "add-enders"
+    },
+    {
+      "tag_name": "indiana-jones",
+      "tag_alias": "indiana-jones"
+    },
+    {
+      "tag_name": "демо-версии",
+      "tag_alias": "demos"
+    }
+  ],
+  "category_ids": [
+    123,
+    1
+  ],
+  "body_en_plain": "Some items contributed to OUTLET\nhave not yet been included for a\nvariety of reasons. It's a shame\nto leave them on the shelf so,if\nappropriate, they will be added\nto this ADD-ENDERS area of the\nmagazine (not microdrive or Opus\nas there is not enough room).\n\nThe material covers a wide range\nof quality and program types:\nutilities, screens, character\nsets and text articles and SOME\nof it may be unedited, untested,\nnot working fully or properly;\nin need of conversion for your\n\nsystem's syntax or printer etc.;\nwithout full instructions or\nwhatever. Readers will have to\nsift through to see if there is\nanything of interest they can\nmake use of and discard the\nrest. Not everything will appear\non all versions necessarily.\n\nSome Add-Enders may be linked to\nOUTLET in the normal way. These\nwill usually precede this text\nfile. Any items that follow this\narticle will possibly need to be\nLOADed manually or may not auto-\nrun when loaded.\n\nThere may be some info on the\nfollowing pages...\n\nThis month we have been able to\nsqueeze in an exciting game\nsampler. Press \"N\" now to load..\n\n\n         INDIANA JONES\n\n               &\n\n        THE LAST CRUSADE!.\n",
+  "body_ru_plain": "",
+  "body_en": "## Addender\n\nSome items contributed to OUTLET have not yet been included for a variety of reasons. It's a shame to leave them on the shelf so,if appropriate, they will be added to this ADD-ENDERS area of the magazine (not microdrive or Opus as there is not enough room).\n\nThe material covers a wide range of quality and program types: utilities, screens, character sets and text articles and SOME of it may be unedited, untested, not working fully or properly; in need of conversion for your\n\nsystem's syntax or printer etc.; without full instructions or whatever. Readers will have to sift through to see if there is anything of interest they can make use of and discard the rest. Not everything will appear on all versions necessarily.\n\nSome Add-Enders may be linked to OUTLET in the normal way. These will usually precede this text file. Any items that follow this article will possibly need to be LOADed manually or may not auto- run when loaded.\n\nThere may be some info on the following pages...\n\nThis month we have been able to squeeze in an exciting game sampler. Press \"N\" now to load..\n\nINDIANA JONES\n\n```text\n               &\n```\n\nTHE LAST CRUSADE!.\n",
+  "body_ru": "## Addender\n\nНекоторые материалы, присланные в OUTLET, до сих пор не были включены по целому ряду причин. Жаль оставлять их пылиться на полке, поэтому, если сочтём уместным, они будут добавляться в этот раздел журнала под названием ADD-ENDERS (на версиях для Microdrive и Opus его не будет, так как там недостаточно места).\n\nМатериалы охватывают самый разный спектр качества и типов программ: утилиты, экраны, наборы шрифтов и текстовые статьи, и ЧАСТЬ из них может быть неотредактированной, непротестированной, работающей не полностью или некорректно; требовать адаптации под синтаксис вашей системы или принтер и т. д.; быть без полных инструкций или чего-то подобного. Читателям придётся покопаться в них, чтобы найти то, что покажется интересным и полезным, а остальное отбросить. Далеко не всё обязательно появится во всех версиях издания.\n\nНекоторые материалы из Add-Enders могут быть привязаны к меню OUTLET обычным образом. Как правило, они будут предшествовать этому текстовому файлу. Любые материалы, идущие после этой статьи, возможно, придётся загружать вручную по команде LOAD, либо они могут не запускаться автоматически после загрузки.\n\nВозможно, на следующих страницах будет какая-то информация...\n\nВ этом месяце нам удалось втиснуть захватывающий игровой сэмплер. Нажмите «N» прямо сейчас, чтобы загрузить...\n\n```text\n         INDIANA JONES\n\n               &\n\n        THE LAST CRUSADE!.\n```\n",
+  "text_type": 3
+}

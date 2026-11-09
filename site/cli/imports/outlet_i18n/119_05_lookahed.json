@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "119",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонсы",
+  "meta_description_en": "Chris Jenkins previews the upcoming features for next month's Outlet issue, including Interrupt Manager, RS232 technicalities, animations, and games.",
+  "meta_description_ru": "Крис Дженкинс анонсирует материалы следующего номера Outlet: Interrupt Manager, особенности RS232, анимация, шрифт для Tasword 2 и новая игра.",
+  "authors": [
+    "Chris Jenkins"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "lookahead",
+      "tag_alias": "lookahead"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "rs-232",
+      "tag_alias": "rs-232"
+    },
+    {
+      "tag_name": "tasword 2",
+      "tag_alias": "tasword-2"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "As Robbie Burns remarked:\"The\nbest laid plans of Mice and Men\noften get cocked-up\", or words\nto that effect! Anyway,I apolog-\nise to anyone who could not find\nthe wonderful Interrupt Manager\nprogram which was planned for\nthe June issue #118, but which\nwas dropped out at the last min-\nute in favour of a more topical\nitem. However, we do deliver the\ngoods (eventually) and I can\nDEFINITELY state that this\nInterrupt program MIGHT appear\n\n\nin next month's OUTLET along\nwith many other delights...\n\nThere's a super Music Demo, a\ntechnical chat about the RS232\ninterface and the ways in which\nthe Spectrum deviates from the\nnormally accepted RS232 stand-\nards;another excellent animation\nwhich is in fact a reproduction\nof the first ever real-life mov-\ning pictures.There's an improved\ncharacter set for Tasword 2, an-\nother PUZPIC and the solution to\na previous one.\n\nAnd something a bit different: A\nfascinating and amusing insight\ninto the not-so-public life of\nSir Thomas Beecham, and to poss-\nibly save you some money,a guide\n\n\nto telephone dialling codes and\ntheir current costs, with last\nbut not least,another firstclass\nplatform-type game. Assuming of\ncourse, that we can squeeze all\nthis onto one little disc!\n\n            Cheers,\n\n                Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "As Robbie Burns remarked: \"The best laid plans of Mice and Men often get cocked-up\", or words to that effect! Anyway, I apologise to anyone who could not find the wonderful Interrupt Manager program which was planned for the June issue #118, but which was dropped out at the last minute in favour of a more topical item. However, we do deliver the goods (eventually) and I can DEFINITELY state that this Interrupt program MIGHT appear in next month's OUTLET along with many other delights...\n\nThere's a super Music Demo, a technical chat about the RS232 interface and the ways in which the Spectrum deviates from the normally accepted RS232 standards; another excellent animation which is in fact a reproduction of the first ever real-life moving pictures. There's an improved character set for Tasword 2, another PUZPIC and the solution to a previous one.\n\nAnd something a bit different: A fascinating and amusing insight into the not-so-public life of Sir Thomas Beecham, and to possibly save you some money, a guide to telephone dialling codes and their current costs, with last but not least, another firstclass platform-type game. Assuming of course, that we can squeeze all this onto one little disc!\n\nCheers,\n\nChris.\n",
+  "body_ru": "Как заметил Робби Бернс: «Лучшие планы мышей и людей часто идут наперекосяк» — или что-то вроде того! В любом случае, приношу извинения всем, кто не смог найти замечательную программу Interrupt Manager, которая планировалась для июньского выпуска №118, но в последнюю минуту была исключена ради более злободневного материала. Тем не менее мы держим слово (рано или поздно), и я могу ОПРЕДЕЛЕННО заявить, что эта программа работы с прерываниями, ВОЗМОЖНО, появится в следующем номере OUTLET наряду со многими другими приятными вещами...\n\nВас ждут отличное музыкальное демо, технический разбор интерфейса RS232 и того, как именно Spectrum отклоняется от общепринятых стандартов RS232; еще одна превосходная анимация, являющаяся, по сути, репродукцией первых в истории настоящих движущихся кинокадров. Также будет улучшенный набор символов для Tasword 2, очередной PUZPIC и разгадка к предыдущему.\n\nИ кое-что нестандартное: увлекательный и забавный взгляд на закулисную жизнь сэра Thomas Beecham, а также полезный для кошелька справочник телефонных кодов с актуальными тарифами, и, наконец, еще одна первоклассная платформенная игра. Если, конечно, нам удастся уместить все это на один небольшой диск!\n\nВсего наилучшего,\n\nChris.\n",
+  "text_type": 3
+}

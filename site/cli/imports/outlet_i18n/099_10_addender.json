@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "099",
+  "article_id": "10_addender",
+  "title_en": "Addender: Introducing \"Mr. Pack\" Codepacker",
+  "title_ru": "Addender: Знакомство с компрессором кодов «Mr. Pack»",
+  "meta_description_en": "Chris Cowley introduces the Add-Enders section in Outlet #099 and takes a quick look at Mr. Pack, a slick ZX Spectrum code compressor lacking instructions.",
+  "meta_description_ru": "Крис Каули представляет рубрику Add-Enders в Outlet #099 и рассматривает утилиту сжатия кода Mr. Pack для ZX Spectrum, к которой нет инструкций.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "mr. pack",
+      "tag_alias": "mr-pack"
+    },
+    {
+      "tag_name": "packer",
+      "tag_alias": "packer"
+    },
+    {
+      "tag_name": "compression",
+      "tag_alias": "compression"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    }
+  ],
+  "category_ids": [
+    71,
+    116
+  ],
+  "body_en_plain": "Some items contributed to OUTLET\nhave not yet been included for a\nvariety of reasons. It's a shame\nto leave them on the shelf so,if\nappropriate, they will be added\nto this ADD-ENDERS area of the\nmagazine (not microdrive or Opus\nas there is not enough room).\n\nThe material covers a wide range\nof quality and program types:\nutilities, screens, character\nsets and text articles and SOME\nof it may be unedited, untested,\nnot working fully or properly;\nin need of conversion for your\n\nsystem's syntax or printer etc.;\nwithout full instructions or\nwhatever. Readers will have to\nsift through to see if there is\nanything of interest they can\nmake use of and discard the\nrest. Not everything will appear\non all versions necessarily.\n\nSome Add-Enders may be linked to\nOUTLET in the normal way. These\nwill usually precede this text\nfile. Any items that follow this\narticle will possibly need to be\nLOADed manually or may not auto-\nrun when loaded.\n\nThere may be some info on the\nfollowing pages...\n\nRemaining in OUTLET is...\n\n\n\n     \"MR. PACK\" codepacker\n     ---------------------\n\nOne of the snags when public do-\nmain programs filter through to\nus, is that there often are no\ninstructions included. The\nfollowing program: \"MR. PACK\" is\nan example of this situation. A\nsuperbly presented utility for\ncompressing code files, but\nrendered useless without any\nclues as to how to operate it!\n\n\nA couple of hours prodding about\nwith it revealed that the arrow\nkeys move between menus and sub-\nmenus very effectively; the code\nruns in the screen area which is\na definite bonus, but a minus\npoint is that it appears to only\nload/save from/to tape.\n\nIt really needs a lot of patient\nexperimenting to work out what\neverything does, unless of\ncourse, anyone has got some\ninstructions ? ? ? ?\n\n                       Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Some items contributed to OUTLET have not yet been included for a variety of reasons. It's a shame to leave them on the shelf so, if appropriate, they will be added to this ADD-ENDERS area of the magazine (not microdrive or Opus as there is not enough room).\n\nThe material covers a wide range of quality and program types: utilities, screens, character sets and text articles and SOME of it may be unedited, untested, not working fully or properly; in need of conversion for your system's syntax or printer etc.; without full instructions or whatever. Readers will have to sift through to see if there is anything of interest they can make use of and discard the rest. Not everything will appear on all versions necessarily.\n\nSome Add-Enders may be linked to OUTLET in the normal way. These will usually precede this text file. Any items that follow this article will possibly need to be LOADed manually or may not auto-run when loaded.\n\nThere may be some info on the following pages...\n\nRemaining in OUTLET is...\n\n### \"MR. PACK\" codepacker\n\nOne of the snags when public domain programs filter through to us, is that there often are no instructions included. The following program: \"MR. PACK\" is an example of this situation. A superbly presented utility for compressing code files, but rendered useless without any clues as to how to operate it!\n\nA couple of hours prodding about with it revealed that the arrow keys move between menus and sub-menus very effectively; the code runs in the screen area which is a definite bonus, but a minus point is that it appears to only load/save from/to tape.\n\nIt really needs a lot of patient experimenting to work out what everything does, unless of course, anyone has got some instructions ? ? ? ?\n\nChris.\n",
+  "body_ru": "Некоторые материалы, присланные в OUTLET, по разным причинам до сих пор не были опубликованы. Жаль оставлять их пылиться на полке, поэтому, когда это уместно, они будут добавляться в эту рубрику журнала — ADD-ENDERS (за исключением версий для микродрайва и Opus, где для этого попросту не хватает места).\n\nЭтот материал весьма разнообразен по качеству и типам программ: утилиты, экраны, наборы шрифтов и текстовые статьи. КОЕ-ЧТО из этого может быть неотредактированным, непротестированным, работать не полностью или некорректно; требовать адаптации под синтаксис вашей системы или принтер и т. д.; быть вовсе без подробных инструкций. Читателям придется покопаться во всем этом самостоятельно, чтобы найти что-то полезное и отсеять остальное. Не всё обязательно появится на всех версиях издания.\n\nНекоторые файлы из Add-Enders могут быть привязаны к меню OUTLET обычным образом — они, как правило, предшествуют этому текстовому файлу. Всё, что следует после этой статьи, возможно, придется загружать вручную (командой LOAD) или запускать отдельно, если автозапуск не сработает.\n\nКое-какая информация может быть на следующих страницах...\n\nВ этом выпуске OUTLET представлен...\n\n### Компрессор кода «MR. PACK»\n\nОдна из постоянных проблем с программами из категории public domain, которые до нас доходят, заключается в том, что к ним часто нет никаких инструкций. Программа «MR. PACK» — как раз такой пример. Великолепно оформленная утилита для сжатия кодовых блоков, но практически бесполезная из-за полного отсутствия подсказок по управлению!\n\nПара часов «тыканья наугад» показала, что клавиши со стрелками очень удобно перемещают курсор между меню и подменю; код утилиты выполняется прямо в области экрана, что является несомненным плюсом, однако жирный минус в том, что она, судя по всему, умеет загружать и сохранять данные только на кассету.\n\nПотребуется немало терпения и экспериментов, чтобы разобраться со всеми её функциями — если, конечно, ни у кого случайно не завалялось к ней инструкции? ? ? ?\n\nChris.\n",
+  "text_type": 3
+}

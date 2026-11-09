@@ -1,0 +1,37 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "127",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Editorial for Outlet #127 (March 1998): reasons for the delay, reminder about the OUTLETTERS Q&A policy, and a call for reader contributions.",
+  "meta_description_ru": "Вступительное слово редакторов Outlet за март 1998 года: причины задержки выпуска, призыв присылать статьи и программы, контактная информация.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    }
+  ],
+  "category_ids": [
+    123,
+    119
+  ],
+  "body_en_plain": "M A R C H ,   1 9 9 8\n\nOnce again, apologies if this\nissue is a bit late but it is a\ndesperate struggle to catch up\neach month from being late from\nthe previous month! A very large\nOUTLETTERS on the PC version of\nOUTLET also meant more delay!\n\n\nMay we remind readers,we can't\nnormally answer computer, soft-\nware, hardware or system queries\netc., personally by mail. All of\nsuch queries are answered in the\nOUTLETTERS section in OUTLET.\nWe are sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\nWith the ever dwindling Spectrum\nmarket every new reader is a big\nhelp. What is especially import-\nant are CONTRIBUTIONS. Remember,\nwe need YOUR support, articles\nand programs, especially utility\nprograms,are always welcome.Even\na short routine can be like gold\nto another user! Send 'em in!\n\n\nLet's waste no more time! There\nare lots of goodies in this iss-\nue waiting for you! Enjoy!\n\n                     Ron & Brian\n\n\n\n\n\n\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n Email: ron.cavers@virgin.net.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nM A R C H ,   1 9 9 8\n\nOnce again, apologies if this issue is a bit late but it is a desperate struggle to catch up each month from being late from the previous month! A very large OUTLETTERS on the PC version of OUTLET also meant more delay!\n\nMay we remind readers,we can't normally answer computer, soft- ware, hardware or system queries etc., personally by mail. All of such queries are answered in the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder!Share your problems with others! That way, everyone benefits!\n\nWith the ever dwindling Spectrum market every new reader is a big help. What is especially import- ant are CONTRIBUTIONS. Remember, we need YOUR support, articles and programs, especially utility programs,are always welcome.Even a short routine can be like gold to another user! Send 'em in!\n\nLet's waste no more time! There are lots of goodies in this iss- ue waiting for you! Enjoy!\n\nRon & Brian\n\nOUTLET is produced by Chris Oliver Ron & Brian Cavers 34 Saltersgate Drive Birstall, Leicester LE4 3FF\n\nEmail: ron.cavers@virgin.net.\n",
+  "body_ru": "## Editorial (late)\n\n### Март, 1998\n\nЕще раз приносим извинения, если этот номер немного задерживается, но каждый месяц нагонять упущенное из-за опоздания в предыдущем — это просто отчаянная борьба! Очень большая рубрика OUTLETTERS, посвященная PC-версии OUTLET, также повлекла за собой дополнительную задержку!\n\nНапоминаем читателям: мы обычно не можем отвечать на вопросы по компьютерам, программному или аппаратному обеспечению, системным проблемам и т.д. лично по почте. Ответы на все подобные вопросы даются в разделе OUTLETTERS журнала OUTLET. Извините, что мы постоянно твердим об этом, но об этом действительно нужно напоминать регулярно! Делитесь своими проблемами с другими! Так пользу получат все!\n\nВ условиях постоянно сокращающегося рынка Spectrum каждый новый читатель — это огромная помощь. Что особенно важно — так это ВАШИ МАТЕРИАЛЫ. Помните, нам нужна ВАША поддержка: статьи и программы, особенно утилиты, приветствуются всегда. Даже короткая процедура может оказаться на вес золота для другого пользователя! Присылайте их!\n\nНе будем больше терять времени! В этом выпуске вас ждет масса интересного! Наслаждайтесь!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n Email: ron.cavers@virgin.net.\n```\n",
+  "text_type": 3
+}

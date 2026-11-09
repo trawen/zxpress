@@ -1,0 +1,45 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "27",
+  "article_id": "13_MISSIO.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Mission Elevator",
+  "title_ru": "Mission Elevator",
+  "meta_description_en": "Release notes and a mini-review for the ZX Spectrum conversion of Mission Elevator from Speccy CD-ROM '97, published in Scene+ #27.",
+  "meta_description_ru": "Заметка к дисковой конверсии игры Mission Elevator со сборника Speccy CD-ROM '97 в австрийском журнале Scene+ #27.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "mission-elevator",
+      "tag_alias": "mission-elevator"
+    },
+    {
+      "tag_name": "c64",
+      "tag_alias": "c64"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    }
+  ],
+  "category_ids": [
+    1,
+    2,
+    3
+  ],
+  "body_de_plain": "M_ELEV. ü - MISSION ELEVATOR - Konvertiert von Speccy CD ROM '97\nmit meinem Titelbild (Sorry,aber aus Snapshots kann man keine\nTitelbilder herausholen wennzu spät gesnapt wurde). Um ehrlich\nzu sein, wußte ich bisher garnicht daß dieses Spiel für den\nSpeccy umgesetzt wurde, ich kannmich jedenfalls an kein Review\naus den bekannten Zeitschriftenerinnern! Sollte Jemand ein\nReview haben, so bitte ich um eine Fotokopie (soll nicht Umsonst\nsein).$ Im Spiel geht es darum irgendwelche Akten zu finden.\nGraphischund spielerisch ist es sehr eng an die C64 Version\nangelehnt, von der man die wildesten Gerüchte hörte. So sollen\ndieRaubkopierer es bereits in ihren Listen gehabt haben, noch\nbevores offizier erschienen ist. Die Kaufwilligen wurden dann\nimmerauf die nächste Woche vertröstet (Laufwerk Kaputt, kann\nnixkopieren!, Masterdisk Ausgeliehen, kommt nächste Woche\nzurück!). - Again a game converted from Speccy CD ROM '97, with\nmy own titlescreen and it's again no fu..ing snapshot like from\nsome other \"excellent\" magazines! The fact is that I did not\nremember any reviews and wassurprised to see this excellent game\nin a PD release. If youhave a review, please make a copy for\nme!. The goal of Mission Elevator is to find some secret files,\nI didnot know exactly how or why because I never played the C64\norginal, but I know, you will find out how to play. Have much\nfun with this game and look forward for otherconversions from\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### MISSION ELEVATOR\n\nConverted from Speccy CD-ROM '97 with my own title screen (sorry, but you can't extract title screens from snapshots if they were taken too late). To be honest, I had no idea until now that this game was ever ported to the Speccy; at least, I cannot recall any review in the well-known magazines! If anyone has a review, please send me a photocopy (I will gladly compensate you for it).\n\nThe goal of the game is to find certain documents. Visually and gameplay-wise, it is very closely based on the C64 version, about which wild rumors once circulated. Word was that software pirates already had it on their lists before it was officially released. Those eager to buy were constantly put off until the following week (\"Drive is broken, can't copy anything!\", \"Master disk is lent out, coming back next week!\").\n\n*(Original English text from the article:)*\n\nAgain a game converted from Speccy CD ROM '97, with my own titlescreen and it's again no fu..ing snapshot like from some other \"excellent\" magazines! The fact is that I did not remember any reviews and was surprised to see this excellent game in a PD release. If you have a review, please make a copy for me! The goal of Mission Elevator is to find some secret files, I did not know exactly how or why because I never played the C64 original, but I know you will find out how to play. Have much fun with this game and look forward to other conversions from...\n",
+  "body_ru": "### MISSION ELEVATOR\n\nИгра сконвертирована со сборника Speccy CD-ROM '97 с моим собственным титульным экраном (извините, но вытащить заставку из снапшота невозможно, если снимок памяти был сделан слишком поздно). Честно говоря, до сих пор я вообще не знал, что эта игра выходила на Спекки — по крайней мере, я не припомню ни одного обзора в известных журналах! Если у кого-то найдётся рецензия, пожалуйста, пришлите мне ксерокопию (я останусь в долгу).\n\nЦель игры — отыскать некие секретные документы. Графически и по игровому процессу она очень близка к версии для Commodore 64, о которой когда-то ходили самые дикие слухи. Говорили, будто пираты уже предлагали её в своих списках ещё до официального релиза. Желающих приобрести её постоянно кормили «завтраками» («Дисковод сломался, ничего не могу скопировать!», «Мастер-диск одолжил, вернут на следующей неделе!»).\n\n*(Английский комментарий автора из статьи:)*\n\n«И снова игра, сконвертированная со Speccy CD ROM '97 с моим собственным титульным экраном, и это опять никакой не дурацкий снапшот, как в некоторых других „замечательных“ журналах! Дело в том, что я совершенно не помню никаких обзоров и был очень удивлён, увидев эту отличную игру в PD-релизе. Если у вас есть обзор, пожалуйста, сделайте для меня копию! Цель Mission Elevator — найти секретные документы. Я толком не знаю, как и почему, потому что никогда не играл в оригинал на C64, но уверен, что вы разберётесь. Приятной игры и ждите новых конверсий от...»\n",
+  "text_type": 3
+}

@@ -1,0 +1,53 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "028",
+  "article_id": "02_editorial",
+  "title_en": "Editorial",
+  "title_ru": "От редакции",
+  "meta_description_en": "Editorial from Outlet #028: Christmas greetings and breaking news about Ablex halting the production of ZX Microdrive cartridges.",
+  "meta_description_ru": "Вступительное слово редакции Outlet #028: рождественские поздравления и новость о прекращении производства картриджей Microdrive компанией Ablex.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "microdrive",
+      "tag_alias": "microdrive"
+    },
+    {
+      "tag_name": "ablex",
+      "tag_alias": "ablex"
+    },
+    {
+      "tag_name": "plus d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    }
+  ],
+  "category_ids": [
+    123,
+    27
+  ],
+  "body_en_plain": "Season's Greetings to All! This\nis OUTLET's third Christmas and\nonce again we can report steady\ngrowth throughout the year. This\nreally is YOUR outlet because an\nincreased proportion of material\ncomes from readers now and your\nideas influence development.\n\nWe've just heard that ABLEX, the\nONLY manufacturer of microdrive\ncartridges, HAVE ALREADY STOPPED\nPRODUCTION of these devices. As\npreviously forecast in LOOKOUT,\nthey first produced a stockpile\nand we have done the same so the\nmicrodrive version of OUTLET is\nsecure for A FEW MONTHS at worst\nbut ONLY A YEAR or so at best.\nNow is the time for microdrivers\nto start thinking about a change\n- perhaps to a +D or the new SAM\ncomputer!\n\n     Merry Christmas to All!\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_ru_plain": "С праздниками всех! Это уже\nтретье Рождество OUTLET, и мы\nвновь можем сообщить о стабиль-\nном росте в течение всего года.\nЭто действительно ВАШ outlet,\nведь всё большая доля материалов\nпоступает от читателей, а ваши\nидеи влияют на развитие журнала.\n\nМы только что узнали, что ABLEX,\nЕДИНСТВЕННЫЙ производитель\nкартриджей для микродрайвов,\nУЖЕ ПРЕКРАТИЛ ПРОИЗВОДСТВО\nэтих устройств. Как уже предска-\nзывалось в LOOKOUT, они сперва\nсоздали запас, и мы сделали то\nже самое, так что микродрайв-\nверсия OUTLET защищена НА\nНЕСКОЛЬКО МЕСЯЦЕВ как минимум,\nно ВСЕГО ЛИШЬ НА ГОД в лучшем\nслучае. Пора владельцам микро-\nдрайвов задуматься о переходе\n— возможно, на +D или на новый\nкомпьютер SAM!\n\n     Merry Christmas to All!\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_en": "## Editorial\n\nSeason's Greetings to All! This is OUTLET's third Christmas and once again we can report steady growth throughout the year. This really is YOUR outlet because an increased proportion of material comes from readers now and your ideas influence development.\n\nWe've just heard that ABLEX, the ONLY manufacturer of microdrive cartridges, HAVE ALREADY STOPPED PRODUCTION of these devices. As previously forecast in LOOKOUT, they first produced a stockpile and we have done the same so the microdrive version of OUTLET is secure for A FEW MONTHS at worst but ONLY A YEAR or so at best. Now is the time for microdrivers to start thinking about a change - perhaps to a +D or the new SAM computer!\n\nMerry Christmas to All!\n\nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "body_ru": "## От редакции\n\nС праздниками всех! Это уже третье Рождество OUTLET, и мы вновь можем сообщить о стабильном росте в течение всего года. Это действительно ВАШ outlet, ведь всё большая доля материалов поступает от читателей, а ваши идеи влияют на развитие журнала.\n\nМы только что узнали, что ABLEX, ЕДИНСТВЕННЫЙ производитель картриджей для микродрайвов, УЖЕ ПРЕКРАТИЛ ПРОИЗВОДСТВО этих устройств. Как уже предсказывалось в LOOKOUT, они сперва создали запас, и мы сделали то же самое, так что микродрайв-версия OUTLET защищена НА НЕСКОЛЬКО МЕСЯЦЕВ как минимум, но ВСЕГО ЛИШЬ НА ГОД в лучшем случае. Пора владельцам микродрайвов задуматься о переходе — возможно, на +D или на новый компьютер SAM!\n\n```text\n     Merry Christmas to All!\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n```\n",
+  "text_type": 3
+}

@@ -1,0 +1,41 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "014",
+  "article_id": "02_editorial",
+  "title_en": "Editorial",
+  "title_ru": "От редакции",
+  "meta_description_en": "Editorial for Outlet #014: disk space shortage, disk labels note, bug fix for the REMSTORE utility (Issue 6), and delivery delays caused by the postal strike.",
+  "meta_description_ru": "Обращение редакции журнала Outlet №14: нехватка места на диске, совет по наклейкам, исправление бага в утилите REMSTORE и задержки из-за забастовки почты.",
+  "authors": [
+    "Ron Clegg",
+    "Brian Watson"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "remstore",
+      "tag_alias": "remstore"
+    },
+    {
+      "tag_name": "исправление багов",
+      "tag_alias": "bugfix"
+    }
+  ],
+  "category_ids": [
+    123,
+    76
+  ],
+  "body_en_plain": "E D I T O R I A L ! !\nSorry,we're short of space again\nand have had to reduce some text\nfiles - especially OUTBOARD!\n\nSome notes:-  If sending a blank\ndisk for OUTLET you need not put\na label on the disk if you don't\nwant to as we stick on an OUTLET\nlabel. A bug in REMSTORE! (Issue\n6).If the last bytes of the code\nto be stored are 0 they could be\nignored- so in such cases add an\nextra byte of any other value.It\nmay not matter in all cases,e.g.\na SCREEN$ after a CLS.The postal\nworkers' strike has hit us badly\n- no output or income for almost\n2 weeks so we can only apologize\nfor any delays etc.- Ron & Brian.\n",
+  "body_ru_plain": "О Т   Р Е Д А К Ц И И ! !\nПростите, у нас опять не хватает\nместа, и нам пришлось сократить\nтексты — особенно OUTBOARD!\n\nПара заметок: присылая чистый\nдиск для OUTLET, вы можете не\nклеить наклейку, если не хотите,\nведь мы клеим наклейку OUTLET.\nБаг в REMSTORE! (Выпуск 6). Если\nпоследние байты сохраняемого\nкода равны 0, они могут быть\nпроигнорированы — так что в этих\nслучаях добавьте лишний байт с\nлюбым другим значением.Это важно\nне везде, напр., SCREEN$ после\nCLS. Забастовка почтовиков очень\nсильно ударила по нам: почти две\nнедели ни рассылки, ни дохода,\nтак что можем лишь извиниться за\nлюбые задержки и т.д.\n- Ron & Brian.\n",
+  "body_en": "## Editorial!!\n\nSorry, we're short of space again and have had to reduce some text files - especially OUTBOARD!\n\nSome notes:\n\n- If sending a blank disk for OUTLET you need not put a label on the disk if you don't want to as we stick on an OUTLET label.\n- A bug in REMSTORE! (Issue 6). If the last bytes of the code to be stored are 0 they could be ignored - so in such cases add an extra byte of any other value. It may not matter in all cases, e.g. a SCREEN$ after a CLS.\n- The postal workers' strike has hit us badly - no output or income for almost 2 weeks so we can only apologize for any delays etc.\n\n— Ron & Brian.\n",
+  "body_ru": "## От редакции!!\n\nПростите, у нас опять не хватает места, и нам пришлось сократить тексты — особенно OUTBOARD!\n\nПара заметок: присылая чистый диск для OUTLET, вы можете не клеить наклейку, если не хотите, ведь мы клеим наклейку OUTLET. Баг в REMSTORE! (Выпуск 6). Если последние байты сохраняемого кода равны 0, они могут быть проигнорированы — так что в этих случаях добавьте лишний байт с любым другим значением. Это важно не везде, напр., SCREEN$ после CLS. Забастовка почтовиков очень сильно ударила по нам: почти две недели ни рассылки, ни дохода, так что можем лишь извиниться за любые задержки и т.д.\n\n— Ron & Brian.\n",
+  "text_type": 3
+}

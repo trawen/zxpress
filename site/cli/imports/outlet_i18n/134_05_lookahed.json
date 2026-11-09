@@ -1,0 +1,39 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "134",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead: Previewing Outlet #135",
+  "title_ru": "Анонс: В следующем номере Outlet #135",
+  "meta_description_en": "Chris Cowley previews the upcoming November issue of Outlet (#135), featuring a star-map program, +D utilities, music reviews, and an artificial sun event.",
+  "meta_description_ru": "Крис Каули анонсирует ноябрьский номер Outlet (#135): программа звездного неба, дисковые утилиты для +D, музыкальное демо, обзор софта и космический эксперимент.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "+d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "public domain",
+      "tag_alias": "public-domain"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Don't forget to have a look at\nthe night sky on November 9th.\nThe artificial Sun developed by\nSpace Regatta Consortium is due\nto pass over Europe every 90\nminutes. From southern England\nit will be low on the horizon\nand should look about half the\nsize of the Moon, but very much\nbrighter. Let's hope it is a\nclear night!\n\nWhich leads me to..\n\n\nIn the November OUTLET there is\na star-map program to help you\nidentify the constellations of\nthe twelve signs of the Zodiac.\nThis could be something to do\nbetween passes? Looking south\nfrom the northern hemisphere,\nyou should see Taurus.\n\nOnce again, next month's issue\nhas a good diversity of programs\nincluding some utilities. There\nis one to shrink a Basic program\nanother to store or recall a\nscreen, and a ready made module\nfor the first stage of a utility\n(the bit that finds a file off a\n+D disc from an input of either\nfilename or 'P' number), which\nyou can use in your own util-\nities.\n\n\nThen there's an OUTBURST about\nthe quirks of the English lang-\nuage, and a review of a high\nquality music generator, the\nsolution to this month's PUZPIX,\na fascinating music demo with\nanimations. Watch out for the\ncounter in the demo which counts\ndown to...  well, you'll find\nout.\n\nThere are lots of first class\ngames for the Spectrum which are\nnow entering the Public Domain,\nand next month we bring you\nanother wonderfully addictive\none. Then there are lots of\nthings I've not mentioned.\n\n                         Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Don't forget to have a look at the night sky on November 9th. The artificial Sun developed by Space Regatta Consortium is due to pass over Europe every 90 minutes. From southern England it will be low on the horizon and should look about half the size of the Moon, but very much brighter. Let's hope it is a clear night!\n\nWhich leads me to...\n\nIn the November OUTLET there is a star-map program to help you identify the constellations of the twelve signs of the Zodiac. This could be something to do between passes? Looking south from the northern hemisphere, you should see Taurus.\n\nOnce again, next month's issue has a good diversity of programs including some utilities. There is one to shrink a Basic program, another to store or recall a screen, and a ready-made module for the first stage of a utility (the bit that finds a file off a +D disc from an input of either filename or 'P' number), which you can use in your own utilities.\n\nThen there's an OUTBURST about the quirks of the English language, and a review of a high quality music generator, the solution to this month's PUZPIX, a fascinating music demo with animations. Watch out for the counter in the demo which counts down to... well, you'll find out.\n\nThere are lots of first class games for the Spectrum which are now entering the Public Domain, and next month we bring you another wonderfully addictive one. Then there are lots of things I've not mentioned.\n\nChris.\n",
+  "body_ru": "Не забудьте взглянуть на ночное небо 9 ноября. Искусственное солнце, созданное консорциумом «Космическая регата», будет пролетать над Европой каждые 90 минут. На юге Англии оно пройдет низко над горизонтом и по размеру будет казаться примерно вдвое меньше Луны, но гораздо ярче. Будем надеяться, что ночь выдастся ясной!\n\nИ это подводит меня к следующему...\n\nВ ноябрьском номере OUTLET вы найдете программу-карту звездного неба, которая поможет вам определить созвездия двенадцати знаков Зодиака. Отличное занятие в перерывах между пролетами зеркала! Глядя на юг из северного полушария, вы сможете увидеть Тельца.\n\nВ выпуске следующего месяца вас снова ждет разнообразная подборка программ, включая утилиты. Среди них: инструмент для сжатия Бейсик-программ, модуль для сохранения и восстановления экранов, а также готовая заготовка для начала любой утилиты (подпрограмма поиска файла на диске системы +D по введенному имени или номеру страницы 'P'), которую вы сможете использовать в собственных разработках.\n\nКроме того, в номере появится колонка OUTBURST о причудах английского языка, обзор качественного музыкального генератора, разгадка к головоломке PUZPIX из этого номера и потрясающее музыкальное демо с анимацией. Обратите внимание на счетчик в демо, который отсчитывает время до... впрочем, сами всё увидите.\n\nСейчас многие первоклассные игры для Spectrum переходят в общественное достояние (Public Domain), и в следующем месяце мы порадуем вас еще одной невероятно увлекательной новинкой. И это далеко не всё, о чем я упомянул.\n\nChris.\n",
+  "text_type": 3
+}

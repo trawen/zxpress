@@ -1,0 +1,49 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "02",
+  "article_id": "06_NEWS_1",
+  "source_lang": "de-AT",
+  "title_en": "Scene News",
+  "title_ru": "Новости сцены",
+  "meta_description_en": "Scene+ #02 news roundup: Crashed, ZAT 2, SUC, Wolfgang Haller's new game, FORMAT vs SUC, Omega's megademo project, and the state of the Spectrum scene.",
+  "meta_description_ru": "Новости из Scene+ #02: фэнзины Crashed, ZAT 2, активность SUC, новая игра Вольфганга Халлера, перемирие FORMAT и SUC, проект мегадемо от Omega и обстановка на рынке Speccy.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    },
+    {
+      "tag_name": "fanzines",
+      "tag_alias": "fanzines"
+    },
+    {
+      "tag_name": "news",
+      "tag_alias": "news"
+    },
+    {
+      "tag_name": "demoscene",
+      "tag_alias": "demoscene"
+    }
+  ],
+  "category_ids": [
+    123,
+    130,
+    96
+  ],
+  "body_de_plain": "NEWS:\n\nCRASHED steigert seine Qualität, die letzten Ausgaben hatten ein\nFarbcover und erscheinen einigermaßen  pünktlich.  Simon  Cooke,\nder früher bei YS die Rubrik SpecTec Jnr führte  und  sich  dort\nauch mit  Cracks  beschäftigte,  wird  jetzt  auch  für  CRASHED\nschreiben.  Zur  Zeit  ist  Simon  noch  außerdem   einer    der\nHerausgeber des Hardwaremagazins \"Based on a Idea\"\n\nZAT 2 scheint wirklichkeit zu werden. Mat  Beal,  ex-Herausgeber\nvon FISH und CRASHED scheint es übernohmen zu haben nachdem  ZAT\n1 von dem früheren  Herausgeber  wegen  Zeitmangels  eingestellt\nwurde.\n\nSUC scheint im Internet Werbung für sich zu haben, ASC will  den\ngleichen Weg gehen. Im Augenblick suche ich noch ein  geeignetes\nInternet  Cafe  und  überlege  mir  einen    PC    zu    kaufen.\nMöglicherweise  kann  ich  so  an  österreichische   Specci-User\nrankommen.\n\nWolfgang Haller, der Leiter von SPC hat wieder ein  neues  Spiel\nin vorbereitung, Er hat mir versprochen  es  zu  schicken,  dann\ngibt es den Test vom \"JAGDSPIEL\". Tja Wolfgang, nur weiter so!\nIch hoffe jetzt nur daß ich die SPC Redaktion nicht  mit  meinem\nPyramid Patience lahmgelegt habe! Insider  wissen  wie  ich  das\nmeine.\n\nFORMAT, die mit 4500 Lesern eine der Auflagestärksten  Fanzines,\nhat  die  Unklarheiten  mit  SUC  bereits  beseitigt.  Es   ging\nhaptsächlich darum, daß FORMAT nicht über die neue Hardware  von\nSINTECH berichten wollte. Dann wurde  durch  mangelnde  Kontakte\ndie Speccy Show in Gloucester am demselben Tag, wie das  Treffen\nin Filderstadt veranstaltet. Gottseidank ist  kein  neuer  Krieg\nausgebrochen.\n\nAdventure Coder II - The  Preceptor  scheint  ein  interessantes\nMagazin für Adventure Freunde zu sein, es wird nicht nur Artikel\nfür 8 Bit, sondern auch für 16 Bit beinhalten.\n\nPrism PD scheint auch auf dem CPC Markt Fuss zu fassen, es  soll\nbald die CPC Version von PD Power zu geben.  Leider  sind  meine\nDaten  etwas  wegen  des  Umzugs  durcheinandergeraten,  deshalb\nbekomme ich die zwei letzten Ausgaben  von  Spectrum-  PD  Power\nerst in kürze.\n\nSPELLUNKLER Enchanted Realms wird endlich weitergeführt, und  da\nbehaupten Leute daß der Spectrum tot ist?\n\nDatel Electronics hatte Lieferschwierigkeiten bei +D's.  In  der\nVorweihnachtszeit gingen zu viele  Bestellungen  ein.  Wer  also\nnoch ein Diskinterface sucht und nicht mehr länger auf DX1  oder\nMB02/MB03 warten will, sollte möglichst noch  vor  dem  Nächstem\nWeihnachtsfest einkaufen.\n\nOmega wird versuchen noch ein Megademo zu coden,  dazu  ruft  er\nalle coder der Welt auf, ein Part zu coden und ihm zu  schicken.\nSeine  Adresse:  Jan  Palenicek,  Sumice  110,  68731  Okr.  Uh.\nHradiste, Czech Republic. Schreibt aber in Englisch. Wie ich den\nWillen  zur  Mitarbeit  kenne,  wird  er  höchstens  drei  Parts\nzusammenkratzen und den Rest selber  schreiben.  Ich  werde  mal\nsehen ob sich die Situation  nicht  für  ASC  Werbung  ausnützen\nlässt.\n\nLa Lettre Du Spectrumaniac, ein Fanzine in französischer Sprache\nwird eingestellt, entgegen allen Gerüchten hat dies  nichts  mit\nden Atombombentests zu tun, sondern mit etwas noch fieserem, das\nunsere Gesellschaft bis in die Fundamente erschüttert: PC-Seuche\n.\n\nSoftware für Spectrum wird immer noch produziert, und ich  meine\nnicht  nur  PD,  sondern  auch  komerzieles.  Fish  bringt  nach\nFishpaste 1+2 wieder eine neue Compilation, Microspec  hat  neue\nAnwendungen im Angebot, MDL Software  und  andere  bringen  auch\netwas, doch das kann nicht darüber hinwegtäuschen  daß  Spectrum\nUser zu wenig neue Soft vorgesetzt bekommen. Sie sind aber daran\nnicht ganz unschuldig, denn die Gewinne  von  Spectrum  Software\nVerkäufen sind nicht  allzu  hoch.  Andererseits  ist  auch  die\nVertriebsstruktur schlecht,  denn  es  gibt  nur  in  seltensten\nFällen Shops die Spectrum Software überhaupt führen.\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### NEWS:\n\n**CRASHED** is improving in quality: recent issues featured a color cover and have been coming out reasonably on time. Simon Cooke, who used to run the *SpecTec Jnr* column in *Your Sinclair* where he also dealt with cracks, will now be writing for CRASHED as well. Currently, Simon is also one of the editors of the hardware magazine *Based on an Idea*.\n\n**ZAT 2** seems to be becoming a reality. Mat Beal, former publisher of FISH and CRASHED, seems to have taken it over after ZAT 1 was shut down by its previous publisher due to lack of time.\n\n**SUC** seems to have advertising for itself on the Internet, and ASC wants to follow the same path. At the moment, I'm still searching for a suitable Internet café and considering buying a PC. Perhaps this way I can reach Austrian Speccy users.\n\nWolfgang Haller, head of **SPC**, is preparing another new game. He promised to send it to me, so there will be a review of \"JAGDSPIEL\". Well, Wolfgang, keep it up! I just hope I didn't paralyze the SPC editorial team with my *Pyramid Patience*! Insiders will know what I mean.\n\n**FORMAT**, one of the fanzines with the largest circulation (around 4,500 readers), has already cleared up the misunderstandings with SUC. The main issue was that FORMAT refused to report on the new hardware from SINTECH. Then, due to poor communication, the Speccy Show in Gloucester took place on the exact same day as the gathering in Filderstadt. Thank goodness no new war broke out.\n\n**Adventure Coder II – The Preceptor** looks to be an interesting magazine for adventure fans; it will cover not only 8-bit, but also 16-bit systems.\n\n**Prism PD** seems to be gaining ground in the CPC market as well; a CPC version of *PD Power* should be available soon. Unfortunately, my data got a bit jumbled due to the move, so I'll only receive the last two issues of *Spectrum PD Power* shortly.\n\n**SPELLUNKLER Enchanted Realms** is finally being continued — and people still claim that the Spectrum is dead?\n\n**Datel Electronics** had delivery difficulties with +D interfaces due to too many orders coming in before Christmas. So if you're still looking for a disk interface and don't want to wait any longer for the DX1 or MB02/MB03, you should buy it well ahead of next Christmas.\n\n**Omega** is planning to code another megademo and is calling on all coders worldwide to contribute a part and send it to him. His address:  \nJan Palenicek, Sumice 110, 68731 Okr. Uh. Hradiste, Czech Republic.  \nPlease write in English. Knowing people's willingness to contribute, he'll probably scrape together at most three parts and code the rest himself. I'll see whether this situation can be used to promote ASC.\n\n**La Lettre Du Spectrumaniac**, a French-language fanzine, is folding. Contrary to all rumors, this has nothing to do with nuclear tests, but with something far more insidious that shakes the very foundations of our society: the PC plague.\n\nSoftware for the Spectrum is still being produced, and I don't mean just public domain, but commercial releases as well. After *Fishpaste 1+2*, Fish is putting out another compilation, Microspec has new utility software on offer, MDL Software and others are releasing titles too. However, that cannot conceal the fact that Spectrum users simply don't get enough new software. Users aren't completely blameless either, as profits from Spectrum software sales are not very high. On the other hand, the distribution infrastructure is also poor, as shops stocking Spectrum software at all are extremely rare nowadays.\n",
+  "body_ru": "### НОВОСТИ:\n\nЖурнал **CRASHED** повышает планку качества: последние выпуски выходили с цветной обложкой и более-менее пунктуально. Саймон Кук (Simon Cooke), который ранее вел рубрику *SpecTec Jnr* в *Your Sinclair* и занимался там в том числе взломами, теперь будет писать и для CRASHED. Кроме того, в настоящее время Саймон является одним из издателей\n",
+  "text_type": 3
+}

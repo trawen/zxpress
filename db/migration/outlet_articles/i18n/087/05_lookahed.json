@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "087",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of next month's bumper Christmas edition of Outlet, featuring DOS bug fixes, a Basic compiler, hardware tips, and festive treats.",
+  "meta_description_ru": "Анонс праздничного рождественского выпуска Outlet: исправления ошибок для G+DOS и BetaDOS, компилятор Бейсика, доработки железа и многое другое.",
+  "authors": [
+    "Chris"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "g+dos",
+      "tag_alias": "g-plus-dos"
+    },
+    {
+      "tag_name": "betados",
+      "tag_alias": "betados"
+    },
+    {
+      "tag_name": "compiler",
+      "tag_alias": "compiler"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_en_plain": "Next month is our bumper Christ-\nmas edition of OUTLET with sack-\nfulls of goodies to delight you.\nThere's even a greetings card\nfrom abroad!\n\nOn the practical side, we learn\nabout some rather nasty little\n\"Bugs\" which lurk in G+DOS and\nin BetaDOS, but there is a happy\nending as a couple of \"Fix\"\nprograms are provided to remove\nthe little horrors!\n\nThere are several other helpful\nutilities, the most exciting of\nwhich (for programmers) is a\nBasic compiler that can make\nyour Basic routines zip along as\nif they were written in machine\ncode. We had TOGGLER in OUTLET\n#86 to switch between 48k and\n128k mode; now a reader suggests\na possible way of switching mode\nby hardware. There will be some\nrelaxing classical music, a\nmurder mystery to solve (thinly\ndisguised as an educational\nprogram!), at least one demo to\namaze you, and,as usual,anything\nelse that we can squeeze in. Is\nthat an orange I can feel in the\ntoe of the stocking?\n\n                       Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Next month is our bumper Christmas edition of OUTLET with sackfulls of goodies to delight you. There's even a greetings card from abroad!\n\nOn the practical side, we learn about some rather nasty little \"Bugs\" which lurk in G+DOS and in BetaDOS, but there is a happy ending as a couple of \"Fix\" programs are provided to remove the little horrors!\n\nThere are several other helpful utilities, the most exciting of which (for programmers) is a Basic compiler that can make your Basic routines zip along as if they were written in machine code. We had TOGGLER in OUTLET #86 to switch between 48k and 128k mode; now a reader suggests a possible way of switching mode by hardware. There will be some relaxing classical music, a murder mystery to solve (thinly disguised as an educational program!), at least one demo to amaze you, and, as usual, anything else that we can squeeze in. Is that an orange I can feel in the toe of the stocking?\n\nChris.\n",
+  "body_ru": "В следующем месяце вас ожидает наш праздничный рождественский выпуск OUTLET — с целым мешком подарков к празднику! Будет даже поздравительная открытка из-за рубежа!\n\nЧто касается практической стороны дела: мы расскажем о нескольких весьма неприятных багах, притаившихся в G+DOS и BetaDOS. Но всё закончится благополучно — мы приложим пару программ-фиксов, чтобы избавиться от этих мелких напастей!\n\nТакже вас ждёт ещё несколько полезных утилит, самая захватывающая из которых (для программистов) — компилятор Бейсика, способный заставить ваши подпрограммы летать так, будто они написаны в машинных кодах. В OUTLET #86 мы публиковали TOGGLER для переключения между режимами 48k и 128k; теперь же один из читателей предлагает вариант аппаратного переключения. Кроме того, будет немного расслабляющей классической музыки, детектив с убийством (слегка замаскированный под обучающую программу!), как минимум одно потрясающее демо и, по традиции, всё остальное, что мы только сумеем туда уместить. Не апельсин ли это нащупывается на дне рождественского носка?\n\nChris.\n",
+  "text_type": 3
+}

@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "124",
+  "article_id": "08_disector",
+  "title_en": "Disector Instructions",
+  "title_ru": "Инструкция к Disector",
+  "meta_description_en": "Instructions for Disector, a disk sector editor for the DISCiPLE and +D interfaces on the ZX Spectrum, written by Peter Johnson.",
+  "meta_description_ru": "Инструкция к программе Disector — секторному дисковому редактору для интерфейсов DISCiPLE и +D на ZX Spectrum от Питера Джонсона.",
+  "authors": [
+    "Peter Johnson"
+  ],
+  "tags": [
+    {
+      "tag_name": "disector",
+      "tag_alias": "disector"
+    },
+    {
+      "tag_name": "disciple",
+      "tag_alias": "disciple"
+    },
+    {
+      "tag_name": "plus-d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "дисковый редактор",
+      "tag_alias": "disk-editor"
+    },
+    {
+      "tag_name": "утилиты",
+      "tag_alias": "utilities"
+    }
+  ],
+  "category_ids": [
+    62,
+    64,
+    73
+  ],
+  "body_en_plain": "DISECTOR INSTRUCTIONS\n        By Peter Johnson\n     ---------------------\nThe next item is a disk sector\neditor for the Disciple/+D.\n\nTHE KEYS:\n\nD to change the Drive number.\n\nT to change the Track number.\n\nS to change the Sector number.\n\n\nL to Locate a number or string\nof characters on the disc.\n\nN to find the Next occurrence.\n\nI to Install the header of a\nprogram.\n\nP to trace the Program across\nthe disc. You MUST use Install\nfirst.\n\nE to Edit a sector.\n\nH to Hide a file so that it will\nnot appear when you CATalogue.\n\nF to move one sector Forwards.\n\nB to move one sector Backwards.\n\n\n\nS to Save the sector from memory\nto disc.\n\nARROW KEYS to move the cursor\nabout in the sector displayed\non screen.\n\nQ to Quit.\n\nThe keys for the EDIT mode are\nexplained in the program.\n\nThe sector display is a little\nconfusing at first, but the code\nof the character pointed to by\nthe cursor is displayed in deci-\nmal at the bottom of the screen.\nWhich makes it quite easy to\nuse.\n\n   PRESS N TO LOAD DISECTOR!\n.\n",
+  "body_ru_plain": "",
+  "body_en": "## DISECTOR INSTRUCTIONS\n**By Peter Johnson**\n\nThe next item is a disk sector editor for the Disciple/+D.\n\n### THE KEYS:\n\n* **D** — change the Drive number.\n* **T** — change the Track number.\n* **S** — change the Sector number.\n* **L** — Locate a number or string of characters on the disc.\n* **N** — find the Next occurrence.\n* **I** — Install the header of a program.\n* **P** — trace the Program across the disc. You MUST use Install first.\n* **E** — Edit a sector.\n* **H** — Hide a file so that it will not appear when you CATalogue.\n* **F** — move one sector Forwards.\n* **B** — move one sector Backwards.\n* **S** — Save the sector from memory to disc.\n* **ARROW KEYS** — move the cursor about in the sector displayed on screen.\n* **Q** — Quit.\n\nThe keys for the EDIT mode are explained in the program.\n\nThe sector display is a little confusing at first, but the code of the character pointed to by the cursor is displayed in decimal at the bottom of the screen. Which makes it quite easy to use.\n\nPRESS N TO LOAD DISECTOR!\n",
+  "body_ru": "## ИНСТРУКЦИЯ К DISECTOR\n**Питер Джонсон (Peter Johnson)**\n\nСледующая программа — это редактор дисковых секторов для интерфейсов Disciple/+D.\n\n### УПРАВЛЕНИЕ:\n\n* **D** — сменить номер дисковода (Drive).\n* **T** — сменить номер дорожки (Track).\n* **S** — сменить номер сектора (Sector).\n* **L** — найти число или строку символов на диске (Locate).\n* **N** — найти следующее совпадение (Next).\n* **I** — задать заголовок программы (Install).\n* **P** — отследить цепочку секторов программы на диске (trace Program). Перед этим ОБЯЗАТЕЛЬНО нужно выполнить Install.\n* **E** — редактировать сектор (Edit).\n* **H** — скрыть файл, чтобы он не отображался при просмотре каталога (Hide).\n* **F** — перейти на один сектор вперёд (Forwards).\n* **B** — перейти на один сектор назад (Backwards).\n* **S** — сохранить сектор из памяти на диск (Save).\n* **КЛАВИШИ СО СТРЕЛКАМИ** — перемещение курсора по отображаемому сектору.\n* **Q** — выход (Quit).\n\nНазначение клавиш для режима редактирования (EDIT) описано внутри самой программы.\n\nОтображение сектора поначалу может показаться непривычным, но код символа, на который указывает курсор, выводится в десятичном виде в нижней части экрана, что делает работу с редактором довольно удобной.\n\nНАЖМИТЕ N, ЧТОБЫ ЗАГРУЗИТЬ DISECTOR!\n",
+  "text_type": 3
+}

@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "011",
+  "article_id": "03_instruct2",
+  "title_en": "ADD A CAT Patch for Hisoft GENS3M2",
+  "title_ru": "Патч ADD A CAT для Hisoft GENS3M2",
+  "meta_description_en": "Instructions for Paul Preston's ADD A CAT utility, which patches Hisoft's GENS3M2 assembler to add the Sinclair CAT command.",
+  "meta_description_ru": "Инструкция к утилите ADD A CAT от Пола Престона, добавляющей команду CAT в ассемблер Hisoft GENS3M2 для ZX Spectrum.",
+  "authors": [
+    "Paul Preston"
+  ],
+  "tags": [
+    {
+      "tag_name": "gens3m2",
+      "tag_alias": "gens3m2"
+    },
+    {
+      "tag_name": "hisoft",
+      "tag_alias": "hisoft"
+    },
+    {
+      "tag_name": "assembler",
+      "tag_alias": "assembler"
+    },
+    {
+      "tag_name": "microdrive",
+      "tag_alias": "microdrive"
+    },
+    {
+      "tag_name": "utility",
+      "tag_alias": "utility"
+    }
+  ],
+  "category_ids": [
+    65,
+    64
+  ],
+  "body_en_plain": "ADD A CAT  by Paul Preston\n   --------------------------\n\nThis program adds a Sinclair CAT\nto Hisoft's GENS3M2 assembler.\nYes, for just an extra 16 bytes\nof memory and at the expense of\nrelocatability.\n\nThere now follows step by step\ninstructions in the use of this\nprogram :-\n\n1.LOAD \"ADD A CAT\".\n\n2. RUN the program. Type in the\nname you have called the GENS\nassembler code on the cartridge.\n\n3.Insert cartridge containing\nGENS assembler in drive 1.\n\n4.Press any key.\n\n5.The program will load the\nassembler and then RUN USR the\nassembler.\n\n6.whilst in the assembler type B\nfollowed by enter to return to\nBASIC.\n\n7.In BASIC type GOTO 200.\n\n8.The program will now save a\ncopy of the assembler with the\nbuilt in CAT function.\n\n9.Note that with the CAT command\nincluded the assembler is now\nnon-relocatable, loading and\nrunning at 26000. To use the CAT\ntype 'z' followed by 'enter'.\n\n                 Paul Preston\n\n   PRESS N TO LOAD \"ADD A CAT\"\n\n[Note that without the assembler\nI have been unable to test this\nprogram. Take care also on the\nmicrodrive version as there are\nonly just enough bytes spare to\naccess the drives as RAMTOP is\nreduced down to 25999 - Brian].\n",
+  "body_ru_plain": "ADD A CAT  by Paul Preston\n   --------------------------\n\nЭта программа добавляет команду\nSinclair CAT в ассемблер GENS3M2\nот Hisoft. Да, всего за 16 допол-\nнительных байт памяти и ценой\nпотери перемещаемости.\n\nНиже следуют пошаговые инструк-\nции по использованию этой\nпрограммы:\n\n1. LOAD \"ADD A CAT\".\n\n2. Запустите программу (RUN).\nВведите имя, под которым код\nассемблера GENS записан на вашем\nкартридже.\n\n3. Вставьте картридж с ассемб-\nлером GENS в drive 1.\n\n4. Нажмите любую клавишу.\n\n5. Программа загрузит ассемблер,\nа затем запустит его через USR.\n\n6. Находясь в ассемблере, набе-\nрите B и нажмите Enter, чтобы\nвернуться в BASIC.\n\n7. В BASIC наберите GOTO 200.\n\n8. Программа сохранит копию\nассемблера со встроенной\nфункцией CAT.\n\n9. Учтите, что с добавленной\nкомандой CAT ассемблер перестаёт\nбыть перемещаемым: он загружает-\nся и работает с адреса 26000.\nДля вызова CAT введите 'z'\nи нажмите 'Enter'.\n\n                 Paul Preston\n\n НАЖМИТЕ N ДЛЯ ЗАГРУЗКИ \"ADD A CAT\"\n\n[Замечу, что без самого ассемб-\nлера я не смог протестировать эту\nпрограмму. Будьте также осторож-\nны с версией для microdrive, так\nкак свободной памяти для работы\nс приводами едва хватает из-за\nтого, что RAMTOP опущен до\n25999 — Brian].\n",
+  "body_en": "## ADD A CAT\n**by Paul Preston**\n\nThis program adds a Sinclair CAT to Hisoft's GENS3M2 assembler. Yes, for just an extra 16 bytes of memory and at the expense of relocatability.\n\nThere now follows step by step instructions in the use of this program:\n\n1. LOAD \"ADD A CAT\".\n2. RUN the program. Type in the name you have called the GENS assembler code on the cartridge.\n3. Insert cartridge containing GENS assembler in drive 1.\n4. Press any key.\n5. The program will load the assembler and then RUN USR the assembler.\n6. Whilst in the assembler type B followed by enter to return to BASIC.\n7. In BASIC type GOTO 200.\n8. The program will now save a copy of the assembler with the built in CAT function.\n9. Note that with the CAT command included the assembler is now non-relocatable, loading and running at 26000. To use the CAT type 'z' followed by 'enter'.\n\nPaul Preston\n\nPRESS N TO LOAD \"ADD A CAT\"\n\n*[Note that without the assembler I have been unable to test this program. Take care also on the microdrive version as there are only just enough bytes spare to access the drives as RAMTOP is reduced down to 25999 - Brian].*\n",
+  "body_ru": "## ADD A CAT\n\n*by Paul Preston*\n\nЭта программа добавляет команду Sinclair CAT в ассемблер GENS3M2 от Hisoft. Да, всего за 16 дополнительных байт памяти и ценой потери перемещаемости.\n\nНиже следуют пошаговые инструкции по использованию этой программы:\n\n1. LOAD \"ADD A CAT\".\n2. Запустите программу (RUN). Введите имя, под которым код ассемблера GENS записан на вашем картридже.\n3. Вставьте картридж с ассемблером GENS в drive 1.\n4. Нажмите любую клавишу.\n5. Программа загрузит ассемблер, а затем запустит его через USR.\n6. Находясь в ассемблере, наберите B и нажмите Enter, чтобы вернуться в BASIC.\n7. В BASIC наберите GOTO 200.\n8. Программа сохранит копию ассемблера со встроенной функцией CAT.\n9. Учтите, что с добавленной командой CAT ассемблер перестаёт быть перемещаемым: он загружается и работает с адреса 26000. Для вызова CAT введите 'z' и нажмите 'Enter'.\n\n*Paul Preston*\n\n**НАЖМИТЕ N ДЛЯ ЗАГРУЗКИ \"ADD A CAT\"**\n\n> [Замечу, что без самого ассемблера я не смог протестировать эту программу. Будьте также осторожны с версией для microdrive, так как свободной памяти для работы с приводами едва хватает из-за того, что RAMTOP опущен до 25999 — Brian].\n",
+  "text_type": 3
+}

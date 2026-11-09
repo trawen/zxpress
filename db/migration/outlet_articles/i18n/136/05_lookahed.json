@@ -1,0 +1,47 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "136",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонсы следующего номера",
+  "meta_description_en": "A preview of Outlet #137: a nuclear power station simulator, a 128k sound emulator guide, Tasword 2 upgrades, a screen compressor, a disc editor, and Batty with 255 lives.",
+  "meta_description_ru": "Анонс Outlet #137: симулятор АЭС, схема сборки 128k звукового эмулятора, улучшения для Tasword 2, упаковщик экранов, дисковый редактор и Batty с 255 жизнями.",
+  "authors": [
+    "Chris T."
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "tasword 2",
+      "tag_alias": "tasword-2"
+    },
+    {
+      "tag_name": "batty",
+      "tag_alias": "batty"
+    },
+    {
+      "tag_name": "sound emulator",
+      "tag_alias": "sound-emulator"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "There's an exciting collection\nof items in next month's OUTLET\nincluding the chance for you\ncontrol a nuclear power station.\nAnd, in case you find it too\neasy,the author has thoughtfully\nput in a couple of Basic lines\nwhich, when un-REMed, will simu-\nlate the meltdown that occurred\nat Three Mile Island! Also on\nthe practical side (if you can\ncall causing a Nuclear disaster\n\"practical\"?)is a DRIVECHAT with\ninstructions on constructing a\n128k sound emulator.\n\nThere are some first-class util-\nities including improvements to\nTasword 2, an intelligent screen\ncompressor, and a versatile disc\neditor.\n\nOn the leisure side, Belinda\nCarlisle fans can look forward\nto a sample of one of her hits,\nand even I could do well in the\nexcellent version of that class-\nic game BATTY, as you are prov-\nided with a generous 255 lives!\n\nHave a good Christmas.\n\n           Cheers,\n\n              Chris\n\nT.\n",
+  "body_ru_plain": "",
+  "body_en": "There's an exciting collection of items in next month's OUTLET including the chance for you control a nuclear power station. And, in case you find it too easy, the author has thoughtfully put in a couple of Basic lines which, when un-REMed, will simulate the meltdown that occurred at Three Mile Island! Also on the practical side (if you can call causing a Nuclear disaster \"practical\"?) is a DRIVECHAT with instructions on constructing a 128k sound emulator.\n\nThere are some first-class utilities including improvements to Tasword 2, an intelligent screen compressor, and a versatile disc editor.\n\nOn the leisure side, Belinda Carlisle fans can look forward to a sample of one of her hits, and even I could do well in the excellent version of that classic game BATTY, as you are provided with a generous 255 lives!\n\nHave a good Christmas.\n\nCheers,\n\nChris T.\n",
+  "body_ru": "В следующем выпуске OUTLET вас ждёт увлекательная подборка материалов, включая возможность взять под управление атомную электростанцию. А если задача покажется вам слишком простой, автор заботливо припас пару строк на Бейсике, раскомментировав которые, можно сымитировать аварию с расплавлением активной зоны, произошедшую на Три-Майл-Айленд! Кроме того, из практических материалов (если вообще можно назвать моделирование ядерной катастрофы «практическим» делом) вас ждёт выпуск DRIVECHAT с инструкцией по сборке эмулятора звука 128k.\n\nТакже будет представлен ряд первоклассных утилит, в числе которых доработки для Tasword 2, интеллектуальный упаковщик экранов и многофункциональный дисковый редактор.\n\nЧто касается развлечений, поклонники Belinda Carlisle могут рассчитывать на оцифровку одного из её хитов, а в отличной версии классической игры BATTY преуспеть смогу даже я, ведь в ней заботливо предоставлены аж 255 жизней!\n\nСчастливого Рождества.\n\nВсего наилучшего,\n\nChris T.\n",
+  "text_type": 3
+}

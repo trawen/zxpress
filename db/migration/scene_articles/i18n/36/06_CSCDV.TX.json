@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "36",
+  "article_id": "06_CSCDV.TX",
+  "source_lang": "de-AT",
+  "title_en": "Crime Santa Claus – Déjà Vu (Demo)",
+  "title_ru": "Crime Santa Claus – Déjà Vu (Демо)",
+  "meta_description_en": "Overview and control instructions for the playable demo of the Dizzy-like adventure game Crime Santa Claus – Déjà Vu (128K) on the ZX Spectrum.",
+  "meta_description_ru": "Краткое описание и управление для играбельной демо-версии Dizzy-подобного квеста Crime Santa Claus – Déjà Vu (128K) на ZX Spectrum.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "crime-santa-claus",
+      "tag_alias": "crime-santa-claus"
+    },
+    {
+      "tag_name": "dizzy-like",
+      "tag_alias": "dizzy-like"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "CRIME ü\n----------------------------------------------------------------\nPlayable Demo of CRIME SANTA CLAUS-DEJA VU (128)\n----------------------------------------------------------------\nSchon wieder ein Dizzyähnliches Spiel, diesmal mit dem\nNikolaus,der jetzt zum Bösen übergelaufen ist. Solltet ihr einen\nSpeccyohne eingebautes Kempston Interface haben, drückt \"K\" um\ndieKempstonabfrage zu deaktivieren. Steuerung:\nKempston/Sinclair/Q,A,O, Tasten.\n----------------------------------------------------------------\nAgain a Dizzy-like adventure, this time with a evil SantaClause.\nIf you have a Speccy without build in Kempstoninterface, press\n\"K\" during gameplay to deactivate Kempstonrequest. Controls:\nKempston/Sinclair/Q,A,O,P keys.\n----------------------------------------------------------------\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "## Playable Demo of CRIME SANTA CLAUS - DÉJÀ VU (128K)\n\nYet another Dizzy-like game, this time starring Santa Claus, who has now turned evil.\n\nIf you have a Speccy without a built-in Kempston interface, press **K** during the game to disable Kempston polling.\n\n**Controls:**\nKempston / Sinclair / Q, A, O, P keys.\n",
+  "body_ru": "## Играбельное демо CRIME SANTA CLAUS - DÉJÀ VU (128K)\n\nОчередная Dizzy-подобная игра, на этот раз с Санта-Клаусом, переметнувшимся на сторону зла.\n\nЕсли у вас Speccy без встроенного интерфейса Kempston, нажмите клавишу **K** во время игры, чтобы отключить опрос кемпстон-джойстика.\n\n**Управление:**\nKempston / Sinclair / клавиши Q, A, O, P.\n",
+  "text_type": 3
+}

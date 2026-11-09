@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "107",
+  "article_id": "10_rndxinfo",
+  "title_en": "RANDAX by Les Tyler",
+  "title_ru": "RANDAX от Леса Тайлера",
+  "meta_description_en": "Les Tyler introduces RANDAX, a Beta DOS utility for managing single-field Random Access files on the ZX Spectrum, featuring record viewing and file copying.",
+  "meta_description_ru": "Лес Тайлер представляет RANDAX — утилиту для работы с файлами прямого доступа в Beta DOS на ZX Spectrum: чтение, редактирование и копирование записей.",
+  "authors": [
+    "Les Tyler"
+  ],
+  "tags": [
+    {
+      "tag_name": "randax",
+      "tag_alias": "randax"
+    },
+    {
+      "tag_name": "betados",
+      "tag_alias": "betados"
+    },
+    {
+      "tag_name": "random access",
+      "tag_alias": "random-access"
+    },
+    {
+      "tag_name": "utility",
+      "tag_alias": "utility"
+    },
+    {
+      "tag_name": "les tyler",
+      "tag_alias": "les-tyler"
+    }
+  ],
+  "category_ids": [
+    64,
+    73,
+    48
+  ],
+  "body_en_plain": "RANDAX by Les Tyler\n      -------------------\nThe next item, RANDAX, is essen-\ntially the collecting together\nof the principal Random Access\nroutines in the BETADOS Manual\ninto a single utility,  with a\ncouple of other features added.\nThe menu is straightforward en-\nough, but perhaps I should make\nclear, though, the distinction\nbetween 'Copy'and 'Clone' should\nany confusion arise from my use\nof these terms...\n\n'Copy' and 'Clone',as used here,\nboth mean essentially the same\nthing, but COPY applies to twin\ndrive set-ups, while CLONE is\nfor a single-drive. It follows\nthat if you have 2 drives you\nare not very likely to want to\nuse CLONE, and vice-versa.\n\n\nFacilities currently provided\nare:  \"Opening of new files\",\n\"Augmenting of existing files\",\n\"Reading and/or Amendment of ex-\nisting files\", \"Copy or Clone of\nfiles.\n\nA small test file, \"GIRLS\", is\nincluded on this OUTLET disc for\nyou to experiment with the vari-\nous facilities.\n\n\nI use this program quite a lot,\nas I find it very convenient to\nmanipulate lots of single-field\nRandom Access files on occasion,\nand for this application, RANDAX\nis preferable to MASTERFILE or\nFrancis Miles's INDEXER although\nthe latter two are naturally\nmuch better where multi-field\nrecords are concerned!\n\n'HANDYMOD'  from OUTLET 10 is\nincorporated into the display\nportion of the program to enable\nrecord lengths of longer than 32\ncharacters to be used without\nspilling untidily over on to the\nnext line. Details of the values\nto be changed if a record length\nother than supplied is required,\nare in HANDYWIDE (OUTLET 7).\n\n\nA useful feature of this program\nis that it can be expanded virt-\nually ad infinitum to incorpor-\nate refinements not thought of\nso far. One such that I am curr-\nently experimenting with, is the\nfacility to print out three or\nmore Random Access files simult-\naneously on a full- width print-\ner.\n\n                      Les Tyler\n\n\n\n\n\n Press 'N' now to load RANDAX....\n",
+  "body_ru_plain": "",
+  "body_en": "### RANDAX by Les Tyler\n\nThe next item, RANDAX, is essentially the collecting together of the principal Random Access routines in the BETADOS Manual into a single utility, with a couple of other features added. The menu is straightforward enough, but perhaps I should make clear, though, the distinction between 'Copy' and 'Clone' should any confusion arise from my use of these terms...\n\n'Copy' and 'Clone', as used here, both mean essentially the same thing, but COPY applies to twin drive set-ups, while CLONE is for a single-drive. It follows that if you have 2 drives you are not very likely to want to use CLONE, and vice-versa.\n\nFacilities currently provided are: \"Opening of new files\", \"Augmenting of existing files\", \"Reading and/or Amendment of existing files\", \"Copy or Clone of files\".\n\nA small test file, \"GIRLS\", is included on this OUTLET disc for you to experiment with the various facilities.\n\nI use this program quite a lot, as I find it very convenient to manipulate lots of single-field Random Access files on occasion, and for this application, RANDAX is preferable to MASTERFILE or Francis Miles's INDEXER although the latter two are naturally much better where multi-field records are concerned!\n\n'HANDYMOD' from OUTLET 10 is incorporated into the display portion of the program to enable record lengths of longer than 32 characters to be used without spilling untidily over on to the next line. Details of the values to be changed if a record length other than supplied is required, are in HANDYWIDE (OUTLET 7).\n\nA useful feature of this program is that it can be expanded virtually ad infinitum to incorporate refinements not thought of so far. One such that I am currently experimenting with, is the facility to print out three or more Random Access files simultaneously on a full-width printer.\n\nLes Tyler\n\n*Press 'N' now to load RANDAX....*\n",
+  "body_ru": "### RANDAX от Les Tyler\n\nСледующая программа, RANDAX, по сути представляет собой объединение основных процедур прямого доступа (Random Access) из руководства к BETADOS в единую утилиту с добавлением пары дополнительных функций. Меню достаточно простое, однако мне, пожалуй, стоит пояснить разницу между «Copy» и «Clone», чтобы не возникло путаницы из-за используемой терминологии...\n\n«Copy» и «Clone» в данном контексте означают практически одно и то же, но COPY предназначена для систем с двумя дисководами, тогда как CLONE — для работы с одним приводом. Соответственно, если у вас 2 дисковода, вам вряд ли понадобится CLONE, и наоборот.\n\nВ настоящее время доступны следующие функции: «Opening of new files» (Создание новых файлов), «Augmenting of existing files» (Дополнение существующих файлов), «Reading and/or Amendment of existing files» (Чтение и/или редактирование файлов), «Copy or Clone of files» (Копирование или клонирование файлов).\n\nНебольшой тестовый файл «GIRLS» включен на этот диск OUTLET, чтобы вы могли поэкспериментировать с различными возможностями утилиты.\n\nЯ пользуюсь этой программой довольно часто, так как нахожу весьма удобным периодически работать с множеством файлов прямого доступа, состоящих из одного поля. Для таких задач RANDAX предпочтительнее MASTERFILE или программы INDEXER от Francis Miles, хотя последние две, разумеется, гораздо лучше подходят для записей с несколькими полями!\n\nВ процедуру вывода на экран встроена подпрограмма «HANDYMOD» из OUTLET 10, что позволяет использовать записи длиннее 32 символов без неаккуратного переноса на следующую строку. Подробности о том, какие значения нужно изменить, если требуется иная длина записи, описаны в статье HANDYWIDE (OUTLET 7).\n\nПолезное свойство этой программы заключается в том, что её можно расширять практически до бесконечности, добавляя любые улучшения, о которых я пока не подумал. Одно из таких новшеств, с которым я сейчас экспериментирую — возможность одновременной печати трех и более файлов прямого доступа на полноразмерном принтере.\n\nLes Tyler\n\n*Нажмите «N» для загрузки RANDAX....*\n",
+  "text_type": 3
+}

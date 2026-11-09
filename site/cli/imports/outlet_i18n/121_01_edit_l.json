@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "121",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Editorial for Outlet #121 (September 1997): celebrating the 10th anniversary of the diskmag, ProCross development update, and transitioning +3 users to 3.5\"/+D.",
+  "meta_description_ru": "Редакционная колонка Outlet №121 за сентябрь 1997 года: 10-летний юбилей журнала, разработка ProCross, переход подписчиков на формат 3.5 дюйма и +D.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "дискмаг",
+      "tag_alias": "diskmag"
+    },
+    {
+      "tag_name": "юбилей",
+      "tag_alias": "anniversary"
+    },
+    {
+      "tag_name": "procross",
+      "tag_alias": "procross"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus-3"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "S E P T E M B E R ,   1 9 9 7\n\nWell, we have been so busy this\nmonth (as usual) that we almost\noverlooked the fact that this is\nOUTLET's TENTH ANNIVERSARY! Yes,\nwe began in September, 1987, ten\nyears ago!\n\n\nCan there be any doubt that we\nare the longest-running disk\nmagazine on Planet Earth? The\nSDC Discovery Newsletter was\nclose but originally began not\nas a disk magazine but as a\nprinted newsletter and we hear\nthey have now stopped publishing\nthe magazine.\n\nWe could not have done it with-\nout YOUR support. OUTLET was and\nis, an outlet for YOUR ideas and\nprograms. So...\n\nRemember,we still need YOUR sup-\nport, and contributions of art-\nicles and programs - especially\nutility programs - are always\nwelcome. Even a short routine\ncan be like gold dust to another\nuser! Send 'em in!\n\nWe could also use some new cross\nword puzzles for PROCROSS as our\nstock is now a bit low!\n\nFurther work has been done on\nthe new version of PROCROSS but\nit is still very much in the\npipeline in the debugging stage\nso will be a while yet.\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET.\nWe are sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\n\nPlus 3 readers who returned our\nquestionnaire indicating they\nwould switch to 3.5\" or +D will\nreceived a free test disk this\nmonth. Let us know if there are\nany problems. If not we shall\nsend you the new version start-\ning next month.\n                     Ron & Brian\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n Email: ron.cavers@virgin.net\n Make out cheques to Ron Cavers.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nS E P T E M B E R ,   1 9 9 7\n\nWell, we have been so busy this month (as usual) that we almost overlooked the fact that this is OUTLET's TENTH ANNIVERSARY! Yes, we began in September, 1987, ten years ago!\n\nCan there be any doubt that we are the longest-running disk magazine on Planet Earth? The SDC Discovery Newsletter was close but originally began not as a disk magazine but as a printed newsletter and we hear they have now stopped publishing the magazine.\n\nWe could not have done it with- out YOUR support. OUTLET was and is, an outlet for YOUR ideas and programs. So...\n\nRemember,we still need YOUR sup- port, and contributions of art- icles and programs - especially utility programs - are always welcome. Even a short routine can be like gold dust to another user! Send 'em in!\n\nWe could also use some new cross word puzzles for PROCROSS as our stock is now a bit low!\n\nFurther work has been done on the new version of PROCROSS but it is still very much in the pipeline in the debugging stage so will be a while yet.\n\nMay we remind readers, we cannot answer computer, software, hard- ware or system queries etc., personally by mail.  All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder!Share your problems with others! That way, everyone benefits!\n\nPlus 3 readers who returned our questionnaire indicating they would switch to 3.5\" or +D will received a free test disk this month. Let us know if there are any problems. If not we shall send you the new version start- ing next month. Ron & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers 34 Saltersgate Drive Birstall, Leicester LE4 3FF\n\nEmail: ron.cavers@virgin.net Make out cheques to Ron Cavers.\n",
+  "body_ru": "## Editorial (late)\n\nС Е Н Т Я Б Р Ь , 1 9 9 7\n\nЧто ж, в этом месяце мы были так заняты (как обычно), что чуть было не упустили из виду тот факт, что это ДЕСЯТИЛЕТНИЙ ЮБИЛЕЙ OUTLET! Да, мы начали в сентябре 1987 года, десять лет назад!\n\nМогут ли быть сомнения в том, что мы — самый долгоживущий дисковый журнал на планете Земля? SDC Discovery Newsletter был близок, но изначально начинался не как дисковый журнал, а как печатный бюллетень, и мы слышали, что они уже прекратили публикацию своего журнала.\n\nМы не смогли бы сделать этого без ВАШЕЙ поддержки. OUTLET был и остается выходом («outlet») для ВАШИХ идей и программ. Так что...\n\nПомните, нам по-прежнему нужна ВАША поддержка, и материалы в виде статей и программ — особенно утилит — всегда приветствуются. Даже короткая подпрограмма может оказаться на вес золота для другого пользователя! Присылайте их!\n\nНам также пригодились бы новые кроссворды для PROCROSS, так как наши запасы сейчас немного истощились!\n\nБыла проделана дальнейшая работа над новой версией PROCROSS, но она все еще находится в активной разработке на стадии отладки, так что придется еще немного подождать.\n\nНапоминаем читателям: мы не можем отвечать на вопросы о компьютерах, софте, железе или системных проблемах лично по почте. Все подобные вопросы рассматриваются в разделе OUTLETTERS журнала OUTLET. Простите, что постоянно твердим об этом, но об этом действительно нужно напоминать регулярно! Делитесь своими проблемами с другими! Так польза будет для всех!\n\nЧитатели с Plus 3, приславшие нам анкету с подтверждением перехода на 3.5\" или +D, получат в этом месяце бесплатный тестовый диск. Дайте знать, если возникнут какие-либо проблемы. Если нет, мы начнем высылать вам новую версию со следующего месяца.\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n Email: ron.cavers@virgin.net\n Make out cheques to Ron Cavers.\n```\n",
+  "text_type": 3
+}

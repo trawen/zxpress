@@ -1,0 +1,42 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "134",
+  "article_id": "10_addender",
+  "title_en": "Add-Enders: LINEZIP",
+  "title_ru": "Дополнение: LINEZIP",
+  "meta_description_en": "Introducing the Add-Enders section in Outlet #134, featuring LINEZIP — a classic Sinclair BASIC utility from Outlet #2 that merges two program lines to save memory.",
+  "meta_description_ru": "Рубрика Add-Enders в Outlet #134: утилита LINEZIP из Outlet #2, позволяющая объединять строки в Бейсике для экономии памяти.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    },
+    {
+      "tag_name": "linezip",
+      "tag_alias": "linezip"
+    },
+    {
+      "tag_name": "utility",
+      "tag_alias": "utility"
+    },
+    {
+      "tag_name": "optimization",
+      "tag_alias": "optimization"
+    }
+  ],
+  "category_ids": [
+    30,
+    74
+  ],
+  "body_en_plain": "Some items contributed to OUTLET\nhave not yet been included for a\nvariety of reasons. It's a shame\nto leave them on the shelf so,if\nappropriate, they will be added\nto this ADD-ENDERS area of the\nmagazine (not microdrive or Opus\nas there is not enough room).\n\nThe material covers a wide range\nof quality and program types:\nutilities, screens, character\nsets and text articles and SOME\nof it may be unedited, untested,\nnot working fully or properly;\nin need of conversion for your\n\nsystem's syntax or printer etc.;\nwithout full instructions or\nwhatever. Readers will have to\nsift through to see if there is\nanything of interest they can\nmake use of and discard the\nrest. Not everything will appear\non all versions necessarily.\n\nSome Add-Enders may be linked to\nOUTLET in the normal way. These\nwill usually precede this text\nfile. Any items that follow this\narticle will possibly need to be\nLOADed manually or may not auto-\nrun when loaded.\n\nThere may be some info on the\nfollowing pages...\n\nFollowing on from the suggestion\nin a recent OUTLET to reproduce\nsome of the better routines from\nearlier issues of OUTLET for the\nbenefit of newer subscribers,\nthis month we have \"LINEZIP\"\nwhich will join together the two\nlines of Basic which follow it.\nThis can save memory.\n\nThe routine is a line of Basic\nin line 7777. Merge it into your\nprogram, then change the 7777\nline number to be the line imme-\ndiately before the two lines you\nwish to join together.Simply run\nthis new number and hey-presto,\njob's done!You will need to edit\nout some colons in the zipped\nlined and don't forget to delete\nboth line 7777 and the line you\nchanged it to before re-saving!\n\nLINEZIP originally appeared with\nfull instructions in OUTLET 2.\n\nAny suggestions of programs that\nyou would like to see again or\nconsider to be of special value\nto other readers are always\nwelcome, and we will include one\nas an ADDENDER each month if\nspace permits. Be warned however\nthat most of those magical demos\nwill be much too large for\ninclusion!\n\n\n Press \"N\" now to load LINEZIP.\n\nNote that you will probably get\nan error report when the program\nis loaded from OUTLET, as it is\nnot Auto-run.\n.\n",
+  "body_ru_plain": "",
+  "body_en": "Some items contributed to OUTLET have not yet been included for a variety of reasons. It's a shame to leave them on the shelf so, if appropriate, they will be added to this ADD-ENDERS area of the magazine (not microdrive or Opus as there is not enough room).\n\nThe material covers a wide range of quality and program types: utilities, screens, character sets and text articles and SOME of it may be unedited, untested, not working fully or properly; in need of conversion for your system's syntax or printer etc.; without full instructions or whatever. Readers will have to sift through to see if there is anything of interest they can make use of and discard the rest. Not everything will appear on all versions necessarily.\n\nSome Add-Enders may be linked to OUTLET in the normal way. These will usually precede this text file. Any items that follow this article will possibly need to be LOADed manually or may not auto-run when loaded.\n\nThere may be some info on the following pages...\n\nFollowing on from the suggestion in a recent OUTLET to reproduce some of the better routines from earlier issues of OUTLET for the benefit of newer subscribers, this month we have \"LINEZIP\" which will join together the two lines of Basic which follow it. This can save memory.\n\nThe routine is a line of Basic in line 7777. Merge it into your program, then change the 7777 line number to be the line immediately before the two lines you wish to join together. Simply run this new number and hey-presto, job's done! You will need to edit out some colons in the zipped line and don't forget to delete both line 7777 and the line you changed it to before re-saving!\n\nLINEZIP originally appeared with full instructions in OUTLET 2.\n\nAny suggestions of programs that you would like to see again or consider to be of special value to other readers are always welcome, and we will include one as an ADDENDER each month if space permits. Be warned however that most of those magical demos will be much too large for inclusion!\n\nPress \"N\" now to load LINEZIP.\n\nNote that you will probably get an error report when the program is loaded from OUTLET, as it is not Auto-run.\n",
+  "body_ru": "Некоторые материалы, присланные в OUTLET, по разным причинам до сих пор не были опубликованы. Жаль оставлять их пылиться на полке, поэтому по возможности они будут добавляться в специальный раздел журнала — ADD-ENDERS («Дополнения»). Исключение составляют версии для Microdrive и Opus, так как там попросту не хватает места.\n\nЭти материалы очень разнообразны по качеству и типам программ: утилиты, экраны, наборы шрифтов и текстовые статьи. Кое-что из этого может быть неотредактированным, непротестированным, работающим не полностью или некорректно; требовать адаптации под синтаксис вашей системы или принтер; поставляться без подробных инструкций и так далее. Читателям придется самим отбирать то, что покажется интересным и полезным, а остальное отсеивать. Кроме того, далеко не всё обязательно появится во всех версиях журнала.\n\nНекоторые материалы раздела могут запускаться из оболочки OUTLET обычным образом. Как правило, в меню они располагаются перед этим текстом. Программы же, идущие после этой статьи, возможно, придется загружать вручную командой LOAD, либо они не запустятся автоматически после загрузки.\n\nНа следующих страницах вас ждет дополнительная информация...\n\nСледуя предложению из недавнего выпуска перепечатать наиболее удачные процедуры из ранних номеров OUTLET на пользу новым подписчикам, в этом месяце мы предлагаем вам «LINEZIP» — утилиту, объединяющую две идущие следом за ней строки Бейсика в одну. Это позволяет сэкономить память.\n\nСама процедура представляет собой одну строку Бейсика под номером 7777. Объедините ее с вашей программой (командой MERGE), затем измените номер 7777 на такой, который будет идти непосредственно перед двумя объединяемыми строками. Просто запустите программу с этого нового номера — и вуаля, дело сделано! Вам понадобится лишь вручную убрать лишние двоеточия в объединенной строке. И не забудьте удалить как саму строку 7777, так и строку с измененным номером перед повторным сохранением программы!\n\nИзначально утилита LINEZIP была опубликована с полным описанием в OUTLET 2.\n\nМы всегда рады любым предложениям относительно программ, которые вы хотели бы увидеть снова или считаете особенно полезными для других читателей. При наличии свободного места мы будем включать по одной такой программе в раздел ADDENDER каждый месяц. Однако предупреждаем: большинство тех потрясающих демок окажутся слишком большими по объему, чтобы уместиться здесь!\n\nНажмите «N» прямо сейчас, чтобы загрузить LINEZIP.\n\nОбратите внимание: при загрузке программы из OUTLET вы, скорее всего, увидите системное сообщение об ошибке, так как она не запускается автоматически.\n",
+  "text_type": 3
+}

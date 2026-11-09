@@ -1,0 +1,37 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "36",
+  "article_id": "04_MOAC.TX",
+  "source_lang": "de-AT",
+  "title_en": "Mystery of Ancient Castle",
+  "title_ru": "Mystery of Ancient Castle",
+  "meta_description_en": "A brief review of the ZX Spectrum game Mystery of Ancient Castle from Scene+ magazine, issue 36.",
+  "meta_description_ru": "Краткая заметка об игре Mystery of Ancient Castle для ZX Spectrum из австрийского журнала Scene+ #36.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "game review",
+      "tag_alias": "game-review"
+    }
+  ],
+  "category_ids": [
+    1,
+    2,
+    3
+  ],
+  "body_de_plain": "MOAC ü\n----------------------------------------------------------------\nMYSTERY OF ANCIENT CASTLE\n----------------------------------------------------------------\nEin gutgemachtes Spiel mit Spitzengrafik (Wenn auch\ngeklaut!). Kämpfen sie sich durch ein antikes Schloß hindurch\nundvernichten sie möglichst viele Ungeheuer. Steuerung: Sinclair\nJoystick.\n----------------------------------------------------------------\nA good coded game with first class (but stolen) graphics.\nFightyour way through an ancient castle and defeat the evil\nmonsters. Controls: Sinclair Joystick\n----------------------------------------------------------------\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### MYSTERY OF ANCIENT CASTLE\n\nA well-made game with top-notch graphics (even if stolen!). Fight your way through an ancient castle and destroy as many monsters as possible.  \nControls: Sinclair Joystick.\n",
+  "body_ru": "### MYSTERY OF ANCIENT CASTLE\n\nДобротно сделанная игра с первоклассной графикой (пусть и позаимствованной!). Пробейтесь сквозь древний замок и уничтожьте как можно больше чудовищ.  \nУправление: Sinclair Joystick.\n",
+  "text_type": 3
+}

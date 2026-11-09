@@ -1,0 +1,50 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "28",
+  "article_id": "01_EDIT",
+  "source_lang": "de-AT",
+  "title_en": "Editorial: Scene+ #28",
+  "title_ru": "От редактора: Scene+ #28",
+  "meta_description_en": "Editorial of Scene+ #28: exploring the World of Spectrum CD, emulator performance on 386 DX 40, TZX format, Nebulus title screens, game manual for Nebula, and upcoming Filderstadt meeting.",
+  "meta_description_ru": "Колонка редактора Scene+ #28: исследование диска World of Spectrum CD, эмуляторы на 386 DX 40, формат TZX, заставки игр, перевод Bitwa o Wyspe II и встреча в Фильдерштадте.",
+  "authors": [
+    "L. C. D."
+  ],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "world-of-spectrum",
+      "tag_alias": "world-of-spectrum"
+    },
+    {
+      "tag_name": "emulators",
+      "tag_alias": "emulators"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_de_plain": "SCENE ü- * * * ** * * * * * * * * * * * * * * * * * ** * * * * *\n* * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * *\n* * * * - SCENE+ Herausgeber und Programmierer sowie\nVerantwortlicher fürden Inhalt: L. C. D., Prager Str. 92/11/12,\nA-1210 Wien, Österreich Tel.: (0043/1) 272 34 63 Vertrieb\nzusammen mit SUC-Session:\" Thomas Eberle & Fred Dürkes,\nRainäckerstr. 4, D-70794, Deutschland. Tel. & Fax: (0046/711)\n77 50 33, Spectrum und SAM bezogene Werbung sowie Kleinanzeigen\nsindKostenfrei und können beliebige Formen haben: Text, Bild,\nDemo. Hallo SCENE+ Leser. Leider habe ich mich wieder mal mit\nder SCENE+ etwas verspätet,doch die Ursache war diesmal nicht\nirgendwelcher Fehler dermeinen Spectrum abstürzen ließ, sondern\nschlicht und einfach dieWOS CD deren Test Thomas bald abdrucken\nmüßte. Es gibt darauf soviele Programme die ich noch nicht\nkannte, daß ich einfach allesantesten mußte, und einige Schätze\nfahnd. Einige davon waren indem genialen TZX Format\nabgespeichert, der leider sehr langsamist, und den der Z80 nicht\nbeherrscht. der X128 kennt ihn, dochauf meinem 386 DX 40 den ich\ngeschenkt bekam, läuft er elendlangsam mit 74% der\nSpectrumgeschwindigkeit, während Z80 250% schafft! Im übrigen,\ndie neueste Z80 Version versteht keinemultiplen. AP Files,\nobwohl eine frühere Version keine Problememachte. Besonders\ninteressant waren die Titelbilder von Spielen,so besitze ich\nzwar das Orginal von Nebulus, aber mir fiel darankein Titelbild\nauf. Auf der CD selbst fahnd ich das gesuchteBild, sovie viele\nandere. Eine wahre Schatztrue die ich mit der Zeit etwas näher\nkennenlernen will. Einige der Bilder habe ich in die Gallerien\neingebaut weil michAnfragen diesbezüglich erreichten. Darunter\nsind die schönstenund seltensten Titelbilder überhaupt, aber\nwenn Jemand ein ganzbesonderes Bild sucht, ich bin gerne bereit\ndanach in meiner Sammlung zu suchen. Da mich auch noch viele\nHilferufe bezüglich NEBULA erreichthaben, konvertierte ich die\n(Leider nur Englische) Anleitung fürdieses interessante Spiel\nvon WOS CD, hoffentlich ist Euch dieshilfreich. Da es sich aus\nZeitgründen nicht ausging die Vortex Story undHistory zu Ende zu\nschreiben, entfällt diese vorläufig, dafürbesteht die\nBildersammlung nur aus scönen oder seltenenTitelbildern, auch\nsind wieder mal mehr Spiele vorhanden,inklusive eines (wieder\nmal) exklusiven Titels - Die englischeVersion von \"Bitwa o Wyspe\nII\" die ich höchstpersönlichübersetzt habe. Ich hoffe daß Euch\ndas ganze trotz einigerKürzungen gefällt. Ach übrigens! Das\nnächste Treffen in Filderstadt findet am 19.9.1998 statt, einem\nSamstag. Bis dahin wird die nächste SCENE+ Ausgabe fertig\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### SCENE+\n\n**Publisher, programmer, and editor-in-chief:**  \nL. C. D., Prager Str. 92/11/12, A-1210 Vienna, Austria  \nTel.: (0043/1) 272 34 63  \n\n**Distribution jointly with SUC-Session:**  \nThomas Eberle & Fred Dürkes, Rainäckerstr. 4, D-70794, Germany  \nTel. & Fax: (0046/711) 77 50 33  \n\nSpectrum and SAM-related advertisements and classifieds are free of charge and can be submitted in any format: text, image, demo.\n\n***\n\nHello, SCENE+ readers.\n\nUnfortunately, I am a bit late with SCENE+ once again, but this time the cause wasn't some error that crashed my Spectrum, but simply and purely the WoS CD, a review of which Thomas should be publishing soon. It contains so many programs I hadn't seen before that I simply had to test everything, and I uncovered quite a few treasures.\n\nSome of them were stored in the ingenious TZX format, which unfortunately is very slow and which the Z80 emulator doesn't support. X128 does recognize it, but on the 386 DX 40 I was given, it runs miserably slow at just 74% of original Spectrum speed, whereas Z80 manages 250%! Besides, the latest Z80 version doesn't understand multiple .TAP files, even though an earlier version had no problems with them.\n\nParticularly interesting were the loading screens of games. For example, I own an original copy of *Nebulus*, but I had never noticed a title screen on it. On the CD itself I found the missing screen, along with many others. It's a true treasure chest that I intend to explore more closely over time.\n\nI included some of the pictures in the galleries because readers had requested them. Among them are some of the most beautiful and rarest title screens around; if someone is searching for a very specific picture, I am more than happy to look for it in my collection.\n\nSince I also received many calls for help regarding *NEBULA*, I converted the manual (unfortunately English only) for this interesting game from the WoS CD—hopefully this proves helpful to you.\n\nDue to time constraints, I couldn't finish writing the Vortex story and history, so it has been omitted for now. In return, the picture gallery consists exclusively of beautiful or rare title screens, and there are once again more games included, including (yet another) exclusive title: the English version of *Bitwa o Wyspe II*, which I translated myself.\n\nI hope that despite a few omissions you will enjoy the issue.\n\nOh, by the way! The next meeting in Filderstadt will take place on Saturday, September 19, 1998. The next issue of SCENE+ will be ready by then!\n",
+  "body_ru": "### SCENE+\n\n**Издатель, программист и ответственный за содержание:**  \nL. C. D., Prager Str. 92/11/12, A-1210 Wien, Австрия  \nТел.: (0043/1) 272 34 63  \n\n**Распространение совместно с SUC-Session:**  \nThomas Eberle & Fred Dürkes, Rainäckerstr. 4, D-70794, Германия  \nТел. и факс: (0046/711) 77 50 33  \n\nРеклама и частные объявления по тематике Spectrum и SAM публикуются бесплатно и принимаются в любом виде: текст, картинка, демо.\n\n***\n\nПривет, читатели SCENE+!\n\nК сожалению, я снова немного задержался с выпуском SCENE+, но на сей раз причиной были вовсе не сбои, подвешивающие мой Спектрум, а банально диск World of Spectrum CD, обзор которого Томас должен напечатать в скором времени. На нём нашлось столько программ, которых я раньше не видел, что мне непременно захотелось опробовать буквально всё, и я отыскал немало настоящих сокровищ.\n\nНекоторые из них были сохранены в великолепном формате TZX, который, увы, работает очень медленно и не поддерживается эмулятором Z80. Эмулятор X128 его понимает, однако на подаренном мне 386 DX 40 он ползёт мучительно медленно — всего на 74% от реальной скорости Спектрума, тогда как Z80 выжимает целых 250%! Кроме того, свежая версия Z80 почему-то не понимает файлы с несколькими блоками .TAP, хотя старая версия щёлкала их без проблем.\n\nОсобенно любопытными оказались загрузочные заставки к играм. Например, у меня есть фирменная кассета *Nebulus*, но я никогда не замечал на ней заставки. А вот на самом диске нужная картинка нашлась, как и множество других. Настоящий сундук с сокровищами, с содержимым которого я планирую со временем познакомиться поближе.\n\nНекоторые изображения я поместил в галереи журнала, откликнувшись на просьбы читателей. Среди них — красивейшие и редчайшие титульные экраны. Если кто-то разыскивает конкретную картинку, я с удовольствием пороюсь в своей коллекции.\n\nПоскольку ко мне также поступало много криков о помощи касательно игры *NEBULA*, я переконвертировал с WoS CD руководство пользователя (к сожалению, только на английском языке) для этой занятной игры — надеюсь, оно вам пригодится.\n\nИз-за нехватки времени закончить статью об истории Vortex не удалось, так что её публикация пока откладывается. Зато галерея составлена исключительно из красивых и редких титульных экранов, да и игр на диске снова прибавилось, включая (в очередной раз!) эксклюзив — английскую версию польской стратегии *Bitwa o Wyspe II*, которую я перевёл собственной персоной.\n\nНадеюсь, что выпуск придётся вам по вкусу, несмотря на некоторые сокращения.\n\nАх да, кстати! Следующая встреча в Фильдерштадте (Filderstadt) состоится в субботу, 19 сентября 1998 года. К тому моменту подоспеет и следующий номер SCENE+!\n",
+  "text_type": 3
+}

@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "130",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of what's coming in the next issue of Outlet: new utilities, programming routines, Drivechat printer history, demos, and games.",
+  "meta_description_ru": "Анонс следующего выпуска журнала Outlet: дисковые утилиты, генератор крупных шрифтов, история принтеров в рубрике Drivechat, демо и классическая игра.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    },
+    {
+      "tag_name": "drivechat",
+      "tag_alias": "drivechat"
+    }
+  ],
+  "category_ids": [
+    123,
+    9
+  ],
+  "body_en_plain": "Another issue of OUTLET with a\nfair variety of contents to look\nforward to next month: utilities\nsuch as an improved sector edit-\nor; a character designer with a\ndifference as it is able to gen-\nerate characters larger than a\nsingle character square. There\nis a spectacular routine to\n\"shoot\" your titles onto the\nscreen, and there's a stripper.\nNo lads, don't get too excited!\nIt's a routine to auto delete\nall the REMs from a Basic list-\ning.\n\nThe DRIVECHAT continues the his-\ntory of computer printers, and\non the leisure side there is a\ngood demo; some four-channel\nmusic; and a version of an all-\ntime classic computer game.\n\n                       Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Another issue of OUTLET with a fair variety of contents to look forward to next month: utilities such as an improved sector editor; a character designer with a difference as it is able to generate characters larger than a single character square. There is a spectacular routine to \"shoot\" your titles onto the screen, and there's a stripper. No lads, don't get too excited! It's a routine to auto delete all the REMs from a Basic listing.\n\nThe DRIVECHAT continues the history of computer printers, and on the leisure side there is a good demo; some four-channel music; and a version of an all-time classic computer game.\n\nChris.\n",
+  "body_ru": "В следующем месяце вас ждёт ещё один номер OUTLET с весьма разнообразным наполнением: утилиты, включая улучшенный секторный редактор; необычный редактор шрифтов, способный создавать символы размером больше одного знакоместа. Также будет зрелищная подпрограмма для «выстреливания» титров на экран и стриптизёр («stripper»). Спокойно, парни, без фанатизма! Это всего лишь утилита для автоматического удаления всех операторов REM из листингов на Бейсике.\n\nРубрика DRIVECHAT продолжит рассказ об истории компьютерных принтеров, а в развлекательной части вас ждут отличное демо, четырёхканальная музыка и версия нестареющей классической компьютерной игры.\n\nChris.\n",
+  "text_type": 3
+}

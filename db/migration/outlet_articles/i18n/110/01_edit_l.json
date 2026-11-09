@@ -1,0 +1,48 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "110",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Outlet #110 late editorial (October 1996): news on Graphic Adventure Creator, final parts of Echologia demo patched for ZX Spectrum +3, and call for contributions.",
+  "meta_description_ru": "Дополнительная редакторская колонка Outlet #110 (октябрь 1996): новости о Graphic Adventure Creator, финал демо Echologia на ZX Spectrum +3 и призыв присылать программы.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "gac",
+      "tag_alias": "gac"
+    },
+    {
+      "tag_name": "public domain",
+      "tag_alias": "public-domain"
+    },
+    {
+      "tag_name": "echologia",
+      "tag_alias": "echologia"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus-3"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "O C T O B E R ,   1 9 9 6\n\nA big 'thank you' to the readers\nwho sent in the instructions for\n'Graphic Adventure Creator'. We\nhope to publish this excellent\ntext adventure generator within\na few months and maybe a game!\n\n\nThere are a few other items of\ncommercial Spectrum software now\nreleased into the public domain\nand we hope to include some of\nthese eventually too.\n\nIn fact, there is quite a decent\namount of contributions received\nrecently so you can keep looking\nforward to a wide variety of new\nand interesting software and\narticles in forthcoming OUTLETs!\n\nHowever, remember,we shall still\nalways need YOUR support, and\ncontributions of articles and\nprograms,especially utility pro-\ngrams, are always welcome. Even\na short routine can be like gold\ndust to another user! Send 'em\nin!\n\n\nThe amazing multi-part sound and\ngraphics demo: \"ECHOLOGIA\" comes\nto an end this month with Parts\n6 and 7 (= our Part 3!). Part 7\nfailed to work initially on the\n+3 but we got it to work using a\npatch of extra BASIC that uses\nMalcolm Goodman's TOGGLER to go\nto 48K mode just before the demo\ncode is called.There didn't seem\nto be room for WOGGLER which may\nhave got it back into OUTLET at\nthe end nice and cleanly so you\nwill find it just crashes out at\nthe end and you have to press\nyour RESET button. At least the\ndemo works OK though.By the way,\nthere seems to be no exit from\nPart 6 except to wait until it's\nfinished whereas in Part 7 you\ncan press SHIFT!\n\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET. We\nare sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n                    Ron & Brian\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nO C T O B E R ,   1 9 9 6\n\nA big 'thank you' to the readers who sent in the instructions for 'Graphic Adventure Creator'. We hope to publish this excellent text adventure generator within a few months and maybe a game!\n\nThere are a few other items of commercial Spectrum software now released into the public domain and we hope to include some of these eventually too.\n\nIn fact, there is quite a decent amount of contributions received recently so you can keep looking forward to a wide variety of new and interesting software and articles in forthcoming OUTLETs!\n\nHowever, remember,we shall still always need YOUR support, and contributions of articles and programs,especially utility pro- grams, are always welcome. Even a short routine can be like gold dust to another user! Send 'em in!\n\nThe amazing multi-part sound and graphics demo: \"ECHOLOGIA\" comes to an end this month with Parts 6 and 7 (= our Part 3!). Part 7 failed to work initially on the +3 but we got it to work using a patch of extra BASIC that uses Malcolm Goodman's TOGGLER to go to 48K mode just before the demo code is called.There didn't seem to be room for WOGGLER which may have got it back into OUTLET at the end nice and cleanly so you will find it just crashes out at the end and you have to press your RESET button. At least the demo works OK though.By the way, there seems to be no exit from Part 6 except to wait until it's finished whereas in Part 7 you can press SHIFT!\n\nMay we remind readers, we cannot answer computer, software, hard- ware or system queries etc., personally by mail.  All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder!Share your problems with others! That way, everyone benefits! Ron & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers\n\nCHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF .\n",
+  "body_ru": "## Editorial (late)\n\n### Октябрь, 1996\n\nОгромное спасибо читателям, приславшим инструкции для Graphic Adventure Creator. Мы надеемся опубликовать этот превосходный генератор текстовых приключений в течение пары месяцев, а возможно, и какую-нибудь игру!\n\nЕсть еще несколько коммерческих программ для Spectrum, которые теперь перешли в общественное достояние (public domain), и мы надеемся со временем включить в журнал и некоторые из них.\n\nНа самом деле за последнее время поступило довольно приличное количество материалов, так что в будущих номерах OUTLET вы можете рассчитывать на большое разнообразие нового и интересного софта и статей!\n\nТем не менее помните: нам по-прежнему всегда нужна ВАША поддержка, а присланные статьи и программы — особенно утилиты — всегда приветствуются. Даже короткая подпрограмма может оказаться на вес золота для другого пользователя! Присылайте!\n\nПотрясающее многосерийное аудио-графическое демо \"ECHOLOGIA\" завершается в этом месяце Частями 6 и 7 (= наша Часть 3!). Седьмая часть изначально отказывалась работать на +3, но нам удалось ее запустить с помощью патча на Бейсике, который использует утилиту TOGGLER от Malcolm Goodman для переключения в режим 48K прямо перед вызовом кода демо. Похоже, для WOGGLER места уже не хватило, а он мог бы красиво и аккуратно вернуть управление обратно в OUTLET, так что в конце демо просто вылетает, и вам придется нажать кнопку RESET. Но, по крайней мере, само демо работает как надо. Кстати, из Части 6, похоже, нет никакого выхода, кроме как дождаться ее окончания, тогда как в Части 7 можно нажать SHIFT!\n\nНапоминаем читателям: мы не можем отвечать на вопросы по компьютерам, программам, железу или системе лично по почте. Ответы на все подобные вопросы даются в разделе OUTLETTERS журнала OUTLET. Простите, что постоянно твердим об этом, но об этом действительно нужно напоминать регулярно! Делитесь своими проблемами с другими! Так пользу получат все!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n```\n",
+  "text_type": 3
+}

@@ -1,0 +1,49 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "29",
+  "article_id": "06_DINA.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Dinablaster",
+  "title_ru": "Dinablaster",
+  "meta_description_en": "Brief review of Dinablaster, a Bomberman clone with computer-controlled enemies featured in Scene+ magazine.",
+  "meta_description_ru": "Краткая заметка об игре Dinablaster, клоне Bomberman с компьютерными противниками, из журнала Scene+.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "dinablaster",
+      "tag_alias": "dinablaster"
+    },
+    {
+      "tag_name": "bomberman",
+      "tag_alias": "bomberman"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    }
+  ],
+  "category_ids": [
+    1,
+    2,
+    3
+  ],
+  "body_de_plain": "DBLASTER ü - DINABLASTER - Im gegensatz zu Uglyblaster bietet\ndieser Klon auch nochComputergesteuerte Feinde die man so schön\nin die Luft jagenkann. Es lebe TNT! - The difference between\nUglyblaster and Dinablaster is thepresence of computer-controled\nnasties that you can blow up withyour bombs. Long live\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**DBLASTER - DINABLASTER** — Unlike *Uglyblaster*, this clone also features computer-controlled enemies that you can blow up so nicely. Long live TNT! The difference between *Uglyblaster* and *Dinablaster* is the presence of computer-controlled nasties that you can blow up with your bombs. Long live...\n",
+  "body_ru": "**DBLASTER — DINABLASTER** — В отличие от *Uglyblaster*, этот клон предлагает еще и врагов, управляемых компьютером, которых так приятно взрывать. Да здравствует тротил! Отличие *Uglyblaster* от *Dinablaster* заключается в наличии компьютерных противников, которых можно подрывать своими бомбами. Да здравствует...\n",
+  "text_type": 3
+}

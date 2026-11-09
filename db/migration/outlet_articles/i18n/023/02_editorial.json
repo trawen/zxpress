@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "023",
+  "article_id": "02_editorial",
+  "title_en": "Editorial",
+  "title_ru": "От редакции",
+  "meta_description_en": "Editorial for Outlet #023: thanks to readers for pricing feedback, news regarding Microdrive cartridges, and brief notes on issue contents.",
+  "meta_description_ru": "Редакционная колонка Outlet #023: благодарность читателям за отклики о ценах, новости о картриджах Microdrive и анонсы материалов номера.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "microdrive",
+      "tag_alias": "microdrive"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Thanks to all who wrote to give\ntheir views on the future price\nstructure and version options of\nOUTLET. There are too many to\nreply to directly but be assured\nwe are paying attention to what\nyou say!\n\nRelating to that is some news in\nLOOKOUT on microdrive cartridge\nproduction that may affect all\nour plans...\n\nThe crossword compiler mentioned\nin last month's LOOKAHEAD is now\npushed back to next month due to\nlack of space. There are just so\nmany good things in this issue\nwe even have to cut short the\nedi...\n\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_ru_plain": "Спасибо всем, кто написал нам,\nчтобы высказать своё мнение о\nбудущей структуре цен и вариантах\nвыпуска OUTLET. Писем слишком\nмного, чтобы ответить каждому\nлично, но будьте уверены — мы\nприслушиваемся к вашим словам!\n\nС этим также связаны новости в\nLOOKOUT о производстве картриджей\nдля microdrive, которые могут\nповлиять на все наши планы...\n\nСоставитель кроссвордов,\nупомянутый в прошлый раз в\nLOOKAHEAD, теперь отложен до\nследующего месяца из-за нехватки\nместа. В этом номере столько\nвсего хорошего, что нам даже\nприходится оборвать ред...\n\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_en": "## Editorial\n\nThanks to all who wrote to give their views on the future price structure and version options of OUTLET. There are too many to reply to directly but be assured we are paying attention to what you say!\n\nRelating to that is some news in LOOKOUT on microdrive cartridge production that may affect all our plans...\n\nThe crossword compiler mentioned in last month's LOOKAHEAD is now pushed back to next month due to lack of space. There are just so many good things in this issue we even have to cut short the edi...\n\n```text\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n```\n",
+  "body_ru": "## От редакции\n\nСпасибо всем, кто написал нам, чтобы высказать своё мнение о будущей структуре цен и вариантах выпуска OUTLET. Писем слишком много, чтобы ответить каждому лично, но будьте уверены — мы прислушиваемся к вашим словам!\n\nС этим также связаны новости в LOOKOUT о производстве картриджей для microdrive, которые могут повлиять на все наши планы...\n\nСоставитель кроссвордов, упомянутый в прошлый раз в LOOKAHEAD, теперь отложен до следующего месяца из-за нехватки места. В этом номере столько всего хорошего, что нам даже приходится оборвать ред...\n\n```text\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n```\n",
+  "text_type": 3
+}

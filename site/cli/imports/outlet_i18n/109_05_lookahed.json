@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "109",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A sneak peek at what's coming in the next issue of Outlet: utilities for the ZX Spectrum +3, fonts, the finale of ECHOLOGIA Megademo, and more.",
+  "meta_description_ru": "Анонс следующего выпуска журнала Outlet: утилиты для ZX Spectrum +3, новые шрифты, финал мегадемо ECHOLOGIA, игра-платформер и многое другое.",
+  "authors": [
+    "Chris"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "echologia megademo",
+      "tag_alias": "echologia-megademo"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus3"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    }
+  ],
+  "category_ids": [
+    123,
+    121
+  ],
+  "body_en_plain": "Plenty to interest everyone in\nnext month's OUTLET: A programm-\nable formatter for the +3;a use-\nful keyboard routine for progra-\nmmers;an efficient typing tutor;\na further selection of fonts;the\nfinal parts of the amazing ECHO-\nLOGIA Megademo; a magic pencil\nwhich you can watch as it writes\nyour text on the screen; a util-\nity to quickly swap Basic lines\nabout, and another to print out\nan extended disc catalogue, and\na sort of platform game to amuse\nyou for hours.\n\nMeanwhile the crew of the Star-\nship Enterprise are straining\ntheir Dilithium crystals to the\nabsolute limit, going boldly\nbackwards (?) to where they have\nbeen before!\n\n     All will be revealed.\n\n               Cheers,\n\n                    Chris\n.\n",
+  "body_ru_plain": "",
+  "body_en": "Plenty to interest everyone in next month's OUTLET: A programmable formatter for the +3; a useful keyboard routine for programmers; an efficient typing tutor; a further selection of fonts; the final parts of the amazing ECHOLOGIA Megademo; a magic pencil which you can watch as it writes your text on the screen; a utility to quickly swap Basic lines about, and another to print out an extended disc catalogue, and a sort of platform game to amuse you for hours.\n\nMeanwhile the crew of the Starship Enterprise are straining their Dilithium crystals to the absolute limit, going boldly backwards (?) to where they have been before!\n\nAll will be revealed.\n\nCheers,\n\nChris\n",
+  "body_ru": "В следующем номере OUTLET найдётся много интересного для каждого: программируемый форматировщик для +3; полезная подпрограмма опроса клавиатуры для программистов; эффективный клавиатурный тренажёр; очередная подборка шрифтов; заключительные части потрясающего ECHOLOGIA Megademo; волшебный карандаш, пишущий ваш текст прямо на экране у вас на глазах; утилита для быстрой перестановки строк в Бейсике, ещё одна программа для печати расширенного каталога диска, а также некое подобие платформенной игры, способное увлечь вас на долгие часы.\n\nТем временем экипаж звездолёта «Энтерпрайз» нагружает свои дилитиевые кристаллы до абсолютного предела, смело отправляясь вспять (?), туда, где они уже бывали раньше!\n\nОбо всём вы скоро узнаете.\n\nС наилучшими пожеланиями,\n\nChris\n",
+  "text_type": 3
+}

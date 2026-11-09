@@ -1,0 +1,49 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "114",
+  "article_id": "06_ic_schat",
+  "title_en": "Spectrum IC's",
+  "title_ru": "Spectrum IC's",
+  "meta_description_en": "Malcolm Perry explains the role of the STD CELL chip (ZX84/01, PCF1306P) and the evolution of glue logic from ZX Spectrum 48K to the +2, +2A, and +3.",
+  "meta_description_ru": "Malcolm Perry объясняет назначение микросхемы STD CELL (ZX84/01, PCF1306P) в ZX Spectrum и эволюцию схемотехники от 48K до +2, +2A и +3.",
+  "authors": [
+    "Malcolm Perry"
+  ],
+  "tags": [
+    {
+      "tag_name": "zx spectrum 48k",
+      "tag_alias": "zx-spectrum-48k"
+    },
+    {
+      "tag_name": "zx spectrum 128",
+      "tag_alias": "zx-spectrum-128"
+    },
+    {
+      "tag_name": "zx spectrum +2",
+      "tag_alias": "zx-spectrum-plus2"
+    },
+    {
+      "tag_name": "hardware",
+      "tag_alias": "hardware"
+    },
+    {
+      "tag_name": "ula",
+      "tag_alias": "ula"
+    },
+    {
+      "tag_name": "chips",
+      "tag_alias": "chips"
+    }
+  ],
+  "category_ids": [
+    10,
+    58,
+    111
+  ],
+  "body_en_plain": "Spectrum IC's. Malcolm Perry\n  ----------------------------\nIn a past issue of Outlet,refer-\nence was made to the STD CELL\nused in the +2 with a query as\nto what it was or did.\n\nFor an answer look back at the\ndevelopment of the 48K machine.\nUp to Issue 4 the ULA, Z80, ROM\nand two blocks of RAMs had the\n\n\nADDRESS and CONTROL lines organ-\nised by a number of ICs includ-\ning 4*74157 a 7400 and 7432 (or\ntheir variations in the LS/HS\nrange). See schematic below...\n\n        1        Z80-----------:\n     :--5----:    :            :\n     :  7    :    :            :\n     :       :    :            :\n     :  3    :    :            :\nULA--:--2    :----:---:--:     :\n     :       :        :  :     :\n     :  1    :        :  :     :\n     :--5----:      157  157  00\n     :  7    :        :  :     :\n     :       :        :  :     :\n     :       :        :-:::----:\n     :       :          :::\n    RAM     ROM         RAM\n\n       48k Up to  Ver.4\n\nVersion 5 and 6 had the six ICs\nreferred to replaced by one dev-\nice: a ZX84/01. This was carried\nover on to the 128 and +2 with\nZX84/01 or PCF1306P...\n\n     ROM----:------Z80\n            :\n            :\n            :\n            :\n\nL----:--- STD   ------------:\nA    :    CELL  ----------: :\n     :                    : :\n     :                    : :\n     :                    : :\n     :                    : :\n     :                    : :\n    RAM                   RAM\n       48k Versions 5 & 6\n\n\nThe +2A and +3 had a complete\nredesign that contained a Large\nScale Array incorporating the\nabove plus the ULA as well as\nextra circuitry required for the\nadditional facilities of these\nversions.\n\n\n               Malcolm Perry.\n",
+  "body_ru_plain": "",
+  "body_en": "## Ic Schat\n\nSpectrum IC's. Malcolm Perry\n\n```text\n  ----------------------------\n```\n\nIn a past issue of Outlet,refer- ence was made to the STD CELL used in the +2 with a query as to what it was or did.\n\nFor an answer look back at the development of the 48K machine. Up to Issue 4 the ULA, Z80, ROM and two blocks of RAMs had the\n\nADDRESS and CONTROL lines organ- ised by a number of ICs includ- ing 4*74157 a 7400 and 7432 (or their variations in the LS/HS range). See schematic below...\n\n```text\n        1        Z80-----------:\n     :--5----:    :            :\n     :  7    :    :            :\n     :       :    :            :\n     :  3    :    :            :\nULA--:--2    :----:---:--:     :\n     :       :        :  :     :\n     :  1    :        :  :     :\n     :--5----:      157  157  00\n     :  7    :        :  :     :\n     :       :        :  :     :\n     :       :        :-:::----:\n     :       :          :::\n```\n\nRAM     ROM         RAM\n\n48k Up to  Ver.4\n\nVersion 5 and 6 had the six ICs referred to replaced by one dev- ice: a ZX84/01. This was carried over on to the 128 and +2 with ZX84/01 or PCF1306P...\n\nROM----:------Z80\n\n```text\n            :\n            :\n            :\n            :\n```\n\n```text\nL----:--- STD   ------------:\n```\n\nA    :    CELL  ----------: :\n\n```text\n     :                    : :\n     :                    : :\n     :                    : :\n     :                    : :\n     :                    : :\n```\n\nRAM                   RAM 48k Versions 5 & 6\n\nThe +2A and +3 had a complete redesign that contained a Large Scale Array incorporating the above plus the ULA as well as extra circuitry required for the additional facilities of these versions.\n\nMalcolm Perry.\n",
+  "body_ru": "## Spectrum IC's\n### Malcolm Perry\n\nВ одном из прошлых номеров Outlet упоминалась микросхема STD CELL, используемая в +2, с вопросом о том, что это такое и для чего она нужна.\n\nЧтобы ответить на этот вопрос, обратимся к истории создания 48K-машины. Вплоть до Issue 4 линии ADDRESS и CONTROL для ULA, Z80, ROM и двух банков RAM обслуживались целым рядом микросхем, включая 4*74157, 7400 и 7432 (или их разновидности серий LS/HS). См. схему ниже...\n\n```text\n        1        Z80-----------:\n     :--5----:    :            :\n     :  7    :    :            :\n     :       :    :            :\n     :  3    :    :            :\nULA--:--2    :----:---:--:     :\n     :       :        :  :     :\n     :  1    :        :  :     :\n     :--5----:      157  157  00\n     :  7    :        :  :     :\n     :       :        :  :     :\n     :       :        :-:::----:\n     :       :          :::\n    RAM     ROM         RAM\n\n       48k Up to  Ver.4\n```\n\nВ версиях 5 и 6 эти шесть упомянутых микросхем были заменены одним чипом — ZX84/01. Это же решение перекочевало в 128 и +2 в виде ZX84/01 или PCF1306P...\n\n```text\n     ROM----:------Z80\n            :\n            :\n            :\n            :\n\nL----:--- STD   ------------:\nA    :    CELL  ----------: :\n     :                    : :\n     :                    : :\n     :                    : :\n     :                    : :\n     :                    : :\n    RAM                   RAM\n       48k Versions 5 & 6\n```\n\nВ моделях +2A и +3 дизайн был полностью переработан: они содержали Large Scale Array, объединивший в себе всё вышеперечисленное плюс ULA, а также дополнительную схемотехнику, необходимую для новых возможностей этих версий.\n\nMalcolm Perry.\n",
+  "text_type": 3
+}

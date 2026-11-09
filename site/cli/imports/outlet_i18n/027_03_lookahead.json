@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "027",
+  "article_id": "03_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "Lookahead for the next issue of Outlet magazine: Microdrive and Tasword utilities, OMNIVAC BASIC compressor, Shell Shock adventure game, and more.",
+  "meta_description_ru": "Анонс следующего номера журнала Outlet: утилиты для Microdrive и Tasword, OMNIVAC, игра Shell Shock и другие программы в выпуске #28.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "microdrive",
+      "tag_alias": "microdrive"
+    },
+    {
+      "tag_name": "tasword",
+      "tag_alias": "tasword"
+    },
+    {
+      "tag_name": "утилиты",
+      "tag_alias": "utilities"
+    }
+  ],
+  "category_ids": [
+    123,
+    121
+  ],
+  "body_en_plain": "Planned for next month are...\nINCREMAT- increase the FORMAT of\nyour microdrive cartridges from\n90K to 100K!; SCREENIO- a text\ninput windowing utility; REFORM-\nto reform Tasword 2 files from\n64 columns to 32; OUTCLASS of\ncourse; CHECKOUT- looks at the\nENIGMA tapezine; DRIVECHAT- has\nmany different tips and ideas;\nNOUGHTS2- a vastly better game!;\nOMNIVAC-the very best BASIC code\ncompressor ever!\n                    And...\n\nINPUTRAP- a machine code input\nroutine ensuring +3 filenames do\nnot include \"illegal\"characters;\nAUTODRAW - an early CHEZRON\nkaleidoscopic pattern generator\nwith a user option; REM-MAKER -\nmakes any size REM automatically\nand finally... SHELL SHOCK - a\nfull-size graphics and text mega\nadventure!\n\nThere's over 15K still free so I\nshall be adding more items but\nthere are so many good things in\nthe pipeline to choose from....\n\n                    - Brian.\n",
+  "body_ru_plain": "В следующем месяце планируются:\nINCREMAT — увеличение FORMAT для\nваших картриджей microdrive с\n90K до 100K!; SCREENIO — оконная\nутилита ввода текста; REFORM —\nперевод файлов Tasword 2 из\n64 колонок в 32; OUTCLASS,\nконечно же; CHECKOUT — обзор\nкассетного журнала ENIGMA;\nDRIVECHAT — множество разных\nсоветов и идей; NOUGHTS2 —\nкуда более классная игра!;\nOMNIVAC — самый лучший\nкомпрессор кода BASIC на свете!\n                    А также...\n\nINPUTRAP — подпрограмма ввода в\nмашинном коде, следящая, чтобы в\nименах файлов +3 не было\n«недопустимых» символов;\nAUTODRAW — ранний генератор\nкалейдоскопических узоров от\nCHEZRON с опциями пользователя;\nREM-MAKER — создаёт REM любого\nразмера автоматически,\nи наконец... SHELL SHOCK —\nполноразмерное графическо-\nтекстовое мега-приключение!\n\nСвободно ещё более 15K, так что\nя добавлю ещё материалов, но на\nподходе столько отличных вещей,\nчто просто глаза разбегаются...\n\n                    - Brian.\n",
+  "body_en": "## Lookahead\n\nPlanned for next month are...\n\nINCREMAT - increase the FORMAT of your microdrive cartridges from 90K to 100K!; SCREENIO - a text input windowing utility; REFORM - to reform Tasword 2 files from 64 columns to 32; OUTCLASS of course; CHECKOUT - looks at the ENIGMA tapezine; DRIVECHAT - has many different tips and ideas; NOUGHTS2 - a vastly better game!; OMNIVAC - the very best BASIC code compressor ever!\n\nAnd...\n\nINPUTRAP - a machine code input routine ensuring +3 filenames do not include \"illegal\" characters; AUTODRAW - an early CHEZRON kaleidoscopic pattern generator with a user option; REM-MAKER - makes any size REM automatically and finally... SHELL SHOCK - a full-size graphics and text mega adventure!\n\nThere's over 15K still free so I shall be adding more items but there are so many good things in the pipeline to choose from....\n\n— Brian.\n",
+  "body_ru": "## В следующем номере\n\nВ следующем месяце планируются:\n\n- **INCREMAT** — увеличение FORMAT для ваших картриджей microdrive с 90K до 100K!\n- **SCREENIO** — оконная утилита ввода текста;\n- **REFORM** — перевод файлов Tasword 2 из 64 колонок в 32;\n- **OUTCLASS**, конечно же;\n- **CHECKOUT** — обзор кассетного журнала ENIGMA;\n- **DRIVECHAT** — множество разных советов и идей;\n- **NOUGHTS2** — куда более классная игра!;\n- **OMNIVAC** — самый лучший компрессор кода BASIC на свете!\n\nА также...\n\n- **INPUTRAP** — подпрограмма ввода в машинном коде, следящая, чтобы в именах файлов +3 не было «недопустимых» символов;\n- **AUTODRAW** — ранний генератор калейдоскопических узоров от CHEZRON с опциями пользователя;\n- **REM-MAKER** — создаёт REM любого размера автоматически;\n- и наконец... **SHELL SHOCK** — полноразмерное графическо-текстовое мега-приключение!\n\nСвободно ещё более 15K, так что я добавлю ещё материалов, но на подходе столько отличных вещей, что просто глаза разбегаются...\n\n— Brian.\n",
+  "text_type": 3
+}

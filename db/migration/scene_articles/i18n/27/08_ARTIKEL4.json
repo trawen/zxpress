@@ -1,0 +1,46 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "27",
+  "article_id": "08_ARTIKEL4",
+  "source_lang": "de-AT",
+  "title_en": "Compressors, Part 2: Shrinker",
+  "title_ru": "Компрессоры, часть 2: Шринкер",
+  "meta_description_en": "Tiger's Claw explains the RLE/Shrinker compression technique for screens and program code on the ZX Spectrum, comparing it to delta encoding.",
+  "meta_description_ru": "Tiger's Claw объясняет принцип работы RLE/шринкера для сжатия экранных картинок и кода на ZX Spectrum, сравнивая его с дельта-упаковкой.",
+  "authors": [
+    "Tiger's Claw"
+  ],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "compression",
+      "tag_alias": "compression"
+    },
+    {
+      "tag_name": "rle",
+      "tag_alias": "rle"
+    },
+    {
+      "tag_name": "programming",
+      "tag_alias": "programming"
+    }
+  ],
+  "category_ids": [
+    52,
+    71
+  ],
+  "body_de_plain": "PV1  ü      Kompressoren Teil 2 S H R I N K E R Im\n  Gegensatz  zum  Delta  ust  der  Shrinker  genauso6 einfachau\nfgebaut, arbeitet genausogut, ist aber im Gegensatz  zu  Deltavi\nel verbreiteter.Y Vor Jahren erschien ein Shrinker für Screens\nin  YS  Listingteilund beeindruckte mich durch das mitgelieferte\n Demo, bei dem sich drei Kugel aus Pixels  um  zwei  Achsen  dre\nhten,  alles  extremflüssig  und  Farbenfroh,  aber  eben  nur\neino drittel desBildschirms wurden verwendet.  Es gibt Shrin\nker für Bilder  und  Programmcode/Daten,  die  zweiVerfahren unt\nerscheiden sich nur  geringfügig  voreinander.  Bei einem Bildco\nmpressor wird zuerst nach einem  Flag  Byte  gesuchtder im Bild\nnicht verwendet wird, findet sich keines, so brechen einige Komp\nressoren den Vorgang ab, oder nehmen ein Byte das nureinmal verw\nendet wurde und verändern es um so einen Flag Byte zu bekommen.\nDaß so etwas beim  Programmcode  zu  Abstürzen  führenwürde ist\nwohl klar!T Programmkompressoren dagegen nehmen entweder einen\n 2-Byte  Flag(Rechnekünstler  aufgepaßt:  Spectrum  RAM=49152  B\nytes,  2-Byte Kombinationsmöglichkeiten=65536,  in  der  Praxis\n wird7 sogarweniger RAM  komprimiert),  oder  nehmen  den  Spei\ncher  in  255Byte-Schritten auseinander.` Hat der Shrinker eine\n  Anzahl  darauffolgender  Bytes  entdeckt,schreibt er den Flag\nByte ins Speicher ein  und  dann  noch  die Zahl der Bytes, meis\ntens als 8-Bit Zahl um Platz zu sparen. Dieslohnt  sich  natürli\nch  nicht  wenn  nur  zwei  gleichew Bytesauftreten, also werde\nn solche Sonderfälle  bei  der  kompressionherausgefiltert.  Die\n  Dekompression  ist  dann  sehrz einfach:Solange  kein  Flag\nByte  angetroffen  wurde,  alles  kopieren,ansonsten mit LDIR (o\nder LDDR wenn von hinten gepackt wi rd)  dasgleiche Byte das dem\n Flag folgt, kopieren.2 Schrinker haben den Vorteil daß sie  se\nhr  schnell  komprimierenkönnen und daher als Vorkompressoren ge\neignet  sind.  Sowohl  im Turbo Imploder wie auch in PK Lite und\n in vielen anderen Packernlassen sie sich aktivieren um Zeit und\n Speicherplatz zu sparen. Tiger's Claw Es gibt noch viele  a\nndere  Kompressionsmethoden  wie  Imploding(LHZ), Huffman (Bitko\nmpressor)  oder  Fraktalpacker,  mit  allen diesen Methoden kenn\ne ich mich leider nicht\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### Compressors, Part 2: S H R I N K E R\n\nUnlike delta compression, the shrinker is just as simply structured and works just as well, but unlike delta, it is much more widespread.\n\nYears ago, a screen shrinker appeared in the type-in listing section of *Your Sinclair* and impressed me with its included demo, where three pixel spheres rotated around two axes — all extremely smooth and colorful, though only a third of the screen was used.\n\nThere are shrinkers for graphics and for program code/data; the two methods differ only slightly from each other. In an image compressor, it first looks for an unused flag byte that does not appear in the picture. If none is found, some compressors abort the operation, or they take a byte that occurs only once and alter it to obtain a flag byte. It goes without saying that doing something like this with program code would lead to crashes!\n\nProgram compressors, on the other hand, either use a 2-byte flag (math wizards take note: Spectrum RAM = 49,152 bytes, 2-byte combination possibilities = 65,536, and in practice even less RAM is compressed) or process memory in 255-byte chunks.\n\nOnce the shrinker detects a sequence of repeated bytes, it writes the flag byte into memory, followed by the byte count, usually as an 8-bit number to save space. Naturally, this is not worthwhile if only two identical bytes occur, so such edge cases are filtered out during compression.\n\nDecompression is then very simple: as long as no flag byte is encountered, copy everything; otherwise, use `LDIR` (or `LDDR` if packed from the back) to replicate the byte that follows the flag.\n\nShrinkers offer the advantage of very fast compression, making them well-suited as pre-compressors. In *Turbo Imploder* as well as in *PK Lite* and many other packers, they can be enabled to save both time and space.\n\n*Tiger's Claw*\n\nThere are many other compression methods such as Imploding (LHZ), Huffman (bit compressor), or fractal packers — unfortunately, I am not familiar with all of these methods...\n",
+  "body_ru": "### Компрессоры, часть 2: Ш Р И Н К Е Р\n\nВ отличие от дельта-упаковки, шринкер (RLE) устроен столь же просто и работает не менее эффективно, однако, в отличие от неё, он гораздо более распространён.\n\nМного лет назад в разделе листингов журнала *Your Sinclair* появился шринкер для экранов, который поразил меня прилагавшейся демкой: в ней три сферы из пикселей вращались вокруг двух осей — всё было невероятно плавно и красочно, пусть даже использовалась всего лишь треть экрана.\n\nСуществуют шринкеры для графики и для программного кода/данных; эти два подхода отличаются друг от друга лишь незначительно. Графический компрессор сначала ищет свободный байт-флаг, который вообще не встречается в изображении. Если такой байт не найден, некоторые компрессоры прерывают работу либо берут байт, встретившийся всего один раз, и изменяют его, получая таким образом байт-флаг. Вполне очевидно, что в программном коде подобные трюки привели бы к неминуемому зависанию!\n\nКомпрессоры программ, напротив, используют либо двухбайтовый флаг (вниманию знатоков математики: ОЗУ Спектрума = 49152 байта, а вариантов двухбайтовых комбинаций = 65536, причём на практике сжимается даже меньший объём памяти), либо разбирают память блоками по 255 байт.\n\nОбнаружив цепочку повторяющихся байтов, шринкер записывает в память байт-флаг, а затем количество повторений — чаще всего в виде 8-битного числа для экономии места. Разумеется, это не имеет смысла, если подряд идут всего два одинаковых байта, поэтому подобные случаи отсеиваются при упаковке.\n\nРаспаковка в итоге предельно проста: пока не встретился байт-флаг, просто копируем всё подряд; если же встретился флаг — с помощью `LDIR` (или `LDDR`, если распаковка идёт с конца) размножаем байт, идущий следом за флагом.\n\nПреимущество шринкеров в том, что они сжимают данные очень быстро и потому отлично подходят в качестве предварительных компрессоров. Как в *Turbo Imploder*, так и в *PK Lite* и многих других упаковщиках их можно активировать для экономии времени и дискового пространства.\n\n*Tiger's Claw*\n\nСуществует ещё множество других методов сжатия, таких как имплодинг (LHZ), Хаффман (побитовое сжатие) или фрактальные упаковщики — к сожалению, со всеми этими методами я не знаком...\n",
+  "text_type": 3
+}

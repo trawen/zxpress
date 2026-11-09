@@ -1,0 +1,46 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "08",
+  "article_id": "06_ARTIKEL2_1",
+  "source_lang": "de-AT",
+  "title_en": "Tetris II Review",
+  "title_ru": "Обзор Tetris II",
+  "meta_description_en": "Review of Tetris II on the ZX Spectrum, licensed by Sintech: gameplay modes, 14-block option, music, lack of autorepeat, and verdict by Tiger's Claw.",
+  "meta_description_ru": "Обзор игры Tetris II для ZX Spectrum, изданной Sintech: игровые режимы, вариант с 14 фигурами, музыка, отсутствие автоповтора клавиш и оценка от Tiger's Claw.",
+  "authors": [
+    "Tiger's Claw"
+  ],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "tetris-ii",
+      "tag_alias": "tetris-ii"
+    },
+    {
+      "tag_name": "sintech",
+      "tag_alias": "sintech"
+    },
+    {
+      "tag_name": "game-review",
+      "tag_alias": "game-review"
+    }
+  ],
+  "category_ids": [
+    1,
+    2
+  ],
+  "body_de_plain": "TETRIS II Anläßlich der Übernahme der Lizenzen dieses Spiels  v\non  SINTECHmöchte ich hier TETRIS II vorstellen.e Tetris ist sc\nhon ein  interessantes  Spielchen,  bei  Tetris  IIwurde  es  no\nch  interesanter,  der  Zweispielermodus  istz daeigentlich sch\non überflüssig. In einigen Levels sind  Mauerrestevorgegeben, di\ne abgebaut werden müssen, ungewöhliche Spielstei netun ihr übrig\nes und die Musik  sorgt  für  mehr  Spielspaß,  undeignet sich a\nuch recht gut zum tanzen. Obwohl Tetris II ein se hrgutes und em\npfehlenswertes Spiel ist, ist es schon sehr alt. Ichfrage mich w\nieso Thomas nicht die Lizenz für Tetris vI erworbenhat. Aber\nnun mal der Reihe nach: Schon beim Spielstart fällt die gutgemac\nhte, wenn auch nicht außergewöhnliche  graphik  auf,  wobei über\nall  das  umgedrehte  R  zu  sehen  ist,  auch  im6 Scroll.Eige\nntlich liest man diesen Buchstaben als \"ja\",  aber  das  hatnoch\n keinen Tetris Kloner gestört,  auch  wenn  die  Russ en  denNam\nen als Tetjas lesen! Im Auswahlmenu  hat  man  folgende  Optio\nnen  um  das  Spiel  zukonfigurieren: Normal Tetris (Das alte, l\nangweilige!)/ Tetris  2 (dazu später). Dann kann man noch einste\nllen, ob  beide  Spielerdieselben  Steine  bekommen  oder  versc\nhiedene,  was  aber  nur funktioniert, wenn man zu zweit spielt.\n Die nächste interessanteOption ist  die  zahl  der  verschieden\nen  Spielsteine,  Normal, sieben oder special, mit 14, wobei es\nfast unspielbar wird.  Dieletzte interessante Option ist der Sou\nnd: 48K effects oder  128K Music, wobei ich sie zweide Möglichke\nit  empfehlen  würde.  Dannkann man noch die Tasten wählen, für\nbeide Spieler!s Im Tetris II modus gilt es kleine Aufträge zu e\nrfüllen, entwederalle Mauerreste abbauen, oder bestimte Anzahl b\nestimmter  Linien zu schaffen, z.B. eine Vieffachreihe und  zehn\n  einerreihen,  umein level höherzukommen. Es macht höllisch Spa\nß!p Jetzt aber zu den dunklen Seiten der Tetris: Es gibt leider\n keinAutorepeat, d.h. daß wenn man ein  Block  drei  positionen\n nach links verschieben will,  muß  man  die  \"links\"-Taste  dre\ni  maldrücken und loslassen, ein Manko  an  das  ich  mich  erst\n  nach längerer Zeit gewöhnt habe. Auch der DROP ist unsteuerbar\n,  wennman also sieht, daß man sich um eine Position geirrt  hat\n,  kann man nur noch zusehen und Beten daß die richtigen  Steine\n  Kommenum diesen Fehler auszumerzen. Man  muß  sich  offenbahr\n genaues Spielen angewöhnen. So, nachdem ich das Spiel zerpflü\nckt habe, kommen wir zum  finalstrike: die Bewertung!V Graphik:\n 7 Musik: 9  (128)/3 (48) Technik: 6 Spielspaß:  8 (\n1 Pl)/10 (2 Pl) Fazit: Alt, teilweise schlecht gecodet, macht\naber trotzdem sehrviel Spaß, ich empfehle es an jeden Denkspiel-\nFanatiker.x Tiger's Claw o\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "# TETRIS II\n\nOn the occasion of SINTECH acquiring the licenses for this game, I would like to present TETRIS II here.\n\nTetris is already an interesting little game, but in Tetris II it has become even more captivating; the two-player mode is almost superfluous here. In some levels, wall remnants are preset that need to be cleared away, unusual tetromino shapes do the rest, and the music adds to the fun, being quite good to dance to as well. Although Tetris II is a very good and recommendable game, it is already quite old. I wonder why Thomas didn't acquire the license for Tetris VI instead. But let's take things one step at a time:\n\nRight from the start of the game, one notices the well-crafted, albeit not extraordinary, graphics, with the backwards \"R\" visible everywhere, including in the scroller. Strictly speaking, this letter is read as \"ya\", but that has never bothered any Tetris cloner, even if Russians read the title as \"Tetyas\"!\n\nIn the selection menu, you have the following options to configure the game:\n\n* **Normal Tetris** (the old, boring one!) / **Tetris 2** (more on that later).\n* Next, you can set whether both players receive identical pieces or different ones, though this only takes effect when playing with two players.\n* The next interesting option is the number of different pieces: Normal (seven) or Special (14), with the latter making the game almost unplayable.\n* The final interesting option is the sound: 48K effects or 128K music, where I would definitely recommend the second option.\n* Finally, you can redefine the keys for both players!\n\nIn Tetris II mode, you have to complete small objectives: either clear away all existing wall debris or make a specific number of certain lines (e.g., one quadruple line and ten single lines) to advance to the next level. It's hell of a lot of fun!\n\nNow, however, for the dark sides of this Tetris: unfortunately, there is no key autorepeat. This means that if you want to shift a block three positions to the left, you have to press and release the \"Left\" key three times — a shortcoming that took me quite a while to get used to. The DROP is also uncontrollable: if you see that you made a mistake by one position, all you can do is watch and pray that the right blocks appear to remedy the blunder. You clearly have to get used to very precise play.\n\nWell, now that I have dissected the game, let's move on to the final strike: the ratings!\n\n* **Graphics:** 7\n* **Music:** 9 (128K) / 3 (48K)\n* **Tech:** 6\n* **Gameplay:** 8 (1 Player) / 10 (2 Players)\n\n**Conclusion:** Old, partially poorly coded, but nonetheless huge fun. I recommend it to any puzzle game fanatic.\n\n— Tiger's Claw\n",
+  "body_ru": "# TETRIS II\n\nПо случаю приобретения лицензий на эту игру фирмой SINTECH я хочу представить здесь TETRIS II.\n\nТетрис сам по себе — занятная вещица, но в Tetris II он стал еще интереснее; режим для двух игроков тут кажется почти лишним. На некоторых уровнях заранее расставлены остатки стен, которые нужно разобрать, необычные фигуры делают своё дело, а музыка здорово поднимает настроение и отлично подходит даже для танцев. Хотя Tetris II — очень хорошая и рекомендуемая игра, она уже довольно старая. Ума не приложу, почему Томас не приобрёл лицензию на Tetris VI. Но обо всем по порядку:\n\nУже при запуске игры в глаза бросается добротная, пусть и не выдающаяся графика, причём везде красуется перевёрнутая буква «R», в том числе и в бегущей строке. Вообще-то эта буква читается как «я», но это ещё ни одного автора клонов Тетриса не смущало, пускай русские и читают это название как «Тетяс»!\n\nВ меню выбора доступны следующие настройки:\n\n* **Normal Tetris** (старый, скучный!) / **Tetris 2** (об этом позже).\n* Далее можно настроить, получают ли оба игрока одинаковые блоки или разные, что работает только при игре вдвоём.\n* Следующая интересная опция — количество видов фигур: Normal (семь) или Special (14), при котором играть становится практически невозможно.\n* Последняя важная опция — звук: эффекты 48K или музыка 128K, причём я однозначно рекомендую второй вариант.\n* Затем можно настроить управление клавишами — для обоих игроков!\n\nВ режиме Tetris II вам предстоит выполнять небольшие задания: либо разобрать все остатки кирпичной кладки, либо собрать определённое число конкретных линий (например, одну четверную и десять одинарных), чтобы перейти на следующий уровень. Играется чертовски весело!\n\nА теперь о тёмных сторонах этого Тетриса: к сожалению, здесь нет автоповтора клавиш. То есть, если вам нужно сдвинуть фигуру на три позиции влево, придётся нажать и отпустить клавишу «влево» три раза — к этому недостатку я привыкал довольно долго. Сброс (DROP) тоже нельзя отменить: если заметил, что ошибся на одну позицию, остаётся лишь смотреть и молиться, чтобы следом пришли нужные блоки для исправления оплошности. Приходится привыкать к филигранно точной игре.\n\nЧто ж, после того как мы разобрали игру по косточкам, перейдём к финальному аккорду — оценкам!\n\n* **Графика:** 7\n* **Музыка:** 9 (128K) / 3 (48K)\n* **Техническая часть:** 6\n* **Увлекательность:** 8 (1 игрок) / 10 (2 игрока)\n\n**Итог:** Игра старая, местами криво закоженная, но всё равно доставляющая массу удовольствия. Рекомендую её всем фанатам логических головоломок.\n\n— Tiger's Claw\n",
+  "text_type": 3
+}

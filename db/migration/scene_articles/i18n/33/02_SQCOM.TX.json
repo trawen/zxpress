@@ -1,0 +1,52 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "33",
+  "article_id": "02_SQCOM.TX",
+  "source_lang": "de-AT",
+  "title_en": "SQ Tracker Compiler",
+  "title_ru": "SQ Tracker Compiler",
+  "meta_description_en": "Brief overview of the SQ Tracker Compiler utility from the Austrian magazine Scene+ #33.",
+  "meta_description_ru": "Краткая аннотация компилятора музыки SQ Tracker Compiler из австрийского журнала Scene+ #33.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    },
+    {
+      "tag_name": "sq-tracker",
+      "tag_alias": "sq-tracker"
+    },
+    {
+      "tag_name": "sound-tracker",
+      "tag_alias": "sound-tracker"
+    },
+    {
+      "tag_name": "music",
+      "tag_alias": "music"
+    },
+    {
+      "tag_name": "compiler",
+      "tag_alias": "compiler"
+    }
+  ],
+  "category_ids": [
+    68,
+    64
+  ],
+  "body_de_plain": "SQ ü - SQ TRACKER COMPILER - Schon einige Musikstücke mit dem SQ\nTracker erstellt? Dann wirdes Zeit um diese endlich zu\ncompilieren, was mit diesem Programmrecht gut geht. Wieder mal\nist Thomas und seine Anleitunggefragt. H - Do you wrote some\nmusic with the SQ Tracker? then it is time tocompile them now,\nand this programm does the whole work for\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "# SQ Tracker Compiler\n\nHave you already created some music tracks with SQ-Tracker? Then it is time to finally compile them, which works quite well with this program. Once again, Thomas and his instructions are in demand.\n\n***\n\n*(Original English text from the magazine)*:\nDo you wrote some music with the SQ Tracker? then it is time tocompile them now, and this programm does the whole work for\n",
+  "body_ru": "# SQ Tracker Compiler\n\nУже создали несколько музыкальных треков в SQ-Tracker? Тогда самое время наконец-то скомпилировать их, с чем эта программа отлично справляется. И снова нам понадобятся Томас и его руководство.\n\n***\n\n*(Оригинальный английский текст из журнала)*:\nDo you wrote some music with the SQ Tracker? then it is time tocompile them now, and this programm does the whole work for\n",
+  "text_type": 3
+}

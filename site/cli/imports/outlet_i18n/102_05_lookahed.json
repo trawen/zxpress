@@ -1,0 +1,48 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "102",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонсы следующего номера",
+  "meta_description_en": "A preview of what's coming in Outlet #103: disc utilities, Basic repair program, OUTCLASS tutorials, music collections, and a demo from Vision.",
+  "meta_description_ru": "Анонс следующего выпуска Outlet (#103): дисковые утилиты, восстановление Бейсика в кодах, статьи OUTCLASS, музыка и демо от Vision.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "утилиты",
+      "tag_alias": "utilities"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    },
+    {
+      "tag_name": "музыка",
+      "tag_alias": "music"
+    },
+    {
+      "tag_name": "the mad guys",
+      "tag_alias": "the-mad-guys"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Lots of useful and interesting\ngoodies to look forward to next\nmonth including an excellent\nDisc-Monitor program wich is\nnicely user-friendly; a utility\nto clear the 128 Ramdisc from an\nExecute File; another to list\nonly selected file types from a\ndisc catalogue; and the ultimate\nautomatic intelligent Basic\nrepair program which is a fast\nmachine code version of the\nBasic Repair program from OUTLET\nissue 101.\n\n\nThere is an OUTCLASS with a very\nuseful table for looking up\nscreen addresses;a demonstration\nshowing how the TOBOS Basic\nCompiler from Issue 88 can be\nused to speed up a Basic graph-\nics animation; a routine which\nshuffles a pack of cards and\nthen deals out as many as you\nspecify, and it's freeware, so\nyou can use it to create your\nown card games.\n\nThere are a couple of music\nprograms: one made using Gary\nRowland's superb Music Writer,\nand the other is the first half\nof a massive collection of music\nspanning 500 years (it is so big\nthat we have had to split it, so\nas to fit other programs into\nthe issue!).\n\nThere's lots more too, and all\nrounded off with another wonder-\nful demo from Vision of The Mad\nGuys.\n\n                      Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Lots of useful and interesting goodies to look forward to next month including an excellent Disc-Monitor program wich is nicely user-friendly; a utility to clear the 128 Ramdisc from an Execute File; another to list only selected file types from a disc catalogue; and the ultimate automatic intelligent Basic repair program which is a fast machine code version of the Basic Repair program from OUTLET issue 101.\n\nThere is an OUTCLASS with a very useful table for looking up screen addresses; a demonstration showing how the TOBOS Basic Compiler from Issue 88 can be used to speed up a Basic graphics animation; a routine which shuffles a pack of cards and then deals out as many as you specify, and it's freeware, so you can use it to create your own card games.\n\nThere are a couple of music programs: one made using Gary Rowland's superb Music Writer, and the other is the first half of a massive collection of music spanning 500 years (it is so big that we have had to split it, so as to fit other programs into the issue!).\n\nThere's lots more too, and all rounded off with another wonderful demo from Vision of The Mad Guys.\n\nChris.\n",
+  "body_ru": "В следующем месяце вас ждёт множество полезных и интересных новинок: отличная и удобная в работе программа Disc-Monitor; утилита для очистки 128 Ramdisc из запускаемого файла (Execute File); программа для вывода списка только выбранных типов файлов из каталога диска; а также превосходная автоматическая «интеллектуальная» программа восстановления Бейсика — быстрая версия на машинном коде утилиты Basic Repair из 101-го номера OUTLET.\n\nВ рубрике OUTCLASS появится крайне полезная таблица экранных адресов; демонстрация того, как с помощью компилятора TOBOS Basic Compiler из 88-го номера можно ускорить графическую анимацию на Бейсике; и процедура, которая тасует колоду карт и раздаёт любое заданное количество карт — она является бесплатной (freeware), так что вы можете использовать её для создания собственных карточных игр.\n\nТакже будет пара музыкальных программ: одна создана с помощью великолепного редактора Music Writer от Gary Rowland, а вторая представляет собой первую часть масштабной музыкальной подборки, охватывающей 500 лет (она настолько огромна, что нам пришлось разделить её на части, чтобы в выпуск поместились и другие программы!).\n\nИ это далеко не всё, а венчает номер очередная замечательная демо-программа от Vision из The Mad Guys.\n\nChris.\n",
+  "text_type": 3
+}

@@ -1,0 +1,45 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "29",
+  "article_id": "09_FEAR.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Fearzone Demo Review",
+  "title_ru": "Обзор демо Fearzone",
+  "meta_description_en": "A brief review of the ZX Spectrum 128 demo Fearzone by Naughty Crew from Scene+ magazine.",
+  "meta_description_ru": "Краткий обзор демо Fearzone для ZX Spectrum 128 от Naughty Crew из журнала Scene+.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "naughty-crew",
+      "tag_alias": "naughty-crew"
+    },
+    {
+      "tag_name": "fearzone",
+      "tag_alias": "fearzone"
+    },
+    {
+      "tag_name": "demoscene",
+      "tag_alias": "demoscene"
+    }
+  ],
+  "category_ids": [
+    88,
+    93,
+    94
+  ],
+  "body_de_plain": "FEARZONE ü - FEARZONE (128) - Eigentlich recht nett, das Demo\nder Naughty Crew. Einige Fire-und Plasmaeffekte, animierte\nFiguren die offenbar einem Spielentnohmen wurden, VU-Meter aus\nSchädeln und ein paar Bilder, daswärs schon! K - Very nice this\ndemo from Naughty Crew. Some fire- and plasmaeffects, animated\nfigures taken out of a game, Skull-VU Metersand a few very good\npictures, that'\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### FEARZONE (128)\n\nActually quite nice, this demo by Naughty Crew. A few fire and plasma effects, animated sprites apparently taken from a game, skull-shaped VU meters, and a few pictures — that's about it!\n\n*(Original English summary included in the mag:)*  \nVery nice, this demo from Naughty Crew. Some fire and plasma effects, animated figures taken out of a game, skull VU meters and a few very good pictures, that's it!\n",
+  "body_ru": "### FEARZONE (128)\n\nВ общем-то довольно милое демо от Naughty Crew. Несколько эффектов огня и плазмы, анимированные спрайты, явно позаимствованные из какой-то игры, VU-метры в виде черепов и несколько картинок — вот, пожалуй, и всё!\n\n*(Краткое резюме на английском из оригинала:)*  \nОчень приятное демо от Naughty Crew. Немного эффектов огня и плазмы, анимированные персонажи из игры, VU-метры с черепами и несколько весьма неплохих картинок — вот и всё!\n",
+  "text_type": 3
+}

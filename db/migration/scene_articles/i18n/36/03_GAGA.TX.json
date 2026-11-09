@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "36",
+  "article_id": "03_GAGA.TX",
+  "source_lang": "de-AT",
+  "title_en": "Kick Da Gaga 128",
+  "title_ru": "Kick Da Gaga 128",
+  "meta_description_en": "Mini-review of the Russian multiplayer game Kick Da Gaga 128 for ZX Spectrum from Scene+ #36.",
+  "meta_description_ru": "Мини-обзор российской мультиплеерной игры Kick Da Gaga 128 для ZX Spectrum из журнала Scene+ #36.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "kick da gaga",
+      "tag_alias": "kick-da-gaga"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    }
+  ],
+  "category_ids": [
+    1,
+    2
+  ],
+  "body_de_plain": "GAGA ü\n----------------------------------------------------------------\nKICK DA GAGA 128\n----------------------------------------------------------------\nEin russisches Spiel mit dem Ziel den Gegner zu tretten.\nVipertritt gegen die Spinne auf, beides werden von Spielern\ngesteuertund wer die höhere Aufprallgeschwindigkeit aufweist,\nbekommtKickpoints gutgeschrieben. Steuerung ist wählbar, auch\nSinclairJoystick.\n----------------------------------------------------------------\nA russian game, you are forced to kick your opponent,\nViperversus Spider, both are controled by players. The\nfasterimpacting player gets the kick points. Controls are\ndefinable,including both Sinclair sticks. Look at the stuning\ninterlacepic.\n----------------------------------------------------------------\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### KICK DA GAGA 128\n\nA Russian game where the goal is to kick your opponent. Viper faces off against Spider, both controlled by players. Whoever hits with higher impact speed earns kick points. Controls are redefinable, including Sinclair joysticks.\n\n*(Original English text from the magazine)*:\n> A russian game, you are forced to kick your opponent, Viper versus Spider, both are controled by players. The faster impacting player gets the kick points. Controls are definable, including both Sinclair sticks. Look at the stuning interlace pic.\n",
+  "body_ru": "### KICK DA GAGA 128\n\nРоссийская игра, цель которой — пинать противника. Вайпер выступает против Паука (Spider); оба персонажа управляются игроками, и тот, у кого выше скорость столкновения, получает призовые очки («kickpoints»). Управление настраивается, поддерживаются в том числе джойстики Sinclair.\n\n*(Оригинальная англоязычная приписка из журнала)*:\n> Российская игра: вам нужно пинать оппонента, Вайпер против Паука, оба управляются игроками. Тот, кто врезается на большей скорости, получает победные очки. Управление настраиваемое, включая оба джойстика Sinclair. Обратите внимание на потрясающую интерлейс-картинку.\n",
+  "text_type": 3
+}

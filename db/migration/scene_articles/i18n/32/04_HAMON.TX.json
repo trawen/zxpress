@@ -1,0 +1,48 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "32",
+  "article_id": "04_HAMON.TX",
+  "source_lang": "de-AT",
+  "title_en": "Hamon IV 128 Playable Demo",
+  "title_ru": "Играбельное демо Hamon IV 128",
+  "meta_description_en": "Short review and control guide for the playable demo of the Russian puzzle game Hamon IV 128 on ZX Spectrum, featured in Scene+ #32.",
+  "meta_description_ru": "Краткий обзор и описание управления для демоверсии российской логической игры Hamon IV 128 на ZX Spectrum из журнала Scene+ #32.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "hamon-iv",
+      "tag_alias": "hamon-iv"
+    },
+    {
+      "tag_name": "game-demo",
+      "tag_alias": "game-demo"
+    },
+    {
+      "tag_name": "puzzle",
+      "tag_alias": "puzzle"
+    },
+    {
+      "tag_name": "russia",
+      "tag_alias": "russia"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "HAMON ü - HAMON IV 128 Spielbares Demo - Wieder mal ein tolles\nSpiel aus Rußland, diesmal ein Denkspielin dem man zum\nLevelausgang nur gelangen kann wenn man dieverschiedenen\nHindernise mit verschiedenenGegenständenüberwindet, z. B.\nSchlüssel für eine Tür, Axt gegen einen Monsteru.s.w. Zwar\nscheint die Steuerung frei wählbar zu sein, esfunktioniert aber\nnur Tastatur, und zwar die TastenQ/A/O/P/Space. - Again a clever\nrussian strategy game. You can only reach the endof a level if\nyou use the right items, for example: a key for adoor, or a axe\nagainst a monster, try it out. The controls arefollowing:\nQ/A/O/P/Space, other controls are no\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### HAMON IV 128 Playable Demo\n\nYet another great game from Russia! This time it's a puzzle/strategy game where you can only reach the level exit by overcoming various obstacles with the help of different items — for example, using a key on a door, an axe against a monster, and so forth.\n\nAlthough the controls appear to be configurable, only the keyboard actually works, specifically the keys **Q / A / O / P / Space**.\n\n*(Original summary in English:)*  \nAgain a clever russian strategy game. You can only reach the end of a level if you use the right items, for example: a key for a door, or a axe against a monster, try it out. The controls are following: Q/A/O/P/Space, other controls are no\n",
+  "body_ru": "### Играбельное демо HAMON IV 128\n\nИ снова отличная игра из России! На этот раз перед нами головоломка, в которой добраться до выхода с уровня можно лишь преодолевая различные препятствия с помощью определенных предметов — например, открывая дверь ключом, срубая монстра топором и так далее.\n\nХотя управление кажется настраиваемым, на самом деле работает только клавиатура, а именно клавиши **Q / A / O / P / Пробел**.\n\n*(Оригинальное резюме на английском:)*  \nAgain a clever russian strategy game. You can only reach the end of a level if you use the right items, for example: a key for a door, or a axe against a monster, try it out. The controls are following: Q/A/O/P/Space, other controls are no\n",
+  "text_type": 3
+}

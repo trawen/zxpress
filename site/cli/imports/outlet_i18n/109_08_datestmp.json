@@ -1,0 +1,48 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "109",
+  "article_id": "08_datestmp",
+  "title_en": "Date Stamp",
+  "title_ru": "Date Stamp",
+  "meta_description_en": "Instructions and technical info for Date Stamp, a +D and BetaDOS utility by Paul Howard to timestamp disk files.",
+  "meta_description_ru": "Инструкция и техническое описание утилиты Date Stamp от Пола Ховарда для простановки дат файлов на дисках +D и BetaDOS.",
+  "authors": [
+    "Paul Howard"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "utility",
+      "tag_alias": "utility"
+    },
+    {
+      "tag_name": "+d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "g+dos",
+      "tag_alias": "g-dos"
+    },
+    {
+      "tag_name": "betados",
+      "tag_alias": "betados"
+    },
+    {
+      "tag_name": "impact pd",
+      "tag_alias": "impact-pd"
+    }
+  ],
+  "category_ids": [
+    64,
+    73
+  ],
+  "body_en_plain": "DATE STAMP\n         By Paul Howard\n         Instructions &\n         technical info\n         --------------\nThe next item allows you to add\ndates to files saved on +D disc\nand read them back in using the\nsame program. Valid dates range\nfrom 01.01.1980 to 31.12.9999.\nThis version has no check for a\nleap year, so 29.02.1993, for\nexample, would be accepted.\n\n\nIt works in G+DOS2a and BetaDOS\nunless the disc is formatted\nother than to the standard 80\nfiles when the unused sectors\nused for the date are already in\nuse in the file at position 1.\n\nTo insert or read a date, load\nthe file DATE and select 1 or 2.\nThe appropriate menu will then\nbe highlighted. First, catalogue\nthe disc to find the P-number of\nthe file, and enter this number\nby pressing 2.\n\nIf date stamping,press 3 to ent-\ner the date then 4 to stamp it.\nIf reading the date, press 4 and\nit will appear in pink below the\nwords \"File dated\". If the file\nis undated,the message\"No date!\"\nwill be displayed instead.\n\nThe date is stored as 4 bytes\n(day, month, year-lo & year-hi)\nin bytes 242-245 of the sector.\nResaving removes the date, and\nSAVE TO copying creates copies\nwithout dates, since the date\nbytes are usually unused and so\nare not copied by SAVE TO.\n\nI'd like to thank Miles Kinloch\nfor doing the research on free\nsectors and digging out some old\nFormat articles on the subject.\n\nThe program is public domain and\nmay be freely distributed. Any\ncomments or improvements? Paul\nHoward,c/o Impact PD,36 Budges\nRd,Wokingham,Berkshire,RG40 1PJ.\n\nPress \"N\" now to load DATE STAMP\n.\n",
+  "body_ru_plain": "",
+  "body_en": "# Date Stamp\n\n**By Paul Howard**  \n*Instructions & technical info*\n\nThe next item allows you to add dates to files saved on +D disc and read them back in using the same program. Valid dates range from 01.01.1980 to 31.12.9999. This version has no check for a leap year, so 29.02.1993, for example, would be accepted.\n\nIt works in G+DOS2a and BetaDOS unless the disc is formatted other than to the standard 80 files when the unused sectors used for the date are already in use in the file at position 1.\n\nTo insert or read a date, load the file DATE and select 1 or 2. The appropriate menu will then be highlighted. First, catalogue the disc to find the P-number of the file, and enter this number by pressing 2.\n\nIf date stamping, press 3 to enter the date then 4 to stamp it. If reading the date, press 4 and it will appear in pink below the words \"File dated\". If the file is undated, the message \"No date!\" will be displayed instead.\n\nThe date is stored as 4 bytes (day, month, year-lo & year-hi) in bytes 242-245 of the sector. Resaving removes the date, and SAVE TO copying creates copies without dates, since the date bytes are usually unused and so are not copied by SAVE TO.\n\nI'd like to thank Miles Kinloch for doing the research on free sectors and digging out some old Format articles on the subject.\n\nThe program is public domain and may be freely distributed. Any comments or improvements? Paul Howard, c/o Impact PD, 36 Budges Rd, Wokingham, Berkshire, RG40 1PJ.\n\n*(Press \"N\" now to load DATE STAMP.)*\n",
+  "body_ru": "# Date Stamp\n\n**Пол Ховард (Paul Howard)**  \n*Инструкция и техническая информация*\n\nСледующая программа позволяет добавлять дату к файлам, сохранённым на диске +D, и считывать её обратно с помощью той же программы. Допустимый диапазон дат — от 01.01.1980 до 31.12.9999. В этой версии нет проверки високосного года, поэтому, например, дата 29.02.1993 будет принята без ошибок.\n\nУтилита работает в G+DOS2a и BetaDOS, если только диск не отформатирован под количество файлов, отличное от стандартных 80, когда неиспользуемые секторы, отведённые под дату, уже заняты файлом в позиции 1.\n\nЧтобы проставить или прочитать дату, загрузите файл DATE и выберите 1 или 2. Нужный пункт меню подсветится. Сначала выведите каталог диска, чтобы узнать P-номер файла, и введите это число, нажав клавишу 2.\n\nЕсли вы проставляете дату, нажмите 3 для её ввода, затем 4 для записи штампа. При чтении даты нажмите 4, и она отобразится розовым цветом под строкой «File dated». Если файл не датирован, вместо этого появится сообщение «No date!».\n\nДата хранится в виде 4 байт (день, месяц, младший байт года и старший байт года) в байтах 242–245 сектора. Повторное сохранение файла удаляет дату, а копирование командой SAVE TO создаёт копии без даты, поскольку байты даты обычно считаются неиспользуемыми и не переносятся при таком копировании.\n\nЯ хотел бы поблагодарить Майлза Кинлоха (Miles Kinloch) за исследование свободных секторов и поиск старых статей из журнала Format по этой теме.\n\nПрограмма является общественным достоянием (public domain) и может распространяться свободно. Есть замечания или предложения по улучшению? Пишите: Paul Howard, c/o Impact PD, 36 Budges Rd, Wokingham, Berkshire, RG40 1PJ.\n\n*(Нажмите «N» сейчас, чтобы загрузить DATE STAMP.)*\n",
+  "text_type": 3
+}

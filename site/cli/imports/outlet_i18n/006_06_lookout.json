@@ -1,0 +1,46 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "006",
+  "article_id": "06_lookout",
+  "title_en": "Lookout: News and Press",
+  "title_ru": "Lookout: Новости и пресса",
+  "meta_description_en": "Early 1988 news and magazine digest: ZX Spectrum market dominance at Christmas, rumors of a new Spectrum model, and an overview of current UK computer press.",
+  "meta_description_ru": "Дайджест новостей и прессы за начало 1988 года: доминирование ZX Spectrum на рождественском рынке, слухи о новом Спектруме и обзор свежих журналов.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "рынок софта",
+      "tag_alias": "software-market"
+    },
+    {
+      "tag_name": "обзор прессы",
+      "tag_alias": "press-review"
+    },
+    {
+      "tag_name": "your sinclair",
+      "tag_alias": "your-sinclair"
+    },
+    {
+      "tag_name": "sinclair user",
+      "tag_alias": "sinclair-user"
+    },
+    {
+      "tag_name": "zx spectrum +2",
+      "tag_alias": "zx-spectrum-plus-2"
+    },
+    {
+      "tag_name": "новости",
+      "tag_alias": "news"
+    }
+  ],
+  "category_ids": [
+    130,
+    131
+  ],
+  "body_en_plain": "No room for our normal LOOKOUT\nfeature so we've extracted the\nnews and magazine summary:\n\nDespite the high profile of the\nAtari ST in the media, the\nSpectrum,far from declining, had\n46.4% of the home software Xmas\nmarket ALMOST HALF!The Commodore\nC64 was 2nd with 22.8%.\n\nThere's been very strong specul-\nation on Micronet that Boots,the\nHigh Street stores, are to stop\nselling computer hardware. There\nmay be bargains on offer as some\nof the stores clear stock. Boots\nhave denied the story so they\nmay simply be reducing further\nthe number of their stores that\nstock computers.\n\nThere could be a new Spectrum in\n1988 - like the +2 but able to\nadd on a disc drive compatible\nwith the +3.\n\nThe EEC could put a tariff on\nimported Japanese printers soon\nso prices may go up.\n\nAMS have dropped their plans to\nrelease the MAX microdrive desk-\ntop WIMP system although it's\nnow ready. Presumably they don't\nthink the market worthwhile.\n\nNow a quick look at this month's\nmagazines:\n\nYour Sinclair has listings for\nBORDER patterns,a standard BASIC\nre-define keys routine and a\nspecial cassette SCREEN$ loader.\n\nAndrew Hewson gives beginners an\nintroduction to machine code in\nSinclair User.\n\nYour Computer has an article on\nall the wordprocessors available\nfor the Spectrum to see how they\ncompare.\n\nPersonal Computer World has a\nlisting for one of those \"Pick a\nnumber and the Computer will\nguess it\" games, a review of\nMicronet and a preview of the\nAtari Abaq based on a transputer\n- 16 million colours for `3000\nif you're thinking of upgrading!\n\nFinally, Stephen Lamb says in\nOUTLETTERS- Everyday Electronics\nis worth a look as they have a\nregular feature on the Spectrum..\n",
+  "body_ru_plain": "Для нашей обычной рубрики LOOKOUT\nместа не нашлось, поэтому мы\nвыжали самое главное — новости\nи обзор прессы:\n\nНесмотря на шумиху вокруг\nAtari ST в СМИ, Spectrum отнюдь\nне сдает позиций: на рождествен-\nском рынке домашнего ПО его доля\nсоставила 46.4% — ПОЧТИ ПОЛОВИНА!\nCommodore C64 на 2-м месте\nс 22.8%.\n\nВ Micronet активно ходят слухи,\nчто сеть магазинов Boots соби-\nрается прекратить продажу ком-\nпьютерного «железа». Возможно,\nбудут выгодные распродажи, пока\nмагазины избавляются от остатков.\nВ Boots слухи опровергли, так что\nони, возможно, просто еще сильнее\nсократят число филиалов, где\nпродаются компьютеры.\n\nВ 1988 году может появиться\nновый Spectrum — похожий на +2,\nно с возможностью подключения\nдисковода, совместимого с +3.\n\nЕЭС вскоре может ввести пошлину\nна импорт японских принтеров, так\nчто цены могут вырасти.\n\nAMS отказались от планов выпуска\nоконного WIMP-интерфейса MAX для\nмикродрайва, хотя он уже готов.\nВидимо, посчитали, что рынок\nтого не стоит.\n\nА теперь беглый взгляд на свежие\nжурналы:\n\nВ Your Sinclair есть листинги\nузоров для BORDER, стандартная\nподпрограмма переназначения\nклавиш на BASIC и особый\nкассетный загрузчик SCREEN$.\n\nAndrew Hewson в Sinclair User\nзнакомит новичков с машинным\nкодом.\n\nВ Your Computer напечатана\nстатья со сравнением всех\nдоступных для Spectrum текстовых\nпроцессоров.\n\nВ Personal Computer World —\nлистинг игры из серии «загадай\nчисло, а компьютер угадает»,\nобзор Micronet и превью Atari\nAbaq на базе транспьютера —\n16 миллионов цветов за `3000,\nесли вы подумываете об апгрейде!\n\nИ наконец, Stephen Lamb в\nOUTLETTERS сообщает, что стоит\nполистать Everyday Electronics:\nтам есть регулярная колонка\nо Spectrum..\n",
+  "body_en": "## Lookout\n\nNo room for our normal LOOKOUT feature so we've extracted the news and magazine summary:\n\nDespite the high profile of the Atari ST in the media, the Spectrum, far from declining, had 46.4% of the home software Xmas market ALMOST HALF! The Commodore C64 was 2nd with 22.8%.\n\nThere's been very strong speculation on Micronet that Boots, the High Street stores, are to stop selling computer hardware. There may be bargains on offer as some of the stores clear stock. Boots have denied the story so they may simply be reducing further the number of their stores that stock computers.\n\nThere could be a new Spectrum in 1988 - like the +2 but able to add on a disc drive compatible with the +3.\n\nThe EEC could put a tariff on imported Japanese printers soon so prices may go up.\n\nAMS have dropped their plans to release the MAX microdrive desktop WIMP system although it's now ready. Presumably they don't think the market worthwhile.\n\nNow a quick look at this month's magazines:\n\n* **Your Sinclair** has listings for BORDER patterns, a standard BASIC re-define keys routine and a special cassette SCREEN$ loader.\n* Andrew Hewson gives beginners an introduction to machine code in **Sinclair User**.\n* **Your Computer** has an article on all the wordprocessors available for the Spectrum to see how they compare.\n* **Personal Computer World** has a listing for one of those \"Pick a number and the Computer will guess it\" games, a review of Micronet and a preview of the Atari Abaq based on a transputer - 16 million colours for `3000 if you're thinking of upgrading!\n* Finally, Stephen Lamb says in OUTLETTERS - **Everyday Electronics** is worth a look as they have a regular feature on the Spectrum..\n",
+  "body_ru": "## Lookout: Новости и пресса\n\nДля нашей обычной рубрики LOOKOUT места не нашлось, поэтому мы выжали самое главное — новости и обзор прессы:\n\nНесмотря на шумиху вокруг Atari ST в СМИ, Spectrum отнюдь не сдает позиций: на рождественском рынке домашнего ПО его доля составила 46.4% — ПОЧТИ ПОЛОВИНА! Commodore C64 на 2-м месте с 22.8%.\n\nВ Micronet активно ходят слухи, что сеть магазинов Boots собирается прекратить продажу компьютерного «железа». Возможно, будут выгодные распродажи, пока магазины избавляются от остатков. В Boots слухи опровергли, так что они, возможно, просто еще сильнее сократят число филиалов, где продаются компьютеры.\n\nВ 1988 году может появиться новый Spectrum — похожий на +2, но с возможностью подключения дисковода, совместимого с +3.\n\nЕЭС вскоре может ввести пошлину на импорт японских принтеров, так что цены могут вырасти.\n\nAMS отказались от планов выпуска оконного WIMP-интерфейса MAX для микродрайва, хотя он уже готов. Видимо, посчитали, что рынок того не стоит.\n\n### В свежих журналах\n\n* **Your Sinclair**: листинги узоров для BORDER, стандартная подпрограмма переназначения клавиш на BASIC и особый кассетный загрузчик SCREEN$.\n* **Sinclair User**: Andrew Hewson знакомит новичков с машинным кодом.\n* **Your Computer**: статья со сравнением всех доступных для Spectrum текстовых процессоров.\n* **Personal Computer World**: листинг игры из серии «загадай число, а компьютер угадает», обзор Micronet и превью Atari Abaq на базе транспьютера — 16 миллионов цветов за `3000, если вы подумываете об апгрейде!\n* **Everyday Electronics**: Stephen Lamb в OUTLETTERS сообщает, что журнал стоит полистать — там есть регулярная колонка о Spectrum.\n",
+  "text_type": 3
+}

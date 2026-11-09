@@ -1,0 +1,113 @@
+Woot! #02 — ZXMAS 2018 (Side 1 magazine)
+========================================
+
+The Woot! ZXMAS message
+
+It's December and we're not dead yet, so it must be time for another tape magazine. This issue adheres strictly to the mission statement of the previous two: a bit of serious content, lots of wibble, cartoons, mashups and a bias towards new software; all of it accompanied by games, demos, tidbits and tutorials (well, tutoriAL, but the author did about 600 revisions of it x-D). There's a lot more content this time, so it's split over two tapes. Short of bothering to properly learn about 128K paging, there is nothing I could do to avoid that. 2018 has been a good year: a lot of new software has been released, and it's being preserved in ZXDB and visible at sites using it. We've also seen the 1 year anniversary of spectrumcomputing.co.uk. Woot!This issue will not mention Brexit, not even once.That is all, apart from:
+
+:ZX-WOOT: It gives me great pleasure to be in Sal's cafe in Rhyll, with none other than CUCHULAINN, or rather Jim Halfpenny, the man that played him in Tir Na Nog & Dun Darach.JH: Thanks. I haven't got long by the way.ZXW: Okay. Tell us about how you got the gig.JH: I saw the scribbled advert in a newsagent's window in Birmingham: "WANTED: tall man that looks a bit celtic, must like wanking." It looked right up my street, so I applied and quickly got an interview. Gregg Follis said that my stride "looked about right" and, as long as I could provide my own wellies, the job was mine. I asked what the 'wanking' was all about, and he got annoyed and said "Bloody hell, you're the 3rd person to say that - IT SAYS WALKING!!!" Even still, I started the week after.
+
+`ZXW: What was a standard day like?JH: It was just lots of walking against a PAPER 4 screen, and recording a few lines of mystic bollocks; you know the kind of thing: Callum's shaft and the Pot of Magda or whatever. The team were a great bunch though, loads of practical jokes and boozing, so it was a blast...until the Sidhe turned up.ZXW: Ah. Your on-screen nemesis. What was the problem?
+
+PJH: His hairy little body and sinister aura may have been perfect for the role, but he just creeped everybody out on set. It spoiled the crack. Not only that but we shared a trailer, and totally rubbed each other up the wrong way. The mutual dislike kept building until one wet afternoon we were consigned to barracks, and I snapped. Sidhe was noisily eating a Pot Noodle - something he knew annoyed me - and he spilt a drop of the sauce on my trousers. I went berserk and called him "A creepy little ****er that belongs in a zoo". It turned out that I'd hit a particularly raw nerve, as he was mistaken for a chimp the previous week and impounded. He never forgot that.
+
+ZXW: Oof. We'd best move on. What are you up to these days?
+JH: I struggled for work after Dun Darach. After several years on the dole, I decided to put my long stride to good use and started my own dog walking business - Tir Na Dog. It's not so glamorous, but at least I'm out in the open air. The only problem is that the Sidhe bears a grudge - the git won't leave me alone. He follows me everywhere and when he catches up, I reappear back in my living room without my possessions. It wouldn't be so bad but I've lost 2 spaniels and a pug over the past 6 months because of it. It's ruining my busin- ...
+Shit. Here we go again, sorry, gotta dash.
+
+-Einar Saukas, creator, curator, development
+-Dave Hughes, SC stuff, ZXDB secretarial assitance
+-PeterJ, Spectrum Computing God
+-Ricardo, SC dev guru
+-MikeDavies, upload form, tech support
+-Thomas Kolbeck, ZXInfo, open API, web master
+
+-Pav, Ralf, Juan, 8BitAG, StooB + too many to mention! |Content originally from WoS (~July 2016):
+-26910 titles, 96126 files, 0 author roles, 7279 external references.|Content in ZXDB now (mid-December 2018):
+
+|Milestones: (OS = Open source / SC=Spectrum Computing) -July '16: ZXDB first release
+-Aug '16: Original WoS data fully imported into ZXDB
+-Aug '16: SpectrumComputing site launched
+-Sept '16: ZXInfo site launched
+-May '17: Original WoS data officially declared OS
+-Nov '17: ZXDB discussion section created at SC forum
+-March '18: ZXDB Open API launched
+-April '18: ZXDB becomes official Github OS project
+-June '18: ZX App for Android launched
+-Nov '18: ZXDB submission form at SC launched
+-Nov '18: ZX-Ed development starts
+-Dec '18: ZX-Ed released as official Github OS project
+
+0I feel an eerie draft of cold air against my neck, and I look around to see a hairy apparition in the doorway. I look back to see Jim legging it out through the kitchen...
+
+It's been another good year for Speccy software, and the absence of a stand-out 'IANNA'makes it unclear what the best game of the year will be. Team Sanchez are working on a special-looking conversion of 'Power Blade', but that won't be released this year. My top tips would be Mighty Final Fight, Maze Death Rally-X, Unhallowed or Old Tower; the latter being a landmark title - the Speccy's first multicolour scroller. 2018 has seen 86 games released so far - 33 action, 13 puzzle, 8 text and 5 MOD. There were at least 44 demos, 1 one which was from the UK! We are indebted to the tail end of the ZX-Dev 2017 contest, which gifted us 11 top quality titles.All in all, things are looking very healthy. SPECCY FOREVER!
+
+*Aeon was released as a cover game with issue 5 of ZX Spectrum Gamer, and is an epic space story told in 9 parts. You follow the Goldenstark bloodline from the discovery of the planet 'Aeon' through the exploitation of its mineral wealth, to Aeon's ultimate collapse and your final escape.  The adventure is a mix of above average AGD games, 2 of which are quite 'unAGD', and loading screen stories-so be sure to play it with fast load disabled. While each individual game may not break new ground, the whole package is a fresh experience. Judging by previous works (admittedly they were mainly CSS CGC entries!), I never realised that SunTeam were such talented pixel artists; the sheer quantity of brilliant visuals, from the SCREEN$ down to each platform block, suggests that it comes easily to them. >
+
+*The backstory enhances the games, so the finale has an atmosphere more like BatMan: The Movie than the standard action platformer it actually is. There is no password progression, so even the laziest player can see the whole thing. A real treat.
+
+*All Hallows: Rise of the Pumpkin Rucksack Games
+**I'm afraid to say that John's previous game, Rubicon, didn't float my boat, so it's pleasing to see that All Hallows is a return to form. It's another visually delightful AGD game, in which you are an ever-bouncing Pumpkin endeavouring to release the forest from the imprisonment spell of the Evil Lord (natch). It's got October 31st written all over it, so it was surprising to see it released in September! The permanent bouncing mechanic, as seen before in games like Bouncing Bomb, may seem impossible to control at first, but it can be quickly mastered. Most of us rarely manage to complete games these days, and All Hallows initially feels like another 'no-chancer', but John has gauged the difficulty and game size just right.
+
+"Pooper Scooper by The Death Squad
+"You'd be forgiven for thinking that every Death Squad game is poop themed, but of the 10 games they've released so far, it's
+only half of them. Pooper Scooper falls into that half, and as long as you're okay with that, it's a cracking game. As usual we are treated to davey's signature graphics style of cartoony, character based sprites and backgrounds. For the colours to work, sprites have to move in 8 pixel steps, so gameplay is a bit twitchy; however, clever use of animation reduces the 'visual jump' quite effectively. Pooper Scooper builds on previous games and has a tag-team mechanic. You switch between different characters to perform a specific task, in this case to rid the local park of dog turds and flashers. It can get a bit repetitive, but it's worth a proper try out at least.
+
+*Maze Death Rally-X by TomD
+*The ZX-Dev competition has been good to us. TomD is a regular contributor and this entry to it shows off his rare skill as an all-rounder: he's annoyingly deft with code, graphics and sound. Maze Death Rally-X is an enhanced remake of PSS's Maze Death Race, which is a port of the arcade classic Rally-X. It handles really nicely; even though the maze scrolls in 8 pixel jumps, the playability isn't compromised by it. I'm very fond of MDR, but it had its flaws; Tom's version solves all of them, and is about as close to the arcade original as the Speccy is going to get. The red cars have proper AI, making the game genuinely challenging a few levels in. The 48K version has a more than serviceable engine buzz, but if you opt for 128K you'll be treated to a plink-plonk AY track that will have you grinning like an imbecile. It's 1982 again! Recommended.
+
+"Mighty Final Fight by Team Sanchez
+"MFF is a conversion from a 1993 NES game, which revisits the notorious Final Fight Capcom coin-op in a parodic way.
+The story is basically the same - the Mad Gear gang has abducted the Metro City mayor Haggard's daughter, Jessica, and it's up to the player to rescue her. However, the characters, heroes and villains alike, are depicted in a peculiar "super-deformed" fashion.You can play as Haggard as well as Jessica's boyfriend, Cody, or Guy, Cody's training partner in martial arts. Every one of them, apart from the usual kicks and punches, can hit enemies with special moves available after filling a power meter rising with each defeated enemy. You will have to fight your way across five stages in order to complete your quest. The end-of-game screens are different for each character.
+
+"Mighty Final Fight by Team Sanchez
+"The original game's distinctive graphic style has been faithfully translated to the Spectrum, with well-designed sprites moving against colorful and detailed backdrops. Sound is equally pleasant, with several catchy tunes. Difficulty seems adequate: if you are swift enough and master the various strikes, you can negotiate even the most overwhelming enemy hordes. MFF is a superb example of gang beat-em-up, and a worthy winner of the ZX-DEV Conversion 2017 competition.Review by Alessandro Grussu.
+
+2Ninja Gaiden Shadow Warriors Jerri/DarkHorace/Diver
+)2Made for the ZX-DEV Conversion 2017 competition,
+NGSW is a run-and-slash game converted from a 1991 Tecmo title for the Nintendo Game Boy. The main character, Ryu Hayabusa, embarks on a dangerous mission to save New York City from the evil Emperor Garuda and his henchmen. Ryu runs through five levels, from left to right; in some sections, from top to bottom and vice versa, jumping from platform to platform, or employing a grappling hook. He attacks foes with his sword or a magic flame, of which a maximum of five can be carried. Enemies vary from ninjas to robots, to the end-of-level bosses. Some of them will simply try to hit Ryu, others will shoot him, or throw shurikens or bombs.
+
+2Ninja Gaiden Shadow Warriors Jerri/DarkHorace/Diver
+)2He must also face environmental dangers like flames and bottomless pits.The frantic pace and simple, intuitive gameplay is the main strength of NGSW. However, it also shows the limitations of the original game. The playing area is noticeably small, as well as the sprites, while the backdrops look rather bland. Pleasing renditions of the tunes play along, while sound effects are adequate. In a nutshell, an enjoyable title, recommended for players looking for pure and uncomplicated action.Review by Alessandro Grussu.
+
+Authored with PAW, Unhallowed was released bang on Halloween. While the plot is riddled with malevolence, we must commend the author for his compassion; for this is a game that does away with the common niggles that discourage many people from playing text adventures. It is made very clear when you shouldn't pursue a particular path, and you know all the verbs you can use from the start. As a result you can submerse yourself in the spookiness and actually enjoy solving the puzzles, instead of wandering in circles pulling your hair out (mostly). It's well written, and needs no pictures to draw you into a chilling otherworld. Unhallowed probably won't have you checking under your bed after playing, but it manages to be at least slightly spooky - especially if you're living alone in a 1960's terraced house...
+
+"SQIJ 2018 by Tardis Remakes
+
+Thank god. After 30 years of hurt we can finally hold our heads high. SQIJ, or 'the elephant dung in the room', has finally been shovelled up and removed by Tardis Remakes, who have released a playable remake of the C64 version. Remaking SQIJ for the Spectrum is a lot like going to a dinner party with Idi Amin - fraught with danger, but whatever happens it won't be you looking bad at the end of the night.SQIJ 2018 is pretty polished, which should come as no surprise given the team behind it: Soren as reliable 'finisher' coder, graphics from Lobo, veteran pixel perv Simon Butler and the immeasurable redballoon. Saul Cross's music is okay but I would prefer a different choice of beeper engine, I think this one is the over squelchy 'SpecialFX'.
+
+"SQIJ 2018 by Tardis Remakes
+
+The original Speccy version was so bad it's easy to forget there was even a game behind it, so it's worth a quick recap of what SQIJ is actually about. You were an everyday happy mutant bird until the population holocaust, then you were overcome by insatiable hunger when the food ran out. Barking. It's a well above average flip screen game, the 24 x 20 sprites and decent beeper spot effects give it a very fresh feel. I'm not a big fan of the 'spawnalot' genre, but the nasties appear at a manageable rate and aren't overbearing. It looks great, but a lack of variety in the scenery makes the maze very difficult to navigate. SQIJ 2018 is very completable, but you'll need to draw a map if you're to stand a chance.A cassette version was released with enhanced replay features (The Power House were not the publisher...)
+
+Brian Sewell' ZX-Art Gallery
+
+6Press "O" to page-back, "P" to continue
+
+Hello, I'm Brian Sewell, and I'd like to elucidate the hidden meanings of some superior specimens of ZX-Art.We begin with Gary Linekar's Superstar Soccer, by Gremlin Graphics. Please do press a key when ready.
+
+Here we can see a splendid example of an artist that has no time for the pettifogging business of convention. This portrait eschews the standard artistic dogma that expects a portrait to bear a passing resemblance to its subject.
+
+Instead, it transmogrifies Gary, whom is a footballer I gather, into a twisted, almost  neanderthalic, homunculous. Note the eyes are in full shadow, betraying sinister thoughts and perverse mal-intent.
+
+The elongation of the skull's parietal area is an obvious reference to human evolution, past, present and future; so in many ways this is a depiction of the everyman - it represents each and every one of us. This is not a picture - it is a window to the soul.
+
+xNow we have 'Hysteria' by Software Projects.The suggestions of the unseen groin area is an obvious reference to Rembrandt's 'The Night Watch', in which we are forced to acquiesce to symbolism in order to perceive the artist's message loud and proud.
+
+xSuch visceral expression could never be achieved by merely pasting a porn star's head to a bodybuilder's torso - this is intentional, and clever, obfuscation. Ingenius. In case you are in any doubt, the protagonist is clearly about to empty his spunk-chucker.
+
+Krakout by Gremlin. This diorama is redolant of the angular chaos encapsulated in Picasso's 'Guernica', but there is no subtext here - it is pure pseudo-quasi-Jungian Freud. The grasped cyan truncheon represents your tumescent bellend, and the maurauding red monster is your mother's growler. We should move on.
+
+TITS! This picture is all about tits. The little green guy is staring at the conventionally attractive Ladies' tits. The even smaller green guy in the middle is a vulgar simulacrum of the tits.
+
+tAnd I'm pleased to say we can finish with something rather special. Here we have 'Chronos' by Mastertronic. It's incredible how such a simple monochrome image can be so pregnant with emotion. To stand in front of this picture is to be gifted, but there is no denying that it has a deeply oppressive presence.
+
+tThe receiver can only see eyes and an outline, but there is a palpable sense that more lurks beneath the surface. Perhaps one day we will be able to apply advanced technologies to drill more deeply into this image.
+
+<tThankyou. And good night.
+
+|Chris Smith is to launch a new kickstarter campaign to fund building a time machine. He plans to go back to 2013 and stop himself ever meeting David Levy.|Grandslam Entertainments has teamed up with the NHS. They plan to release Chubby Gristle 2: Walking towards diabetes. It sees the protagonist forced to go on a calorie restricted diet in order to keep his extremeties.|It is rumoured that PeterJ, founder of Spectrum Computing, plans to expand the site's purview to other 8bit machines. Commlaircomputing.co.uk is all set to launch in 2019.|Geoff Capes is in talks with Martech Games over a sequel to 'Strongman'. It takes a bold step away from the action of the previous title, and is a strategy/management game based around his passion for breeding budgerigars.
+
+0GGGGGGGGGGGGGGGGGGGG
+
+COWABUNGA! As the kids say. Welcome to the WOOT! Tape Magazine 2018. Housekeeping follows. Stuff by R-Tape. Printing by modded FZX. ZX7 is rather good isn't it? A vat of grat(itude) to djnzx48 (thankyou for the music!), Yerzmyey (I used it again, hope that's cool), Alessandro (sod the word count!), Andre, Filipe, Pedro (+ The Chameleons!), TextVoyage (Santa + Scramble!), Paolo Dias, stalwart Bob Fossil, Joefish (Dim Sun!), Ast A 'tinkerman'Moore, Pav, michellekg, Juan F, Seb, XIKAPY (get back here you grumpy bugger!), and last but defo not least, for so many reasons, and I don't know what order: PeterJ (his cock still firmly on the table), Einar (indefatigable, almost), Thomas, Ricardo, Mike Davies, Bizzley, hikoki and all SC contributors! Thanks to the Bean Brothers translators! (I thought that was going to kill me!) Jonathan - sod them & get yerself back lad :-(, Who's left? I must have forgotten someone - in case I have: TOUGH NUGGIES!!!That's the end of Side 1 folks. Everything's fine. Keep calm and carry on. Move on to Side 2 for SCREEN$. A very important list of bellends follows: Lee Spoons, RebelstarWAC. End of message.

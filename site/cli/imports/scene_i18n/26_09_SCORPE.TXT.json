@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "26",
+  "article_id": "09_SCORPE.TXT",
+  "source_lang": "de-AT",
+  "title_en": "Scorpions – English Version",
+  "title_ru": "Scorpions — английская версия",
+  "meta_description_en": "Announcement of the English translation of the Russian strategy game Scorpions for the ZX Spectrum, presented exclusively in Scene+.",
+  "meta_description_ru": "Анонс англоязычной версии российской стратегической игры Scorpions для ZX Spectrum, эксклюзивно представленной в журнале Scene+.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "scorpions",
+      "tag_alias": "scorpions"
+    },
+    {
+      "tag_name": "strategy",
+      "tag_alias": "strategy"
+    },
+    {
+      "tag_name": "tigers-claw",
+      "tag_alias": "tigers-claw"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "SCORPIONS ü - SCORPIONS-DIE MACHINE (English) - Now it is done:\nThe English Version of Scorpions is finished(Bravo, Tiger's\nClaw!) and I present it exclusive on SCENE+!ö Scorpions is a\nrussian strategy game which can be played by oneor two players.\nYou play against a extraterrestral agressorcalled Scorps, they\nhave build a warbase in Russia and prepare ainvasion. You can\nbuild war machines, arm them and control itagainst Scorps. The\nMachines differ in payload, fuel consumption and defence. Some\ncrafts are also All-Terrain-Vehicles. Don't forget topurchase\nthe right ammo for your weapon!( You are also able to take fuel\nand ammo from destroyed enemy andyour own warcrafts. BEWARE:\nSCORPIONS IS NOT PD, PLEASE MAKE ONLY COPIES FOR Y\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### SCORPIONS – DIE MACHINE (English)\n\nNow it is done: The English version of Scorpions is finished (Bravo, Tiger's Claw!) and I present it exclusively on SCENE+!\n\nScorpions is a Russian strategy game which can be played by one or two players. You play against an extraterrestrial aggressor called Scorps; they have built a war base in Russia and are preparing an invasion. You can build war machines, arm them, and control them against Scorps. The machines differ in payload, fuel consumption, and defence. Some crafts are also All-Terrain Vehicles. Don't forget to purchase the right ammo for your weapon!\n\nYou are also able to take fuel and ammo from destroyed enemy and your own warcrafts.\n\nBEWARE: SCORPIONS IS NOT PD, PLEASE MAKE ONLY COPIES FOR Y...\n",
+  "body_ru": "### SCORPIONS – DIE MACHINE (на английском)\n\nСвершилось: английская версия Scorpions готова (браво, Tiger's Claw!), и я эксклюзивно представляю её в SCENE+!\n\nScorpions — это российская стратегическая игра, рассчитанная на одного или двух игроков. Вы сражаетесь против внеземных захватчиков по имени Скорпы (Scorps), которые построили военную базу в России и готовят вторжение. Вы можете собирать боевые машины, вооружать их и направлять в бой против Скорпов. Машины различаются грузоподъёмностью, расходом топлива и защитой. Некоторые аппараты также являются вездеходами. Не забудьте приобрести подходящие боеприпасы для вашего оружия!\n\nВы также можете забирать топливо и боеприпасы из уничтоженной вражеской и собственной боевой техники.\n\nВНИМАНИЕ: SCORPIONS НЕ ЯВЛЯЕТСЯ PUBLIC DOMAIN, ПОЖАЛУЙСТА, ДЕЛАЙТЕ КОПИИ ТОЛЬКО ДЛЯ В...\n",
+  "text_type": 3
+}

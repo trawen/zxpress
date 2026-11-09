@@ -1,0 +1,692 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    
+<head>
+            <base href="https://spectrumcomputing.co.uk/">
+        <meta charset="utf-8">
+    <!--
+    
+                      _                                                        _   _                              _    
+                     | |                                                      | | (_)                            | |   
+  ___ _ __   ___  ___| |_ _ __ _   _ _ __ ___   ___ ___  _ __ ___  _ __  _   _| |_ _ _ __   __ _   ___ ___  _   _| | __
+ / __| '_ \ / _ \/ __| __| '__| | | | '_ ` _ \ / __/ _ \| '_ ` _ \| '_ \| | | | __| | '_ \ / _` | / __/ _ \| | | | |/ /
+ \__ \ |_) |  __/ (__| |_| |  | |_| | | | | | | (_| (_) | | | | | | |_) | |_| | |_| | | | | (_| || (_| (_) | |_| |   < 
+ |___/ .__/ \___|\___|\__|_|   \__,_|_| |_| |_|\___\___/|_| |_| |_| .__/ \__,_|\__|_|_| |_|\__, (_)___\___(_)__,_|_|\_\
+     | |                                                          | |                       __/ |                      
+     |_|                                                          |_|                      |___/                       
+
+     -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="WOOT! Tape Magazine issue #5 - ZXMAS 2021 Edition for ZX-Spectrum 128K (Stonechat Productions/UK, 2021) by Dave Hughes, Beyker Soft, MatGubbins, Jim Waterman">
+              <meta name="keywords" content="WOOT! Tape Magazine issue #5 - ZXMAS 2021 Edition, Stonechat Productions, Dave Hughes, Beyker Soft, MatGubbins, Jim Waterman, Sinclair ZX Spectrum, ZX Spectrum, games, retrogaming, ZXDB, database">
+              <meta name="author" content="">
+              <title>WOOT! Tape Magazine issue #5 - ZXMAS 2021 Edition - Spectrum Computing</title>                                       
+              <meta property="og:title" content="WOOT! Tape Magazine issue #5 - ZXMAS 2021 Edition - Spectrum Computing">
+              <meta property="og:site_name" content="Spectrum Computing">                                     
+             <meta property="og:image" content="/SCRtoFace.php?SCR=zxdb/sinclair/entries/0036512/0036512-run-1.scr" >
+                      <meta property="og:image:type" content="image/png">
+                      <meta property="og:image:width" content="256">
+                      <meta property="og:image:height" content="192">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes,minimal-ui">        <style>
+            .container #table-general {
+                border-collapse: separate;
+                border-spacing: 0 4px;
+            }
+
+            .container table td {
+                padding-left: 8px;
+            }
+
+            .container table td:first-child {
+                padding-left: 0px;
+            }
+        </style>
+
+        <style>
+        /* critial CSS style to prevent quick listing to f*ck up random */
+        .btn-group-justified {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: separate;
+        }
+
+        .btn-group-justified>.btn,
+        .btn-group-justified>.btn-group {
+            display: table-cell;
+            float: none;
+            width: 1%;
+        }
+
+        .btn-group-justified>.btn-group .btn {
+            width: 100%;
+        }
+
+        .btn-group-justified>.btn-group .dropdown-menu {
+            left: auto;
+        }
+    </style>
+
+
+    <!-- preconnecto to required origins -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com?display=swap">
+
+    <!-- mobile icons and browser bar colours -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=Om5AKpBR0Y">
+    <link rel="icon" type="image/png" href="favicon-32x32.png?v=Om5AKpBR0Y" sizes="32x32">
+    <link rel="icon" type="image/png" href="android-chrome-192x192.png?v=Om5AKpBR0Y" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicon-16x16.png?v=Om5AKpBR0Y" sizes="16x16">
+    <link rel="manifest" href="/manifest.json?v=Om5AKpBR0Y">
+    <link rel="mask-icon" href="safari-pinned-tab.svg?v=Om5AKpBR0Y">
+    <link rel="shortcut icon" href="favicon.ico?v=Om5AKpBR0Y">
+    <meta name="msapplication-TileImage" content="mstile-144x144.png?v=Om5AKpBR0Y">
+
+    <meta name="msapplication-TileColor" content="#29282d">
+    <meta name="theme-color" content="#29282d">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="preload" href="/vendor/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+    </noscript>
+
+    <!-- Custom CSS -->
+    <link href="/dist/css/bootstrap-select.min.css" rel="stylesheet" type="text/css">
+    <link href="/dist/css/zxdb.css" rel="stylesheet" type="text/css">
+    <link href="/dist/css/full-slider.css" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap 3 Card CSS -->
+    <link rel="preload" href="/searchresult/card.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/searchresult/card.css">
+    </noscript>
+
+    <!-- Custom Fonts -->
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="icon" type="image/png" href="favicon.png" sizes="16x16">
+</head>
+    <body>
+    <!-- -->
+<!-- sc_body.php FILE STARTS HERE -->
+<script>
+  function checkQuickSearchType(e) {
+    const searchType = e.quick.value;
+    if (searchType === 'f') e.action = '/searchfile/index.php';
+  }
+</script>
+
+
+<!-- DEBUG INFO -->
+
+
+<div id="header">
+  <div class="container">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse  navbar-static-top" style="margin-bottom: 0">
+      <div class="navbar-header" style="margin-bottom: 50px;">
+
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#zxdbNavbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a href="/" title="Spectrum Computing" class="navbar-brand"><img src="/img/logo.svg" class="site_logo" alt="Spectrum Computing Logo"></a>
+      </div>
+
+      <!-- /.navbar-header -->
+
+      <ul class="nav navbar-top-links navbar-right" style="margin-top: 10px; margin-right: 0px; margin-left: 0px;">
+        <li class="sidebar-search">
+                      <div class="col-xs-12 avatar-header white_search_text"><span><i class="bi bi-box-arrow-in-right align-middle" style="font-size: 2.5rem; "></i><a class="login-header" href="#modalLogin" data-toggle="modal">LOGIN</a></span></div>
+          
+          <!-- new search  -->
+          <div class="white_search_text" style="text-align:left">
+            <form name="frm" class="form-inline transparent" id="newSearchForm" action="/list" method="get" onsubmit="checkQuickSearchType(this)">
+              <input type="hidden" name="inc_xrt" value="0">
+              <div class="input-group stylish-input-group">
+                <SELECT NAME="quick" id="quick" style="background-color:#0000;border:none;margin-left:0px;text-transform: uppercase;">
+                  <OPTION VALUE="s" SELECTED>Quick Search: Software</option>
+                  <OPTION VALUE="f" >Quick Search: Files</option>
+                  <OPTION VALUE="h" >Quick Search: Hardware</option>
+                  <OPTION VALUE="b" >Quick Search: Book</option>
+                  <OPTION VALUE="m" >Quick Search: Magazine</option>
+                  <OPTION VALUE="y" >Quick Search: Entity</option>
+                  <!--<OPTION  VALUE="p" >Quick Search: Publisher</option>-->
+                  <!--<OPTION  VALUE="a" >Quick Search: Author</option>-->
+                  <OPTION VALUE="g" >Quick Search: Group</option>
+                  <OPTION VALUE="c" >Quick Search: Licence</option>
+                  <OPTION VALUE="" >Quick Search: All</option>
+                </SELECT>
+                <br>
+                <input style="padding: 0px 0px;background-color:#0000; color: #fff;" type="text" class="form-control index-search" autocomplete="off" placeholder="Type here. Change search type above." name="text" id="text" value="">
+                <span class="input-group-addon" style="padding: 6px 0px;">
+                  <button type="submit" style="margin-top:25px" title="SEARCH"> <span class="glyphicon glyphicon-search"></span> </button>
+                </span>
+              </div>
+            </form>
+          </div>
+          <!-- end new search  -->
+
+          <!-- /input-group -->
+        </li>
+        <!-- /.dropdown -->
+      </ul>
+
+      <!-- /.navbar-top-links -->
+
+
+      <!-- RN - added  style="position:static" to make search clicable on small screens < 992px-->
+      <div class="col-md-12" role="navigation" style="position:static">
+        <div class="row">
+          <div class="collapse navbar-collapse" id="zxdbNavbar">
+            <ul class="nav nav-justified" id="navbar-collapse">
+              <li> <a href="/">Home</a> </li>
+              <li> <a href="/forums">Forums</a> </li>
+              <li> <a href="/releases">Releases</a> </li>
+              <li> <a href="/inlays">Inlays</a> </li>
+              <li> <a href="/scores">Scores</a> </li>
+              <li> <a href="/magazines">Magazines</a> </li>
+              <li> <a href="/help/">Help!</a> </li>
+              <li> <a href="/contacts">Contacts</a> </li>
+            </ul>
+          </div>
+          <!-- /.sidebar-collapse -->
+
+        </div>
+      </div>
+
+    </nav>
+    <!-- /.navbar-static-side -->
+
+  </div>
+</div>
+<!-- .header -->
+<script>
+    /// test handleGIF2 with Giant's Revenge
+    //// /dev_rn_images/index.php?cat=96&id=2040
+    //// it has border for both .SCR and .GIF images
+    ////
+    //// for QL images is just corrects the aspect ratio. QL had no border (as far as I know)
+    //// /dev_rn_images/index.php?cat=96&id=36202
+    function handleGIF2(img, border) {
+        //same function also present on detail_screens_justimages.php
+        // this one is used for listings
+        //
+        // blue border on Checkered Flag GIF screenshot 
+        // correct proportion for QL screenshots on TOURNAMENT TENNIS
+        // /dev_rn_images/advsearch.php?label_id=11702
+        //
+
+        if (img.naturalWidth < 257) {
+
+            // 256x192 GIFs with no border
+
+            color = "#000000;"; //if no colour we assume black
+
+            if (border == 1) {
+                color = "#0000CD"
+            }; // non bright colours same as ZX-Image
+            if (border == 2) {
+                color = "#CD0000"
+            };
+            if (border == 3) {
+                color = "#CD00CD"
+            };
+            if (border == 4) {
+                color = "#00CD00"
+            };
+            if (border == 5) {
+                color = "#00CDCD"
+            };
+            if (border == 6) {
+                color = "#CDCD00"
+            };
+            if (border == 7) {
+                color = "#CDCDCD"
+            };
+
+            //we use padding to make up for the border. padding in % scales with the image.
+            // has rounding errors to pixels so % are tweaked for pixel perfect display on desktop
+
+
+            attribute = "width: 100%; padding-top: 7%; padding-bottom: 6.5%; padding-left: 8.9%; padding-right: 9%; background:" + color + ""; //setup css for the image
+            img.setAttribute("style", attribute);
+        }
+
+        if (img.naturalWidth > 256) {
+            // 320x240 GIFs with border
+            attribute = "width: 100%; padding-left: 0%; margin-top: 0%; margin-left: 0%"; //setup css for the image
+            img.setAttribute("style", attribute);
+        }
+
+        if (img.naturalWidth == 512 && img.naturalHeight == 256) {
+            // Sinclair QL images.
+            // Simply resizes to the standard aspect ratio. No border, as the QL would show none (or very small) on a TV.
+
+            img.setAttribute("style", "transform: scaleY(1.4); image-rendering: auto; padding-top:13%; padding-bottom:13%;");
+        }
+    }
+</script>    <div class="container" id="wrapper"> <!-- START CONTENT-->
+        <div class="row">
+            <div class="col-lg-12">
+                <br><br>
+                <div class="panel panel-primary">
+                <div class="panel-heading"><span class="hidden-xs hidden-sm">General info for: </span><span>WOOT! Tape Magazine issue #5 - ZXMAS 2021 Edition</span><span class="hidden-xs"> [#ID: 36512]</span></div>
+                <div class="panel-body">
+                <div class="panel-default">
+                <div class="col-sm-12 col-md-6 col-lg-7"><div class="row zxdb_stripes"><div class="col-sm-4"><b>Title: </b></div><div class="col-sm-8"><a href="/entry/36512/ZX-Spectrum/WOOT_Tape_Magazine_issue_#5-ZXMAS_2021_Edition">WOOT! Tape Magazine issue #5 - ZXMAS 2021 Edition</a></div></div><div class="row zxdb_stripes"><div class="col-sm-4"><b>Release Date: </b></div><div class="col-sm-8">2021/Dec/22</div></div><div class="row zxdb_stripes"><div class="col-sm-4"><b>Original Publisher: </b></div><div class="col-sm-8"><a href="list?label_id=13986">Stonechat Productions (UK)</a></div></div><div class="row zxdb_stripes"><div class="col-sm-4"><b>Creators: </b></div><div class="col-sm-8"><a href="/list?label_id=3346">Dave Hughes (UK)</a><br><a href="/list?label_id=1658">Beyker Soft (Spain)</a><br><a href="/list?label_id=18185">MatGubbins [Matthew Carrier]</a><br><a href="/list?label_id=7111">Jim Waterman (UK)</a></div></div><div class="row zxdb_stripes"><div class="col-sm-4"><b>Availability: </b></div><div class="col-sm-8">Available</div></div><div class="row zxdb_stripes"><div class="col-sm-4"><b>Message Language: </b></div><div class="col-sm-8">English</div></div><div class="row zxdb_stripes"><div class="col-sm-4"><b>Machine Type: </b></div><div class="col-sm-8">ZX-Spectrum 128K</div></div><div class="row zxdb_stripes"><div class="col-sm-4"><b>Genre: </b></div><div class="col-sm-8"><a href="/list?genre_id=82">Electronic Magazine</a></div></div><div class="row zxdb_stripes"><div class="col-sm-4"><b>Maximum Players: </b></div><div class="col-sm-8">1</div></div><div class="row zxdb_stripes"><div class="col-sm-4"><b>Magazine Issue Link: </b></div><div class="col-sm-8">WOOT! Tape Magazine <a href="issue/10681/WOOT_Tape_Magazine/5">#5 - 2021/Dec/22 special "ZXMAS 2021"<span class="visible-xs visible-sm"><br></span></a></div></div><br>            <div style="margin-bottom: 15px;" class="text-center text-md-left"><a style="width:256px;" class="btn btn-success" href="/preservation/add/public/new_changes.php?defE=36512" role="button">Report changes to this entry</a></div>
+</div>
+                  <div class="col-sm-12  col-md-6 col-lg-5"><div class="scaled_image" style="margin-bottom:15px;max-width: fit-content; margin-left: auto; margin-right: auto;">
+                      <img onload="handleGIF2(this,1);" class="SCRimage" src="/SCRtoImage.php?SCR=zxdb/sinclair/entries/0036512/0036512-open-1.scr&border=0" alt="WOOT! Tape Magazine issue #5 - ZXMAS 2021 Edition image, screenshot or loading screen" title="WOOT! Tape Magazine issue #5 - ZXMAS 2021 Edition image, screenshot or loading screen">
+                      </div><div class="scaled_image" style="margin-bottom:15px;max-width: fit-content; margin-left: auto; margin-right: auto;">
+                      <img onload="handleGIF2(this,1);" class="SCRimage" src="/SCRtoImage.php?SCR=zxdb/sinclair/entries/0036512/0036512-run-1.scr&border=1" alt="WOOT! Tape Magazine issue #5 - ZXMAS 2021 Edition image, screenshot or loading screen" title="WOOT! Tape Magazine issue #5 - ZXMAS 2021 Edition image, screenshot or loading screen">
+                      </div><div><a style="width:256px;" class="btn btn-primary center-block" href="/screens?id=36512&lout=4" role="button">Screen Viewer</a></div></div>
+                  </div></div></div><div class="panel panel-primary">
+            <div class="panel-heading  ">User Score</div>
+            <div class="panel-body">
+            <div class="panel-default"><div class="col-sm-12 col-md-6 col-lg-7"><p><b>This title has no votes yet.</b></p><div class="row zxdb_stripes"><div class="col-sm-12"><a href="/forums/ucp.php?mode=login&redirect=/entry/36512">Login to rate this title.</a></div></div><br><br></div></div><div class="col-sm-12 col-md-6 col-lg-5" style="border:1px solid #f8f8f8"><br></div></div></div>
+
+
+<div class="panel panel-primary "><div class="panel-heading  p_cyan"><a class="accordion-toggle" style="color:#fff" data-toggle="collapse" href="#collapse_main_file_downloads">Main File Downloads</a></div><div id="collapse_main_file_downloads" class="panel-collapse collapse in"><div class="panel-body">
+                  <div class="panel-default"><p>Spectrum Computing acknowledges the rights of copyright holders.  If you would like your software removed from our preservation archive and made unavailable for download (or have any queries) please contact spectrumcomputing.co.uk@gmail.com</p><div class="row zxdb_stripes" style="" id="local_141955">
+                            <div class="col-sm-12 col-md-4 align-left center_mobile 320px_nomargin"><a download href="/zxdb/sinclair/entries/0036512/WOOTTapeMagazineIssue5-ZXMAS2021Edition.tap.zip" target="_blank">
+                                <img src="/img/file_types/cassette.png" alt="TAP" width="28" height="28"> <small>TAP</small>
+                              </a>&nbsp;&nbsp;&nbsp;<a href="/play/playonline.php?eml=1&downid=141955" target="_blank">
+                                      <img src="/img/file_types/play.png" alt="Play in Emulator"> <small>JSSpeccy</small>
+                                  </a>&nbsp;&nbsp;<a href="/play/playonline.php?eml=2&downid=141955" target="_blank"> <small>QAOP</small> </a> 
+                            </div><!-- col-sm-12 col-md-4 align-left center_mobile 320px_nomargin -->
+                            <div class="col-sm-6 col-md-2 align-left center_mobile"><small>Stonechat Productions (UK)</small></div>
+                            <div class="col-sm-6 col-md-1 align-left center_mobile"><small>2021</small></div>
+                            <div class="col-sm-6 col-md-2 align-left center_mobile"><small style="word-wrap: break-word;">WOOTTapeMagazineIssue5-ZXMAS2021Edition.tap.zip</small></div>
+                            <div class="col-sm-3 col-md-1 align-left center_mobile"><small>English</small></div>
+                            <div class="col-sm-3 col-md-2 align-left center_mobile"><small><b></b></small></div>
+                          </div><div class="row zxdb_stripes" style="" id="local_141956">
+                            <div class="col-sm-12 col-md-4 align-left center_mobile 320px_nomargin"><a download href="/zxdb/sinclair/entries/0036512/WOOTTapeMagazineIssue5-ZXMAS2021Edition_2.tap.zip" target="_blank">
+                                <img src="/img/file_types/cassette.png" alt="TAP" width="28" height="28"> <small>TAP</small>
+                              </a>&nbsp;&nbsp;&nbsp;<a href="/play/playonline.php?eml=1&downid=141956" target="_blank">
+                                      <img src="/img/file_types/play.png" alt="Play in Emulator"> <small>JSSpeccy</small>
+                                  </a>&nbsp;&nbsp;<a href="/play/playonline.php?eml=2&downid=141956" target="_blank"> <small>QAOP</small> </a> 
+                            </div><!-- col-sm-12 col-md-4 align-left center_mobile 320px_nomargin -->
+                            <div class="col-sm-6 col-md-2 align-left center_mobile"><small>Stonechat Productions (UK)</small></div>
+                            <div class="col-sm-6 col-md-1 align-left center_mobile"><small>2021</small></div>
+                            <div class="col-sm-6 col-md-2 align-left center_mobile"><small style="word-wrap: break-word;">WOOTTapeMagazineIssue5-ZXMAS2021Edition_2.tap.zip</small></div>
+                            <div class="col-sm-3 col-md-1 align-left center_mobile"><small>English</small></div>
+                            <div class="col-sm-3 col-md-2 align-left center_mobile"><small><b></b></small></div>
+                          </div></div><div class="col-md-12 text-left"><br><small ><i>Icons provided by <a href="https://www.flaticon.com/" target="_blank">Flaticon</a></i></small></div>
+                </div>
+            </div><!-- panel-heading -->
+        </div><!-- panel panel-primary --><div class="panel panel-primary ">
+                <div class="panel-heading  p_green">Releases</div>
+                <div class="panel-body">
+                <div class="panel-default text-left">
+
+                <div class="hidden-xs hidden-sm row zxdb_header">
+                <div class="col-sm-12 col-md-2"><b>Release</b></div>
+                <div class="col-sm-12 col-md-3"><b>Publisher</b></div>
+                <div class="col-sm-12 col-md-1"><b>Date</b></div>
+                <div class="col-sm-12 col-md-1"><b>Release Price</b></div>
+                <div class="col-sm-12 col-md-1"><b>Budget Price</b></div>
+                <div class="col-sm-12 col-md-1"><b>Microdrive Price</b></div>
+                <div class="col-sm-12 col-md-1"><b>Disk/ Cartridge</b></div>
+                <div class="col-sm-12 col-md-2"><b>Alternate Title</b></div>
+                </div><div class="row zxdb_stripes text-left">
+                      <div class="hidden-xs col-md-2">Original Release</div>
+                      <div class="col-sm-4 col-md-3"><span class="visible-xs "><br></span> <a href="list?label_id=13986">Stonechat Productions (UK)</a></div>
+                      <div class="col-sm-4 col-md-1">2021/Dec/22</div>
+                      <div class="col-sm-4 col-md-1"></div>
+                      <div class="col-sm-4 col-md-1"></div>
+                      <div class="col-sm-4 col-md-1"></div>
+                      <div class="col-sm-4 col-md-1"></div>
+                      <div class="col-sm-4 col-md-2">
+                      </div>
+                      </div><div class="panel-default text-left"><div class="row">  <div class="col-sm-12"><br><b>Upload new files for this entry</b></div></div><div class="row">  <div class="col-sm-12"><span class="mx-auto"><a href="preservation/add/public/new_files.php?defE=36512&defL=13986" class="btn btn-success btn-md" data-toggle="tooltip" data-placement="left" title="Upload new file for this publisher"><span class="bi bi-upload"></span>&nbsp;Stonechat Productions (UK)</a></span>&nbsp;</div></div></div></div></div>
+                  </div><div class="panel panel-primary ">
+                <div class="panel-heading  p_magenta">Authors/Contributors</div>
+                <div class="panel-body">
+                <div class="panel-default"><div class="hidden-xs hidden-sm row zxdb_header">
+                <div class="col-sm-12 col-md-4"><b>Author/Contributor</b></div>
+                <div class="col-sm-12 col-md-4"><b>Team</b></div>
+    			<div class="col-sm-12 col-md-4"><b>Role</b></div>
+                </div>
+                    <div id="authors_3346" class="row zxdb_stripes">
+                        <div class="col-sm-12 col-md-4">
+                            <a href="/list?label_id=3346">Dave Hughes (UK)</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://stonechatproductions.blogspot.com/" target="_blank"><i class="fa fa-external-link"></i></a>
+                            <span class="visible-xs visible-sm"><br></span>
+                        </div>
+                        <div class="col-sm-12 col-md-4">no team&nbsp;<span class="visible-xs visible-sm"><br></span></div>
+                        <div class="col-sm-12 col-md-4">Code, Game Design/Concept, In-game Graphics, Level Design, Sound Effects, Story Writing</div>
+                    </div>
+                    <div id="authors_1658" class="row zxdb_stripes">
+                        <div class="col-sm-12 col-md-4">
+                            <a href="/list?label_id=1658">Beyker Soft (Spain)</a>
+                            &nbsp;
+                            <span class="visible-xs visible-sm"><br></span>
+                        </div>
+                        <div class="col-sm-12 col-md-4">no team&nbsp;<span class="visible-xs visible-sm"><br></span></div>
+                        <div class="col-sm-12 col-md-4">Music</div>
+                    </div>
+                    <div id="authors_18185" class="row zxdb_stripes">
+                        <div class="col-sm-12 col-md-4">
+                            <a href="/list?label_id=18185">MatGubbins [Matthew Carrier]</a>
+                            &nbsp;
+                            <span class="visible-xs visible-sm"><br></span>
+                        </div>
+                        <div class="col-sm-12 col-md-4">no team&nbsp;<span class="visible-xs visible-sm"><br></span></div>
+                        <div class="col-sm-12 col-md-4">Load Screen</div>
+                    </div>
+                    <div id="authors_7111" class="row zxdb_stripes">
+                        <div class="col-sm-12 col-md-4">
+                            <a href="/list?label_id=7111">Jim Waterman (UK)</a>
+                            &nbsp;
+                            <span class="visible-xs visible-sm"><br></span>
+                        </div>
+                        <div class="col-sm-12 col-md-4">no team&nbsp;<span class="visible-xs visible-sm"><br></span></div>
+                        <div class="col-sm-12 col-md-4">Music</div>
+                    </div></div>
+                  </div>
+                  </div><div class="panel panel-primary "><div class="panel-heading  p_blue"><a class="accordion-toggle" style="color:#fff" data-toggle="collapse" href="#collapse_compilation_contents">Contents</a></div><div id="collapse_compilation_contents" class="panel-collapse collapse in">
+                <div class="panel-body">
+                <div class="panel-default">
+                <div class="hidden-xs hidden-sm row zxdb_header">
+                <div class="col-sm-12 col-md-2"><b>Tape/Side/#</b></div>
+                <div class="col-sm-12 col-md-4"><b>Name</b></div>
+                <div class="col-sm-12 col-md-4"><b>Publisher</b> </div>
+                <div class="col-sm-12 col-md-2"><b>Release Date</b> </div></div><div class="row zxdb_stripes">
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Media/Side/#: </b>1<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b>WOOT!<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Publisher: </b><a href="list?label_id=3346">Dave Hughes</a><span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Release Date: </b><span class="visible-xs visible-sm"><br></span></div>
+                      </div><div class="row zxdb_stripes">
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Media/Side/#: </b>2<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/36931/ZX-Spectrum/Back_to_Bearzden">Back to Bearzden</a><span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Publisher: </b>(original release)<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Release Date: </b><span class="visible-xs visible-sm"><br></span></div>
+                      </div><div class="row zxdb_stripes">
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Media/Side/#: </b>3<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/36932/ZX-Spectrum/Manic_Miner_for_Mind">Manic Miner for Mind</a><span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Publisher: </b>(original release)<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Release Date: </b><span class="visible-xs visible-sm"><br></span></div>
+                      </div><div class="row zxdb_stripes">
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Media/Side/#: </b>4<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/36933/ZX-Spectrum/Xenon_2_Interview">Xenon 2 Interview</a><span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Publisher: </b>(original release)<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Release Date: </b><span class="visible-xs visible-sm"><br></span></div>
+                      </div><div class="row zxdb_stripes">
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Media/Side/#: </b>5<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/37951/ZX-Spectrum/Xenon_2_Megablast">Xenon 2: Megablast [DEMO]</a><span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Publisher: </b><a href="list?label_id=3579">David Spicer (UK)</a><span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Release Date: </b>never (1991)<span class="visible-xs visible-sm"><br></span></div>
+                      </div><div class="row zxdb_stripes">
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Media/Side/#: </b>6<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/36934/ZX-Spectrum/Frumpy-Christmas_Jumper">Frumpy - Christmas Jumper</a><span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Publisher: </b>(original release)<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Release Date: </b><span class="visible-xs visible-sm"><br></span></div>
+                      </div><div class="row zxdb_stripes">
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Media/Side/#: </b>7<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/36935/ZX-Spectrum/Greed">Greed</a><span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Publisher: </b>(original release)<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Release Date: </b><span class="visible-xs visible-sm"><br></span></div>
+                      </div><div class="row zxdb_stripes">
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Media/Side/#: </b>8<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/36936/ZX-Spectrum/The_Haunting_of_Waterbelle_End">The Haunting of Waterbelle End</a><span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Publisher: </b>(original release)<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Release Date: </b><span class="visible-xs visible-sm"><br></span></div>
+                      </div><div class="row zxdb_stripes">
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Media/Side/#: </b>9<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/36937/ZX-Spectrum/Home_for_ZXMas">Home for ZXMas</a><span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Publisher: </b>(original release)<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Release Date: </b><span class="visible-xs visible-sm"><br></span></div>
+                      </div><div class="row zxdb_stripes">
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Media/Side/#: </b>10<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/36938/ZX-Spectrum/ILLUMINATI_2021_WOOT_EDITION">ILLUMINATI: 2021 WOOT! EDITION</a><span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Publisher: </b>(original release)<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Release Date: </b><span class="visible-xs visible-sm"><br></span></div>
+                      </div><div class="row zxdb_stripes">
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Media/Side/#: </b>11<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/36939/ZX-Spectrum/God_Rest_Ye_Deadly_Gentlemen">God Rest Ye, Deadly Gentlemen</a><span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Publisher: </b>(original release)<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Release Date: </b><span class="visible-xs visible-sm"><br></span></div>
+                      </div><div class="row zxdb_stripes">
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Media/Side/#: </b>12<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/36940/ZX-Spectrum/Fish_Polka">Fish Polka</a><span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Publisher: </b>(original release)<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Release Date: </b><span class="visible-xs visible-sm"><br></span></div>
+                      </div><div class="row zxdb_stripes">
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Media/Side/#: </b>13<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/36941/ZX-Spectrum/Last_Christmas_Ever">Last Christmas Ever</a><span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Publisher: </b>(original release)<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Release Date: </b><span class="visible-xs visible-sm"><br></span></div>
+                      </div><div class="row zxdb_stripes">
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Media/Side/#: </b>14<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/36942/ZX-Spectrum/Rickroll">Rickroll</a><span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Publisher: </b>(original release)<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Release Date: </b><span class="visible-xs visible-sm"><br></span></div>
+                      </div><div class="row zxdb_stripes">
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Media/Side/#: </b>15<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/36943/ZX-Spectrum/Sir_Clives_Dutch_Adventure">Sir Clive's Dutch Adventure</a><span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Publisher: </b>(original release)<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Release Date: </b><span class="visible-xs visible-sm"><br></span></div>
+                      </div><div class="row zxdb_stripes">
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Media/Side/#: </b>16<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/36944/ZX-Spectrum/Sum_It_Up">Sum It Up</a><span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Publisher: </b>(original release)<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Release Date: </b><span class="visible-xs visible-sm"><br></span></div>
+                      </div><div class="row zxdb_stripes">
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Media/Side/#: </b>17<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/36945/ZX-Spectrum/The_ElementZX">The ElementZX</a><span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Publisher: </b>(original release)<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Release Date: </b><span class="visible-xs visible-sm"><br></span></div>
+                      </div><div class="row zxdb_stripes">
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Media/Side/#: </b>18<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/36946/ZX-Spectrum/The_Freak">The Freak</a><span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Publisher: </b>(original release)<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Release Date: </b><span class="visible-xs visible-sm"><br></span></div>
+                      </div><div class="row zxdb_stripes">
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Media/Side/#: </b>19<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/36947/ZX-Spectrum/ZX_Codewords">ZX Codewords</a><span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Publisher: </b>(original release)<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Release Date: </b><span class="visible-xs visible-sm"><br></span></div>
+                      </div><div class="row zxdb_stripes">
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Media/Side/#: </b>20<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/36948/ZX-Spectrum/ZX_Repair">ZX Repair</a><span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Publisher: </b>(original release)<span class="visible-xs visible-sm"><br></span></div>
+                      <div class="col-sm-12 col-md-2"><b class="visible-xs visible-sm">Release Date: </b><span class="visible-xs visible-sm"><br></span></div>
+                      </div></div>
+                </div>
+                </div>
+                </div>
+
+
+<div class="panel panel-primary "><div class="panel-heading  p_cyan"><a class="accordion-toggle" style="color:#fff" data-toggle="collapse" href="#collapse_additional_file_downloads">Additional File Downloads</a></div><div id="collapse_additional_file_downloads" class="panel-collapse collapse in"><div class="panel-body">
+                  <div class="panel-default"><div class="row zxdb_stripes" style="" id="local_141960">
+                              <a download href="/zxdb/sinclair/entries/0036512/0036512-run-1.scr" target="_blank" >
+                              <div class="col-sm-4 align-center  center_mobile"><div title="Running screen" style="margin-left: auto; margin-right: auto; height:180px; background:url(&#039;/SCRtoImage.php?SCR=zxdb/sinclair/entries/0036512/0036512-run-1.scr&border=1&#039;) no-repeat  top / contain "></div></div>
+                              <div class="col-sm-2 align-left center_mobile"><small>Running screen</small></div>
+                              <div class="col-sm-3 align-left center_mobile" style="overflow-wrap: break-word"></div>
+                              <div class="col-sm-3 align-left center_mobile" style="overflow-wrap: break-word"><b>0036512-run-1.scr</b></div>
+                              </a>
+                              </div><div class="row zxdb_stripes" style="" id="local_141961">
+                              <a download href="/zxdb/sinclair/entries/0036512/0036512-run-2.scr" target="_blank" >
+                              <div class="col-sm-4 align-center  center_mobile"><div title="Running screen" style="margin-left: auto; margin-right: auto; height:180px; background:url(&#039;/SCRtoImage.php?SCR=zxdb/sinclair/entries/0036512/0036512-run-2.scr&border=1&#039;) no-repeat  top / contain "></div></div>
+                              <div class="col-sm-2 align-left center_mobile"><small>Running screen</small></div>
+                              <div class="col-sm-3 align-left center_mobile" style="overflow-wrap: break-word"></div>
+                              <div class="col-sm-3 align-left center_mobile" style="overflow-wrap: break-word"><b>0036512-run-2.scr</b></div>
+                              </a>
+                              </div><div class="row zxdb_stripes" style="" id="local_141958">
+                              <a download href="/zxdb/sinclair/entries/0036512/0036512-open-1.scr" target="_blank" >
+                              <div class="col-sm-4 align-center  center_mobile"><div title="Opening screen" style="margin-left: auto; margin-right: auto; height:180px; background:url(&#039;/SCRtoImage.php?SCR=zxdb/sinclair/entries/0036512/0036512-open-1.scr&border=0&#039;) no-repeat  top / contain "></div></div>
+                              <div class="col-sm-2 align-left center_mobile"><small>Opening screen</small></div>
+                              <div class="col-sm-3 align-left center_mobile" style="overflow-wrap: break-word"></div>
+                              <div class="col-sm-3 align-left center_mobile" style="overflow-wrap: break-word"><b>0036512-open-1.scr</b></div>
+                              </a>
+                              </div><div class="row zxdb_stripes" style="" id="local_141957">
+                              <a download href="/zxdb/sinclair/entries/0036512/WOOTTapeMagazineIssue5-ZXMAS2021Edition_Gameaddmat.zip" target="_blank" >
+                              <div class="col-sm-4 align-center  center_mobile"><div title="Game additional material" style="margin-left: auto; margin-right: auto; height:80px; background:url(&#039;/img/file_types/zip2.png&#039;) no-repeat  center / contain "></div></div>
+                              <div class="col-sm-2 align-left center_mobile"><small>Game additional material</small></div>
+                              <div class="col-sm-3 align-left center_mobile" style="overflow-wrap: break-word">Full bundle</div>
+                              <div class="col-sm-3 align-left center_mobile" style="overflow-wrap: break-word"><b>WOOTTapeMagazineIssue5-ZXMAS2021Edition_Gameaddmat.zip</b></div>
+                              </a>
+                              </div></div><div class="col-md-12 text-left"><br><small ><i>Icons provided by <a href="https://www.flaticon.com/" target="_blank">Flaticon</a></i></small></div>
+                </div>
+            </div><!-- panel-heading -->
+        </div><!-- panel panel-primary --><div class="panel panel-primary ">
+                    <div class="panel-heading  p_purple">Magazine related titles</div>
+                    <div class="panel-body">
+                    <div class="panel-default">
+                    <div class="hidden-xs hidden-sm row zxdb_header">
+                    <div class="col-sm-12 col-md-4"><b>Name</b></div>
+                    <div class="col-sm-12 col-md-5"><b>Publisher</b> </div>
+                    <div class="col-sm-12 col-md-1"><b>Date</b> </div>
+                    </div><div class="row zxdb_stripes">
+                        <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/30342/ZX-Spectrum/WOOT_Tape_Magazine_issue_#0-ZXMAS_2016_Edition">WOOT! Tape Magazine issue #0 - ZXMAS 2016 Edition</a><span class="visible-xs visible-sm"><br></span></div>
+                        <div class="col-sm-12 col-md-5"><b class="visible-xs visible-sm">Publisher: </b><a href="list?label_id=13986">Stonechat Productions (UK)</a><span class="visible-xs visible-sm"><br></span></div>
+                        <div class="col-sm-12 col-md-1"><b class="visible-xs visible-sm">Date: </b>2016/Dec<span class="visible-xs visible-sm"><br></span></div>
+                        </div><div class="row zxdb_stripes">
+                        <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/32177/ZX-Spectrum/WOOT_Tape_Magazine_issue_#1-ZXMAS_2017_Edition">WOOT! Tape Magazine issue #1 - ZXMAS 2017 Edition</a><span class="visible-xs visible-sm"><br></span></div>
+                        <div class="col-sm-12 col-md-5"><b class="visible-xs visible-sm">Publisher: </b><a href="list?label_id=13986">Stonechat Productions (UK)</a><span class="visible-xs visible-sm"><br></span></div>
+                        <div class="col-sm-12 col-md-1"><b class="visible-xs visible-sm">Date: </b>2017/Dec/11<span class="visible-xs visible-sm"><br></span></div>
+                        </div><div class="row zxdb_stripes">
+                        <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/34609/ZX-Spectrum/WOOT_Tape_Magazine_issue_#2-ZXMAS_2018_Edition">WOOT! Tape Magazine issue #2 - ZXMAS 2018 Edition</a><span class="visible-xs visible-sm"><br></span></div>
+                        <div class="col-sm-12 col-md-5"><b class="visible-xs visible-sm">Publisher: </b><a href="list?label_id=13986">Stonechat Productions (UK)</a><span class="visible-xs visible-sm"><br></span></div>
+                        <div class="col-sm-12 col-md-1"><b class="visible-xs visible-sm">Date: </b>2018/Dec/20<span class="visible-xs visible-sm"><br></span></div>
+                        </div><div class="row zxdb_stripes">
+                        <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/35139/ZX-Spectrum/WOOT_Tape_Magazine_issue_#3-ZXMAS_2019_Edition">WOOT! Tape Magazine issue #3 - ZXMAS 2019 Edition</a><span class="visible-xs visible-sm"><br></span></div>
+                        <div class="col-sm-12 col-md-5"><b class="visible-xs visible-sm">Publisher: </b><a href="list?label_id=13986">Stonechat Productions (UK)</a><span class="visible-xs visible-sm"><br></span></div>
+                        <div class="col-sm-12 col-md-1"><b class="visible-xs visible-sm">Date: </b>2019/Dec/23<span class="visible-xs visible-sm"><br></span></div>
+                        </div><div class="row zxdb_stripes">
+                        <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/36545/ZX-Spectrum/WOOT_Tape_Magazine_issue_#4-ZXMAS_2020_Edition">WOOT! Tape Magazine issue #4 - ZXMAS 2020 Edition</a><span class="visible-xs visible-sm"><br></span></div>
+                        <div class="col-sm-12 col-md-5"><b class="visible-xs visible-sm">Publisher: </b><a href="list?label_id=13986">Stonechat Productions (UK)</a><span class="visible-xs visible-sm"><br></span></div>
+                        <div class="col-sm-12 col-md-1"><b class="visible-xs visible-sm">Date: </b>2020/Dec/18<span class="visible-xs visible-sm"><br></span></div>
+                        </div><div class="row zxdb_stripes">
+                        <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/36512/ZX-Spectrum/WOOT_Tape_Magazine_issue_#5-ZXMAS_2021_Edition">WOOT! Tape Magazine issue #5 - ZXMAS 2021 Edition</a><span class="visible-xs visible-sm"><br></span></div>
+                        <div class="col-sm-12 col-md-5"><b class="visible-xs visible-sm">Publisher: </b><a href="list?label_id=13986">Stonechat Productions (UK)</a><span class="visible-xs visible-sm"><br></span></div>
+                        <div class="col-sm-12 col-md-1"><b class="visible-xs visible-sm">Date: </b>2021/Dec/22<span class="visible-xs visible-sm"><br></span></div>
+                        </div><div class="row zxdb_stripes">
+                        <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/39024/ZX-Spectrum/WOOT_Tape_Magazine_issue_#6-ZXMAS_2022_Edition">WOOT! Tape Magazine issue #6 - ZXMAS 2022 Edition</a><span class="visible-xs visible-sm"><br></span></div>
+                        <div class="col-sm-12 col-md-5"><b class="visible-xs visible-sm">Publisher: </b><a href="list?label_id=13986">Stonechat Productions (UK)</a><span class="visible-xs visible-sm"><br></span></div>
+                        <div class="col-sm-12 col-md-1"><b class="visible-xs visible-sm">Date: </b>2022/Dec/22<span class="visible-xs visible-sm"><br></span></div>
+                        </div><div class="row zxdb_stripes">
+                        <div class="col-sm-12 col-md-4"><b class="visible-xs visible-sm">Title: </b><a href="/entry/42579/ZX-Spectrum/WOOT_Tape_Magazine_issue_#7-ZXMAS_2023_Edition">WOOT! Tape Magazine issue #7 - ZXMAS 2023 Edition</a><span class="visible-xs visible-sm"><br></span></div>
+                        <div class="col-sm-12 col-md-5"><b class="visible-xs visible-sm">Publisher: </b><a href="list?label_id=13986">Stonechat Productions (UK)</a><span class="visible-xs visible-sm"><br></span></div>
+                        <div class="col-sm-12 col-md-1"><b class="visible-xs visible-sm">Date: </b>2023/Dec/23<span class="visible-xs visible-sm"><br></span></div>
+                        </div></div>
+                      </div>
+                      </div>
+        <div class="panel panel-primary">
+        <div class="panel-heading  p_red">Other Sites</div>
+        <div class="panel-body">
+        <div class="panel-default"><p><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> &nbsp;<a href="/reviews/36512" target="_blank">User Reviews (formerly Spectrum 20)</a></p><p><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> &nbsp;<a href="https://tzxvault.org/" target="_blank">The TZX Vault (Software Preservation)</a></p><p><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> &nbsp;<a href="http://zxart.ee/route/lang:eng/type:prod/importOrigin:zxdb/importId:0036512" target="_blank">ZX-Art (Spectrum Graphics)</a></p><p><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> &nbsp;<a href="http://zxinfo.dk/details/0036512" target="_blank">ZXInfo (ZXDB Front End)</a></p><p><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> &nbsp;<a href="https://www.everygamegoing.com/zxdbRedirect/36512/" target="_blank">Every Game Going (Multi-Platform Archive)</a></p><p><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> &nbsp;<a href="http://www.worldofspectrum.net/infoseekid.cgi?id=0036512" target="_blank">World Of Spectrum Classic (Spectrum Archive)</a></p></div>
+        </div></div>            </div>
+        </div>
+    </div>
+    <!-- /.panel-body -->
+
+    <div id="footer">
+  <div class="container">
+    <div class="container footer-above"><br>
+      <div class="footer-col col-md-4">
+        <p><small>This website uses ZXDB which was created by Einar Saukas</small></p>
+      </div>
+      <div class="footer-col col-md-4">
+        <ul class="list-inline">
+          <li> <a href="mailto:spectrumcomputing.co.uk@gmail.com?Subject=Spectrum%20Computing%20contact" class="btn-social btn-outline"><i class="fa fa-fw a fa-envelope"></i></a> </li>
+        </ul>
+      </div>
+      <div class="footer-col col-md-4">
+        <p></p>
+        <p>
+          <picture>
+            <source srcset="/img/logo_footer.webp" type="image/webp">
+            <img src="/img/logo_footer.png" alt="Spectrum Computing Footer logo">
+          </picture>
+        </p>
+      </div>
+    </div>
+  </div> <!-- container -->
+</div>
+<!-- /#page-wrapper -->
+<!-- /#wrapper -->
+<!-- jQuery -->
+<script src="/vendor/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Bootstrap Font Icon CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css?display=swap">
+
+<!-- Custom Theme JavaScript -->
+<script src="/dist/js/bootstrap-select.min.js"></script>
+<script src="/dist/js/zxdb.min.js"></script>
+
+<!-- Custom Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i?subset=latin-ext&display=swap" rel="stylesheet">
+
+<!-- Auto suggest in Quick Search -->
+<script src="/suggest/js/bootstrap-autocomplete.min.js"></script>
+<script src="/suggest/js/autocomplete.js"></script>
+
+<!-- x-rated confirmation -->
+<script src="/restricted/js/confirmation.js"></script>
+
+<link href="/suggest/css/style.css" rel="stylesheet" type="text/css">
+<script>
+    $(document).ready(function() {
+        $('#modalLogin').on('shown.bs.modal', function() {
+            $('#username').focus();
+        })
+    });
+</script>
+
+<div id="modalLogin" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <form action="/forums/ucp.php?mode=login" method="post" id="login">
+                <div class="modal-header">
+                    <button type="button" tabindex="-1" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title"><b>LOGIN</b></h5>
+                    <p>This will log you in to both the main site and the forum.</p>
+                </div>
+                <div class="modal-body">
+                    <!-- Email input -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <label class="form-label" for="username">Username</label>
+                        <input type="text" tabindex="1" name="username" id="username" size="25" value="" autocomplete="on" class="form-control">
+                    </div>
+
+                    <!-- Password input -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <label class="form-label" for="password">Password</label>
+                        <input type="password" tabindex="2" id="password" name="password" size="25" autocomplete="off" class="form-control">
+                    </div>
+
+                    <input type="hidden" name="creation_time" value="1794237952">
+                    <input type="hidden" name="form_token" value="6380ebcc926a6fd7e47267dd14e64c5489871afc">
+                    <input type="hidden" name="sid" value="6c7993c0a999bbe217740fe82500eb9d">
+                    <input type="hidden" name="redirect" value="/user/">
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" tabindex="3" name="login" value="Login" class="btn btn-primary">Sign In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>    </body>
+
+    </html>

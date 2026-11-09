@@ -1,0 +1,40 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "29",
+  "article_id": "03_TFM.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Twister Fruit Machine 128/48",
+  "title_ru": "Twister Fruit Machine 128/48",
+  "meta_description_en": "A brief mini-review of Twister Fruit Machine 128/48, a homebrew one-armed bandit simulation for ZX Spectrum obtained from the organizers of Doxycon.",
+  "meta_description_ru": "Краткая заметка о Twister Fruit Machine 128/48 — любительском симуляторе «однорукого бандита» для ZX Spectrum, полученном от организаторов Doxycon.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "doxycon",
+      "tag_alias": "doxycon"
+    },
+    {
+      "tag_name": "game-review",
+      "tag_alias": "game-review"
+    }
+  ],
+  "category_ids": [
+    1,
+    2
+  ],
+  "body_de_plain": "TWISTE ü - TWISTER FRUIT MACHINE 128/48 - Die Macher der DOXYKON\ngaben mir dieses selbstgemachte Spiel alsich sie nach Stuff für\nmein Mag gefragt habe, ich muß sagen daß ich kein Freund von\nGlücksspielautomaten bin, aber trotzdem hatmich diese Simulation\ndes Einarmigen Banditen lange gefesselt.ß - The organizers of\nDoxycon gave me this Programm as I have askedthem for new stuff\nfor my discmag. I don't like really this kindof games, but it is\ntechnicaly bri\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**TWISTER FRUIT MACHINE 128/48**\n\nThe organizers of Doxycon gave me this homebrew game when I asked them for stuff for my mag. I must say that I am not really a fan of slot machines, but nevertheless this simulation of a one-armed bandit kept me captivated for a long time. It is technically brilliant...\n",
+  "body_ru": "**TWISTER FRUIT MACHINE 128/48**\n\nОрганизаторы Doxycon дали мне эту самодельную игру, когда я обратился к ним за материалами для журнала. Должен сказать, что я совсем не поклонник игровых автоматов, но, тем не менее, эта имитация «однорукого бандита» увлекла меня надолго. Чисто технически она сделана просто здорово...\n",
+  "text_type": 3
+}

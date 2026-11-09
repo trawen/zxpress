@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "27",
+  "article_id": "12_BOOVIE.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Boovie – The Game",
+  "title_ru": "Boovie – The Game",
+  "meta_description_en": "Mini-review of the ZX Spectrum puzzle game Boovie from Scene+ magazine #27.",
+  "meta_description_ru": "Короткий обзор логической игры Boovie для ZX Spectrum из австрийского журнала Scene+ #27.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "boovie",
+      "tag_alias": "boovie"
+    },
+    {
+      "tag_name": "puzzle",
+      "tag_alias": "puzzle"
+    },
+    {
+      "tag_name": "review",
+      "tag_alias": "review"
+    }
+  ],
+  "category_ids": [
+    1,
+    2
+  ],
+  "body_de_plain": "BOOVI ü - BOOVIE-THE GAME - Schieben sie in jedem Level den\nweißen Block zu dem Pfeil dernach oben zeigt. Hört sich einfach\nan? Ja, aber ich vergaß zuerwähnen daß sehr sehr viele Monster\nund ungünstig plaziertePlatforman einem das Leben schwer machen,\ndoch die Tatsache daß man nur ein Leben hat wird dadurch\ngemildert daß es ein PaßwortSystem gibt. Ich denke daß Boovie\nein geniales Spiel ist.y - Slide the white block to the arrowed\npoint in each level. Easy? Oh, I forgot to tell you about the\nmonsters and some bad placedplatforms that will make your life\nnot easier. Fortunaly thisgame has got a password system to save\nyour only life. I thinkthat BOOVIE is a g\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### Boovie – The Game\n\nIn each level, slide the white block to the arrow pointing upwards. Sounds simple? Yes, but I forgot to mention that tons of monsters and awkwardly placed platforms make life extremely difficult. However, the fact that you only have one life is eased by the presence of a password system. I think Boovie is a brilliant game.\n\n*(Original text also included an English snippet)*:  \nSlide the white block to the arrowed point in each level. Easy? Oh, I forgot to tell you about the monsters and some badly placed platforms that will make your life not easier. Fortunately, this game has got a password system to save your only life. I think that BOOVIE is a g...\n",
+  "body_ru": "### Boovie – The Game\n\nВ каждом уровне двигайте белый блок к стрелке, указывающей вверх. Звучит просто? Да, но я забыл упомянуть, что огромное количество монстров и крайне неудобно расположенные платформы сильно осложнят вам жизнь. Впрочем, тот факт, что у вас всего одна жизнь, смягчается наличием системы паролей. Я считаю, что Boovie — это просто гениальная игра.\n\n*(В оригинале заметка дублировалась на английском языке с обрывом в конце)*:  \nSlide the white block to the arrowed point in each level. Easy? Oh, I forgot to tell you about the monsters and some badly placed platforms that will make your life not easier. Fortunately, this game has got a password system to save your only life. I think that BOOVIE is a g...\n",
+  "text_type": 3
+}

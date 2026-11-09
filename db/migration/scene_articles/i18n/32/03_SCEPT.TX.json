@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "32",
+  "article_id": "03_SCEPT.TX",
+  "source_lang": "de-AT",
+  "title_en": "Sceptical",
+  "title_ru": "Sceptical",
+  "meta_description_en": "A brief overview of Sceptical, a teletext-style tape magazine submitted by a reader for ZX Spectrum, as featured in Scene+ #32.",
+  "meta_description_ru": "Краткая заметка о кассетном журнале Sceptical с телетекстовым интерфейсом, присланном читателем (из Scene+ #32).",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "tapezine",
+      "tag_alias": "tapezine"
+    },
+    {
+      "tag_name": "teletext",
+      "tag_alias": "teletext"
+    },
+    {
+      "tag_name": "sceptical",
+      "tag_alias": "sceptical"
+    }
+  ],
+  "category_ids": [
+    124,
+    131
+  ],
+  "body_de_plain": "SCEPTICAL ü - SCEPTICAL - Eine der Lesereinsendungen die mir von\nThomas zugeschickt wurde,ein Tapemagazin das offenbar zu einem\nAdventure dazugeliefertwurde. Die Steuerung erfolgt über\nTastatur und beruht auf demTeletext System. P - One of the\nprogramms sent in by a reader that I have recivedfrom Thomas. A\nTapezine with teletext control interface. It wasprobaly a bonus\nto a adventure\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### SCEPTICAL\n\nOne of the reader submissions forwarded to me by Thomas: a tape magazine that was apparently bundled with an adventure game. The controls are keyboard-based and modeled after the Teletext system.\n\n*(Editor's note: One of the programs sent in by a reader that I received from Thomas. A tapezine with a teletext control interface. It was probably a bonus for an adventure game.)*\n",
+  "body_ru": "### SCEPTICAL\n\nОдин из материалов от читателей, который мне переслал Томас (Thomas). Это кассетный журнал, судя по всему, поставлявшийся в комплекте с текстовым приключением (adventure). Управление осуществляется с клавиатуры и построено по принципу системы телетекста.\n\n*(Примечание редакции: Одно из поступлений от читателей, полученных от Томаса. Тейпзин с интерфейсом в стиле телетекста. Вероятно, был бонусом к адвентюре.)*\n",
+  "text_type": 3
+}

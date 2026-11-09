@@ -1,0 +1,49 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "039",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "От редакции (ноябрь 1990)",
+  "meta_description_en": "Editorial for Outlet #039 (November 1990): Brian Gaff joins the team, clarification on LERM's SAM Assembler, in memory of Hugh McGregor, and Outboard ad guidelines.",
+  "meta_description_ru": "Редакционная колонка Outlet #039 (ноябрь 1990): появление Brian Gaff в команде, уточнение по SAM Assembler, память о Hugh McGregor и требования к объявлениям.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "brian gaff",
+      "tag_alias": "brian-gaff"
+    },
+    {
+      "tag_name": "sam assembler",
+      "tag_alias": "sam-assembler"
+    },
+    {
+      "tag_name": "lerm",
+      "tag_alias": "lerm"
+    },
+    {
+      "tag_name": "hugh mcgregor",
+      "tag_alias": "hugh-mcgregor"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_en_plain": "N O V E M B E R ,  1 9 9 0\n\nStarting this month,Brian Gaff's\ngiving us a hand: answering some\nof your letters, reviewing soft-\nware etc. Brian is editor of the\nSpectrum section of Micronet and\n(until its closure!)the Spectrum\nbit of Popular Computing Weekly.\n\nWe are certainly glad of Brian's\nhelp! There are not enough hours\nin the day... etc. etc.\n\nNow,  the author of LERM's great\nSAM ASSEMBLER, reviewed in Issue\n37, contacted us to point out it\nCAN do a CAPS SHIFT but it is in\nreverse -it defaults to CAPS and\nyou get lower case when pressing\nSHIFT.\n\nSadly,  one of our readers, Hugh\nMcGregor died recently. Hugh has\ncontributed crossword puzzles to\nOUTLET, several of which are yet\nto come, including our Christmas\nspecial.  PROCROSS, the compiler\nand master crossword program  in\nIssue 31, was originally written\nfor Hugh - at his request.\n\nFinally,please note that adverts\nfor OUTBOARD shouldn't be larger\nthan 8 or 10 screen lines (of 32\ncolumns) and preferably smaller.\nThis is so it can be squeezed on\nthe Microdrive and Opus versions\nof OUTLET. Thanks!\n\n\n\n\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_ru_plain": "Н О Я Б Р Ь ,   1 9 9 0\n\nС этого месяца Brian Gaff при-\nшел нам на помощь: отвечает на\nчасть ваших писем, обозревает\nсофт и т.д. Brian — редактор\nраздела Spectrum в Micronet и\n(вплоть до закрытия!) раздела о\nSpectrum в Popular Computing\nWeekly.\n\nМы очень рады помощи Brian!\nВ сутках просто не хватает\nчасов... и т.д., и т.п.\n\nДалее: автор великолепного\nSAM ASSEMBLER от LERM (обзор был\nв номере 37) связался с нами,\nчтобы уточнить: CAPS SHIFT там\nРАБОТАЕТ, но наоборот — по умол-\nчанию стоят заглавные буквы, а\nстрочные вводятся с SHIFT.\n\nК печали, недавно скончался\nодин из наших читателей, Hugh\nMcGregor. Hugh готовил кроссвор-\nды для OUTLET, и некоторые еще\nбудут опубликованы, включая наш\nрождественский выпуск. PROCROSS,\nкомпилятор и программа кроссвор-\nдов из номера 31, изначально пи-\nсалась для Hugh — по его просьбе.\n\nНапоследок: объявления в раздел\nOUTBOARD не должны занимать боль-\nше 8–10 экранных строк (по 32\nсимвола), а лучше еще меньше.\nИначе их трудно уместить в вер-\nсиях OUTLET для Microdrive и\nOpus. Спасибо!\n\n\n\n\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_en": "## Editorial (late)\n\n### November, 1990\n\nStarting this month, Brian Gaff's giving us a hand: answering some of your letters, reviewing software etc. Brian is editor of the Spectrum section of Micronet and (until its closure!) the Spectrum bit of Popular Computing Weekly.\n\nWe are certainly glad of Brian's help! There are not enough hours in the day... etc. etc.\n\nNow, the author of LERM's great SAM ASSEMBLER, reviewed in Issue 37, contacted us to point out it CAN do a CAPS SHIFT but it is in reverse — it defaults to CAPS and you get lower case when pressing SHIFT.\n\nSadly, one of our readers, Hugh McGregor died recently. Hugh has contributed crossword puzzles to OUTLET, several of which are yet to come, including our Christmas special. PROCROSS, the compiler and master crossword program in Issue 31, was originally written for Hugh — at his request.\n\nFinally, please note that adverts for OUTBOARD shouldn't be larger than 8 or 10 screen lines (of 32 columns) and preferably smaller. This is so it can be squeezed on the Microdrive and Opus versions of OUTLET. Thanks!\n\nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "body_ru": "## Ноябрь, 1990\n\nС этого месяца Brian Gaff пришел нам на помощь: отвечает на часть ваших писем, обозревает софт и т.д. Brian — редактор раздела Spectrum в Micronet и (вплоть до закрытия!) раздела о Spectrum в Popular Computing Weekly.\n\nМы очень рады помощи Brian! В сутках просто не хватает часов... и т.д., и т.п.\n\nДалее: автор великолепного SAM ASSEMBLER от LERM (обзор был в номере 37) связался с нами, чтобы уточнить: CAPS SHIFT там РАБОТАЕТ, но наоборот — по умолчанию стоят заглавные буквы, а строчные вводятся с SHIFT.\n\nК печали, недавно скончался один из наших читателей, Hugh McGregor. Hugh готовил кроссворды для OUTLET, и некоторые еще будут опубликованы, включая наш рождественский выпуск. PROCROSS, компилятор и программа кроссвордов из номера 31, изначально писалась для Hugh — по его просьбе.\n\nНапоследок: объявления в раздел OUTBOARD не должны занимать больше 8–10 экранных строк (по 32 символа), а лучше еще меньше. Иначе их трудно уместить в версиях OUTLET для Microdrive и Opus. Спасибо!\n\n```text\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n```\n",
+  "text_type": 3
+}

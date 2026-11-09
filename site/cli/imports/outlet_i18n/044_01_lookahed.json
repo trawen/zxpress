@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "044",
+  "article_id": "01_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of the upcoming issue of Outlet magazine: sector editors, fast graphics routines, SAM Coupé software, tape tools, and new games.",
+  "meta_description_ru": "Анонс следующего выпуска журнала Outlet: дисковый редактор SEEK 'N PEEK, графика на машинном коде, софт для SAM Coupé, кассетный турбо-загрузчик и игры.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "lookahead",
+      "tag_alias": "lookahead"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Planned for next month's OUTLET\nare SEEK 'N PEEK,a brilliant SAM\nand Disciple/Plus D disc sector\nexaminer and editor; a lightning\nfast machine code DRAW from...to\nroutine; a simple typing program\nfor printing out notes easily;\na car security questionnaire; a\ngreat machine code game of the\nmissile command type; more clip\nart,a new crossword;the regulars\nBoB Smith's OUTCLASS and Stephen\nWilson's SAMCLASS.\n                       more...\n\nWhat else? I've many excellent\narticles on various topics for\nDRIVECHAT as well as one or two\nreviews in the pipeline. There's\na useful program to lift \"UDGs\"\nstraight off-screen!\n\nFor tape users there's VARITURBO\n- a turbo loader with a variable\nloading speed - while it's load-\ning! The ultimate protection I\nguess. I've a giant text banner\nprinter and a games POKEs/tips\ndatabase program.\n\nAs usual there'll be extra stuff\nin ADD-ENDERS, loads of readers'\nletters and I've got some great\nprograms lined up for SAM users\nbut we'll have to wait and see\nwhat fits and what's ready!\nAre YOU ready?           - Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "Planned for next month's OUTLET are SEEK 'N PEEK, a brilliant SAM and Disciple/Plus D disc sector examiner and editor; a lightning fast machine code DRAW from...to routine; a simple typing program for printing out notes easily; a car security questionnaire; a great machine code game of the missile command type; more clip art, a new crossword; the regulars BoB Smith's OUTCLASS and Stephen Wilson's SAMCLASS.\n\nWhat else? I've many excellent articles on various topics for DRIVECHAT as well as one or two reviews in the pipeline. There's a useful program to lift \"UDGs\" straight off-screen!\n\nFor tape users there's VARITURBO — a turbo loader with a variable loading speed — while it's loading! The ultimate protection I guess. I've a giant text banner printer and a games POKEs/tips database program.\n\nAs usual there'll be extra stuff in ADD-ENDERS, loads of readers' letters and I've got some great programs lined up for SAM users but we'll have to wait and see what fits and what's ready!\n\nAre YOU ready? — Brian.\n",
+  "body_ru": "В следующем выпуске OUTLET запланированы SEEK 'N PEEK — великолепный просмотрщик и редактор секторов для дисков SAM и Disciple/Plus D; молниеносная процедура рисования линий DRAW from...to на машинном коде; простая программа для удобной печати заметок; анкета по безопасности автомобилей; отличная игра на машинном коде в стиле Missile Command; новые клипарты, свежий кроссворд, а также наши постоянные рубрики: OUTCLASS Боба Смита (BoB Smith) и SAMCLASS Стивена Уилсона (Stephen Wilson).\n\nЧто еще? У меня наготове множество отличных статей на самые разные темы для рубрики DRIVECHAT, а также пара обзоров. Кроме того, вас ждет полезная утилита для захвата пользовательских символов (UDG) прямо с экрана!\n\nДля пользователей магнитофонных кассет подготовлен VARITURBO — турбо-загрузчик с переменной скоростью загрузки прямо во время чтения данных! Пожалуй, это ультимативная защита. Также в планах программа для печати гигантских текстовых баннеров и база данных с POKE-кодами и подсказками к играм.\n\nКак обычно, в ADD-ENDERS войдут дополнительные материалы, множество писем читателей, плюс у меня заготовлено несколько отличных программ для пользователей SAM Coupé — но посмотрим, что поместится и что будет полностью готово!\n\nА ВЫ готовы? — Brian.\n",
+  "text_type": 3
+}

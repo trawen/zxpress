@@ -1,0 +1,47 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "133",
+  "article_id": "10_addender",
+  "title_en": "Addender",
+  "title_ru": "Дополнение",
+  "meta_description_en": "Introduction to the Add-Enders section in Outlet magazine and instructions for Bob Smith's DUBTEX routine, which prints double-height text in Basic.",
+  "meta_description_ru": "Анонс рубрики Add-Enders в журнале Outlet и описание утилиты DUBTEX Боба Смита для печати символов двойной высоты в Sinclair BASIC.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "addender",
+      "tag_alias": "addender"
+    },
+    {
+      "tag_name": "dubtex",
+      "tag_alias": "dubtex"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    },
+    {
+      "tag_name": "печать текста",
+      "tag_alias": "text-printing"
+    },
+    {
+      "tag_name": "шрифты",
+      "tag_alias": "fonts"
+    }
+  ],
+  "category_ids": [
+    38,
+    30,
+    64
+  ],
+  "body_en_plain": "Some items contributed to OUTLET\nhave not yet been included for a\nvariety of reasons. It's a shame\nto leave them on the shelf so,if\nappropriate, they will be added\nto this ADD-ENDERS area of the\nmagazine (not microdrive or Opus\nas there is not enough room).\n\nThe material covers a wide range\nof quality and program types:\nutilities, screens, character\nsets and text articles and SOME\nof it may be unedited, untested,\nnot working fully or properly;\nin need of conversion for your\n\nsystem's syntax or printer etc.;\nwithout full instructions or\nwhatever. Readers will have to\nsift through to see if there is\nanything of interest they can\nmake use of and discard the\nrest. Not everything will appear\non all versions necessarily.\n\nSome Add-Enders may be linked to\nOUTLET in the normal way. These\nwill usually precede this text\nfile. Any items that follow this\narticle will possibly need to be\nLOADed manually or may not auto-\nrun when loaded.\n\nThere may be some info on the\nfollowing pages...\n\n  Concerning Recycled Programs\n  as suggested by L.G.Baumann\n  ----------------------------\n\nFollowing on from the suggestion\nin a recent OUTLET to reproduce\nsome of the better routines from\nearlier issues of OUTLET for the\nbenefit of newer subscribers,\nthis month we have \"DUBTEX\"\nwhich will display double height\ncharacters on the screen.\n\nJust merge it into any Basic\nprogram, then GOSUB 9995 to move\nthe code to 60000.\n\n\nTo use:-\n\nSimply use the command...\n\n\nPRINT USR D;\"Your message...\"\n\n\nWARNING ...\n\nBE SURE TO SWITCH THE ROUTINE\nOFF AGAIN with PRINT USR S;\notherwise the Basic listing may\nall be double height and diffic-\nult to follow!\n\nDUBTEX was written by Bob Smith\nand originally appeared with\nfull instructions in OUTLET 31.\n\n\nAny suggestions of programs that\nyou would like to see again or\nconsider to be of special value\nto other readers are always wel-\ncome, and we will include one as\nan ADDENDER each month if space\npermits. Be warned however that\nmost of those magical demos will\nbe much too large for inclusion!\n\n\n          ============\n\n  Press \"N\" now to load DUBTEX\n\n\nNote that you will probably get\nan Error report when the program\nis loaded from OUTLET, as it is\nnot auto-run..\n",
+  "body_ru_plain": "",
+  "body_en": "## Addender\n\nSome items contributed to OUTLET have not yet been included for a variety of reasons. It's a shame to leave them on the shelf so,if appropriate, they will be added to this ADD-ENDERS area of the magazine (not microdrive or Opus as there is not enough room).\n\nThe material covers a wide range of quality and program types: utilities, screens, character sets and text articles and SOME of it may be unedited, untested, not working fully or properly; in need of conversion for your\n\nsystem's syntax or printer etc.; without full instructions or whatever. Readers will have to sift through to see if there is anything of interest they can make use of and discard the rest. Not everything will appear on all versions necessarily.\n\nSome Add-Enders may be linked to OUTLET in the normal way. These will usually precede this text file. Any items that follow this article will possibly need to be LOADed manually or may not auto- run when loaded.\n\nThere may be some info on the following pages...\n\nConcerning Recycled Programs as suggested by L.G.Baumann\n\n```text\n  ----------------------------\n```\n\nFollowing on from the suggestion in a recent OUTLET to reproduce some of the better routines from earlier issues of OUTLET for the benefit of newer subscribers, this month we have \"DUBTEX\" which will display double height characters on the screen.\n\nJust merge it into any Basic program, then GOSUB 9995 to move the code to 60000.\n\nTo use:-\n\nSimply use the command...\n\nPRINT USR D;\"Your message...\"\n\nWARNING ...\n\nBE SURE TO SWITCH THE ROUTINE OFF AGAIN with PRINT USR S; otherwise the Basic listing may all be double height and diffic- ult to follow!\n\nDUBTEX was written by Bob Smith and originally appeared with full instructions in OUTLET 31.\n\nAny suggestions of programs that you would like to see again or consider to be of special value to other readers are always wel- come, and we will include one as an ADDENDER each month if space permits. Be warned however that most of those magical demos will be much too large for inclusion!\n\n```text\n          ============\n```\n\nPress \"N\" now to load DUBTEX\n\nNote that you will probably get an Error report when the program is loaded from OUTLET, as it is not auto-run..\n",
+  "body_ru": "## Addender\n\nНекоторые материалы, присланные в OUTLET, до сих пор не были опубликованы по целому ряду причин. Жаль оставлять их пылиться на полке, поэтому по мере возможности они будут добавляться в этот раздел журнала под названием ADD-ENDERS (кроме версий для Microdrive и Opus, так как там не хватает места).\n\nЭтот материал весьма разнообразен по качеству и типам программ: утилиты, экраны, наборы шрифтов и текстовые статьи. Кое-что из этого может быть неотредактированным, непротестированным, работать не полностью или некорректно; требовать адаптации под синтаксис вашей системы, принтер и т. д.; быть без полных инструкций или чего-то подобного. Читателям придется самим покопаться и решить, есть ли тут что-то интересное для них, а остальное отсеять. Не всё обязательно появится во всех версиях журнала.\n\nНекоторые Add-Enders могут быть привязаны к оболочке OUTLET обычным образом. Обычно они предшествуют этому текстовому файлу. Любые материалы, идущие после этой статьи, возможно, придется загружать вручную (командой LOAD), либо они могут не запускаться автоматически после загрузки.\n\nНа следующих страницах может быть кое-какая информация...\n\n### О повторной публикации программ по предложению L.G.Baumann\n\nСледуя предложению из недавнего номера OUTLET перепечатывать некоторые из лучших процедур из ранних выпусков OUTLET для удобства новых подписчиков, в этом месяце мы представляем «DUBTEX», которая выводит на экран символы двойной высоты.\n\nПросто объедините её с любой Basic-программой (командой MERGE), затем выполните GOSUB 9995, чтобы переместить код по адресу 60000.\n\nИспользование:\n\nПросто введите команду...\n\n```text\nPRINT USR D;\"Your message...\"\n```\n\nВНИМАНИЕ...\n\nОБЯЗАТЕЛЬНО ОТКЛЮЧИТЕ ПРОЦЕДУРУ ОБРАТНО с помощью:\n\n```text\nPRINT USR S;\n```\n\nиначе весь листинг Basic станет двойной высоты, и читать его будет затруднительно!\n\nDUBTEX была написана Bob Smith и изначально появилась с полными инструкциями в OUTLET 31.\n\nЛюбые предложения о программах, которые вы хотели бы увидеть снова или считаете особенно полезными для других читателей, всегда приветствуются. Мы будем включать по одной такой программе в раздел ADDENDER каждый месяц, если позволит свободное место. Однако предупреждаем: большинство тех волшебных демок окажутся слишком велики по объему для включения!\n\n============\n\nНажмите \"N\" прямо сейчас, чтобы загрузить DUBTEX.\n\nОбратите внимание: при загрузке программы из OUTLET вы, вероятно, получите сообщение об ошибке (Error report), так как она не запускается автоматически.\n",
+  "text_type": 3
+}

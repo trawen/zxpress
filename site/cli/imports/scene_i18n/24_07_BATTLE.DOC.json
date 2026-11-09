@@ -1,0 +1,40 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "24",
+  "article_id": "07_BATTLE.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Battle City",
+  "title_ru": "Battle City",
+  "meta_description_en": "Brief overview of Battle City, a Russian ZX Spectrum conversion where you defend your flag against attacking enemy tanks.",
+  "meta_description_ru": "Краткое описание игры Battle City для ZX Spectrum: российская версия классики, где необходимо защищать свой штаб от вражеских танков.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "battle-city",
+      "tag_alias": "battle-city"
+    },
+    {
+      "tag_name": "игры",
+      "tag_alias": "games"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "B_CIT ü - BATTLE CITY - Wieder ein Russisches Spiel, diesmal\nspielen die den Beschützereines Symbols (Flagge) den sie vor\nanderen Panzern verteidigenmüssen. Doch Vorsicht! Ihr Panzer is\nauch nicht unzerstörbar! - Again a Russian game. This time you\nmust defend a sign (Flag!) to be captured or shot by other tanks.\nbeware of other tanks asyour own is not indestruc\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**B_CIT — BATTLE CITY**\n\nYet another Russian game. This time you play as the defender of a symbol (flag), which you must protect from incoming enemy tanks. But beware: your own tank is by no means indestructible!\n\n*(Original note: Again a Russian game. This time you must defend a sign (Flag!) to be captured or shot by other tanks. Beware of other tanks as your own is not indestructible!)*\n",
+  "body_ru": "**B_CIT — BATTLE CITY**\n\nИ снова игра от российских авторов. На этот раз вам предстоит защищать символ (флаг) от наступающих вражеских танков. Но будьте осторожны: ваш собственный танк отнюдь не неуязвим!\n\n*(В оригинале также приведён английский текст: «Again a Russian game. This time you must defend a sign (Flag!) to be captured or shot by other tanks. Beware of other tanks as your own is not indestructible!»)*\n",
+  "text_type": 3
+}

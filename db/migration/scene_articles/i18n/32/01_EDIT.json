@@ -1,0 +1,54 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "32",
+  "article_id": "01_EDIT",
+  "source_lang": "de-AT",
+  "title_en": "Editorial",
+  "title_ru": "От редактора",
+  "meta_description_en": "Editorial of Scene+ #32: WoS hosting troubles, Z80 v4.0 release, SQ Tracker, Dave Fountain's return with CRASHED, new TR-DOS game demos, and the Delta Animation Compressor.",
+  "meta_description_ru": "Редакторская колонка Scene+ #32: проблемы с хостингом WoS, релиз эмулятора Z80 v4.0, SQ Tracker, возвращение Дэйва Фаунтина, демо-версии TR-DOS игр и Delta Animation Compressor.",
+  "authors": [
+    "L.C.D."
+  ],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "world-of-spectrum",
+      "tag_alias": "world-of-spectrum"
+    },
+    {
+      "tag_name": "emulation",
+      "tag_alias": "emulation"
+    },
+    {
+      "tag_name": "demoscene",
+      "tag_alias": "demoscene"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_de_plain": "SQTE. T ü- * * * ** * * * * * * * * * * * * * * * * * ** * * * *\n* * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * *\n* * * * * - SCENE+ Herausgeber und Verantwortlicher für den\nInhalt: L. C. D., Prager Str. 92/11/12, A-1210 Wien, Österreich\nTel/Fax:+43/1 2723463 / +43 676 5022551 / Email: lcd.one@aon.at?\nVertrieb zusammen mit SUC-Session:\" Thomas Eberle & Fred Dürkes,\nRainäckerstr. 4, D-70794, Deutschland. Tel/Fax: (+49/711) 77 50\n33 Spectrum und SAM bezogene Werbung sowie Kleinanzeigen\nsindKostenfrei und können beliebige Formen haben: Text, Bild,\nDemo. Hallo SCENE+ Leser. Leider muß ich Euch sehr schlechte\nNeuigkeiten bezüglich WOSSeiten aus dem Internet überbringen. Es\ngab Schwierigkeiten aufdem alten Platz im Server, so mußte WOS\nzwei mal umziehen(deshalb funkttionieren so viele Downloads\nnicht mehr), Der Betreiber von WOS meinte nun daß dies der\ndefinitiv letzte Umzugwar, und sollte er noch einmal zu einem\nUmzug gezwungen werden, wird WOS aufgelassen, und zwar\nendgültig. Das wäre nichtwünschenswert denn WOS betreibt die\numfangreichsten Spectrum Site im Web, und jetzt sind auch noch\nTRD Programme drin. So ganz nebenbei erschien vor kurzem die\nVersion 4.0 desbekannden Emulators Z80. Die zwei Versionen sind\nan DOS und Winangepaßt. Von Thomas habe ich die Erlaubnis\nbekommen den SQ Tracker aufdie Disk zu bringen, hoffentlich\nliefert Thomas die passende Anleitung nach. Der passende\nCompiler wird dann auch in dernächsten Ausgabe erschienen. Ö Die\nRückkehr von Dave Fountain mit CRASHED ist eine derpositiven\nEntwicklungen der Szene, ich wurde jetzt schonpraktisch ins\nCRASHED Inventar aufgenohmen. Andere Bereiche der Szene warten\nauch mit Neuigkeiten auf, sosind mir einige neue Spieledemos in\ndie Hände gefallen, unteranderen: Black Raven II, besser bekannt\nals Starcraft, undKing's Bounty P. Viele der neuen Spiele\nbenutzen& denLace-Modus um noch mehr Farben darzustellen, aber\nauf demEmulator flimmert es entsetzlich. Wer ein Notebook mit\nDualscanBildschirm hat, bleibt von dem geflimmere verschont.\nInteressante neue Spieledemos sind auch noch Monsterland\nundWalker, welches eine, soweit ich das beurteilen kann, genaue\nUmsetzung des gleichnamigen Amiga-Spieles ist.. Dann bekam ich\nnoch Mario XL, welches aber durch dieunprofessionele\nSpriteanimation negativ auffiel. Diese soeben erwähnten\nProgramme liegen mir im TRD Format vor,nur leider kann ich das\nnoch nicht auf normales Uniload Formatumsetzen, kann Jemand\nhelfen? Von dem Spiel PUSSY sah ich bisher nur ein Screenshot\n(nicht daswas ihr jetzt denkt!) und es scheint ein\nPlatform-Denkspiel mit Manga-Graphik zu sein Auch in Österreich\ntut sich etwas, LCD (wer denn sonst!) hat denDelta\nAnimationscompressor fertig. Ja, genau! eine Demoanimationfolgt\ndann in der nächster Ausgabe die jetzt schon zur hälftefertig\nist. Wenn Jemand Filmsequenzen in seinen Programmen\nunterbringenwill, ist er herzlichst eingeladen demnächst meinen\nDelta Compressor zu benutzen, nur eine Warnung: 50 FPS sind\netwas zuschnell, bremst die Animationen auf 25 FPS ab! Aber was\nsoll's, das Demo wird eine Animation (für Legacy gerendert) mit\n12,5/25und 50 FPS abspielen, dann werdet ihr schon sehen was ich\nmeine. Soviel zu dieser Ausgabe also. Bis demnächst (Auf dem\nClubtreffen in Möncheng\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### SCENE+\n\n**Publisher and responsible for content:**  \nL. C. D., Prager Str. 92/11/12, A-1210 Vienna, Austria  \nTel/Fax: +43/1 2723463 / +43 676 5022551  \nEmail: lcd.one@aon.at  \n\n**Distribution jointly with SUC-Session:**  \nThomas Eberle & Fred Dürkes, Rainäckerstr. 4, D-70794, Germany.  \nTel/Fax: (+49/711) 77 50 33  \n\nSpectrum- and SAM-related advertisements as well as classifieds are free of charge and can take any form: text, picture, demo.\n\n***\n\nHello, SCENE+ readers.\n\nUnfortunately, I have to bring you very bad news regarding the WOS (World of Spectrum) web pages. There were troubles with the previous server host, so WOS had to move twice (which is why so many downloads are currently broken). The operator of WOS stated that this was definitely the final move, and should he be forced to migrate once more, WOS will be shut down permanently. That would be a tragedy, as WOS hosts the most comprehensive Spectrum archive on the web, and now it even includes TRD programs.\n\nIncidentally, version 4.0 of the well-known emulator Z80 was released recently. Two versions are available, tailored for DOS and Windows.\n\nI got permission from Thomas to include SQ Tracker on the disk; hopefully Thomas will provide the matching documentation soon. The corresponding compiler will then also appear in the next issue.\n\nThe return of Dave Fountain with CRASHED is one of the scene's most positive developments; I have practically been inducted into the CRASHED inventory already.\n\nOther corners of the scene have plenty of news as well. A few new game demos fell into my hands, among them: *Black Raven II* (better known as Starcraft) and *King's Bounty P*. Many of the new games utilize the GigaScreen/interlace mode to display more colors, but it flickers horribly in emulators. Anyone using a notebook with a dual-scan screen will be spared from the flickering. Other interesting new game demos are *Monsterland* and *Walker*, the latter being—as far as I can tell—a faithful port of the Amiga game of the same name. Then I also received *Mario XL*, which unfortunately left a negative impression due to unprofessional sprite animation. The aforementioned programs are currently in TRD format, but sadly I haven't been able to convert them to normal Uniload format yet—can anyone help?\n\nAs for the game *PUSSY*, so far I've only seen a screenshot (not what you're thinking!), and it seems to be a platform-puzzle game with manga-style graphics.\n\nThings are stirring in Austria as well: LCD (who else!) has finished the Delta Animation Compressor. Yes, indeed! A demo animation will follow in the next issue, which is already half-finished. If anyone wants to embed video sequences in their programs, you are cordially invited to use my Delta Compressor soon. Just one warning: 50 FPS is a bit too fast, brake your animations down to 25 FPS! But never mind, the demo will play an animation (rendered for *Legacy*) at 12.5, 25, and 50 FPS, and then you'll see what I mean.\n\nThat's all for this issue. See you soon (at the club meeting in Mönchengladbach...\n",
+  "body_ru": "### SCENE+\n\n**Издатель и ответственный за содержание:**  \nL. C. D., Prager Str. 92/11/12, A-1210 Wien, Австрия  \nТел./факс: +43/1 2723463 / +43 676 5022551  \nEmail: lcd.one@aon.at  \n\n**Распространение совместно с SUC-Session:**  \nThomas Eberle & Fred Dürkes, Rainäckerstr. 4, D-70794, Германия.  \nТел./факс: (+49/711) 77 50 33  \n\nРеклама и частные объявления, связанные со Spectrum и SAM, бесплатны и могут быть в любом виде: текст, картинка, демо.\n\n***\n\nПривет, читатели SCENE+!\n\nК сожалению, вынужден сообщить вам крайне неприятные новости о сайте World of Spectrum (WOS). На старом сервере возникли проблемы, из-за чего сайту пришлось переезжать дважды (именно поэтому сейчас не работает столько ссылок на скачивание). Владелец WOS заявил, что этот переезд совершенно точно последний, и если его вынудят переезжать ещё раз, WOS будет закрыт навсегда. Это было бы крайне прискорбно, ведь WOS — крупнейший Spectrum-архив в сети, и теперь там выкладываются даже TRD-релизы.\n\nМежду делом: недавно вышла версия 4.0 известного эмулятора Z80. Выпущены две сборки — под DOS и Windows.\n\nОт Томаса я получил разрешение поместить на диск SQ Tracker; надеюсь, Томас вскоре пришлёт и инструкцию к нему. Соответствующий компилятор появится в следующем выпуске.\n\nВозвращение Дэйва Фаунтина (Dave Fountain) с журналом CRASHED — одно из самых отрадных событий на сцене; меня туда уже практически включили в штатный инвентарь.\n\nВ других сферах сцены тоже хватает новостей. Мне в руки попали демо-версии нескольких новых игр, в том числе: *Black Raven II* (более известная как Starcraft) и *King's Bounty P*. Многие новинки используют чересстрочный режим (интерлейс), чтобы вывести больше цветов, но в эмуляторах это ужасно мерцает. Впрочем, владельцы ноутбуков с dual-scan экранами избавлены от этой ряби. Среди других интересных демок — *Monsterland* и *Walker*, последняя из которых, насколько я могу судить, представляет собой точный порт одноимённой амижной игры. Также мне прислали *Mario XL*, но она разочаровала небрежной анимацией спрайтов. Все эти программы у меня пока в формате TRD, и, к сожалению, я ещё не научился переводить их в обычный формат Uniload — может ли кто-нибудь помочь?\n\nОб игре *PUSSY* я пока видел только скриншот (нет, не то, о чём вы подумали!) — похоже, это платформенная головоломка с манга-графикой.\n\nВ Австрии жизнь тоже бьёт ключом: LCD (а кто же ещё!) доделал Delta Animation Compressor. Да-да! Демонстрационная анимация выйдет в следующем номере, который уже наполовину готов. Если кто-то хочет встроить видеоролики в свои программы — милости прошу воспользоваться моим дельта-компрессором. Одно предостережение: 50 FPS — это слишком быстро, сбавляйте анимацию до 25 FPS! Впрочем, демо покажет анимацию (отрендеренную для *Legacy*) на скоростях 12.5, 25 и 50 кадров/сек, и вы сами всё поймёте.\n\nВот и всё для этого выпуска. До скорого (на встрече клуба в Мёнхенгладбахе...\n",
+  "text_type": 3
+}

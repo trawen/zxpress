@@ -1,0 +1,35 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "017",
+  "article_id": "03_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем выпуске",
+  "meta_description_en": "Preview of upcoming features and programs planned for the next issue of Outlet magazine.",
+  "meta_description_ru": "Анонс материалов следующего (18-го) выпуска электронного журнала Outlet: утилиты, игры, статьи о BASIC и железе.",
+  "authors": [
+    "Brian"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "announcement"
+    },
+    {
+      "tag_name": "дискмаг",
+      "tag_alias": "discmag"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Next month: SAVESOON(reminds you\nto SAVE periodically); Part 3 of\nOUTPUT on printers;a graphic D &\nD-type game; a hex PEEK utility;\nan article on Spectrum'flags'; a\nrandom number-maker for football\npools;a screenswitcher;a program\nto look at how BASIC is stored;a\nnew Tas font;an Opus CAT utility\nand a graphic/text adventure.All\nthe regulars - like Nick Lewis's\nOUTCLASS and I still have one or\ntwo other items I'll try to cram\nin! See you then!  -  Brian.\n",
+  "body_ru_plain": "В след. месяце: SAVESOON(напоми-\nнает периодически делать SAVE);\nчасть 3 OUTPUT о принтерах; гра-\nфическая игра типа D & D; утили-\nта hex PEEK; статья о «флагах» в\nSpectrum; генератор случайных\nчисел для футбольного тото; пере-\nключатель экранов; программа для\nизучения структуры BASIC; новый\nшрифт для Tas; утилита Opus CAT\nи графико-текстовый квест. Все\nпривычные рубрики — вроде\nOUTCLASS от Nick Lewis, плюс еще\nпара вещей, что я попытаюсь туда\nвтиснуть! До встречи!  -  Brian.\n",
+  "body_en": "## Lookahead\n\nNext month: SAVESOON (reminds you to SAVE periodically); Part 3 of OUTPUT on printers; a graphic D & D-type game; a hex PEEK utility; an article on Spectrum 'flags'; a random number-maker for football pools; a screenswitcher; a program to look at how BASIC is stored; a new Tas font; an Opus CAT utility and a graphic/text adventure. All the regulars - like Nick Lewis's OUTCLASS and I still have one or two other items I'll try to cram in! See you then! - Brian.\n",
+  "body_ru": "## В следующем выпуске\n\nВ след. месяце:\n- SAVESOON (напоминает периодически делать SAVE);\n- часть 3 OUTPUT о принтерах;\n- графическая игра типа D & D;\n- утилита hex PEEK;\n- статья о «флагах» в Spectrum;\n- генератор случайных чисел для футбольного тото;\n- переключатель экранов;\n- программа для изучения структуры BASIC;\n- новый шрифт для Tas;\n- утилита Opus CAT и графико-текстовый квест.\n\nВсе привычные рубрики — вроде OUTCLASS от Nick Lewis, плюс еще пара вещей, что я попытаюсь туда втиснуть! До встречи!\n\n— Brian.\n",
+  "text_type": 3
+}

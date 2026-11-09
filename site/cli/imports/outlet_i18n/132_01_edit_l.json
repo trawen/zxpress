@@ -1,0 +1,41 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "132",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (Late)",
+  "title_ru": "От редакции (дополнение)",
+  "meta_description_en": "Outlet #132 editorial from August 1998: call for reader contributions, queries policy, and issue highlights including a demo and a text adventure.",
+  "meta_description_ru": "Редакционная колонка Outlet #132 (август 1998): призыв присылать материалы, правила ответов на вопросы и анонс содержимого номера.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "chezron",
+      "tag_alias": "chezron"
+    },
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "A U G U S T ,  1 9 9 8\n\nSummer is here!  Well surely it\nmust be by the time you get to\nread this. In which case you are\nprobably in Majorca or sitting\nin the garden. Glad to see that\nyou've got OUTLET with you!\n\n\nThanks for your contributions!\nKeep sending them in. Remember,\nthey don't need to be complete\nprograms - short routines are\nalso helpful to others as well\nas screen pictures and articles\non almost any relevant topic. It\nis always interesting to read,\nfor instance, about software and\nother products that people are\nusing. Articles must be on disk\nor tape though (returned later).\n\nNow the Spectrum readership is\nnot as large as it was there are\nproportionally fewer contributed\nprograms. It is more important\nthan ever therefore,to give what\nsupport you can  to sustain the\nvariety and scope of items in\nOUTLET. Thanks!\n\n\nMay we remind readers that we do\nnot answer computer,  software,\nhardware or system queries etc.,\npersonally by mail.  All such\nqueries are answered through the\nOUTLETTERS section in OUTLET.\n\nLots of super things this month\nincluding a graphics and music\ndemo an a text adventure. Enjoy!\n\n                    Ron & Brian\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n   Email: outletmag@yahoo.com.\n",
+  "body_ru_plain": "",
+  "body_en": "AUGUST, 1998\n\nSummer is here! Well surely it must be by the time you get to read this. In which case you are probably in Majorca or sitting in the garden. Glad to see that you've got OUTLET with you!\n\nThanks for your contributions! Keep sending them in. Remember, they don't need to be complete programs — short routines are also helpful to others as well as screen pictures and articles on almost any relevant topic. It is always interesting to read, for instance, about software and other products that people are using. Articles must be on disk or tape though (returned later).\n\nNow the Spectrum readership is not as large as it was there are proportionally fewer contributed programs. It is more important than ever therefore, to give what support you can to sustain the variety and scope of items in OUTLET. Thanks!\n\nMay we remind readers that we do not answer computer, software, hardware or system queries etc., personally by mail. All such queries are answered through the OUTLETTERS section in OUTLET.\n\nLots of super things this month including a graphics and music demo and a text adventure. Enjoy!\n\nRon & Brian\n\nOUTLET is produced by\n\nChris Oliver  \nRon & Brian Cavers  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF  \n\nEmail: outletmag@yahoo.com.\n",
+  "body_ru": "АВГУСТ, 1998\n\nЛето пришло! Ну, по крайней мере, к тому моменту, как вы это читаете, оно точно должно было наступить. А значит, вы, вероятно, греетесь на Майорке или отдыхаете в саду. Очень приятно, что вы взяли с собой OUTLET!\n\nСпасибо за ваши материалы! Продолжайте их присылать. Помните: это не обязательно должны быть законченные программы — небольшие подпрограммы тоже пригодятся другим читателям, как и экранные картинки или статьи практически на любую подходящую тему. Всегда любопытно узнать, к примеру, каким софтом и другими продуктами пользуются наши читатели. Однако статьи должны быть записаны на дискете или кассете (мы их потом вернем).\n\nСейчас читательская аудитория Spectrum уже не так велика, как прежде, и присылаемых программ становится пропорционально меньше. Поэтому поддержка каждого из вас сейчас важна как никогда, чтобы сохранить разнообразие и размах материалов в OUTLET. Спасибо!\n\nНапоминаем читателям, что мы не отвечаем на вопросы по компьютерам, программам, «железу» или операционным системам лично по почте. Ответы на все подобные запросы публикуются в рубрике OUTLETTERS на страницах журнала.\n\nВ этом месяце вас ждет масса отличных вещей, включая графическо-музыкальное демо и текстовый квест. Приятного чтения!\n\nRon & Brian\n\nOUTLET выпускают:\n\nChris Oliver  \nRon & Brian Cavers  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF  \n\nEmail: outletmag@yahoo.com.\n",
+  "text_type": 3
+}

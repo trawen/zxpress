@@ -1,0 +1,48 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "019",
+  "article_id": "02_compo",
+  "title_en": "Competition",
+  "title_ru": "Конкурс взломщиков",
+  "meta_description_en": "Hacking competition announcement by Malcolm Goodman preceding a new series on ZX Spectrum software protection. Prize of £10 for the winner.",
+  "meta_description_ru": "Анонс конкурса по взлому кассетной защиты от Малкольма Гудмана перед запуском серии статей о защите ПО для ZX Spectrum. Приз — 10 фунтов.",
+  "authors": [
+    "Malcolm Goodman"
+  ],
+  "tags": [
+    {
+      "tag_name": "malcolm goodman",
+      "tag_alias": "malcolm-goodman"
+    },
+    {
+      "tag_name": "competition",
+      "tag_alias": "competition"
+    },
+    {
+      "tag_name": "protection",
+      "tag_alias": "protection"
+    },
+    {
+      "tag_name": "hacking",
+      "tag_alias": "hacking"
+    },
+    {
+      "tag_name": "tape",
+      "tag_alias": "tape"
+    },
+    {
+      "tag_name": "machine code",
+      "tag_alias": "machine-code"
+    }
+  ],
+  "category_ids": [
+    51,
+    116
+  ],
+  "body_en_plain": "So You Think You Can Hack?\n       by Malcolm Goodman\n   --------------------------\nThis is a little competition in-\ntended to introduce a new series\non program protection. What I\nhave done is to take a game and\nwrap it up in a protection\nroutine the likes of which you\nprobably ain't seen before and\nthe challenge I'm putting down\nis for you to try and find the\nstart address of the code - not\nthe game.\n\nAll solutions will be examined\nand all correct entries will go\n'into the hat'. The winner will\nbe the person whose entry gets\ndrawn from 'the hat'. The only\nrule is that you must describe\nto me the steps you took to find\nthe code start. anything that\nhints at 'little red buttons\nbeing pushed' will not be con-\nsidered and so as not to deter\ntoo many people let me tell you\nthat there isn't a headerless or\nturbo loader in sight but you\nwill need a modest knowledge of\nmachine code. To enter this\nunique(?)competition please send\na `1 coin(to cover cost of tape,\np & p and duplication) to:-\n  MALCOLM GOODMAN, 17 BROOKHILL\n     AVENUE, LEEDS LS17 8QA\n\nMy decision is to be final. All\ncassettes despatched together\nand solutions are to be with me\nwithin 14 days of despatch.\n\n  A PRIZE OF TEN POUNDS WILL BE\n     AWARDED TO THE WINNER!\n\n               - Malcolm Goodman.\n",
+  "body_ru_plain": "Считаете себя хакером?\n       Malcolm Goodman\n   --------------------------\nЭто небольшой конкурс, призван-\nный предварить новую серию\nстатей о защите программ. Я\nвзял игру и упаковал её в такую\nпроцедуру защиты, аналогов ко-\nторой вы, вероятно, ещё не ви-\nдели, и бросаю вам вызов:\nпопробуйте найти начальный адрес\nкода — не самой игры.\n\nВсе решения будут изучены, и все\nверные ответы отправятся «в шля-\nпу». Победителем станет тот, чью\nзаявку вытянут из «шляпы».\nЕдинственное правило: вы должны\nописать мне шаги, с помощью ко-\nторых нашли начало кода. Любые\nнамёки на «нажатие маленьких\nкрасных кнопок» рассматриваться\nне будут, и, дабы не отпугнуть\nслишком многих, сразу скажу:\nздесь нет ни бесзаголовочных,\nни турбо-загрузчиков, однако\nскромные познания в машинном ко-\nде вам понадобятся. Для участия\nв этом уникальном(?) конкурсе\nвышлите монету в `1 (на расхо-\nды по кассете, копированию и\nпересылке) по адресу:-\n  MALCOLM GOODMAN, 17 BROOKHILL\n     AVENUE, LEEDS LS17 8QA\n\nМоё решение окончательно. Все\nкассеты будут разосланы разом,\nа решения должны поступить ко\nмне в течение 14 дней со дня\nрассылки.\n\n   ПРИЗ В ДЕСЯТЬ ФУНТОВ БУДЕТ\n       ВРУЧЁН ПОБЕДИТЕЛЮ!\n\n               - Malcolm Goodman.\n",
+  "body_en": "## So You Think You Can Hack?\n**by Malcolm Goodman**\n\nThis is a little competition intended to introduce a new series on program protection. What I have done is to take a game and wrap it up in a protection routine the likes of which you probably ain't seen before and the challenge I'm putting down is for you to try and find the start address of the code - not the game.\n\nAll solutions will be examined and all correct entries will go 'into the hat'. The winner will be the person whose entry gets drawn from 'the hat'. The only rule is that you must describe to me the steps you took to find the code start. anything that hints at 'little red buttons being pushed' will not be considered and so as not to deter too many people let me tell you that there isn't a headerless or turbo loader in sight but you will need a modest knowledge of machine code. To enter this unique(?)competition please send a `1 coin(to cover cost of tape, p & p and duplication) to:\n\nMALCOLM GOODMAN, 17 BROOKHILL AVENUE, LEEDS LS17 8QA\n\nMy decision is to be final. All cassettes despatched together and solutions are to be with me within 14 days of despatch.\n\n**A PRIZE OF TEN POUNDS WILL BE AWARDED TO THE WINNER!**\n\n— *Malcolm Goodman.*\n",
+  "body_ru": "## Считаете себя хакером?\n\n### Malcolm Goodman\n\nЭто небольшой конкурс, призванный предварить новую серию статей о защите программ. Я взял игру и упаковал её в такую процедуру защиты, аналогов которой вы, вероятно, ещё не видели, и бросаю вам вызов: попробуйте найти начальный адрес кода — не самой игры.\n\nВсе решения будут изучены, и все верные ответы отправятся «в шляпу». Победителем станет тот, чью заявку вытянут из «шляпы». Единственное правило: вы должны описать мне шаги, с помощью которых нашли начало кода. Любые намёки на «нажатие маленьких красных кнопок» рассматриваться не будут, и, дабы не отпугнуть слишком многих, сразу скажу: здесь нет ни бесзаголовочных, ни турбо-загрузчиков, однако скромные познания в машинном коде вам понадобятся. Для участия в этом уникальном(?) конкурсе вышлите монету в £1 (на расходы по кассете, копированию и пересылке) по адресу:\n\n```text\nMALCOLM GOODMAN, 17 BROOKHILL AVENUE, LEEDS LS17 8QA\n```\n\nМоё решение окончательно. Все кассеты будут разосланы разом, а решения должны поступить ко мне в течение 14 дней со дня рассылки.\n\n**ПРИЗ В ДЕСЯТЬ ФУНТОВ БУДЕТ ВРУЧЁН ПОБЕДИТЕЛЮ!**\n\n*— Malcolm Goodman.*\n",
+  "text_type": 3
+}

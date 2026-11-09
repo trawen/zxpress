@@ -1,0 +1,42 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "1-3",
+  "article_id": "07_copyright",
+  "title_en": "Copyright note",
+  "title_ru": "Авторские права",
+  "meta_description_en": "Chezron Software's copyright policy regarding programs, routines, and articles published in Outlet magazine, detailing usage rights and contributor guidelines.",
+  "meta_description_ru": "Политика редакции Chezron Software относительно авторских прав на материалы и программы в журнале Outlet: правила использования и распространения.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "авторские права",
+      "tag_alias": "copyright"
+    },
+    {
+      "tag_name": "лицензирование",
+      "tag_alias": "licensing"
+    },
+    {
+      "tag_name": "microdrive",
+      "tag_alias": "microdrive"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_en_plain": "As a general rule the CHEZRON\nutilities and routines that\nappear in OUTLET can be regarded\nas free to use WITHIN your own\nprograms (whether being sold\ncommercially or not) but not for\nre-sale as stand-alone routines.\nFor example, character sets\netc., can be freely used within\nyour own programs even if you\noffer them elsewhere. You must\nnot, however, offer utilities,\nroutines etc. that appear in\nOUTLET for sale as free-standing\nprograms.\n\nIf you are contributing a\nprogram, routine or article to\nOUTLET and you wish it to be\n(i). Free for anyone to copy and\ngive away WITHOUT PROFIT,\n(ii). Free for anyone to use\nWITHIN their own programs but\nnot as a stand-alone routine,\n(iii). NOT COPIED, LENT OR\nRESOLD UNDER ANY CIRCUMSTANCES\nWITHOUT PERMISSION, then please\nindicate when contributing.\n\nNormally, if there is no\nindication, we will regard small\nroutines, utilities, character\nsets etc. to be under category\n(ii) above, that is, free for\npeople to use WITHIN their own\nprograms whether for re-sale or\nnot, but NOT as stand-alone\nprograms.\n\nFinally, remember that we at\nCHEZRON are striving to keep the\nprice of OUTLET down to this\nsilly level! We have to be, and\nare, enthusiasts of the Spectrum\nand microdrive. No software\nhouse could maintain a monthly\nmagazine at this price if they\nwere solely interested in the\nprofit. Still, we are trying to\nearn a modest crust to cover\ncosts, etc. With that in mind\nyou can see that copying, other\nthan as outlined above (which we\nfeel is generous) will tend to\ndestabilize OUTLET as a regular\nmonthly enterprise (cor!).\nConversely, spreading the word\nand your general support will\nall help to firmly establish\nOUTLET. Thanks!\n",
+  "body_ru_plain": "Как общее правило, утилиты и\nпроцедуры от CHEZRON, что\nпоявляются в OUTLET, можно\nсчитать свободными для ис-\nпользования ВНУТРИ ваших соб-\nственных программ (продаются ли\nони коммерчески или нет), но не\nдля перепродажи в виде отдель-\nных процедур. К примеру, наборы\nсимволов и т.д. можно свободно\nиспользовать внутри собственных\nпрограмм, даже если вы распро-\nстраняете их где-то ещё. Однако\nвы не должны выставлять на про-\nдажу утилиты, процедуры и проч.,\nпоявившиеся в OUTLET, как само-\nстоятельные программы.\n\nЕсли вы присылаете программу,\nпроцедуру или статью в OUTLET и\nхотите, чтобы она была:\n(i). Свободной для копирования\nи раздачи БЕЗ ИЗВЛЕЧЕНИЯ\nПРИБЫЛИ,\n(ii). Свободной для любого ис-\nпользования ВНУТРИ чужих про-\nграмм, но не в виде отдельной\nпроцедуры,\n(iii). НЕ ПОДЛЕЖАЩЕЙ КОПИРОВА-\nНИЮ, СДАЧЕ ВНАЁМ ИЛИ ПЕРЕПРО-\nДАЖЕ НИ ПРИ КАКИХ ОБСТОЯТЕЛЬ-\nСТВАХ БЕЗ РАЗРЕШЕНИЯ, то, по-\nжалуйста, укажите это при\nотправке материалов.\n\nОбычно, если указаний нет, мы\nбудем относить небольшие проце-\nдуры, утилиты, наборы символов\nи т.д. к вышеупомянутой катего-\nрии (ii), то есть свободными\nдля использования ВНУТРИ соб-\nственных программ (будь то на\nпродажу или нет), но НЕ как\nсамостоятельные программы.\n\nНаконец, помните, что мы в\nCHEZRON изо всех сил стараемся\nудерживать цену OUTLET на столь\nсмехотворном уровне! Нам прихо-\nдится быть — и мы являемся —\nэнтузиастами Spectrum и micro-\ndrive. Ни одна софтверная фирма\nне смогла бы выпускать ежеме-\nсячный журнал по такой цене,\nесли бы её интересовала исключи-\nтельно прибыль. И всё же мы пы-\nтаемся заработать на скромную\nгорбушку хлеба, чтобы покрыть\nрасходы и т.д. Учитывая это, вы\nпонимаете, что копирование сверх\nоговорённого выше (что, на наш\nвзгляд, весьма щедро) может де-\nстабилизировать OUTLET как регу-\nлярное ежемесячное предприятие\n(ух!). И наоборот: добрая молва\nи ваша общая поддержка помогут\nOUTLET прочно встать на ноги.\nСпасибо!\n",
+  "body_en": "## Copyright note\n\nAs a general rule the CHEZRON utilities and routines that appear in OUTLET can be regarded as free to use WITHIN your own programs (whether being sold commercially or not) but not for re-sale as stand-alone routines. For example, character sets etc., can be freely used within your own programs even if you offer them elsewhere. You must not, however, offer utilities, routines etc. that appear in OUTLET for sale as free-standing programs.\n\nIf you are contributing a program, routine or article to OUTLET and you wish it to be:\n\n(i). Free for anyone to copy and give away WITHOUT PROFIT,  \n(ii). Free for anyone to use WITHIN their own programs but not as a stand-alone routine,  \n(iii). NOT COPIED, LENT OR RESOLD UNDER ANY CIRCUMSTANCES WITHOUT PERMISSION,  \n\nthen please indicate when contributing.\n\nNormally, if there is no indication, we will regard small routines, utilities, character sets etc. to be under category (ii) above, that is, free for people to use WITHIN their own programs whether for re-sale or not, but NOT as stand-alone programs.\n\nFinally, remember that we at CHEZRON are striving to keep the price of OUTLET down to this silly level! We have to be, and are, enthusiasts of the Spectrum and microdrive. No software house could maintain a monthly magazine at this price if they were solely interested in the profit. Still, we are trying to earn a modest crust to cover costs, etc. With that in mind you can see that copying, other than as outlined above (which we feel is generous) will tend to destabilize OUTLET as a regular monthly enterprise (cor!). Conversely, spreading the word and your general support will all help to firmly establish OUTLET. Thanks!\n",
+  "body_ru": "## Авторские права\n\nКак общее правило, утилиты и процедуры от CHEZRON, что появляются в OUTLET, можно считать свободными для использования ВНУТРИ ваших собственных программ (продаются ли они коммерчески или нет), но не для перепродажи в виде отдельных процедур. К примеру, наборы символов и т.д. можно свободно использовать внутри собственных программ, даже если вы распространяете их где-то ещё. Однако вы не должны выставлять на продажу утилиты, процедуры и проч., появившиеся в OUTLET, как самостоятельные программы.\n\nЕсли вы присылаете программу, процедуру или статью в OUTLET и хотите, чтобы она была:\n\n- **(i)** Свободной для копирования и раздачи БЕЗ ИЗВЛЕЧЕНИЯ ПРИБЫЛИ,\n- **(ii)** Свободной для любого использования ВНУТРИ чужих программ, но не в виде отдельной процедуры,\n- **(iii)** НЕ ПОДЛЕЖАЩЕЙ КОПИРОВАНИЮ, СДАЧЕ ВНАЁМ ИЛИ ПЕРЕПРОДАЖЕ НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ БЕЗ РАЗРЕШЕНИЯ,\n\nто, пожалуйста, укажите это при отправке материалов.\n\nОбычно, если указаний нет, мы будем относить небольшие процедуры, утилиты, наборы символов и т.д. к вышеупомянутой категории (ii), то есть свободными для использования ВНУТРИ собственных программ (будь то на продажу или нет), но НЕ как самостоятельные программы.\n\nНаконец, помните, что мы в CHEZRON изо всех сил стараемся удерживать цену OUTLET на столь смехотворном уровне! Нам приходится быть — и мы являемся — энтузиастами Spectrum и microdrive. Ни одна софтверная фирма не смогла бы выпускать ежемесячный журнал по такой цене, если бы её интересовала исключительно прибыль. И всё же мы пытаемся заработать на скромную горбушку хлеба, чтобы покрыть расходы и т.д. Учитывая это, вы понимаете, что копирование сверх оговорённого выше (что, на наш взгляд, весьма щедро) может дестабилизировать OUTLET как регулярное ежемесячное предприятие (ух!). И наоборот: добрая молва и ваша общая поддержка помогут OUTLET прочно встать на ноги. Спасибо!\n",
+  "text_type": 3
+}

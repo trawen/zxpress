@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "097",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (Late) - September 1995",
+  "title_ru": "От редакции (дополнение) — Сентябрь 1995",
+  "meta_description_en": "Outlet #97 editorial: introducing the automatic +D unerase utility, upcoming +3 unerase, call for utility contributions, query policy reminder, and new Star Trek parody.",
+  "meta_description_ru": "Редакторская колонка Outlet #97: автоматическое восстановление файлов на +D, анонс утилиты для +3, призыв присылать системные программы и пародия на Star Trek.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "+d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus3"
+    },
+    {
+      "tag_name": "star trek",
+      "tag_alias": "star-trek"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "S E P T E M B E R ,   1 9 9 5\n\nThere's the ultimate +D UNERASE\nprogram in this month's OUTLET!\nIf you've accidentally erased a\nfile it can be restored (so long\nas you haven't saved something\non top of it) automatically!\n\n\nSo far as we know there has not\nbeen an automatic unerase before\n(previous efforts have required\nyou to give details manually,eg,\nfile type, etc.).\n\n\nAnyway, +3 users need not feel\nleft out as there's a +3 unerase\nin OUTLET soon (quite by chance)\nand it can restore all files on\na disk.\n\n\nIt's a very useful safeguard and\nyou almost feel you can't wait\nto accidentally erase something\nso you can bring it back from\nthe dead! We suggest you use a\nspare disk with unimportant bits\nand pieces to test it on!\n\n\nWe've a decent stockpile of good\nprograms lined up for OUTLET but\nleisure software like games are\nnow tending to be greater in\nproportion so please let us have\nyour contributions - any sort of\nprograms or articles or screens\nare welcome but we do especially\nwant utilities so we can keep a\ngood balance!\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET. We\nare sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\nA new spoof Star Trek serial is\nstarting this month in OUTLET.It\nhas over 20 episodes. It began\non an American university Vax\ncomputer and has since become PD\non the PC from where we ported\nit to the Spectrum. If you are a\nStar Trek fan you will find a\nfew laughs in this. Enjoy!\n\n                     Ron & Brian\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n.\n",
+  "body_ru_plain": "",
+  "body_en": "SEPTEMBER, 1995\n\nThere's the ultimate +D UNERASE program in this month's OUTLET! If you've accidentally erased a file it can be restored (so long as you haven't saved something on top of it) automatically!\n\nSo far as we know there has not been an automatic unerase before (previous efforts have required you to give details manually, eg, file type, etc.).\n\nAnyway, +3 users need not feel left out as there's a +3 unerase in OUTLET soon (quite by chance) and it can restore all files on a disk.\n\nIt's a very useful safeguard and you almost feel you can't wait to accidentally erase something so you can bring it back from the dead! We suggest you use a spare disk with unimportant bits and pieces to test it on!\n\nWe've a decent stockpile of good programs lined up for OUTLET but leisure software like games are now tending to be greater in proportion so please let us have your contributions — any sort of programs or articles or screens are welcome but we do especially want utilities so we can keep a good balance!\n\nMay we remind readers, we cannot answer computer, software, hardware or system queries etc., personally by mail. All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder! Share your problems with others! That way, everyone benefits!\n\nA new spoof Star Trek serial is starting this month in OUTLET. It has over 20 episodes. It began on an American university Vax computer and has since become PD on the PC from where we ported it to the Spectrum. If you are a Star Trek fan you will find a few laughs in this. Enjoy!\n\nRon & Brian\n\nOUTLET is produced by:\n\nChris Oliver  \nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF\n",
+  "body_ru": "СЕНТЯБРЬ, 1995\n\nВ этом номере OUTLET вас ждёт непревзойдённая программа восстановления файлов +D UNERASE! Если вы случайно стёрли файл, его теперь можно восстановить автоматически (при условии, что вы поверх него ничего не записали)!\n\nНасколько нам известно, полностью автоматических программ восстановления для +D раньше не было (в прежних разработках требовалось вводить данные вручную — например, тип файла и т. д.).\n\nВпрочем, владельцам +3 тоже не стоит расстраиваться: совсем скоро в OUTLET появится утилита unerase и для +3 (так уж совпало), которая умеет восстанавливать все файлы на диске.\n\nЭто отличная страховка, и прямо-таки подмывает случайно что-нибудь стереть, лишь бы потом воскресить файл из мёртвых! Советуем всё же взять запасную дискету с чем-нибудь ненужным для первых экспериментов!\n\nУ нас скопился приличный запас хороших программ для будущих номеров OUTLET, однако развлекательного софта вроде игр становится заметно больше по пропорциям. Поэтому, пожалуйста, присылайте свои работы — мы рады любым программам, статьям или экранным заставкам, но особенно ждём утилит, чтобы сохранять правильный баланс!\n\nНапоминаем нашим читателям: мы не можем отвечать на технические вопросы о компьютерах, программах, «железе» или системах лично по почте. Все подобные вопросы разбираются только на страницах рубрики OUTLETTERS журнала OUTLET. Простите, что приходится постоянно твердить об этом, но такое напоминание жизненно необходимо! Делитесь своими проблемами публично — от этого выиграют все!\n\nС этого номера в OUTLET запускается пародийный сериал по Star Trek («Звёздному пути»), в котором более 20 серий. Он зародился на компьютере VAX в одном из американских университетов, со временем стал общественным достоянием (PD) на PC, откуда мы и портировали его на Spectrum. Если вы поклонник Star Trek, вы гарантированно найдёте над чем посмеяться. Приятного чтения!\n\nRon & Brian\n\nOUTLET издаётся:\n\nChris Oliver  \nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF\n",
+  "text_type": 3
+}

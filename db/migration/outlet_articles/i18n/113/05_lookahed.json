@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "113",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of what's coming in the next issue of Outlet: ZX Spectrum ICs, racing games, machine code routines, Exodus demo, and more.",
+  "meta_description_ru": "Анонс следующего выпуска журнала Outlet: микросхемы ZX Spectrum, гонки, печать цифр в машкоде, демо Exodus и многое другое.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "lookahead",
+      "tag_alias": "lookahead"
+    },
+    {
+      "tag_name": "exodus demo",
+      "tag_alias": "exodus-demo"
+    },
+    {
+      "tag_name": "vaxtrek",
+      "tag_alias": "vaxtrek"
+    },
+    {
+      "tag_name": "chezron",
+      "tag_alias": "chezron"
+    }
+  ],
+  "category_ids": [
+    123,
+    124
+  ],
+  "body_en_plain": "Another great blend of utilities\nand amusements to look forward\nto next month:\n\nThere is a technical chat about\nthe Spectrum ICs, and you get to\ndrive a racing car at high speed\nplus, there's information on how\nto print digits via machine code\nand the final parts of the amaz-\ning EXODUS demo.There are utili-\nties to change 128k/48k mode and\nto manipulate bits of bytes from\nBasic whilst VAXTREK has a brief\n\n\nencounter with inter-dimensional\ngolf!\n\nAnd there's lots, lots more!\n\n            Cheers,\n\n               Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Another great blend of utilities and amusements to look forward to next month:\n\nThere is a technical chat about the Spectrum ICs, and you get to drive a racing car at high speed plus, there's information on how to print digits via machine code and the final parts of the amazing EXODUS demo. There are utilities to change 128k/48k mode and to manipulate bits of bytes from Basic whilst VAXTREK has a brief encounter with inter-dimensional golf!\n\nAnd there's lots, lots more!\n\nCheers,\n\nChris.\n",
+  "body_ru": "В следующем месяце вас ждёт ещё одна отличная подборка утилит и развлечений:\n\nМы технически побеседуем о микросхемах Спектрума, вы сможете прокатиться на гоночном болиде на бешеной скорости, а также узнаете, как выводить цифры с помощью машинного кода, и увидите финальную часть потрясающего демо EXODUS. Вас ждут утилиты для переключения режимов 128k/48k и побитовых манипуляций прямо из Бейсика, а экипаж VAXTREK переживёт мимолётную встречу с межпространственным гольфом!\n\nИ многое, многое другое!\n\nВсего наилучшего,\n\nChris.\n",
+  "text_type": 3
+}

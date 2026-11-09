@@ -135,10 +135,29 @@
 	padding: 10px;
 	font: bold 12px Verdana;
 }
+.admin-ascr-emulator-bar {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 8px 10px;
+	border-top: 1px solid #8f8a71;
+	font: normal 11px Verdana;
+	color: #666;
+}
+.admin-ascr-emulator-bar label {
+	display: inline-flex;
+	gap: 6px;
+	align-items: center;
+}
+.admin-ascr-emulator-bar select {
+	font: inherit;
+	padding: 3px 6px;
+}
 .admin-ascr-emulator-frame {
 	display: block;
 	width: 100%;
-	height: 470px;
+	height: 520px;
 	border: 0;
 	border-top: 1px solid #8f8a71;
 	background: var(--smn-paper);
@@ -167,11 +186,21 @@
 
 <details class="admin-ascr-emulator" id="admin-ascr-emulator">
 <summary>Запустить эмулятор и сделать скриншоты</summary>
+<div class="admin-ascr-emulator-bar">
+<label>Движок
+<select id="admin-ascr-engine" title="USP — TR-DOS; Turbo80 — PlusD/MGT">
+<option value="auto">авто</option>
+<option value="t80">Turbo80 (+D / MGT)</option>
+<option value="usp">USP (TR-DOS)</option>
+</select>
+</label>
+<span>Scene+/Outlet (.mgt / zip) → Turbo80; TRD/SCL → USP</span>
+</div>
 <iframe
 	class="admin-ascr-emulator-frame"
 	id="admin-ascr-emulator-frame"
 	title="Эмулятор выпуска"
-	data-src="/admin_issue_emulator.php?id={$press.id}&amp;issue={$issue_id}"
+	data-src-base="/admin_issue_emulator.php?id={$press.id}&amp;issue={$issue_id}"
 ></iframe>
 <div class="admin-ascr-emulator-note" id="admin-ascr-emulator-note"></div>
 </details>
@@ -300,22 +329,44 @@
 	var details = document.getElementById('admin-ascr-emulator');
 	var frame = document.getElementById('admin-ascr-emulator-frame');
 	var note = document.getElementById('admin-ascr-emulator-note');
+	var engineSelect = document.getElementById('admin-ascr-engine');
 	if (!details || !frame) return;
 
-	function loadEmulator() {
-		if (!frame.getAttribute('src')) {
-			frame.setAttribute('src', frame.getAttribute('data-src'));
+	function engineValue() {
+		return (engineSelect && engineSelect.value) || 'auto';
+	}
+
+	function emulatorUrl() {
+		var base = frame.getAttribute('data-src-base') || '';
+		var eng = engineValue();
+		var sep = base.indexOf('?') >= 0 ? '&' : '?';
+		return base + sep + 'engine=' + encodeURIComponent(eng);
+	}
+
+	function loadEmulator(forceReload) {
+		var next = emulatorUrl();
+		if (forceReload || frame.getAttribute('src') !== next) {
+			frame.setAttribute('src', next);
 		}
+	}
+
+	if (engineSelect) {
+		engineSelect.addEventListener('change', function () {
+			if (details.open) loadEmulator(true);
+		});
 	}
 
 	details.addEventListener('toggle', function () {
 		if (details.open) {
-			loadEmulator();
+			loadEmulator(false);
 		}
 	});
-	if (window.location.hash === '#emulator') {
+	if (window.location.hash === '#emulator' || window.location.hash === '#emulator-t80') {
 		details.open = true;
-		loadEmulator();
+		if (engineSelect && window.location.hash === '#emulator-t80') {
+			engineSelect.value = 't80';
+		}
+		loadEmulator(true);
 	}
 	var saved = 0;
 	window.addEventListener('message', function (event) {

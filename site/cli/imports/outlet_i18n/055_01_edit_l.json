@@ -1,0 +1,49 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "055",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial: Contributions and Freeware (March 1992)",
+  "title_ru": "Редакторская колонка: Публикации и Freeware (Март 1992)",
+  "meta_description_en": "Chezron Software discusses reader contributions, payment for articles and software, Freeware/PD status, errata for OUTCLASS 53, and Spectrum +3 sound issues in Outlet #055.",
+  "meta_description_ru": "Редакция Chezron Software рассказывает об условиях приёма материалов, оплате за софт и статьи, статусе Freeware, опечатках в OUTCLASS 53 и звуке на Spectrum +3 в Outlet #055.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "chezron",
+      "tag_alias": "chezron"
+    },
+    {
+      "tag_name": "freeware",
+      "tag_alias": "freeware"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus-3"
+    },
+    {
+      "tag_name": "errata",
+      "tag_alias": "errata"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "M A R C H ,  1 9 9 2\nWe accept letters in all formats\nbut it helps us a lot if a text-\nfile is sent where possible.  It\noccurs to us some readers  might\nnot realize that your  discs and\ntapes are returned to you.We can\nalso provide an addressed wallet\nand envelope on request!\n\nSince we began OUTLET we've kept\nto a policy of not pestering you\nto contribute programs and so it\nmay be that some of you are  not\naware that we pay for items that\nare published in OUTLET -whether\nsoftware or articles - typically\n`3 to `15 although we have  gone\nmuch higher for some programs.It\nis worth remarking yet again the\ndiscs and tapes are returned and\nan addressed OUTLET wallet  with\nan envelope can be provided-just\nask! You also will always get an\nacknowledgement when we return a\ndisc or tape -as well as thanks!\n\nPayments are generally made when\nwe send the OUTLET  in which the\nitems is published although this\nmay be some months later because\nof the queue!\n\nWhen contributing programs,it is\nworth considering declaring them\nas in the public domain -what we\ncall \"FREEWARE\". This just means\nyou are happy for others to copy\nthem freely  and share them with\nothers -and even contribute them\nto other PD libraries or PD disc\nmagazines. Ideally,it is best to\nmark them somewhere,say in a REM\nat the top of the listing,to the\neffect that they are public dom-\nain.In OUTLET programs we always\nadd \"FREEWARE\" to the front page\nif it's PD so this is absolutely\nclear.\n\nIf nothing is said,contributions\nare regarded as the author's own\ncopyright.  Never copy a program\nNOT marked \"FREEWARE\" to someone\nelse!\n\nThere were some typing errors in\nOUTCLASS 53.  The bottom of Page\n3 should read:\"Let a=a-PEEK hl\".\nLine 40 should read:IF a=PEEK hl\nOR BC=0 THEN GO TO.. Sorry - the\noriginal was BASIC  and included\nkeywords our convertor ignores!\n\nWe've lots of 128K music so it's\na shame many +3's have distorted\nsound -we don't know anyone with\na good one! Tell us if YOU do!\n\nFinally, anyone know the format\nof PBX SCREENS on the Atari ST?\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_ru_plain": "",
+  "body_en": "### MARCH, 1992\n\nWe accept letters in all formats but it helps us a lot if a text-file is sent where possible. It occurs to us some readers might not realize that your discs and tapes are returned to you. We can also provide an addressed wallet and envelope on request!\n\nSince we began OUTLET we've kept to a policy of not pestering you to contribute programs and so it may be that some of you are not aware that we pay for items that are published in OUTLET — whether software or articles — typically £3 to £15, although we have gone much higher for some programs. It is worth remarking yet again the discs and tapes are returned and an addressed OUTLET wallet with an envelope can be provided — just ask! You also will always get an acknowledgement when we return a disc or tape — as well as thanks!\n\nPayments are generally made when we send the OUTLET in which the items is published, although this may be some months later because of the queue!\n\nWhen contributing programs, it is worth considering declaring them as in the public domain — what we call \"FREEWARE\". This just means you are happy for others to copy them freely and share them with others — and even contribute them to other PD libraries or PD disc magazines. Ideally, it is best to mark them somewhere, say in a REM at the top of the listing, to the effect that they are public domain. In OUTLET programs we always add \"FREEWARE\" to the front page if it's PD so this is absolutely clear.\n\nIf nothing is said, contributions are regarded as the author's own copyright. Never copy a program NOT marked \"FREEWARE\" to someone else!\n\nThere were some typing errors in OUTCLASS 53. The bottom of Page 3 should read: \"Let a=a-PEEK hl\". Line 40 should read: `IF a=PEEK hl OR BC=0 THEN GO TO..` Sorry — the original was BASIC and included keywords our convertor ignores!\n\nWe've lots of 128K music so it's a shame many +3's have distorted sound — we don't know anyone with a good one! Tell us if YOU do!\n\nFinally, anyone know the format of PBX SCREENS on the Atari ST?\n\nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "body_ru": "### МАРТ, 1992\n\nМы принимаем письма во всех форматах, однако нам очень помогает, если по возможности присылается текстовый файл. Нам кажется, что некоторые читатели не знают, что ваши дискеты и кассеты возвращаются обратно. По запросу мы также можем предоставить подписанный конверт и кармашек для диска!\n\nС момента основания OUTLET мы придерживаемся правила не выпрашивать у вас программы, поэтому, возможно, некоторые из вас не знают, что мы оплачиваем материалы, публикуемые в OUTLET — будь то софт или статьи. Обычно гонорар составляет от £3 до £15, хотя за некоторые программы мы платили значительно больше. Стоит еще раз подчеркнуть, что диски и кассеты возвращаются владельцам, и мы можем выслать фирменный конверт OUTLET с обратным адресом — только попросите! Вы также всегда получите подтверждение и нашу благодарность при возврате носителя!\n\nОплата обычно производится при отправке того выпуска OUTLET, в котором опубликован ваш материал, хотя из-за очереди это может произойти спустя несколько месяцев!\n\nПрисылая нам программы, стоит подумать о том, чтобы перевести их в общественное достояние — то, что мы называем «FREEWARE». Это просто означает, что вы не против того, чтобы другие свободно копировали их, делились с друзьями и даже отправляли в другие PD-библиотеки или дисковые журналы. В идеале лучше всего явно указать это где-нибудь, например, в операторе REM в начале листинга. В собственных программах OUTLET мы всегда пишем «FREEWARE» на титульной странице, если это PD, чтобы всё было предельно ясно.\n\nЕсли ничего не указано, присланные работы считаются защищенными авторским правом автора. Никогда не копируйте другим программы, НЕ помеченные как «FREEWARE»!\n\nВ выпуске OUTCLASS 53 были допущены опечатки. Внизу страницы 3 должно быть: «Let a=a-PEEK hl». Строка 40 должна читаться как: `IF a=PEEK hl OR BC=0 THEN GO TO..` Просим прощения — оригинал был на Бейсике и содержал ключевые слова, которые наш конвертер проигнорировал!\n\nУ нас накопилось много 128K-музыки, поэтому очень обидно, что у многих моделей +3 звук искажен — мы лично не знаем никого, у кого был бы хороший экземпляр! Напишите нам, если у ВАС такой есть!\n\nИ напоследок: знает ли кто-нибудь формат PBX SCREENS на Atari ST?\n\nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "text_type": 3
+}

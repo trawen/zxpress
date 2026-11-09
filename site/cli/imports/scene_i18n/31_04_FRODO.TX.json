@@ -1,0 +1,48 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "31",
+  "article_id": "04_FRODO.TX",
+  "source_lang": "de-AT",
+  "title_en": "Frodo",
+  "title_ru": "Frodo",
+  "meta_description_en": "A brief look at Frodo, a Sokoban-style puzzle game written in BASIC for the ZX Spectrum, featured in Scene+ #31.",
+  "meta_description_ru": "Краткое описание игры Frodo — клона Sokoban на Бейсике для ZX Spectrum из журнала Scene+ #31.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    },
+    {
+      "tag_name": "frodo",
+      "tag_alias": "frodo"
+    },
+    {
+      "tag_name": "sokoban",
+      "tag_alias": "sokoban"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "FROD ü - FRODO - Deutsch - In BASIC geschriebener Sokoban-Klon,\nnur mit dem Unterschied daßdie Steine zu einen einzigen\nMüllschlucker gebracht werdenmüssen, statt zu verschiedenen\nOrten. Aufpassen, denn nichtSteine sind das Lieblingsessen der\nMüllschlucker,v sondernunvorsichtige Spieler! - English - A\nclone of Sokoban writen in BASIC, the only difference is thatyou\ndon't need to push stones to different places, this time itis\njust one place. Be carefu\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### FRODO\n\nA clone of Sokoban written in BASIC. The only difference is that you don't need to push stones to different target squares — this time there is just a single garbage chute. Be careful, though: stones aren't the garbage chute's favorite food; careless players are!\n",
+  "body_ru": "### FRODO\n\nКлон Sokoban, написанный на Бейсике. Единственное отличие состоит в том, что камни нужно сдвигать не в разные места, а сбрасывать в один-единственный мусоропровод. Будьте осторожны: любимое лакомство мусоропровода — вовсе не камни, а неосторожные игроки!\n",
+  "text_type": 3
+}

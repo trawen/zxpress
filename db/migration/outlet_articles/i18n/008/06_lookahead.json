@@ -1,0 +1,41 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "008",
+  "article_id": "06_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "Preview of upcoming features in the next issue of Outlet magazine: Conway's Life, ZAP microdrive eraser, ROMBO digitiser checkout, Skipper utility and more.",
+  "meta_description_ru": "Анонс материалов следующего (девятого) выпуска журнала Outlet: игра Conway's Life, стиратель секторов ZAP, обзор оцифровщика Rombo, утилита Skipper.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "anons"
+    },
+    {
+      "tag_name": "microdrive",
+      "tag_alias": "microdrive"
+    },
+    {
+      "tag_name": "rombo digitiser",
+      "tag_alias": "rombo-digitiser"
+    },
+    {
+      "tag_name": "life",
+      "tag_alias": "life"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Next month we have  a version of\nConway's LIFE, ZAP- a microdrive\nblock eraser, a CHECKOUT  of the\nROMBO digitiser and a routine to\nconvert TASfiles to  Prestel mbx\nformat(ENHANCE s/ware with VTX).\nOn Cart B + disc we've the final\nepisode of \"TICKET!\" & a program\nto convert currency.There's a v.\nfast & v. handy screen(text)dump\n- a spiral graphic routine and a\nutility called SKIPPER that lets\nyou use the up & down arrow keys\nto skip rapidly through any line\nyou are editing in BASIC..\n",
+  "body_ru_plain": "В след. месяце у нас: версия\nConway's LIFE, ZAP — стиратель\nблоков microdrive, CHECKOUT\nROMBO digitiser и процедура\nперевода TASfiles в формат mbx\nPrestel (ПО ENHANCE с VTX).\nНа Cart B + disc — финальный\nэпизод \"TICKET!\" и программа\nконвертации валют. Есть оч.\nбыстрый и оч. удобный дамп\nэкрана (текста), спиральная\nграфика и утилита SKIPPER,\nпозволяющая стрелками вверх\nи вниз быстро перемещаться по\nстроке редактирования в BASIC..\n",
+  "body_en": "## Lookahead\n\nNext month we have a version of Conway's LIFE, ZAP - a microdrive block eraser, a CHECKOUT of the ROMBO digitiser and a routine to convert TASfiles to Prestel mbx format (ENHANCE s/ware with VTX).\n\nOn Cart B + disc we've the final episode of \"TICKET!\" & a program to convert currency. There's a v. fast & v. handy screen(text)dump - a spiral graphic routine and a utility called SKIPPER that lets you use the up & down arrow keys to skip rapidly through any line you are editing in BASIC..\n",
+  "body_ru": "## В следующем номере\n\nВ след. месяце у нас: версия Conway's LIFE, ZAP — стиратель блоков microdrive, CHECKOUT ROMBO digitiser и процедура перевода TASfiles в формат mbx Prestel (ПО ENHANCE с VTX).\n\nНа Cart B + disc — финальный эпизод \"TICKET!\" и программа конвертации валют. Есть оч. быстрый и оч. удобный дамп экрана (текста), спиральная графика и утилита SKIPPER, позволяющая стрелками вверх и вниз быстро перемещаться по строке редактирования в BASIC..\n",
+  "text_type": 3
+}

@@ -1,0 +1,39 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "091",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A preview of what's coming in the next issue of Outlet: indexing tools, a multi-player game, demos, sampled music, and Spectrum power supply repair.",
+  "meta_description_ru": "Анонс следующего номера журнала Outlet: утилита индексации, база выпусков 44–84, игра на троих, демо, оцифрованная музыка и ремонт транзистора питания ZX Spectrum.",
+  "authors": [
+    "Chris"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "hardware repair",
+      "tag_alias": "hardware-repair"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "There's lots to look forward to\nagain in next month's OUTLET:\n\n\nA wealth of information about\nindexing followed by a utility\nto create your own index files.\nAlso, by way of demonstration,\nthe author has prepared an index\nof all the contents of OUTLET\nfrom Issue 44 to Issue 84. Over\n1300 entries stored in a single\nfile!\n\nAnd talking of demos, yes, there\nis yet another one to amaze you.\nThere's also a delectable ani-\nmation,  a game for up to three\nplayers,  a mystery tale,  some\nsuper sampled music and a util-\nity to capture your own sound\nsamples.\n\nOn the practical side, we've in-\ntricate details of how to repair\none of the commonest hardware\nfailures in the Spectrum:-  the\npower-supply oscillator transis-\ntor.\n\nThe fantastic variety of your\ncontributions never fails to\namaze me!\n\n                         Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "There's lots to look forward to again in next month's OUTLET:\n\nA wealth of information about indexing followed by a utility to create your own index files. Also, by way of demonstration, the author has prepared an index of all the contents of OUTLET from Issue 44 to Issue 84. Over 1300 entries stored in a single file!\n\nAnd talking of demos, yes, there is yet another one to amaze you. There's also a delectable animation, a game for up to three players, a mystery tale, some super sampled music and a utility to capture your own sound samples.\n\nOn the practical side, we've intricate details of how to repair one of the commonest hardware failures in the Spectrum: the power-supply oscillator transistor.\n\nThe fantastic variety of your contributions never fails to amaze me!\n\nChris.\n",
+  "body_ru": "В следующем номере OUTLET вас вновь ждёт много интересного:\n\nМасса полезной информации об индексации данных, а также утилита для создания собственных индексных файлов. В качестве наглядной демонстрации автор подготовил указатель всех материалов OUTLET с 44-го по 84-й выпуск — более 1300 записей, собранных в одном файле!\n\nИ раз уж зашла речь о демках — да, вас ждёт очередная работа, готовая поразить воображение. Кроме того, в номере будут замечательная анимация, игра с поддержкой до трёх игроков, детективная история, отличная сэмплированная музыка и утилита для захвата собственных звуковых сэмплов.\n\nЧто касается аппаратной части, мы подробно разберём, как устранить одну из самых распространённых аппаратных поломок Спектрума — выход из строя транзистора генератора в узле питания.\n\nФантастическое разнообразие ваших материалов не перестаёт меня восхищать!\n\nChris.\n",
+  "text_type": 3
+}

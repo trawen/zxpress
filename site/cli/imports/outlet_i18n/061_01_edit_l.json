@@ -1,0 +1,41 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "061",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (Late)",
+  "title_ru": "Колонка редактора (дополнение)",
+  "meta_description_en": "Outlet #061 editorial note from Ron and Brian Cavers on readers' feedback regarding magazine pricing, contributor payments, and release frequency.",
+  "meta_description_ru": "Заметка от Рона и Брайана Кейверсов в Outlet #061: отзывы читателей о цене журнала, гонорарах авторам и периодичности выпуска.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "finances",
+      "tag_alias": "finances"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "S E P T E M B E R ,  1 9 9 2\n\nWe have had a lot of feedback\nfrom readers about our financial\nproblems. Most would accept a\nprice increase and suspension of\npayments for contributions but\ndo not want us to go bi-monthly.\n\nA price of `4 an issue seems to\nbe universally accepted by those\nwho have written but our readers\nare already enthusiasts - would\na `4 OUTLET attract sufficient\nnew readers? Mmmmm....\n\nNo decision has yet been made so\nfor the time being the price\nremains the same although we are\nslightly squeezing payments for\ncontributions.We had been paying\nan average `150 to `200 a month\nto readers up until May and June\nof this year! We'll review the\nsituation monthly and keep you\ninformed.\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_ru_plain": "",
+  "body_en": "SEPTEMBER, 1992\n\nWe have had a lot of feedback from readers about our financial problems. Most would accept a price increase and suspension of payments for contributions but do not want us to go bi-monthly.\n\nA price of £4 an issue seems to be universally accepted by those who have written but our readers are already enthusiasts — would a £4 OUTLET attract sufficient new readers? Mmmmm....\n\nNo decision has yet been made so for the time being the price remains the same although we are slightly squeezing payments for contributions. We had been paying an average £150 to £200 a month to readers up until May and June of this year! We'll review the situation monthly and keep you informed.\n\nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "body_ru": "СЕНТЯБРЬ, 1992\n\nМы получили множество откликов от читателей по поводу наших финансовых трудностей. Большинство готово смириться с повышением цены и приостановкой выплат авторам публикаций, но не хочет, чтобы журнал стал выходить раз в два месяца.\n\nЦена в £4 за номер, судя по всему, безоговорочно устраивает тех, кто написал нам, однако наши читатели — уже убеждённые энтузиасты; привлечёт ли OUTLET по £4 достаточно новых читателей? М-м-м-м...\n\nОкончательного решения пока не принято, поэтому на данный момент цена остаётся прежней, хотя мы немного урезаем выплаты за присылаемые материалы. До мая и июня этого года мы выплачивали читателям в среднем от £150 до £200 в месяц! Мы будем оценивать ситуацию каждый месяц и держать вас в курсе.\n\nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "text_type": 3
+}

@@ -1,0 +1,50 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "071",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Outlet #71 editorial: plans for a PC version of Outlet, Lunter Spectrum Emulator for PC, and the closure of Your Sinclair magazine.",
+  "meta_description_ru": "Редакторская колонка Outlet #71: планы на выпуск PC-версии журнала, эмулятор Lunter Spectrum Emulator и новость о закрытии журнала Your Sinclair.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "chezron",
+      "tag_alias": "chezron"
+    },
+    {
+      "tag_name": "your sinclair",
+      "tag_alias": "your-sinclair"
+    },
+    {
+      "tag_name": "эмуляторы",
+      "tag_alias": "emulators"
+    },
+    {
+      "tag_name": "public domain",
+      "tag_alias": "public-domain"
+    }
+  ],
+  "category_ids": [
+    123,
+    130,
+    46
+  ],
+  "body_en_plain": "May we remind readers again of\nthe new address for Chezron (see\nthe end of this editorial). If\nyou have meanwhile sent anything\nto the old address, don't worry\nas it will be posted on for the\ntime being. Apologies if this\nissue is late due to the move!\n\nThe possibility of a PC version\nof OUTLET grows stronger though\nit will still take months to\norganise. However, it will be\nhelpful if any readers with a PC\nwishing to contribute software\ncould sent it in any time from\nnow onwards! There is nothing to\nstop you sending general PD and\nshareware but ideally we are\nlooking for your own original\nmaterial. We want OUTLET to be\npredominantly new software.Avoid\nhuge, memory-hungry demos etc.\nas there simply will not be room\non the disc. Articles will also\nbe welcome although don't be too\ntopical at this time as they may\nnot get published for months!All\ndiscs will be returned. If the\nPC OUTLET does not get launched\nthen no harm will be done.\n\nContributed Spectrum software is\nassumed to be the author's copy-\nright unless he declares it as\npublic domain (FREEWARE).However\nthe PC market is so different\nthat the reverse will be true.WE\nSHALL ASSUME ALL CONTRIBUTIONS\nTO BE PURE PUBLIC DOMAIN UNLESS\nOTHERWISE STATED. Ideally, all\nsoftware should be marked with\neg.,\"THIS SOFTWARE MAY BE FREELY\nCOPIED TO OTHERS\".\n\nWe shall probably continue to\nuse the term OUTLET FREEWARE for\npure public domain software but\nunfortunately there is more than\none definition of FREEWARE in\nthe PC world and \"public domain\"\nis a blanket term covering many\ntypes of software. We welcome\ncomments on this!\n\nPresent readers need not worry\nthis may bring about the end of\nthe Spectrum version as it is\nmore likely to strengthen it. If\nwe can get more income from the\nPC market it will help us keep\nthe Spectrum version going. We\nare still getting plenty of new\nSpectrum software coming in so\nthanks to everyone for the great\nsupport!\n\nAnyone considering getting a PC\n(or those already with one) may\nlike to consider the Lunter\nSpectrum Emulator as a bridge.It\nalmost perfectly turns a PC into\na Spectrum and the new 128K ver-\nsion is now available from BG\nServices with loads of features!\n(See OUTLETTERS and forthcoming\nreview).\n\nFinally, it's goodbye to YOUR\nSINCLAIR (nee YOUR SPECTRUM). It\nwill cease publication in August\n- being the last major Spectrum\npublication. It ran for about 10\nyears. Let's see if OUTLET can\nbeat that.We are almost into our\nSEVENTH year!\n\n                    Ron & Brian\n             ______\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nMay we remind readers again of the new address for Chezron (see the end of this editorial). If you have meanwhile sent anything to the old address, don't worry as it will be posted on for the time being. Apologies if this issue is late due to the move!\n\nThe possibility of a PC version of OUTLET grows stronger though it will still take months to organise. However, it will be helpful if any readers with a PC wishing to contribute software could sent it in any time from now onwards! There is nothing to stop you sending general PD and shareware but ideally we are looking for your own original material. We want OUTLET to be predominantly new software.Avoid huge, memory-hungry demos etc. as there simply will not be room on the disc. Articles will also be welcome although don't be too topical at this time as they may not get published for months!All discs will be returned. If the PC OUTLET does not get launched then no harm will be done.\n\nContributed Spectrum software is assumed to be the author's copy- right unless he declares it as public domain (FREEWARE).However the PC market is so different that the reverse will be true.WE SHALL ASSUME ALL CONTRIBUTIONS TO BE PURE PUBLIC DOMAIN UNLESS OTHERWISE STATED. Ideally, all software should be marked with eg.,\"THIS SOFTWARE MAY BE FREELY COPIED TO OTHERS\".\n\nWe shall probably continue to use the term OUTLET FREEWARE for pure public domain software but unfortunately there is more than one definition of FREEWARE in the PC world and \"public domain\" is a blanket term covering many types of software. We welcome comments on this!\n\nPresent readers need not worry this may bring about the end of the Spectrum version as it is more likely to strengthen it. If we can get more income from the PC market it will help us keep the Spectrum version going. We are still getting plenty of new Spectrum software coming in so thanks to everyone for the great support!\n\nAnyone considering getting a PC (or those already with one) may like to consider the Lunter Spectrum Emulator as a bridge.It almost perfectly turns a PC into a Spectrum and the new 128K ver- sion is now available from BG Services with loads of features! (See OUTLETTERS and forthcoming review).\n\nFinally, it's goodbye to YOUR SINCLAIR (nee YOUR SPECTRUM). It will cease publication in August - being the last major Spectrum publication. It ran for about 10 years. Let's see if OUTLET can beat that.We are almost into our SEVENTH year!\n\nRon & Brian\n\n```text\n             ______\n```\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers\n\nCHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF.\n",
+  "body_ru": "## Editorial (late)\n\nПозвольте еще раз напомнить читателям о новом адресе Chezron (см. в конце этой редакторской колонки). Если вы тем временем отправили что-то на старый адрес, не переживайте — некоторое время почта будет пересылаться. Приносим извинения, если этот номер задержался из-за переезда!\n\nВероятность появления PC-версии OUTLET становится всё выше, хотя на её организацию всё ещё уйдут месяцы. Тем не менее, будет очень кстати, если читатели, у которых есть PC и желание прислать свои программы, начнут присылать их прямо сейчас! Ничто не мешает вам присылать общедоступный PD и shareware, но в идеале мы ищем ваш собственный оригинальный материал. Мы хотим, чтобы OUTLET состоял преимущественно из новых программ. Избегайте огромных, прожорливых до памяти демок и тому подобного, так как на диске для них попросту не хватит места. Статьи также приветствуются, однако не пишите на слишком злободневные темы, поскольку они могут не публиковаться месяцами! Все диски будут возвращены. Если же PC OUTLET так и не выйдет, никакого вреда нанесено не будет.\n\nПрисылаемый софт для Spectrum считается защищенным авторским правом создателя, если только он сам не объявит его общественным достоянием (FREEWARE). Однако рынок PC настолько отличается, что здесь всё будет с точностью до наоборот. МЫ БУДЕМ СЧИТАТЬ ВСЕ ПРИСЛАННЫЕ МАТЕРИАЛЫ ЧИСТЫМ PUBLIC DOMAIN, ЕСЛИ НЕ ОГОВОРЕНО ИНОЕ. В идеале все программы должны быть снабжены пометкой вроде: \"THIS SOFTWARE MAY BE FREELY COPIED TO OTHERS\".\n\nМы, вероятно, продолжим использовать термин OUTLET FREEWARE для чистого public domain софта, но, к сожалению, в мире PC существует не одно определение FREEWARE, а \"public domain\" — это зонтичный термин, охватывающий множество типов ПО. Мы будем рады вашим комментариям по этому поводу!\n\nНынешним читателям не стоит беспокоиться, что это может привести к закрытию Spectrum-версии — скорее, это её укрепит. Если мы сможем получать больше дохода с рынка PC, это поможет нам поддерживать жизнь версии для Spectrum. Нам по-прежнему поступает множество нового софта для Spectrum, так что спасибо всем за потрясающую поддержку!\n\nВсем, кто подумывает о приобретении PC (или тем, у кого он уже есть), возможно, стоит присмотреться к эмулятору Lunter Spectrum Emulator в качестве связующего звена. Он практически идеально превращает PC в Spectrum, и новая 128K-версия уже доступна в BG Services с кучей возможностей! (См. OUTLETTERS и грядущий обзор).\n\nИ наконец — прощай, YOUR SINCLAIR (в девичестве YOUR SPECTRUM). В августе журнал прекратит свое существование — будучи последним крупным печатным изданием о Spectrum. Он выходил около 10 лет. Посмотрим, сможет ли OUTLET побить этот рекорд. Мы выходим уже почти СЕДЬМОЙ год!\n\nRon & Brian\n\n---\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF.\n```\n",
+  "text_type": 3
+}

@@ -1,0 +1,45 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "35",
+  "article_id": "07_WORM.TX",
+  "source_lang": "de-AT",
+  "title_en": "Worm (HCG)",
+  "title_ru": "Worm (HCG)",
+  "meta_description_en": "A brief look at the ZX Spectrum game Worm by HCG, featuring smooth turning mechanics with two keys.",
+  "meta_description_ru": "Краткая заметка об игре Worm от HCG для ZX Spectrum: классический червячок с плавным поворотом и управлением двумя клавишами.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    },
+    {
+      "tag_name": "worm",
+      "tag_alias": "worm"
+    },
+    {
+      "tag_name": "hcg",
+      "tag_alias": "hcg"
+    }
+  ],
+  "category_ids": [
+    1,
+    2,
+    3
+  ],
+  "body_de_plain": "WOR ü - WORM (HCG)- Das Würmchenspiel kennt wohl jeder, wenn man\nein \"+\" frißt wirdder Wurm größer, bei einem \"-\" wieder kleiner,\ndas interessantean dem Spiel ist daß nur zwei Tasten \"O\" und \"P\"\nbenutzt werdenund der Wurm sich nicht um unnatürliche 90 Grad\ndreht.v - Everyone knows probaly the Worm game, if you eat a\n\"+\", yourlength will be incrased, and \"-\" decrases it again, but\nthe bestfeature of this game is that only two keys are used: \"O\"\nand\"P\", and the worm will not turn by 90\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### WORM (HCG)\n\nProbably everyone knows the worm game: if you eat a \"+\", the worm gets bigger, and eating a \"-\" makes it smaller again. The interesting thing about this game is that only two keys are used (\"O\" and \"P\"), and the worm doesn't make unnatural 90-degree turns.\n",
+  "body_ru": "### WORM (HCG)\n\nИгру про червячка, наверное, знает каждый: съедаешь «+» — червяк растёт, съедаешь «-» — снова уменьшается. Самое интересное в этой игре то, что управление задействует всего две клавиши («O» и «P»), а сам червяк не поворачивает под неестественным прямым углом в 90 градусов.\n",
+  "text_type": 3
+}

@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "28",
+  "article_id": "06_MM3.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Manic Miner III",
+  "title_ru": "Manic Miner III",
+  "meta_description_en": "Brief note about Manic Miner III on the Scene+ issue disk, restored from a PC snapshot found on the World of Spectrum CD.",
+  "meta_description_ru": "Краткая заметка об игре Manic Miner III на диске Scene+, восстановленной из PC-снэпшота с диска World of Spectrum.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "manic miner",
+      "tag_alias": "manic-miner"
+    },
+    {
+      "tag_name": "world of spectrum",
+      "tag_alias": "world-of-spectrum"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "MM ü\n----------------------------------------------------------------\nMANIC MINER III\n----------------------------------------------------------------\nRestaurierter PC Snapshot von WOS CD. Bedarf es denn\nweitererErklärungen für dieses Kult-Spiel?\n----------------------------------------------------------------\nRestored PC Snapshot from WOS CD. I'm sure, I don't need\ntodescribe this game.\n----------------------------------------------------------------\n----------------------------------------------------------------\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "----------------------------------------------------------------\n### MANIC MINER III\n----------------------------------------------------------------\nRestored PC snapshot from WoS CD. Does this cult classic really need any further explanation?\n\n----------------------------------------------------------------\nRestored PC Snapshot from WOS CD. I'm sure, I don't need to describe this game.\n----------------------------------------------------------------\n",
+  "body_ru": "----------------------------------------------------------------\n### MANIC MINER III\n----------------------------------------------------------------\nВосстановленный PC-снэпшот с компакт-диска WoS. Нужны ли какие-то дополнительные объяснения для этой культовой игры?\n\n----------------------------------------------------------------\nRestored PC Snapshot from WOS CD. I'm sure, I don't need to describe this game.\n----------------------------------------------------------------\n",
+  "text_type": 3
+}

@@ -1,0 +1,47 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "018",
+  "article_id": "03_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "Взгляд вперёд",
+  "meta_description_en": "Preview of the next issue of Outlet magazine: Jumbochars and Multibasic utilities, Witchwood 3D game, Flexipage 200, and more.",
+  "meta_description_ru": "Анонс материалов следующего номера журнала Outlet: утилиты Jumbochars и Multibasic, игра Witchwood 3D, Flexipage 200 и другие новинки.",
+  "authors": [
+    "Brian"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "jumbochars",
+      "tag_alias": "jumbochars"
+    },
+    {
+      "tag_name": "multibasic",
+      "tag_alias": "multibasic"
+    },
+    {
+      "tag_name": "witchwood 3d",
+      "tag_alias": "witchwood-3d"
+    },
+    {
+      "tag_name": "flexipage 200",
+      "tag_alias": "flexipage-200"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Next month we have JUMBOCHARS -\na giant, mega-jumbo-sized text\nutility for instant headers;\nMULTIBASIC - a utility allowing\n48K users to switch between 2 or\n3 BASIC programs loaded at the\nsame time; a couple of fractal-\ntype pattern generators; OUTPUT\nlooks at the Spectrum screen;\nOUTCLASS of course;SYSVARS which\ndisplays a list of the system\nvariables in decimal, hex and IY\noffsets and CHECKOUT reviews the\nlatest version of IMBOS.(This is\n\na KOBRAHSOFT microdrive utility)\n\nThere will also be CHARMASTER, a\nVERY advanced font generator;\nGRIDPRINT - a simple routine to\nprint-out different sized grids;\nWITCHWOOD 3D - an isometric 3D\n(KNIGHT LORE-type) game; a\nreader's Tasword 2 BASIC,custom-\nised for drive use and the demo\nof David Wornham's FLEXIPAGE 200\nmentioned in OUTLETTERS plus a\nre-look at the new version of\nthe program itself.\n\nI think there's still some space\nleft so I'll hopefully add one\nor two items to the above.\n\n                       - Brian.\n",
+  "body_ru_plain": "В следующем месяце вас ждут:\nJUMBOCHARS — гигантская утилита\nдля создания мега-заголовков;\nMULTIBASIC — утилита, дающая\nпользователям 48K возможность\nпереключаться между 2 или 3\nпрограммами на BASIC, загружен-\nными одновременно; пара генерато-\nров фрактальных узоров; OUTPUT\nисследует экран Spectrum;\nOUTCLASS, конечно же; SYSVARS,\nотображающая список системных\nпеременных в decimal, hex и со\nсмещениями IY, а CHECKOUT делает\nобзор свежей версии IMBOS.(Это\n\nутилита для microdrive от\nKOBRAHSOFT)\n\nТакже будут CHARMASTER — ОЧЕНЬ\nпродвинутый генератор шрифтов;\nGRIDPRINT — простая процедура\nпечати сеток разного размера;\nWITCHWOOD 3D — изометрическая\n3D-игра (в духе KNIGHT LORE);\nчитательская версия Tasword 2\nBASIC, адаптированная под drive,\nи демо-версия FLEXIPAGE 200 от\nDavid Wornham, упомянутая в\nOUTLETTERS, плюс новый взгляд на\nсвежую версию самой программы.\n\nДумаю, немного места ещё оста-\nлось, так что надеюсь добавить к\nвышеперечисленному ещё одну-две\nвещицы.\n\n                       - Brian.\n",
+  "body_en": "## Lookahead\n\nNext month we have JUMBOCHARS - a giant, mega-jumbo-sized text utility for instant headers; MULTIBASIC - a utility allowing 48K users to switch between 2 or 3 BASIC programs loaded at the same time; a couple of fractal-type pattern generators; OUTPUT looks at the Spectrum screen; OUTCLASS of course; SYSVARS which displays a list of the system variables in decimal, hex and IY offsets and CHECKOUT reviews the latest version of IMBOS. (This is a KOBRAHSOFT microdrive utility)\n\nThere will also be CHARMASTER, a VERY advanced font generator; GRIDPRINT - a simple routine to print-out different sized grids; WITCHWOOD 3D - an isometric 3D (KNIGHT LORE-type) game; a reader's Tasword 2 BASIC, customised for drive use and the demo of David Wornham's FLEXIPAGE 200 mentioned in OUTLETTERS plus a re-look at the new version of the program itself.\n\nI think there's still some space left so I'll hopefully add one or two items to the above.\n\n— Brian.\n",
+  "body_ru": "## Взгляд вперёд\n\nВ следующем месяце вас ждут: JUMBOCHARS — гигантская утилита для создания мега-заголовков; MULTIBASIC — утилита, дающая пользователям 48K возможность переключаться между 2 или 3 программами на BASIC, загруженными одновременно; пара генераторов фрактальных узоров; OUTPUT исследует экран Spectrum; OUTCLASS, конечно же; SYSVARS, отображающая список системных переменных в decimal, hex и со смещениями IY, а CHECKOUT делает обзор свежей версии IMBOS (это утилита для microdrive от KOBRAHSOFT).\n\nТакже будут CHARMASTER — ОЧЕНЬ продвинутый генератор шрифтов; GRIDPRINT — простая процедура печати сеток разного размера; WITCHWOOD 3D — изометрическая 3D-игра (в духе KNIGHT LORE); читательская версия Tasword 2 BASIC, адаптированная под drive, и демо-версия FLEXIPAGE 200 от David Wornham, упомянутая в OUTLETTERS, плюс новый взгляд на свежую версию самой программы.\n\nДумаю, немного места ещё осталось, так что надеюсь добавить к вышеперечисленному ещё одну-две вещицы.\n\n— Brian.\n",
+  "text_type": 3
+}

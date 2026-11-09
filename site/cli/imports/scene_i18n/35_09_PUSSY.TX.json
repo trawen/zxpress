@@ -1,0 +1,40 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "35",
+  "article_id": "09_PUSSY.TX",
+  "source_lang": "de-AT",
+  "title_en": "Pussy 128 Demo (Tape Extractor)",
+  "title_ru": "Pussy 128 Demo (Tape Extractor)",
+  "meta_description_en": "Short review and extractor note for the ZX Spectrum platform game Pussy 128 Demo, based on Titanic, featured in Scene+ #35.",
+  "meta_description_ru": "Короткая заметка и экстрактор для демоверсии платформера Pussy 128 по мотивам фильма «Титаник» из журнала Scene+ #35.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "pussy-128",
+      "tag_alias": "pussy-128"
+    },
+    {
+      "tag_name": "game-review",
+      "tag_alias": "game-review"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "PUSSY. XT ü - PUSSY 128 DEMO (TAPE EXTRACTOR) - Neue Software,\njuh! Aber zuerst muß dieser Extractor eineKassettenversion\nerstellen da die gecracke UniloaderfassungFehler aufwies. PUSSY\nist ein Platformspiel basierend auf demKinofilm Titanic. Der\nZiel ist die Spielfigur \"Leonardo\" mitseiner Angebetener \"Kate \"\nzu vereinen indem die richtigen Blockszerschlagen, und Extras\ngenutzt werden. Das Spiel kommt zwar ausRußland, ist aber GOTTSE\nIDANK in Englisch gehalten. - New Warez, juh! But first you\nneed to extract a tapeversion with my extractor, because the\ncracked version had twobugs. PUSSY is based on the Cinema movie\nTitanic and it is aplatform game. The goal is to meet \"Leonardo\"\nwith his love\"Kate\" by smashing the right blocks and using other\nextras. Thisgame comes from russia but it is IN EN\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### PUSSY 128 DEMO (TAPE EXTRACTOR)\n\nNew software, yay! But first, this extractor has to create a tape version because the cracked uniloader release had bugs.\n\nPUSSY is a platform game based on the movie *Titanic*. The goal is to reunite the player character \"Leonardo\" with his beloved \"Kate\" by smashing the right blocks and using various power-ups. The game hails from Russia, but THANK GOD it is in English.\n",
+  "body_ru": "### PUSSY 128 DEMO (TAPE EXTRACTOR)\n\nНовый софт, ура! Но сначала этот экстрактор должен создать кассетную версию, так как во взломанной версии с юнилоадером были ошибки.\n\nPUSSY — это платформер по мотивам кинофильма «Титаник». Цель игры — воссоединить главного героя «Леонардо» с его возлюбленной «Кейт», разбивая правильные блоки и используя различные бонусы. Игра родом из России, но СЛАВА БОГУ, она на английском языке.\n",
+  "text_type": 3
+}

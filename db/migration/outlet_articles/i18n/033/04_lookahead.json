@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "033",
+  "article_id": "04_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "Взгляд вперёд",
+  "meta_description_en": "Preview of the upcoming issue of Outlet magazine: planned utilities, games, and articles covering SCART, Disciple, and Multiface +3.",
+  "meta_description_ru": "Анонс содержания следующего выпуска дискового журнала Outlet: утилиты, игры, статьи о SCART, Disciple и Multiface +3.",
+  "authors": [
+    "Brian"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "drivechat",
+      "tag_alias": "drivechat"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "This is how the contents of next\nmonth's OUTLET looks so far.Some\nprograms may not convert to SAM\nwhich has SAM-specific programs\nadded. A disk file-handler for\nsystems accepting microdrive\nsyntax; clip art; a machine code\nfractal-triangle generator;PEGS,\na strategy puzzle; DRIVECHAT,\nwith articles on SCART monitor\nconnections, stand-alone backups\nfrom Multiface +3 and how to use\na key pad with the Disciple!\nAnd - in addition...\n\n...there are reviews of NETWORK,\nFASTWORD+, and EASYLOAD;the best\nSpectrum screen-cursor utility\never; HARD 24 - a 24-pin printer\nWINDOWING screen dump utility;\nCOPALL,an 8-pin screen dump;code\nto convert any character set to\nitalics; a \"bomber\"-type game;an\nall-singing, all-dancing; multi-\nsized, multi-styled, text user\nutility; BASEX - extended BASIC\ncommands;not forgetting OUTCLASS\nand the regulars and ADD-ENDERS,\nwhich may have either anything\nor nothing in it but will most\nprobably have something in it!\nIt's looking great! Even I may\nbuy one if they'll let me!\n\n                       - Brian.\n",
+  "body_ru_plain": "Вот как на данный момент\nвыглядит содержание следующего\nвыпуска OUTLET. Некоторые про-\nграммы могут не пойти на SAM,\nгде добавлены свои версии. Диско-\nвый файловый менеджер для систем,\nпонимающих синтаксис microdrive;\nклипарт; генератор фрактальных\nтреугольников в машинных кодах;\nPEGS — стратегическая головоломка;\nDRIVECHAT со статьями о подключе-\nнии мониторов через SCART, авто-\nномных бэкапах с Multiface +3\nи о том, как подключить кейпад\nк Disciple! И вдобавок ко всему...\n\n...обзоры NETWORK, FASTWORD+\nи EASYLOAD; лучшая экранная кур-\nсорная утилита для Spectrum всех\nвремён; HARD 24 — утилита ОКОН-\nНОГО дампа экрана на 24-иголь-\nчатый принтер; COPALL — 8-иголь-\nчатый дамп экрана; код для пе-\nревода любого шрифта в курсив;\nигра типа «bomber»; утилита для\nработы с текстом со всеми наворо-\nтами, разными размерами и стилями;\nBASEX — расширенные команды BASIC;\nа также не забудем про OUTCLASS,\nпостоянные рубрики и ADD-ENDERS,\nгде может быть что угодно или во-\nвсе ничего, но скорее всего что-то\nда будет! Выпуск обещает быть от-\nличным! Даже я прикуплю экземп-\nляр, если разрешат!\n\n                       - Brian.\n",
+  "body_en": "## Lookahead\n\nThis is how the contents of next month's OUTLET looks so far. Some programs may not convert to SAM which has SAM-specific programs added. A disk file-handler for systems accepting microdrive syntax; clip art; a machine code fractal-triangle generator; PEGS, a strategy puzzle; DRIVECHAT, with articles on SCART monitor connections, stand-alone backups from Multiface +3 and how to use a key pad with the Disciple! And - in addition...\n\n...there are reviews of NETWORK, FASTWORD+, and EASYLOAD; the best Spectrum screen-cursor utility ever; HARD 24 - a 24-pin printer WINDOWING screen dump utility; COPALL, an 8-pin screen dump; code to convert any character set to italics; a \"bomber\"-type game; an all-singing, all-dancing, multi-sized, multi-styled, text user utility; BASEX - extended BASIC commands; not forgetting OUTCLASS and the regulars and ADD-ENDERS, which may have either anything or nothing in it but will most probably have something in it! It's looking great! Even I may buy one if they'll let me!\n\n— Brian.\n",
+  "body_ru": "## Взгляд вперёд\n\nВот как на данный момент выглядит содержание следующего выпуска OUTLET. Некоторые программы могут не пойти на SAM, где добавлены свои версии. Дисковый файловый менеджер для систем, понимающих синтаксис microdrive; клипарт; генератор фрактальных треугольников в машинных кодах; PEGS — стратегическая головоломка; DRIVECHAT со статьями о подключении мониторов через SCART, автономных бэкапах с Multiface +3 и о том, как подключить кейпад к Disciple! И вдобавок ко всему...\n\n...обзоры NETWORK, FASTWORD+ и EASYLOAD; лучшая экранная курсорная утилита для Spectrum всех времён; HARD 24 — утилита ОКОННОГО дампа экрана на 24-игольчатый принтер; COPALL — 8-игольчатый дамп экрана; код для перевода любого шрифта в курсив; игра типа «bomber»; утилита для работы с текстом со всеми наворотами, разными размерами и стилями; BASEX — расширенные команды BASIC; а также не забудем про OUTCLASS, постоянные рубрики и ADD-ENDERS, где может быть что угодно или вовсе ничего, но скорее всего что-то да будет! Выпуск обещает быть отличным! Даже я прикуплю экземпляр, если разрешат!\n\n— Brian.\n",
+  "text_type": 3
+}

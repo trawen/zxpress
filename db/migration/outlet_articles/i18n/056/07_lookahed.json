@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "056",
+  "article_id": "07_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of what's coming in the next issue of Outlet: screen designer, Towers of Hanoi demo, 128K rock guitar music, satellite dish utility, and more.",
+  "meta_description_ru": "Анонс следующего номера журнала Outlet: экранный редактор с UDG, решение Ханойских башен, рок-музыка для 128K, утилита для спутниковых антенн и другое.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "announcement",
+      "tag_alias": "announcement"
+    },
+    {
+      "tag_name": "towers of hanoi",
+      "tag_alias": "towers-of-hanoi"
+    },
+    {
+      "tag_name": "128k music",
+      "tag_alias": "128k-music"
+    },
+    {
+      "tag_name": "satellite",
+      "tag_alias": "satellite"
+    }
+  ],
+  "category_ids": [
+    123,
+    125
+  ],
+  "body_en_plain": "Planned for next month is a nice\nscreen designer with a vast bank\nof UDG's built in - you just use\nit like a wordprocessor only it\nbuilds up a picture as you type!\nIt includes a UDG designer as\nwell so there's no limit to its\nabilities! There will also be a\ndemo of a solution of the famous\nTOWERS OF HANOI;more 128K music\n(this time featuring rock guitar\nmusic!);a super number-analysing\nprogram and a new crossword.\n                        more...\n\nThere will be some miscellaneous\nclip art a new bar graph program\nand all the regulars of course\nlike OUTCLASS,masses of readers'\nletters (\"how do YOU know?\", I\nhear you cry. Well,how do I know\nthat the sun will come up again\ntomorrow?)\n\nThere's also SATSPOT which helps\nin the setting up of steerable\nsatellite dish systems, a mixed\nbag of pattern generators and a\nnew character set (font) creator\nprogram.\n\nAnything else I shall squash in\nADD-ENDERS as usual!\n                        Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "Planned for next month is a nice screen designer with a vast bank of UDGs built in — you just use it like a word processor, only it builds up a picture as you type! It includes a UDG designer as well, so there's no limit to its abilities! There will also be a demo of a solution of the famous TOWERS OF HANOI; more 128K music (this time featuring rock guitar music!); a super number-analysing program and a new crossword.\n\nThere will be some miscellaneous clip art, a new bar graph program and all the regulars of course, like OUTCLASS, masses of readers' letters (\"how do YOU know?\", I hear you cry. Well, how do I know that the sun will come up again tomorrow?)\n\nThere's also SATSPOT, which helps in the setting up of steerable satellite dish systems, a mixed bag of pattern generators and a new character set (font) creator program.\n\nAnything else I shall squash in ADD-ENDERS as usual!\n\nBrian.\n",
+  "body_ru": "В следующем месяце запланирован отличный редактор экранов со встроенным огромным набором пользовательских символов (UDG) — вы просто работаете с ним как в текстовом процессоре, только по мере набора текста формируется картинка! В него также встроен конструктор UDG, так что возможности практически безграничны! Кроме того, будет демоверсия решения знаменитых «Ханойских башен» (TOWERS OF HANOI); ещё больше музыки для 128K (на этот раз с рок-гитарой!); отличная программа для числового анализа и новый кроссворд.\n\nБудет подборка клипартов, новая программа для построения столбчатых диаграмм и, конечно же, все постоянные рубрики вроде OUTCLASS и кучи писем от читателей («Откуда ТЫ знаешь?», — слышу я ваш возглас. Ну а откуда мне знать, что завтра снова взойдет солнце?)\n\nТакже вы увидите утилиту SATSPOT, которая помогает в настройке поворотных систем спутниковых антенн, сборник генераторов узоров и новую программу для создания наборов символов (шрифтов).\n\nВсе остальное я, как обычно, постараюсь утрамбовать в ADD-ENDERS!\n\nBrian.\n",
+  "text_type": 3
+}

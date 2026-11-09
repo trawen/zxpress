@@ -1,0 +1,10 @@
+{
+  "key": "04_desert",
+  "title": "Woot! #04 \u2014 Desert Island Tapes",
+  "file": "4-DesertIslandTapes.tap",
+  "chars": 26815,
+  "score": 28669,
+  "prose_chunks": 125,
+  "block_name": null,
+  "out": "texts/04_desert.txt"
+}

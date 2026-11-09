@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "016",
+  "article_id": "02_editorial",
+  "title_en": "Editorial",
+  "title_ru": "От редакции",
+  "meta_description_en": "Outlet editorial: record November sales, reflections on 1988, and dropping the single Microdrive cartridge option.",
+  "meta_description_ru": "Вступительное слово редакторов Outlet: рекордные продажи ноября, итоги 1988 года и переход на формат двух картриджей Microdrive.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "microdrive",
+      "tag_alias": "microdrive"
+    },
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "November has been OUTLET's best\nmonth so far- the advertising is\nproving effective! Some of these\nincreased takings may be do to\nthe coming Christmas season but\nit looks encouraging for the new\nyear and OUTLET'S success means\nmore quality and value for you!\n\nFrom a business viewpoint 1988\nas a whole has NOT been good for\nus yet we do feel OUTLET is now\nfulfilling it's purpose - as an\noutlet, enabling us to share our\nprograms and knowledge with each\nother. We have the same interest\nin exploring the capacity of the\nSpectrum as a serious, as well\nas entertaining, computer.\n\nAlmost 100% of our microdrivers\ntake the full, 2-cartridge issue\nnow so we've dropped the single\noption to save needless labour!\n\n     Merry Christmas to All!\n\n- Ron and Brian Cavers, CHEZRON\nSOFTWARE, 605 Loughborough Road,\n  Birstall, Leicester LE4 4NJ\n  (PRESTEL MAILBOX:014703943).\n",
+  "body_ru_plain": "Ноябрь стал для OUTLET самым\nлучшим месяцем на сегодня —\nреклама приносит свои плоды!\nЧасть этой возросшей выручки,\nвозможно, связана с сезоном\nРождества, но это обнадёживает\nперед новым годом, а успех\nOUTLET означает больше\nкачества и пользы для вас!\n\nС точки зрения бизнеса 1988 год\nв целом НЕ был удачным для нас,\nно мы чувствуем: OUTLET теперь\nвыполняет своё предназначение —\nслужит выходом, позволяя нам\nделиться программами и знаниями\nдруг с другом. Нас объединяет\nобщий интерес к раскрытию\nвозможностей Spectrum как\nсерьёзного, так и игрового\nкомпьютера.\n\nПочти 100% пользователей\nмикродрайвов берут теперь\nполный выпуск на 2 картриджах,\nтак что мы убрали вариант с\nодним, чтобы избежать лишней\nработы!\n\n   Счастливого Рождества всем!\n\n- Ron and Brian Cavers, CHEZRON\nSOFTWARE, 605 Loughborough Road,\n  Birstall, Leicester LE4 4NJ\n  (PRESTEL MAILBOX:014703943).\n",
+  "body_en": "## Editorial\n\nNovember has been OUTLET's best month so far- the advertising is proving effective! Some of these increased takings may be do to the coming Christmas season but it looks encouraging for the new year and OUTLET'S success means more quality and value for you!\n\nFrom a business viewpoint 1988 as a whole has NOT been good for us yet we do feel OUTLET is now fulfilling it's purpose - as an outlet, enabling us to share our programs and knowledge with each other. We have the same interest in exploring the capacity of the Spectrum as a serious, as well as entertaining, computer.\n\nAlmost 100% of our microdrivers take the full, 2-cartridge issue now so we've dropped the single option to save needless labour!\n\n### Merry Christmas to All!\n\n— Ron and Brian Cavers, CHEZRON SOFTWARE, 605 Loughborough Road, Birstall, Leicester LE4 4NJ (PRESTEL MAILBOX:014703943).\n",
+  "body_ru": "## От редакции\n\nНоябрь стал для OUTLET самым лучшим месяцем на сегодня — реклама приносит свои плоды! Часть этой возросшей выручки, возможно, связана с сезоном Рождества, но это обнадёживает перед новым годом, а успех OUTLET означает больше качества и пользы для вас!\n\nС точки зрения бизнеса 1988 год в целом НЕ был удачным для нас, но мы чувствуем: OUTLET теперь выполняет своё предназначение — служит выходом, позволяя нам делиться программами и знаниями друг с другом. Нас объединяет общий интерес к раскрытию возможностей Spectrum как серьёзного, так и игрового компьютера.\n\nПочти 100% пользователей микродрайвов берут теперь полный выпуск на 2 картриджах, так что мы убрали вариант с одним, чтобы избежать лишней работы!\n\nСчастливого Рождества всем!\n\n— Ron and Brian Cavers, CHEZRON SOFTWARE, 605 Loughborough Road, Birstall, Leicester LE4 4NJ (PRESTEL MAILBOX:014703943).\n",
+  "text_type": 3
+}

@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "082",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of the upcoming programs and features in next month's issue of Outlet, from a Spectrum machine tester to graphics tools.",
+  "meta_description_ru": "Анонс следующего выпуска журнала Outlet: тест моделей Spectrum, синтезатор мандолины, дисковый каталогизатор и графические утилиты.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "lookahead",
+      "tag_alias": "lookahead"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Lots more to look forward to\nnext month, including:The defin-\nitive Spectrum tester, which can\nidentify every type of machine\n(including an emulator!)and also\nwhich mode it's running in.There\nis a program to let you produce\nMandolin sounds from a Spectrum\nkeyboard, a disc file organiser,\nsome math magic, and a super\nutility for manipulating screen\nimages so you can produce, among\nother things, fancy wavy logos\nfor your own programs.\n\nThere will also be some inter-\nesting chatty bits, some music,\nand probably a couple of amazing\nDemos to stun you.\n\n                Cheers, Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Lots more to look forward to next month, including: The definitive Spectrum tester, which can identify every type of machine (including an emulator!) and also which mode it's running in. There is a program to let you produce Mandolin sounds from a Spectrum keyboard, a disc file organiser, some math magic, and a super utility for manipulating screen images so you can produce, among other things, fancy wavy logos for your own programs.\n\nThere will also be some interesting chatty bits, some music, and probably a couple of amazing Demos to stun you.\n\nCheers, Chris.\n",
+  "body_ru": "В следующем месяце вас ждёт ещё много интересного, в том числе: ультимативный тестер моделей Spectrum, способный определить любую модификацию компьютера (включая эмуляторы!) и режим, в котором она работает. Также будет программа, позволяющая извлекать звуки мандолины с клавиатуры Spectrum, каталогизатор дисковых файлов, немного математической магии и великолепная утилита для манипуляций с экранными изображениями, с помощью которой вы сможете создавать, помимо прочего, эффектные волнистые логотипы для собственных программ.\n\nКроме того, вас ждут занятные статьи на разные темы, музыка и, вероятно, пара потрясающих демо, способных удивить любого.\n\nС наилучшими пожеланиями, Chris.\n",
+  "text_type": 3
+}

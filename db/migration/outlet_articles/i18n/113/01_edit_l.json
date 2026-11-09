@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "113",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Outlet #113 editorial: transitioning the magazine into a computer club, utilities for converting Plus D to emulator TAP files, and reader notices.",
+  "meta_description_ru": "Редакционная колонка Outlet #113: переход издания в формат компьютерного клуба, утилиты для переноса Plus D в эмуляторы и новости для читателей.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "plus d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "disciple",
+      "tag_alias": "disciple"
+    },
+    {
+      "tag_name": "emulators",
+      "tag_alias": "emulators"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_en_plain": "J A N U A R Y ,   1 9 9 7\n\nA Happy New Year to our readers\nand a big thank you for the Xmas\nwishes and cards received! Just\nin case this issue is a day or\ntwo late - let's blame that on\nChristmas shall we!\n\n\nNow we run OUTLET more as a club\nor hobby than a business, the\nvery high charges made by banks\non commercial accounts no longer\nmake sense.  We shall therefore\nphase out the use of the trading\nstyle'CHEZRON SOFTWARE' and just\nregard the whole operation as a\ncomputer club or user group with\na monthly contact disk.  Cheques\ncan in future be made out to Ron\nCavers but don't worry about any\ncurrent arrangements - for the\ntime being at any rate.\n\nIf anyone has the instructions\nto HEAD OVER HEELS please send\nthem in urgently! In addition,if\nanyone knows the difference be-\ntween the 48K and 128K versions\nthen please let us know!\n\n\nTalking of games, this is just\nto confirm that the great strat-\negy game \"BOOVIE\" in last month\nCAN be finished. There are FORTY\nterrific levels and if anyone\nneeds any help then write in(you\nmight even beg a level pass code\nif you are really desperate and\nprepared to grovel!).\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET. We\nare sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\n\nRemember,we still need YOUR sup-\nport, and contributions of art-\nicles and programs - especially\nutility programs - are always\nwelcome. Even a short routine\ncan be like gold dust to another\nuser! Send 'em in!\n\nIn OUTLET 111 one of our readers\n(Ronald Raaijen) asked if there\nis an easy way to to convert the\nPlus D OUTLET to the PC as a\nLunter Z80 Spectrum emulator TAP\nfile. We promised to look into\nthis and now have completed two\nnew programs: one transfers Plus\nD or Disciple disk files to tape\n(works equally on real tape or\non the emulator's virtual tape\nfiles) and the other program can\nconvert the +D syntax to tape!\n\n\nBoth these programs will appear\nin OUTLET in due course. The re-\nsult is really a new version of\nOUTLET! It works fine - although\nfile names are printed on screen\nas they load just as they would\nfrom real tape.\n\n                    Ron & Brian\n\n\n\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nJ A N U A R Y ,   1 9 9 7\n\nA Happy New Year to our readers and a big thank you for the Xmas wishes and cards received! Just in case this issue is a day or two late - let's blame that on Christmas shall we!\n\nNow we run OUTLET more as a club or hobby than a business, the very high charges made by banks on commercial accounts no longer make sense.  We shall therefore phase out the use of the trading style'CHEZRON SOFTWARE' and just regard the whole operation as a computer club or user group with a monthly contact disk.  Cheques can in future be made out to Ron Cavers but don't worry about any current arrangements - for the time being at any rate.\n\nIf anyone has the instructions to HEAD OVER HEELS please send them in urgently! In addition,if anyone knows the difference be- tween the 48K and 128K versions then please let us know!\n\nTalking of games, this is just to confirm that the great strat- egy game \"BOOVIE\" in last month CAN be finished. There are FORTY terrific levels and if anyone needs any help then write in(you might even beg a level pass code if you are really desperate and prepared to grovel!).\n\nMay we remind readers, we cannot answer computer, software, hard- ware or system queries etc., personally by mail.  All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder!Share your problems with others! That way, everyone benefits!\n\nRemember,we still need YOUR sup- port, and contributions of art- icles and programs - especially utility programs - are always welcome. Even a short routine can be like gold dust to another user! Send 'em in!\n\nIn OUTLET 111 one of our readers (Ronald Raaijen) asked if there is an easy way to to convert the Plus D OUTLET to the PC as a Lunter Z80 Spectrum emulator TAP file. We promised to look into this and now have completed two new programs: one transfers Plus D or Disciple disk files to tape (works equally on real tape or on the emulator's virtual tape files) and the other program can convert the +D syntax to tape!\n\nBoth these programs will appear in OUTLET in due course. The re- sult is really a new version of OUTLET! It works fine - although file names are printed on screen as they load just as they would from real tape.\n\nRon & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers 34 Saltersgate Drive Birstall, Leicester LE4 3FF .\n",
+  "body_ru": "## Editorial (late)\n\nЯ Н В А Р Ь ,   1 9 9 7\n\nС Новым годом наших читателей и огромное спасибо за полученные рождественские поздравления и открытки! Если этот номер задержится на день-другой — давайте просто свалим всё на Рождество, договорились?\n\nТеперь, когда мы ведем OUTLET скорее как клуб или хобби, нежели как бизнес, грабительские банковские комиссии за обслуживание коммерческих счетов теряют всякий смысл. Поэтому мы постепенно откажемся от использования торговой марки 'CHEZRON SOFTWARE' и будем рассматривать всё это начинание исключительно как компьютерный клуб или группу пользователей с ежемесячным диском для общения. Чеки в будущем можно выписывать на имя Ron Cavers, но не переживайте о текущих договоренностях — во всяком случае, пока что.\n\nЕсли у кого-нибудь есть инструкции к HEAD OVER HEELS, пожалуйста, срочно пришлите их нам! Кроме того, если кто-то знает, в чем разница между версиями для 48K и 128K, пожалуйста, дайте нам знать!\n\nГоворя об играх: спешим подтвердить, что великолепную стратегическую игру «BOOVIE» из прошлого номера ПРОЙТИ МОЖНО. В ней СОРОК потрясающих уровней, и если кому-то понадобится помощь — пишите (вы даже можете вымолить пароль к уровню, если совсем отчаялись и готовы унижаться!).\n\nНапоминаем читателям: мы не можем лично отвечать по почте на вопросы, касающиеся компьютеров, программ, железа или систем. Все подобные вопросы рассматриваются в разделе OUTLETTERS на страницах OUTLET. Нам жаль постоянно твердить об этом, но об этом правиле приходится напоминать регулярно! Делитесь своими проблемами с остальными! От этого выиграют абсолютно все!\n\nПомните, нам по-прежнему нужна ВАША поддержка, а присланные статьи и программы — особенно утилиты — всегда приветствуются. Даже короткая подпрограмма может оказаться на вес золота для другого пользователя! Присылайте!\n\nВ OUTLET 111 один из наших читателей (Ronald Raaijen) поинтересовался, существует ли простой способ конвертировать диски Plus D OUTLET на PC в TAP-файл для спектрумовского эмулятора Lunter Z80. Мы обещали разобраться с этим и теперь закончили две новые программы: одна переносит файлы с дисков Plus D или Disciple на ленту (работает одинаково хорошо как с реальной лентой, так и с файлами виртуальной ленты эмулятора), а вторая программа способна преобразовать синтаксис +D в кассетный!\n\nОбе эти программы появятся в OUTLET в свое время. В результате получается фактически новая версия OUTLET! Работает она прекрасно — правда, имена файлов выводятся на экран по мере их загрузки в точности так, как это происходило бы с настоящей кассеты.\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n```\n",
+  "text_type": 3
+}

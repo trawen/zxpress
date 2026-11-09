@@ -1,0 +1,48 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "112",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Christmas editorial from Outlet #112: holiday greetings, magazine's 10th anniversary, tape-to-disk copy tip via 48K DISK BASIC, and highlights on Boovie.",
+  "meta_description_ru": "Рождественское обращение редакции Outlet: поздравления, 10-летие журнала, советы по копированию с кассеты на диск через 48K DISK BASIC и анонс игры Boovie.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "tape to disk",
+      "tag_alias": "tape-to-disk"
+    },
+    {
+      "tag_name": "boovie",
+      "tag_alias": "boovie"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus-3"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "C H R I S T M A S ,  1 9 9 6\n\nA Happy Christmas to all of our\nreaders and wishing you health\nand prosperity in the New Year\nfrom all of us here at OUTLET!\nAmazingly, next year is 1997 and\nwe started this in 1987!\n\n\nThere are quite a few commercial\ngames now in the public domain\nthat will be appearing in OUTLET\nover the coming months. Many of\nthese are quite brilliant! Well,\nthere is a lot to look forward\nto but we want more utilities to\nkeep the balance in OUTLET. So..\n\nRemember,we still need YOUR sup-\nport, and contributions of art-\nicles and programs - especially\nutility programs - are always\nwelcome. Even a short routine\ncan be like gold dust to another\nuser! Send 'em in!\n\nTRANSIT in this issue moves +3\nfiles from disk to tape and back\nbut is really for backup. If you\nwant to transfer files originat-\ning on tape to disk...\n\nThe 48K DISK BASIC in OUTLET 109\nhas a tape file copy feature you\nmay not have noticed.Load it and\nthen CLEAR 24400:COPY\"T:\"TO \"A:\"\nThis seems to be able to handle\nBASIC, CODE files (even if their\nstart address is below 24400!)\nand SCREEN$ etc. It's well worth\nkeeping in mind.\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET. We\nare sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\n\nWell, this is a seasonal issue -\nthere is even a Rupert Bear here\nsomewhere if you can find him to\nremind you of those Christmas\nannuals and BOOVIE is one of the\nbest games we have EVER had in\nOUTLET (and yes, Level 14 IS\npossible!). Enjoy it - and enjoy\nyour Christmas!\n\n                    Ron & Brian\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nC H R I S T M A S ,  1 9 9 6\n\nA Happy Christmas to all of our readers and wishing you health and prosperity in the New Year from all of us here at OUTLET! Amazingly, next year is 1997 and we started this in 1987!\n\nThere are quite a few commercial games now in the public domain that will be appearing in OUTLET over the coming months. Many of these are quite brilliant! Well, there is a lot to look forward to but we want more utilities to keep the balance in OUTLET. So..\n\nRemember,we still need YOUR sup- port, and contributions of art- icles and programs - especially utility programs - are always welcome. Even a short routine can be like gold dust to another user! Send 'em in!\n\nTRANSIT in this issue moves +3 files from disk to tape and back but is really for backup. If you want to transfer files originat- ing on tape to disk...\n\nThe 48K DISK BASIC in OUTLET 109 has a tape file copy feature you may not have noticed.Load it and then CLEAR 24400:COPY\"T:\"TO \"A:\" This seems to be able to handle BASIC, CODE files (even if their start address is below 24400!) and SCREEN$ etc. It's well worth keeping in mind.\n\nMay we remind readers, we cannot answer computer, software, hard- ware or system queries etc., personally by mail.  All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder!Share your problems with others! That way, everyone benefits!\n\nWell, this is a seasonal issue - there is even a Rupert Bear here somewhere if you can find him to remind you of those Christmas annuals and BOOVIE is one of the best games we have EVER had in OUTLET (and yes, Level 14 IS possible!). Enjoy it - and enjoy your Christmas!\n\nRon & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers\n\nCHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF .\n",
+  "body_ru": "## C H R I S T M A S ,  1 9 9 6\n\nСчастливого Рождества всем нашим читателям, а также здоровья и процветания в Новом году от всех нас в OUTLET! Удивительно, но следующий год — 1997-й, а мы начали всё это ещё в 1987-м!\n\nСейчас появилось немало коммерческих игр, перешедших в общественное достояние, которые будут выходить в OUTLET в ближайшие месяцы. Многие из них просто великолепны! В общем, впереди много интересного, но нам нужно больше утилит, чтобы сохранять баланс в журнале. Так что...\n\nПомните, нам всё ещё нужна ВАША поддержка, и ваши материалы — статьи и программы, особенно утилиты — всегда приветствуются. Даже короткая подпрограмма может оказаться на вес золота для другого пользователя! Присылайте их!\n\nУтилита TRANSIT в этом номере переносит файлы +3 с диска на ленту и обратно, но предназначена в основном для резервного копирования. Если же вы хотите перенести файлы, изначально записанные на кассете, на диск...\n\nВ 48K DISK BASIC из OUTLET 109 есть функция копирования файлов с ленты, которую вы могли не заметить. Загрузите его, а затем введите:\n\n```text\nCLEAR 24400:COPY \"T:\" TO \"A:\"\n```\n\nПохоже, она способна обрабатывать BASIC, файлы CODE (даже если их начальный адрес ниже 24400!), SCREEN$ и так далее. Это определенно стоит иметь в виду.\n\nНапоминаем читателям: мы не можем отвечать на вопросы по компьютерам, софту, железу или системам лично по почте. Все подобные вопросы разбираются через раздел OUTLETTERS в OUTLET. Простите, что постоянно твердим об этом, но об этом действительно нужно напоминать регулярно! Делитесь своими проблемами с другими! Так польза будет для всех!\n\nЧто ж, этот выпуск праздничный — где-то здесь даже спрятан Rupert Bear (если сможете его найти), чтобы напомнить вам о рождественских ежегодниках, а BOOVIE — одна из ЛУЧШИХ игр, которые КОГДА-ЛИБО появлялись в OUTLET (и да, 14-й уровень ПРОХОДИМ!). Наслаждайтесь игрой — и счастливого вам Рождества!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n```\n",
+  "text_type": 3
+}

@@ -1,0 +1,43 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "138",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of the upcoming Outlet issue: upcoming demos, colour screen dumper, a +D file hider utility, character editor, tape copier, and letters.",
+  "meta_description_ru": "Анонс следующего выпуска журнала Outlet: качественные демо, утилита цветной печати, скрытие файлов на +D, редактор шрифтов и копировщик кассет.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "plus-d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    },
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "As Brian mentioned in a recent\neditorial, we have a healthy\nstock of good quality demos, so\nthere will probably be a couple\nof these in next month's OUTLET,\nand there are some good utili-\nties to also look forward to...\n\nThere is an excellent colour\ndumper to produce high quality\ncolour prints from your Spectrum\nand there is a utility to hide a\n+D file so that it is not shown\non the CATalogue, but can still\nbe loaded.\n\nThere is also a nicely user-\nfriendly character editor, and a\nversatile tape to tape copier.\nAnd of course, plenty more, not\nleast your always enlightening\nletters.\n\n                         Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "As Brian mentioned in a recent editorial, we have a healthy stock of good quality demos, so there will probably be a couple of these in next month's OUTLET, and there are some good utilities to also look forward to...\n\nThere is an excellent colour dumper to produce high quality colour prints from your Spectrum and there is a utility to hide a +D file so that it is not shown on the CATalogue, but can still be loaded.\n\nThere is also a nicely user-friendly character editor, and a versatile tape to tape copier. And of course, plenty more, not least your always enlightening letters.\n\nChris.\n",
+  "body_ru": "Как Брайан уже упоминал в одной из недавних колонок редактора, у нас накопился солидный запас качественных демок, так что пара из них наверняка появится в следующем номере OUTLET. Кроме того, вас ждёт несколько отличных утилит...\n\nСреди них — великолепный дампер для вывода высококачественных цветных распечаток со Спектрума, а также утилита, позволяющая скрыть файл на диске +D, чтобы он не отображался в каталоге (CATalogue), но при этом всё ещё мог загружаться.\n\nПомимо этого, будет весьма удобный редактор символов и универсальный копировщик с кассеты на кассету. Ну и, конечно же, многое другое — не в последнюю очередь ваши, как всегда, познавательные письма.\n\nChris.\n",
+  "text_type": 3
+}

@@ -1,0 +1,47 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "049",
+  "article_id": "01_lookahed",
+  "title_en": "Lookahead to Issue 50",
+  "title_ru": "Анонс 50-го номера",
+  "meta_description_en": "A preview of the milestone 50th issue of Outlet magazine, featuring Chris Pile's new 208K format program, 3D Construction Kit review, Paganini music, and more.",
+  "meta_description_ru": "Анонс юбилейного 50-го выпуска журнала Outlet: новая утилита форматирования на 208K от Криса Пайла, обзор 3D Construction Kit, музыка Паганини и многое другое.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "chris pile",
+      "tag_alias": "chris-pile"
+    },
+    {
+      "tag_name": "3d construction kit",
+      "tag_alias": "3d-construction-kit"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus3"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Well next month's our 50th issue\nand we have some real goodies\nplanned...\n\nChris Pile has improved on his\nHI-FORM progam and has come up\nwith a new format program to\ngive 208K per side on a +3 disc\n- an additional 5K per side over\nhis HI-FORM and a massive extra\n70K over the normal +3 format!\nThere's a program for printing\nbook jackets using different\nsizes of text - some being side-\nways!                  more...\n\nThere's a brilliant program to\nenable you to edit two separate\nflashing graphic displays so\nthey interact with each other;\na new, easy routine to save out\na single line from a BASIC pro-\ngram; more clip art;a new cross-\npuzzle and all the regulars like\nOUTCLASS, SAMCLASS, LETTERS and\nso on.\n\nThere are reviews of the new 3D\nConstruction kit on the Spectrum\nand Video Titler for SAM. There\nmay be one or two other reviews\ntoo.\n\nI've articles for DRIVECHAT on\nthe +D LOAD @ bug and lightpen\ninfo. Again, I may have one or\ntwo others to add.     more...\n\nThere's a massive collection of\nPAGANINI caprices for the 128K\nSpectrum - about 100K of music I\nthink so I'll have to cram in\nwhat I can and put the rest into\nADD-ENDERS.\n\nWe've a BINGO game that prints\nbingo cards then goes through a\nrandom calling routine - sort of\na 99-player game! There's a disc\ndiary program too that should\nwork on most systems (though it\nmay not make much sense on tape\nI fear!).\n\nThere's more stuff waiting to\ncram into the SAM version and,of\ncourse, ADD-ENDERS waiting to\nsoak up the bits and pieces!\nSee you then!\n                        - Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "Well, next month is our 50th issue and we have some real goodies planned...\n\nChris Pile has improved on his HI-FORM program and has come up with a new format program to give 208K per side on a +3 disc — an additional 5K per side over his HI-FORM and a massive extra 70K over the normal +3 format! There's a program for printing book jackets using different sizes of text — some being sideways!\n\nThere's a brilliant program to enable you to edit two separate flashing graphic displays so they interact with each other; a new, easy routine to save out a single line from a BASIC program; more clip art; a new crossword puzzle and all the regulars like OUTCLASS, SAMCLASS, LETTERS and so on.\n\nThere are reviews of the new 3D Construction Kit on the Spectrum and Video Titler for SAM. There may be one or two other reviews too.\n\nI've articles for DRIVECHAT on the +D LOAD @ bug and lightpen info. Again, I may have one or two others to add.\n\nThere's a massive collection of PAGANINI caprices for the 128K Spectrum — about 100K of music I think, so I'll have to cram in what I can and put the rest into ADD-ENDERS.\n\nWe've a BINGO game that prints bingo cards then goes through a random calling routine — sort of a 99-player game! There's a disc diary program too that should work on most systems (though it may not make much sense on tape I fear!).\n\nThere's more stuff waiting to cram into the SAM version and, of course, ADD-ENDERS waiting to soak up the bits and pieces!\n\nSee you then!\n\n— Brian.\n",
+  "body_ru": "Что ж, в следующем месяце выходит наш юбилейный 50-й номер, и мы приготовили массу отличных вещей...\n\nChris Pile усовершенствовал свою программу HI-FORM и создал новую утилиту форматирования, позволяющую выжать 208K на сторону диска для +3 — это на 5K больше на сторону по сравнению с HI-FORM и на целых 70K больше стандартного формата +3! Также будет программа для печати книжных суперобложек с использованием шрифтов разного размера — в том числе с вертикальным текстом!\n\nВас ждёт великолепная программа для редактирования двух независимых мигающих графических экранов с их последующим взаимодействием; новая простая подпрограмма для сохранения отдельной строки из программы на Бейсике; свежий клипарт; новый кроссворд и все постоянные рубрики: OUTCLASS, SAMCLASS, LETTERS и другие.\n\nМы готовим обзоры новейшего 3D Construction Kit для Spectrum и Video Titler для SAM. Возможно, добавится ещё одна-две рецензии.\n\nДля рубрики DRIVECHAT у меня припасены статьи об ошибке LOAD @ в интерфейсе +D и информация о световых перьях. Не исключено, что к ним прибавится что-то ещё.\n\nТакже будет представлена внушительная подборка каприсов Паганини для Spectrum 128K — музыки набралось, кажется, около 100K, так что придётся втиснуть сколько влезет, а остаток перенести в ADD-ENDERS.\n\nКроме того, у нас есть игра в БИНГО, которая распечатывает карточки, а затем в случайном порядке выкликает номера — игра масштабом этак на 99 участников! Есть и программа дискового ежедневника, которая должна работать на большинстве систем (хотя на кассете от неё, боюсь, толку будет немного!).\n\nЕщё немало материалов ждёт очереди в версию для SAM, ну и, конечно же, рубрика ADD-ENDERS готова вобрать в себя все оставшиеся лакомые кусочки!\n\nДо встречи!\n\n— Brian.\n",
+  "text_type": 3
+}

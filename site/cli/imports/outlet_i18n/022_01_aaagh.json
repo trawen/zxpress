@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "022",
+  "article_id": "01_aaagh",
+  "title_en": "Aaagh+",
+  "title_ru": "Мучения с Wordmaster",
+  "meta_description_en": "Brian Cavers vents his frustration over trying to save files and view the catalog in the Wordmaster word processor on ZX Spectrum Microdrive.",
+  "meta_description_ru": "Крик души Брайана Каверса: безуспешные попытки разобраться с сохранением файлов и каталогом в текстовом процессоре Wordmaster на ZX Spectrum Microdrive.",
+  "authors": [
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "wordmaster",
+      "tag_alias": "wordmaster"
+    },
+    {
+      "tag_name": "tasword 2",
+      "tag_alias": "tasword-2"
+    },
+    {
+      "tag_name": "microdrive",
+      "tag_alias": "microdrive"
+    },
+    {
+      "tag_name": "текстовый процессор",
+      "tag_alias": "word-processor"
+    },
+    {
+      "tag_name": "письма читателей",
+      "tag_alias": "readers-letters"
+    }
+  ],
+  "category_ids": [
+    154,
+    105
+  ],
+  "body_en_plain": "WORDMYSTER?- Brian Cavers\n   -------------------------\nCan anyone advise 1. how to CAT\nfrom within WORDMASTER and 2.how\nto SAVE a file? Every few months\nI find an hour to tackle this\nprogram again and every time the\nsession ends in frustration!\n\nI'm baffled as to why this b*!#\nprogram is so well thought of\nas, after many cumulative hours,\nall I get is exasperated!\n\nI have been wanting to take up\nthe suggestion of creating CLIP\nART for the program and perhaps\nhaving a regular file each month\nin OUTLET to build up a library.\nThe latest session I managed to\nload in a SCREEN$, create a WP\nfile from part of it but when I\nuse the S to SAVE option, the\nmicrodrive operates as if the\nfile is being SAVEd and then it\nreturns to the sub-menu. All\nseems well but no matter how\noften I try this nothing is\nSAVEd! I get the same thing with\na text file! Aaaaaagggghhh!!!!\n\nThis is absurd - to have a word\nprocessor for months and find it\nso obscure that I cannot even\nSAVE a file!\n\nOn the sub-menu is [K] catalogue\nbut Press K and all that happens\nis the screen flickers!\n\nIf anyone can throw any light on\nthis I'd be grateful because,\nquite frankly, I'm sick of the\nsight of the damned thing!\n\n       - Angry of East Ham\n\n(Turns to Tasword 2 cartridge -\nworks first time,relaxes,unwinds\nand CUE:  Hamlet cigar music).\n",
+  "body_ru_plain": "WORDMYSTER? — Brian Cavers\n   -------------------------\nМожет ли кто-нибудь подсказать,\n1. как сделать CAT прямо из\nWORDMASTER и 2. как сделать SAVE\nфайла? Каждые пару месяцев я\nнахожу часок, чтобы снова\nпомучить эту программу, и каждый\nраз всё заканчивается психом!\n\nУма не приложу, почему об этой\nб*!# программе столь высокого\nмнения, ведь после кучи убитых\nчасов всё, чего я добился — это\nдикое бешенство!\n\nЯ хотел взяться за идею создания\nCLIP ART для этой программы и,\nвозможно, делать регулярный файл\nкаждый месяц в OUTLET, дабы\nсобрать библиотеку. В последний\nсеанс мне удалось загрузить\nSCREEN$, сделать WP-файл из его\nчасти, но когда я выбираю опцию\nS для SAVE, микродрайв шуршит\nтак, словно файл сохраняется,\nа затем возвращается в подменю.\nВроде всё путём, но сколько бы\nя ни пробовал, ничего не\nSAVЕ'ится! С текстовым файлом\nта же песня! Аааааааааахххх!!!!\n\nЭто абсурд — месяцами иметь\nтекстовый процессор и обнаружить,\nчто он настолько замороченный,\nчто я даже не могу сделать SAVE\nфайла!\n\nВ подменю есть пункт [K]\ncatalogue, но жмёшь K — и всё,\nчто происходит, это мерцание\nэкрана!\n\nЕсли кто-нибудь прольёт свет на\nэто дело, буду благодарен, ибо,\nчестно говоря, меня уже тошнит\nот одного вида этой проклятой\nштуки!\n\n       — Злой из East Ham\n\n(Берёт картридж Tasword 2 —\nработает с первого раза,\nрасслабляется, переводит дух,\nи ВСТУПАЕТ: музыка из рекламы\nсигар Hamlet).\n",
+  "body_en": "### WORDMYSTER? - Brian Cavers\n\nCan anyone advise:\n1. How to CAT from within WORDMASTER?\n2. How to SAVE a file?\n\nEvery few months I find an hour to tackle this program again and every time the session ends in frustration!\n\nI'm baffled as to why this b*!# program is so well thought of as, after many cumulative hours, all I get is exasperated!\n\nI have been wanting to take up the suggestion of creating CLIP ART for the program and perhaps having a regular file each month in OUTLET to build up a library. The latest session I managed to load in a SCREEN$, create a WP file from part of it but when I use the S to SAVE option, the microdrive operates as if the file is being SAVEd and then it returns to the sub-menu. All seems well but no matter how often I try this nothing is SAVEd! I get the same thing with a text file! Aaaaaagggghhh!!!!\n\nThis is absurd — to have a word processor for months and find it so obscure that I cannot even SAVE a file!\n\nOn the sub-menu is `[K]` catalogue but Press K and all that happens is the screen flickers!\n\nIf anyone can throw any light on this I'd be grateful because, quite frankly, I'm sick of the sight of the damned thing!\n\n— Angry of East Ham\n\n*(Turns to Tasword 2 cartridge — works first time, relaxes, unwinds and CUE: Hamlet cigar music).*\n",
+  "body_ru": "## WORDMYSTER? — Brian Cavers\n\nМожет ли кто-нибудь подсказать, 1. как сделать CAT прямо из WORDMASTER и 2. как сделать SAVE файла? Каждые пару месяцев я нахожу часок, чтобы снова помучить эту программу, и каждый раз всё заканчивается психом!\n\nУма не приложу, почему об этой б*!# программе столь высокого мнения, ведь после кучи убитых часов всё, чего я добился — это дикое бешенство!\n\nЯ хотел взяться за идею создания CLIP ART для этой программы и, возможно, делать регулярный файл каждый месяц в OUTLET, дабы собрать библиотеку. В последний сеанс мне удалось загрузить SCREEN$, сделать WP-файл из его части, но когда я выбираю опцию S для SAVE, микродрайв шуршит так, словно файл сохраняется, а затем возвращается в подменю. Вроде всё путём, но сколько бы я ни пробовал, ничего не SAVЕ'ится! С текстовым файлом та же песня! Аааааааааахххх!!!!\n\nЭто абсурд — месяцами иметь текстовый процессор и обнаружить, что он настолько замороченный, что я даже не могу сделать SAVE файла!\n\nВ подменю есть пункт [K] catalogue, но жмёшь K — и всё, что происходит, это мерцание экрана!\n\nЕсли кто-нибудь прольёт свет на это дело, буду благодарен, ибо, честно говоря, меня уже тошнит от одного вида этой проклятой штуки!\n\n*— Злой из East Ham*\n\n*(Берёт картридж Tasword 2 — работает с первого раза, расслабляется, переводит дух, и ВСТУПАЕТ: музыка из рекламы сигар Hamlet).*\n",
+  "text_type": 3
+}

@@ -1,0 +1,48 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "110",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонсы",
+  "meta_description_en": "A preview of upcoming features in future issues of Outlet magazine: 3D animation demo, +3 disk utility, Epson printer setup, sound-sample player, and an Amiga simulator.",
+  "meta_description_ru": "Анонс материалов будущих номеров журнала Outlet: 3D-анимация, дисковая утилита для +3, настройка принтера Epson, плеер сэмплов и симулятор Amiga.",
+  "authors": [
+    "Chris"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus-3"
+    },
+    {
+      "tag_name": "epson",
+      "tag_alias": "epson"
+    },
+    {
+      "tag_name": "sound sample",
+      "tag_alias": "sound-sample"
+    },
+    {
+      "tag_name": "amiga",
+      "tag_alias": "amiga"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "The main demo next month is\nsomething special for anyone who\nappreciates animation: Yes, it's\nThree Dimensional! There is a\nreview of a powerful disc manip-\nulation utility for the +3, and\na program to convert your Cat\ninto an Opentype file (Your disc\n\"Cat\" that is,not your favourite\nmoggy!).\n\nBack in July (Issue 107) DRIVE-\nCHAT listed the Epson printer\ncommand codes and next month's\nOUTLET has a program to set up\nthe printer for you with the re-\nquired codes.\n\n\nAlso in the near future we shall\nbe bringing you probably the\nbest sound-sample player yet for\nthe Spectrum; a utility to move\nblocks of code about in memory,\nfrom Basic; and a program which\ngives a simulation of an Amiga.\nNot to be confused with an\nemulator, but compare it with a\nFlight-Simulator: You don't act-\nually take off!\n\n\n\n\nThere's plenty more too, includ-\ning the regular items such as\nyour letters and queries with\nanswers, to fill up another \"Not\n-to-be-missed\" issue.\n\n                      Chris\n.\n",
+  "body_ru_plain": "",
+  "body_en": "The main demo next month is something special for anyone who appreciates animation: Yes, it's Three Dimensional! There is a review of a powerful disc manipulation utility for the +3, and a program to convert your Cat into an Opentype file (Your disc \"Cat\" that is, not your favourite moggy!).\n\nBack in July (Issue 107) DRIVE-CHAT listed the Epson printer command codes and next month's OUTLET has a program to set up the printer for you with the required codes.\n\nAlso in the near future we shall be bringing you probably the best sound-sample player yet for the Spectrum; a utility to move blocks of code about in memory, from Basic; and a program which gives a simulation of an Amiga. Not to be confused with an emulator, but compare it with a Flight-Simulator: You don't actually take off!\n\nThere's plenty more too, including the regular items such as your letters and queries with answers, to fill up another \"Not-to-be-missed\" issue.\n\nChris\n",
+  "body_ru": "Главное демо следующего месяца — нечто особенное для всех ценителей анимации: да, оно трехмерное! Также вас ждет обзор мощной утилиты для работы с дисками на +3 и программа для конвертации каталога диска (Cat) в файл формата Opentype (речь, разумеется, идет о дисковом каталоге, а не о вашем домашнем коте!).\n\nЕще в июле (выпуск 107) в рубрике DRIVE-CHAT приводился список командных кодов для принтеров Epson, а в следующем номере OUTLET появится программа, которая сама настроит принтер с помощью нужных кодов.\n\nКроме того, в ближайшем будущем мы представим, пожалуй, лучший на сегодняшний день плеер сэмплов для Spectrum; утилиту для перемещения блоков кода в памяти прямо из Бейсика; а также программу-симулятор Amiga. Не путайте её с эмулятором — скорее сравните с авиасимулятором: по-настоящему вы никуда не взлетаете!\n\nБудет и многое другое, включая привычные рубрики — ваши письма и ответы на вопросы, которые наполнят очередной выпуск, обязательный к прочтению.\n\nChris\n",
+  "text_type": 3
+}

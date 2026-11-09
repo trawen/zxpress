@@ -1,0 +1,47 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "103",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем выпуске",
+  "meta_description_en": "A preview of Outlet #104: typing course, Modula-2, Francis Miles' guitar music, encryption utility, stereo AY demo, and more.",
+  "meta_description_ru": "Анонс Outlet #104: курс машинописи, Modula-2, гитарная музыка Фрэнсиса Майлза, утилита шифрования, стерео-демо для AY и многое другое.",
+  "authors": [
+    "Chris"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "modula-2",
+      "tag_alias": "modula-2"
+    },
+    {
+      "tag_name": "typing-tutor",
+      "tag_alias": "typing-tutor"
+    },
+    {
+      "tag_name": "ay-3-8912",
+      "tag_alias": "ay-3-8912"
+    },
+    {
+      "tag_name": "stereo",
+      "tag_alias": "stereo"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Using a computer, as you know,\ninvolves a lot of typing, so if\nlike me, you've never had any\nformal training on the keyboard,\nyou will find the short typing-\npractice course in next month's\nOUTLET most helpful. For prog-\nrammers there is a very inform-\native chat about the high level\nlanguage \"Modula 2\" and for mus-\nic enthusiasts, the second half\nof Francis Miles' collection of\n500 years of Guitar Music.\n\n\nThere's information on Streams,\nan encrypter/decipherer for any\naspiring James Bonds, a further\nversion of Patience, an amusing\neducational game, and with the\nhelp of the Spectrum, you can be\nan instant Cubist-style artist.\n\n\nYet again a wonderful variety of\nmaterial to complement the\nregular features of your letters\nadverts, the Crossword etc., all\nrounded off with another amazing\nDemo in Stereo sound which also\nclaims to be in \"Multicolour\nMonochrome\" (?). But it's good\nand does detail how to get\nStereo from the AY soundchip!\n\nDon't be shy to send in your own\nlittle (or large) routines, as\nwe are quite used to enhancing\nthem and ironing out most of the\nminor bugs.\n\n                       Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Using a computer, as you know, involves a lot of typing, so if like me, you've never had any formal training on the keyboard, you will find the short typing-practice course in next month's OUTLET most helpful. For programmers there is a very informative chat about the high level language \"Modula 2\" and for music enthusiasts, the second half of Francis Miles' collection of 500 years of Guitar Music.\n\nThere's information on Streams, an encrypter/decipherer for any aspiring James Bonds, a further version of Patience, an amusing educational game, and with the help of the Spectrum, you can be an instant Cubist-style artist.\n\nYet again a wonderful variety of material to complement the regular features of your letters, adverts, the Crossword etc., all rounded off with another amazing Demo in Stereo sound which also claims to be in \"Multicolour Monochrome\" (?). But it's good and does detail how to get Stereo from the AY soundchip!\n\nDon't be shy to send in your own little (or large) routines, as we are quite used to enhancing them and ironing out most of the minor bugs.\n\nChris.\n",
+  "body_ru": "Работа на компьютере, как известно, требует немало печатать, поэтому если вы, как и я, никогда не проходили специальных курсов слепой печати, короткий практический курс машинописи в следующем номере OUTLET окажется для вас весьма кстати. Для программистов у нас припасён очень познавательный рассказ о высокоуровневом языке «Modula-2», а для любителей музыки — вторая часть антологии «500 лет гитарной музыки» от Francis Miles.\n\nТакже вас ждёт информация о потоках (Streams), программа шифрования/дешифрования для начинающих Джеймсов Бондов, очередная версия пасьянса Patience, занятная обучающая игра, а с помощью Спектрума вы сможете вмиг почувствовать себя художником-кубистом.\n\nИ вновь — великолепное разнообразие материалов в дополнение к традиционным рубрикам: вашим письмам, объявлениям, кроссворду и прочему, а завершит всё очередное потрясающее стерео-демо, которое к тому же обещает картинку в «многоцветном монохроме» (?). Как бы то ни было, вещь отличная и подробно объясняет, как получить стереозвук от звукового чипа AY!\n\nНе стесняйтесь присылать свои небольшие (или крупные) подпрограммы: мы с радостью поможем их доработать и сгладить мелкие недочёты.\n\nChris.\n",
+  "text_type": 3
+}

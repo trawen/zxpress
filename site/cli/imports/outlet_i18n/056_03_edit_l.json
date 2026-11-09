@@ -1,0 +1,50 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "056",
+  "article_id": "03_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Editorial note from Outlet #056: advice for programmers regarding copyright when adapting TV shows and games, plus errata from previous issues.",
+  "meta_description_ru": "Редакционная заметка Outlet #056: предупреждение авторам об авторском праве при клонировании телеигр и программ, а также исправления опечаток из прошлых номеров.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "copyright",
+      "tag_alias": "copyright"
+    },
+    {
+      "tag_name": "errata",
+      "tag_alias": "errata"
+    },
+    {
+      "tag_name": "countdown",
+      "tag_alias": "countdown"
+    },
+    {
+      "tag_name": "pacman",
+      "tag_alias": "pacman"
+    },
+    {
+      "tag_name": "tasword",
+      "tag_alias": "tasword"
+    }
+  ],
+  "category_ids": [
+    123,
+    135,
+    7
+  ],
+  "body_en_plain": "A P R I L ,  1 9 9 2\n\nMay we remind programmers not to\ncopy other programs, games or TV\nprogrammes too closely - you may\nfind  you cannot legally publish\nyour work without permission and\npossibly have to pay royalties.\n\nYou can normally use the general\nprinciples of another program or\nTV game etc. but they should not\nbe used in the same way that the\noriginal did  -  nor should your\nprogram \"look\" too close to that\nwhich inspired you!\n\nThis is better clarified using a\ncouple of examples. By chance we\nhave recently received two  pro-\ngrams based on the TV programme:\nCOUNTDOWN.One only uses the part\nwhere you have  several  numbers\nwhich must be used  together  to\nproduce another given number. It\nmade no reference  to  COUNTDOWN\nnor used any of the terms,jargon\nor imagery from  that  programme\nand the number-manipulation used\nwas actually an old, well-known,\npuzzle game.\n\nThe other program  was  arranged\njust like the COUNTDOWN TV  show\nwith both word  and number parts\nand it was named \"COUNTDOWN\".\n\nThis one  should  not really  be\npublished without permission(not\nlikely to be given in this case)\nbut the  one that  was simply  a\nnumber-puzzle is quite all right\n(in fact,the producers of the TV\nshow CANNOT have  any  copyright\nin this but only in the way they\nspecifically present it. Nor can\nthey have any copyright in using\nanagrams.Their copyright resides\nin how it is all woven  together\nand presented).  Another example\nwould be PACMAN. You can publish\na maze-type game - but it cannot\nbe named PACMAN nor look similar\nto the original Atari game!\n\nIf anyone would like our opinion\non whether a  particular program\nthat is being planned  might not\nbe accepted for publication  due\nto copyright problems,please let\nus know.\n\nNow, here are some errata...\n\n       spl     ld,codwd\n                   ...in Francis\nMiles' letter (in Issue 54, p34)\nshould be...\n       sp1     ld de,codwd\n\nThe line...\n        POKE 50000,1250,35 etc\n\n   ..in Malcolm Goodman's letter\n(in Issue 55, p25) should be...\n\n        POKE 50000,1,250,35 etc.\n\nTime available for checking text\nis now so limited that we regret\nwe cannot guarantee such  errors\nwon't be overlooked or caused in\nour editing processes. It can be\nminimised by sending text in 32-\ncolumn, Tasword 2 format as then\nwe have to make the least number\nof editing adjustments.\n\n\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nA P R I L ,  1 9 9 2\n\nMay we remind programmers not to copy other programs, games or TV programmes too closely - you may find  you cannot legally publish your work without permission and possibly have to pay royalties.\n\nYou can normally use the general principles of another program or TV game etc. but they should not be used in the same way that the original did  -  nor should your program \"look\" too close to that which inspired you!\n\nThis is better clarified using a couple of examples. By chance we have recently received two  pro- grams based on the TV programme: COUNTDOWN.One only uses the part where you have  several  numbers which must be used  together  to produce another given number. It made no reference  to  COUNTDOWN nor used any of the terms,jargon or imagery from  that  programme and the number-manipulation used was actually an old, well-known, puzzle game.\n\nThe other program  was  arranged just like the COUNTDOWN TV  show with both word  and number parts and it was named \"COUNTDOWN\".\n\nThis one  should  not really  be published without permission(not likely to be given in this case) but the  one that  was simply  a number-puzzle is quite all right (in fact,the producers of the TV show CANNOT have  any  copyright in this but only in the way they specifically present it. Nor can they have any copyright in using anagrams.Their copyright resides in how it is all woven  together and presented).  Another example would be PACMAN. You can publish a maze-type game - but it cannot be named PACMAN nor look similar to the original Atari game!\n\nIf anyone would like our opinion on whether a  particular program that is being planned  might not be accepted for publication  due to copyright problems,please let us know.\n\nNow, here are some errata...\n\nspl     ld,codwd ...in Francis Miles' letter (in Issue 54, p34) should be... sp1     ld de,codwd\n\nThe line... POKE 50000,1250,35 etc\n\n..in Malcolm Goodman's letter (in Issue 55, p25) should be...\n\nPOKE 50000,1,250,35 etc.\n\nTime available for checking text is now so limited that we regret we cannot guarantee such  errors won't be overlooked or caused in our editing processes. It can be minimised by sending text in 32- column, Tasword 2 format as then we have to make the least number of editing adjustments.\n\nRon & Brian Cavers CHEZRON   SOFTWARE 605, Loughborough Road Birstall,Leicester LE4 4NJ.\n",
+  "body_ru": "## Апрель 1992\n\nНапоминаем программистам: не копируйте другие программы, игры или телепередачи слишком близко к оригиналу — может оказаться, что вы не сможете законно опубликовать свою работу без разрешения и, возможно, вам придётся платить авторские отчисления.\n\nОбычно можно использовать общие принципы другой программы, телевикторины и т. д., но их нельзя применять точно так же, как в оригинале, и ваша программа не должна «выглядеть» слишком похожей на то, что вас вдохновило!\n\nЛучше пояснить это на паре примеров. По случайности недавно мы получили две программы по мотивам телепередачи COUNTDOWN. Одна из них использует только ту часть, где даётся несколько чисел, которые нужно скомбинировать для получения другого заданного числа. В ней не было никаких упоминаний COUNTDOWN, не использовались термины, жаргон или образы из этой передачи, а сами манипуляции с числами на самом деле представляли собой старую, хорошо известную головоломку.\n\nДругая программа была устроена точь-в-точь как телешоу COUNTDOWN — с заданиями как на слова, так и на числа — и называлась «COUNTDOWN».\n\nЭту программу действительно не стоит публиковать без разрешения (которое в данном случае вряд ли дадут), тогда как та, что была просто числовой головоломкой, вполне допустима (по сути, у продюсеров телешоу НЕ МОЖЕТ быть авторских прав на саму головоломку — только на конкретный способ её подачи. Равно как у них не может быть авторских прав на использование анаграмм. Их авторское право распространяется на то, как всё это сплетено воедино и преподнесено). Другим примером может служить PACMAN. Вы можете опубликовать игру-лабиринт, но она не может называться PACMAN и не может выглядеть похоже на оригинальную игру Atari!\n\nЕсли кто-то хочет узнать наше мнение о том, не будет ли конкретная планируемая программа отклонена от публикации из-за проблем с авторскими правами, пожалуйста, сообщите нам.\n\nА теперь несколько исправлений...\n\n```text\n       spl     ld,codwd\n```\n\n...в письме Francis Miles (выпуск 54, стр. 34) должно быть...\n\n```text\n       sp1     ld de,codwd\n```\n\nСтрока...\n\n```text\n        POKE 50000,1250,35 etc\n```\n\n...в письме Malcolm Goodman (выпуск 55, стр. 25) должна быть...\n\n```text\n        POKE 50000,1,250,35 etc.\n```\n\nВремени на проверку текста сейчас настолько мало, что мы, к сожалению, не можем гарантировать, что подобные ошибки не будут пропущены или не возникнут в процессе нашего редактирования. Эту вероятность можно свести к минимуму, присылая текст в 32-колоночном формате Tasword 2 — тогда нам придётся вносить наименьшее количество редакторских правок.\n\nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "text_type": 3
+}

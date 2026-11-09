@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "31",
+  "article_id": "05_ARCAN.TX",
+  "source_lang": "de-AT",
+  "title_en": "Arcanoid / Arcanoid 128",
+  "title_ru": "Arcanoid / Arcanoid 128",
+  "meta_description_en": "Mini-review of the 4K intro Arcanoid / Arcanoid 128 for ZX Spectrum from Scene+ #31.",
+  "meta_description_ru": "Мини-обзор 4K-интро Arcanoid / Arcanoid 128 для ZX Spectrum из журнала Scene+ #31.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "4k-intro",
+      "tag_alias": "4k-intro"
+    },
+    {
+      "tag_name": "arkanoid",
+      "tag_alias": "arkanoid"
+    },
+    {
+      "tag_name": "review",
+      "tag_alias": "review"
+    }
+  ],
+  "category_ids": [
+    1,
+    2
+  ],
+  "body_de_plain": "ARCANOID ü - ARCANIOD 128 - Deutsch - Lange habe ich mich\ngefragt, in welche Rubrik ich dieses 4KIntro aufnehmen sollte.\nTechnisch ist dieser Arkanoid Kloneinwandfrei programmiert,\nalles in allen in nur knapp 2, Kb,doch es fehlen Lebens- und\nPunktezähler, deshalb wird es nacheiniger Zeit langweilig.\nübrigens: Das was nach dem laden wieein Absturz aussieht, ist\ngar keiner sondern ein decruncher, wartet also 10 sekunden und\ndrückt nicht gleich den Reset.: - English - Great and very short\n(2. Kb) Arkanoid clone, but unfortunalywithout life- or point\ncounter. Don't worry about the crash-likescreen after loading,\nit is just a decr\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### ARCANOID / ARCANOID 128\n\n**German:**  \nI wondered for a long time which section I should include this 4K intro in. Technically, this Arkanoid clone is flawlessly coded, taking up barely 2.x KB in total, but it lacks life and score counters, so it gets boring after a while. By the way: what looks like a crash after loading isn't one at all, but rather a decruncher—so wait about 10 seconds and don't hit Reset right away.\n\n**English:**  \nGreat and very short (2.x KB) Arkanoid clone, but unfortunately without life or point counter. Don't worry about the crash-like screen after loading, it is just a decruncher.\n",
+  "body_ru": "### ARCANOID / ARCANOID 128\n\n**По-немецки:**  \nЯ долго размышлял, в какую рубрику поместить это 4K-интро. С технической точки зрения этот клон Arkanoid запрограммирован безупречно: всё вместе занимает чуть менее 2,x КБ. Однако здесь нет счётчика жизней и очков, поэтому через некоторое время играть становится скучно. Кстати: то, что после загрузки выглядит как зависание, вовсе им не является — это просто депакер, так что подождите секунд 10 и не спешите жать Reset.\n\n**По-английски:**  \nОтличный и очень компактный (2,x КБ) клон Arkanoid, но, к сожалению, без счётчика жизней и очков. Не пугайтесь картинки после загрузки, напоминающей сбой — это всего лишь депакер.\n",
+  "text_type": 3
+}

@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "143",
+  "article_id": "09_kochflak",
+  "title_en": "Kochflake",
+  "title_ru": "Снежинка Коха",
+  "meta_description_en": "D.J. Munro introduces the Koch snowflake fractal and presents a BASIC program for the ZX Spectrum plotting this classic recursive curve.",
+  "meta_description_ru": "Д. Дж. Манро рассказывает о фрактале «Снежинка Коха» и представляет программу на Бейсике для ZX Spectrum, визуализирующую эту классическую кривую.",
+  "authors": [
+    "D.J. Munro"
+  ],
+  "tags": [
+    {
+      "tag_name": "koch snowflake",
+      "tag_alias": "koch-snowflake"
+    },
+    {
+      "tag_name": "fractals",
+      "tag_alias": "fractals"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    },
+    {
+      "tag_name": "mathematics",
+      "tag_alias": "mathematics"
+    },
+    {
+      "tag_name": "graphics",
+      "tag_alias": "graphics"
+    }
+  ],
+  "category_ids": [
+    30,
+    35,
+    167
+  ],
+  "body_en_plain": "KOCHFLAKE BY D.J.MUNRO\n     ----------------------\n\nStrange how these things have\nbeen around for so long and have\nnow resurfaced in the computer\nworld! Having first read about\nthe Koch flake many years ago in\na book called \"Mathematical Mod-\nels\" by M.Cundy and A.P.Rollet,\nwhich described how to make\nmechanical models to illustrate\ncomplex mathematical ideas, it\n\n\nnow appears the snowflake is yet\nanother example of a fractal\nlandscape where, no matter how\nclosely you look at the detail,\nthe same pattern emerges.\n\nThe next program \"KOCHFLAKE\"\nillustrates this effect, which\nwas first described by Von Koch\nin 1904. By continually sub-\ndividing the triangle sides, a\nshape of increasing complexity\nis built up but still retaining\nthe basic repeating pattern.\nIn theory, it's possible to con-\ntinue indefinitely but the Spec-\ntrum screen resolution soon pro-\nduces limits since the number of\npoints to be plotted per side\nincreases by a factor of 4 each\ntime (1,4,16,64 for orders 0 to\n3).\n\nThe program is all in BASIC and\nfairly straightforward with a\nliberal sprinkling of REMarks.\n\nThe only Maths needed is to\ncalculate the vertical height of\nan equilateral triangle: (ie.\nsquare root 3 for sides=2). A\nsequence of steps has to be put\ninto string s$ based on a sketch\nof the snowflake. The steps are\nhorizontal, right, or left, and\nthe increment size from x(n) to\nx(n+1) must be steadily reduced\nas the order of complexity\nincreases.\n\n\nPress \"N\" now to load KOCHFLAKE.\n",
+  "body_ru_plain": "",
+  "body_en": "## KOCHFLAKE BY D.J. MUNRO\n\nStrange how these things have been around for so long and have now resurfaced in the computer world! Having first read about the Koch flake many years ago in a book called \"Mathematical Models\" by M. Cundy and A.P. Rollet, which described how to make mechanical models to illustrate complex mathematical ideas, it now appears the snowflake is yet another example of a fractal landscape where, no matter how closely you look at the detail, the same pattern emerges.\n\nThe next program \"KOCHFLAKE\" illustrates this effect, which was first described by Von Koch in 1904. By continually subdividing the triangle sides, a shape of increasing complexity is built up but still retaining the basic repeating pattern. In theory, it's possible to continue indefinitely but the Spectrum screen resolution soon produces limits since the number of points to be plotted per side increases by a factor of 4 each time (1, 4, 16, 64 for orders 0 to 3).\n\nThe program is all in BASIC and fairly straightforward with a liberal sprinkling of REMarks.\n\nThe only Maths needed is to calculate the vertical height of an equilateral triangle: (i.e. square root 3 for sides=2). A sequence of steps has to be put into string s$ based on a sketch of the snowflake. The steps are horizontal, right, or left, and the increment size from x(n) to x(n+1) must be steadily reduced as the order of complexity increases.\n\nPress \"N\" now to load KOCHFLAKE.\n",
+  "body_ru": "## СНЕЖИНКА КОХА (KOCHFLAKE)\n### Автор: D.J. Munro\n\nУдивительно, как вещи, существующие столь давно, вновь всплывают на поверхность уже в компьютерном мире! Впервые я прочитал о снежинке Коха много лет назад в книге «Mathematical Models» авторов M. Cundy и A.P. Rollet, где описывалось, как строить механические модели для иллюстрации сложных математических идей. И вот теперь оказывается, что эта снежинка — еще один пример фрактального пейзажа, где независимо от того, насколько близко вы рассматриваете детали, проявляется один и тот же узор.\n\nСледующая программа, «KOCHFLAKE», наглядно иллюстрирует этот эффект, впервые описанный фон Кохом в 1904 году. Путем непрерывного деления сторон треугольника выстраивается фигура все возрастающей сложности, но при этом сохраняющая базовый повторяющийся рисунок. В теории этот процесс можно продолжать бесконечно, однако разрешение экрана Спектрума быстро накладывает свои ограничения, поскольку количество отображаемых точек на сторону каждый раз увеличивается в 4 раза (1, 4, 16, 64 для порядков от 0 до 3).\n\nПрограмма полностью написана на Бейсике, достаточно проста и щедро снабжена комментариями REM.\n\nВся необходимая математика сводится к вычислению высоты равностороннего треугольника (т.е. квадратный корень из 3 для стороны, равной 2). Последовательность шагов заносится в строку s$ на основе эскиза снежинки. Шаги выполняются по горизонтали, вправо или влево, а величина шага от x(n) к x(n+1) должна непрерывно уменьшаться по мере роста порядка сложности.\n\nНажмите «N» прямо сейчас, чтобы загрузить KOCHFLAKE.\n",
+  "text_type": 3
+}

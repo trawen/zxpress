@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "32",
+  "article_id": "07_KABOO.TX",
+  "source_lang": "de-AT",
+  "title_en": "Kaboom",
+  "title_ru": "Kaboom",
+  "meta_description_en": "A brief overview of the reaction game Kaboom by Proxima, featured on the Scene+ #32 disk.",
+  "meta_description_ru": "Краткое описание игры на реакцию Kaboom от компании Proxima, опубликованной на диске журнала Scene+ #32.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    },
+    {
+      "tag_name": "proxima",
+      "tag_alias": "proxima"
+    },
+    {
+      "tag_name": "kaboom",
+      "tag_alias": "kaboom"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "KABOO ü - KABOOM - Ein Spiel für schnelles Reaktionsvermögen.\nFangen sie alleherunterfliegende Bomben in einem Wassereimer\nauf. Jede Bombedie Danebengeht, explodiert und kostet ein Leben.\nDoch vorsicht,das ganze wird immer schneller. Steuerung: Tasten\nN und M. Das erste Proxima Programm auf S+, weitere werden noch\nfolgen.> - The first PROXIMA game on our disk, and it is a\nfast-moving-reaction-game. Catch all falling bombs or they will\nexplode andyou loose a life. Cont\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**KABOOM** is a game of quick reflexes. Catch all the falling bombs in a water bucket. Every bomb that misses explodes and costs you a life. But watch out: the action gets faster and faster!\n\n**Controls:** keys `N` and `M`.\n\nThis is the first Proxima program on *Scene+*; more will follow.\n",
+  "body_ru": "**KABOOM** — игра для проверки быстрой реакции. Ловите все падающие бомбы в ведро с водой. Каждая упавшая мимо бомба взрывается и отнимает одну жизнь. Будьте осторожны: всё происходит всё быстрее и быстрее!\n\n**Управление:** клавиши `N` и `M`.\n\nЭто первая программа от Proxima на диске *Scene+*, за ней последуют и другие.\n",
+  "text_type": 3
+}

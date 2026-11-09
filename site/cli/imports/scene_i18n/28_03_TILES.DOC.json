@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "28",
+  "article_id": "03_TILES.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Tiles II",
+  "title_ru": "Tiles II",
+  "meta_description_en": "A brief note from Scene+ #28 introducing Tiles II, an enhanced Mahjong game for the ZX Spectrum restored from the World of Spectrum CD.",
+  "meta_description_ru": "Короткая заметка из Scene+ #28 о головоломке Tiles II — улучшенной версии маджонга для ZX Spectrum, восстановленной с диска World of Spectrum.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "tiles-ii",
+      "tag_alias": "tiles-ii"
+    },
+    {
+      "tag_name": "mahjong",
+      "tag_alias": "mahjong"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "TILES_II ü\n----------------------------------------------------------------\nTILES II\n----------------------------------------------------------------\nEin restaurierter Snapshot von der WOS CD, damit\nNiemandbenachteiligt ist der nicht am Treffen in\nMönchengladbachteilgenohmen hat. Tiles II ist eine bessere\n(! Vielfach) versionvon PEKING welches selbst schon ein\nhervorragendes Spiel war.\n----------------------------------------------------------------\nAgain a Version of Mah Jong, like PEKING but much better\ncodedand with much more options. I'm sure that you will have a\nlotfun playing this game.\n----------------------------------------------------------------\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "## TILES II\n\nA restored snapshot from the WoS CD, so that nobody who couldn't attend the meeting in Mönchengladbach feels left out. Tiles II is a much better (many times over!) version of PEKING, which was already an outstanding game in its own right.\n\nAgain a version of Mah Jong, like PEKING but much better coded and with much more options. I'm sure that you will have a lot of fun playing this game.\n",
+  "body_ru": "## TILES II\n\nВосстановленный снапшот с диска WoS, чтобы никто из тех, кто не смог побывать на встрече в Мёнхенгладбахе, не почувствовал себя обделённым. Tiles II — это значительно (в разы!) более качественная версия PEKING, которая и сама по себе была превосходной игрой.\n\nЕщё одна версия маджонга, похожая на PEKING, но куда лучше закодированная и предлагающая гораздо больше опций. Уверен, эта игра доставит вам немало удовольствия.\n",
+  "text_type": 3
+}

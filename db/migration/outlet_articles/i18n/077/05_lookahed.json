@@ -1,0 +1,39 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "077",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A preview of what is coming up in Outlet #078: a UDG designer, machine code tutorial on jump tables, sampled sound demo, and more.",
+  "meta_description_ru": "Анонс готовящегося выпуска журнала Outlet #078: редактор UDG, уроки машинного кода по таблицам переходов, оцифрованный звук и постоянные рубрики.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "udg",
+      "tag_alias": "udg"
+    },
+    {
+      "tag_name": "machine code",
+      "tag_alias": "machine-code"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Next month we hope to include a\nsuper character set or udg\ndesigner which is ideal for use\nwith DUBPIN in this issue; the\ncontinuation of the machine-code\nteach-in which explains the use\nof jump tables in depth(advanced\nbut lucidly explained), there\nwill probably be something\nlightly educational but if all\nthis is a bit heavy going, we'll\ntry to pop in a little game to\nrefresh you.\n                        more...\n\nHopefully there will be a\nsampled-sound demo, which we've\nnot been able to squeeze in\npreviously; an improved version\nof QUICKLIST (original was in\nissue 74); and probably another\nuseful programming utility, not\nto mention all the regular\nfeatures: loads of adverts, out-\nwork, letters etc., etc.\n                         Chris..\n",
+  "body_ru_plain": "",
+  "body_en": "Next month we hope to include a super character set or udg designer which is ideal for use with DUBPIN in this issue; the continuation of the machine-code teach-in which explains the use of jump tables in depth (advanced but lucidly explained), there will probably be something lightly educational but if all this is a bit heavy going, we'll try to pop in a little game to refresh you.\n\nHopefully there will be a sampled-sound demo, which we've not been able to squeeze in previously; an improved version of QUICKLIST (original was in issue 74); and probably another useful programming utility, not to mention all the regular features: loads of adverts, out-work, letters etc., etc.\n\nChris..\n",
+  "body_ru": "В следующем месяце мы надеемся включить отличный редактор наборов символов или UDG, который идеально подойдёт для работы с программой DUBPIN из этого номера; продолжение учебного курса по машинному коду, где подробно разбирается использование таблиц переходов (тема продвинутая, но изложена предельно ясно); вероятно, появится и что-то ненавязчиво познавательное. А если всё это покажется вам слишком сложным, мы постараемся добавить небольшую игру, чтобы разгрузить голову.\n\nНадеемся выпустить и демо с оцифрованным звуком, которое нам не удавалось вместить ранее; улучшенную версию QUICKLIST (оригинал был в номере 74); а также, скорее всего, ещё одну полезную утилиту для программирования. Не говоря уже обо всех наших постоянных рубриках: масса объявлений, подработка, письма читателей и так далее.\n\nChris..\n",
+  "text_type": 3
+}

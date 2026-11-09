@@ -1,0 +1,39 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "100",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем выпуске",
+  "meta_description_en": "Editor Chris Cowley previews the upcoming contents of Outlet for the New Year 1996, including games, utilities, demos, and calls for reader submissions.",
+  "meta_description_ru": "Редактор Крис Коули анонсирует содержание новогоднего номера журнала Outlet за 1996 год: игры, утилиты, демо и статьи от читателей.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Next month we go bounding into\nthe New Year - with plenty to\namuse and instruct you:  From an\nOUTCLASS about ways to save\nbytes to a game of Dominoes.From\na visit to the Reptile House to\na serious DRIVECHAT about seri-\nous software. And in-between are\nplenty of other items including\na couple of utilities and a con-\nversion of an Art creating prog-\nram.\n                       more...\n\nWe have a good stock of amazing\nand stunning demos so there will\nbe one of those to look forward\nto in each issue. Yes, 1996 gets\noff to a good start, but do keep\non sending in anything that you\nthink could interest or amuse\nothers. We're especially looking\nfor utilities and articles for\nOUTCLASS and DRIVECHAT.\n\n                         Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Next month we go bounding into the New Year — with plenty to amuse and instruct you: From an OUTCLASS about ways to save bytes to a game of Dominoes. From a visit to the Reptile House to a serious DRIVECHAT about serious software. And in-between are plenty of other items including a couple of utilities and a conversion of an Art creating program.\n\nWe have a good stock of amazing and stunning demos so there will be one of those to look forward to in each issue. Yes, 1996 gets off to a good start, but do keep on sending in anything that you think could interest or amuse others. We're especially looking for utilities and articles for OUTCLASS and DRIVECHAT.\n\nChris.\n",
+  "body_ru": "В следующем месяце мы врываемся в Новый год — с массой познавательного и развлекательного материала: от статьи в рубрике OUTCLASS о способах экономии байтов до игры в домино. От визита в «Дом рептилий» (Reptile House) до серьезного обсуждения серьезного софта в DRIVECHAT. А между ними — множество других материалов, включая пару утилит и конверсию программы для создания графики.\n\nУ нас скопился отличный запас впечатляющих и потрясающих демок, так что в каждом номере вас будет ждать одна из них. Да, 1996 год начинается удачно, но не забывайте присылать всё, что может заинтересовать или развлечь других читателей. Мы особенно ждём утилиты, а также статьи для рубрик OUTCLASS и DRIVECHAT.\n\nChris.\n",
+  "text_type": 3
+}

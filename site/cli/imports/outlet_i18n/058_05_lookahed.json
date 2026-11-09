@@ -1,0 +1,48 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "058",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонсы",
+  "meta_description_en": "A preview of what's coming in the next issue of Outlet magazine: European demo, Tasword 2 sorter, PFN text utility, Bully Embassy game, fractals, and more.",
+  "meta_description_ru": "Анонс следующего выпуска журнала Outlet: европейское демо, сортировщик для Tasword 2, утилита PFN, 3D-игра Bully Embassy, фракталы и многое другое.",
+  "authors": [
+    "Brian Kemp"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "lookahead",
+      "tag_alias": "lookahead"
+    },
+    {
+      "tag_name": "tasword 2",
+      "tag_alias": "tasword-2"
+    },
+    {
+      "tag_name": "pfn",
+      "tag_alias": "pfn"
+    },
+    {
+      "tag_name": "bully embassy",
+      "tag_alias": "bully-embassy"
+    },
+    {
+      "tag_name": "fractals",
+      "tag_alias": "fractals"
+    }
+  ],
+  "category_ids": [
+    123,
+    118
+  ],
+  "body_en_plain": "Planned for next month we have a\nterrific graphic and music demo\nfrom Europe;a Tasword 2 textfile\nsorting utility that sorts Tas 2\nfiles into alphabetical order,\nline by line; extra colours on a\nSpectrum (well sort of - most a\nbit flickery but might be used\nfor small patches on a screen!);\na'Towers of Hanoi'solution demo;\nand 'VARSITGONE' -a great little\nroutine that lets you delete any\nBASIC variable - INDIVIDUALLY!\n\n                  more...\n\nThere will be the best text size\nand style utility I have seen on\nthe Spectrum. It's PFN, written\nby Garry Rowlands, author of\nMUSIC WRITER and PFN is public\ndomain!We've an interrupt-driven\nclock; a program that draws a\nvariety of fractal graphics,also\nthe best I've seen on a Spectrum\nand a 3D arcade adventure called\nBULLY EMBASSY in full machine\ncode.\n\nWe'll have all the usual regular\nitems like OUTLETTERS ADD-ENDERS\nand OUTCLASS as well of course!\n\n                        - Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "Planned for next month we have a terrific graphic and music demo from Europe; a Tasword 2 textfile sorting utility that sorts Tas 2 files into alphabetical order, line by line; extra colours on a Spectrum (well sort of - most a bit flickery but might be used for small patches on a screen!); a 'Towers of Hanoi' solution demo; and 'VARSITGONE' - a great little routine that lets you delete any BASIC variable - INDIVIDUALLY!\n\nThere will be the best text size and style utility I have seen on the Spectrum. It's PFN, written by Garry Rowlands, author of MUSIC WRITER and PFN is public domain! We've an interrupt-driven clock; a program that draws a variety of fractal graphics, also the best I've seen on a Spectrum and a 3D arcade adventure called BULLY EMBASSY in full machine code.\n\nWe'll have all the usual regular items like OUTLETTERS ADD-ENDERS and OUTCLASS as well of course!\n\n- Brian.\n",
+  "body_ru": "В следующем месяце у нас запланировано потрясающее графическое и музыкальное демо из Европы; утилита для сортировки текстовых файлов Tasword 2, которая упорядочивает строки файлов Tas 2 по алфавиту; дополнительные цвета на Spectrum (ну, почти — картинка слегка мерцает, но вполне сгодится для небольших участков экрана!); демонстрация решения головоломки «Ханойские башни»; а также «VARSITGONE» — отличная маленькая подпрограмма, позволяющая удалять любую переменную Бейсика ПО ОТДЕЛЬНОСТИ!\n\nКроме того, вас ждет лучшая утилита для изменения размера и стиля текста из всех, что я видел на Spectrum. Это PFN, написанная Garry Rowlands, автором MUSIC WRITER, и PFN является общественным достоянием! У нас также есть часы, работающие по прерываниям; программа для построения различных фракталов (тоже лучшая среди виденных мной на Spectrum) и трехмерное аркадное приключение под названием BULLY EMBASSY, полностью написанное в машинных кодах.\n\nНу и, конечно же, будут все наши постоянные рубрики, такие как OUTLETTERS, ADD-ENDERS и OUTCLASS!\n\n— Brian.\n",
+  "text_type": 3
+}

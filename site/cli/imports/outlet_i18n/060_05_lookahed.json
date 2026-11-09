@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "060",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонсы",
+  "meta_description_en": "Brian Watson previews what's in store for the next issue of Outlet disk magazine, including demos, games, and utility routines.",
+  "meta_description_ru": "Брайан Уотсон рассказывает о планах на следующий выпуск журнала Outlet: демки, игры, музыка и полезные подпрограммы.",
+  "authors": [
+    "Brian Watson"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "demos",
+      "tag_alias": "demos"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "I'm slightly behind with editing\nnext month's issue so here is\nwhat is planned so far but I\nsuspect some programs may be put\nback and others replace them if\nspace and variety are not right.\n\nBOUNCER is a 3D ball demo that\nwill make you wonder how it got\ncrammed into less than 15K!SORT$\nis a BASIC array machine code\nsort that sorts a pointer array,\nleaving the main array unchanged\nbut only points at it in order.\n                     more...\n\nSTARTER makes a giant text game\ntitle page; VARIETY is a compil-\nation of 128K music, CATCHUP is\na +3 CAT routine that gives more\nthan 64 names with special for-\nmat discs like 3.5\" double-sided\n780K \"B\" discs.\n\nBLASTER is a great machine code\narcade game something like the\nclassic ASTEROIDS and for the\nthinking man is a full-length\nmachine code adventure game that\nis called \"NOAH\" with a biblical\nflavour.\n\nThere will be a VAT calculator\nand I've several DRIVECHAT items\nto sort out, more clip art and\nall the regulars etc., etc. It's\nlooking good as usual!\n                        - Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "I'm slightly behind with editing next month's issue so here is what is planned so far, but I suspect some programs may be put back and others replace them if space and variety are not right.\n\nBOUNCER is a 3D ball demo that will make you wonder how it got crammed into less than 15K! SORT$ is a BASIC array machine code sort that sorts a pointer array, leaving the main array unchanged but only points at it in order.\n\nSTARTER makes a giant text game title page; VARIETY is a compilation of 128K music, CATCHUP is a +3 CAT routine that gives more than 64 names with special format discs like 3.5\" double-sided 780K \"B\" discs.\n\nBLASTER is a great machine code arcade game something like the classic ASTEROIDS and for the thinking man is a full-length machine code adventure game that is called \"NOAH\" with a biblical flavour.\n\nThere will be a VAT calculator and I've several DRIVECHAT items to sort out, more clip art and all the regulars etc., etc. It's looking good as usual!\n\n- Brian.\n",
+  "body_ru": "Я немного отстаю с подготовкой следующего номера, поэтому вот что запланировано на данный момент — хотя подозреваю, что некоторые программы могут быть отложены и заменены другими, если не хватит места или пострадает разнообразие.\n\nBOUNCER — это трёхмерное демо со скачущим шаром, которое заставит вас удивиться, как его вообще удалось уместить менее чем в 15K! SORT$ — процедура сортировки строковых массивов BASIC в машинных кодах, которая сортирует массив указателей, оставляя исходный массив без изменений и лишь упорядочивая ссылки на него.\n\nSTARTER создаёт огромные текстовые титульные экраны для игр; VARIETY — подборка музыки для 128K; CATCHUP — процедура каталога (CAT) для +3, которая выдаёт более 64 имён файлов на дискетах нестандартных форматов, например, двухсторонних 3.5\" на 780K (дисковод «B»).\n\nBLASTER — великолепная аркадная игра в машинных кодах, напоминающая классический ASTEROIDS, а для интеллектуалов припасена полноразмерная текстовая адвентюра в машинных кодах под названием «NOAH» с библейским колоритом.\n\nТакже будет калькулятор НДС (VAT calculator), мне ещё предстоит разобрать несколько писем для DRIVECHAT, плюс свежий клипарт, регулярные рубрики и так далее, и тому подобное. Как обычно, номер обещает быть отличным!\n\n- Brian.\n",
+  "text_type": 3
+}

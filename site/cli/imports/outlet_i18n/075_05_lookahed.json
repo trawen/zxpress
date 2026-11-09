@@ -1,0 +1,48 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "075",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of the upcoming Christmas issue of Outlet, featuring a replacement MAIN ROM LOOP, +3 CAT routine, BASIC utilities, and parts 4 & 5 of the LSD megademo.",
+  "meta_description_ru": "Анонс рождественского выпуска Outlet: замена основного цикла ПЗУ, улучшенная процедура CAT для +3, утилиты для Бейсика и продолжение LSD megademo.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet-magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "zx-spectrum-3",
+      "tag_alias": "zx-spectrum-3"
+    },
+    {
+      "tag_name": "rom",
+      "tag_alias": "rom"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    },
+    {
+      "tag_name": "lsd megademo",
+      "tag_alias": "lsd-megademo"
+    }
+  ],
+  "category_ids": [
+    123,
+    118
+  ],
+  "body_en_plain": "Planned for next month we have a\nscrolling star background code\nroutine, a brilliant new +3 CAT\nroutine that gives extra info on\nvirtually any format, some songs\nfor the Christmas season(machine\ncode but works in 48K),Christmas\nclip art, parts 4 and 5 of the\nongoing fantastic LSD megademo,a\nnew crossword, a utility to list\nall BASIC variables and all our\nusual regulars: an educational\nprogram, OUTLETTERS, OUTWORK and\nOUTCLASS etc., BUT...\n\nOUTCLASS is something special we\nreckon. It shows how to create a\nnew, replacement MAIN ROM LOOP!\nFurthermore, it is coupled with\na unique working program wherein\nBASIC is given all sorts of new\ncommands - a real toolbox of\nblock delete, fast editing,BASIC\nsearch - all sorts of goodies.It\nis too extensive to go into here\nbut is a fascinating program for\nboth machine coders interested\nin the way the Spectrum ROM\nworks and also BASIC programmers\nhappy to get some extra support!\n\nWell, if that lot isn't enough,\nthere is room for one or two\nmore items yet to be decided so\ndon't miss our great Christmas\nissue next month!\n                        - Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "Planned for next month we have a scrolling star background code routine, a brilliant new +3 CAT routine that gives extra info on virtually any format, some songs for the Christmas season (machine code but works in 48K), Christmas clip art, parts 4 and 5 of the ongoing fantastic LSD megademo, a new crossword, a utility to list all BASIC variables and all our usual regulars: an educational program, OUTLETTERS, OUTWORK and OUTCLASS etc., BUT...\n\nOUTCLASS is something special we reckon. It shows how to create a new, replacement MAIN ROM LOOP! Furthermore, it is coupled with a unique working program wherein BASIC is given all sorts of new commands — a real toolbox of block delete, fast editing, BASIC search — all sorts of goodies. It is too extensive to go into here but is a fascinating program for both machine coders interested in the way the Spectrum ROM works and also BASIC programmers happy to get some extra support!\n\nWell, if that lot isn't enough, there is room for one or two more items yet to be decided so don't miss our great Christmas issue next month!\n\n— Brian.\n",
+  "body_ru": "В планах на следующий месяц: процедура скроллинга звёздного фона, великолепная новая подпрограмма CAT для +3, выдающая расширенную информацию практически о любом формате диска, праздничные рождественские мелодии (в машинном коде, но работает и на 48K), рождественский клипарт, 4-я и 5-я части потрясающего LSD megademo, новый кроссворд, утилита для вывода списка всех переменных Бейсика, а также наши постоянные рубрики: обучающая программа, OUTLETTERS, OUTWORK, OUTCLASS и прочее, НО...\n\nOUTCLASS в этот раз, как мы считаем, будет чем-то совершенно особенным! Статья расскажет, как создать полноценную замену основному циклу ПЗУ (MAIN ROM LOOP)! Более того, к ней прилагается уникальная рабочая программа, добавляющая в Бейсик массу новых команд — настоящий инструментарий: удаление блоков, быстрое редактирование, поиск по тексту программы и множество других полезных вещей. Обо всём здесь не рассказать, но эта программа невероятно увлекательна как для ассемблерщиков, интересующихся архитектурой ПЗУ Спектрума, так и для программистов на Бейсике, желающих получить мощное расширение системы!\n\nНу а если даже этого мало — у нас осталось место ещё для одного или двух материалов, которые пока выбираются, так что не пропустите наш праздничный рождественский выпуск в следующем месяце!\n\n— Brian.\n",
+  "text_type": 3
+}

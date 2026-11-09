@@ -1,0 +1,36 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "022",
+  "article_id": "04_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего выпуска",
+  "meta_description_en": "A preview of the upcoming issue of Outlet magazine: new utilities, the Kemshu strategy game, patience, and regular columns.",
+  "meta_description_ru": "Анонс материалов следующего номера журнала Outlet: новые утилиты, игра Kemshu, пасьянс и постоянные рубрики.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "дискмаг",
+      "tag_alias": "diskmag"
+    }
+  ],
+  "category_ids": [
+    123,
+    118
+  ],
+  "body_en_plain": "Next month, OUTLET has a rapid\nmachine code utility to sort any\nDIMensioned string array into\norder(to compliment last month's\nsearch utility, INSTAMATCHIT); a\ncalculator program and a utility\nto split BASIC lines in two (the\nopposite of LINEZIP!). OUTPUT\nlooks at the Spectrum screen and\nthere will be the usual OUTCLASS\nand the other regulars.KEMSHU is\nan absorbing and well-presented\ncolour-grid game -the first of a\nseries of 4 very enjoyable games\n\nof strategy. We have an advanced\nfont designer; a special FLASH\nutility; a pools check program;a\nmixed bag of interesting items\nin DRIVECHAT; a simple crossword\ncompiler and if you like cards,\na great game of patience! See\nyou then.\n                         - Brian\n\no.\n",
+  "body_ru_plain": "В следующем месяце в OUTLET —\nбыстрая машинная утилита для\nсортировки строковых массивов\nDIM (в дополнение к утилите\nпоиска INSTAMATCHIT); также\nпрограмма-калькулятор и утилита\nделения строк BASIC надвое\n(противоположность LINEZIP!).\nOUTPUT изучает экран Spectrum,\nплюс привычный OUTCLASS и все\nостальные рубрики. KEMSHU —\nувлекательная и прекрасно\nоформленная игра на цветной\nсетке, первая из 4 отличных\n\nстратегий. Вас ждут продвинутый\nредактор шрифтов; утилита для\nFLASH; проверка тотализатора;\nвсякая всячина интересного в\nDRIVECHAT; простой составитель\nкроссвордов, а если любите\nкарты — отличный пасьянс! До\nвстречи.\n                         - Brian\n\no.\n",
+  "body_en": "## Lookahead\n\nNext month, OUTLET has a rapid machine code utility to sort any DIMensioned string array into order (to compliment last month's search utility, INSTAMATCHIT); a calculator program and a utility to split BASIC lines in two (the opposite of LINEZIP!). OUTPUT looks at the Spectrum screen and there will be the usual OUTCLASS and the other regulars. KEMSHU is an absorbing and well-presented colour-grid game — the first of a series of 4 very enjoyable games of strategy.\n\nWe have an advanced font designer; a special FLASH utility; a pools check program; a mixed bag of interesting items in DRIVECHAT; a simple crossword compiler and if you like cards, a great game of patience! See you then.\n\n— Brian\n\no.\n",
+  "body_ru": "## Анонс следующего выпуска\n\nВ следующем месяце в OUTLET — быстрая машинная утилита для сортировки строковых массивов DIM (в дополнение к утилите поиска INSTAMATCHIT); также программа-калькулятор и утилита деления строк BASIC надвое (противоположность LINEZIP!). OUTPUT изучает экран Spectrum, плюс привычный OUTCLASS и все остальные рубрики. KEMSHU — увлекательная и прекрасно оформленная игра на цветной сетке, первая из 4 отличных стратегий.\n\nВас ждут продвинутый редактор шрифтов; утилита для FLASH; проверка тотализатора; всякая всячина интересного в DRIVECHAT; простой составитель кроссвордов, а если любите карты — отличный пасьянс! До встречи.\n\n— Brian\n",
+  "text_type": 3
+}

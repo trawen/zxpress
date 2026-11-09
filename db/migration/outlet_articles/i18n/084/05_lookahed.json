@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "084",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонсы",
+  "meta_description_en": "A preview of upcoming software and features in future issues of Outlet, from graphics tools and financial software to machine code routines.",
+  "meta_description_ru": "Анонс будущих выпусков журнала Outlet: музыкальные программы, утилиты для работы с графикой, инвестиционный анализ и подпрограммы в машинных кодах.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "malcolm goodman",
+      "tag_alias": "malcolm-goodman"
+    },
+    {
+      "tag_name": "графика",
+      "tag_alias": "graphics"
+    },
+    {
+      "tag_name": "утилиты",
+      "tag_alias": "utilities"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Looking at the healthy stock of\ncontributions to OUTLET shows\nthat we currently have a lot of\nmusic programs of all types, so\nthere will certainly be some\nsounds to enjoy in next month's\nissue.\n\nFor those fortunate enough to\nhave something to invest, there\nis an in-depth investment\nanalysis program to help you\nthrough the pitfalls, complete\nwith examples and detailed\nexplanations.\n\nYou will also have the chance to\ndiscuss problems of any sort, in\na pleasant (??) chat with Mr.\nGrumpy!\n\nThere are two graphics-orientat-\ned programs in the pipeline...\n\nOne is another U.D.G. generator\nand I make no apologies for\nincluding it so soon after the\none in OUTLET #81 because it is\nan excellent program.\n\nThe other is based on CLIP COMP-\nOSER which was in OUTLET some\nyears ago. There are many\nimprovements and enhancements to\nmake it beautifully easy to\nbuild up composite pictures from\nclips or parts of other screens.\n\nMalcolm Goodman's name will be\nfamiliar to regular readers as\nan indefatigable contributor of\nshort but tricky machine-code\nutilities. His production line\nseems to have been doing over-\ntime recently, so you can look\nforward to collecting these\nuseful routines in this and many\nfuture issues.\n\nAlso plenty of magnificent demos\nto come, although looking at\n\"AGONY\" in this current issue,\none wonders if there is anything\nleft to amaze us?\n\nYou'll be surprised!\n\n                        Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Looking at the healthy stock of contributions to OUTLET shows that we currently have a lot of music programs of all types, so there will certainly be some sounds to enjoy in next month's issue.\n\nFor those fortunate enough to have something to invest, there is an in-depth investment analysis program to help you through the pitfalls, complete with examples and detailed explanations.\n\nYou will also have the chance to discuss problems of any sort, in a pleasant (??) chat with Mr. Grumpy!\n\nThere are two graphics-orientated programs in the pipeline...\n\nOne is another U.D.G. generator and I make no apologies for including it so soon after the one in OUTLET #81 because it is an excellent program.\n\nThe other is based on CLIP COMPOSER which was in OUTLET some years ago. There are many improvements and enhancements to make it beautifully easy to build up composite pictures from clips or parts of other screens.\n\nMalcolm Goodman's name will be familiar to regular readers as an indefatigable contributor of short but tricky machine-code utilities. His production line seems to have been doing overtime recently, so you can look forward to collecting these useful routines in this and many future issues.\n\nAlso plenty of magnificent demos to come, although looking at \"AGONY\" in this current issue, one wonders if there is anything left to amaze us?\n\nYou'll be surprised!\n\nChris.\n",
+  "body_ru": "Взгляд на солидный запас материалов, присланных в OUTLET, показывает, что сейчас у нас скопилось множество музыкальных программ самых разных типов, так что в выпуске следующего месяца определенно будет что послушать.\n\nДля тех счастливчиков, у кого есть средства для инвестиций, готовится подробная программа инвестиционного анализа, которая поможет избежать подводных камней; к ней прилагаются примеры и детальные пояснения.\n\nУ вас также появится возможность обсудить любые проблемы в приятной (??) беседе с мистером Ворчуном (Mr. Grumpy)!\n\nНа очереди две программы, ориентированные на графику...\n\nОдна из них — очередной генератор U.D.G., и я нисколько не оправдываюсь за то, что публикую его вскоре после генератора в OUTLET #81, ведь программа действительно превосходная.\n\nВторая основана на CLIP COMPOSER, выходившем в OUTLET несколько лет назад. В ней появилось множество улучшений и доработок, благодаря которым собирать составные картинки из фрагментов других экранов станет потрясающе легко.\n\nИмя Malcolm Goodman хорошо знакомо постоянным читателям: это неутомимый автор коротких, но хитроумных утилит в машинных кодах. Кажется, в последнее время его «конвейер» работал сверхурочно, так что вы можете рассчитывать на пополнение своей коллекции полезных подпрограмм как в этом, так и во многих будущих номерах.\n\nКроме того, впереди много великолепных демо — хотя, глядя на «AGONY» в текущем номере, невольно задаешься вопросом: осталось ли еще хоть что-то, способное нас удивить?\n\nВы будете поражены!\n\nChris.\n",
+  "text_type": 3
+}

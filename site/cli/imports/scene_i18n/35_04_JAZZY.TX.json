@@ -1,0 +1,48 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "35",
+  "article_id": "04_JAZZY.TX",
+  "source_lang": "de-AT",
+  "title_en": "Rabbit Jazzy 128",
+  "title_ru": "Rabbit Jazzy 128",
+  "meta_description_en": "A brief look at Rabbit Jazzy 128 for the ZX Spectrum, converted by Matsoft, featuring \"Nu, pogodi!\" style gameplay and an interlaced graphics mode.",
+  "meta_description_ru": "Краткая заметка об игре Rabbit Jazzy 128 для ZX Spectrum, конвертированной Matsoft: геймплей в стиле «Ну, погоди!» и режим interlace (LACE).",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "rabbit-jazzy",
+      "tag_alias": "rabbit-jazzy"
+    },
+    {
+      "tag_name": "matsoft",
+      "tag_alias": "matsoft"
+    },
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "nu-pogodi",
+      "tag_alias": "nu-pogodi"
+    },
+    {
+      "tag_name": "interlace",
+      "tag_alias": "interlace"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "JAZZ ü - Rabbit Jazzy 128 - Mit herzlichen Dank an Matsoft für\ndie konvertierte Version;! Bei Jazzy müssen sie wie schon bei\ndem Spiel \"Nu Pagadi\";-) Eier gleich beim Produzenten abfangen,\nklingt einfacher alsesist. Eine besonderheit dieses Programms\nist die verwendung desLACE modus um die Attr-Grenzen zu\nsprengen.m - Thanx goes to Matsoft for the converted version/!\nIn Jazzy you must like in the game \"nu pagadi\" catch all theeggs\ndirectly at her producer, sounds easy?. A special of this\nprogramm is the use of the lace mode to stopattributes from clas\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**Rabbit Jazzy 128**\n\nMany thanks go to Matsoft for the converted version!\n\nIn Jazzy, just like in the game *Nu, pogodi!* ;-), you have to catch eggs directly from the producer — sounds easier than it actually is.\n\nA special feature of this program is the use of the LACE (interlace) mode to overcome attribute clash limits.\n",
+  "body_ru": "**Rabbit Jazzy 128**\n\nСердечная благодарность Matsoft за конвертированную версию!\n\nВ Jazzy вам, как и в игре «Ну, погоди!» ;-), предстоит ловить яйца прямо на выходе у «производителя» — звучит проще, чем оказывается на самом деле.\n\nОсобенностью этой программы является использование режима LACE (interlace), чтобы преодолеть ограничения клэшинга атрибутов.\n",
+  "text_type": 3
+}

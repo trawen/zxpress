@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "115",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс номера",
+  "meta_description_en": "A preview of the upcoming April issue of Outlet (#116), featuring a DTP package, technical guides on monitors and HD drives, utilities, and Vaxtrek.",
+  "meta_description_ru": "Анонс апрельского выпуска журнала Outlet (#116): настольная издательская система, техническая статья о мониторах и дисководах HD, утилиты и Vaxtrek.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "дисководы",
+      "tag_alias": "disk-drives"
+    },
+    {
+      "tag_name": "утилиты",
+      "tag_alias": "utilities"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "So what is the link between Tony\nBullimore,Thierry Dubois and the\nApril issue of OUTLET?\n            ? ? ? ? ?\nThe answer will be revealed when\nyou see the wonderfully animated\ntitle page of next month's OUT-\nLET.\n\nThere are also lots of useful\nutilities to look out for, incl-\nuding a Desk-Top-Publishing pac-\nkage for creating your own post-\ners, adverts, invitations etc.,\n\n\nor simply adding illustrations\ninto your text. There's another\nto add a stripey border, and one\nwhich allows you to have a size-\nable Basic program and yet load\ncode at a low address and anoth-\ner utility to transfer +D files\nto tape.\n\nOn the technical side is an in-\ndepth discussion about monitors\nand drives, including the reason\nwhy high-density (HD) discs oft-\nen fail in a 780k Spectrum sys-\ntem. There is also an instruct-\nive OUTCLASS about calling mach-\nine code routines, whilst in a\nlighter vein there is a tricky\nand addictive strategy game and\nsome more super sound-samples\nplus a dire warning in VAXTREK\n\n\nfor anyone who collects pencils,\nwith a brief guest appearance of\nthat world famous explorer and\nhunter Elmer Fudd.\n\nAll wonderful stuff!\n\n             Cheers,\n\n                    Chris\n.\n",
+  "body_ru_plain": "",
+  "body_en": "So what is the link between Tony Bullimore, Thierry Dubois and the April issue of OUTLET?\n\n? ? ? ? ?\n\nThe answer will be revealed when you see the wonderfully animated title page of next month's OUTLET.\n\nThere are also lots of useful utilities to look out for, including a Desk-Top-Publishing package for creating your own posters, adverts, invitations etc., or simply adding illustrations into your text. There's another to add a stripey border, and one which allows you to have a sizeable Basic program and yet load code at a low address and another utility to transfer +D files to tape.\n\nOn the technical side is an in-depth discussion about monitors and drives, including the reason why high-density (HD) discs often fail in a 780k Spectrum system. There is also an instructive OUTCLASS about calling machine code routines, whilst in a lighter vein there is a tricky and addictive strategy game and some more super sound-samples plus a dire warning in VAXTREK for anyone who collects pencils, with a brief guest appearance of that world famous explorer and hunter Elmer Fudd.\n\nAll wonderful stuff!\n\nCheers,\n\nChris\n",
+  "body_ru": "Что общего между Тони Буллимором, Тьерри Дюбуа и апрельским выпуском журнала OUTLET?\n\n? ? ? ? ?\n\nОтвет откроется, как только вы увидите потрясающе анимированный титульный экран следующего номера OUTLET.\n\nКроме того, вас ждёт множество полезных утилит, среди которых настольная издательская система (DTP) для создания собственных плакатов, рекламных объявлений, пригласительных и тому подобного — или просто для вставки иллюстраций в текст. Будет ещё одна программка для создания полосатого бордюра, утилита, позволяющая сохранять объёмную программу на Бейсике и при этом загружать машинный код по низким адресам, а также конвертер файлов с +D на ленту.\n\nС технической стороны запланирован подробный разговор о мониторах и дисководах, включая объяснение причин, почему диски высокой плотности (HD) часто дают сбои на 780-килобайтной системе Спектрума. Также вас ждёт поучительный урок OUTCLASS по вызову подпрограмм в машинном коде, а в качестве развлечения — хитроумная и затягивающая стратегическая игра, новая порция отличных звуковых сэмплов и грозное предупреждение в рубрике VAXTREK для всех любителей коллекционировать карандаши, дополненное кратким визитом всемирно известного исследователя и охотника Элмера Фадда.\n\nВсё самое интересное!\n\nС наилучшими пожеланиями,\n\nChris\n",
+  "text_type": 3
+}

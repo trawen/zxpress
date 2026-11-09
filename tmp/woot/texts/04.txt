@@ -1,0 +1,203 @@
+Woot! #04 — ZXMAS 2020
+======================
+
+Yes. You didn't dream it - 2020 actually happened. This was the year dominated by the Coronavirus pandemic, furlough, danish zombie mink and Donald Trump (now sod off!). What may have been a disaster for the global economy has been good for Spectrum development. We've had numerous competitions with a very high standard of entries. The Bytemaniacos BASIC competition has been especially impressive. This part of the magazine will not dwell on the pandemic (see the Woot Covid Chronicle for that), but on general wibble and speccy stuff.
+ENJOY THE MAG! KEYS O/P to PAGE LEFT & RIGHT.
+
+As if 2020 wasnt barmy enough, in September, the SCHSC (Spectrum Computing Hi-Score Challenge) went inexplicably mad for Micromania's Kosmic Kanga. Lord of the loonies was Clebin, who managed to complete it and clock up a whopping 11739 points in doing so.
+
+zzzzTHE GREAT ZXDB THEFT
+
+THis tape magazine is intended to be fun, but it would be wrong not to mention the dishonourable actions of a prominent err... resident of the Speccy scene this year. It transpired in June that the "World of Lee" was using ZXDB while trying to disguise it and pretend it was his own database. Specifically, ZXDB version 1.08 released on September 2, 2018. It was performed with all the brass neck of donald trump, and all the competence of Frank Spencer. Some ugly scenes followed.
+ZXDB is for anyone, as long as they give credit to the countless hours of work by the community.
+For more info, and the proof, go here: spectrumcomputing.co.uk/forums/viewtopic.php?f=32&t=2829
+
+AS INSPIRED BY THE SPECTRUM COMPUTING FORUM :-)
+
+PRESS Y FOR THE AWARDS,
+OR O<>P TO PAGE OUT
+
+The Yandex games competition usually comes up with at least one 'WHOA!' epic title, and with Cosmic Payback, this year is no different.
+True to homebrew game tradition, John has made his game, then clearly scribbled down any barmy old cack afterwards and called it a backstory. The game is set on Earth in 2562, after centuries of war (oh goddd...), the unthinkable happens, and an armada steals virtually all our gold, leading to a recession of unparalleled proportions (oh godd...). Your task is to pilot an exploration pod, and navigate the enemy planet "by bouncing upon it".
+
+The game takes place in a monochrome, pseudo 3D vector landscape. You must navigate the thin paths set in an ocean of lethal pitch-black tar. Large areas are scrolling in all directions. There's clearly some technical brilliance going on here. I'm not even sure what it's doing, let alone how, but I know that it's making the speccy do something difficult, and do it smoothly and quickly.
+During the game you will encounter crumble platforms, moving squares, teleporters, enhanced jumps, and switches. Some of the platforms move in a given pattern, and it's quite a challenge to get your head around learning the dance of the tiles. The game is not easy, and John has been very humane in providing a casual mode (infy lives) and arcade mode (lives & scoring). It may be a riff on the classic formula of 'collect the things and go to the exit', but by crikey it's a fresh riff.
+
+The 128K version has three AY tracks, but two of them really don't work - they are too upbeat and would be better suited to a cutesy puzzle game. The 48K version is perfect, you get Bach's Badinerie as the intro music, and all you need in-game is eerie silence, punctuated only by the soft padding of the bouncing pod.
+I'm definitely nitpicking now, as this is one of the best games of the year, but the title sells the game short. I'd prefer something a bit more mystical and spacey - a good trick is to take a product from the bathroom cabinet and add some of the rarer letters of the alphabet. Xanusol?
+Another classic release from PROSM software. If this was 1984, John would have a sports car and a drug problem by now.
+
+PRESS Q & A TO SCROLL THROUGH THE GRAPHS
+
+Cosmos Orbital Landing Outer Crash Officer. Hmm. Thankfully the game is better than the acryonym. Coloco is a thrust like game that relies on heavy inertia. You'd be forgiven for not being terribly excited by the concept of a churro (a game made using the MK engine) with inertia, because that's their stock-in-trade. This time however, it fits the game exceptionally well.
+The game is split into 30 small levels over 3 rather well presented worlds. You need to guide your craft to the stranded ruddy faced grinning imbeciles and bring them back to base. Touch most of the scenery and you're a goner, though you are gifted with some much needed safe pads as the levels get harder. Unlike Thrust, the movement is not vector based, and the collisions are not pixel perfect. Thankfully the collisions are biased in favour of the player, as it's nice to get away with a few overshoots when many other games are so cruel.
+
+The controls are very sensitive, and take a bit of getting used to. In fact even when you're au-fait, it's still perfectly possible to lose concentration for a moment and spunk half of your lives away.
+It's not totally new, because Jet Paco has tried this idea before, but Coloco takes it to another level. The levels are smaller and better designed, with fuel stops en-route that increase the need for strategy.
+It's a visual treat, but unfortunately it falls back on the stock sounds that let you know it's a churrera game. Overall though, it's fresh, and is exactly what I want to see in a churro. Pass the chocolate sauce please.
+
+Of all the March releases, this one came at the perfect time for many. The UK had just entered full lockdown, the local Sainsburys was like a scene from The Handmaid's Tale and many of us weren't sure what we'd be using to wipe our arse with tomorrow. Reverse Pong is 'reverse' because the tables are turned and the player is the ball - reincarnation and karma, apparently. Two bats automatically move vertically at the edges of the screen, and you can adjust your trajectory up or down. You need to collect the yellow balls, and bounce off the bats to avoid the killer spikes behind them. In later levels there are more deadly obstacles to avoid in the middle of the screen.
+And that's about the size of it. It's nineteen levels, plain graphics and sound, character cell movement with no fancy vectors. This simple, compiled BASIC game took me out of the covid disaster movie for a couple of evenings. Thankyou Miguetelo.
+
+Big is not necessarily beautiful.
+Where "SQIJ 2018" was a remake of the original C64 version of SQIJ, "SQIJ'D" is a more creative sequel. You are still a bird (a very attractive parrot-like sprite) flying around a hemmed-in system of blue caves, but here the now assembled Ener tree has taken over somewhat. Your task is to gather Dovelets and feed them to this bloody tree, until it can eat no more. You shoot bolts of stomach acid, which you need to recharge on the bubbling ponds.
+
+The graphics are proper smart, and much more detailed than either of the other versions, there are eggs, mushrooms and carcasses scattered around, and the caverns are riddled with the roots of the Ener tree. The Ener tree itself is a treat to behold. The whole thing, supported by the AY music, has a spooky, trippy feel. Like the other versions, it's still quite hard to orientate yourself in the similar looking caverns, despite the more varied graphics. Learning the map is all part of the fun here. The main downside is that the AGD squelchy noise is a regular & annoying racket.
+If there were any doubts that "SQIJ 2018" failed to exorcise the demon of SQIJ, then SQIJ'D has definitely sent it packing. It's a cassette only release from Monument Microgames, but hopefully at some point it will be available more widely for emulators, because this is a cracking game that deserves to be played.
+
+There are two versions of this game: Ad Lunam and Ad Lunam Plus. The former is a 48K BASIC game submitted to the Bytemaniacos competition (another potential winner), and the latter is an enhanced 128K version.It's a management game with the humble goal of winning the space race. You need to get a human on the moon and return them safely to earth before the 'other side'. Your first decision is to choose your country. Do you want to be a capitalist pimp for the USA, or one of the USSR's communist androids? The choice dictates your game strategy, as each country's hardware has differences in reliability and power. There is a lot to this game, and it's clear that Alessandro has great interest and knowledge of the subject. You have to fund research and development and meet various milestones before you can (successfully) send a human payload. These milestone go from satellites to manned orbit to the final goal of planting feet on lunar dust.
+
+Ad Lunam is a game which, unfortunately for some of us, requires a lot from the player. These days our already short attention spans are being dragged in so many directions, and we seem to have less time to really apply ourselves to one game. You probably need to make it your primary bit of fun for a couple of weeks. Many of us will fail to do this game justice (me included), which is a sad indictment of these leg-jiggling times.
+My best effort was as the USSR where I had some initial unmanned success, but when Yuri Gagarin was killed during a botched launch was where things deviated from history (fortunately for Yuri). I don't think my work would have gone down terribly well with the politburo...
+
+NATIONAL HERO GAGARIN DIES
+
+A DAY OF MOURNING HAS BEEN DECLARED IN THE MEMORY OF COMRADE GAGARIN. ROCKET ENGINEER COMRADE HUGHES HAS DECIDED TO TAKE A SABBATICAL CHOPPING WOOD IN SIBERIA.
+
+This is a text adventure set in 1904. You are Emilia Vittorini, an archaeologist recently returned to Italy from fieldwork in Egypt. You have gleaned 25 crates of artifacts from Queen Nefertari's tomb, though something happens to your goods in transit. It is your task to recover them, and in doing so unravel a greater mystery. It's a brilliant plot and setting with more than a touch of Herge about it.There are no pictures, but the author's attention to detail and obvious passion for the subject more than make up for that. There are numerous historical and geographical references that add depth, even if you aren't familiar with the subject. Some of the language is delicious - it's not a mere pavement, but "porphyry stones", and more than the usual detail is given to things like trees, furniture and pieces of engineering.
+
+The adventure is split into 4 parts, but completing the game is not a mammoth task. I managed it over several very enjoyable & absorbed evenings. There were two occasions when I felt lost, or had to play 'guess the verb', which did spoil it a little, but it was still way better than my usual text adventure experience. A nice touch is that you can contact the author with the completion code and be added to his website's Hall of Fame :-)
+This is a game for anyone - from text adventure aficionados to duffers like me. Try it, you should enjoy it, and I *guarantee* you'll emerge with an enhanced knowledge of early twentieth century pneumatic doorbells.
+
+Funky Fungus #1 was Alessandro's third game, released in 2013. It was well received as a bit of an epic, but many said it was too hard, naming AGD's harsh (nay - excruciating) collision detection as the main culprit. There were also parts of the game that Alessandro wasn't completely happy with. Being the diligent chap that he is, Ale dealt with this unfinished business and released Funky Fungus Reloaded seven years later. You still play the eponymous mushroom, jumping around to collect the spinning star that enables you to destroy the acolytes of Seto Taisho. This reloaded version builds on the good stuff: more and better levels, several AY tracks (Ale is quite the all-rounder!), improved graphics, and some changed baddies to give is a more international feel, and it removes the bad stuff: the collision detection is better, and you get infinite continues. It's still a beast of a challenge, but now it's an enjoyable and importantly - achievable one.
+
+I'm not going to say "I can't believe it's BASIC", because I can - I just probably wouldn't have guessed. Wudang builds on Ariel's 1991 game "Kung Fu 2", and is an astonishing entry to this year's Bytemaniacos BASIC contest. It won't be at all surprising if it turns out to be the winner.
+You are Qi Wen Wei, and with the help of his Wudang sword and Wushu skills - which include mystical parkour - your task is to rescue your Taoist monk friend from buddist oppression. The game sidesteps BASIC's biggest weakness of slowness by only having one main active sprite on the screen, but it tackles all of its other shortcomings head on. The large varied map and numerous sizeable (not to mention gorgeous) graphics are not easy to manage in BASIC. I can only imagine what a pain it must have been to juggle all those redefined font sets.
+
+Programming language aside, it's a great game. There are strategic fights and puzzles, so to include decent intromusic and a batty style minigame almost seems like showing off!Is Wudang a great game? Yes. Is it the best game ever in BASIC? Maybe. Is it the most impressive BASIC game ever? Definitely.
+
+for some basic wisdom, or OP to page left/right.
+
+This was Packobilly's second game, and it was released during the start of the UK's covid-19 lock-down. It was well received, possibly because of the captive audience! On the face of it, Papyrus is 'just' another collecting flip-screen AGD game, with a familiar jumping arc, and charming but not jaw-dropping graphics. However, it seems much more than that, to me at least. I still don't know what is so "just right" about this game. It's greatest strength could be the level design. Most screens are quite challenging, and on the first few plays you are likely die on every one of them. But with 9 lives and 19 screens, collecting the 9 paprii and getting to the end is within reach without cheating. I played this game to death, first with snapshots (ahem), then with 9 lives, then managed a perfect. The game has no music, but the beeper plip and plops give it enough atmosphere. Papyrus is an uncomplicated oldschool game. Give it a go - I hope you enjoy it as much as I did.
+
+zzzzVAMPIRE VENGEANCE
+
+Senor Endaraues makes quality AGD games with a fresh feel. Vampire Vengeance is his 3rd, and IMO, best game. You will not be brandishing crosses or wielding wooden stakes in this game, as you play the evil shadow-lord himself: Count Orlack. An army of knights have besieged your castle, and you must kill or be killed. Your enemies come in various forms: stabbing knights, jumping jacks, marauding dogs and mystical shapeshifters. You are far from powerless - Count Orlack can fly as a bat, and when you press the fire key, bare his fangs and go for the jugular. This is a novel use of AGD, and creeping up on a knight from behind to go in for the kill is a delicious part of the fun. It meets all the modern criteria of what we call a polished homebrew game: great loading screen, graphics and appropriate AY music. At 31 challenging single screen levels, most players will probably use snapshots or POKEs, but it's no less enjoyable for it.
+
+HOW LONG WAS I ASLEEP?
+
+IS IN GOOD BITING ORDER
+
+YEP SEEMS HUNKY DORY
+
+NOW MY REIGN OF TERROR BEGINS!
+
+ACTUALLY - WHAT YEAR IS IT?
+
+LEAVE IT A FEW YEARS
+
+If Speccy games are anything to go by, the early 1980s was a strange place. Every tradesman was alliteratively named, and every factory seemed to accidently produce ignited bombs as a biproduct or issue a death sentence if you make a mistake. It's no wonder they were always on strike.
+Patrick Paddle, released for the 2020 Cassette16 summerjam, is the perfect embodiment of such a game. It captures all the quirky magic of the Spectrum, and misses out the flaws.
+
+You are Patrick, and you seem to be a very niche removal man. Items (yes, sometimes bombs) are lobbed at you, and you must use your paddle to propel them out of sight. If that wasn't enough, your workplace is on a highly active tectonic plate, so that rapidly shifting chasms are a hazard underfoot. All this might sound implausible in these safety conscious times, but it makes for a highly enjoyable & frantic hi-score challenge.
+Patrick is an amorphous blue blob that would give Horace more than a run for his money, and the simple white paper graphics and beeper dittys seal the deal.
+
+Mrs Paddle? I'm sorry to inform you that Patrick
+died at work today. He let the company down by neglecting to paddle a bomb. The good news is thatyou get his weekly earnings - a princely $1.66.
+
+As the only game submitted to the summer jam, Patrick Paddle won by default, which is a shame as it deserved the chance to beat off any competition - and as the Woot game of the year, it surely would.
+Patrick Paddle is early Spectrum era joy in a 16K bundle.So if you happen to have a time machine and for some reason want to live in 1982, take this game with you and claim it as your own - it will put you on the path to riches and fame. (and just in case it doesn't - "Grittar" won the National that year.)
+
+Proof that Satan exists and has discovered AGD.This game hurts. It was designed to hurt. Almost every jump needs to be pixel perfect, seemingly sub-pixel if that were possible. Most actions need femtosecond perfect timing, the rest let you off with the nearest microsecond or so. Blocks are placed knowingly to encourage you to plummet onto the spikes below. It's a minor miracle that you don't die if you fall too far (probably an oversight by the author).In many ways it's a typical AGD platformer (standard mechanics, graphics and sound all more than good enough), but I got so much more from it. The challenge is so intense, that you either focus properly, or you get nowhere and give up. You need to plan. You have to try and fail. Finishing a level, or even just a bit of one feels like a reward.
+
+An infy lives poke would be redundant here, as the fifty you are alloted is about right - the average human wouldn't be able to tolerate much more. At the time of writing, I still have the scary prospect of 11 levels to complete.
+
+It won't be everyone's cup of tea, but give it a go and see if the old magic is still there. Do be careful though, because if you play this too much, you'll be clawing out your eyeballs and screaming "libera te tutemet ex inferis" during the family skype call.
+
+OH, AND JUST WHEN YOU THOUGHT  YOU WERE SAFE...
+
+Meet Aura, the delivery duck. You have to gather 8 disks from your typically hazard strewn warehouse, so that they can be delivered. The main hook is the unusual, and possibly original exploding egg jump mechanic. It builds on an idea from UltraNarwhal's earlier game "Octukitty", in which you lay a sprite that you can jump on. Duckstroma's take on this is to give you an enhanced leap of two-thirds of the screen. It's pretty much a requirement to have a decent AY soundtrack these days, and the music here doesn't disappoint. In general the graphics are superb, though if I was to quibble, I'm not keen on the reuse of some of the graphics from Octukitty.Duckstroma makes excellent use of MPAGD, and so this game is also available on rubbish systems like the MSX & NES. There is also an Amiga version in development.
+
+There are people out there that claim they don't like cutesy games......but if you can look on this dancing duck and still feel nothing, you are dead inside.
+
+The end sequence sets us up nicely for a sequel, which Ultranarwhal has already announced he is working on. It will be called Cursageddon, and it sees Aura the duck in a Knight's armour in what appears to be a medieval castle. This sounds very exciting, though it does break the well-tested dictum that you should save time travel shenanigans for part three...
+
+ACTION/ADV GAME (NO DESIGNER)
+
+* THE GOLDEN ERA OF
+
+MT ENGINE GAMES (CHURROS)
+
+THE 2020 MOJON CONCURSO ALREADY
+
+Nothing for you here sir.
+
+You're not an alliterative
+
+So you're a roofer then?
+
+Thirty years man and boy.Look mate, there's nothing
+I don't know about roofery.
+
+Okay mate. We both know
+
+You're not an alliterative
+Spectrum character
+and have no place here.
+
+Stick to what you're good at: being a cartoon mix of
+Indiana Jones and Flash Gordon.
+
+AND YOU  CAN INSULATE
+A ROOF WITH ROCK WOOL
+
+THIS AWARD IS FOR SERVICES TO BARMY KEY SETTINGS. Why have five keys when you can combine fire and forward into the same key! I suppose we should be grafeful that back and forward weren't combined.
+
+AND ANOTHER AWARD FOR SERVICES TO BARMY KEY SETTINGS GOES TO Ultimate PLAY THE GAME. OK so you've mastered fast sprites, isometric engines and addictive gameplay, best to quit while you're ahead and not bother with an oh so complicated redefine keys routine. Yep - QWERT. Everyone LOVES QWERT don't they?!
+
+Yes. The game can be completed in 19 seconds, so you may as well extend the fun with an unskippable two minute space intro!
+
+THE SPECTRUM'S Most unreadable font. ACTUALLY, THE MOST UNREADABLE FONT IN THE UNIVERSE. In AD 877, Socrates famously said to Emperer Tiberius that the key to a good font is consistency and legibility. We must give credit where it's due - it may be totally illegible, but it is consistently illegible. Perhaps one day scholars will manage to decipher these cryptic runes.
+
+FWhat's the best way to spoil a beautiful, atmospheric and incredibly smooth 8 way scrolling shooter? Why, integrate a ridiculously fast roll of the dice minigame into it of course!
+
+THIS IS AN AWARD FOR THE MOST BARMY USER INTERFACE. THIS, AHEM, 'INNOVATIVE' INTERFACE WAS KNOWN AS THE REFLEX SYSTEM, AND IT RELIED ON CHOOSING WHICHEVER CHOICES HAPPENED TO BE SCROLLING IN AND OUT OF THE WINDOW AT THE TIME.
+Fortune favours the brave... except when it involves a bloody silly idea.
+
+Hello and god bless. Mary Whitehouse here. Self-appointed guardian of decency.
+Now then, I've been away for some time, but a recent decline in moral standards in ZX Spectrum software has been brought to my attention.
+One game in particular, Valley of Rains, written by foreign johnnies naturally, is an act of gratuitous moral turpitude.
+
+BLOOD AND SANDS! LOOK AT THAT!
+
+What on earth is she wearing? Is that even a G-string?!
+I don't care if she's a water spirit, that's no excuse for running around with your hot pocket on display.
+And just what is going on with her lady bumps?! If that's meant to be a boob tube, then I'd say it's faulty and should be returned to Marks and Spencers immediately.
+Let's sort this out. For starters, some comfortable bloomers and a proper upper foundation bra will introduce a little decorum.
+
+That hair is an afront to decency too. It belongs on a Welsh girl having a night out on the snakebite. dA sensible, and very tight, top-knot will ameliorate things.
+
+And we'll drop the slag wellies, thankyou very much. dThese hobnail boots will provide much needed ankle support while gallivanting around the place (which I also forbid).
+
+And it's cold out there - let's complete the ensemble with this donkey jacket, woolen leggings and hornrim spectacles.
+
+That's better. Now you can return life to the valley of rains without bringing shame on your poor mother.
+
+DANTERRIFIK II WAS RELEASED
+
+never eat INK 6 snowif bmi > 25 THEN LET dinner = NOT PI
+IF NOT up THEN LET santa = presents beware the false friend USR never RANDOMIZE when you can RUNa good man will NOT put a CAT in a BIN
+IF tv <> freeview THEN PAPER viewanyone that claims to have ever used the ABS command is a liar
+IF VAL "singleton" <> bluepeter THEN RESTORE johnnoakes if you desire an oddly smelling bread roll - GOSUB
+FOR p = head TO toilet STEP quickly
+IF ur > 18 THEN FLASH me
+READ christmascards AND BIN 1
+IF ABR r < fit THEN GOTO gym: RUN
+REM brexit: CLOSE# BORDER AND RUN
+IF bladder = full THEN PAUSE 4: NEXT p
+TO RESTORE TAN GO TO beach
+IF many * PEEK IN keyhole THEN POKE IN i, hard
+TO RETURN TO beach CIRCLE globe
+TO SAVE globe PAUSE carbon
+IF u = satatist THEN CIRCLE 6,6,6: GOTO hell
+TO CLEAR carbon LET INK 4 PAPER grow OVER
+
+IF hand=2 THEN LET bush=1
+
+IF mynumbers=winningnumbers THEN let house = willysmansion
+
+GOTO gym AND LET ABS = 65535
+
+nvnvnvnvnvnvnvnvnvnv
+
+FFFFFGFFFFGFFFGGGFGGFGG

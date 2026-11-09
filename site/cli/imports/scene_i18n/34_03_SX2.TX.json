@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "34",
+  "article_id": "03_SX2.TX",
+  "source_lang": "de-AT",
+  "title_en": "Scene+ Index of Past Issues",
+  "title_ru": "Индекс прошлых номеров Scene+",
+  "meta_description_en": "Index of games, demos, applications, and extra materials featured in previous issues of Scene+ magazine (issues 31–33).",
+  "meta_description_ru": "Указатель игр, демоверсий, прикладных программ и дополнительных материалов, опубликованных в предыдущих номерах журнала Scene+ (выпуски 31–33).",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    },
+    {
+      "tag_name": "index",
+      "tag_alias": "index"
+    },
+    {
+      "tag_name": "catalog",
+      "tag_alias": "catalog"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_de_plain": "PV ü * * * * * * * / ( * * * ** * * * / * * * * * * * X ) * * *\n* ** * / X * * * * * * / * - Der SCENE+ Index aller vergangenen\nAusgaben - Spiele: Ausgabe nr: * Hamon Fourth 32* Way Out\npreview 31Arcanoid 128 31Armageddon (SVC) 33Bedlam 128 32Boovie\n231Boulder Dash V 32DoomMania 128 33Frodo 31Kaboom 32Krtek a\nAuticko 33Mezi Vezemi 128 (CZ) 33 - Demos: Ausgabe nr: 2ULD 323D\nLame 4K Intro 128 335Th Element 128 33Airspace 128\n31Circlelusions 31Delta Animation 1 (Fleet) 33Delta Animation 2\n(Start) 33Dementia 4K Intro 32Emulate 12831Entropy 12833Flaska\n33Funtasy 12832GOA 4K Intro 128 32Neverland 4K Intro 128\n33Oversun 4K Intro 128 32SDM 4K Intro 31Tunnel 128 31TV-X 12833\n- Anwendungsprogramme: Ausgabe nr: Delta Compressor Pack 33SQ\nTracker 32SQ Tracker Compiler 33 - Extras: Ausgabe nr: Doxycon\n'98 2nd place music 31Mathegenie 33Sceptical 32 - To be\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### The SCENE+ Index of All Past Issues\n\n#### Games\n\n| Title | Issue | \n| :--- | :---: |\n| Arcanoid 128 | 31 |\n| Armageddon (SVC) | 33 |\n| Bedlam 128 | 32 |\n| Boovie 2 | 31 |\n| Boulder Dash V | 32 |\n| DoomMania 128 | 33 |\n| Frodo | 31 |\n| Hamon Fourth | 32 |\n| Kaboom | 32 |\n| Krtek a Autíčko | 33 |\n| Mezi Věžemi 128 (CZ) | 33 |\n| Way Out preview | 31 |\n\n#### Demos\n\n| Title | Issue |\n| :--- | :---: |\n| 2ULD | 32 |\n| 3D Lame 4K Intro 128 | 33 |\n| 5Th Element 128 | 33 |\n| Airspace 128 | 31 |\n| Circlelusions | 31 |\n| Delta Animation 1 (Fleet) | 33 |\n| Delta Animation 2 (Start) | 33 |\n| Dementia 4K Intro | 32 |\n| Emulate 128 | 31 |\n| Entropy 128 | 33 |\n| Flaška | 33 |\n| Funtasy 128 | 32 |\n| GOA 4K Intro 128 | 32 |\n| Neverland 4K Intro 128 | 33 |\n| Oversun 4K Intro 128 | 32 |\n| SDM 4K Intro | 31 |\n| Tunnel 128 | 31 |\n| TV-X 128 | 33 |\n\n#### Applications\n\n| Title | Issue |\n| :--- | :---: |\n| Delta Compressor Pack | 33 |\n| SQ Tracker | 32 |\n| SQ Tracker Compiler | 33 |\n\n#### Extras\n\n| Title | Issue |\n| :--- | :---: |\n| Doxycon '98 2nd place music | 31 |\n| Mathegenie | 33 |\n| Sceptical | 32 |\n\n— To be continued...\n",
+  "body_ru": "### Указатель всех прошлых номеров SCENE+\n\n#### Игры\n\n| Название | Номер |\n| :--- | :---: |\n| Arcanoid 128 | 31 |\n| Armageddon (SVC) | 33 |\n| Bedlam 128 | 32 |\n| Boovie 2 | 31 |\n| Boulder Dash V | 32 |\n| DoomMania 128 | 33 |\n| Frodo | 31 |\n| Hamon Fourth | 32 |\n| Kaboom | 32 |\n| Krtek a Autíčko | 33 |\n| Mezi Věžemi 128 (CZ) | 33 |\n| Way Out preview | 31 |\n\n#### Демо\n\n| Название | Номер |\n| :--- | :---: |\n| 2ULD | 32 |\n| 3D Lame 4K Intro 128 | 33 |\n| 5Th Element 128 | 33 |\n| Airspace 128 | 31 |\n| Circlelusions | 31 |\n| Delta Animation 1 (Fleet) | 33 |\n| Delta Animation 2 (Start) | 33 |\n| Dementia 4K Intro | 32 |\n| Emulate 128 | 31 |\n| Entropy 128 | 33 |\n| Flaška | 33 |\n| Funtasy 128 | 32 |\n| GOA 4K Intro 128 | 32 |\n| Neverland 4K Intro 128 | 33 |\n| Oversun 4K Intro 128 | 32 |\n| SDM 4K Intro | 31 |\n| Tunnel 128 | 31 |\n| TV-X 128 | 33 |\n\n#### Прикладные программы\n\n| Название | Номер |\n| :--- | :---: |\n| Delta Compressor Pack | 33 |\n| SQ Tracker | 32 |\n| SQ Tracker Compiler | 33 |\n\n#### Разное / Экстра\n\n| Название | Номер |\n| :--- | :---: |\n| Doxycon '98 2nd place music | 31 |\n| Mathegenie | 33 |\n| Sceptical | 32 |\n\n— Продолжение следует...\n",
+  "text_type": 3
+}

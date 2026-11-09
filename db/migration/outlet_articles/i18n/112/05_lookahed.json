@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "112",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A preview of the upcoming Outlet #113: Celtic music, another episode of Vaxtrek, demos, a new game, and programming utilities for ZX Spectrum.",
+  "meta_description_ru": "Анонс готовящегося выпуска Outlet #113: кельтская музыка, продолжение Vaxtrek, демо, новая игра и утилиты для программирования на ZX Spectrum.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "vaxtrek",
+      "tag_alias": "vaxtrek"
+    },
+    {
+      "tag_name": "tasword",
+      "tag_alias": "tasword"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "If one were able to step back in\ntime some three thousand years,\ntaking a computer with you, I\nwonder what the reaction of the\nIron Age Celts would be? They\nwould probably cut off your head\n(a favourite occupation of\ntheirs), but maybe if you took\nnext month's OUTLET and played\nthem some Celtic music which has\nbeen handed down through the\nages, they might look on you as\na friend,maybe just chopping off\nan arm or leg or two?\n\n\nBesides some music and a further\nthrill-packed episode of VAXTREK\nwe bring you another fascinating\nstory - not to mention TWO super\ndemos and a first-class game to\nkeep you amused for hours.\n\nOn the computing and programming\nside there are several utilities\namong which are:- a novel way to\nsave bytes in a Basic program, a\nrapid REM remover, and a program\nwhich can convert ASCII text in\nvirtually any format (so long as\nit's a CODE file) into a TASWORD\n2 file.\n\nYes, OUTLET continues its momen-\ntum into 1997 with plenty of\nofferings of a wide variety and\ninterest.\n                         Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "If one were able to step back in time some three thousand years, taking a computer with you, I wonder what the reaction of the Iron Age Celts would be? They would probably cut off your head (a favourite occupation of theirs), but maybe if you took next month's OUTLET and played them some Celtic music which has been handed down through the ages, they might look on you as a friend, maybe just chopping off an arm or leg or two?\n\nBesides some music and a further thrill-packed episode of VAXTREK we bring you another fascinating story - not to mention TWO super demos and a first-class game to keep you amused for hours.\n\nOn the computing and programming side there are several utilities among which are: a novel way to save bytes in a Basic program, a rapid REM remover, and a program which can convert ASCII text in virtually any format (so long as it's a CODE file) into a TASWORD 2 file.\n\nYes, OUTLET continues its momentum into 1997 with plenty of offerings of a wide variety and interest.\n\nChris.\n",
+  "body_ru": "Если бы кому-то удалось отправиться в прошлое эдак на три тысячи лет назад, захватив с собой компьютер, интересно, какова была бы реакция кельтов железного века? Скорее всего, они бы просто отрубили вам голову (это было их любимым занятием). Но вот если бы вы взяли следующий номер OUTLET и включили им кельтскую музыку, дошедшую сквозь века, они, возможно, приняли бы вас за друга — ну, разве что отрубив руку или ногу-другую?\n\nПомимо музыки и очередного захватывающего эпизода VAXTREK, мы приготовили для вас еще один увлекательный рассказ, не говоря уже о ДВУХ великолепных демо и первоклассной игре, которая увлечет вас на долгие часы.\n\nЧто касается программирования и работы на компьютере, вас ждут полезные утилиты: оригинальный способ экономии байтов в Бейсик-программе, быстрый удалитель REM-строк, а также программа для конвертации текста ASCII практически любого формата (при условии, что это CODE-файл) в файл TASWORD 2.\n\nДа, OUTLET уверенно вступает в 1997 год с массой самых разнообразных и интересных материалов.\n\nChris.\n",
+  "text_type": 3
+}

@@ -1,0 +1,42 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "006",
+  "article_id": "05_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "Preview of the March issue of Outlet magazine: BIG TOP, CLEAR CUT, HANDYWIDE, HEXPRINT utilities, SHOUTBURST column, and more.",
+  "meta_description_ru": "Анонс мартовского номера журнала Outlet: утилиты BIG TOP, CLEAR CUT, HANDYWIDE, HEXPRINT, колонка SHOUTBURST и другие материалы.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "anons"
+    },
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "big top",
+      "tag_alias": "big-top"
+    },
+    {
+      "tag_name": "handywide",
+      "tag_alias": "handywide"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Planned for March is \"BIG TOP\",a\nnormal+double-height characters+\nudgs EDITOR; SHOUTBURST looks at\ns/ware violence;\"CLEAR CUT\"moves\nRAMTOP without clearing  screen/\nvariables plus the regulars  and\nitems undecided yet.On Opus disc\nand the B cartridge we also have\nHANDYWIDE,an easy-to-use command\ngiving 42/51/64 column printing;\n\"THAT'S THE TICKET!\" Part 3  and\n\"HEXPRINT\" Lprints a HEX/DECIMAL\nlook-up table. We'll try and fit\nin BONABANNER DEMO (missing from\nthis month due to lack of space).\n",
+  "body_ru_plain": "На март намечен \"BIG TOP\" — это \nРЕДАКТОР обычных+двойной высоты+\nUDG-символов; SHOUTBURST оценит \nнасилие в софте; \"CLEAR CUT\"    \nдвигает RAMTOP без сброса экрана\nи переменных; плюс привычные    \nрубрики и то, что пока не решено\n. На Opus disc и картридже B    \nбудет HANDYWIDE: удобная команда\nпечати в 42/51/64 колонки;      \n\"THAT'S THE TICKET!\" Part 3 и   \n\"HEXPRINT\", печатающий таблицу  \nHEX/DECIMAL. Попробуем добавить \nи BONABANNER DEMO (не вошедшую  \nиз-за нехватки места).\n",
+  "body_en": "## Lookahead\n\nPlanned for March is \"BIG TOP\", a normal+double-height characters+udgs EDITOR; SHOUTBURST looks at s/ware violence; \"CLEAR CUT\" moves RAMTOP without clearing screen/variables plus the regulars and items undecided yet. On Opus disc and the B cartridge we also have HANDYWIDE, an easy-to-use command giving 42/51/64 column printing; \"THAT'S THE TICKET!\" Part 3 and \"HEXPRINT\" Lprints a HEX/DECIMAL look-up table. We'll try and fit in BONABANNER DEMO (missing from this month due to lack of space).\n",
+  "body_ru": "## Анонс следующего номера\n\nНа март намечен \"BIG TOP\" — это РЕДАКТОР обычных+двойной высоты+UDG-символов; SHOUTBURST оценит насилие в софте; \"CLEAR CUT\" двигает RAMTOP без сброса экрана и переменных; плюс привычные рубрики и то, что пока не решено.\n\nНа Opus disc и картридже B будет HANDYWIDE: удобная команда печати в 42/51/64 колонки; \"THAT'S THE TICKET!\" Part 3 и \"HEXPRINT\", печатающий таблицу HEX/DECIMAL. Попробуем добавить и BONABANNER DEMO (не вошедшую из-за нехватки места).\n",
+  "text_type": 3
+}

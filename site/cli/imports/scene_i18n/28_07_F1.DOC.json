@@ -1,0 +1,40 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "28",
+  "article_id": "07_F1.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Formula 1 '98 Edition",
+  "title_ru": "Formula 1 '98 Edition",
+  "meta_description_en": "Brief release note for Formula 1 '98 Edition, a modified version of the CRL classic racing game featured in Scene+ #28.",
+  "meta_description_ru": "Краткая заметка о Formula 1 '98 Edition — модифицированной версии классической гонки от CRL, опубликованной в журнале Scene+ #28.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "formula-1",
+      "tag_alias": "formula-1"
+    },
+    {
+      "tag_name": "crl",
+      "tag_alias": "crl"
+    },
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "FORMULA ü\n----------------------------------------------------------------\nFORMULA 1 '98 EDITION\n----------------------------------------------------------------\nRestauriertes PC. AP File des alten CRL Klassikers\nmitverbesserter Graphik und neuen Namen in den Listen.\n----------------------------------------------------------------\nRestored PC. AP File of the old CRL Classic game with\nbetterGraphic and updated driver names.\n----------------------------------------------------------------\n----------------------------------------------------------------\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### FORMULA 1 '98 EDITION\n\nRestored PC. AP file of the old CRL classic game with improved graphics and updated driver names in the rosters.\n",
+  "body_ru": "### FORMULA 1 '98 EDITION\n\nВосстановленный файл PC. AP классической игры от CRL с улучшенной графикой и обновлёнными именами пилотов в списках.\n",
+  "text_type": 3
+}

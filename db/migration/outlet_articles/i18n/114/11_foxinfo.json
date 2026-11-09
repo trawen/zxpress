@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "114",
+  "article_id": "11_foxinfo",
+  "title_en": "Fox Monitor",
+  "title_ru": "Fox Monitor",
+  "meta_description_en": "Overview and keyboard controls for Fox Monitor, a compact ZX Spectrum machine code monitor and disassembler running entirely in screen memory.",
+  "meta_description_ru": "Обзор и управление для Fox Monitor — компактного дизассемблера и монитора машинного кода для ZX Spectrum, работающего прямо в экранной памяти.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "fox monitor",
+      "tag_alias": "fox-monitor"
+    },
+    {
+      "tag_name": "monitor",
+      "tag_alias": "monitor"
+    },
+    {
+      "tag_name": "debugger",
+      "tag_alias": "debugger"
+    },
+    {
+      "tag_name": "disassembler",
+      "tag_alias": "disassembler"
+    },
+    {
+      "tag_name": "assembler",
+      "tag_alias": "assembler"
+    }
+  ],
+  "category_ids": [
+    64,
+    66
+  ],
+  "body_en_plain": "FOX MONITOR\n          -----------\nThe next item is the Fox Monitor\n- a super machine code disassem-\nbler and monitor that runs in\nscreen memory leaving the rest\nof memory free! It is brilliant!\n\nWe run it automatically here in\nOUTLET for you but if you load\nthe code direct off the disk it\nwill autorun on the Disciple or\n+D. Use RANDOMIZE USR 16834 on a\nPlus 3.\n\nJust look at all the features!..\n\n\n      FOX Monitor Controls\n     ---------------------\n\n  q-quit\n  w-set trap in RAM\n  r-jp adr.\n  t-enter text in RAM\n  i-fill memory\n          (add,rl,clear,etc.)\n  o-poke\n  p-print\n  a-show ASCII\n  s-save headerless block\n  d-add or sub two numbers\n  f-find string (n-next one)\n  g-find bytes (n-next one)\n  h-hex/dec\n  j-load headerless file\n\n\n  l-move block of memory\n               (ldir,lddr)\n  x-set or examine registers\n    (keys 6,7 to move,\n          i-enter new value\n          x-return to Monitor)\n  b-binary conversion\n  m-set memory location\n\n\nYou can escape from all options\nby pressing EDIT or SPACE.\n\nIn HEX mode delete # to enter a\nDEC number.\n\nIn DEC Mode add # to enter a HEX\nnumber.\n\nMemory from 22784 to 65535 is\nfree for your use.\n\n\nMachine code programmers should\nhave no trouble figuring out the\nvarious options and what they do\nbut I might just clarify...\n\nIf you want to test your own\ncode, load it first and then the\nFox monitor. Use the M option to\nlocate a point in memory you\nwant to test UP TO and then the\nW option to set a trap (this\nseems to overwrite the original\npermanently though). Now use the\nR option to jump to where you\nwant to start running the code\nand it should run to the trap.\nUse the X option to examine the\nregisters.\n\nOne niggle is the value in A is\nshown combined with Flags - hard\nto read in decimal!\n\nFortunately you can toggle from\ndecimal to hex and back but it\nwould be nice if it showed the\nsingle value in A in decimal as\nwell as its ASCII.\n\nI wish it had a single step too\nbut what am I grumbling about!It\nis an excellent program and I\nrecommend you explore it fully!\n\n                          Brian\n\n         PRESS 'N' NOW\n    TO LOAD THE FOX MONITOR!.\n",
+  "body_ru_plain": "",
+  "body_en": "### FOX MONITOR\n\nThe next item is the Fox Monitor — a super machine code disassembler and monitor that runs in screen memory leaving the rest of memory free! It is brilliant!\n\nWe run it automatically here in OUTLET for you, but if you load the code direct off the disk it will autorun on the Disciple or +D. Use `RANDOMIZE USR 16834` on a Plus 3.\n\nJust look at all the features!..\n\n#### FOX Monitor Controls\n\n- `q` — quit\n- `w` — set trap in RAM\n- `r` — jp adr.\n- `t` — enter text in RAM\n- `i` — fill memory (add, rl, clear, etc.)\n- `o` — poke\n- `p` — print\n- `a` — show ASCII\n- `s` — save headerless block\n- `d` — add or sub two numbers\n- `f` — find string (`n` — next one)\n- `g` — find bytes (`n` — next one)\n- `h` — hex/dec\n- `j` — load headerless file\n- `l` — move block of memory (`ldir`, `lddr`)\n- `x` — set or examine registers (keys `6`, `7` to move, `i` — enter new value, `x` — return to Monitor)\n- `b` — binary conversion\n- `m` — set memory location\n\nYou can escape from all options by pressing EDIT or SPACE.\n\nIn HEX mode delete `#` to enter a DEC number.\n\nIn DEC Mode add `#` to enter a HEX number.\n\nMemory from 22784 to 65535 is free for your use.\n\nMachine code programmers should have no trouble figuring out the various options and what they do, but I might just clarify...\n\nIf you want to test your own code, load it first and then the Fox monitor. Use the `M` option to locate a point in memory you want to test UP TO and then the `W` option to set a trap (this seems to overwrite the original permanently though). Now use the `R` option to jump to where you want to start running the code, and it should run to the trap. Use the `X` option to examine the registers.\n\nOne niggle is the value in A is shown combined with Flags — hard to read in decimal!\n\nFortunately you can toggle from decimal to hex and back, but it would be nice if it showed the single value in A in decimal as well as its ASCII.\n\nI wish it had a single step too, but what am I grumbling about! It is an excellent program and I recommend you explore it fully!\n\nBrian\n\n*PRESS 'N' NOW TO LOAD THE FOX MONITOR!*\n",
+  "body_ru": "### FOX MONITOR\n\nСледующий пункт нашей программы — Fox Monitor, великолепный дизассемблер и монитор машинного кода, который работает прямо в экранной памяти, оставляя всю остальную память свободной! Просто блеск!\n\nВ OUTLET мы запускаем его автоматически, но если вы будете загружать код прямо с диска, он запустится сам на Disciple или +D. На компьютере ZX Spectrum +3 используйте команду `RANDOMIZE USR 16834`.\n\nТолько взгляните на весь этот арсенал возможностей!.. \n\n#### Управление Fox Monitor\n\n- `q` — выход (quit)\n- `w` — установить точку останова / ловушку в RAM (trap)\n- `r` — переход по адресу (`jp adr.`)\n- `t` — ввод текста в RAM\n- `i` — заполнение памяти (add, rl, clear и т.д.)\n- `o` — poke\n- `p` — печать (print)\n- `a` — показать ASCII\n- `s` — сохранить блок без заголовка (headerless)\n- `d` — сложение или вычитание двух чисел\n- `f` — поиск строки (`n` — следующее совпадение)\n- `g` — поиск байтов (`n` — следующее совпадение)\n- `h` — переключение hex/dec\n- `j` — загрузка файла без заголовка\n- `l` — перемещение блока памяти (`ldir`, `lddr`)\n- `x` — просмотр и редактирование регистров (клавиши `6`, `7` для перемещения, `i` — ввести новое значение, `x` — возврат в монитор)\n- `b` — двоичное преобразование\n- `m` — установить текущий адрес в памяти\n\nВыйти из любого режима можно нажатием клавиш EDIT или SPACE.\n\nВ шестнадцатеричном режиме (HEX) удалите символ `#`, чтобы ввести десятичное число (DEC).\n\nВ десятичном режиме (DEC) добавьте `#`, чтобы ввести шестнадцатеричное число (HEX).\n\nПамять с адреса 22784 по 65535 полностью свободна для ваших нужд.\n\nПрограммистам на машинном коде не составит труда разобраться во всех этих опциях и их назначении, но я всё же сделаю пару пояснений...\n\nЕсли вы хотите протестировать собственный код, сначала загрузите его, а затем уже Fox Monitor. Воспользуйтесь опцией `M`, чтобы найти адрес в памяти, ДО которого вы хотите провести выполнение, а затем нажмите `W`, чтобы поставить ловушку-trap (похоже, она безвозвратно перезаписывает оригинальный байт). Теперь с помощью клавиши `R` перейдите на адрес старта вашей процедуры — код начнет выполняться и остановится на ловушке. После этого используйте клавишу `X`, чтобы изучить состояние регистров.\n\nЕдинственная придирка: значение регистра A отображается объединенным с флагами (регистр F) — в десятичном виде это читать крайне неудобно!\n\nК счастью, можно переключаться между hex и dec, но было бы здорово видеть отдельное десятичное значение регистра A, а также соответствующий ему ASCII-символ.\n\nЕще хотелось бы иметь пошаговое выполнение (single step), но к чему эти жалобы! Это превосходная программа, и я настоятельно рекомендую изучить ее подробнее!\n\nBrian\n\n*НАЖМИТЕ 'N' СЕЙЧАС, ЧТОБЫ ЗАГРУЗИТЬ FOX MONITOR!*\n",
+  "text_type": 3
+}

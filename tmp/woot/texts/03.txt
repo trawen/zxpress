@@ -1,0 +1,142 @@
+Woot! #03 — ZXMAS 2019
+======================
+
+The famous debauched scene from Manchester city centre, New Years Eve 2016. By Rafal Miazga.
+
+>NORMAN REGRETTED THE TATTOO
+>AFTER THE DRUNKEN NIGHT OUT
+
+By Uglifruit. The best rendition EVER of Robert Burns's smash hit. Press "S" to skip, or any other key to play.
+
+YThe last couple of years of Speccy homebrew releases have felt like some kind of personal wish-fulfilment dream for the 15-year-old me. All the games I most loved playing in seaside arcades on summer holidays, but which never got decent home conversions for
+my beloved rubber-keyed buddy, have shown up one after the other in the form of some truly superb ports: Mister Kung Fu, Maze Death Rally-X, Terrapins, Horace And The Robots and most recently the tremendous out-of-the-blue appearance of Astro Blaster.
+Not only are they all wonderfully playable games in the here and now, they also make the past somehow retrospectively better. Because suddenly there's an alternate universe of the mind where we all got to enjoy them at the time instead of the relatively tatty efforts that actually came out.REVIEW: Mr Do! (Page 2)
+But Universal's colourful and action-packed manic-mining monster-masher from 1982, Mr Do!, was such a big ask for the Spectrum that despite it being a huge hit widely ported to every other format under the sun, nobody had even bothered to take a semi-serious Speccy stab at it until 2006, when Bob Smith produced the gorgeous-looking Farmer Jack In Harvest Havoc. But while it was deftly done, it didn't do Do!To experience the iconic bouncing ball, classic Can-Can music and the clever, extra-life-hunting ruleset we had to wait another 13 years for Adrian Singh and Mark R Jones to somehow cram the perky polka-dotted Pierrot into our beloved black rubber buddy.And what an absolutely phenomenal feat of cramming it is - capturing not only the look and sound of the coin-op but the feel, to the point where you almost forget that you're not playing the real thing, so similar and familiar are the rhythms and patterns.
+But then, to all intents and purposes, you are.
+
+Review by Rev. Stuart Campbell.
+
+Strangely enough, there are few text adventures for the Spectrum set in WW2, a potentially endless source of inspiration.
+It is worth noting, then, that Andy McDermott's Resistance not only takes its subject matter from the most tragic period of world history, but also gives the player the opportunity of impersonating a really unusual alter ego.It is 1943 and the protagonist is Mari Roux, a French 17-year old girl living in a small village, whose father was killed during the Nazi invasion. Her mother died of grief soon after; her older brother was forced to work in Germany, and has not been heard of for a year. No wonder, then, that she developed a deep hatred for the invaders.Offering herself to help the local Resistance, Mari receives one day a note from a man called Jean Agreste, the leader of the local undercover freedom fighters. Agreste will assign her several missions of sabotage and counter-propaganda, such as covering Nazi posters with Resistance ones, exposing a Nazi informer, and even stealing the Nazi flag from the town hall and throwing it
+
+Iinto a public toilet! After each mission, Mari has to meet Agreste again, who then assigns her another mission, until something very bad happens...The game is then divided into several sub-adventures, and the player, as Mari, will have to perform the assigned tasks without being discovered by the ubiquitous Nazi thugs and their local bootlickers, against which she will even have to fight for her life.The game is authored with The Quill and text-only. It is not very difficult, so it can be suitable for beginners. Puzzles are linear and do not require an excessive amount of ingenuity. Veterans, on the other hand, will appreciate the unusual and intriguing setting.
+
+Review by Alessandro Grussu.
+
+Give an infinite number of monkeys an infinite number of Spectrums, for an infinite amount of time, and they *STILL* wouldn't write SQIJ...
+
+QBy Denis Grachev, Retrosouls
+QGLUF is essentially an action packed painter-platform game with baddies that patrol horizontally, vertically, jump about, chase you and use lifts. That may be an already crowded genre, but GLUF has enough quality, playability, and personality to make it noteworthy. It's also a multicolour game, and of the
+18 released so far, it's the most fluid and action packed of the lot. It is down to clever design, but there is nothing here that feels compromised by the burden of a multicolour engine. It even manages vertical scrolling nicely.GLUF, the "Tesla Frog", must charge up on the battery, and release it onto the dead cells. This concept started as a UDG BASIC game devised during 1997, and what it finally became would have been inconceivable to anyone at the time. Hell - it's impressive enough now and we've had 8 years to habituate to multicolour trickery.
+
+Over the 25 levels, we are treated to two great AY tracks that are catchy enough to dislodge even the most stubbornly embedded "Come on Eileen" from your head. The most notable is a version of "Leva's Polka", a Finnish folksong that somehow became the Leekspin internet meme.If the game is lacking anything, then it's variety in the level design. It's fine, and it does develop as the game progresses, but there is a slight saminess to some of it. It certainly didn't stop me wanting to complete it.Denis, like all Russian coders, is probably doping in order to achieve these feats (just look at the 2019 Yandex comp!), but that doesn't change the fact that it's an astonishing achievement. There have been several evolutionary jumps in multicolour games over recent years, and GLUF is the latest. So here and now, we should plant a golden spike in the ground to mark it.
+
+The missing-in-action beatemup from Imagine Software. Clive must punch, knee, and (mostly) flying kick his way through the mean streets (after the Subway, obviously) until he meets the big boss - Chris Curry. You will need a rolled up newspaper...
+
+(...with apologies to Viz)
+Press "T" to scroll through the tips, or "OP" to change page.Contributions from R-Tape, Uglifruit, BobFossil, Douglas Reynholm, stupidget
+
+Acrocephalus schoenobaenus
+The following is an emulated custom loader, based on the birdsong of the sedge warbler.See here for more info: spectrumcomputing.co.uk/forums/viewtopic.php?f=24&t=719
+Press "S" to skip, "O" to page back, any other key to play demo.
+
+INTERVIEW: Big Bad Bertha
+
+AZX-Woot is in a lesser-known area of Soho to interview Big Bad Bertha from Renegade. We arranged to meet at her establishment "Big Bertha's Brothel & Retrocomputing Emporium.ZXW: Hello. You must be Bertha, I'm here for the interview.BBB: Hya. That's fine, let me check - Ok - Natasha is free for an "interview", as you call it. The rates are $50 for a happy handshake, $100 for Horatio, $375 for a walk in the woods and $500 for a trip to the junkyard. But no funny business - if you try any rough stuff with my girls I'll rip your nuts off and shove them down y-
+ZXW: NO! No. I'm here about the matter we discussed on the phone. The interview? About your time on Renegade?BBB: Oh I see! Sorry I thought you were one of the punters. Let's go to the back office. Go ahead.ZXW: Tell us about your time working on Renegade.
+
+BBB: It wasn't a great job. They put me in an unflattering vest top and kegs and the only direction I had was "just run at him and let him kick you in the head". I had to stand by and watch all my girls get punched in the chuff, and then get pummelled myself. I wouldn't stand for it now. I can't even say the money was good.ZXW: Were you disappointed not to appear in any of the Renegade sequels?BBB: Oh but I did. I was one of the dinosaurs. The only good news about that was that nobody could see my face. The on-set atmosphere wasn't very good, as it was obvious that the whole project was going to be a turkey. Everyone tried their best, the costumes were good, the sets more than serviceable, but there was no escaping the fact that it was a bloody time travelling beat em up! Which bellend came up with that idea?! If it was the 6th in the franchise it'd be more understandable, but the third? Nah.
+
+ZXW: What did you do after the Renegades?BBB: I spent several years as a nightclub bouncer, then started a management company for other bouncers, general heavies, and hitmen; and then I realised the real money was in prostitution. So I did an NVQ in boudoir management and advanced Madaming and set up my own spot in Soho.ZXW: And you're still in the trade I see.BBB: Well, being a Madame is recession-proof, so I'll never stop doing that, but I've diversified. I noticed how popular the whole "retro" thing has become, and people always want sex, so I decided to put the two together. We have a games room with ZX-Spectrums, Amstrads and even a C64 for the real perverts. It's a middle-aged man's paradise. In fact the computer room is probably more popular than the girls. Some of the punters only come in for the gaming, and some of them are interested in the girls, but "they just want to talk"... about retrogaming. So I've had to make sure all my girls are au-fait with everything from early 80s games to modern homebrew, with a smattering of hardware knowledge.
+
+BBB: One minute they're giving hand-relief to a middle manager, the next they're comforting some nerd because Salamander wasn't very good on the Speccy. These are the most niche bunch of weirdos they've ever had to cater for! ZXW: And how do you stay on the right side of the law?BBB: Well, similar to massage parlours, we use a special lingo to cryptically describe the services we offer. Here's the menu:
+
+ZXW: Interesting. What does a "Peter Pack Rat" involve?BBB: If you have to ask, you don't want to know.ZXW: Okayyyy. Thanks for your time Bertha. Can we get a few pictures before I go? Perhaps at the front of house?BBB: Yeah sure. I've just had a new sign put up. Sorry about the apostrophe.ZXW: Great. We're done. Thanks again... Actually, errr, I don't suppose Natasha is still free? I might be interested in a "William Wobbler"
+BBB: Let me see. Nope Natasha's busy now, I'm afraid we're full up. But you look like a man that needs a woman that's been around a bit, and knows a few tricks. And I'm very reasonable. Come to Bertha...
+
+Press O & P to page back/forward through magazine
+
+Every April 23rd, there is an alignment in the chuntey field...
+
+Great news: this year, the magazine has seen more contributions & game submissions than ever. Here is what else comes in this lovely bundle...
+
+-Chrismagic DOT! by Bob Fossil
+
+-THE DAY BEFORE THE DAY THE EARTH STOOD STILL
+
+-Desert Island SCREENS by R-Tape & contributors
+-JSW 12 Room Mini by AndyFord et al
+-Joe Blob by ESPECTOTEAM
+-Moritz & the Mildewed Moon by Team Moritz
+-English translation of Papa Noel, IvanZX
+
+-ZX-Quiz by R-Tape and contributors
+
+ADVANCED GRAPH PAPER SIMULATOR.WASD-Spc, C-Clear grid, OP-Exit <>.
+
+IIn a small village near Bremen, in 1846, Gunter Bikemayker stood forlorn in his workshop. Clutching his redundancy notice and divorce papers, he looked at his tools and felt an intense, burning hatred for mankind. It was at this point that Gunter resolved to make the worst bicycle in the world, to punish humanity for wronging him so badly. After a few weeks' work, Gunter stood back and examined his creation. He called it the "HasseBike". It had square wheels, a spike for a seat, chocolate handlebars, no gears (or drivetrain), and as it moved a mechanical hand poked the rider repeatedly in the kidneys. Gunter succeeded - it was undoubtedly the worst bike the world had ever seen, and it held this record until the 12th July 2006, when the Sinclair A-Bike was unleashed upon the world.Now, none of that is true, but it hopefully makes a mildly amusing introduction to my experience of the A-bike. I bought mine in 2018, while online and at the thin end of a bottle of wine.
+
+IAt best I hoped for a fun curio I could ride about, and maybe use for short commutes during busy rail journeys. When the bike arrived, I was impressed by its style and compactness. Folding and unfolding the A-Bike is not intuitive, but once you learn the trick it is quick and easy. So far so good - then I tried riding it. The tiny 6" wheels are made of rock-solid rubber, so everything except a perfectly planar surface is unbearable. And that's the good bit over with, because this bike is PROPERLY unsafe. It's a good job you can't go very fast, because the tiniest pothole will have you upended on the floor. The frame is so small, that anyone of average height and above will look ridiculous on it, and struggle to peddle with bent legs.However, I was determined to stick with it, because I paid good money for it, and the gearing and brakes do deserve some credit for being well-made. So I took it on a train journey.
+
+II walked a short way to the station with the bike already folded. This is where the A-Bike impresses - it's light to carry and easy to stow on even the busiest train. It was when I alighted to ride it the problems started. I felt frankly ridiculous on this slow, rattly bike. I don't know how much it really stood out, but I was so embarrassed that I was glad it was getting dark. Then the lightest drizzle started, and I found the A-Bike's latest flaw. The slick wheels and tiny frame do not want to balance or go forward when the ground is slightly wet - it wants to go sideways and slam you on your hip. After the second time this happened, I lay on the ground with the drizzle licking my face, and wondered how engineering's answer to SQIJ could ever be deemed fit for sale, and why did I love Sinclair products so much? I had no answer, other than to stand up, fold-up the A-Bike and walk to my destination with it - after all - this bike carries great...
+
+Helloooo! Welcome to the WOOT 2019 Tape Magazine. First credit to FZX for fonts, and ZX7 for compression (no offence Minidict).  Unfortunatley, writing these scrollers is the last job I do before release, so they tend to be exhausted ramblings. So here goes that: Since last year's WOOT we've had a mostly excellent year. December '18 saw the release of Black Mirror: Bandersnatch. Never before have so many retro references been seen by so many, and recognised by so few. Hackers also scrambled to decipher its easter egg, and gasman's game "NOHZDYVE" (lucky bast!)...High quality games continue to be released for the Speccy, many of the best were incentivised by competitions. Early 2019 saw the finale of the ZX-Dev comp, and recently we saw 19 games of terrifying quality emerge from Russia and E-Europe for the Yandex Retrogames comp. How do they do it?! The Bytemaniacos BASIC competition is seeing BASIC games that are actually fun (Aznar we're looking at you). A most unusual publisher also appeared with 20 games in quick succession - this was Bearsden Primary School, who used AGD to make 20 games! Dougie mcg must be the coolest teacher ever. The weens are probably even allowed to call him "Dougie". ZXDB continues to develop, and is being updated regularly, despite the pain & sorrow that SQL involves. It hasn't all been good though, there has been apparent purchasing and strongarm policing of Speccy IP, which got very messy for all parties involved. It's bizarre that these lessons need to be learned, but hopefully IP owners will realise the importance of working with "the scene". 2019 is the first year since 1996 WITHOUT A CRAP GAMES COMPETITION. The "winner", Monkzy was supposed to host and disappeared, and the previous host couldn't be contacted and no-one else wanted to put their cock in the vice. Shame. A massive thankyou to all the contributors. Now crack on and enjoy the magazine...That's the end of the magazine. Now check out the rest of the bundle! HAPPY ZXMAS EVERYONE.
+
+Instead of buying Spectrums listed on ebay as "not tested but it should work", keep a broken 48K in your attic, and post it to yourself.
+
+Keep flies out of your Spectrum's circuitry by storing raw meat on top of it, rather than inside.
+
+PERVERTS. Try resting your knackers on a hot 128K heatsink for a thrill.
+
+PERVERTS. Putting your knackers on a hot 128K heatsink is not as sexually gratifying as you might think.
+
+Get the warm fuzzy nostalgia of RAMpack wobble by jiggling a screwdriver in the USB port of your PC.
+
+GAMERS. Tweet a picture of yourself loading a game, then you don't need to play it.
+
+Recreate the EM radiation of your old CRT telly by sellotaping some Strontium-90 on top of your laptop.
+
+Fool your neighbour into thinking you have a ZX-Spectrum by buying a dial-up modem.
+
+CODERS. Save time by not putting anything after a REM statement - BASIC ignores it anyway.
+
+CODERS. Stop hackers by making your game so appalling that nobody can be bothered.
+
+DAVID CAMERON. If you break your mate's 48K by plugging the joystick interface in when switched ON, don't run away.
+
+NOUVEAU-RICHE MINERS. Avoid having a large clearing-up task in the morning by asking party-going revellers to tidy up as they go along.
+
+Save a miniscule fraction of your time by just typing J rather than LOAD before pressing <SYMBOL SHIFT> and P, twice, then <ENTER>, then waiting five minutes to play a game.
+
+ADVENTURERS. Prevent over-enthusiastic Dwarves from starting to sing about gold by not letting them sit down.
+
+SOFTWARE COMPANIES. Stamp out piracy COMPLETELY by making games that are so crap the tape they're on has more value as a blank tape.Cascade Software, address not supplied.Learn Piano Easily and develop incredible finger/brain independence by alternating between CURSOR/PROTEK and SINCLAIR INTERFACE 2 control methods each game.T.Stamper, Ashby-de-la-zouche
+ENTREPRENEURS. For maximum profit, bolt on a "datacorder" to an existing product and pretend it's a new one.
+
+VLOGGERS. Circumvent controversy by never ever making any jokes about old intellectual property with disputed ownership.Horace (Mrs). Ski Lodge Lane, The Alps.Prove the superiority of your machine over that of C64 owners' by showing off your rubber-massaged fingertips next to their calloused 'real key' worn ones.
+
+See the ending of games by turning the cassette over, and loading them backwards.
+
+SOFTWARE Houses. Trick children into buying your awful games by putting in-game screenshots from a system with superior graphics on the cassette cover with a microscopic disclaimer explaining that "Screenshots may be from different versions"
+
+AMSTRAD owners - ensure you get the very best arcade ports by simply buying a ZX Spectrum instead.
+
+MILLIONAIRES. Save yourself a lot of trouble by simply paying your maid a living wage to tidy up after any large gathering at your mansion.
+
+SPECTRUM Users, make people think you've got a Commodore 64 by constantly talking about how vivid the various shades of brown are.
+
+Don't waste precious time and money trying to get Jack and the Beanstalk to load.
+
+ZX-PHILANTHROPISTS. Replicate the enjoyment of supporting a crowdfunding project for free, by unwinding a coathanger and repeatedly poking yourself in the eye with it.
+
+PRESS "P" TO SKIP INTRO, ANY OTHER TO PLAY.STICK WITH IT, THE WORLD RECORD IS 1717s...
+
+GGGGGGGGFFFFFFFFDDDDDDDDDDDDDDDD
+
+Should ZX Spectrums be forgot,
+And never brought to mind?And auld loading time?For auld loading time, my dear,
+For auld loading time,
+So put the kettle on, my dear,
+For the sake of loading time.
+
+The R in "R Tape loading error,"

@@ -1,0 +1,53 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "026",
+  "article_id": "05_lookout",
+  "title_en": "Lookout",
+  "title_ru": "Lookout: Новости индустрии",
+  "meta_description_en": "Industry news and notes by Brian Gaff: SAM Coupe launch, ZX Spectrum software market share, magazine circulation stats, and press overview.",
+  "meta_description_ru": "Новости индустрии от Brian Gaff: запуск SAM Coupe, статистика рынка ПО Spectrum, тиражи компьютерных журналов и обзор свежей прессы.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "рынок софта",
+      "tag_alias": "software-market"
+    },
+    {
+      "tag_name": "пресса",
+      "tag_alias": "press"
+    },
+    {
+      "tag_name": "your sinclair",
+      "tag_alias": "your-sinclair"
+    },
+    {
+      "tag_name": "crash",
+      "tag_alias": "crash"
+    },
+    {
+      "tag_name": "computer shopper",
+      "tag_alias": "computer-shopper"
+    },
+    {
+      "tag_name": "железо",
+      "tag_alias": "hardware"
+    }
+  ],
+  "category_ids": [
+    130,
+    135,
+    102
+  ],
+  "body_en_plain": "MGT's new SAM COUPE computer has\nbeen \"launched\" to the media but\nit will be November before the\nfirst production models are sent\nout to the enthusiasts who have\nalready ordered the machine. We\nare still awaiting delivery of\na \"pre-production\" machine so we\ncan begin groundwork on a COUPE\nversion of OUTLET.\n\nEpson now have a 24-pin printer\nat only `299+VAT,printing at 180\nchars a second or 60 cps in NLQ\nmode.\n\nHitachi are researching devices\nthat will compute 10,000 times\nfaster than present technology\nThey claim to be making an opto-\nelectronic test chip next year\nwhich will use polaritons (sub-\natomic particles with properties\nof both electrons and light).\n\n\nMarket share figures of Spectrum\nsoftware are gradually reducing\nnow- 30% as against C64 - 20.8%,\nAmstrad- 14.8%, Amiga- 13.6%,\nST- 12.8%. I'm not sure if these\nfigures are units sold or \"cash\ntaken\" but they do NOT include\nbudget software which must boost\nthe Spectrum figure up to nearer\n40% I would have thought!\n\nNEW COMPUTER EXPRESS, now claims\na circulation of 25,000 against\nPOPULAR COMPUTING WEEKLY(17,000)\nbut there's been a DROP in sales\nof SINCLAIR USER (76,000) YOUR\nSINCLAIR (78,000) and,of course,\nCRASH (51,000).\n\nThis month's YOUR SINCLAIR has a\nreview of joysticks;listings for\na new hexloader,a message scroll\nand a fractal triangle routine\n(looks similar to one I've done\nfor OUTLET!). VIDEOVAULT now do\na full advert for the \"clive\ndrive\" + printer we've mentioned\nbefore. I think it uses odd, 50K\na side discs which is why the\ndrive is only `59.95.The printer\nis the same. Both share a `39.95\ninterface.If anyone buys one let\nus all know what it's like!\n\nCOMPUTER SHOPPER is still the\nbest,all-round computer magazine\n(on paper!).This month they look\nat sorting algorithms; 24-pin\nprinters; desktop video;computer\ngraphics;artificial intelligence\nand FORTRAN. Sinclair Scene has\nbits on Plus D Hacker, Plus D\nToolkit and Filer.\n\nI couldn't get a Sinclair User\nbefore our deadline but the good\nnews is I'll be moving back to\nLeicester during October(I edit\nOUTLET in London and post the\nmasters to Ron for duplication a\nweek before the month's end). It\nSHOULD mean I can complete the\nissue some days later each month\nand so not miss the odd magazine\nor news item AND streamline our\nservice by helping Ron!   -Brian.\n",
+  "body_ru_plain": "Новый компьютер SAM COUPE от MGT\nбыл «представлен» прессе, но лишь\nв ноябре первые серийные модели\nбудут разосланы энтузиастам,\nуже заказавшим эту машину. Мы\nвсё ещё ждем поставки «пред-\nсерийного» образца, чтобы начать\nподготовку версии OUTLET для\nCOUPE.\n\nУ Epson теперь есть 24-игольча-\nтый принтер всего за `299+VAT,\nпечатающий со скоростью 180 зн/с\nили 60 зн/с в режиме NLQ.\n\nHitachi исследует устройства,\nспособные считать в 10 000 раз\nбыстрее нынешних технологий.\nОни заявляют, что в следующем\nгоду создадут оптоэлектронный\nтестовый чип на поляритонах (суб-\nатомных частицах со свойствами\nкак электронов, так и света).\n\n\nДоля рынка программ для Spectrum\nсейчас постепенно снижается:\n30% против C64 — 20.8%,\nAmstrad — 14.8%, Amiga — 13.6%,\nST — 12.8%. Не уверен, эти цифры\nв штуках или «в деньгах», но они\nНЕ включают бюджетный софт,\nкоторый, думается мне, должен\nподнять долю Spectrum ближе\nк 40%!\n\nNEW COMPUTER EXPRESS теперь заяв-\nляет тираж в 25 000 против\nPOPULAR COMPUTING WEEKLY (17 000),\nно произошел СПАД продаж у\nSINCLAIR USER (76 000), YOUR\nSINCLAIR (78 000) и, конечно же,\nCRASH (51 000).\n\nВ этом номере YOUR SINCLAIR есть\nобзор джойстиков; листинги:\nновый hex-загрузчик, скроллер\nтекста и процедура фрактального\nтреугольника (похожа на ту, что\nя делал для OUTLET!). VIDEOVAULT\nтеперь дает полную рекламу \"clive\ndrive\" + принтера, о которых мы\nуже упоминали. Кажется, там\nстранные дискеты по 50K на сто-\nрону, поэтому дисковод стоит\nвсего `59.95. Принтер столько же.\nУ обоих общий интерфейс за\n`39.95. Если кто купит — дайте\nвсем знать, каково это!\n\nCOMPUTER SHOPPER по-прежнему луч-\nший универсальный компьютерный\nжурнал (на бумаге!). В этом\nмесяце там: алгоритмы сортировки;\n24-игольчатые принтеры; desktop\nvideo; компьютерная графика;\nискусственный интеллект и FORTRAN.\nВ Sinclair Scene есть заметки о\nPlus D Hacker, Plus D Toolkit\nи Filer.\n\nЯ не смог достать Sinclair User\nдо нашего дедлайна, но хорошая\nновость в том, что в октябре я\nпереезжаю обратно в Leicester (я\nредактирую OUTLET в Лондоне и\nвысылаю мастер-диски Рону на\nтиражирование за неделю до конца\nмесяца). Это ДОЛЖНО означать, что\nя смогу завершать номер на пару\nдней позже каждого месяца и не\nпропускать свежие журналы или\nновости, А ТАКЖЕ ускорить процесс,\nпомогая Рону!             -Brian.\n",
+  "body_en": "## Lookout\n\nMGT's new SAM COUPE computer has been \"launched\" to the media but it will be November before the first production models are sent out to the enthusiasts who have already ordered the machine. We are still awaiting delivery of a \"pre-production\" machine so we can begin groundwork on a COUPE version of OUTLET.\n\nEpson now have a 24-pin printer at only £299+VAT, printing at 180 chars a second or 60 cps in NLQ mode.\n\nHitachi are researching devices that will compute 10,000 times faster than present technology They claim to be making an opto-electronic test chip next year which will use polaritons (sub-atomic particles with properties of both electrons and light).\n\nMarket share figures of Spectrum software are gradually reducing now — 30% as against C64 — 20.8%, Amstrad — 14.8%, Amiga — 13.6%, ST — 12.8%. I'm not sure if these figures are units sold or \"cash taken\" but they do NOT include budget software which must boost the Spectrum figure up to nearer 40% I would have thought!\n\nNEW COMPUTER EXPRESS, now claims a circulation of 25,000 against POPULAR COMPUTING WEEKLY (17,000) but there's been a DROP in sales of SINCLAIR USER (76,000) YOUR SINCLAIR (78,000) and, of course, CRASH (51,000).\n\nThis month's YOUR SINCLAIR has a review of joysticks; listings for a new hexloader, a message scroll and a fractal triangle routine (looks similar to one I've done for OUTLET!). VIDEOVAULT now do a full advert for the \"clive drive\" + printer we've mentioned before. I think it uses odd, 50K a side discs which is why the drive is only £59.95. The printer is the same. Both share a £39.95 interface. If anyone buys one let us all know what it's like!\n\nCOMPUTER SHOPPER is still the best, all-round computer magazine (on paper!). This month they look at sorting algorithms; 24-pin printers; desktop video; computer graphics; artificial intelligence and FORTRAN. Sinclair Scene has bits on Plus D Hacker, Plus D Toolkit and Filer.\n\nI couldn't get a Sinclair User before our deadline but the good news is I'll be moving back to Leicester during October (I edit OUTLET in London and post the masters to Ron for duplication a week before the month's end). It SHOULD mean I can complete the issue some days later each month and so not miss the odd magazine or news item AND streamline our service by helping Ron!\n\n— Brian.\n",
+  "body_ru": "## Lookout: Новости индустрии\n\nНовый компьютер SAM COUPE от MGT был «представлен» прессе, но лишь в ноябре первые серийные модели будут разосланы энтузиастам, уже заказавшим эту машину. Мы всё ещё ждем поставки «предсерийного» образца, чтобы начать подготовку версии OUTLET для COUPE.\n\nУ Epson теперь есть 24-игольчатый принтер всего за £299+VAT, печатающий со скоростью 180 зн/с или 60 зн/с в режиме NLQ.\n\nHitachi исследует устройства, способные считать в 10 000 раз быстрее нынешних технологий. Они заявляют, что в следующем году создадут оптоэлектронный тестовый чип на поляритонах (субатомных частицах со свойствами как электронов, так и света).\n\nДоля рынка программ для Spectrum сейчас постепенно снижается: 30% против C64 — 20.8%, Amstrad — 14.8%, Amiga — 13.6%, ST — 12.8%. Не уверен, эти цифры в штуках или «в деньгах», но они НЕ включают бюджетный софт, который, думается мне, должен поднять долю Spectrum ближе к 40%!\n\nNEW COMPUTER EXPRESS теперь заявляет тираж в 25 000 против POPULAR COMPUTING WEEKLY (17 000), но произошел СПАД продаж у SINCLAIR USER (76 000), YOUR SINCLAIR (78 000) и, конечно же, CRASH (51 000).\n\nВ этом номере YOUR SINCLAIR есть обзор джойстиков; листинги: новый hex-загрузчик, скроллер текста и процедура фрактального треугольника (похожа на ту, что я делал для OUTLET!). VIDEOVAULT теперь дает полную рекламу \"clive drive\" + принтера, о которых мы уже упоминали. Кажется, там странные дискеты по 50K на сторону, поэтому дисковод стоит всего £59.95. Принтер столько же. У обоих общий интерфейс за £39.95. Если кто купит — дайте всем знать, каково это!\n\nCOMPUTER SHOPPER по-прежнему лучший универсальный компьютерный журнал (на бумаге!). В этом месяце там: алгоритмы сортировки; 24-игольчатые принтеры; desktop video; компьютерная графика; искусственный интеллект и FORTRAN. В Sinclair Scene есть заметки о Plus D Hacker, Plus D Toolkit и Filer.\n\nЯ не смог достать Sinclair User до нашего дедлайна, но хорошая новость в том, что в октябре я переезжаю обратно в Leicester (я редактирую OUTLET в Лондоне и высылаю мастер-диски Рону на тиражирование за неделю до конца месяца). Это ДОЛЖНО означать, что я смогу завершать номер на пару дней позже каждого месяца и не пропускать свежие журналы или новости, А ТАКЖЕ ускорить процесс, помогая Рону!\n\n— Brian.\n",
+  "text_type": 3
+}

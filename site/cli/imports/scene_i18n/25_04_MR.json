@@ -1,0 +1,45 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "25",
+  "article_id": "04_MR",
+  "source_lang": "de-AT",
+  "title_en": "Moon Rover",
+  "title_ru": "Moon Rover",
+  "meta_description_en": "A brief review of the classic Moon Rover game from Scene+ #25.",
+  "meta_description_ru": "Краткий обзор классической игры Moon Rover из журнала Scene+ #25.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    },
+    {
+      "tag_name": "moon rover",
+      "tag_alias": "moon-rover"
+    },
+    {
+      "tag_name": "game review",
+      "tag_alias": "game-review"
+    }
+  ],
+  "category_ids": [
+    1,
+    2,
+    3
+  ],
+  "body_de_plain": "MOON_R ü MOON ROVER Mich würde es überraschen wenn Jemand dieses\nSpielprinzip nichtkennen würde. Man fährt mit einem\nAllradgetriebenen Fahrzeugüber die Mondoberfläche. Die Krater\nüberspringt man mit derTasten \"Oben\" oder \"Unten\" (Größerer\nSprung). Von Zeit zur Zeittauchen auch mal Feinde auf die man\nmit der Bordkannone kitzelnkann. Wenn man eine bestimmte Distanz\ndurchquert hat, klettert maneinen Level hinauf.\n----------------------------------------------------------------Well\nknown game: You drive a Moon Rover on lunas surface, jumpover\ncraters (up = small jump, down = big jump), fire at theUFOs and\nadvance a level after a small distance.\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### MOON ROVER\n\nI would be surprised if anyone didn't already know this game concept. You drive an all-wheel-drive vehicle across the lunar surface. You jump over craters using the \"Up\" or \"Down\" keys (larger jump). From time to time, enemies appear which you can tickle with your on-board cannon. Once you have covered a certain distance, you climb up a level.\n\n---\n\n*Original English summary:*\n\nWell known game: You drive a Moon Rover on luna's surface, jump over craters (up = small jump, down = big jump), fire at the UFOs and advance a level after a small distance.\n",
+  "body_ru": "### MOON ROVER\n\nМеня бы удивило, если бы кто-то не знал этот игровой принцип. Вы управляете полноприводным вездеходом на поверхности Луны. Кратеры перепрыгиваются клавишами «Вверх» или «Вниз» (более длинный прыжок). Время от времени появляются враги, которых можно пощекотать бортовым орудием. Преодолев определенную дистанцию, вы поднимаетесь на следующий уровень.\n\n---\n\n*Краткое резюме из оригинала (на английском языке):*\n\nХорошо известная игра: вы ведете луноход по поверхности Луны, прыгаете через кратеры (вверх = маленький прыжок, вниз = большой прыжок), стреляете по НЛО и переходите на следующий уровень, проехав небольшое расстояние.\n",
+  "text_type": 3
+}

@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "057",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "Brian Renwick previews Outlet #58: RAM Manager, fractal demos, Dice Mania game puzzle, character set designer, and more.",
+  "meta_description_ru": "Анонс следующего номера журнала Outlet: утилита RAM Manager, фрактальная демка Fractree, игра Dice Mania, редактор шрифтов и многое другое.",
+  "authors": [
+    "Brian Renwick"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "ram manager",
+      "tag_alias": "ram-manager"
+    },
+    {
+      "tag_name": "fractree",
+      "tag_alias": "fractree"
+    },
+    {
+      "tag_name": "dice mania",
+      "tag_alias": "dice-mania"
+    }
+  ],
+  "category_ids": [
+    123,
+    125
+  ],
+  "body_en_plain": "Planned for next month is RAM\nMANAGER, a machine code program\nthat runs in screen memory and\nenables you to monitor, edit,\nsearch and flood fill memory and\nlots of other features too; BALL\nis a neat animated ball demo and\nthere is another demo too: This\nis a fantastic all-machine code\ndemo featuring seemingly infin-\nitely-variable patterns, colour,\nspeed, complexity all under user\ncontrol and, brilliant as it is\nin 48K, with excellent, terrific\n128K sound if you have a 128K!\n\nFRACTREE is a great fractal demo\nreminiscent of the Manglegrot\nTree from OUTLET 6 but written\ncompletely independently and so\nrather different and individual.\nIt creates different sorts of\ntree structures according to the\ninput from you!There's more clip\nart, OUTCLASS of course, a very\ngood new character set designer\nand an unusual method of storing\ndata which includes bible quot-\nations,something like a concord-\nance, to demonstrate it.Finally,\nthere is a really addictive game\npuzzle called DICE MANIA which\nis all in machine code and will\nhave you scratching your head\nand climbing the wall (probably\nat the same time!). Don't miss\nnext month!\n                        - Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "Planned for next month is RAM MANAGER, a machine code program that runs in screen memory and enables you to monitor, edit, search and flood fill memory and lots of other features too; BALL is a neat animated ball demo and there is another demo too: this is a fantastic all-machine code demo featuring seemingly infinitely-variable patterns, colour, speed, complexity all under user control and, brilliant as it is in 48K, with excellent, terrific 128K sound if you have a 128K!\n\nFRACTREE is a great fractal demo reminiscent of the Manglegrot Tree from OUTLET 6 but written completely independently and so rather different and individual. It creates different sorts of tree structures according to the input from you! There's more clip art, OUTCLASS of course, a very good new character set designer and an unusual method of storing data which includes bible quotations, something like a concordance, to demonstrate it. Finally, there is a really addictive game puzzle called DICE MANIA which is all in machine code and will have you scratching your head and climbing the wall (probably at the same time!). Don't miss next month!\n\n— Brian.\n",
+  "body_ru": "В следующем месяце запланирован RAM MANAGER — программа в машинных кодах, работающая прямо в экранной памяти. Она позволяет просматривать, редактировать, искать данные, заполнять память и предлагает массу других возможностей. BALL — симпатичное анимированное демо с мячиком, а также будет ещё одно демо: фантастическая программа целиком в кодах с, казалось бы, бесконечным числом вариаций узоров, цветов, скорости и сложности — всё под вашим управлением! Она великолепно смотрится на 48K, а на 128K звучит просто потрясающе благодаря отличной музыке!\n\nFRACTREE — отличное фрактальное демо, напоминающее Manglegrot Tree из шестого номера OUTLET, но написанное с нуля, а потому самобытное и непохожее. Оно строит различные виды древовидных структур в зависимости от заданных вами параметров! Кроме того, вас ждут новые порции клипартов, регулярная колонка OUTCLASS, очень удачный новый редактор наборов символов и необычный метод хранения данных, для демонстрации которого приводится нечто вроде библейской симфонии с цитатами. И наконец, вас ждёт захватывающая игра-головоломка DICE MANIA, полностью написанная в кодах, от которой вы будете чесать в затылке и лезть на стену (возможно, одновременно!). Не пропустите следующий номер!\n\n— Brian.\n",
+  "text_type": 3
+}

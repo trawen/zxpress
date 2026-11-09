@@ -1,0 +1,52 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "128",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of the upcoming issue of Outlet: a complete guide to Head Over Heels, Through the Trap Door sequel, PC Spectrum emulator discussion, and utilities.",
+  "meta_description_ru": "Анонс следующего номера журнала Outlet: полное прохождение Head Over Heels, сиквел Through the Trap Door, эмулятор Спектрума для PC и набор полезных утилит.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "head over heels",
+      "tag_alias": "head-over-heels"
+    },
+    {
+      "tag_name": "trap door",
+      "tag_alias": "trap-door"
+    },
+    {
+      "tag_name": "don priestley",
+      "tag_alias": "don-priestley"
+    },
+    {
+      "tag_name": "emulators",
+      "tag_alias": "emulators"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    }
+  ],
+  "category_ids": [
+    123,
+    1
+  ],
+  "body_en_plain": "How are you getting on with that\nremarkable game HEAD-OVER-HEELS,\nwhich was in Issue 117? I'll bet\nthat I'm not the only one to\nhave given up through frustrat-\nion. But our worries are over\nnow, because next month's OUTPUT\ncontains a complete step-by-step\nguide through the game! Also for\ngames fans next month, is the\nsequel to THROUGH-THE-TRAPDOOR.\nAnother beautifully animated\ngame from Don Priestly.\n\n\nThe DRIVECHAT discusses the\nSpectrum emulator for the PC,\nand by coincidence, there is a\nutility for the emulator, which\nwe have adjusted so that you can\nsee it working on a \"proper\"\nSpectrum as well.Other utilities\ninclude one to change Basic line\nnumbers, a printer command-code\nsetter, a calendar maker, one to\nchange figures into VALs, and\nanother to rescue files that\nhave been lost or ERASED by mis-\ntake.\n\nThere is another good musical\ndemo, which although it has only\none screen, there is so much\nhappening that you wonder how\nthe Spectrum can cope with it\nall!\n                       Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "How are you getting on with that remarkable game HEAD-OVER-HEELS, which was in Issue 117? I'll bet that I'm not the only one to have given up through frustration. But our worries are over now, because next month's OUTPUT contains a complete step-by-step guide through the game! Also for games fans next month, is the sequel to THROUGH-THE-TRAPDOOR. Another beautifully animated game from Don Priestley.\n\nThe DRIVECHAT discusses the Spectrum emulator for the PC, and by coincidence, there is a utility for the emulator, which we have adjusted so that you can see it working on a \"proper\" Spectrum as well. Other utilities include one to change Basic line numbers, a printer command-code setter, a calendar maker, one to change figures into VALs, and another to rescue files that have been lost or ERASED by mistake.\n\nThere is another good musical demo, which although it has only one screen, there is so much happening that you wonder how the Spectrum can cope with it all!\n\nChris.\n",
+  "body_ru": "Как ваши успехи с замечательной игрой HEAD-OVER-HEELS, которая была в 117-м выпуске? Готов поспорить, что я не единственный, кто бросил её от безысходности. Но теперь наши мучения окончены, ведь в следующем номере будет полное пошаговое прохождение всей игры! Кроме того, любителей игр в следующем месяце ждёт продолжение THROUGH-THE-TRAPDOOR — ещё одна игра с потрясающей анимацией от Дона Пристли (Don Priestley).\n\nВ рубрике DRIVECHAT пойдёт речь об эмуляторе Спектрума для PC, и так совпало, что у нас есть утилита для этого эмулятора, которую мы адаптировали, чтобы вы могли увидеть её в работе и на «настоящем» Спектруме. Среди других утилит: программа для перенумерации строк Бейсика, настройщик командных кодов принтера, генератор календарей, утилита для перевода чисел в конструкции VAL, а также программа для восстановления файлов, утерянных или случайно удалённых командой ERASE.\n\nТакже вас ждёт ещё одно отличное музыкальное демо: хотя в нём всего один экран, на нём происходит столько всего, что остаётся лишь удивляться, как Спектрум со всем этим справляется!\n\nChris.\n",
+  "text_type": 3
+}

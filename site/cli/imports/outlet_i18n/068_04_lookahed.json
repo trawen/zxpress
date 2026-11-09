@@ -1,0 +1,39 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "068",
+  "article_id": "04_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of the next issue of Outlet: ZX Spectrum pseudo-random numbers, games, utilities, tape-to-disc transfers, fractals, and 3D maze.",
+  "meta_description_ru": "Анонс следующего выпуска журнала Outlet: псевдослучайные числа на ZX Spectrum, игры, системные утилиты, перенос с кассет на диск, фракталы и 3D-лабиринт.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet-magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Next month's OUTCLASS gives us a\nfascinating insight into the way\nthat the Spectrum produces its\npseudo-random numbers. There's a\ngame which is itself composed of\nmany little games to keep you\namused for hours; several\nutilities such as a Basic line\nanalyser, a rapid program-loader\nand a powerful tape-to-disc\ntransfer facility which will\nhandle either headed or header-\nless files of anything up to\n49152 bytes long.\n\nThere's a Metric/Imperial con-\nverter, a further informative\narticle about monetary matters,\na musical selection, a fractals\nprogram, a sort of Geographical\nquiz, a super 3D maze game...\n\nPhew! That lot must have filled\nall available space in the main\nOUTLET, but look for extras in\nADDENDERS too. Chris..\n",
+  "body_ru_plain": "",
+  "body_en": "Next month's OUTCLASS gives us a fascinating insight into the way that the Spectrum produces its pseudo-random numbers. There's a game which is itself composed of many little games to keep you amused for hours; several utilities such as a Basic line analyser, a rapid program-loader and a powerful tape-to-disc transfer facility which will handle either headed or headerless files of anything up to 49152 bytes long.\n\nThere's a Metric/Imperial converter, a further informative article about monetary matters, a musical selection, a fractals program, a sort of Geographical quiz, a super 3D maze game...\n\nPhew! That lot must have filled all available space in the main OUTLET, but look for extras in ADDENDERS too. Chris..\n",
+  "body_ru": "В следующем месяце рубрика OUTCLASS предложит увлекательный взгляд на то, как Spectrum генерирует псевдослучайные числа. Вас ждет игра, состоящая из множества мини-игр, которая увлечет вас на долгие часы, а также несколько полезных утилит: анализатор строк Бейсика, быстрый загрузчик программ и мощный инструмент переноса с кассеты на диск, способный работать как с файлами с заголовками, так и без них, размером вплоть до 49152 байт.\n\nКроме того, в номере будут: конвертер метрических и имперских единиц, еще одна познавательная статья о финансовых вопросах, музыкальная подборка, программа для построения фракталов, своего рода географическая викторина и отличный 3D-лабиринт...\n\nУф! Все это наверняка займет абсолютно все свободное место в основном выпуске OUTLET, но не забудьте заглянуть и за дополнительными материалами в ADDENDERS. Chris..\n",
+  "text_type": 3
+}

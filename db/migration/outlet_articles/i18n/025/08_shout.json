@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "025",
+  "article_id": "08_shout",
+  "title_en": "Shout: Women in Computing",
+  "title_ru": "Женщины и компьютеры",
+  "meta_description_en": "Brian Cavers reflects on women in computing, gender balance, removing social barriers, and letting natural inclination dictate representation without quotas.",
+  "meta_description_ru": "Размышления Брайана Каверса о женщинах в IT, гендерном балансе, преодолении стереотипов и естественном выборе профессии без навязанных квот.",
+  "authors": [
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "женщины в it",
+      "tag_alias": "women-in-it"
+    },
+    {
+      "tag_name": "мнение",
+      "tag_alias": "opinion"
+    },
+    {
+      "tag_name": "дискуссия",
+      "tag_alias": "discussion"
+    },
+    {
+      "tag_name": "общество",
+      "tag_alias": "society"
+    }
+  ],
+  "category_ids": [
+    135,
+    105
+  ],
+  "body_en_plain": "Every now and again you will see\nan article in the computer press\ndeploring the shortage of female\nusers in the computing field and\noutlining methods of trying to\narrive at a \"balance\" of male to\nfemale users. While I applaud\nefforts to remove all obstacles\nto girls who might otherwise be\ndeprived of a satisfying hobby\nor career, it annoys me to read\nof attempts to arrive at some\npre-conceived target proportion!\n\nEven encouraging girls to take\nup a career in computing may be\nwrong! What all of us, women and\nmen, should do is to give up our\nassumptions about the abilities,\nqualities and limitations of the\nfeminine mind - whether positive\nor negative - and let that mind\nexpress itself at its own level.\n\n\nBy that I mean let us permit the\nproportion of girls who WOULD be\ndrawn naturally to a hobby or\nemployment in computing(if given\nequal opportunities and spared\nsocial pressures and prejudices)\nto do so. Let those who are not\nso inclined be free to go in a\ndifferent direction.\n\nThe mistake is to think that the\nproportion must be around 50%!\nWomen  may turn out to be less,\nequally or even better qualified\nand able mentally to deal with\ncomputers at all or some levels\n- we just don't yet know.\n\nLet's hope that in years to come\n-when all the barriers have come\ndown- society can come to accept\nin the area of computing(as well\nas all other fields) whatever\nproportion of men to women comes\nabout by natural inclination and\nnot try to arrange things to fit\na pre-supposed \"equality\" model.\n\n                 - Brian Cavers.\n",
+  "body_ru_plain": "Время от времени в компьютерной\nпрессе попадаются статьи, где\nсокрушаются о нехватке женщин\nв сфере компьютеров и предлагают\nспособы достижения «баланса»\nпользователей мужчин и женщин.\nИ хотя я приветствую усилия по\nустранению любых преград для\nдевушек, которые иначе были бы\nлишены прекрасного хобби или\nкарьеры, меня раздражают попытки\nподогнать всё под заранее\nзадуманную «норму»!\n\nДаже призывать девушек делать\nкарьеру в сфере IT, возможно,\nнеправильно! Всем нам, и женщинам\nи мужчинам, стоит отказаться от\nстереотипов о способностях,\nкачествах и ограничениях\nженского ума — как позитивных,\nтак и негативных — и позволить\nему проявиться самому по себе.\n\n\nЯ имею в виду: давайте позволим\nдевушкам, которых ЕСТЕСТВЕННЫМ\nобразом тянет к компьютерам как\nк хобби или работе (при равных\nвозможностях и без давления\nобщества и предрассудков),\nзаниматься этим. А тем, кто к\nэтому не склонен, дадим свободу\nвыбрать другое направление.\n\nОшибочно думать, что пропорция\nобязана составлять около 50%!\nЖенщины могут оказаться менее,\nстоль же или даже более способны\nи подготовлены умственно к работе\nс компьютерами на всех уровнях\nили некоторых из них — мы просто\nпока этого не знаем.\n\nБудем надеяться, что со временем\n— когда рухнут все барьеры —\nобщество сможет принять в сфере\nкомпьютеров (как и во всех\nостальных областях) ту долю\nмужчин и женщин, что сложится\nсама собой, по естественным\nсклонностям, и не станет пытаться\nподгонять всё под надуманную\nмодель «равенства».\n\n                 - Brian Cavers.\n",
+  "body_en": "## Shout\n\nEvery now and again you will see an article in the computer press deploring the shortage of female users in the computing field and outlining methods of trying to arrive at a \"balance\" of male to female users. While I applaud efforts to remove all obstacles to girls who might otherwise be deprived of a satisfying hobby or career, it annoys me to read of attempts to arrive at some pre-conceived target proportion!\n\nEven encouraging girls to take up a career in computing may be wrong! What all of us, women and men, should do is to give up our assumptions about the abilities, qualities and limitations of the feminine mind — whether positive or negative — and let that mind express itself at its own level.\n\nBy that I mean let us permit the proportion of girls who WOULD be drawn naturally to a hobby or employment in computing (if given equal opportunities and spared social pressures and prejudices) to do so. Let those who are not so inclined be free to go in a different direction.\n\nThe mistake is to think that the proportion must be around 50%! Women may turn out to be less, equally or even better qualified and able mentally to deal with computers at all or some levels — we just don't yet know.\n\nLet's hope that in years to come — when all the barriers have come down — society can come to accept in the area of computing (as well as all other fields) whatever proportion of men to women comes about by natural inclination and not try to arrange things to fit a pre-supposed \"equality\" model.\n\n— Brian Cavers.\n",
+  "body_ru": "## Женщины и компьютеры\n\nВремя от времени в компьютерной прессе попадаются статьи, где сокрушаются о нехватке женщин в сфере компьютеров и предлагают способы достижения «баланса» пользователей мужчин и женщин. И хотя я приветствую усилия по устранению любых преград для девушек, которые иначе были бы лишены прекрасного хобби или карьеры, меня раздражают попытки подогнать всё под заранее задуманную «норму»!\n\nДаже призывать девушек делать карьеру в сфере IT, возможно, неправильно! Всем нам, и женщинам и мужчинам, стоит отказаться от стереотипов о способностях, качествах и ограничениях женского ума — как позитивных, так и негативных — и позволить ему проявиться самому по себе.\n\nЯ имею в виду: давайте позволим девушкам, которых ЕСТЕСТВЕННЫМ образом тянет к компьютерам как к хобби или работе (при равных возможностях и без давления общества и предрассудков), заниматься этим. А тем, кто к этому не склонен, дадим свободу выбрать другое направление.\n\nОшибочно думать, что пропорция обязана составлять около 50%! Женщины могут оказаться менее, столь же или даже более способны и подготовлены умственно к работе с компьютерами на всех уровнях или некоторых из них — мы просто пока этого не знаем.\n\nБудем надеяться, что со временем — когда рухнут все барьеры — общество сможет принять в сфере компьютеров (как и во всех остальных областях) ту долю мужчин и женщин, что сложится сама собой, по естественным склонностям, и не станет пытаться подгонять всё под надуманную модель «равенства».\n\n— Brian Cavers.\n",
+  "text_type": 3
+}

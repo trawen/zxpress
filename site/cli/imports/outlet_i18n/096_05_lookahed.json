@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "096",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A preview of Outlet issue 97: the launch of Vax-Trek, Spectrum PSU repair tips in Drivechat, 128k RAM paging from Basic in Outclass, games, and animations.",
+  "meta_description_ru": "Анонс 97-го номера Outlet: старт сатирической серии Vax-Trek, ремонт блока питания Спектрума, переключение страниц 128K из Бейсика, игры и демо.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "vax-trek",
+      "tag_alias": "vax-trek"
+    },
+    {
+      "tag_name": "francis miles",
+      "tag_alias": "francis-miles"
+    }
+  ],
+  "category_ids": [
+    123,
+    119
+  ],
+  "body_en_plain": "Before we look at what is coming\nin next month's OUTLET, just a\nponder on the past, prompted by\nthis month's cover picture:- I\nwonder what King Tut's sculptor\nwould have thought some 3540\nyears ago, about the notion of\nstoring images on magnet tape or\ndisc, or even transmitting them\ninvisibly through the air?\n\n\nSo now to the future:-  And what\na future!!...\n\n\nThose intrepid voyagers on Star-\nship Enterprise(or is it \"Enter-\nkey\"?) still have not found re-\nverse so they travel ever onward\nin the far reaches of Space. We\nat OUTLET have been able to\nintercept their monthly reports\nback to Earth --- Yes folks,\nnext month you ca look forward\nto Episode 1 of VAX-TREK.\n\nAs usual, there will be a couple\nof handy Utilities, and on the\ntechnical side, next month's\nDRIVECHAT describes some of the\nfaults that your Spectrum power-\nsupply unit may suffer, and how\nto cure them. Then the OUTCLASS\nexplains how to access the 128k\nRAM pages from Basic, in spite\nof the Manual suggesting that\nit's not possible!\n\nThere's no need to go out to an\nAir-Show, OUTLET brings the\n'planes to your Spectrum screen.\nI've always been fascinated by\nanimation. I'll bet that some of\nyou(as I did) drew little match-\nstick men in the corners of the\npages of school exercise books\nthen flipped pages to see little\nmen dance. Yes, there is another\nsuper animation next issue.\n\nThere's the first of several\nwell-presented patience-type\ncard games for you to enjoy, and\nincidentally if you see Francis\nMiles' name as the author of a\nprogram, you can be sure that\nthe Basic listing is superbly\nlaid out and beautifully REMed\nall through. A fine example to\nus all!\n\nThere is plenty to look forward\nto again including some delight-\nful Vienese Waltzs and another\ntruly wonderful demo.\n\n                        Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Before we look at what is coming in next month's OUTLET, just a ponder on the past, prompted by this month's cover picture:— I wonder what King Tut's sculptor would have thought some 3540 years ago, about the notion of storing images on magnetic tape or disc, or even transmitting them invisibly through the air?\n\nSo now to the future:— And what a future!!...\n\nThose intrepid voyagers on Starship Enterprise (or is it \"Enter-key\"?) still have not found reverse so they travel ever onward in the far reaches of Space. We at OUTLET have been able to intercept their monthly reports back to Earth ——— Yes folks, next month you can look forward to Episode 1 of VAX-TREK.\n\nAs usual, there will be a couple of handy Utilities, and on the technical side, next month's DRIVECHAT describes some of the faults that your Spectrum power-supply unit may suffer, and how to cure them. Then the OUTCLASS explains how to access the 128k RAM pages from Basic, in spite of the Manual suggesting that it's not possible!\n\nThere's no need to go out to an Air-Show, OUTLET brings the 'planes to your Spectrum screen. I've always been fascinated by animation. I'll bet that some of you (as I did) drew little matchstick men in the corners of the pages of school exercise books then flipped pages to see little men dance. Yes, there is another super animation next issue.\n\nThere's the first of several well-presented patience-type card games for you to enjoy, and incidentally if you see Francis Miles' name as the author of a program, you can be sure that the Basic listing is superbly laid out and beautifully REMed all through. A fine example to us all!\n\nThere is plenty to look forward to again including some delightful Viennese Waltzes and another truly wonderful demo.\n\nChris.\n",
+  "body_ru": "Прежде чем мы заглянем в следующий выпуск OUTLET, позвольте немного поразмышлять о прошлом под впечатлением от картинки на обложке этого номера. Интересно, что подумал бы скульптор Тутанхамона примерно 3540 лет назад о самой идее хранения изображений на магнитной ленте или диске, или даже об их невидимой передаче по воздуху?\n\nА теперь — к будущему! И каково же это будущее!.. \n\nБесстрашные путешественники на звездолете «Энтерпрайз» (или это клавиша «Enter»?) до сих пор не нашли заднюю передачу, поэтому несутся все дальше в неизведанные глубины Космоса. Нам в OUTLET удалось перехватить их ежемесячные отчеты, отправленные на Землю... Да, друзья, в следующем месяце вас ждет первый эпизод VAX-TREK!\n\nКак обычно, в номере будет пара полезных утилит, а с технической стороны — следующая колонка DRIVECHAT расскажет о типичных неисправностях блоков питания ZX Spectrum и о том, как их устранить. А рубрика OUTCLASS объяснит, как получить доступ к страницам памяти 128K прямо из Бейсика — вопреки утверждениям официального руководства о том, что это невозможно!\n\nВам не нужно идти на авиашоу: OUTLET покажет самолеты прямо на экране вашего Спектрума. Меня всегда завораживала анимация. Готов поспорить, что многие из вас (как и я сам) рисовали человечков на уголках страниц школьных тетрадей, а затем быстро перелистывали их, заставляя фигурки двигаться. Да-да, в следующем выпуске вас ждет еще одна отличная анимация.\n\nТакже появится первый из нескольких прекрасно оформленных пасьянсов. Кстати, если вы видите в авторах программы имя Francis Miles, можете не сомневаться: листинг на Бейсике будет оформлен безупречно и щедро снабжен комментариями через REM. Отличный пример для всех нас!\n\nВ общем, впереди снова масса интересного, включая чудесные венские вальсы и еще одну поистине великолепную демо-программу.\n\nChris.\n",
+  "text_type": 3
+}

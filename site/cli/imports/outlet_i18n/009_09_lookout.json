@@ -1,0 +1,51 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "009",
+  "article_id": "09_lookout",
+  "title_en": "Lookout",
+  "title_ru": "Lookout: Новости",
+  "meta_description_en": "Monthly news: MGT's new computer price rise due to RAM shortage, ZX Microfair announcement, circulation numbers, and an overview of current Spectrum magazines.",
+  "meta_description_ru": "Новости месяца: подорожание будущего компьютера от MGT из-за дефицита RAM, анонс ZX Microfair, тиражи и обзор свежей прессы (Crash, Your Sinclair, Sinclair User).",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "mgt",
+      "tag_alias": "mgt"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "zx microfair",
+      "tag_alias": "zx-microfair"
+    },
+    {
+      "tag_name": "your sinclair",
+      "tag_alias": "your-sinclair"
+    },
+    {
+      "tag_name": "crash",
+      "tag_alias": "crash"
+    },
+    {
+      "tag_name": "sinclair user",
+      "tag_alias": "sinclair-user"
+    },
+    {
+      "tag_name": "пресса",
+      "tag_alias": "press"
+    }
+  ],
+  "category_ids": [
+    123,
+    131,
+    116
+  ],
+  "body_en_plain": "Little news this month except to\nreport that the world shortage\nof RAM chips is pushing up the\nprobable price of MGT's proposed\nnew computer (with the Spectrum\nmode) to sub `150 rather than\nsub `100. Launch may be August.\nExisting +D and Disciple owners\nmay get the first opportunity at\nthe initial 10,000 machines.\n\nThe next ZX Microfair will be on\nSaturday, 11th June from 10.00am\nto 6.00pm at the Horticultural\nHalls.\n\nCirculation figures for Spectrum\nmagazines recently released are:\n\n Computer & Video Games.105,000\n Crash...................96,000\n Your Sinclair...........80,000\n Sinclair User...........78,000\n\nOf interest in Your Sinclair\nthis month is a listing for a\nfile recovery program for the +3\nand a shaded screen dump. Your\nComputer has only a very short,\ngeneral item on printers.Nothing\nSpectrum-related in Personal\nComputer World. Sinclair User\nhas a little tutorial on how to\nprint characters from machine\ncode and a very brief review of\nthe Kempston Mouse. I think\nyou'd better stick with OUTLET!.\n",
+  "body_ru_plain": "Новостей в этом месяце немного,\nразве что стоит сообщить:\nмировой дефицит чипов RAM\nподнимает вероятную цену нового\nкомпьютера от MGT (с режимом\nSpectrum) до отметки ниже `150,\nа не ниже `100. Запуск может\nсостояться в августе. Нынешние\nвладельцы +D и Disciple могут\nпервыми получить шанс приобрести\nмашины из начальной партии в\n10,000 штук.\n\nСледующая ZX Microfair пройдёт в\nсубботу, 11th June, с 10.00am\nдо 6.00pm в Horticultural\nHalls.\n\nНедавно были опубликованы\nтиражи журналов о Spectrum:\n\n Computer & Video Games.105,000\n Crash...................96,000\n Your Sinclair...........80,000\n Sinclair User...........78,000\n\nИз интересного в Your Sinclair\nв этом месяце — листинг\nпрограммы восстановления файлов\nдля +3 и полутоновый дамп\nэкрана. В Your Computer есть лишь\nочень короткая общая заметка о\nпринтерах. Ничего о Spectrum в\nPersonal Computer World. В\nSinclair User есть небольшое\nруководство по выводу символов\nиз машинного кода и очень\nкраткий обзор Kempston Mouse.\nДумаю, вам лучше оставаться\nс OUTLET!.\n",
+  "body_en": "## Lookout\n\nLittle news this month except to report that the world shortage of RAM chips is pushing up the probable price of MGT's proposed new computer (with the Spectrum mode) to sub £150 rather than sub £100. Launch may be August. Existing +D and Disciple owners may get the first opportunity at the initial 10,000 machines.\n\nThe next ZX Microfair will be on Saturday, 11th June from 10.00am to 6.00pm at the Horticultural Halls.\n\nCirculation figures for Spectrum magazines recently released are:\n\n| Magazine | Circulation |\n| :--- | :--- |\n| Computer & Video Games | 105,000 |\n| Crash | 96,000 |\n| Your Sinclair | 80,000 |\n| Sinclair User | 78,000 |\n\nOf interest in Your Sinclair this month is a listing for a file recovery program for the +3 and a shaded screen dump. Your Computer has only a very short, general item on printers. Nothing Spectrum-related in Personal Computer World. Sinclair User has a little tutorial on how to print characters from machine code and a very brief review of the Kempston Mouse. I think you'd better stick with OUTLET!.\n",
+  "body_ru": "## Lookout: Новости\n\nНовостей в этом месяце немного, разве что стоит сообщить: мировой дефицит чипов RAM поднимает вероятную цену нового компьютера от MGT (с режимом Spectrum) до отметки ниже `150, а не ниже `100. Запуск может состояться в августе. Нынешние владельцы +D и Disciple могут первыми получить шанс приобрести машины из начальной партии в 10,000 штук.\n\nСледующая ZX Microfair пройдёт в субботу, 11th June, с 10.00am до 6.00pm в Horticultural Halls.\n\nНедавно были опубликованы тиражи журналов о Spectrum:\n\n| Журнал | Тираж |\n|---|---|\n| Computer & Video Games | 105,000 |\n| Crash | 96,000 |\n| Your Sinclair | 80,000 |\n| Sinclair User | 78,000 |\n\nИз интересного в Your Sinclair в этом месяце — листинг программы восстановления файлов для +3 и полутоновый дамп экрана. В Your Computer есть лишь очень короткая общая заметка о принтерах. Ничего о Spectrum в Personal Computer World. В Sinclair User есть небольшое руководство по выводу символов из машинного кода и очень краткий обзор Kempston Mouse. Думаю, вам лучше оставаться с OUTLET!.\n",
+  "text_type": 3
+}

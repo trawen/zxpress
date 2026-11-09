@@ -1,0 +1,50 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "05",
+  "article_id": "03_NEWS_1",
+  "source_lang": "de-AT",
+  "title_en": "Scene News",
+  "title_ru": "Новости сцены",
+  "meta_description_en": "Scene news from Scene+ #05: MB-02+ disk interface release details, new Russian ZX Spectrum games, and Paul Howard's upcoming projects.",
+  "meta_description_ru": "Новости сцены из Scene+ #05: выпуск дискового интерфейса MB-02+, новые игры для ZX Spectrum из России и проекты Пола Говарда.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "mb-02",
+      "tag_alias": "mb-02"
+    },
+    {
+      "tag_name": "russia",
+      "tag_alias": "russia"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    },
+    {
+      "tag_name": "paul howard",
+      "tag_alias": "paul-howard"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    }
+  ],
+  "category_ids": [
+    96,
+    1,
+    10,
+    88
+  ],
+  "body_de_plain": "SCENE NEWS MB 02 ist fertig, in in der vorherigen Ausgabe  sch\non  berichtetwurde, aber auf das Gehäuse muß man  noch  zwei  Wo\nchen  warten, wenn man es ohne Gehäse kauft, wird es aber etwas\nbilliger, dennauch die Garantie kauft man nicht mit. Ein Test fo\nlgt  wenn  ich ein  HD  Laufwerk finde, welches mit dem\n Interfacezusammenarbeitet, denn einige Laufwerke haben offenba\nr  Problemedamit. Unglücklicherweise arbeitet MB02 nicht mit dem\n M icrodriveSentax zusammen, und eine +D Emulation ist noch nich\n  im  Sicht,deshalb  wird  SCENE+  vorläufig  noch  nicht  im  M\nB02  Formaterscheinen. Interessant an dem Interface ist der e\ninsatz der Z80 DMA, welchepro Taktzyklus eine Speicherstelle les\nen  oder  schreiben  kann, und so gewaltige Geschwindigkeitsvort\neile mit sich bringt.:  Russland ist das Land in dem der Spect\nrum zum  MeistverbreitetenComputern gehört, dort können sich nur\n Firmen einen PC leisten.  Deshalb erscheint es kaum verwunderli\nch daß von dort einige neueSpiele kommen, wie z.B. Scorpions-Die\n Machine, ein  Kriegsspiel, oder Hexxagon (siehe Test in dieser\nAusgabe),  Sehr  interessantdürften auch die  PC-Umsetzungen  se\nin:  Prince  of  Persia  und UFO-Enemy Unknown, welche mit zieml\nicher Sicherheit genauso  wieDefender of the Crown nicht lizensi\nert wurden und  deshalb  hier in Europa nur als PD  vertrieben\nwerden  dürften.  Die  einzigeSchwierigkeit ist die Sprachbarrie\nre, aber wozu haben wir fähige Cracker, die liebend gerne  Engli\nsche  versionen  daraus  machenwürden?G Mir ist es  gelungen  a\nn  einige  dieser  Russischen  Spiele  zukommen, die in dieser A\nusgabe getestet werden, demnächst  folgen dann weitere Tests, au\nch von Tschechischer Software.4  Paul Howard arbeitet gerade a\nn einem neuem Spiel, und zwar  solles ein Kartenspiel werden. Na\nme des Spiels: 99. Abgesehen  davon arbeitet er noch mit Techniu\nm 220 an  einem  neuem  Demo  namensVideosyncr\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### SCENE NEWS\n\nThe MB-02 is finished, as was already reported in the previous issue, but one still has to wait two weeks for the case. If you buy it without a casing, it is slightly cheaper, although you don't get the warranty either. A review will follow once I find an HD drive that works with the interface, as some drives apparently have issues with it. Unfortunately, the MB-02 does not support Microdrive syntax, and a +D emulation is not yet in sight, which is why SCENE+ will temporarily not be released in MB-02 format. An interesting feature of the interface is the use of the Z80 DMA, which can read or write a memory location per clock cycle, bringing massive speed advantages.\n\nRussia is a country where the Spectrum is among the most widespread computers; there, only companies can afford a PC. Therefore, it hardly seems surprising that quite a few new games are coming from there, such as *Scorpions: Die Machine*, a war game, or *Hexxagon* (see the review in this issue). The PC conversions should also be very interesting: *Prince of Persia* and *UFO: Enemy Unknown*, which almost certainly were not licensed, just like *Defender of the Crown*, and therefore can likely only be distributed as Public Domain here in Europe. The only hurdle is the language barrier, but that's what capable crackers are for—they would gladly make English versions out of them.\n\nI managed to get hold of some of these Russian games, which are reviewed in this issue; more reviews will follow soon, including Czech software as well.\n\nPaul Howard is currently working on a new game, specifically a card game. The title of the game is *99*. Apart from that, he is collaborating with Technium 220 on a new demo called *Videosyncr*...\n",
+  "body_ru": "### НОВОСТИ СЦЕНЫ\n\nИнтерфейс MB-02 готов, о чём уже сообщалось в прошлом номере, однако корпуса придётся подождать ещё пару недель. Если покупать плату без корпуса, она обойдётся немного дешевле, но тогда вы останетесь и без гарантии. Обзор контроллера выйдет, как только мне удастся найти дисковод высокой плотности (HD), способный работать с этим интерфейсом — с некоторыми приводами у него явно возникают проблемы. К сожалению, MB-02 не совместим с синтаксисом Microdrive, а эмуляция +D пока даже не предвидится, поэтому журнал SCENE+ на данный момент не будет выходить в формате MB-02. Любопытная особенность интерфейса — использование чипа Z80 DMA, способного считывать или записывать ячейку памяти за один такт, что обеспечивает колоссальный прирост скорости.\n\nРоссия — страна, где Спектрум остаётся одним из самых массовых компьютеров; позволить себе PC там могут только фирмы и организации. Неудивительно, что оттуда появляется так много новых игр: например, военная стратегия *Scorpions: Die Machine* или *Hexxagon* (см. обзор в этом номере). Большой интерес вызывают и порты с PC: *Prince of Persia* и *UFO: Enemy Unknown*. Они, скорее всего, вышли без официальной лицензии (как и *Defender of the Crown*), а значит, в Европе их можно будет распространять лишь как Public Domain (PD). Единственное препятствие — языковой барьер, но на что нам толковые крэкеры, которые с радостью сделают англоязычные версии?\n\nМне удалось раздобыть несколько таких российских игр, обзоры которых представлены в этом номере; вскоре последуют и новые рецензии, в том числе на чешский софт.\n\nПол Говард (Paul Howard) сейчас трудится над новой игрой — карточной, под названием *99*. Кроме того, совместно с Technium 220 он разрабатывает новое демо под названием *Videosyncr*...\n",
+  "text_type": 3
+}

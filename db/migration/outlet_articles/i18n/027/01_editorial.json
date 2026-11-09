@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "027",
+  "article_id": "01_editorial",
+  "title_en": "Editorial",
+  "title_ru": "От редакции",
+  "meta_description_en": "Outlet #027 editorial: bugfix for Jacksoft, Randscaper landscape generator, Molgrum 3D update, and disc exchange policy notes.",
+  "meta_description_ru": "Колонка редакции Outlet #027: исправление для Jacksoft, программа Randscaper, обновление Molgrum 3D и правила обмена дисков по почте.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "molgrum",
+      "tag_alias": "molgrum"
+    },
+    {
+      "tag_name": "randscaper",
+      "tag_alias": "randscaper"
+    }
+  ],
+  "category_ids": [
+    130
+  ],
+  "body_en_plain": "Most of the few bugs in JACKSOFT\n(Issue 12) have now been cured\nthanks to Paul Preston who has\nsent in the mod(SAVEd as JACKMOD\nin this issue). MERGE it into\nJACKSOFT and reSAVE the program.\nYou will also find the colour is\nnow black INK on yellow PAPER.\n\nRANDSCAPER in this issue\"paints\"\na different landscape depending\non what word or phrase you type\nin. Some are great but others\nsomewhat less than artistic!\nHowever, since there are several\nbillion possible pictures...!!\nAnyway, write in if you discover\nany words that give particularly\ninteresting landscapes!\n\n\nIn OUTLET 25 we did a review of\nIan Hughes' excellent MOLGRUM 3D\ngraphics program. The only minor\ncriticism was finding the routes\nto the different menus in the\nprogram. Ian now provides a menu\nmap with MOLGRUM to clarify the\nmenus thus perfecting an already\nmarvellous program.\n\nFinally, note that we ARE going\nto continue with our\"user's own\"\ndisc/cartridge option but it is\npossible you may not ALWAYS get\nyour own disc back if we take\none straight from stock to speed\nup the ordering process.However,\nthis does mean that any discs or\ncartridges received in very bad\ncondition (damaged or with tacky\nlabels hanging off etc.) could\ndelay your order as they must be\nput aside for individual attent-\nion to ensure the sender gets\nhis own back in such cases.\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_ru_plain": "Большинство из немногих ошибок в\nJACKSOFT (выпуск 12) исправлено\nблагодаря Paul Preston, который\nприслал патч (SAVEd как JACKMOD\nв этом номере). Сделайте MERGE в\nJACKSOFT и снова reSAVE.\nТакже вы увидите, что цвета стали\nчерный INK на желтом PAPER.\n\nRANDSCAPER в этом выпуске «рису-\nет» разные пейзажи в зависимости\nот введенного слова или фразы.\nОдни отличные, другие далеки от\nшедевров! Впрочем, учитывая, что\nвариантов несколько миллиардов!\nВ общем, пишите нам, если найде-\nте слова, создающие особенно\nинтересные пейзажи!\n\n\nВ OUTLET 25 мы делали обзор пре-\nкрасной программы 3D-графики\nMOLGRUM от Ian Hughes. Единствен-\nной мелкой придиркой был поиск\nпутей к разным меню программы.\nТеперь Ian прикладывает к MOLGRUM\nсхему меню для наглядности,\nдоводя и без того замечательную\nпрограмму до совершенства.\n\nИ наконец, мы ДЕЙСТВИТЕЛЬНО про-\nдолжаем принимать диски и карт-\nриджи пользователей, но вы не\nВСЕГДА получите назад именно свой\nдиск, если мы берем диск со скла-\nда ради ускорения выполнения за-\nказа. Однако это означает, что\nдиски или картриджи в очень пло-\nхом состоянии (поврежденные, с\nболтающимися липкими этикетками\nи т.д.) могут задержать заказ:\nих придется отложить для отдель-\nной обработки, чтобы отправитель\nв таких случаях получил назад\nименно свой носитель.\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_en": "## Editorial\n\nMost of the few bugs in JACKSOFT (Issue 12) have now been cured thanks to Paul Preston who has sent in the mod (SAVEd as JACKMOD in this issue). MERGE it into JACKSOFT and reSAVE the program. You will also find the colour is now black INK on yellow PAPER.\n\nRANDSCAPER in this issue \"paints\" a different landscape depending on what word or phrase you type in. Some are great but others somewhat less than artistic! However, since there are several billion possible pictures...!! Anyway, write in if you discover any words that give particularly interesting landscapes!\n\nIn OUTLET 25 we did a review of Ian Hughes' excellent MOLGRUM 3D graphics program. The only minor criticism was finding the routes to the different menus in the program. Ian now provides a menu map with MOLGRUM to clarify the menus thus perfecting an already marvellous program.\n\nFinally, note that we ARE going to continue with our \"user's own\" disc/cartridge option but it is possible you may not ALWAYS get your own disc back if we take one straight from stock to speed up the ordering process. However, this does mean that any discs or cartridges received in very bad condition (damaged or with tacky labels hanging off etc.) could delay your order as they must be put aside for individual attention to ensure the sender gets his own back in such cases.\n\nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "body_ru": "## От редакции\n\nБольшинство из немногих ошибок в JACKSOFT (выпуск 12) исправлено благодаря Paul Preston, который прислал патч (SAVEd как JACKMOD в этом номере). Сделайте MERGE в JACKSOFT и снова reSAVE. Также вы увидите, что цвета стали черный INK на желтом PAPER.\n\nRANDSCAPER в этом выпуске «рисует» разные пейзажи в зависимости от введенного слова или фразы. Одни отличные, другие далеки от шедевров! Впрочем, учитывая, что вариантов несколько миллиардов! В общем, пишите нам, если найдете слова, создающие особенно интересные пейзажи!\n\nВ OUTLET 25 мы делали обзор прекрасной программы 3D-графики MOLGRUM от Ian Hughes. Единственной мелкой придиркой был поиск путей к разным меню программы. Теперь Ian прикладывает к MOLGRUM схему меню для наглядности, доводя и без того замечательную программу до совершенства.\n\nИ наконец, мы ДЕЙСТВИТЕЛЬНО продолжаем принимать диски и картриджи пользователей, но вы не ВСЕГДА получите назад именно свой диск, если мы берем диск со склада ради ускорения выполнения заказа. Однако это означает, что диски или картриджи в очень плохом состоянии (поврежденные, с болтающимися липкими этикетками и т.д.) могут задержать заказ: их придется отложить для отдельной обработки, чтобы отправитель в таких случаях получил назад именно свой носитель.\n\n```text\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n```\n",
+  "text_type": 3
+}

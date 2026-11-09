@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "08",
+  "article_id": "02_INHALT_1",
+  "source_lang": "de-AT",
+  "title_en": "Contents Scene+ 8/96",
+  "title_ru": "Содержание Scene+ 8/96",
+  "meta_description_en": "Overview of Scene+ issue 8 (August 1996): editorial notes on the Illusion/Exodus party, letters, classified ads, game reviews, picture galleries, exclusive games, and demos.",
+  "meta_description_ru": "Обзор содержания выпуска Scene+ №8 (август 1996): колонка редактора о пати Illusion/Exodus, письма, объявления, обзоры игр, галереи графики, эксклюзивные релизы и демо.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "contents",
+      "tag_alias": "contents"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_de_plain": "I N H A L T S C E N E + 8 / 9 6 Wilkommen zu dem Inhalt dieser\nSCENE+ Ausgabe, wie schonangekündigt wird es einige\nVerbesserungen ab Ausgabe 10/96 geben, einige sogar schon ab der\nnächster Ausgabe,9 dieHauptstruktur bleibt aber unangetastet.\nDies wird notwendig seinum das Magazin noch interessanter zu\nmachen, jetzt aber zudieser Ausgabe: A. Redaktioneles Da ich auf\ndem Illusion/Exodus treffen in Polen war, gibt eseinige\ninteressante feststellungen und News aus dieser undanderen ecken\nder Welt (angeblich hat die Welt keine Ecken!). C. Briefe Zwei\nrecht umfangreiche Briefe die ich als Textfiles bekommenhabe.\nD. Kleinanzeigen Diese Rubrik ist notwendig geworden und, wurde\ndeshalbschnellstens eingeführt. E. Artikel+D Ecke, teil 1. Dann\nfolgen noch die versprochenen Tests vonKommando II, Tetris II\nund Kliatba Noci. Nächstes Mal gibt's den Test von Octopussy,\nmit Roger Moore in der Hauptrolle. F. Gallerien Neun\nBildersammlungen zum verwenden in eigenen\nProgrammen: Themengebiete: Star Trek Voyager, Star Wars und\nandere, laßteuch überaschen. G. Spiele Exclusiv von Maniu of\nIllusion, das Spiel Auto Concentration. Esentstand noch bevor\nder Authoe TWINZ gesehen hat. Chicago, ein Würfelspiel mit dem\nich mich nicht so recht auskenne, WoMoanscheinend umso mehr.\nFastyper wollte ich schon das letzte maleinbauen, es ist ein\nübungsspiel um die Tippgeschwindigkeitverbessern, beim\nGummispectrum etwas ungewöhnlich. In dernächster Ausgabe gibt es\nTangram, das Computerspiel mit Klözchenin der Hauptrolle. H.\nDemos Exclusiv und geradewegs vom Author kommt das Ravers\nParadise,ein Demo welches mit beeindruckenden Sampletracker\nRave-Songsaufwartet. Natürlich ist der coding rundherum auch\nnichtschlecht. Schade daß ich das Dies Irae nicht laden konnte,\ndagab es nähmlich noch bessere Sachen, aber wenn ich wieder\nmalJordan of Exodus anschreiben werde, werde ich um das\nDemoanflehen. Ecstasy ist dagegen wieder mal ein Russ-Demo, das\nich leiderwegen der größe auf mehrere Teile aufspliten mußte.\nZum glückwurde das schon im grundkonzept vorgesehen. - Also\ngut, das war's schon. In der nächster Ausgabe plane ich\neinschnelleres Menüprogramm einzubauen, also compiliertes Basic.\nOder seid Ihr etwa mit der jetziger Geschwindigkeit zufriede\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### C O N T E N T S   S C E N E +   8 / 9 6\n\nWelcome to the table of contents for this issue of SCENE+. As previously announced, there will be several improvements starting with issue 10/96, some even as early as the next issue, 9/96, though the core structure will remain untouched. This will be necessary to make the magazine even more interesting. But now, on to this issue:\n\n**A. Editorial**\nSince I attended the Illusion/Exodus meeting in Poland, there are some interesting observations and news from that and other corners of the world (supposedly the world has no corners!).\n\n**C. Letters**\nTwo quite extensive letters that I received as text files.\n\n**D. Classified Ads**\nThis section became necessary and was therefore introduced as quickly as possible.\n\n**E. Articles + D Corner, Part 1**\nFollowed by the promised reviews of *Kommando II*, *Tetris II*, and *Kliatba Noci*. Next time we'll have a review of *Octopussy*, starring Roger Moore.\n\n**F. Galleries**\nNine image collections to use in your own programs. Themes include: *Star Trek: Voyager*, *Star Wars*, and others — let yourself be surprised.\n\n**G. Games**\nExclusively from Maniu of Illusion: the game *Auto Concentration*. It was created before the author had even seen *TWINZ*. *Chicago*, a dice game that I don't know much about, though WoMo apparently knows all the more. *Fastyper* is something I already wanted to include last time — it's a practice game to improve your typing speed, which is a bit unusual on a rubber-key Spectrum. In the next issue, we'll feature *Tangram*, a computer game starring wooden blocks.\n\n**H. Demos**\nExclusively and straight from the author comes *Ravers Paradise*, a demo that boasts impressive Sampletracker rave tunes. Of course, the surrounding code isn't bad either. Too bad I couldn't load *Dies Irae*, as there were even better things in it, but next time I write to Jordan of Exodus, I will beg for that demo. *Ecstasy*, on the other hand, is another Russian demo that I unfortunately had to split into several parts due to its size. Luckily, that was already accounted for in the core design.\n\nAll right, that's it for now. In the next issue, I plan to integrate a faster menu program, i.e., compiled BASIC. Or are you perhaps satisfied with the current speed?\n",
+  "body_ru": "### С О Д Е Р Ж А Н И Е   S C E N E +   8 / 9 6\n\nДобро пожаловать к оглавлению этого номера SCENE+. Как уже сообщалось, начиная с выпуска 10/96 появится ряд улучшений, некоторые — уже в следующем номере, 9/96, хотя базовая структура останется нетронутой. Это необходимо, чтобы сделать журнал ещё интереснее. А теперь перейдём к текущему номеру:\n\n**A. Редакция**\nПоскольку я побывал на пати Illusion/Exodus в Польше, вас ждут интересные наблюдения и новости из этого и других уголков мира (хотя говорят, у Земли нет уголков!).\n\n**C. Письма**\nДва довольно объёмных письма, полученных мной в виде текстовых файлов.\n\n**D. Объявления**\nЭта рубрика назрела, поэтому мы ввели её без промедления.\n\n**E. Статьи + D-уголок, часть 1**\nЗдесь представлены обещанные обзоры игр *Kommando II*, *Tetris II* и *Kliatba Noci*. В следующий раз вас ждёт обзор *Octopussy* с Роджером Муром в главной роли.\n\n**F. Галереи**\nДевять подборок графики для использования в собственных программах. Тематика: *Star Trek: Voyager*, *Star Wars* и другие — пусть это станет сюрпризом.\n\n**G. Игры**\nЭксклюзивно от Maniu из Illusion — игра *Auto Concentration*. Она была создана ещё до того, как автор увидел *TWINZ*. *Chicago* — игра в кости, в которой я не особо разбираюсь, зато WoMo, судя по всему, знает её досконально. *Fastyper* я хотел включить ещё в прошлый номер: это тренажёр для повышения скорости набора текста, что довольно необычно для резиновой клавиатуры Спектрума. В следующем выпуске появится *Tangram* — компьютерная игра с деревянными фигурками в главной роли.\n\n**H. Демо**\nЭксклюзивно и прямо от автора — демо *Ravers Paradise* с впечатляющими рейв-треками под Sampletracker. Конечно, и код вокруг них весьма неплох. Жаль, что мне не удалось загрузить *Dies Irae* — там были вещи ещё круче, но когда я снова буду писать Jordan из Exodus, я буду буквально умолять об этой демке. *Ecstasy*, напротив, очередное русское демо, которое из-за огромного размера пришлось разбить на несколько частей. К счастью, это было предусмотрено базовой концепцией оболочки.\n\nЧто ж, на этом всё. В следующем номере я планирую внедрить более шуструю программу меню, то есть компилированный Бейсик. Или вас вполне устраивает текущая скорость?\n",
+  "text_type": 3
+}

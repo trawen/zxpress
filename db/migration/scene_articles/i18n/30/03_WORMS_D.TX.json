@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "30",
+  "article_id": "03_WORMS_D.TX",
+  "source_lang": "de-AT",
+  "title_en": "Worms Preview 128",
+  "title_ru": "Worms Preview 128",
+  "meta_description_en": "A brief note on the Russian Worms 128 preview for ZX Spectrum and a trivia fact about the author of the original Amiga game.",
+  "meta_description_ru": "Краткая заметка о превью игры Worms 128 из России для ZX Spectrum и факте об авторе оригинальной версии для Amiga.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "worms",
+      "tag_alias": "worms"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "WORM ü - WORMS PREVIEW 128 - Das Preview zu dem Megahit aus\nRußland. Information am Rande: Der Author der\nOrginal-Amigaversion begann seine Karriere aucham Spectrum! Ist\nzwar nichts ungewöhnliches, hätte mich abergefreut wenn er die\nSpectrumversion auch geschrieben hätte.m - The preview of the\nMegahit from Russia. Info: The Author oforginal Amiga version\nhas learned to code on Spectrum. That isnot really a surprise,\nbut I was hoping, he will write theSpectrum versio\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### WORMS PREVIEW 128\n\nThe preview of the mega-hit from Russia.\n\nA side note: the author of the original Amiga version also began his coding career on the ZX Spectrum! While that is nothing unusual, I would have been thrilled if he had written the Spectrum version himself as well.\n",
+  "body_ru": "### WORMS PREVIEW 128\n\nПревью мегахита из России.\n\nИнформация к слову: автор оригинальной версии для Amiga тоже начинал свою карьеру на Спектруме! В этом, конечно, нет ничего необычного, но было бы здорово, если бы он сам написал и версию для Spectrum.\n",
+  "text_type": 3
+}

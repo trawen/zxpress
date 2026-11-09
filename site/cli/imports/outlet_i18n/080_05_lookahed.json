@@ -1,0 +1,36 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "080",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of what is coming in the May issue of Outlet: spreadsheet, educational text adventure, editor/assembler, UDG designer, and more.",
+  "meta_description_ru": "Анонс майского выпуска журнала Outlet: электронная таблица, обучающий текстовый квест, ассемблер, редактор UDG и другие программы.",
+  "authors": [
+    "Chris"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "announcements",
+      "tag_alias": "announcements"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "There are many exciting programs\nwhich we hope to bring you in\nthe May issue. Among them are a\nspreadsheet, an educational text\nadventure game, a menu-maker\nutility so files can be loaded\nby a single keypress,a complete\neditor/assembler (first of two\nwe have in stock),another useful\nUDG designer, an informative\nteach-in on the POKE @ command\nand a superb program to let you\nplay a little jingle in your\nBasic programs instead of having\na silent pause.\n\nEver been to the hole-in-the-\nwall and been frustrated because\nthe stupid machine refuses to\ngive you any money? Well don't\nbe too hard on the cash dispens-\ner because it appears that they\nhave feelings too, and in next\nmonth's OUTLET the machine gets\na chance to answer back!\n\nYes, it looks like being another\nsuper issue, and if there is\nspace, we will have yet another\nmagical demo to amaze you.\n\n         +++ Chris +++.\n",
+  "body_ru_plain": "",
+  "body_en": "There are many exciting programs which we hope to bring you in the May issue. Among them are a spreadsheet, an educational text adventure game, a menu-maker utility so files can be loaded by a single keypress, a complete editor/assembler (first of two we have in stock), another useful UDG designer, an informative teach-in on the POKE @ command and a superb program to let you play a little jingle in your Basic programs instead of having a silent pause.\n\nEver been to the hole-in-the-wall and been frustrated because the stupid machine refuses to give you any money? Well don't be too hard on the cash dispenser because it appears that they have feelings too, and in next month's OUTLET the machine gets a chance to answer back!\n\nYes, it looks like being another super issue, and if there is space, we will have yet another magical demo to amaze you.\n\n+++ Chris +++.\n",
+  "body_ru": "В майском номере мы надеемся представить вам множество интересных программ. Среди них — электронная таблица, обучающий текстовый квест, утилита для создания меню, позволяющая загружать файлы нажатием одной клавиши, полноценный редактор/ассемблер (первый из двух, имеющихся у нас в запасе), ещё один полезный редактор UDG, познавательный урок по команде POKE @ и превосходная программа, которая позволит вам вставлять короткий джингл в свои Basic-программы вместо беззвучной паузы.\n\nСлучалось ли вам подходить к банкомату и злиться из-за того, что дурацкая машина отказывается выдавать деньги? Что ж, не судите автомат слишком строго — похоже, у них тоже есть чувства, и в следующем номере OUTLET машине выпадет шанс ответить вам взаимностью!\n\nДа, выпуск обещает быть отличным, и если останется место, мы приготовим для вас ещё одно потрясающее демо.\n\n+++ Chris +++.\n",
+  "text_type": 3
+}

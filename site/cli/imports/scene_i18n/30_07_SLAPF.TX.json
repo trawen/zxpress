@@ -1,0 +1,48 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "30",
+  "article_id": "07_SLAPF.TX",
+  "source_lang": "de-AT",
+  "title_en": "Slap Fight Demo",
+  "title_ru": "Slap Fight Demo",
+  "meta_description_en": "A brief note on the Slap Fight demo written by Theo Devil for Sinclair User, featuring ripped graphics and scrolling routines.",
+  "meta_description_ru": "Краткая заметка о демоверсии Slap Fight от Theo Devil для журнала Sinclair User со скроллером и графикой, извлечёнными из игры.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "slap-fight",
+      "tag_alias": "slap-fight"
+    },
+    {
+      "tag_name": "theo-devil",
+      "tag_alias": "theo-devil"
+    },
+    {
+      "tag_name": "sinclair-user",
+      "tag_alias": "sinclair-user"
+    },
+    {
+      "tag_name": "demo",
+      "tag_alias": "demo"
+    }
+  ],
+  "category_ids": [
+    93,
+    88
+  ],
+  "body_de_plain": "SLAPFIGHT ü - SLAP FIGHT DEMO - Theo Devil hat dieses Demo für\nSinclair User geschrieben,eigentlich hat er die Scrollroutine\nund die Grafik aus Slap Fight herausgerippt, meines wissens nach\nnie auf einerCovertape. - Theo Devil wrote this demo for\nSinclair User, O. K., in truth hehas ripped the scrollroutine and\nGFX from SLAP FIGHT game, butthe demo has never appeared\n(correct me if I'm wrong) on acov\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### SLAP FIGHT DEMO\n\nTheo Devil wrote this demo for *Sinclair User*. Actually, he ripped the scrolling routine and the graphics from the game *Slap Fight*. As far as I know, it was never released on a covertape.\n\n*(Note: Theo Devil wrote this demo for Sinclair User. Okay, in truth he ripped the scroll routine and GFX from the SLAP FIGHT game, but the demo has never appeared — correct me if I'm wrong — on a covertape.)*\n",
+  "body_ru": "### SLAP FIGHT DEMO\n\nТео Девил (Theo Devil) написал это демо для журнала *Sinclair User*. Строго говоря, он просто выдрал скролл-процедуру и графику прямо из игры *Slap Fight*. Насколько мне известно, на кассетах-приложениях (covertapes) оно так никогда и не выходило.\n\n*(Примечание: Theo Devil написал это демо для Sinclair User. Ладно, по правде говоря, он просто срипнул подпрограмму скроллинга и графику из игры SLAP FIGHT, но демо так никогда и не появилось — поправьте меня, если я ошибаюсь — на кассетах журнала.)*\n",
+  "text_type": 3
+}

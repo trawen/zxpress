@@ -1,0 +1,35 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "123",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A brief look ahead to the programs and features coming in next month's Christmas issue of Outlet magazine.",
+  "meta_description_ru": "Краткий анонс программ и материалов, готовящихся к выходу в праздничном рождественском выпуске журнала Outlet.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "announcement",
+      "tag_alias": "announcement"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "There are several useful utility\nprograms to look forward to in\nnext month's OUTLET. There is a\npowerful disc sector editor, a\nsimple yet versatile line-maker,\nthe facility to DEEK and DOKE 2-\nbyte values from and to memory,\na file copying utility for the\n+3, and some \"fixes\" to transfer\na game from tape to run on disc.\n\n                    more!...\n\nAlso there is a wonderful game\nto keep you amused with its\nexcellently animated graphics;\na bit of supositional history\nabout the troubled Monarchy of\nprevious years; a musical demo\nwith graphic effects that you\ncan control from the keyboard,\nand being Christmastime, you\nmight get a glimpse of Santa!\n\n                        Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "There are several useful utility programs to look forward to in next month's OUTLET. There is a powerful disc sector editor, a simple yet versatile line-maker, the facility to DEEK and DOKE 2-byte values from and to memory, a file copying utility for the +3, and some \"fixes\" to transfer a game from tape to run on disc.\n\nAlso there is a wonderful game to keep you amused with its excellently animated graphics; a bit of supositional history about the troubled Monarchy of previous years; a musical demo with graphic effects that you can control from the keyboard, and being Christmastime, you might get a glimpse of Santa!\n\nChris.\n",
+  "body_ru": "В следующем номере OUTLET вас ждет несколько полезных утилит: мощный дисковый секторный редактор, простая, но универсальная программа для рисования линий, средства для DEEK и DOKE (чтения и записи 2-байтовых значений в память), утилита копирования файлов для +3, а также несколько решений для переноса кассетной игры на диск.\n\nКроме того, вас ожидает замечательная игра с превосходно анимированной графикой; немного альтернативной истории о непростых временах британской монархии прошлых лет; музыкальное демо с графическими эффектами, управляемыми с клавиатуры, и, поскольку это будет рождественский выпуск, возможно, вам даже удастся мельком увидеть Санту!\n\nChris.\n",
+  "text_type": 3
+}

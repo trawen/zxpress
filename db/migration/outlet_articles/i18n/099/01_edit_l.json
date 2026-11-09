@@ -1,0 +1,48 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "099",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Outlet #099 late editorial (November 1995): WIDECAT utility for +3, a filename token quirk in +D UNERASE, call for utility contributions, and Halloween spirit.",
+  "meta_description_ru": "Дополнительная колонка редакторов Outlet #099 (ноябрь 1995): утилита WIDECAT для +3, баг с токенами в +D UNERASE, призыв присылать утилиты и хэллоуинское настроение выпуска.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "widecat",
+      "tag_alias": "widecat"
+    },
+    {
+      "tag_name": "+d unerase",
+      "tag_alias": "plus-d-unerase"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus3"
+    },
+    {
+      "tag_name": "plus-d",
+      "tag_alias": "plus-d"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "N O V E M B E R,   1 9 9 5\n\nThere's a nice disk utility for\n+3 users this month for a change\n- it's WIDECAT and it can cram\ntwo or more files on a line in a\nCAT - ideal when there are lots\nof files and you don't want the\n'scroll?' message!\n\n\nThe +D UNERASE we had in OUTLET\n97 works beautifully but we have\nfound one peculiarity. If you're\ntrying to restore an erased file\nwith a filename containing a key\nwork token like CHR$ 170 which\nis SCREEN$(eg,TANGERINE SCREEN$)\nthen it works OK but gives a\nfalse message that you have more\nthan one file with the same name\non the disk! The reason is that\nwe do a CAT with a wildcard,eg,\nCAT \"TANGERINE SCREEN$\" and then\ntest the screen PRINT position.\n\nIf there should be more than one\nfile with the same name then the\nPRINT position will be further\ndown the screen. Unfortunately,\na keyword token in a filename\nmay have the same effect!\n\n\nAfter giving some thought to an\nupdate or modification it was\ndecided that since...\n\n1. there is no easy solution\n\n\n2. Few +D users use keywords\n\n\n3. All you have to do is press\n   ENTER to skip the message\n   and there is no harm done\n\n\n       ...we decided it was far\neasier just to tell you about it\nhere! One answer might simply be\nto alter the warning message but\nit is not worth the hassle we\nfeel!\n\n\nWe've a decent stockpile of good\nprograms lined up for OUTLET but\nleisure software like games are\nnow tending to be greater in\nproportion so please let us have\nyour contributions - any sort of\nprograms or articles or screens\nare welcome but we do especially\nwant utilities so we can keep a\ngood balance!\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET. We\nare sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\nThis issue has a slightly spooky\nHalloween flavour. We like the\nmysterious unifying crucifix in\nDEMON - perhaps God's trying to\ntell us all something.\n\n                     Ron & Brian\n\n\n\n\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nN O V E M B E R,   1 9 9 5\n\nThere's a nice disk utility for +3 users this month for a change - it's WIDECAT and it can cram two or more files on a line in a CAT - ideal when there are lots of files and you don't want the 'scroll?' message!\n\nThe +D UNERASE we had in OUTLET 97 works beautifully but we have found one peculiarity. If you're trying to restore an erased file with a filename containing a key work token like CHR$ 170 which is SCREEN$(eg,TANGERINE SCREEN$) then it works OK but gives a false message that you have more than one file with the same name on the disk! The reason is that we do a CAT with a wildcard,eg, CAT \"TANGERINE SCREEN$\" and then test the screen PRINT position.\n\nIf there should be more than one file with the same name then the PRINT position will be further down the screen. Unfortunately, a keyword token in a filename may have the same effect!\n\nAfter giving some thought to an update or modification it was decided that since...\n\n1. there is no easy solution\n\n2. Few +D users use keywords\n\n3. All you have to do is press ENTER to skip the message and there is no harm done\n\n...we decided it was far easier just to tell you about it here! One answer might simply be to alter the warning message but it is not worth the hassle we feel!\n\nWe've a decent stockpile of good programs lined up for OUTLET but leisure software like games are now tending to be greater in proportion so please let us have your contributions - any sort of programs or articles or screens are welcome but we do especially want utilities so we can keep a good balance!\n\nMay we remind readers, we cannot answer computer, software, hard- ware or system queries etc., personally by mail.  All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder!Share your problems with others! That way, everyone benefits!\n\nThis issue has a slightly spooky Halloween flavour. We like the mysterious unifying crucifix in DEMON - perhaps God's trying to tell us all something.\n\nRon & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers CHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF .\n",
+  "body_ru": "## Editorial (late)\n\n### Н О Я Б Р Ь, 1 9 9 5\n\nДля разнообразия в этом месяце есть отличная дисковая утилита для пользователей +3 — это WIDECAT, способная уместить два или более файлов в одну строку при выводе CAT. Идеально, когда файлов много, а видеть надоедливое сообщение «scroll?» не хочется!\n\nПрограмма +D UNERASE из OUTLET 97 работает превосходно, но мы обнаружили одну странность. Если вы пытаетесь восстановить удалённый файл, имя которого содержит токен ключевого слова вроде CHR$ 170, то есть SCREEN$ (например, TANGERINE SCREEN$), то всё срабатывает как надо, но выдаётся ложное сообщение о том, что на диске есть более одного файла с таким именем! Причина в том, что мы выполняем команду CAT с маской, например, CAT \"TANGERINE SCREEN$\", а затем проверяем позицию вывода PRINT на экране.\n\nЕсли файлов с одинаковыми именами несколько, то позиция PRINT окажется ниже по экрану. К сожалению, токен ключевого слова в имени файла может вызывать точно такой же эффект!\n\nПоразмыслив над обновлением или доработкой, мы решили, что поскольку...\n\n1. простого решения нет;\n2. мало кто из пользователей +D использует ключевые слова в именах;\n3. достаточно просто нажать ENTER, чтобы пропустить сообщение, и ничего страшного не произойдёт...\n\n...намного проще просто рассказать вам об этом здесь! Одним из вариантов было бы просто изменить текст предупреждения, но, на наш взгляд, овчинка выделки не стоит!\n\nУ нас накопился приличный запас хороших программ для OUTLET, однако развлекательный софт вроде игр сейчас начинает преобладать, поэтому, пожалуйста, присылайте нам свои работы — приветствуются любые программы, статьи или экранные картинки, но особенно нам нужны утилиты, чтобы сохранить хороший баланс!\n\nНапоминаем читателям: мы не можем отвечать на вопросы по компьютерам, программам, «железу» или системам лично по почте. Все подобные вопросы разбираются через рубрику OUTLETTERS в OUTLET. Простите, что постоянно твердим об этом, но напоминать приходится регулярно! Делитесь своими проблемами с другими — так польза будет для всех!\n\nВ этом выпуске чувствуется слегка жутковатая атмосфера Хэллоуина. Нам нравится таинственное объединяющее распятие в DEMON — возможно, Господь пытается нам что-то сказать.\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n```\n",
+  "text_type": 3
+}

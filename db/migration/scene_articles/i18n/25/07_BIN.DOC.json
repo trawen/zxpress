@@ -1,0 +1,48 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "25",
+  "article_id": "07_BIN.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Binary Love",
+  "title_ru": "Binary Love",
+  "meta_description_en": "A brief look at the demo Binary Love, winner of Enlight'97, noting its performance and compatibility on standard ZX Spectrum 128 hardware.",
+  "meta_description_ru": "Краткий обзор демо Binary Love — победителя Enlight'97, с замечаниями о совместимости и работе на стандартном ZX Spectrum 128.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "binary-love",
+      "tag_alias": "binary-love"
+    },
+    {
+      "tag_name": "enlight-97",
+      "tag_alias": "enlight-97"
+    },
+    {
+      "tag_name": "demoscene",
+      "tag_alias": "demoscene"
+    },
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    }
+  ],
+  "category_ids": [
+    93,
+    94
+  ],
+  "body_de_plain": "BINLOV ü BINARY LOVE Quelle: SUC Art: Selbstablaufendes Demo\n(128K)\" Binary Love ist das Siegerdemo des Enlight'97 und ist\neigentlichfür Scorpion und Pentagon bestimmt, läuft aber auch\nzum glück Absturzfrei auf dem Spectrum 128. Einzig und alleine\ndieMulticolor Parts können etwas ungewohnt wirken, was aber nur\nandem geringen Geschwindigkeitsunterschied liegt. Zieht euch\ndasDemo rein und genießt es! Y - Source: SUC Sort: Self running\ndemo (128K) Binary Love is the winner demo of Enlight'97 and was\ncoded forScorpion and Pentagon, but it is running fortunaly also\ncrash- free on the Spectrum 128. Only the multicolor parts are\nnotcorrect on Speccy because the speed differece of the\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### BINARY LOVE (BINLOV)\n\n**Source:** SUC  \n**Type:** Non-interactive demo (128K)\n\n*Binary Love* is the winning demo from Enlight'97. Although it was originally designed for the Scorpion and Pentagon clones, fortunately it also runs without crashing on a standard ZX Spectrum 128.\n\nOnly the multicolor sections might look a bit unusual, but that is purely due to the slight timing and speed differences between the machines. Check out this demo and enjoy it!\n\n*(Original English text from release)*:  \n**Source:** SUC  \n**Type:** Self-running demo (128K)  \n*Binary Love* is the winner demo of Enlight'97 and was coded for Scorpion and Pentagon, but it is running fortunately also crash-free on the Spectrum 128. Only the multicolor parts are not correct on Speccy because of the speed difference...\n",
+  "body_ru": "### BINARY LOVE (BINLOV)\n\n**Источник:** SUC  \n**Тип:** Нон-стоп демо (128K)\n\n*Binary Love* — демо-победитель пати Enlight'97. Хотя изначально оно предназначалось для клонов Scorpion и Pentagon, к счастью, оно также стабильно и без зависаний работает на стандартном ZX Spectrum 128.\n\nРазве что мультиколорные части могут выглядеть несколько непривычно, но это обусловлено лишь небольшой разницей в тактах и скорости машин. Обязательно зацените это демо и наслаждайтесь просмотром!\n\n*(Оригинальная английская заметка из релиза)*:  \n**Source:** SUC  \n**Sort:** Self running demo (128K)  \n*Binary Love* is the winner demo of Enlight'97 and was coded for Scorpion and Pentagon, but it is running fortunaly also crash-free on the Spectrum 128. Only the multicolor parts are not correct on Speccy because the speed difference...\n",
+  "text_type": 3
+}

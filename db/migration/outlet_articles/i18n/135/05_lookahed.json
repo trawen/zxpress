@@ -1,0 +1,43 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "135",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонсы следующего номера",
+  "meta_description_en": "A preview of Outlet #136 featuring a ZX81 emulator for the Spectrum, business graphics and text conversion utilities, festive animations, and a demo.",
+  "meta_description_ru": "Анонс выпуска Outlet #136: эмулятор ZX81 для Спектрума, утилиты деловой графики и конвертации текстов, праздничные анимации и демо.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "zx81",
+      "tag_alias": "zx81"
+    },
+    {
+      "tag_name": "emulator",
+      "tag_alias": "emulator"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "If all goes to plan next month,\nwe won't exactly be re-inventing\nthe wheel, but nearly! OUTLET\nbrings you an emulator for the\nZX81 on the Spectrum, which will\nalso run on the Lunter emulator\nof the Spectrum on the PC.. Just\nthink! You will be able to enter\nthe twenty first century playing\nyour favourite ZX81 games on the\nPC! And if all does not go to\nplan, the emulator will appear\nin a not too distant issue.\n\n\n\nOn the programming side next\nmonth, there are some useful ut-\nilities: one to display Business\nGraphics; another to assist in\nconverting text from one word\nprocessor format to a different\none; and a very flexible screen\ntext display facility to enhance\nyour program titles and messages\n\nThere are several lighter feat-\nures as befits the time of year.\nThere is a delightful animation;\na festive musical trip through\nthe twelve days of Christmas;\nand a revelation of the intimate\ndetails of the life cycle of a\n................... you'll never\nguess, but we do guarantee that\nit has nothing to do with the\nPresident of the USA.\n\n\nRounding off another full and\nsatisfying issue is a demo with\nexcellent musics and a wonderful\nmagical adventure game.\n\n                 Cheers, Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "If all goes to plan next month, we won't exactly be re-inventing the wheel, but nearly! OUTLET brings you an emulator for the ZX81 on the Spectrum, which will also run on the Lunter emulator of the Spectrum on the PC.. Just think! You will be able to enter the twenty first century playing your favourite ZX81 games on the PC! And if all does not go to plan, the emulator will appear in a not too distant issue.\n\nOn the programming side next month, there are some useful utilities: one to display Business Graphics; another to assist in converting text from one word processor format to a different one; and a very flexible screen text display facility to enhance your program titles and messages.\n\nThere are several lighter features as befits the time of year. There is a delightful animation; a festive musical trip through the twelve days of Christmas; and a revelation of the intimate details of the life cycle of a ................... you'll never guess, but we do guarantee that it has nothing to do with the President of the USA.\n\nRounding off another full and satisfying issue is a demo with excellent musics and a wonderful magical adventure game.\n\nCheers, Chris.\n",
+  "body_ru": "Если в следующем месяце всё пойдёт по плану, мы хоть и не изобретём колесо заново, но будем к этому очень близки! OUTLET представит вам эмулятор ZX81 для Спектрума, который к тому же запустится и под эмулятором Спектрума от Lunter на PC... Только представьте! Вы сможете шагнуть в XXI век, играя в любимые игры для ZX81 прямо на PC! А если вдруг всё пойдёт не совсем по плану, эмулятор непременно появится в одном из ближайших номеров.\n\nВ части программирования в следующем месяце вас ждут полезные утилиты: программа для построения деловой графики (Business Graphics); помощник для конвертации текстов из формата одного текстового процессора в другой; а также крайне гибкая процедура экранного вывода текста для оформления заставок и сообщений в ваших программах.\n\nБудет и несколько более лёгких материалов, как и подобает этому времени года: замечательная анимация; праздничное музыкальное путешествие по мотивам «Двенадцати дней Рождества»; а также раскрытие сокровенных тайн жизненного цикла ................... вы ни за что не угадаете, но мы гарантируем, что к президенту США это не имеет никакого отношения.\n\nЗавершают этот насыщенный и увлекательный номер демонстрация с отличной музыкой и чудесная волшебная приключенческая игра.\n\nС наилучшими пожеланиями, Chris.\n",
+  "text_type": 3
+}

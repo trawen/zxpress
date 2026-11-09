@@ -1,0 +1,52 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "105",
+  "article_id": "03_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Late editorial from Outlet #105 (May 1996): Wherewolf disk search utility for +D, The Big Six lottery analyzer, Coughdrops strategy game, +D emulator for +3, and a call for user contributions.",
+  "meta_description_ru": "Дополнительная колонка редакции Outlet #105 (май 1996): утилита Wherewolf для +D, анализатор лотереи The Big Six, игра Coughdrops, эмулятор +D для Spectrum +3 и призыв присылать материалы.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet-magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "+d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus-3"
+    },
+    {
+      "tag_name": "wherewolf",
+      "tag_alias": "wherewolf"
+    },
+    {
+      "tag_name": "the big six",
+      "tag_alias": "the-big-six"
+    },
+    {
+      "tag_name": "coughdrops",
+      "tag_alias": "coughdrops"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "M A Y ,   1 9 9 6\n\nWe've some cracking programs in\nthis issue. There's a stunning\n+D disk search utility called\nWHEREWOLF which simply wolfs\ndown every track looking for\nyour input!\n\n\nOne big feature is our Lottery\nanalysis program, 'THE BIG SIX',\nwhich may give you some insight\ninto trends. It includes EVERY\nNational Lottery result since it\nbegan but it was impossible to\nhave it completely up to date at\nthe moment OUTLET reaches you\nand, of course, you may not get\nto really examine that program\nimmediately anyway.\n\nAlthough it is intended that you\ntype in later results yourself,\nfew people would have the last\ncouple of weeks and so NEXT\nmonth we'll publish the missing\nnumbers in the editorial. After\nthat you're on your own - though\nwe may offer an update service\nfor a nominal charge later.\n\n\nFor +3 users there is a working\ndemo of a fantastic +D emulator\nand a full CHECKOUT review! But\nthe bad news for +3 readers is\nthat the LYRA demo will not work\non a +3 because it loads every\nsection via machine code! We'll\ntry and get parts working.\n\nThere's a great new strategy\ngame called COUGHDROPS which is\nsimply the most addictive yet\nsimple to play games we've seen\non the Spectrum for a while!\n\nRemember, we need YOUR support,\nand contributions of articles\nand programs, especially utility\nprograms, are now needed more\nthan ever. Even a short routine\ncan be like gold dust to another\nuser! Send 'em in!\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET. We\nare sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\n                    Ron & Brian\n\n\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nM A Y ,   1 9 9 6\n\nWe've some cracking programs in this issue. There's a stunning +D disk search utility called WHEREWOLF which simply wolfs down every track looking for your input!\n\nOne big feature is our Lottery analysis program, 'THE BIG SIX', which may give you some insight into trends. It includes EVERY National Lottery result since it began but it was impossible to have it completely up to date at the moment OUTLET reaches you and, of course, you may not get to really examine that program immediately anyway.\n\nAlthough it is intended that you type in later results yourself, few people would have the last couple of weeks and so NEXT month we'll publish the missing numbers in the editorial. After that you're on your own - though we may offer an update service for a nominal charge later.\n\nFor +3 users there is a working demo of a fantastic +D emulator and a full CHECKOUT review! But the bad news for +3 readers is that the LYRA demo will not work on a +3 because it loads every section via machine code! We'll try and get parts working.\n\nThere's a great new strategy game called COUGHDROPS which is simply the most addictive yet simple to play games we've seen on the Spectrum for a while!\n\nRemember, we need YOUR support, and contributions of articles and programs, especially utility programs, are now needed more than ever. Even a short routine can be like gold dust to another user! Send 'em in!\n\nMay we remind readers, we cannot answer computer, software, hard- ware or system queries etc., personally by mail.  All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder!Share your problems with others! That way, everyone benefits!\n\nRon & Brian\n\nOUTLET is produced by Chris Oliver Ron & Brian Cavers CHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF.\n",
+  "body_ru": "## Editorial (late)\n\n### M A Y , 1 9 9 6\n\nВ этом выпуске у нас припасено несколько сногсшибательных программ. Среди них — потрясающая утилита для поиска по дискам системы +D под названием WHEREWOLF, которая буквально пожирает трек за треком в поисках введенных вами данных!\n\nОдин из главных гвоздей номера — наша программа для анализа лотереи, «THE BIG SIX», которая, возможно, позволит вам уловить определенные закономерности. Она включает в себя абсолютно КАЖДЫЙ результат Национальной лотереи (National Lottery) с момента ее запуска, однако сделать базу на 100% актуальной на момент, когда OUTLET доберется до вас, было невозможно. Да и вы, скорее всего, не сразу доберетесь до детального изучения этой программы.\n\nИ хотя предполагается, что свежие результаты вы будете вбивать сами, мало у кого найдутся данные за последние пару недель, поэтому в СЛЕДУЮЩЕМ месяце мы опубликуем недостающие тиражи прямо в редакционной колонке. Дальше вам придется действовать самостоятельно — хотя позже мы, возможно, предложим сервис обновлений за символическую плату.\n\nДля пользователей +3 есть рабочая демка фантастического эмулятора +D, а также подробный обзор в рубрике CHECKOUT! Но есть и плохая новость для владельцев +3: демо-версия LYRA не будет работать на +3, так как она загружает каждую секцию через машинный код! Мы постараемся заставить работать хотя бы отдельные части.\n\nВас также ждет отличная новая стратегическая игра под названием COUGHDROPS — пожалуй, самая захватывающая и в то же время простая в освоении игра на Спектруме за последнее время!\n\nПомните, нам нужна ВАША поддержка! Ваши статьи и программы — особенно утилиты — сейчас нужны как никогда. Даже короткая подпрограммка может оказаться на вес золота для другого пользователя! Присылайте!\n\nНапоминаем читателям: мы не можем отвечать на технические вопросы о компьютерах, софте, железе или системе лично по почте. Все подобные вопросы разбираются только на страницах рубрики OUTLETTERS журнала OUTLET. Нам жаль постоянно твердить об этом, но об этом правиле приходится регулярно напоминать! Делитесь своими проблемами с остальными — так польза будет для всех!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF.\n```\n",
+  "text_type": 3
+}

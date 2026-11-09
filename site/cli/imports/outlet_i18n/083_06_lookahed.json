@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "083",
+  "article_id": "06_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Взгляд вперёд: Анонс",
+  "meta_description_en": "An international roundup of contributors in Outlet #083 and a preview of what's coming next month: new demos, utilities, +D tools, and discussions.",
+  "meta_description_ru": "Международный состав авторов Outlet #083 и превью следующего выпуска: новые демо, утилиты, дисковый софт для +D, игры и обсуждения.",
+  "authors": [
+    "Chris"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "anons"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "First, a quick look at this cur-\nrent July issue which underlines\nBrian's recent comment about\nOUTLET'S international flavour,\nviz: The Panda picture is from a\nNetherlands contributor and the\nprograms:\n\"Supagrafix\"  - British\n\n\"Logobend\"    - German\n\n\"Megademo\"    - Polish\n\n\"Jingler\"     - British\n                         more...\n\n\"Spectest\"    - German\n\n\"Magic-Square\"- British\n\n\"Disc-Tidy\"   - South African\n\n\"Mandoliner\"  - originally by\n                Gavriel Hajibab\n       (not sure what national-\n       ity he is, but it doesn't\n       sound very British!)\n\n\"Softfile\"    - written by an\n                Israelite,submi-\n                tted by a German\n\n\"Hypersonic\"  - Polish\n\n\"Crossword\"   - from New Zealand\n\nLong live WORLDWIDE-OUTLET!!!\n                         more...\n\nSo what have we got for you to\nlook forward to next month?\n\nAnother \"state-of-the-art\" demo,\nsome super little utilities,\nsome more excellent sampled\nsound, another disc handling and\nfile copying utility for +D\nusers, a neat little game in\ncase you get bored, a Drivechat\nabout those mysterious +2 system\nvariables, a chatty bit about\nfair pricing, and as many\nletters, adverts and regular\nbits and pieces as we can cram\nin.\n                       Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "First, a quick look at this current July issue which underlines Brian's recent comment about OUTLET'S international flavour, viz: The Panda picture is from a Netherlands contributor and the programs:\n\n* \"Supagrafix\" — British\n* \"Logobend\" — German\n* \"Megademo\" — Polish\n* \"Jingler\" — British\n* \"Spectest\" — German\n* \"Magic-Square\" — British\n* \"Disc-Tidy\" — South African\n* \"Mandoliner\" — originally by Gavriel Hajibab (not sure what nationality he is, but it doesn't sound very British!)\n* \"Softfile\" — written by an Israelite, submitted by a German\n* \"Hypersonic\" — Polish\n* \"Crossword\" — from New Zealand\n\nLong live WORLDWIDE-OUTLET!!!\n\nSo what have we got for you to look forward to next month?\n\nAnother \"state-of-the-art\" demo, some super little utilities, some more excellent sampled sound, another disc handling and file copying utility for +D users, a neat little game in case you get bored, a Drivechat about those mysterious +2 system variables, a chatty bit about fair pricing, and as many letters, adverts and regular bits and pieces as we can cram in.\n\nChris.\n",
+  "body_ru": "Сперва бросим быстрый взгляд на текущий июльский номер, который наглядно подтверждает недавнее замечание Брайана об интернациональном характере OUTLET. Судите сами: картинка с пандой пришла от автора из Нидерландов, а программы:\n\n* «Supagrafix» — Великобритания\n* «Logobend» — Германия\n* «Megademo» — Польша\n* «Jingler» — Великобритания\n* «Spectest» — Германия\n* «Magic-Square» — Великобритания\n* «Disc-Tidy» — Южная Африка\n* «Mandoliner» — изначально написана Gavriel Hajibab (не уверен, какой он национальности, но звучит не очень-то по-британски!)\n* «Softfile» — написана автором из Израиля, а прислана из Германии\n* «Hypersonic» — Польша\n* «Crossword» — из Новой Зеландии\n\nДа здравствует всемирный OUTLET!!!\n\nТак чего же вам стоит ждать в следующем месяце?\n\nЕщё одно демо последнего слова техники, несколько отличных маленьких утилит, ещё немного превосходного оцифрованного звука, очередная дисковая утилита для работы с файлами и копирования для пользователей +D, симпатичная мини-игра на случай, если вы заскучаете, статья в рубрику Drivechat о тех самых таинственных системных переменных модели +2, непринуждённая заметка о справедливых ценах, а также столько писем, рекламы и наших привычных мелочей, сколько мы вообще сможем уместить.\n\nChris.\n",
+  "text_type": 3
+}

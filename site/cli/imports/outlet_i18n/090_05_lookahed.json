@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "090",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A preview of Outlet issue 91 (March): Spectrum +2 grey hardware fixes, lottery helper, mini spreadsheet, Plus D backup utility, Bach music, and more.",
+  "meta_description_ru": "Анонс мартовского номера Outlet (№91): исправление аппаратных дефектов серого Spectrum +2, лотерейная программа, мини-таблица, утилита для Plus D и музыка Баха.",
+  "authors": [
+    "Chris"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "spectrum +2",
+      "tag_alias": "spectrum-plus-2"
+    },
+    {
+      "tag_name": "plus d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "emulators",
+      "tag_alias": "emulators"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "The March issue  looks as though\nit will again cover a wide vari-\nety of interests:-\n\nOn the technical side,the DRIVE-\nCHAT is a must for anyone with a\nSpectrum +2 (the Grey-cased 128K\none), as there are some hardware\nassembly faults in this model!\nThe faults are described -  and\nthen detailed instructions are\ngiven on how to correct them.\n\n                       more!...\n\nHaving a go on the National Lot-\ntery? OUTLET presents you with a\nprogram to assist you with your\ncombinations.If that is not your\nscene, then have a try at a new\nWordsearch puzzle.\n\n\nAs the end of the Financial Year\napproaches,we've included a Mini\nSpreadsheet to help you check\nthat expenditure is not exceed-\ning income.\n\nThere is a utility to auto-back-\nup selected programs from Plus D\ndisk to tape and for our younger\nreaders there is another educat-\nional program.\n\n                       more!...\n\nIf you just want to look at\nthings,  there is an effectively\nanimated clock ecapement mech-\nanism and a nice large segmental\ncounter. And if you just want to\nrelax and listen -  there is a\ncollection of pleasant Bach son-\natas.\n\nAll this as well as all the reg-\nular sections! Wonderful!\n\nDon't forget to spread the word\namongst friends and  colleagues\nthat the Spectrum version of\nOUTLET can now be run  directly\non a PC drive -  if you have the\nLunter Emulator!\n                     Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "The March issue looks as though it will again cover a wide variety of interests:-\n\nOn the technical side, the DRIVECHAT is a must for anyone with a Spectrum +2 (the Grey-cased 128K one), as there are some hardware assembly faults in this model! The faults are described — and then detailed instructions are given on how to correct them.\n\nHaving a go on the National Lottery? OUTLET presents you with a program to assist you with your combinations. If that is not your scene, then have a try at a new Wordsearch puzzle.\n\nAs the end of the Financial Year approaches, we've included a Mini Spreadsheet to help you check that expenditure is not exceeding income.\n\nThere is a utility to auto-backup selected programs from Plus D disk to tape and for our younger readers there is another educational program.\n\nIf you just want to look at things, there is an effectively animated clock escapement mechanism and a nice large segmental counter. And if you just want to relax and listen — there is a collection of pleasant Bach sonatas.\n\nAll this as well as all the regular sections! Wonderful!\n\nDon't forget to spread the word amongst friends and colleagues that the Spectrum version of OUTLET can now be run directly on a PC drive — if you have the Lunter Emulator!\n\nChris.\n",
+  "body_ru": "Судя по всему, мартовский выпуск вновь охватит самый широкий спектр тем:\n\nЧто касается технической части, рубрика DRIVECHAT станет обязательным чтением для каждого владельца Spectrum +2 (той самой модели на 128K в сером корпусе), поскольку в ней обнаружены огрехи заводской сборки! Все дефекты подробно описаны, и к ним даются пошаговые инструкции по устранению.\n\nРешили сыграть в Национальную лотерею? OUTLET предложит вам программу для подбора и анализа комбинаций. А если азартные игры не для вас — попробуйте решить новую буквенную головоломку Wordsearch.\n\nВ преддверии окончания финансового года мы подготовили небольшую электронную таблицу (Mini Spreadsheet), которая поможет убедиться, что расходы не превышают доходы.\n\nКроме того, вас ждёт утилита для автоматического копирования выбранных программ с дисков Plus D на ленту, а для наших юных читателей — очередная обучающая программа.\n\nЕсли же вам просто хочется посмотреть на что-нибудь интересное, в номере будет представлена эффектная анимация анкерного механизма часов и симпатичный крупный сегментный счётчик. А для отдыха и приятного прослушивания — подборка прекрасных сонат Баха.\n\nИ всё это вдобавок к нашим постоянным рубрикам! Замечательно!\n\nИ не забудьте рассказать друзьям и знакомым, что спектрумовскую версию OUTLET теперь можно запускать прямо с дисковода на PC — если у вас установлен Lunter Emulator!\n\nChris.\n",
+  "text_type": 3
+}

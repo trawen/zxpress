@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "135",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Editorial for Outlet #135 (November 1998): twelfth year of the magazine, call for reader contributions, and intro to the game Pippo.",
+  "meta_description_ru": "Редакторское вступление к Outlet #135 (ноябрь 1998): двенадцатый год журнала, призыв присылать софт и статьи, анонс игры Pippo.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "pippo",
+      "tag_alias": "pippo"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "N O V E M B E R ,  1 9 9 8\n\nTime seems to be racing by now.\nHere we are again approaching\nthe end of another year and it's\nnow the twelfth year of OUTLET!\nFurthermore, we are quietly con-\ndent of reaching the millenium!\n\n\nThanks for your contributions!\nKeep sending them in. Remember,\nthey don't need to be complete\nprograms - short routines are\nalso helpful to others as well\nas screen pictures and articles\non almost any relevant topic. It\nis always interesting to read,\nfor instance, about software and\nother products that people are\nusing. Articles must be on disk\nor tape though (returned later).\n\nNow the Spectrum readership is\nnot as large as it was there are\nproportionally fewer contributed\nprograms. It is more important\nthan ever therefore,to give what\nsupport you can  to sustain the\nvariety and scope of items in\nOUTLET. Thanks!\n\n\nWe've just received a massive\namount of new graphic and music\ndemos so at least on that front\nwe'll have enough to keep going\neasily into the next century!\n\nThere's a super game in this\nmonth called PIPPO which is good\nstrategy combined with keyboard\nskills! Terrific! Enjoy!\n                     Ron & Brian\n\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n   Email: outletmag@yahoo.com.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nN O V E M B E R ,  1 9 9 8\n\nTime seems to be racing by now. Here we are again approaching the end of another year and it's now the twelfth year of OUTLET! Furthermore, we are quietly con- dent of reaching the millenium!\n\nThanks for your contributions! Keep sending them in. Remember, they don't need to be complete programs - short routines are also helpful to others as well as screen pictures and articles on almost any relevant topic. It is always interesting to read, for instance, about software and other products that people are using. Articles must be on disk or tape though (returned later).\n\nNow the Spectrum readership is not as large as it was there are proportionally fewer contributed programs. It is more important than ever therefore,to give what support you can  to sustain the variety and scope of items in OUTLET. Thanks!\n\nWe've just received a massive amount of new graphic and music demos so at least on that front we'll have enough to keep going easily into the next century!\n\nThere's a super game in this month called PIPPO which is good strategy combined with keyboard skills! Terrific! Enjoy! Ron & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers 34 Saltersgate Drive Birstall, Leicester LE4 3FF\n\nEmail: outletmag@yahoo.com.\n",
+  "body_ru": "## Editorial (late)\n\n**Н О Я Б Р Ь , 1 9 9 8**\n\nКажется, время сейчас просто летит. Вот мы снова приближаемся к концу очередного года, и пошёл уже двенадцатый год OUTLET! Более того, мы втайне уверены, что дотянем и до миллениума!\n\nСпасибо за ваши материалы! Продолжайте присылать их. Помните, что это не обязательно должны быть законченные программы — короткие подпрограммы тоже пригодятся другим, так же как и экранные картинки или статьи практически на любую подходящую тему. Всегда интересно почитать, например, о софте и других продуктах, которыми пользуются люди. Однако статьи должны быть на диске или кассете (мы их потом возвращаем).\n\nСейчас, когда аудитория Spectrum уже не так велика, как раньше, присылаемых программ стало пропорционально меньше. Поэтому важнее, чем когда-либо, оказать посильную поддержку, чтобы сохранить разнообразие и размах материалов в OUTLET. Спасибо!\n\nМы только что получили огромное количество новых графических и музыкальных демо, так что хотя бы на этом фронте нам с лихвой хватит запасов, чтобы без проблем войти в следующий век!\n\nВ этом месяце у нас отличная игра под названием PIPPO — это хорошая стратегия в сочетании с ловкостью рук на клавиатуре! Потрясающе! Наслаждайтесь!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n   Email: outletmag@yahoo.com.\n```\n",
+  "text_type": 3
+}

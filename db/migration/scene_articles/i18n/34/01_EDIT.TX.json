@@ -1,0 +1,55 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "34",
+  "article_id": "01_EDIT.TX",
+  "source_lang": "de-AT",
+  "title_en": "Editorial: Scene+ #34",
+  "title_ru": "От редактора: Scene+ #34",
+  "meta_description_en": "Editorial of Scene+ #34 by Tiger / L. C. D.: fresh Russian game releases and demos (Awaken, Worms R!, Babylon 5), Chaos Constructions '99, upcoming Doxycon '99, and a CD for emulation fans.",
+  "meta_description_ru": "Колонка редактора Scene+ #34: новые игры и демо из СНГ (Awaken, Worms R!, Babylon 5), итоги Chaos Constructions '99, анонс Doxycon '99 и идея записи диска для любителей эмуляции.",
+  "authors": [
+    "Tiger",
+    "L. C. D."
+  ],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    },
+    {
+      "tag_name": "awaken",
+      "tag_alias": "awaken"
+    },
+    {
+      "tag_name": "doxycon",
+      "tag_alias": "doxycon"
+    },
+    {
+      "tag_name": "chaos-constructions",
+      "tag_alias": "chaos-constructions"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_de_plain": "SX1. T ü- * * * ** * * * * * * * * * * * * * * * * * ** * * * * *\n* * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * *\n* * * * - SCENE+ Herausgeber und Verantwortlicher für den\nInhalt: L. C. D., Prager Str. 92/11/12, A-1210 Wien, Österreich\nTel/Fax:+43 1 2723463 Mob.: 43 676 5022551 E-mail:\nlcd.one@aon.at Vertrieb zusammen mit SUC-Session:\" Thomas Eberle\n& Fred Dürkes, Rainäckerstr. 4, D-70794, Deutschland. Tel/Fax:\n(+49/711) 77 50 33 E-mail: sintech@online.de Spectrum und SAM\nbezogene Werbung sowie Kleinanzeigen sindKostenfrei und können\nbeliebige Formen haben: Text, Bild, Demo (Spectrum formate!,\nselbstablaufend).% Spectrum and SAM adverts are free of charge\nand can be in anyform: Text, screen or demo (Spectrum formats\nonly!,selfrunning). Hallo SCENE+ Leser. Sensationen jagen\nSensationen, nicht nur daß SCORCHED EARTHendlich umgesetzt\nwurde, nein, es sind auch noch Demos zu neuen Spielen\nerschienen: PUSSY The Titanic puzzle von Fatality, undmein\nfavorit auf das Spiel des Jahrtausends: AWAKEN. Leider istdas\nDemo momentan nur als. RD File erhältlich. Ich habe es nurkurz\nangespielt, aber jetzt schon zeigt sich daß das Spiel dem ELITE\num Lichtjahre voraus ist, und das nicht nur wegen der\naus=gefüllter Vektorgraphik (Die noch teilweise einer\nüberarbeitungbedarf), sondern auch die komplexität der\nSimulation. Frühereversionen die unter dem Namen Spece bekannt\nsind,x sehenvergleichsweise sehr alt aus.\" Außerdem habe ich\nnoch weitere Spieledemos bekommen: NeuesteVersion von WORMS R!\nendlich mit Waffeneinsatz, WARCRAFT I(Nicht spielbar), IRON\nATTACK (Auf dieser Ausgabe), und nocheinige andere, sowiedie\nVollversionen von MONSTER LAND undSTALKER. Auf die nächste\nAusgabe der SCENE+ kommt das russische Spiel(keine Angst, es\ngibt nicht allzuviele Texte!) namens BABYLON 5, oder/und das\nDemo davon. Es ist genug Material da um für Emulations-Fans eine\nCD mitneuesten Russischen Programmen zu brennen. Interesse\ndaran?ä \"Legacy of the Zer Empire\" wird vielleicht AUCH in\nRussischerSprache erscheinen, aber das ist noch nicht fix,\nGespräche mit Fatality laufen an. Chaos Construction 9 ist\nbeendet, die neuesten Demos wartenauf eine konvertierung, was\nnur bei den 4K Intros leicht seindürfte. Das Treffen in Doksy\nallgemein als Doxycon bezeichnet,findet dagegen erst statt, auch\nwenn die Veranstallter problemehaben ein geeignetes P lätzchen\nzu finden. -+-+-+- STOP THE PRESS -+-+-+- Doxycon findet ab\n23.7.99 statt, ich werde dort sein.5 -+-+-+- START PRESS AGAIN\n-+-+-+-! Zum abschluß noch ein TV-Tip: auf TM dem Frauensender\n(?) liefvor kurzem die Zeichentrickserie zu DOUBLE DRAGON;-)\nDie Spectrum Version war mit mehr Action geladen.- Tiger'\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### SCENE+\n\n**Publisher and person responsible for the content:**\nL. C. D., Prager Str. 92/11/12, A-1210 Vienna, Austria  \nTel/Fax: +43 1 2723463, Mobile: +43 676 5022551  \nE-mail: lcd.one@aon.at  \n\n**Distribution jointly with SUC-Session:**  \nThomas Eberle & Fred Dürkes, Rainäckerstr. 4, D-70794, Germany  \nTel/Fax: (+49/711) 77 50 33  \nE-mail: sintech@online.de  \n\nSpectrum and SAM adverts are free of charge and can be in any form: text, screen, or demo (Spectrum formats only!, self-running).\n\n***\n\nHello SCENE+ readers.\n\nSensations keep chasing sensations! Not only has *Scorched Earth* finally been ported, but demos of brand-new games have also appeared: *PUSSY: The Titanic Puzzle* by Fatality, and my favorite candidate for game of the millennium: *AWAKEN*.\n\nUnfortunately, the demo is currently only available as an .RD file. I only played it briefly, but it is already clear that the game is lightyears ahead of *Elite* — and not just because of the filled vector graphics (which still need some tweaking in places), but also thanks to the complexity of the simulation. Earlier versions known under the name *Space* look very dated by comparison.\n\nI have also received several other game demos: the latest version of *WORMS R!* (finally with working weaponry), *WARCRAFT I* (non-playable), *IRON ATTACK* (included on this issue), and a few others, as well as the full versions of *MONSTER LAND* and *STALKER*.\n\nThe next issue of SCENE+ will feature the Russian game *BABYLON 5* (don't worry, there isn't too much text!) or/and a playable demo of it.\n\nThere is now enough material to burn a CD with the latest Russian software for emulation fans. Any interest in that?\n\n*Legacy of the Zer Empire* might ALSO be released in Russian, though that is not finalized yet; talks with Fatality are underway.\n\n*Chaos Constructions '99* is over, and the latest demos are awaiting conversion, which should only be easy for the 4K intros. Meanwhile, the gathering in Doksy (commonly known as Doxycon) is yet to take place, even though the organizers have had trouble finding a suitable venue.\n\n-+-+-+- **STOP THE PRESS** -+-+-+-\n\nDoxycon takes place starting July 23, 1999; I will be there.\n\n-+-+-+- **START PRESS AGAIN** -+-+-+-\n\nTo wrap things up, a quick TV tip: on TM (the women's channel?), the animated series of *DOUBLE DRAGON* aired recently ;-) The Spectrum version was definitely packed with way more action.\n\n— Tiger\n",
+  "body_ru": "### SCENE+\n\n**Издатель и ответственный за содержание:**\nL. C. D., Prager Str. 92/11/12, A-1210 Wien, Österreich  \nТел./Факс: +43 1 2723463, Моб.: +43 676 5022551  \nE-mail: lcd.one@aon.at  \n\n**Распространение совместно с SUC-Session:**  \nThomas Eberle & Fred Dürkes, Rainäckerstr. 4, D-70794, Deutschland  \nТел./Факс: (+49/711) 77 50 33  \nE-mail: sintech@online.de  \n\nРеклама и частные объявления по тематике Spectrum и SAM бесплатны и принимаются в любой форме: текст, картинка, демо (только спектрумовские форматы!, самозапускающиеся).\n\n***\n\nПривет, читатели SCENE+!\n\nСенсации буквально сменяют одна другую: мало того, что наконец-то перенесли *Scorched Earth*, так ещё вышли демоверсии новых игр: *PUSSY: The Titanic Puzzle* от Fatality и мой главный фаворит на звание игры тысячелетия — *AWAKEN*.\n\nК сожалению, демоверсия сейчас доступна только в виде файла формата .RD. Я лишь бегло взглянул на неё, но уже видно, что игра опережает *Elite* на световые годы — и не только за счёт заполненной векторной графики (которая местами ещё требует доработки), но и благодаря глубине симуляции. Предыдущие версии, известные под названием *Space*, на её фоне выглядят откровенно бледно.\n\nКроме того, ко мне попали и другие демоверсии: свежая версия *WORMS R!* (наконец-то с работающим оружием), *WARCRAFT I* (неиграбельная), *IRON ATTACK* (на этом номере) и кое-что ещё, а также полные версии *MONSTER LAND* и *STALKER*.\n\nВ следующем выпуске SCENE+ появится российская игра *BABYLON 5* (не бойтесь, текста там немного!) или её демоверсия.\n\nНакопилось уже достаточно материала, чтобы нарезать для фанатов эмуляции целый компакт-диск со свежими российскими программами. Есть ли к этому интерес?\n\nВозможно, *Legacy of the Zer Empire* ТАКЖЕ выйдет на русском языке, хотя окончательно вопрос ещё не решён — переговоры с Fatality только начинаются.\n\nФестиваль *Chaos Constructions '99* завершился, свежие демки ждут конверсии (что будет простым делом разве что для 4K-интро). А вот тусовка в Доксах, известная как Doxycon, ещё только предстоит, хотя у организаторов возникли сложности с поиском подходящего места.\n\n-+-+-+- **СРОЧНО В НОМЕР** -+-+-+-\n\nDoxycon пройдёт с 23 июля 1999 года, я там буду.\n\n-+-+-+- **ПРОДОЛЖАЕМ ВЫПУСК** -+-+-+-\n\nИ напоследок телесовет: на канале TM (женский канал?) недавно крутили мультсериал по *DOUBLE DRAGON* ;-) Версия для Спектрума была куда более насыщена экшеном.\n\n— Tiger\n",
+  "text_type": 3
+}

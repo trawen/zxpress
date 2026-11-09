@@ -1,0 +1,52 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "11",
+  "article_id": "03_INHALT_1",
+  "source_lang": "de-AT",
+  "title_en": "Contents 11/96",
+  "title_ru": "Содержание 11/96",
+  "meta_description_en": "An overview of the contents of Scene+ issue 11/96: articles on housing a Spectrum 128 in a PC tower, Color Lines review, Filderstadt meeting, games, demos, and music tools.",
+  "meta_description_ru": "Обзор содержания номера Scene+ 11/96: перенос ZX Spectrum 128 в корпус PC Minitower, обзор Color Lines, встреча в Фильдерштадте, игры, демо и музыкальный софт.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    },
+    {
+      "tag_name": "color-lines",
+      "tag_alias": "color-lines"
+    },
+    {
+      "tag_name": "twintris",
+      "tag_alias": "twintris"
+    },
+    {
+      "tag_name": "sampletracker",
+      "tag_alias": "sampletracker"
+    },
+    {
+      "tag_name": "filderstadt",
+      "tag_alias": "filderstadt"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_de_plain": "INHALT 11/96 D: Artikel Disesmal habe ich drei Artikel: Ei\nne  Anleitung  zum  Umbau  desSpectrums 128 in ein PC Minitower\nGehäuse, was  ich  selbst  mit Erfolg durchgeführt habe. Der z\nweite Artikel ist der Test des Spiels COLOR  LINES.  Leiderkonnt\ne  ich  den  versprochenen  Artikel  über  dies schnellstePlotr\noutine nicht fertigstellen, aber dafür wird  es  sicher  inder n\nächster Ausgabe erscheinen.j Durch unglückliche Schicksalsfügun\ng  konnte ich letztes mal  denArtikel über das Treffen  in  Fild\nerstadt  nicht  auf  die  Disk kopieren, weil die Masterdisk unf\normatiert wurde. Jetzt habe ichdas ganze noch einmal geschrieben\na E: Bilder Zehn Pictureviever mit insgesammt nur 66 Bildern,\n  und  zwar  12von Chinesischen Kung-Fu Kämpferinen, sowie 54 Bi\nlder aus Doctor Who-Survival.  Eine  bemerkung  am  Rande:  Wenn\n0 ihr einenFarbmonitor/Fernseher  habt,  sehen  die  Bilder5\nimmer vielschlechter aus als auf  einem  Graustufenmonitor/Fe\nrnseher,  dasliegt daran daß ein Farbfernseher eine Gittermaske\nhat,  dad urchschimmern die Bilder zu sehr.! F: Spiele Zu dem\n Zeitpunkt als ich das Schreibe, muß ich nur  noch  einigeKleini\ngkeiten bei Indian Patience ausbügeln, dann wird es in der Ausga\nbe 12/96 erscheinen. In  dieser  Ausgabe  sind  die  SpieleGEWIT\nTER in dem man sein Nachbarshaus auslöschen muß, und zwar b mit\nBlitz und Donner! Leider ist das Spiel nur für zwei  Spielerausg\nelegt.J Twintris ist ebenfalls für zwei Spieler, aber man kann\n es  auchalleine Spielen. Es ist ähnlich aufgebaut wie Tetris II\n.  Dieses Spiel bedarf wohl keiner Erklärung.# G: Demos Peter\n Novak ist  ein  mehrteiliges  Samplesoundtrack  Demo,  vorallem\n  die  erste  gesampelte  Musik  gefähltm mir wirklich,vielle\nicht werde ich sie als Titelsong zum \"Legacy\" benutzen?!? Carmin\nadle TI ist ein etwas  älteres  Demo  derwohl  inzwischeneingeg\nangener polnischer Codergruppe  DMJ  (Wie  der  Wagen  ausZurück\n in die  Zukunft). Die Ziffertasten dienen zum wechseln derMusik\n, probiert mal die \"3\" aus! Ich finde daß dies das beste Stuck i\nst.z SUC-Demo ist eigentlich nur ein kleiner Scherz von mir und\n Cat'sEye im bezug auf X-Terminator und F.B.I. Nehmt es bitte ni\ncht zu ernst und, falls der X-Terminator das je testen sollte, n\nicht zuhart mit mir und Catty ins  Gericht  gehen.  Zum  schreib\nen  des Demos haben wir nur zehn Minuten gebraucht.+ H: Sonstig\nes Shadow Nemesis Teil 3 ist die fortsetzung meines  ersten  g\nroßenRomans, tja, da werden erinnerungen Wach! Bald taucht die\nerste wenig gefährliche Ectomorph-Rasse auf und in einen der  nä\nchstenTeile wird es wirklich sehr spannend werden,  aber  damals\n  habe ich etwas mit der Brutalität übertrieben.) Sampletracker\n, der  wohl  bedienungsfreundlichster  Soundtrackerder  mit  Sam\nples  arbeitet.Ö In den nächsten Ausgabenveröffentliche i\nch  dann  den  SMT  Compiler,  Sampleplayer  undeinige Samples (\nThanx goes to Dave Fountains!). Anzumerken ist daß alle Lade\nund Speicheroperationen leider  nurauf Kassette gehen und da CBM\n die Szene schon  verlassen  haben, bleiben nur noch Cracker die\n eine +D version erstellen  könnten.Es bleibt noch die  hoffnung\n  auf  das  baldige  erscheinen  des Noisetra\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### Contents 11/96\n\n#### D: Articles\nThis time I have three articles: A guide on converting a Spectrum 128 into a PC minitower case, which I successfully did myself. The second article is a review of the game COLOR LINES. Unfortunately, I wasn't able to finish the promised article about the fastest plot routine, but it will definitely appear in the next issue.\n\nDue to an unfortunate twist of fate, last time I couldn't copy the article about the meeting in Filderstadt to the disk because the master disk had become unformatted. Now I have rewritten the whole thing.\n\n#### E: Pictures\nTen picture viewers with a total of only 66 pictures: namely 12 of Chinese female kung-fu fighters, and 54 pictures from Doctor Who – Survival. A side note: If you have a color monitor/TV, the pictures always look much worse than on a greyscale monitor/TV; this is because a color TV has a shadow mask, which causes the pictures to shimmer too much.\n\n#### F: Games\nAt the time of writing, I only need to iron out a few minor details in Indian Patience, then it will appear in issue 12/96.\n\nIn this issue, we have the games GEWITTER, in which you have to obliterate your neighbor's house with lightning and thunder! Unfortunately, the game is designed only for two players.\n\nTwintris is also for two players, but it can be played alone as well. It is built similarly to Tetris II. This game probably needs no explanation.\n\n#### G: Demos\nPeter Novak is a multi-part sampled soundtrack demo; I especially like the first sampled tune, maybe I'll use it as the title song for \"Legacy\"?!?\n\nCarminadle TI is an older demo by the Polish coder group DMJ (like the car from Back to the Future), which has probably disbanded by now. The number keys are used to change the music — try pressing \"3\"! I think that is the best track.\n\nSUC-Demo is actually just a little joke by me and Cat's Eye regarding X-Terminator and F.B.I. Please don't take it too seriously, and if X-Terminator ever reviews it, don't judge me and Catty too harshly. It only took us ten minutes to write the demo.\n\n#### H: Miscellaneous\nShadow Nemesis Part 3 is the continuation of my first big novel — well, that brings back memories! Soon the first, not particularly dangerous Ectomorph race will appear, and in one of the next parts it will get really exciting, though back then I slightly overdid the brutality.\n\nSampletracker is probably the most user-friendly soundtracker that works with samples. In upcoming issues, I will publish the SMT compiler, sample player, and several samples (Thanks go to Dave Fountains!). It should be noted that all loading and saving operations unfortunately only work with cassette tape; and since CBM has already left the scene, only crackers remain who could create a +D version. There is still hope for the prompt release of the Noisetracker...\n",
+  "body_ru": "### Содержание 11/96\n\n#### D: Статьи\nВ этот раз у меня три статьи: руководство по переделке Spectrum 128 в корпус формата PC Minitower, что я сам успешно проделал. Вторая статья — обзор игры COLOR LINES. К сожалению, я не успел подготовить обещанную статью о самой быстрой процедуре вывода точки (plot), но она обязательно появится в следующем номере.\n\nИз-за досадного стечения обстоятельств в прошлый раз я не смог скопировать на диск статью о встрече в Фильдерштадте, так как мастер-диск оказался не отформатирован. Теперь я написал всё заново.\n\n#### E: Картинки\nДесять просмотрщиков с общим числом всего в 66 картинок: 12 с китайскими девушками-мастерами кунг-фу, а также 54 кадра из «Доктора Кто: Выживание» (Doctor Who – Survival). Замечание на полях: если у вас цветной монитор или телевизор, картинки всегда выглядят намного хуже, чем на чёрно-белом мониторе или ТВ. Причина в том, что у цветного кинескопа есть теневая маска, из-за чего изображение слишком сильно мерцает и рябит.\n\n#### F: Игры\nНа момент написания этих строк мне остаётся лишь отладить пару мелочей в Indian Patience, после чего игра выйдет в номере 12/96.\n\nВ этом же выпуске представлены игры: GEWITTER, в которой вам предстоит уничтожить дом соседа при помощи молний и грома! К сожалению, игра рассчитана только на двоих игроков.\n\nTwintris тоже рассчитан на двоих, но в него можно играть и одному. По механике игра напоминает Tetris II. Вряд ли она нуждается в дополнительных объяснениях.\n\n#### G: Демо\nPeter Novak — многочастное демо с оцифрованной музыкой; мне особенно нравится первый сэмплерный трек, возможно, я использую его в качестве заглавной темы к «Legacy»?!?\n\nCarminadle TI — более старое демо, созданное польской группой кодеров DMJ (прямо как машина из «Назад в будущее»), которая, вероятно, уже распалась. Цифровые клавиши служат для смены музыки — обязательно попробуйте клавишу «3»! На мой взгляд, это лучший трек.\n\nSUC-Demo — на самом деле всего лишь небольшая шутка от меня и Cat's Eye по поводу X-Terminator и F.B.I. Пожалуйста, не воспринимайте её слишком всерьёз и, если X-Terminator когда-нибудь возьмётся её рецензировать, не судите нас с Кэтти слишком строго. На написание этого демо у нас ушло всего десять минут.\n\n#### H: Разное\nShadow Nemesis, часть 3 — продолжение моего первого крупного романа. Да уж, нахлынули воспоминания! Скоро появится первая, не особо опасная раса Эктоморфов, а в одной из следующих частей сюжет станет по-настоящему захватывающим — правда, в те времена я слегка переборщил с жестокостью.\n\nSampletracker — пожалуй, самый удобный в использовании саундтрекер, работающий с сэмплами. В следующих выпусках я опубликую SMT-компилятор, сэмпл-плеер и несколько сэмплов (спасибо Dave Fountains!). Следует отметить, что все операции загрузки и сохранения, увы, работают только с кассетой, а так как CBM уже покинули сцену, остаётся надеяться лишь на крекеров, способных сделать версию под +D. Также остаётся надежда на скорый выход Noisetracker...\n",
+  "text_type": 3
+}

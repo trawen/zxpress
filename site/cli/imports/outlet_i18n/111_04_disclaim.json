@@ -1,0 +1,35 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "111",
+  "article_id": "04_disclaim",
+  "title_en": "Disclaimer",
+  "title_ru": "Отказ от ответственности",
+  "meta_description_en": "Official editorial disclaimer from Outlet magazine regarding published software, reader discretion, and liability.",
+  "meta_description_ru": "Официальный отказ от ответственности редакции журнала Outlet в отношении публикуемых программ и информации.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "disclaimer",
+      "tag_alias": "disclaimer"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    }
+  ],
+  "category_ids": [
+    123,
+    116,
+    121
+  ],
+  "body_en_plain": "D I S C L A I M E R\n      -------------------\nAll the software and information\nis published in 'OUTLET' in good\nfaith that it is safe and sound.\nHowever, readers are reminded to\nuse discretion and common  sense\nin relation thereto, and its use\nshould be with the understanding\nthat it is at your own risk. The\nmagazine is defined as an outlet\nfor  computer hobbyists to share\ntheir own software,  information\nand points of  view.  Therefore,\nwe cannot necessarily agree with\neverything that  is published in\nOUTLET - and so we cannot accept\nresponsibility for  any  damage,\nloss,difficulties or injury that\nmight result therefrom.\n.\n",
+  "body_ru_plain": "",
+  "body_en": "# Disclaimer\n\nAll the software and information is published in 'OUTLET' in good faith that it is safe and sound. However, readers are reminded to use discretion and common sense in relation thereto, and its use should be with the understanding that it is at your own risk. The magazine is defined as an outlet for computer hobbyists to share their own software, information and points of view. Therefore, we cannot necessarily agree with everything that is published in OUTLET - and so we cannot accept responsibility for any damage, loss, difficulties or injury that might result therefrom.\n",
+  "body_ru": "# Отказ от ответственности\n\nВсе программы и материалы публикуются в «OUTLET» из добрых побуждений и в предположении их полной надежности и безопасности. Тем не менее читателям напоминается о необходимости проявлять осмотрительность и здравый смысл, а их использование осуществляется исключительно на ваш собственный страх и риск. Журнал позиционируется как площадка для энтузиастов, желающих делиться своими программами, информацией и точками зрения. Поэтому редакция не обязательно согласна со всем, что публикуется в OUTLET, и не может нести ответственность за какой-либо ущерб, потери, трудности или вред, которые могут возникнуть вследствие их использования.\n",
+  "text_type": 3
+}

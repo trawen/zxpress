@@ -1,0 +1,48 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "079",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A preview of the April issue of Outlet: bouncing scroller routine for demos, PC tape interface review, +D renumber, 256K RAM expansion, and more.",
+  "meta_description_ru": "Анонс апрельского выпуска Outlet: универсальный прыгающий скроллер, обзор tape-интерфейса для ПК-эмулятора, расширение памяти до 256K и многое другое.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "announcement"
+    },
+    {
+      "tag_name": "демостроение",
+      "tag_alias": "demoscene"
+    },
+    {
+      "tag_name": "диск+d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "lunter emulator",
+      "tag_alias": "lunter-emulator"
+    },
+    {
+      "tag_name": "256k",
+      "tag_alias": "256k"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "The most exciting thing we hope\nto bring you in the April OUTLET\nis the amazing universal mult-\niple bouncing scrolling routine\nthat has been used in many of\nthe recent stunning demos so\nfrom then on you will be able to\nproduce your own original demos.\n\nThere should also be a unique\nfiling/storage system and a\nreview of the tape interface for\nthe Lunter PC Spectrum Emulator.\n                         more...\n\nAlso next month there will be a\nnew way to illustrate your Basic\nincluding scrolling pictures, a\nrenumber facility to be secreted\nin the +D Execute File, an algo-\nrithm to \"throw a net\" over an\nimaginary 3-D surface, \"Bastec\"\nthe amazing Basic Detective, a\nDrivechat about how to increase\nyour Spectrum RAM to 256k, a\nsimple game, some more wonderful\nsampled sound, plus all the\nregular features. Can't wait to\nsee it all!\n                        Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "The most exciting thing we hope to bring you in the April OUTLET is the amazing universal multiple bouncing scrolling routine that has been used in many of the recent stunning demos so from then on you will be able to produce your own original demos.\n\nThere should also be a unique filing/storage system and a review of the tape interface for the Lunter PC Spectrum Emulator.\n\nAlso next month there will be a new way to illustrate your Basic including scrolling pictures, a renumber facility to be secreted in the +D Execute File, an algorithm to \"throw a net\" over an imaginary 3-D surface, \"Bastec\" the amazing Basic Detective, a Drivechat about how to increase your Spectrum RAM to 256k, a simple game, some more wonderful sampled sound, plus all the regular features. Can't wait to see it all!\n\nChris.\n",
+  "body_ru": "Самое захватывающее, чем мы надеемся порадовать вас в апрельском номере OUTLET — это потрясающая универсальная процедура многослойного прыгающего скроллера, которая использовалась во многих недавних сногсшибательных демо, так что теперь вы сможете создавать свои собственные оригинальные демки.\n\nКроме того, планируется уникальная файловая система/каталогизатор и обзор интерфейса для чтения кассет под PC-эмулятор Спектрума от Lunter.\n\nТакже в следующем месяце вас ждут: новый способ иллюстрировать программы на Бейсике (включая скроллирующиеся картинки), функция перенумерации строк, спрятанная в файле автозапуска +D Execute File, алгоритм «натягивания сетки» на воображаемую 3D-поверхность, утилита «Bastec» — потрясающий детектив ошибок Бейсика, беседа в Drivechat о том, как расширить оперативную память Спектрума до 256K, простая игра, свежая подборка оцифрованного звука и, конечно же, все регулярные рубрики. С нетерпением ждём выхода!\n\nChris.\n",
+  "text_type": 3
+}

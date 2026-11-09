@@ -1,0 +1,49 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "042",
+  "article_id": "06_edit_l",
+  "title_en": "Editorial (Late)",
+  "title_ru": "Редакторская колонка (дополнение)",
+  "meta_description_en": "Chezron Software's late editorial for Outlet #042 (February 1991): reader thanks, reviewer volunteers, OUTDEX for SAM Coupé, and switching compilation to Disciple.",
+  "meta_description_ru": "Редакторская колонка Chezron Software для Outlet #042 (февраль 1991): благодарности читателям, волонтёры-рецензенты, OUTDEX для SAM Coupé и переход на сборку с помощью Disciple.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron",
+      "tag_alias": "chezron"
+    },
+    {
+      "tag_name": "disciple",
+      "tag_alias": "disciple"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "microdrive",
+      "tag_alias": "microdrive"
+    },
+    {
+      "tag_name": "outdex",
+      "tag_alias": "outdex"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "F E B R U A R Y ,  1 9 9 1\nMany thanks to all those readers\nwho sent us good wishes and Xmas\ncards over the festive season.It\nis a delight to receive them and\nbe assured they are so very much\nappreciated even though we can't\nalways acknowledge each greeting\npersonally!\n\nThanks also -for all the support\nand appreciative comments we get\nthroughout the year;they help us\nfeel that generally we're on the\nright track and boost morale!\n\nOne further acknowledgement goes\nto all those who volunteered for\nsoftware review duty!We have put\ntogether a list of your names.It\nis worth repeating that you must\nnot be disappointed if you don't\nsee much (anything?) from us -we\njust don't get that much sent to\nus! It could be that we now have\nmore reviewers than programs for\nreview!\n\nOUTDEX, our monthly index,has at\nlast been converted to SAM COUPE\nand will appear in a few months.\n\nThis is the first issue compiled\ninitially on a Disciple disc and\nthen converted to OUTLET's other\nversions.Up until now each issue\nhas been created on a microdrive\ncartridge (except COUPE-specific\nitems). It is a significant step\nfor us - although transparent to\nthe end user - because it should\nspeed up many operations and the\nextra reliability also means not\nso much time's wasted recovering\nlost software!Altogether it must\ncontribute to our drive for more\nefficiency and a better service!\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_ru_plain": "",
+  "body_en": "**FEBRUARY, 1991**\n\nMany thanks to all those readers who sent us good wishes and Xmas cards over the festive season. It is a delight to receive them and be assured they are so very much appreciated even though we can't always acknowledge each greeting personally!\n\nThanks also for all the support and appreciative comments we get throughout the year; they help us feel that generally we're on the right track and boost morale!\n\nOne further acknowledgement goes to all those who volunteered for software review duty! We have put together a list of your names. It is worth repeating that you must not be disappointed if you don't see much (anything?) from us — we just don't get that much sent to us! It could be that we now have more reviewers than programs for review!\n\nOUTDEX, our monthly index, has at last been converted to SAM COUPE and will appear in a few months.\n\nThis is the first issue compiled initially on a Disciple disc and then converted to OUTLET's other versions. Up until now each issue has been created on a microdrive cartridge (except COUPE-specific items). It is a significant step for us — although transparent to the end user — because it should speed up many operations and the extra reliability also means not so much time's wasted recovering lost software! Altogether it must contribute to our drive for more efficiency and a better service!\n\nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "body_ru": "**ФЕВРАЛЬ, 1991**\n\nБольшое спасибо всем читателям, приславшим нам добрые пожелания и рождественские открытки к праздникам. Получать их — огромное удовольствие, и будьте уверены, что мы чрезвычайно признательны за них, даже если нам не всегда удаётся ответить на каждое поздравление лично!\n\nТакже спасибо за поддержку и тёплые отзывы, которые мы получаем в течение всего года; они помогают нам чувствовать, что мы движемся в правильном направлении, и отлично поднимают боевой дух!\n\nОтдельная благодарность всем, кто вызвался писать обзоры программного обеспечения! Мы составили список ваших имён. Стоит повторить: пожалуйста, не расстраивайтесь, если не дождётесь от нас большого количества материалов (или вообще ничего) — нам присылают не так много софта! Вполне возможно, что рецензентов у нас теперь больше, чем самих программ на обзор!\n\nOUTDEX, наш ежемесячный каталог, наконец-то был портирован на SAM COUPE и появится через пару месяцев.\n\nЭто первый номер журнала, который изначально собирался на диске Disciple, а затем конвертировался в остальные версии OUTLET. До сих пор каждый выпуск создавался на картриджах Microdrive (за исключением материалов, предназначенных исключительно для Coupé). Для нас это важный шаг — пусть и незаметный для конечного пользователя, — поскольку он должен ускорить многие операции, а повышенная надёжность означает, что нам больше не придётся тратить кучу времени на восстановление утерянных программ! Всё это непременно поспособствует повышению нашей эффективности и улучшению качества обслуживания!\n\nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "text_type": 3
+}

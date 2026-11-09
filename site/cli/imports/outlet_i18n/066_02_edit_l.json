@@ -1,0 +1,49 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "066",
+  "article_id": "02_edit_l",
+  "title_en": "Editorial (Late): February 1993",
+  "title_ru": "Редакторская колонка (доп.): Февраль 1993",
+  "meta_description_en": "Outlet #066 late editorial: SAM version discontinuation, disc bug explanations (MAX demo, Roman Calc), Masterfile index plans, and ink jet printer inquiries.",
+  "meta_description_ru": "Дополнительная редакторская колонка Outlet #066: закрытие версии для SAM, разбор багов прошлого номера (демо MAX, Roman Calc), поиск базы Masterfile и опрос о струйных принтерах.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "+d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "disciple",
+      "tag_alias": "disciple"
+    },
+    {
+      "tag_name": "masterfile",
+      "tag_alias": "masterfile"
+    },
+    {
+      "tag_name": "printers",
+      "tag_alias": "printers"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "F E B R U A R Y ,  1 9 9 3\n\nSince losing the SAM version of\nOUTLET last month and the need\nto support OUTLET with full-time\nemployment,our proposal to raise\nthe price of the magazine has\nbeen shelved while we rethink!\n\nLast month, the MAX demo in the\nADD-ENDERS of the Disciple/+D\nversion had two bugs, one of\nwhich obscured the other! It now\nseems it will not work on the\nDisciple at all but only on the\n+D and G+DOS corrupted the disc\njust before duplication so it\ndid not work on the +D either!\n\nIn a last minute panic a new\nmaster was created which worked\non a +D but was then tested on a\nDisciple set up. As it still did\nnot work it was deemed not worth\naltering all the discs that were\nalready duplicated so even the\n+D discs went out bugged!\n\nAnyway, the corrected version is\nin this month BUT WILL ONLY WORK\nON A +D.\n\nROMAN CALC was also bugged and\ncorrection details are given by\nthe author, Malcolm Perry, in\nthis month's OUTLETTERS. Sorry\nabout these problems.\n\nWe've had a tremendous response\nto our request for copies of the\nMASTERFILE database (now in the\npublic domain) to be sent in and\nare happy that we now have what\nwe want. Please do not send any\nmore as we are now just getting\nthe same versions we already\nhave. Many thanks to all those\nwho contributed and we hope to\npublish MASTERFILE soon and look\nat the possibility of using it\nas a new OUTLET index to replace\nOUTDEX which became full at the\nend of last year.\n\nDo any of our readers use an ink\njet printer? We could certainly\nuse a higher quality printer for\ncertain work and have heard the\nquality of ink jet printers is\nalmost as good as laser printers\nbut costing much less. However,\nare they expensive to run? Does\nthe ink (cartridges?) cost more\nthan the equivalent ribbon for\na dot-matrix?\n\nIf you are using an ink jet, why\nnot write in with a short review\ngiving some idea of its features\nand both initial cost and the\ncost of ink. Send in a sample of\nthe print out.\n\nWe are particularly interested\nin a budget-priced printer.\n\nFinally, there is a Computer and\nVideo Game buy/sell/swap mart on\n28th February at Hallow Village\nHall near Worcester(A443)between\n10am and 4pm where you can sell\nand swap your computer bits and\npieces. Admission is only 50p.\nFurther details on 0905 755193\nafter 6pm.\n                    Ron & Brian\n             ______\n\n      OUTLET is produced by\n\n          Chris Oliver\n        Averil  Crowston\n       Ron & Brian Cavers\n\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_ru_plain": "",
+  "body_en": "F E B R U A R Y , 1 9 9 3\n\nSince losing the SAM version of OUTLET last month and the need to support OUTLET with full-time employment, our proposal to raise the price of the magazine has been shelved while we rethink!\n\nLast month, the MAX demo in the ADD-ENDERS of the Disciple/+D version had two bugs, one of which obscured the other! It now seems it will not work on the Disciple at all but only on the +D and G+DOS corrupted the disc just before duplication so it did not work on the +D either!\n\nIn a last minute panic a new master was created which worked on a +D but was then tested on a Disciple set up. As it still did not work it was deemed not worth altering all the discs that were already duplicated so even the +D discs went out bugged!\n\nAnyway, the corrected version is in this month BUT WILL ONLY WORK ON A +D.\n\nROMAN CALC was also bugged and correction details are given by the author, Malcolm Perry, in this month's OUTLETTERS. Sorry about these problems.\n\nWe've had a tremendous response to our request for copies of the MASTERFILE database (now in the public domain) to be sent in and are happy that we now have what we want. Please do not send any more as we are now just getting the same versions we already have. Many thanks to all those who contributed and we hope to publish MASTERFILE soon and look at the possibility of using it as a new OUTLET index to replace OUTDEX which became full at the end of last year.\n\nDo any of our readers use an ink jet printer? We could certainly use a higher quality printer for certain work and have heard the quality of ink jet printers is almost as good as laser printers but costing much less. However, are they expensive to run? Does the ink (cartridges?) cost more than the equivalent ribbon for a dot-matrix?\n\nIf you are using an ink jet, why not write in with a short review giving some idea of its features and both initial cost and the cost of ink. Send in a sample of the print out.\n\nWe are particularly interested in a budget-priced printer.\n\nFinally, there is a Computer and Video Game buy/sell/swap mart on 28th February at Hallow Village Hall near Worcester (A443) between 10am and 4pm where you can sell and swap your computer bits and pieces. Admission is only 50p. Further details on 0905 755193 after 6pm.\n\nRon & Brian\n\n______\n\nOUTLET is produced by\n\nChris Oliver  \nAveril Crowston  \nRon & Brian Cavers  \n\nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "body_ru": "Ф Е В Р А Л Ь , 1 9 9 3\n\nПосле закрытия версии OUTLET для SAM Coupe в прошлом месяце и необходимости поддерживать журнал основной работой на полный день, наше предложение поднять цену издания было отложено до тех пор, пока мы всё хорошенько не переосмыслим!\n\nВ прошлом месяце демо MAX в приложении ADD-ENDERS на дисках для Disciple/+D содержало две ошибки, одна из которых маскировала другую! Похоже, на интерфейсе Disciple оно не запустится вообще, а только на +D; к тому же G+DOS повредила диск непосредственно перед тиражированием, так что программа не запустилась и на +D тоже!\n\nВ панике на последних минутах был сделан новый мастер-диск, который запустился на +D, но затем был протестирован на конфигурации с Disciple. Поскольку там он всё равно не заработал, мы посчитали бессмысленным переделывать все уже растиражированные диски, так что даже владельцы +D получили диск с ошибкой!\n\nВ любом случае, исправленная версия включена в этот номер, НО ОНА БУДЕТ РАБОТАТЬ ТОЛЬКО НА +D.\n\nВ ROMAN CALC также была ошибка; информацию по её исправлению предоставил автор, Malcolm Perry, в рубрике OUTLETTERS текущего номера. Приносим извинения за эти неудобства.\n\nМы получили огромный отклик на нашу просьбу прислать копии базы данных MASTERFILE (которая теперь перешла в статус public domain) и рады сообщить, что теперь у нас есть всё необходимое. Пожалуйста, больше не присылайте копий — мы просто получаем повторно те же версии, что у нас уже есть. Огромное спасибо всем откликнувшимся! Мы надеемся опубликовать MASTERFILE в ближайшее время и рассмотреть возможность её использования в качестве нового каталога-указателя OUTLET взамен OUTDEX, в котором закончилось свободное место в конце прошлого года.\n\nИспользует ли кто-нибудь из наших читателей струйный принтер? Нам бы очень пригодился принтер более высокого качества для определённых задач. Мы слышали, что качество струйных принтеров почти не уступает лазерным, но стоят они гораздо дешевле. Однако насколько они дороги в эксплуатации? Обходятся ли чернила (картриджи?) дороже, чем эквивалентная красящая лента для матричного принтера?\n\nЕсли вы пользуетесь струйным принтером, почему бы не написать нам короткий отзыв с описанием его возможностей, начальной стоимости и расходов на чернила? Пришлите также образец печати.\n\nОсобенно нас интересуют бюджетные модели.\n\nИ напоследок: 28 февраля в Hallow Village Hall недалеко от Worcester (шоссе A443) с 10:00 до 16:00 состоится ярмарка купли/продажи/обмена компьютерных и видеоигр, где вы сможете продать или обменять различное «железо» и софт. Вход всего 50 пенсов. Подробности по телефону 0905 755193 после 18:00.\n\nRon & Brian\n\n______\n\nOUTLET выпускают:\n\nChris Oliver  \nAveril Crowston  \nRon & Brian Cavers  \n\nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "text_type": 3
+}

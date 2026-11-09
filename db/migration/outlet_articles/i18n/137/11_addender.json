@@ -1,0 +1,47 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "137",
+  "article_id": "11_addender",
+  "title_en": "Addenders: Tape Copiers",
+  "title_ru": "Дополнения: Программы копирования кассет",
+  "meta_description_en": "Introduction to the Add-Enders section in Outlet #137, featuring two Tape-to-Tape copy programs for ZX Spectrum 48K and 128K.",
+  "meta_description_ru": "Описание рубрики «Дополнения» в Outlet #137: два копировщика с ленты на ленту для ZX Spectrum 48K и 128K.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "add-enders",
+      "tag_alias": "add-enders"
+    },
+    {
+      "tag_name": "tape copier",
+      "tag_alias": "tape-copier"
+    },
+    {
+      "tag_name": "spectrum 48k",
+      "tag_alias": "spectrum-48k"
+    },
+    {
+      "tag_name": "spectrum 128k",
+      "tag_alias": "spectrum-128k"
+    },
+    {
+      "tag_name": "utility",
+      "tag_alias": "utility"
+    }
+  ],
+  "category_ids": [
+    62,
+    74,
+    116
+  ],
+  "body_en_plain": "Some items contributed to OUTLET\nhave not yet been included for a\nvariety of reasons. It's a shame\nto leave them on the shelf so,if\nappropriate, they will be added\nto this ADD-ENDERS area of the\nmagazine (not microdrive or Opus\nas there is not enough room).\n\nThe material covers a wide range\nof quality and program types:\nutilities, screens, character\nsets and text articles and SOME\nof it may be unedited, untested,\nnot working fully or properly;\nin need of conversion for your\n\nsystem's syntax or printer etc.;\nwithout full instructions or\nwhatever. Readers will have to\nsift through to see if there is\nanything of interest they can\nmake use of and discard the\nrest. Not everything will appear\non all versions necessarily.\n\nSome Add-Enders may be linked to\nOUTLET in the normal way. These\nwill usually precede this text\nfile. Any items that follow this\narticle will possibly need to be\nLOADed manually or may not auto-\nrun when loaded.\n\nThere may be some info on the\nfollowing pages...\n\nThere are two Tape-to-Tape copy\nprograms in ADDENDERS this month\nfor 48k and 128k respectively.\n\nNo instructions arrived with\nthe programs, but they should be\nfairly straightforward to use.\n\nOn loading, you are presented\nwith jumbo figures in the top\nportion of the screen, and it\nis a fair bet that this number\nrepresents the total of free\nbytes available in memory Lower\ndown the screen is a menu bar,\nwhich should be self- explanat-\nory.\n\nHappy Copying!\n\n    PRESS N TO LOAD COPY 48.\n",
+  "body_ru_plain": "",
+  "body_en": "Some items contributed to OUTLET have not yet been included for a variety of reasons. It's a shame to leave them on the shelf so, if appropriate, they will be added to this ADD-ENDERS area of the magazine (not microdrive or Opus as there is not enough room).\n\nThe material covers a wide range of quality and program types: utilities, screens, character sets and text articles and SOME of it may be unedited, untested, not working fully or properly; in need of conversion for your system's syntax or printer etc.; without full instructions or whatever. Readers will have to sift through to see if there is anything of interest they can make use of and discard the rest. Not everything will appear on all versions necessarily.\n\nSome Add-Enders may be linked to OUTLET in the normal way. These will usually precede this text file. Any items that follow this article will possibly need to be LOADed manually or may not auto-run when loaded.\n\nThere may be some info on the following pages...\n\nThere are two Tape-to-Tape copy programs in ADDENDERS this month for 48k and 128k respectively.\n\nNo instructions arrived with the programs, but they should be fairly straightforward to use.\n\nOn loading, you are presented with jumbo figures in the top portion of the screen, and it is a fair bet that this number represents the total of free bytes available in memory. Lower down the screen is a menu bar, which should be self-explanatory.\n\nHappy Copying!\n\nPRESS N TO LOAD COPY 48.\n",
+  "body_ru": "Некоторые материалы, присланные в OUTLET, по разным причинам до сих пор не были опубликованы. Жалко оставлять их пылиться на полке, поэтому по мере возможности они будут размещаться в этом разделе журнала под названием «ДОПОЛНЕНИЯ» (ADD-ENDERS; кроме версий для микродрайва и Opus, так как там не хватает места).\n\nКачество и тип этих материалов весьма разнообразны: утилиты, экраны, наборы шрифтов и текстовые статьи. Кое-что из этого может оказаться неотредактированным, непротестированным, работающим не полностью или со сбоями; требующим адаптации под синтаксис вашей системы или принтер; лишённым подробных инструкций и так далее. Читателям придётся покопаться в них самостоятельно, чтобы найти что-то полезное и отсеять остальное. Не всё обязательно появится во всех версиях журнала.\n\nНекоторые дополнения могут запускаться из оболочки OUTLET обычным образом — они обычно предшествуют этому текстовому файлу. Всё, что идёт после этой статьи, возможно, придётся загружать вручную (командой LOAD), либо программы могут не запускаться автоматически после загрузки.\n\nДалее следует дополнительная информация...\n\nВ этом месяце в рубрике «Дополнения» представлены две программы для копирования с ленты на ленту (Tape-to-Tape) — соответственно для 48k и 128k.\n\nНикаких инструкций к программам не прилагалось, но разобраться в них не должно составить труда.\n\nПосле загрузки в верхней части экрана вы увидите гигантские цифры — можно с уверенностью предположить, что это число означает количество свободных байт памяти. Ниже на экране расположена панель меню, пункты которой интуитивно понятны.\n\nУдачного копирования!\n\nНАЖМИТЕ N ДЛЯ ЗАГРУЗКИ COPY 48.\n",
+  "text_type": 3
+}

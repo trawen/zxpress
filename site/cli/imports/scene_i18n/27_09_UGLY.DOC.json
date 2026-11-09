@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "27",
+  "article_id": "09_UGLY.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Uglyblaster",
+  "title_ru": "Uglyblaster",
+  "meta_description_en": "Mini-review of the multiplayer game Uglyblaster for the ZX Spectrum from Scene+ #27.",
+  "meta_description_ru": "Мини-обзор мультиплеерной игры Uglyblaster для ZX Spectrum из журнала Scene+ #27.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "uglyblaster",
+      "tag_alias": "uglyblaster"
+    },
+    {
+      "tag_name": "bomberman",
+      "tag_alias": "bomberman"
+    },
+    {
+      "tag_name": "game-review",
+      "tag_alias": "game-review"
+    }
+  ],
+  "category_ids": [
+    1,
+    2
+  ],
+  "body_de_plain": "UGLYB. ü - UGLYBLASTER - Bruder, Schwester oder Freund zur Hand?\nDann auf geht's zu einemspannenden Duell auf Leben und Tod!\nWäre der GegnerComputergesteuert, so könnte man sagen daß dieses\nSpiel besserals das geniale ERIC AND THE FLOATERS ist (bzw.\nBOMBERMAN wennman lieber kompliziert mit Keyboard spielt als mit\nSinclairJoystick!). Doch auch so hat das Spiel seine Reize.y -\nBrother, sister or friends at the hand, then let's play\nthisdeadly game of destruction, death and, ermj. bombs! Yes,\nreallybombs, those making \"Boom!\" noise. With a\ncomputercontroledenemy this game could be better that ERIC AND\nTHE FLOATERS, butit isn't! Try\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### UGLYBLASTER\n\nGot a brother, sister, or friend at hand? Then let's jump into an exciting duel of life and death!\n\nIf the opponent were computer-controlled, one could say that this game is better than the ingenious *Eric and the Floaters* (or *Bomberman*, if you prefer cumbersome keyboard controls over a Sinclair joystick!). Yet even without CPU opponents, the game has its own charm.\n\n*(Original English blurb from the mag:)*\nBrother, sister or friends at hand, then let's play this deadly game of destruction, death and, erm... bombs! Yes, really bombs, those making \"Boom!\" noise. With a computer-controlled enemy this game could be better than *Eric and the Floaters*, but it isn't! Try it anyway.\n",
+  "body_ru": "### UGLYBLASTER\n\nБрат, сестра или друг под рукой? Тогда вперед, к захватывающей дуэли не на жизнь, а на смерть!\n\nЕсли бы соперником управлял компьютер, можно было бы сказать, что эта игра лучше великолепной *Eric and the Floaters* (или *Bomberman*, если вы предпочитаете мудрёное управление с клавиатуры вместо джойстика Sinclair!). Но и в таком виде у игры есть своё очарование.\n\n*(Оригинальная англоязычная аннотация из журнала:)*\nБрат, сестра или друзья рядом? Тогда давайте сыграем в эту смертоносную игру разрушений, гибели и... кхм, бомб! Да, самых настоящих бомб, издающих звук «Бум!». Будь здесь противник под управлением компьютера, игра могла бы превзойти *Eric and the Floaters*, но увы! Попробуйте сами.\n",
+  "text_type": 3
+}

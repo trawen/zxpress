@@ -1,0 +1,49 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "018",
+  "article_id": "01_editorial",
+  "title_en": "Editorial",
+  "title_ru": "От редакции",
+  "meta_description_en": "Outlet #18 editorial: guidelines for reader contributions, freeware and copyright policies for utilities, and subscription renewal information.",
+  "meta_description_ru": "Обращение редакторов Outlet #18: требования к присылаемым программам, правила распространения freeware-утилит и информация об окончании подписки.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "freeware",
+      "tag_alias": "freeware"
+    },
+    {
+      "tag_name": "copyright",
+      "tag_alias": "copyright"
+    },
+    {
+      "tag_name": "subscription",
+      "tag_alias": "subscription"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Thanks to all  who contribute to\nOUTLET - we certainly get a wide\nand interesting variety of items\nsent in to us!May we just remind\nyou that contributions should be\nyour own, original effort unless\nyou have permission to send in a\nprogram from someone else.\n\nThere are one or two\"grey areas\"\n- exceptions to the rule- still,\ngenerally  speaking,  you should\nnot, for example, send a program\ntyped from a magazine listing.\n\nWatch for the flashing\"FREEWARE\"\nsigns on the title pages of some\nOUTLET programs - You can freely\ngive away copies of any software\nmarked in that way but shouldn't\nmake a charge except to meet any\ncosts.All OUTLET utilities which\nare  developed by us may also be\nused WITHIN any of your programs\nwhether for sale or not.  If any\nreader would  also like to waive\nthe  copyright on his or her own\ncontribution(making it FREEWARE)\nor just give  permission for its\nuse IN  another's  program (like\nSUPA-QUIT) then let us know.\n\nWe've had requests  from readers\nasking when  their subscriptions\nrun out.  Don't worry! We always\ninclude a reminder with the last\nissue of your current subscript-\nion. You may also have noted our\nnew labelling system which shows\nmonths remaining and blank disks\nor cartridges remaining  (if you\nsupply your own).\n\nNow you didn't really think that\nwe would forget you?\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall, Leicester LE4 4NJ\n   (Prestel Mailbox:014703943).\n",
+  "body_ru_plain": "Спасибо всем,  кто пишет для\nOUTLET — к нам действительно\nпоступает огромное количество\nсамых разных  и  увлекательных\nматериалов! Но хотим напомнить,\nчто присылаемые работы должны\nбыть вашими собственными, если\nтолько у вас нет разрешения на\nотправку чужой программы.\n\nТут есть пара «серых зон» —\nисключений из правил, — но всё\nже, говоря в целом, не следует,\nк примеру, слать программы,\nнабранные из листингов в других\nжурналах.\n\nОбратите внимание  на мигающую\nнадпись \"FREEWARE\" на титульных\nэкранах некоторых программ из\nOUTLET — копии любого софта с\nтакой пометкой можно свободно\nраздавать, но нельзя брать за\nних деньги (кроме компенсации\nрасходов). Все утилиты OUTLET,\nразработанные нами, также можно\nиспользовать ВНУТРИ любых ваших\nпрограмм, как для продажи, так\nи нет. Если кто-то из читателей\nтоже хотел бы отказаться от\nавторских прав на свою работу\n(сделав её FREEWARE) или просто\nдать разрешение на её работу\nВ ЧУЖОЙ программе (как утилиту\nSUPA-QUIT), дайте нам знать.\n\nМы получали запросы от читателей\nо том, когда истекает подписка.\nНе волнуйтесь! Мы всегда кладем\nнапоминание в последний номер\nвашей текущей подписки. Вы также\nмогли заметить нашу новую метку\nна конвертах: там указаны число\nоставшихся месяцев и чистых\nдисков или картриджей (если вы\nприсылаете свои).\n\nНеужели вы и правда подумали,\nчто мы могли о вас забыть?\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall, Leicester LE4 4NJ\n   (Prestel Mailbox:014703943).\n",
+  "body_en": "## Editorial\n\nThanks to all who contribute to OUTLET - we certainly get a wide and interesting variety of items sent in to us! May we just remind you that contributions should be your own, original effort unless you have permission to send in a program from someone else.\n\nThere are one or two \"grey areas\" - exceptions to the rule - still, generally speaking, you should not, for example, send a program typed from a magazine listing.\n\nWatch for the flashing \"FREEWARE\" signs on the title pages of some OUTLET programs - You can freely give away copies of any software marked in that way but shouldn't make a charge except to meet any costs. All OUTLET utilities which are developed by us may also be used WITHIN any of your programs whether for sale or not. If any reader would also like to waive the copyright on his or her own contribution (making it FREEWARE) or just give permission for its use IN another's program (like SUPA-QUIT) then let us know.\n\nWe've had requests from readers asking when their subscriptions run out. Don't worry! We always include a reminder with the last issue of your current subscription. You may also have noted our new labelling system which shows months remaining and blank disks or cartridges remaining (if you supply your own).\n\nNow you didn't really think that we would forget you?\n\nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ  \n(Prestel Mailbox: 014703943)\n",
+  "body_ru": "## От редакции\n\nСпасибо всем, кто пишет для OUTLET — к нам действительно поступает огромное количество самых разных и увлекательных материалов! Но хотим напомнить, что присылаемые работы должны быть вашими собственными, если только у вас нет разрешения на отправку чужой программы.\n\nТут есть пара «серых зон» — исключений из правил, — но всё же, говоря в целом, не следует, к примеру, слать программы, набранные из листингов в других журналах.\n\nОбратите внимание на мигающую надпись \"FREEWARE\" на титульных экранах некоторых программ из OUTLET — копии любого софта с такой пометкой можно свободно раздавать, но нельзя брать за них деньги (кроме компенсации расходов). Все утилиты OUTLET, разработанные нами, также можно использовать ВНУТРИ любых ваших программ, как для продажи, так и нет. Если кто-то из читателей тоже хотел бы отказаться от авторских прав на свою работу (сделав её FREEWARE) или просто дать разрешение на её работу В ЧУЖОЙ программе (как утилиту SUPA-QUIT), дайте нам знать.\n\nМы получали запросы от читателей о том, когда истекает подписка. Не волнуйтесь! Мы всегда кладем напоминание в последний номер вашей текущей подписки. Вы также могли заметить нашу новую метку на конвертах: там указаны число оставшихся месяцев и чистых дисков или картриджей (если вы присылаете свои).\n\nНеужели вы и правда подумали, что мы могли о вас забыть?\n\n```text\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall, Leicester LE4 4NJ\n   (Prestel Mailbox:014703943).\n```\n",
+  "text_type": 3
+}

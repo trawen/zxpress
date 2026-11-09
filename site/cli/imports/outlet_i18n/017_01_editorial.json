@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "017",
+  "article_id": "01_editorial",
+  "title_en": "Editorial",
+  "title_ru": "От редакции",
+  "meta_description_en": "Editorial from Outlet #017: New Year greetings, minichars4 font addresses for Tasword, corrections, and notes on AMX mouse software.",
+  "meta_description_ru": "Редакционная статья Outlet #017: новогодние пожелания, шрифты minichars4 для Tasword, исправления ошибок и новости редакции.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "tasword",
+      "tag_alias": "tasword"
+    },
+    {
+      "tag_name": "amx mouse",
+      "tag_alias": "amx-mouse"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_en_plain": "A Very Happy New Year to all!\n\nAs we get more and more readers\nwe are under increasing pressure\nso please be patient if it takes\na little longer to send an order\nor to sort out your query! We're\ntrying to resolve the problem.\n\nNote that many queries can only\nbe answered in OUTLETTERS so\nplease send a text file as well\n(or instead of!)if you have one,\nespecially if you are sending a\nblank disk, tape etc. anyway!\nHand-written or printed letters\nare fine but it's a bit exasper-\nating to get a printed-out query\nfilling an A4 page together with\nthe user's blank disk!\n\nWe apologize to Norman Unitt. We\ncredited John Taylor with his\nprogram: CHRISTMAS LIST last\nmonth!Sorry about that!(computer\nerror - ahem!)\n\nAnother apology - We've had to\nput back CRALDON CREEK Part two\na couple of months due to a bug.\n\nIn this issue,\"minichars4\" isn't\nlinked but is a new Tasword font\nto be loaded into Tasword. Use\nLOAD... etc \"minichars4\"CODExxx\nwhere xxx is 61184 for Tasword 2\n54528 for Tasword +2 and 38400\nfor Tasword 3. Thanks to Dave\nCowling for those addresses and\nthanks to those who separately\nsent in the new font which was\nfrom the now-extinct ZXC.\n\nAn overseas contact has an AMX\nmouse-enhancing program for\nreview. We can't review it with-\nout the mouse but if anyone\nwould like to volunteer please\nwrite. Note that we still await\npermission from the author to do\nthis. We've no idea what the\nsoftware actually does.\n\nIf you want to do a back-up copy\nof this CONTENTS BASIC then do\nNOT do it after reading any text\nfile as the intro music is auto-\ndeleted to make room. Re-load it\nfirst.\n\nNow, let's see what the new year\nhas to offer....\n\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ\n   (Prestel Mailbox:014703943).\n",
+  "body_ru_plain": "Счастливого Нового года всем!\n\nЧисло наших читателей растёт,\nи нагрузка на нас тоже, так что\nпроявите терпение, если отправка\nзаказа или ответ на ваш вопрос\nзаймёт чуть больше времени! Мы\nпытаемся решить эту проблему.\n\nЗаметьте: на многие вопросы мы\nможем ответить лишь в OUTLETTERS,\nтак что присылайте и текстовый\nфайл (или даже вместо письма!),\nесли есть возможность — особенно\nесли вы всё равно шлёте чистый\nдиск, кассету и т.д.! Рукописные\nили печатные письма — это хорошо,\nно немного досадно получать\nраспечатанный на лист A4 вопрос\nвместе с чистым диском!\n\nПриносим извинения Norman Unitt.\nВ прошлом месяце мы приписали\nавторство его программы\nCHRISTMAS LIST автору по имени\nJohn Taylor! Простите за это!\n(компьютерный сбой — кхм!)\n\nИ ещё извинение — нам пришлось\nотложить CRALDON CREEK Part two\nна пару месяцев из-за бага.\n\nВ этом выпуске \"minichars4\" не\nподключён к меню — это новый\nшрифт для Tasword, загружаемый\nв Tasword. Используйте команду\nLOAD... etc \"minichars4\"CODExxx\nгде xxx — 61184 для Tasword 2,\n54528 для Tasword +2 и 38400\nдля Tasword 3. Спасибо Dave\nCowling за эти адреса, а также\nтем, кто независимо прислал этот\nновый шрифт из ныне угасшего ZXC.\n\nНаш зарубежный контакт предлагает\nдля обзора программу улучшения\nAMX mouse. Мы не можем сделать\nобзор без мыши, но если есть\nжелающие побыть добровольцами —\nнапишите. Учтите, что мы пока\nждём разрешения от автора. Мы\nпонятия не имеем, что этот софт\nна самом деле делает.\n\nЕсли хотите сделать резервную\nкопию этого CONTENTS BASIC, НЕ\nделайте её после чтения любого\nтекстового файла: вступительная\nмузыка удаляется из памяти для\nэкономии места. Сначала сделайте\nсброс и загрузите его заново.\n\nА теперь посмотрим, что нам\nприготовил новый год....\n\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ\n   (Prestel Mailbox:014703943).\n",
+  "body_en": "## Editorial\n\nA Very Happy New Year to all!\n\nAs we get more and more readers we are under increasing pressure so please be patient if it takes a little longer to send an order or to sort out your query! We're trying to resolve the problem.\n\nNote that many queries can only be answered in OUTLETTERS so please send a text file as well (or instead of!) if you have one, especially if you are sending a blank disk, tape etc. anyway! Hand-written or printed letters are fine but it's a bit exasperating to get a printed-out query filling an A4 page together with the user's blank disk!\n\nWe apologize to Norman Unitt. We credited John Taylor with his program: CHRISTMAS LIST last month! Sorry about that! (computer error - ahem!)\n\nAnother apology - We've had to put back CRALDON CREEK Part two a couple of months due to a bug.\n\nIn this issue, \"minichars4\" isn't linked but is a new Tasword font to be loaded into Tasword. Use LOAD... etc \"minichars4\"CODExxx where xxx is 61184 for Tasword 2, 54528 for Tasword +2 and 38400 for Tasword 3. Thanks to Dave Cowling for those addresses and thanks to those who separately sent in the new font which was from the now-extinct ZXC.\n\nAn overseas contact has an AMX mouse-enhancing program for review. We can't review it without the mouse but if anyone would like to volunteer please write. Note that we still await permission from the author to do this. We've no idea what the software actually does.\n\nIf you want to do a back-up copy of this CONTENTS BASIC then do NOT do it after reading any text file as the intro music is auto-deleted to make room. Re-load it first.\n\nNow, let's see what the new year has to offer....\n\n```text\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ\n   (Prestel Mailbox:014703943).\n```\n",
+  "body_ru": "## От редакции\n\nСчастливого Нового года всем!\n\nЧисло наших читателей растёт, и нагрузка на нас тоже, так что проявите терпение, если отправка заказа или ответ на ваш вопрос займёт чуть больше времени! Мы пытаемся решить эту проблему.\n\nЗаметьте: на многие вопросы мы можем ответить лишь в OUTLETTERS, так что присылайте и текстовый файл (или даже вместо письма!), если есть возможность — особенно если вы всё равно шлёте чистый диск, кассету и т.д.! Рукописные или печатные письма — это хорошо, но немного досадно получать распечатанный на лист A4 вопрос вместе с чистым диском!\n\nПриносим извинения Norman Unitt. В прошлом месяце мы приписали авторство его программы CHRISTMAS LIST автору по имени John Taylor! Простите за это! (компьютерный сбой — кхм!)\n\nИ ещё извинение — нам пришлось отложить CRALDON CREEK Part two на пару месяцев из-за бага.\n\nВ этом выпуске \"minichars4\" не подключён к меню — это новый шрифт для Tasword, загружаемый в Tasword. Используйте команду:\n\n`LOAD... etc \"minichars4\"CODExxx`\n\nгде `xxx`:\n* 61184 для Tasword 2,\n* 54528 для Tasword +2,\n* 38400 для Tasword 3.\n\nСпасибо Dave Cowling за эти адреса, а также тем, кто независимо прислал этот новый шрифт из ныне угасшего ZXC.\n\nНаш зарубежный контакт предлагает для обзора программу улучшения AMX mouse. Мы не можем сделать обзор без мыши, но если есть желающие побыть добровольцами — напишите. Учтите, что мы пока ждём разрешения от автора. Мы понятия не имеем, что этот софт на самом деле делает.\n\nЕсли хотите сделать резервную копию этого CONTENTS BASIC, **НЕ** делайте её после чтения любого текстового файла: вступительная музыка удаляется из памяти для экономии места. Сначала сделайте сброс и загрузите его заново.\n\nА теперь посмотрим, что нам приготовил новый год....\n\n```text\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ\n   (Prestel Mailbox:014703943).\n```\n",
+  "text_type": 3
+}

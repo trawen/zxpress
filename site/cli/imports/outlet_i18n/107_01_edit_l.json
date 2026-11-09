@@ -1,0 +1,36 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "107",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Editorial from Outlet #107 (July 1996): explanation for the slight delay due to a house move, guidelines for reader queries, and a call for software submissions.",
+  "meta_description_ru": "Вступительное слово редакторов Outlet #107 (июль 1996): задержка номера из-за переезда, правила вопросов читателей и призыв присылать программы и статьи.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "J U L Y ,   1 9 9 6\n\nOur apologies if you receive the\nlatest OUTLET a bit late but one\nof us (Brian) has moved home and\nhalf the equipment is still in\nboxes! We'll keep this editorial\nshort to hurry things along!\n\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET. We\nare sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\nContributions have improved to a\nreasonable extent recently but\nremember, we need YOUR support,\nand contributions of articles\nand programs, especially utility\nprograms, are now needed more\nthan ever. Even a short routine\ncan be like gold dust to another\nuser! Send 'em in!\n\n\nDespite the rush we've a packed\nissue this month so press the N\nkey for the next item and enjoy!\n\n                    Ron & Brian\n\n\n\n\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nJ U L Y ,   1 9 9 6\n\nOur apologies if you receive the latest OUTLET a bit late but one of us (Brian) has moved home and half the equipment is still in boxes! We'll keep this editorial short to hurry things along!\n\nMay we remind readers, we cannot answer computer, software, hard- ware or system queries etc., personally by mail.  All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder!Share your problems with others! That way, everyone benefits!\n\nContributions have improved to a reasonable extent recently but remember, we need YOUR support, and contributions of articles and programs, especially utility programs, are now needed more than ever. Even a short routine can be like gold dust to another user! Send 'em in!\n\nDespite the rush we've a packed issue this month so press the N key for the next item and enjoy!\n\nRon & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers\n\nCHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF .\n",
+  "body_ru": "## От редакции (с опозданием)\n\n**И Ю Л Ь ,   1 9 9 6**\n\nПриносим извинения, если вы получили свежий OUTLET с небольшим опозданием: один из нас (Brian) переехал на новое место жительства, и половина оборудования всё ещё запакована в коробках! Поэтому мы сделаем эту вступительную статью короткой, чтобы не затягивать процесс!\n\nНапоминаем читателям: мы не можем отвечать на вопросы о компьютерах, софте, железе, системах и тому подобном лично по почте. Все подобные вопросы рассматриваются исключительно через рубрику OUTLETTERS в журнале OUTLET. Простите, что постоянно твердим об этом, но об этом действительно нужно напоминать регулярно! Делитесь своими проблемами с другими! В таком случае польза будет для каждого!\n\nПоток присылаемых материалов за последнее время заметно оживился, но помните: нам нужна ВАША поддержка. Статьи и программы — особенно утилиты — сейчас нужны нам как никогда. Даже короткая подпрограмма может оказаться на вес золота для другого пользователя! Присылайте их!\n\nНесмотря на спешку, номер в этом месяце получился очень насыщенным, так что нажимайте клавишу N для перехода к следующему материалу и приятного чтения!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n```\n",
+  "text_type": 3
+}

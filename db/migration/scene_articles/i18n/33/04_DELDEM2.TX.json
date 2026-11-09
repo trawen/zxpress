@@ -1,0 +1,49 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "33",
+  "article_id": "04_DELDEM2.TX",
+  "source_lang": "de-AT",
+  "title_en": "Delta Animation Demo 2",
+  "title_ru": "Delta Animation Demo 2",
+  "meta_description_en": "A brief overview of Delta Animation Demo 2, showcasing delta compression on ZX Spectrum with a BASIC movie player based on an early animation from Legacy.",
+  "meta_description_ru": "Краткая заметка о Delta Animation Demo 2: демонстрация дельта-компрессии на ZX Spectrum с видеоплеером на Бейсике на основе ранней анимации из Legacy.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "animation",
+      "tag_alias": "animation"
+    },
+    {
+      "tag_name": "delta-compression",
+      "tag_alias": "delta-compression"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    },
+    {
+      "tag_name": "demo",
+      "tag_alias": "demo"
+    }
+  ],
+  "category_ids": [
+    43,
+    52,
+    93
+  ],
+  "body_de_plain": "ANIM ü - DELTA ANIMATION DEMO 2 - Eine der früheren \"Legacy\"\nAnimationen habe ich verwendet um dieleistungsfähigkeit meines\nDelta-Compressors zu demonstrieren. Jedoch im Unterschied zum\nDemo 1 hat das Demo einen in Basicgeschriebenen Movieplayer.\nSoll nur zeigen wie man das ganzebenutzen kann. - One of the\nearlier animations made for \"Legacy\" resampled to usewith my\ndelta compressor to show its full power. The differenceto demo 1\nist the movie player that is written in Basic as aexample how to\nuse the player. - How about your own animations? If you have\ndone one, regardlessif 48 or 128K, please send it to S+, usual\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### DELTA ANIMATION DEMO 2\n\nI used one of the earlier animations created for \"Legacy\" to demonstrate the capabilities of my delta compressor. Unlike Demo 1, however, this demo features a movie player written in BASIC to show how easily the player routine can be implemented and used.\n\nHow about your own animations? If you have created one, whether for 48K or 128K, please send it to Scene+ via the usual channels!\n",
+  "body_ru": "### DELTA ANIMATION DEMO 2\n\nЯ взял одну из ранних анимаций, созданных для «Legacy», чтобы продемонстрировать возможности своего дельта-компрессора. Однако, в отличие от первой части (Demo 1), в этой демке видеоплеер написан на Бейсике — просто чтобы показать, как можно использовать эту процедуру в своих программах.\n\nА как насчёт ваших собственных анимаций? Если вы сделали что-то подобное (неважно, под 48K или 128K), обязательно присылайте в Scene+ по обычным контактам!\n",
+  "text_type": 3
+}

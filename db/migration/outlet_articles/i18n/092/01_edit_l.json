@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "092",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Late editorial from Outlet #092 (April 1995): 3-inch disk supply updates, reader contributions, and software compatibility between +D and ZX Spectrum +3.",
+  "meta_description_ru": "Дополнительная редакторская колонка Outlet #092 за апрель 1995: поставки 3-дюймовых дискет, приток читательских материалов и вопросы совместимости софта для +D и +3.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "3-inch-disks",
+      "tag_alias": "3-inch-disks"
+    },
+    {
+      "tag_name": "plus-d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "zx-spectrum-plus3",
+      "tag_alias": "zx-spectrum-plus3"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "A P R I L ,   1 9 9 5\nWe are pleased to report we have\nhad a small stock of 3\" disks in\nfrom our supplier and this looks\nhopeful to continue - although\nthey are slightly more expensive\nthan before. We've also got the\nname of another supplier to try!\n\n\nAnother bit of good news is that\ncontributions of programs and\narticles to OUTLET has been a\nbit more healthy this last month\nor two.We had some meagre months\nbefore that which had us a bit\nconcerned but hopefully the new\ntrend will continue and we'll\nsee the next millenium in!\n\nMany thanks for your support!\nKeep sending them in.  Remember,\nthey don't need to be complete\nprograms - short routines are\nalso helpful to others as well\nas screen pictures and articles\non almost any relevant topic. It\nis always interesting to read,\nfor instance, about software and\nother products that people are\nusing. Articles must be on disk\nor tape though (returned later).\n\nWe still get letters asking for\nfree private advice by mail! May\nwe remind readers that we cannot\nanswer computer, software,\nhardware or system queries etc.,\npersonally by mail. All such\nqueries are answered through the\nOUTLETTERS section in OUTLET.\n\nApologies again to +3 users but\nthe program INDEX in this issue\nuses a +D OPENTYPE file which\ncannot even be transferred to a\n+3 let alone be loaded by INDEX\nand displayed!\n\nAdmittedly, +3 users do get more\n\"non-runners\" on their system in\nOUTLET than +D users. However,we\ndo have one or two +3-specific\nprograms in the pipeline so you\nwill partly get your own back!\n\nWell,there's a slight feeling of\noptimism in the air so on that\nnote we'll end. Enjoy the mag!\n\n                Ron & Brian\n\n\n\n\n\n\n\n\n\n\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nA P R I L ,   1 9 9 5 We are pleased to report we have had a small stock of 3\" disks in from our supplier and this looks hopeful to continue - although they are slightly more expensive than before. We've also got the name of another supplier to try!\n\nAnother bit of good news is that contributions of programs and articles to OUTLET has been a bit more healthy this last month or two.We had some meagre months before that which had us a bit concerned but hopefully the new trend will continue and we'll see the next millenium in!\n\nMany thanks for your support! Keep sending them in.  Remember, they don't need to be complete programs - short routines are also helpful to others as well as screen pictures and articles on almost any relevant topic. It is always interesting to read, for instance, about software and other products that people are using. Articles must be on disk or tape though (returned later).\n\nWe still get letters asking for free private advice by mail! May we remind readers that we cannot answer computer, software, hardware or system queries etc., personally by mail. All such queries are answered through the OUTLETTERS section in OUTLET.\n\nApologies again to +3 users but the program INDEX in this issue uses a +D OPENTYPE file which cannot even be transferred to a +3 let alone be loaded by INDEX and displayed!\n\nAdmittedly, +3 users do get more \"non-runners\" on their system in OUTLET than +D users. However,we do have one or two +3-specific programs in the pipeline so you will partly get your own back!\n\nWell,there's a slight feeling of optimism in the air so on that note we'll end. Enjoy the mag!\n\nRon & Brian\n\nOUTLET is produced by Chris Oliver Ron & Brian Cavers CHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF .\n",
+  "body_ru": "## Editorial (late)\n\nА П Р Е Л Ь , 1 9 9 5\n\nМы рады сообщить, что от нашего поставщика поступила небольшая партия 3\" дискет, и, похоже, есть надежда на продолжение поставок — хотя они и стали чуть дороже, чем раньше. Кроме того, у нас появился контакт еще одного поставщика, которого мы хотим опробовать!\n\nЕще одна хорошая новость: приток программ и статей в OUTLET за последние месяц-два стал несколько бодрее. До этого было несколько совсем скудных месяцев, что нас изрядно беспокоило, но, будем надеяться, новая тенденция сохранится, и мы встретим следующее тысячелетие!\n\nОгромное спасибо за вашу поддержку! Продолжайте присылать свои материалы. Помните: это не обязательно должны быть законченные программы — короткие подпрограммы тоже принесут пользу другим, равно как и экранные картинки, и статьи практически на любую подходящую тему. Всегда интересно почитать, например, о софте и других продуктах, которыми пользуются читатели. Однако статьи должны быть на диске или кассете (с последующим возвратом).\n\nМы по-прежнему получаем письма с просьбами о бесплатных частных консультациях по почте! Напоминаем читателям, что мы не можем лично отвечать по почте на вопросы о компьютерах, софте, железе, системах и т.д. Все подобные вопросы разбираются через рубрику OUTLETTERS в OUTLET.\n\nСнова приносим извинения пользователям +3, но программа INDEX в этом выпуске использует файл OPENTYPE для +D, который невозможно даже перенести на +3, не говоря уже о том, чтобы загрузить с помощью INDEX и отобразить!\n\nНадо признать, у пользователей +3 в OUTLET действительно чаще попадаются неработающие на их системе вещи, чем у владельцев +D. Однако у нас в разработке есть одна-две программы специально под +3, так что вы частично отыграетесь!\n\nЧто ж, в воздухе витает легкий оптимизм, так что на этой ноте мы и закончим. Приятного чтения журнала!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n```\n",
+  "text_type": 3
+}

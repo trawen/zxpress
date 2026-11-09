@@ -1,0 +1,45 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "34",
+  "article_id": "06_BD6.TX",
+  "source_lang": "de-AT",
+  "title_en": "Boulder Dash VI",
+  "title_ru": "Boulder Dash VI",
+  "meta_description_en": "A brief review and note on Boulder Dash VI (Mr Dash Strikes Back) for the ZX Spectrum from Scene+ #34.",
+  "meta_description_ru": "Краткая заметка об игре Boulder Dash VI (Mr Dash strikes back) для ZX Spectrum из журнала Scene+ #34.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    },
+    {
+      "tag_name": "boulder-dash",
+      "tag_alias": "boulder-dash"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    }
+  ],
+  "category_ids": [
+    1,
+    2,
+    3
+  ],
+  "body_de_plain": "BD ü - BOULDER DASH VI - Mr Dash schlägt zurück. Im Grunde\ngenohmen hat diese Version dengleichen Levelaufbau wie der Teil\n5, aber andere Graphik (Umgekehrt wäre es mir wesentlich\nlieber). - Mr Dash strikes back. BD has the same level design\nlike BD5,but a different graphic set. Ö - Spectrum 48. Load in 48\nK mode, Key 1 to star\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**BOULDER DASH VI** — *Mr Dash Strikes Back*\n\nBasically, this version features the same level layout as Part 5, but with different graphics (personally, I would have preferred it the other way around).\n\n*Mr Dash strikes back. BD has the same level design like BD5, but a different graphic set.*\n\nSpectrum 48K. Load in 48K mode, press key 1 to start.\n",
+  "body_ru": "**BOULDER DASH VI** — *Mr Dash Strikes Back* («Мистер Дэш наносит ответный удар»)\n\nПо сути, в этой версии точно такое же построение уровней, как и в пятой части, но другая графика (лично мне куда больше понравилось бы наоборот).\n\n*Mr Dash strikes back. BD has the same level design like BD5, but a different graphic set.*\n\nSpectrum 48K. Загружать в режиме 48K, клавиша 1 для старта.\n",
+  "text_type": 3
+}

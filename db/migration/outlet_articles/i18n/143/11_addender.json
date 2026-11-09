@@ -1,0 +1,49 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "143",
+  "article_id": "11_addender",
+  "title_en": "Addender",
+  "title_ru": "Дополнение",
+  "meta_description_en": "Introduction to the Add-Enders section in Outlet #143 and an overview of the universal LOAD.ALL loader routine by Brian Cavers for ZX Spectrum.",
+  "meta_description_ru": "Вводная заметка к рубрике Add-Enders журнала Outlet #143 и описание универсальной подпрограммы LOAD.ALL от Brian Cavers для загрузки файлов на ZX Spectrum.",
+  "authors": [
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet-magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    },
+    {
+      "tag_name": "load.all",
+      "tag_alias": "load-all"
+    },
+    {
+      "tag_name": "routine",
+      "tag_alias": "routine"
+    },
+    {
+      "tag_name": "tape",
+      "tag_alias": "tape"
+    },
+    {
+      "tag_name": "disk",
+      "tag_alias": "disk"
+    }
+  ],
+  "category_ids": [
+    30,
+    64,
+    123
+  ],
+  "body_en_plain": "Some items contributed to OUTLET\nhave not yet been included for a\nvariety of reasons. It's a shame\nto leave them on the shelf so,if\nappropriate, they will be added\nto this ADD-ENDERS area of the\nmagazine (not microdrive or Opus\nas there is not enough room).\n\nThe material covers a wide range\nof quality and program types:\nutilities, screens, character\nsets and text articles and SOME\nof it may be unedited, untested,\nnot working fully or properly;\nin need of conversion for your\n\nsystem's syntax or printer etc.;\nwithout full instructions or\nwhatever. Readers will have to\nsift through to see if there is\nanything of interest they can\nmake use of and discard the\nrest. Not everything will appear\non all versions necessarily.\n\nSome Add-Enders may be linked to\nOUTLET in the normal way. These\nwill usually precede this text\nfile. Any items that follow this\narticle will possibly need to be\nLOADed manually or may not auto-\nrun when loaded.\n\nThere may be some info on the\nfollowing pages...\n\nFollowing on from the suggestion\nin OUTLET to reproduce some of\nthe better routines from earlier\nissues of OUTLET for the benefit\nof newer subscribers, this month\nwe have \"LOAD.ALL\" which is a\nuniversal routine written by\nBrian Cavers for loading a prog-\nram, a chunk of code or a screen\nfrom tape or disc to any Spectr-\num.It's the sequel to \"SAVE.ALL\"\nin last month's OUTLET.\n\nSave the routine and merge it\ninto your own program. When you\nwant to use it, simply use...\n        GOSUB 9600.\nNote that the routine is curr-\nently set to load a SCREEN$, so\nlines 9645, 9650, & 9655 will\nneed tweaking if you wish to use\nit to load something different.\n\nAny suggestions of programs that\nyou would like to see again or\nconsider to be of special value\nto other readers are always\nwelcome, and we will include one\nas an ADDENDER each month if\nspace permits. Be warned however\nthat most of those magical demos\nwill be much too large for incl-\nusion!\n\n          ============\n\nPress \"N\" now to load 'LOAD.ALL'\n\nNote that you will probably get\nan error report when the program\nis loaded from OUTLET, as it is\nnot Auto-run..\n",
+  "body_ru_plain": "",
+  "body_en": "## Addender\n\nSome items contributed to OUTLET have not yet been included for a variety of reasons. It's a shame to leave them on the shelf so,if appropriate, they will be added to this ADD-ENDERS area of the magazine (not microdrive or Opus as there is not enough room).\n\nThe material covers a wide range of quality and program types: utilities, screens, character sets and text articles and SOME of it may be unedited, untested, not working fully or properly; in need of conversion for your\n\nsystem's syntax or printer etc.; without full instructions or whatever. Readers will have to sift through to see if there is anything of interest they can make use of and discard the rest. Not everything will appear on all versions necessarily.\n\nSome Add-Enders may be linked to OUTLET in the normal way. These will usually precede this text file. Any items that follow this article will possibly need to be LOADed manually or may not auto- run when loaded.\n\nThere may be some info on the following pages...\n\nFollowing on from the suggestion in OUTLET to reproduce some of the better routines from earlier issues of OUTLET for the benefit of newer subscribers, this month we have \"LOAD.ALL\" which is a universal routine written by Brian Cavers for loading a prog- ram, a chunk of code or a screen from tape or disc to any Spectr- um.It's the sequel to \"SAVE.ALL\" in last month's OUTLET.\n\nSave the routine and merge it into your own program. When you want to use it, simply use... GOSUB 9600. Note that the routine is curr- ently set to load a SCREEN$, so lines 9645, 9650, & 9655 will need tweaking if you wish to use it to load something different.\n\nAny suggestions of programs that you would like to see again or consider to be of special value to other readers are always welcome, and we will include one as an ADDENDER each month if space permits. Be warned however that most of those magical demos will be much too large for incl- usion!\n\n```text\n          ============\n```\n\nPress \"N\" now to load 'LOAD.ALL'\n\nNote that you will probably get an error report when the program is loaded from OUTLET, as it is not Auto-run..\n",
+  "body_ru": "## Addender\n\nНекоторые материалы, присланные в OUTLET, до сих пор не были включены в журнал по разным причинам. Жалко оставлять их пылиться на полке, поэтому при наличии возможности они будут добавляться в этот раздел журнала под названием ADD-ENDERS (на версиях для Microdrive или Opus их не будет, так как там не хватает места).\n\nЭтот материал весьма разнообразен по качеству и типам программ: утилиты, экраны, наборы шрифтов и текстовые статьи, и КОЕ-ЧТО из этого может быть неотредактированным, непротестированным, работать не полностью или некорректно; требовать адаптации под синтаксис вашей системы, принтер и т. д.; быть без подробных инструкций или с другими нюансами. Читателям придется покопаться во всем этом, чтобы найти то, что покажется им интересным и полезным, а остальное отсеять. Не все материалы обязательно появятся во всех версиях журнала.\n\nНекоторые из Add-Enders могут быть привязаны к OUTLET обычным способом. Как правило, они предшествуют этому текстовому файлу. Любые материалы, идущие после этой статьи, возможно, придется загружать вручную (командой LOAD), либо они могут не запуститься автоматически после загрузки.\n\nНекоторая информация может быть на следующих страницах...\n\nВ продолжение предложения, прозвучавшего в OUTLET, перепечатывать некоторые из лучших процедур из ранних номеров OUTLET на пользу новым подписчикам, в этом месяце мы представляем «LOAD.ALL» — универсальную подпрограмму, написанную Brian Cavers, для загрузки программы, блока машинного кода или экрана с ленты или диска на любой Spectrum. Это продолжение процедуры «SAVE.ALL» из прошлого номера OUTLET.\n\nСохраните эту подпрограмму и объедините (MERGE) её со своей собственной программой. Когда захотите её использовать, просто укажите:\n```text\n        GOSUB 9600\n```\nОбратите внимание, что в настоящий момент подпрограмма настроена на загрузку SCREEN$, поэтому строки 9645, 9650 и 9655 потребуют корректировки, если вы захотите использовать её для загрузки чего-то другого.\n\nЛюбые предложения по программам, которые вы хотели бы увидеть снова или считаете особенно ценными для других читателей, всегда приветствуются, и мы будем включать по одной в качестве ADDENDER каждый месяц, если позволит место. Имейте в виду, однако, что большинство тех потрясающих демок окажутся слишком велики по объёму!\n\n============\n\nНажмите «N» сейчас, чтобы загрузить 'LOAD.ALL'\n\nОбратите внимание, что при загрузке программы из OUTLET вы, вероятно, получите сообщение об ошибке, так как она не запускается автоматически (Auto-run)..\n",
+  "text_type": 3
+}

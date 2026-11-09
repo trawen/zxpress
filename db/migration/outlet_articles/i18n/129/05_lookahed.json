@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "129",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "Chris Cowley previews the upcoming contents of Outlet issue #130: manure spreading via computer, an astronomy program, LOGO, utilities, music, and an adventure game.",
+  "meta_description_ru": "Крис Каули анонсирует материалы следующего номера Outlet #130: разбрасывание навоза с помощью компьютера, астрономия, язык LOGO, утилиты, музыка и текстовое приключение.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "lookahead",
+      "tag_alias": "lookahead"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    },
+    {
+      "tag_name": "logo",
+      "tag_alias": "logo"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_en_plain": "Some years ago, a relative gave\nme as a Christmas gift, a book\nentitled \"101 Things to do with\na Dead Computer\"! the cartoon on\nthe cover shows a couple of uses\nfor a discarded keyboards (which\nlook suspiciously like Spectrum\n\"rubber\" ones): little cubes of\nwater-colour paints have been\nconveniently fitted into the key\nslots to make a useful palette,\nor alternatively, with keys\nremoved the board is used as a\ncheese-grater. Hmm!...\n\n\nBut now we hear that computers\nare being used for spreading\nmanure? The imagination boggles!\nBut it's true,as will be reveal-\ned in the OUTPUT in next month's\nissue.\n\nGetting away from such earthy\nmatters, next month there is an\nexcellent astrological program\nwhich shows the positions of\nfive hundred stars in seventy-\nsix galaxies.\n\nDo you remember \"LOGO\",the prog-\nramming language which was used\nwith \"TURTLE\" to teach simple\nprogramming? Whether you do or\nnot, you will have the chance\nnext month, to play about with a\nform of LOGO (or MOCK-TURTLE?).\n\n\nThere are several utilities in\nthe pipeline, including one to\nsave space in a Basic program, a\nscreen framer, some Benchmark\nroutines and a program to define\nmultiple windows anywhere on the\nscreen and scroll text in each\nwindow.\n\nAnd there's more: a little game\nto exercise your keyboard\nfingers, some marvellous music\nfrom Jean Michel Jarre, and an\nexcellently illustrated text\nadventure game.\n\n                  Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Some years ago, a relative gave me as a Christmas gift, a book entitled \"101 Things to do with a Dead Computer\"! The cartoon on the cover shows a couple of uses for discarded keyboards (which look suspiciously like Spectrum \"rubber\" ones): little cubes of water-colour paints have been conveniently fitted into the key slots to make a useful palette, or alternatively, with keys removed the board is used as a cheese-grater. Hmm!...\n\nBut now we hear that computers are being used for spreading manure? The imagination boggles! But it's true, as will be revealed in the OUTPUT in next month's issue.\n\nGetting away from such earthy matters, next month there is an excellent astrological program which shows the positions of five hundred stars in seventy-six galaxies.\n\nDo you remember \"LOGO\", the programming language which was used with \"TURTLE\" to teach simple programming? Whether you do or not, you will have the chance next month, to play about with a form of LOGO (or MOCK-TURTLE?).\n\nThere are several utilities in the pipeline, including one to save space in a Basic program, a screen framer, some Benchmark routines and a program to define multiple windows anywhere on the screen and scroll text in each window.\n\nAnd there's more: a little game to exercise your keyboard fingers, some marvellous music from Jean Michel Jarre, and an excellently illustrated text adventure game.\n\nChris.\n",
+  "body_ru": "Несколько лет назад один родственник подарил мне на Рождество книгу под названием «101 способ применить мёртвый компьютер»! На карикатуре с обложки показана пара вариантов использования выброшенных клавиатур (подозрительно похожих на «резиновые» клавиши Спектрума): в углубления для кнопок удобно вставлены кубики акварельных красок, превращая её в полезную палитру, либо, если клавиши вынуть, плата используется в качестве тёрки для сыра. Хм-м!..\n\nА теперь до нас дошли слухи, что компьютеры применяют для... разбрасывания навоза? Воображение отказывает! Но это чистая правда, о чём и будет рассказано в рубрике OUTPUT в следующем выпуске.\n\nОтвлекаясь от столь приземлённых материй: в следующем месяце вас ждёт отличная астрономическая программа, отображающая расположение пятисот звёзд в семидесяти шести галактиках.\n\nПомните ли вы LOGO — язык программирования, который вместе с «Черепашкой» («TURTLE») использовался для обучения азам кодинга? Помните вы его или нет, в следующем месяце у вас появится возможность поэкспериментировать с вариацией LOGO (или MOCK-TURTLE?).\n\nНа очереди также несколько утилит, включая оптимизатор памяти для Бейсик-программ, отрисовщик экранных рамок, набор тестов Benchmark и программу для создания нескольких окон в любой части экрана с независимой прокруткой текста в каждом.\n\nИ это ещё не всё: небольшая игра для тренировки пальцев на клавиатуре, великолепная музыка от Jean Michel Jarre и прекрасно иллюстрированное текстовое приключение.\n\nChris.\n",
+  "text_type": 3
+}

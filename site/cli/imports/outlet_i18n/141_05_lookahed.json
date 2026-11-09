@@ -1,0 +1,39 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "141",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A sneak peek at what's coming in the next issue of Outlet magazine, including a 48K Music Creator, utilities, games, and the Influence megademo finale.",
+  "meta_description_ru": "Анонс следующего выпуска журнала Outlet: музыкальный редактор для 48K, утилиты, игры и финал мегадемо Influence.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "influence megademo",
+      "tag_alias": "influence-megademo"
+    },
+    {
+      "tag_name": "tasword iii",
+      "tag_alias": "tasword-iii"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "There is an amazing 48k Music\nCreator in next month's OUTLET,\nwhich can produce all sorts of\nsynthesised sounds in three\nchannels. There's a superbly\nanimated game,the final sections\nof INFLUENCE Megademo, a card\ngame for all ages, another ART\nGALLERY, a DRIVECHAT which gives\nin-depth information about Tas-\nword III, and several utilities\nsuch as a general Keypress rout-\nine, a text display, and a REM\nadjustor.\n\n\nCannot tell you more now, as\nwe're running short of space in\nthis issue!\n\n                         Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "There is an amazing 48k Music Creator in next month's OUTLET, which can produce all sorts of synthesised sounds in three channels. There's a superbly animated game, the final sections of INFLUENCE Megademo, a card game for all ages, another ART GALLERY, a DRIVECHAT which gives in-depth information about Tasword III, and several utilities such as a general Keypress routine, a text display, and a REM adjustor.\n\nCannot tell you more now, as we're running short of space in this issue!\n\nChris.\n",
+  "body_ru": "В следующем номере OUTLET вас ждёт потрясающий 48K Music Creator, способный синтезировать всевозможные звуки на трёх каналах. Также в выпуске: превосходно анимированная игра, финальные части мегадемо INFLUENCE, карточная игра для всех возрастов, очередная ART GALLERY, рубрика DRIVECHAT с подробным разбором Tasword III и несколько утилит, среди которых универсальная процедура опроса клавиш (Keypress), вывод текста и редактор строк REM.\n\nБольше пока рассказать не могу — в этом номере уже совсем не осталось места!\n\nChris.\n",
+  "text_type": 3
+}

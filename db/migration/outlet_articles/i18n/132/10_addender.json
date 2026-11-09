@@ -1,0 +1,42 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "132",
+  "article_id": "10_addender",
+  "title_en": "Add-Enders: MEMDATA",
+  "title_ru": "Дополнения: MEMDATA",
+  "meta_description_en": "Introduction to the Outlet Add-Enders section and the MEMDATA routine, which displays BASIC program size, free memory, and RAMTOP position.",
+  "meta_description_ru": "Вводная заметка рубрики Add-Enders журнала Outlet и утилита MEMDATA для вывода размера Бейсик-программы, объема свободной памяти и значения RAMTOP.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "add-enders",
+      "tag_alias": "add-enders"
+    },
+    {
+      "tag_name": "memdata",
+      "tag_alias": "memdata"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    },
+    {
+      "tag_name": "memory",
+      "tag_alias": "memory"
+    }
+  ],
+  "category_ids": [
+    121,
+    30
+  ],
+  "body_en_plain": "Some items contributed to OUTLET\nhave not yet been included for a\nvariety of reasons. It's a shame\nto leave them on the shelf so,if\nappropriate, they will be added\nto this ADD-ENDERS area of the\nmagazine (not microdrive or Opus\nas there is not enough room).\n\nThe material covers a wide range\nof quality and program types:\nutilities, screens, character\nsets and text articles and SOME\nof it may be unedited, untested,\nnot working fully or properly;\nin need of conversion for your\n\nsystem's syntax or printer etc.;\nwithout full instructions or\nwhatever. Readers will have to\nsift through to see if there is\nanything of interest they can\nmake use of and discard the\nrest. Not everything will appear\non all versions necessarily.\n\nSome Add-Enders may be linked to\nOUTLET in the normal way. These\nwill usually precede this text\nfile. Any items that follow this\narticle will possibly need to be\nLOADed manually or may not auto-\nrun when loaded.\n\nThere may be some info on the\nfollowing pages...\n\nFollowing on from the suggestion\nin a recent OUTLET to reproduce\nsome of the better routines from\nearlier issues of OUTLET for the\nbenefit of newer subscribers, we\nhave \"MEMDATA\" which displays\nthe size of your BASIC program,\namount of free memory, and the\nposition of RAMTOP. Just merge\nit in any Basic program then use\nGOSUB 9989 to activate.\n\nAny suggestions of programs that\nyou would like to see again or\nconsider to be of special value\nto other readers are always wel-\ncome, and we will include one as\nan ADDENDER each month if space\npermits. Be warned however that\nmost of those magical demos will\nbe much too large for inclusion!\n\n\n Press \"N\" now to load MEMDATA\n\n\n\n\nNote that you will probably get\nan Error report when the program\nis loaded from OUTLET, as it is\nnot Auto-run..\n",
+  "body_ru_plain": "",
+  "body_en": "Some items contributed to OUTLET have not yet been included for a variety of reasons. It's a shame to leave them on the shelf so, if appropriate, they will be added to this ADD-ENDERS area of the magazine (not microdrive or Opus as there is not enough room).\n\nThe material covers a wide range of quality and program types: utilities, screens, character sets and text articles and SOME of it may be unedited, untested, not working fully or properly; in need of conversion for your system's syntax or printer etc.; without full instructions or whatever. Readers will have to sift through to see if there is anything of interest they can make use of and discard the rest. Not everything will appear on all versions necessarily.\n\nSome Add-Enders may be linked to OUTLET in the normal way. These will usually precede this text file. Any items that follow this article will possibly need to be LOADed manually or may not auto-run when loaded.\n\nThere may be some info on the following pages...\n\nFollowing on from the suggestion in a recent OUTLET to reproduce some of the better routines from earlier issues of OUTLET for the benefit of newer subscribers, we have \"MEMDATA\" which displays the size of your BASIC program, amount of free memory, and the position of RAMTOP. Just merge it in any Basic program then use `GOSUB 9989` to activate.\n\nAny suggestions of programs that you would like to see again or consider to be of special value to other readers are always welcome, and we will include one as an ADDENDER each month if space permits. Be warned however that most of those magical demos will be much too large for inclusion!\n\nPress \"N\" now to load MEMDATA\n\nNote that you will probably get an Error report when the program is loaded from OUTLET, as it is not Auto-run..\n",
+  "body_ru": "Некоторые материалы, присланные в OUTLET, до сих пор не вошли в номер по целому ряду причин. Жаль оставлять их пылиться на полке, поэтому, когда это уместно, они будут публиковаться в специальном разделе журнала — ADD-ENDERS (это не касается версий для Microdrive или Opus, так как на них недостаточно места).\n\nЭтот материал весьма разнообразен по качеству и типам программ: утилиты, картинки-экраны, наборы шрифтов и текстовые статьи. Кое-что из этого может оказаться не отредактированным, не протестированным, работающим не полностью или со сбоями; требующим конвертации под синтаксис вашей системы или принтер и т. д.; без подробных инструкций и прочего. Читателям придется самостоятельно отбирать то, что покажется интересным и полезным, а остальное отсеивать. Далеко не всё обязательно появится во всех версиях журнала.\n\nНекоторые материалы раздела могут запускаться из OUTLET обычным способом — они, как правило, предшествуют этому текстовому файлу. Всё, что следует за этой статьей, возможно, придется загружать вручную (LOAD), либо оно не запустится автоматически после загрузки.\n\nНа следующих страницах приведена дополнительная информация...\n\nВ ответ на предложение в недавнем номере OUTLET перепечатать некоторые из лучших подпрограмм из ранних выпусков журнала для новых подписчиков, представляем «MEMDATA». Эта процедура отображает размер вашей Бейсик-программы, объем свободной памяти и адрес RAMTOP. Достаточно просто объединить её (MERGE) с любой программой на Бейсике и вызвать через `GOSUB 9989`.\n\nМы всегда рады любым предложениям о программах, которые вы хотели бы увидеть снова или считаете особенно полезными для других читателей, и будем включать по одной в раздел ADDENDER каждый месяц, если позволит место. Имейте в виду, однако, что большинство великолепных демо-программ окажутся слишком большими для публикации!\n\nНажмите «N» прямо сейчас, чтобы загрузить MEMDATA\n\nОбратите внимание: при загрузке программы из OUTLET вы, скорее всего, получите сообщение об ошибке, так как она не имеет автозапуска.\n",
+  "text_type": 3
+}

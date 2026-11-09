@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "142",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (дополнение)",
+  "meta_description_en": "Outlet #142 late editorial note: Clive Sinclair's new Linux portable rumours and announcement of the upcoming UK8 8-bit computer convention.",
+  "meta_description_ru": "Дополнение к редакторской колонке Outlet #142: слухи о новом портативном ПК от Клайва Синклера на Linux и анонс 8-битного фестиваля UK8.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "clive sinclair",
+      "tag_alias": "clive-sinclair"
+    },
+    {
+      "tag_name": "uk8",
+      "tag_alias": "uk8"
+    },
+    {
+      "tag_name": "events",
+      "tag_alias": "events"
+    },
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "J U N E ,   1 9 9 9\n\nCan you believe that Clive Sinc-\nlair is planning a new computer?\nNo,sadly not a Spectrum 2000 but\na portable with non-Intel chips\nand Linux operating system - an\nalternative to the ever-present\nWindows. We'll wait and see!\n\nUK8, the 8-bit computer convent-\nion is on 26th September 10am to\n4pm at the Saddlers Club,Bescott\nCrescent, Walsall, `2 admission.\nYou can book from UK8,Harrowden,\n39 High St., Sutton-in-the-Isle,\nELY, Cambridgeshire, CB6 2RA.\nCheques made to CONVENTION FUND.\nPhone 01353 777 006 or email\nuk8@spheroid.demon.co.uk for all\ndetails.\n                    Ron & Brian\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n   Email: outletmag@yahoo.com.\n",
+  "body_ru_plain": "",
+  "body_en": "JUNE, 1999\n\nCan you believe that Clive Sinclair is planning a new computer? No, sadly not a Spectrum 2000, but a portable with non-Intel chips and Linux operating system — an alternative to the ever-present Windows. We'll wait and see!\n\nUK8, the 8-bit computer convention is on 26th September, 10am to 4pm at the Saddlers Club, Bescott Crescent, Walsall, £2 admission. You can book from UK8, Harrowden, 39 High St., Sutton-in-the-Isle, ELY, Cambridgeshire, CB6 2RA. Cheques made to CONVENTION FUND. Phone 01353 777 006 or email uk8@spheroid.demon.co.uk for all details.\n\nRon & Brian\n\nOUTLET is produced by\n\nChris Oliver  \nRon & Brian Cavers  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF  \n\nEmail: outletmag@yahoo.com.\n",
+  "body_ru": "ИЮНЬ, 1999\n\nПоверите ли вы, что Клайв Синклер планирует новый компьютер? Увы, не Spectrum 2000, а портативный компьютер на процессорах не от Intel и с операционной системой Linux — альтернативу вездесущей Windows. Что ж, поживём — увидим!\n\nUK8, съезд любителей 8-битных компьютеров, пройдёт 26 сентября с 10:00 до 16:00 в Saddlers Club, Bescott Crescent, Walsall. Входной билет — £2. Забронировать билеты можно по адресу: UK8, Harrowden, 39 High St., Sutton-in-the-Isle, ELY, Cambridgeshire, CB6 2RA. Чеки выписывать на имя CONVENTION FUND. Телефон: 01353 777 006, e-mail: uk8@spheroid.demon.co.uk для справок.\n\nRon & Brian\n\nOUTLET выпускают:\n\nChris Oliver  \nRon & Brian Cavers  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF  \n\nEmail: outletmag@yahoo.com.\n",
+  "text_type": 3
+}

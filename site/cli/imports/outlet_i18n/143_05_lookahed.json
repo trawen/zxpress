@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "143",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонсы",
+  "meta_description_en": "A preview of the upcoming Outlet #144: PSU troubleshooting, Spectrum-Buggy controller, house design package, 128k token fixer, and more.",
+  "meta_description_ru": "Анонс следующего номера Outlet (#144): ремонт блоков питания, контроллер Spectrum-Buggy, программа для проектирования домов, утилиты и Othello.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "hardware",
+      "tag_alias": "hardware"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    }
+  ],
+  "category_ids": [
+    123,
+    118
+  ],
+  "body_en_plain": "So many interesting items in the\nnext issue, that I don't know\nwhere to start! Let's begin on\nthe philosophical side with some\ndeep thoughts in the OUTPUT\narticle, explaining among other\nthings, how to understand man-\nkind. Then you can use another\nprogram to obtain your personal\npersonality profile (or anybody\nelse's for that matter).\n\nThere are several practical type\nprograms too, such as how to\nfind and cure faults in a Power-\nSupply-Unit; a controller for\nthe SPECTRUM-BUGGY which I hope\nsome of you will will have a go\nat constructing from the instr-\nuctions in this July issue; and\nfor the more ambitious there is\na design package to help you de-\nsign your own house, extension,\nor any other building project.\n\nYou have probably all come\nacross a program on the Spectrum\nat one time or another, where\nthe labels \"SPECTRUM\" or \"PLAY\"\nunexpectedly appear on the\nscreen, which as you know, is\nprobably because the program was\nwritten in 48k and used the\ngraphics characters \"T\" and \"U\".\n\nThe graphic characters \"T\" and\n\"U\" are the commands \"SPECTRUM\"\nand \"PLAY\" in 128k mode. Next\nmonth's OUTLET contains a util-\nity to overcome this phenomenon.\n\nAnother utility enables you to\nspecify any character as the\ncursor on your program's Input\nlines, and for dabblers in el-\nectronics, there is a calculator\nwhich gives you the resistance\nand other details of a Zener\nDiode.\n\nOn the lighter side, there is an\nexcellent version of the classic\ngame \"OTHELLO\", and the issue is\nrounded off with another superb\ndemo.\n                 Cheers, Chris..\n",
+  "body_ru_plain": "",
+  "body_en": "So many interesting items in the next issue, that I don't know where to start! Let's begin on the philosophical side with some deep thoughts in the OUTPUT article, explaining among other things, how to understand mankind. Then you can use another program to obtain your personal personality profile (or anybody else's for that matter).\n\nThere are several practical type programs too, such as how to find and cure faults in a Power-Supply-Unit; a controller for the SPECTRUM-BUGGY which I hope some of you will have a go at constructing from the instructions in this July issue; and for the more ambitious there is a design package to help you design your own house, extension, or any other building project.\n\nYou have probably all come across a program on the Spectrum at one time or another, where the labels \"SPECTRUM\" or \"PLAY\" unexpectedly appear on the screen, which as you know, is probably because the program was written in 48k and used the graphics characters \"T\" and \"U\".\n\nThe graphic characters \"T\" and \"U\" are the commands \"SPECTRUM\" and \"PLAY\" in 128k mode. Next month's OUTLET contains a utility to overcome this phenomenon.\n\nAnother utility enables you to specify any character as the cursor on your program's Input lines, and for dabblers in electronics, there is a calculator which gives you the resistance and other details of a Zener Diode.\n\nOn the lighter side, there is an excellent version of the classic game \"OTHELLO\", and the issue is rounded off with another superb demo.\n\nCheers, Chris..\n",
+  "body_ru": "В следующем номере столько интересного, что я даже не знаю, с чего начать! Начнём, пожалуй, с философии — глубоких размышлений в статье OUTPUT, которая, помимо всего прочего, объясняет, как понять человечество. Затем с помощью специальной программы вы сможете составить свой личный психологический портрет (или портрет любого другого человека).\n\nБудет и несколько сугубо практических программ: например, руководство по поиску и устранению неисправностей в блоках питания; программа управления для SPECTRUM-BUGGY (надеюсь, кто-то из вас попробует собрать его по инструкциям из этого июльского выпуска); а для самых амбициозных — пакет для проектирования, который поможет разработать собственный дом, пристройку или любой другой строительный проект.\n\nНаверняка каждый из вас хоть раз сталкивался на Спектруме с ситуацией, когда на экране внезапно появлялись надписи «SPECTRUM» или «PLAY». Как вы знаете, это обычно происходит из-за того, что программа была написана для 48K и использовала графические символы «T» и «U».\n\nДело в том, что графические символы «T» и «U» в режиме 128K соответствуют токенам команд «SPECTRUM» и «PLAY». В следующем выпуске OUTLET будет утилита для устранения этой проблемы.\n\nЕщё одна утилита позволит вам назначить любой символ курсором в строках ввода вашей программы, а любителям электроники пригодится калькулятор, рассчитывающий сопротивление и другие параметры для стабилитрона (Zener Diode).\n\nЧто касается развлечений, вас ждёт отличная версия классической игры «OTHELLO», а завершит номер ещё одно превосходное демо.\n\nВсего наилучшего, Chris..\n",
+  "text_type": 3
+}

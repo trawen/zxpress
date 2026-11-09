@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "27",
+  "article_id": "15_CUBE.DOC",
+  "source_lang": "de-AT",
+  "title_en": "The Cube 128",
+  "title_ru": "The Cube 128",
+  "meta_description_en": "A brief review of the ZX Spectrum 128 demo 'The Cube 128' from Scene+ #27.",
+  "meta_description_ru": "Краткая заметка о демо «The Cube 128» для ZX Spectrum 128 из журнала Scene+ #27.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "demoscene",
+      "tag_alias": "demoscene"
+    },
+    {
+      "tag_name": "the-cube-128",
+      "tag_alias": "the-cube-128"
+    },
+    {
+      "tag_name": "demo",
+      "tag_alias": "demo"
+    }
+  ],
+  "category_ids": [
+    93,
+    94
+  ],
+  "body_de_plain": "CUB ü - THE CUBE 128 - Wieder mal ein Demo mit genialer Music,\ntollen Effekten undsuper Graphiken, wieso lest ihr denn weiter?\nSofort reinladenund genießen!- Again a demo with genial music,\nexcellent effects and superbgraphics, why do you still read this\nshit, load and enjo\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**THE CUBE 128** — Once again a demo with brilliant music, great effects, and superb graphics. Why are you even still reading this? Load it immediately and enjoy!\n\n*(Original English text from the disc)*:  \nAgain a demo with genial music, excellent effects and superb graphics, why do you still read this shit, load and enjoy!\n",
+  "body_ru": "**THE CUBE 128** — Очередное демо с гениальной музыкой, классными эффектами и превосходной графикой. И чего вы до сих пор это читаете? Немедленно загружайте и наслаждайтесь!\n\n*(Оригинальный английский текст из журнала)*:  \nAgain a demo with genial music, excellent effects and superb graphics, why do you still read this shit, load and enjoy!\n",
+  "text_type": 3
+}

@@ -1,0 +1,46 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "083",
+  "article_id": "04_bendinfo",
+  "title_en": "Logobend 1.3",
+  "title_ru": "Logobend 1.3",
+  "meta_description_en": "Manual for Logobend 1.3 by Vision of TMG Corp., a ZX Spectrum freeware utility for bending logos and screens using sine and triangle functions.",
+  "meta_description_ru": "Руководство к утилите Logobend 1.3 от Vision / TMG Corp. для деформации экранных картинок и логотипов с помощью синусоид и треугольных функций на ZX Spectrum.",
+  "authors": [
+    "Vision",
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "logobend",
+      "tag_alias": "logobend"
+    },
+    {
+      "tag_name": "tmg corp",
+      "tag_alias": "tmg-corp"
+    },
+    {
+      "tag_name": "graphics",
+      "tag_alias": "graphics"
+    },
+    {
+      "tag_name": "utility",
+      "tag_alias": "utility"
+    },
+    {
+      "tag_name": "fx",
+      "tag_alias": "fx"
+    }
+  ],
+  "category_ids": [
+    64,
+    67,
+    74
+  ],
+  "body_en_plain": ">>>>>>>> LOGOBEND 1.3 <<<<<<<<<<\n>>   By Vision of TMG Corp.   <<\n>>>>>>>>>> FREEWARE <<<<<<<<<<<<\n\n\nThe next program, LOGOBEND, lets\nyou bend screens or logos for\ncreating loading screens or\nsimilar. After loading you have\ngot the following options:\n\n1. Y BEND: Bends a screen in\n           Y-direction(up/down)\n\n\n2. X BEND: Bends a screen in\n         X-direction(left/right)\n\n3. CHANGE VALUES of FUNCTION:\n   First the old function is\n   shown. You can then decide if\n   you want to create a sine or\n   triangle function.You're then\n   asked if you want to change\n   the values. Press \"Y\" if you\n   want to else the old values\n   will be used. If you pressed\n   \"Y\" you first have to enter\n   the amplitude of the function\n   (best values are about 10-50,\n   but others can be tried out).\n   You then enter after how many\n   steps the function repeats\n   (try 16,32,64,128,256). The\n   function will then be calc-\n   ulated.\n\n\n4. LOAD LOGO/SCREEN:\n   Loads a screen from disk.\n   Press \"Y\" to cat, any other\n   key to enter name.\n\n5. SAVE LOGO/SCREEN:\n   Saves a screen to disk. Press\n   \"Y\" to cat, any other key to\n   enter name.\n\n\n6. CHANGE RAMSCREEN:\n   Logobend can store 4 screens\n   into RAM-screens. These are\n   numbered from 1 to 4. After\n   loading Logobend, RAM-screen\n   1 is activated.All operations\n   will work with the activated\n   RAM-screen so if you load a\n   screen it will be stored in\n   the activated RAM-screen.\n\n\n7. COPY ACTIVATED RAMSCREEN:\n   Copies the activated RAM-\n   screen to another RAM-screen\n   (e.g. to store the original\n   screen).\n\nSPACE.Shows activated RAM-screen\n\nDepending on the function, the\nbend options can get quite slow.\nAlso it may happen that parts of\nthe picture get lost as they are\nscrolled out of the screen. In\nthis case you have to move your\npicture to another position (use\nArt Studio or another program).\nTo start, simply load a screen,\nthen press \"1\" or \"2\" and see\nwhat happens. Have a fun!\n              Vision of TMG Corp\n more...\n\n\nEDITOR'S NOTES:-\n\nThe LOGOBEND program needs to\nfirst Load a SCREEN$ before\nprocessing it. We have put a\nsimple Screen$ in ADDENDERS in\nthis issue, so that you will\nhave something to test LOGOBEND\non. (It's named \"SCREEN\")\n\nPress N now to load LOGOBEND.\nAs Vision says: \"Have a fun!\".\n\n                   Chris..\n",
+  "body_ru_plain": "",
+  "body_en": ">>>>>>>> LOGOBEND 1.3 <<<<<<<<<<  \n>> By Vision of TMG Corp. <<  \n>>>>>>>>>> FREEWARE <<<<<<<<<<<<\n\nThe next program, LOGOBEND, lets you bend screens or logos for creating loading screens or similar. After loading you have got the following options:\n\n1. **Y BEND:** Bends a screen in Y-direction (up/down)\n\n2. **X BEND:** Bends a screen in X-direction (left/right)\n\n3. **CHANGE VALUES of FUNCTION:**  \nFirst the old function is shown. You can then decide if you want to create a sine or triangle function. You're then asked if you want to change the values. Press \"Y\" if you want to, else the old values will be used. If you pressed \"Y\" you first have to enter the amplitude of the function (best values are about 10-50, but others can be tried out). You then enter after how many steps the function repeats (try 16, 32, 64, 128, 256). The function will then be calculated.\n\n4. **LOAD LOGO/SCREEN:**  \nLoads a screen from disk. Press \"Y\" to cat, any other key to enter name.\n\n5. **SAVE LOGO/SCREEN:**  \nSaves a screen to disk. Press \"Y\" to cat, any other key to enter name.\n\n6. **CHANGE RAMSCREEN:**  \nLogobend can store 4 screens into RAM-screens. These are numbered from 1 to 4. After loading Logobend, RAM-screen 1 is activated. All operations will work with the activated RAM-screen so if you load a screen it will be stored in the activated RAM-screen.\n\n7. **COPY ACTIVATED RAMSCREEN:**  \nCopies the activated RAM-screen to another RAM-screen (e.g. to store the original screen).\n\n**SPACE:** Shows activated RAM-screen.\n\nDepending on the function, the bend options can get quite slow. Also it may happen that parts of the picture get lost as they are scrolled out of the screen. In this case you have to move your picture to another position (use Art Studio or another program). To start, simply load a screen, then press \"1\" or \"2\" and see what happens. Have a fun!\n\nVision of TMG Corp\n\n---\n\n### EDITOR'S NOTES:-\n\nThe LOGOBEND program needs to first load a SCREEN$ before processing it. We have put a simple Screen$ in ADDENDERS in this issue, so that you will have something to test LOGOBEND on. (It's named \"SCREEN\")\n\nPress N now to load LOGOBEND. As Vision says: \"Have a fun!\".\n\nChris..\n",
+  "body_ru": ">>>>>>>> LOGOBEND 1.3 <<<<<<<<<<  \n>> By Vision of TMG Corp. <<  \n>>>>>>>>>> FREEWARE <<<<<<<<<<<<\n\nСледующая программа, LOGOBEND, позволяет деформировать экраны или логотипы для создания загрузочных экранов и тому подобного. После загрузки вам доступны следующие опции:\n\n1. **Y BEND:** Искривляет экран по оси Y (вверх/вниз).\n\n2. **X BEND:** Искривляет экран по оси X (влево/вправо).\n\n3. **CHANGE VALUES of FUNCTION:**  \nСначала отображается старая функция. Затем вы можете выбрать, хотите ли вы сгенерировать синусоиду (sine) или треугольную функцию (triangle). После этого программа спросит, хотите ли вы изменить значения. Нажмите «Y», если хотите, иначе будут использованы прежние параметры. Если вы нажали «Y», сначала нужно ввести амплитуду функции (оптимальные значения — от 10 до 50, но можно поэкспериментировать и с другими). Затем вы вводите количество шагов, через которое функция повторяется (попробуйте 16, 32, 64, 128, 256). После этого функция будет рассчитана.\n\n4. **LOAD LOGO/SCREEN:**  \nЗагрузка экрана с диска. Нажмите «Y» для просмотра каталога (cat) или любую другую клавишу для ввода имени файла.\n\n5. **SAVE LOGO/SCREEN:**  \nСохранение экрана на диск. Нажмите «Y» для каталога, любую другую клавишу — для ввода имени.\n\n6. **CHANGE RAMSCREEN:**  \nLogobend может хранить в памяти до 4 виртуальных экранов (RAM-screens), пронумерованных от 1 до 4. При запуске Logobend активен RAM-screen 1. Все операции применяются к активному экрану, так что загруженная картинка помещается именно в него.\n\n7. **COPY ACTIVATED RAMSCREEN:**  \nКопирует активный RAM-screen в другой экран памяти (например, чтобы сохранить оригинальное изображение без изменений).\n\n**SPACE:** Показать активный RAM-screen.\n\nВ зависимости от выбранной функции алгоритм искривления может работать довольно медленно. Кроме того, часть изображения может потеряться, если она сместится за пределы экрана. В таком случае переместите картинку в другое место заранее (с помощью Art Studio или другой программы). Для начала просто загрузите экран, нажмите «1» или «2» и посмотрите, что получится. Have a fun!\n\nVision of TMG Corp\n\n---\n\n### ПРИМЕЧАНИЕ РЕДАКТОРА:-\n\nПрограмме LOGOBEND сначала необходимо загрузить SCREEN$ для обработки. В раздел ADDENDERS этого номера мы поместили простую картинку, чтобы вам было на чём протестировать LOGOBEND (файл называется «SCREEN»).\n\nНажмите N прямо сейчас для загрузки LOGOBEND. И, как говорит Vision: «Have a fun!».\n\nChris..\n",
+  "text_type": 3
+}

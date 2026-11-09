@@ -1,0 +1,48 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "24",
+  "article_id": "10_BEST.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Best Day 128K Review",
+  "title_ru": "Обзор Best Day 128K",
+  "meta_description_en": "A mini-review of the ZX Spectrum demo 'Best Day 128K' by Flash Inc. from Scene+ #24.",
+  "meta_description_ru": "Мини-рецензия на демо для ZX Spectrum «Best Day 128K» от Flash Inc. из журнала Scene+ #24.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "demoscene",
+      "tag_alias": "demoscene"
+    },
+    {
+      "tag_name": "demo",
+      "tag_alias": "demo"
+    },
+    {
+      "tag_name": "flash-inc",
+      "tag_alias": "flash-inc"
+    },
+    {
+      "tag_name": "pentagon",
+      "tag_alias": "pentagon"
+    }
+  ],
+  "category_ids": [
+    93,
+    94
+  ],
+  "body_de_plain": "BESTDA ü - BEST DAY 128K- Unglaublich, was so ein kleines\n\"Geburtstagsdemo\" alles zeigt! Dazu noch tolle Musik, ich frage\nmich langsam, wer für mich ein Geburtstagsdemo schreibt (9\nOktober!). Es ist dazu noch einesder wenigen Demos die am\nSpectrum und Pentagon problemloslaufen. - Wow, look at this\n\"Birthday\" demo and what it can do! And thissuperb soundtrack\n(like all other Demos by Flashsoft), I askmyself, who will code\na Birthdaydemo for me (9th October!). Thisis one of the demos\nthat will work well on Pantagon AND\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**BEST DAY 128K**\n\nUnbelievable what such a little \"birthday demo\" can pull off! On top of that, it has great music — I'm starting to wonder who will code a birthday demo for me (October 9th!). It's also one of the few demos that runs smoothly on both standard Spectrum and Pentagon.\n\n*Wow, look at this \"Birthday\" demo and what it can do! And this superb soundtrack (like all other demos by Flashsoft). I ask myself: who will code a birthday demo for me (9th October!)? This is one of the demos that will work well on Pentagon AND...*\n",
+  "body_ru": "**BEST DAY 128K**\n\nНевероятно, на что способно такое маленькое «поздравительное демо»! К тому же здесь отличная музыка — я уже начинаю задаваться вопросом, кто же напишет демо на день рождения мне (9 октября!). Кроме того, это одна из немногих демок, которая без проблем работает как на фирменном Спектруме, так и на Пентагоне.\n\n*Ого, только взгляните на это «поздравительное» демо и на то, что оно умеет! И этот великолепный саундтрек (как и во всех других демках от Flashsoft). Я спрашиваю себя: кто закодит демо на день рождения для меня (9 октября!)? Это одна из тех демок, которые отлично работают как на Пентагоне, ТАК И...*\n",
+  "text_type": 3
+}

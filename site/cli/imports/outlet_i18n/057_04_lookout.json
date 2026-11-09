@@ -1,0 +1,48 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "057",
+  "article_id": "04_lookout",
+  "title_en": "Lookout: May 1992",
+  "title_ru": "Lookout: май 1992",
+  "meta_description_en": "May 1992 news from Outlet: ZX92 10th anniversary event cancelled, upcoming All-Formats Computer Fairs, Zilog's new Z280 chip, the Virtual Reality retail chain, and EDOS software kiosks.",
+  "meta_description_ru": "Новости за май 1992 года: отмена юбилея ZX92, компьютерные ярмарки All-Formats, новый чип Zilog Z280, сеть магазинов Virtual Reality и система распространения ПО EDOS.",
+  "authors": [
+    "Brian"
+  ],
+  "tags": [
+    {
+      "tag_name": "zx92",
+      "tag_alias": "zx92"
+    },
+    {
+      "tag_name": "computer fairs",
+      "tag_alias": "computer-fairs"
+    },
+    {
+      "tag_name": "z280",
+      "tag_alias": "z280"
+    },
+    {
+      "tag_name": "edos",
+      "tag_alias": "edos"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    }
+  ],
+  "category_ids": [
+    116,
+    121
+  ],
+  "body_en_plain": "M A Y ,  1 9 9 2\n\n          NOW WE ARE 10\n\nZX92,the celebration of the 10th\nanniversary of the Spectrum, has\nbeen cancelled. Despite over 7\nmillion Spectrums being sold and\npromotion for ZX92 circulated to\nan estimated 300,000, only 25\nloyal Spectrum users applied for\ntickets! Stunned organisers were\ninviting the few to consider a\nsmall get-together but the main\nmega-celebration is OFF!\n\n   ALL-FORMATS COMPUTER FAIRS\n\nMAY\n16 SANDOWN Exhibit'n Centre(M25)\n17 Brunel Centre,T/Meads,Bristol\n\nJUN\n 7 City Hall,Candleriggs,Glasgow\n14 Haydock Park (J23, M6)\n\nOCT\n 4 University Sport Centre,Leeds\n\nAll:10am-4pm.`4 entry. Car park.\n\nOn sale should be hardware and\nsoftware of all kinds for most\ncomputers. Although the 16-bits\ntend to dominate these days, the\nSpectrum and SAM are represented\n- but in varying degrees!\n\n            NEW CHIP\n\nZilog, manufacturer of the Z80\nchip in both SAM and Spectrum\nhave a new 16-bit version called\nthe Z280 that can access up to\n16 megabytes of RAM directly and\nwith \"limited\" compatibility\nwith Z80 software.It's unlikely,\nhowever,that anyone will produce\na 16-bit computer that will also\nrun SAM and/or Spectrum software\nbut who knows?\n\n            NEW CHAIN\n\nA new chain of over 80 computer\nstores called VIRTUAL REALITY\nhas opened over Easter within\nthe Beatties and Tecno shops.May\nbe worth a look of there is one\nnear you.\n\n              EDOS\n\nGame software will be duplicated\nwithin retail stores by customer\nselection at a machine that can\nproduce the discs or tape games\nfor all home computers including\nthe Spectrum.The method is named\nEDOS for Electronic Distribution\nof Software and software will be\ndispensed like candy from a\nchocolate machine.It should stop\nany disappointment at finding a\nshop has run out of stock of the\ngame you've been saving for!\n\n                        - Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "### May, 1992\n\n#### NOW WE ARE 10\n\nZX92, the celebration of the 10th anniversary of the Spectrum, has been cancelled. Despite over 7 million Spectrums being sold and promotion for ZX92 circulated to an estimated 300,000, only 25 loyal Spectrum users applied for tickets! Stunned organisers were inviting the few to consider a small get-together but the main mega-celebration is OFF!\n\n#### ALL-FORMATS COMPUTER FAIRS\n\n**MAY**\n* 16: SANDOWN Exhibit'n Centre (M25)\n* 17: Brunel Centre, T/Meads, Bristol\n\n**JUN**\n* 7: City Hall, Candleriggs, Glasgow\n* 14: Haydock Park (J23, M6)\n\n**OCT**\n* 4: University Sport Centre, Leeds\n\nAll: 10am–4pm. £4 entry. Car park.\n\nOn sale should be hardware and software of all kinds for most computers. Although the 16-bits tend to dominate these days, the Spectrum and SAM are represented — but in varying degrees!\n\n#### NEW CHIP\n\nZilog, manufacturer of the Z80 chip in both SAM and Spectrum, have a new 16-bit version called the Z280 that can access up to 16 megabytes of RAM directly and with \"limited\" compatibility with Z80 software. It's unlikely, however, that anyone will produce a 16-bit computer that will also run SAM and/or Spectrum software, but who knows?\n\n#### NEW CHAIN\n\nA new chain of over 80 computer stores called VIRTUAL REALITY has opened over Easter within the Beatties and Tecno shops. May be worth a look if there is one near you.\n\n#### EDOS\n\nGame software will be duplicated within retail stores by customer selection at a machine that can produce the discs or tape games for all home computers including the Spectrum. The method is named EDOS for Electronic Distribution of Software, and software will be dispensed like candy from a chocolate machine. It should stop any disappointment at finding a shop has run out of stock of the game you've been saving for!\n\n— Brian.\n",
+  "body_ru": "### Май 1992 г.\n\n#### НАМ УЖЕ 10 ЛЕТ\n\nZX92 — празднование 10-летнего юбилея Спектрума — отменено. Несмотря на то, что было продано более 7 миллионов компьютеров Spectrum, а реклама ZX92 разошлась тиражом около 300 000 экземпляров, заявки на билеты подали всего 25 преданных пользователей! Ошеломлённые организаторы предложили этим немногим устроить небольшие посиделки, но главное масштабное празднование ОТМЕНЯЕТСЯ!\n\n#### КОМПЬЮТЕРНЫЕ ЯРМАРКИ ALL-FORMATS\n\n**МАЙ**\n* 16: SANDOWN Exhibit'n Centre (M25)\n* 17: Brunel Centre, T/Meads, Бристоль\n\n**ИЮНЬ**\n* 7: City Hall, Candleriggs, Глазго\n* 14: Haydock Park (J23, M6)\n\n**ОКТЯБРЬ**\n* 4: University Sport Centre, Лидс\n\nВремя работы: 10:00–16:00. Вход £4. Есть парковка.\n\nВ продаже ожидается всевозможное «железо» и софт для большинства компьютеров. Хотя в наши дни тон задают 16-битные машины, Spectrum и SAM также представлены — пусть и в разной степени!\n\n#### НОВЫЙ ЧИП\n\nКомпания Zilog, производитель процессора Z80, установленного как в SAM, так и в Spectrum, выпустила новую 16-битную версию под названием Z280. Чип способен адресовать до 16 мегабайт оперативной памяти напрямую и обладает «ограниченной» совместимостью с программами для Z80. Впрочем, вряд ли кто-то станет выпускать 16-битный компьютер, способный запускать софт от SAM и/или Spectrum, но кто знает?\n\n#### НОВАЯ СЕТЬ МАГАЗИНОВ\n\nНа Пасху открылась новая сеть из более чем 80 компьютерных магазинов под названием VIRTUAL REALITY, расположившихся внутри торговых точек Beatties и Tecno. Возможно, стоит заглянуть, если поблизости есть филиал.\n\n#### СИСТЕМА EDOS\n\nИгровое ПО теперь будет записываться прямо в магазинах по выбору покупателя на специальном автомате, производящем диски или кассеты с играми для любых домашних компьютеров, включая Spectrum. Метод получил название EDOS (Electronic Distribution of Software — электронное распространение программного обеспечения): игры будут выдаваться как сладости из торгового автомата. Это должно избавить от разочарования, когда приходишь в магазин, а игра, на которую ты так долго копил, уже распродана!\n\n— Brian.\n",
+  "text_type": 3
+}

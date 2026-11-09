@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "055",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of Outlet issue 56: a UDG screen designer, Towers of Hanoi demo, The Valley of Adventure RPG, loader routine, and more.",
+  "meta_description_ru": "Анонс 56-го выпуска журнала Outlet: экранный редактор UDG, решение «Ханойских башен», ролевая игра The Valley of Adventure и многое другое.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "udg",
+      "tag_alias": "udg"
+    },
+    {
+      "tag_name": "tape loader",
+      "tag_alias": "tape-loader"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Planned for next month is a nice\nscreen designer with a vast bank\nof UDG's built in - you just use\nit like a wordprocessor only it\nbuilds up a picture as you type!\nIt includes a UDG designer as\nwell so there's no limit to its\nabilities! There will also be a\ndemo of a solution of the famous\nTOWERS OF HANOI;more 128K music;\na number-analysing program;a new\ncrossword and a simple, single\nline renumber routine for those\nuneditable CODE REMs!\n                        more...\n\nThere's a special machine code\n\"clear screen\" routine;well it's\ntwo routines actually;a terrific\nfull-length role-playing game:\n\"THE VALLEY OF ADVENTURE\" and\nall the regulars of course like\nOUTCLASS, masses of readers'\nletters (\"how do YOU know?\", I\nhear you cry. Well,how do I know\nthat the sun will come up again\ntomorrow?) more clip art and oh\nyes,a neat routine that displays\nuser-variable messages-while you\nload from tape!\n\nAnything else I shall squash in\nADD-ENDERS as usual.\n                        Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "Planned for next month is a nice screen designer with a vast bank of UDG's built in - you just use it like a wordprocessor only it builds up a picture as you type! It includes a UDG designer as well so there's no limit to its abilities! There will also be a demo of a solution of the famous TOWERS OF HANOI; more 128K music; a number-analysing program; a new crossword and a simple, single line renumber routine for those uneditable CODE REMs!\n\nThere's a special machine code \"clear screen\" routine; well it's two routines actually; a terrific full-length role-playing game: \"THE VALLEY OF ADVENTURE\" and all the regulars of course like OUTCLASS, masses of readers' letters (\"how do YOU know?\", I hear you cry. Well, how do I know that the sun will come up again tomorrow?) more clip art and oh yes, a neat routine that displays user-variable messages-while you load from tape!\n\nAnything else I shall squash in ADD-ENDERS as usual.\n\nBrian.\n",
+  "body_ru": "В следующем месяце запланирован отличный редактор экранов с огромным встроенным набором пользовательской графики (UDG) — вы просто работаете с ним как в текстовом процессоре, только по мере набора текста создаётся рисунок! В него также встроен собственный редактор UDG, так что возможности программы практически безграничны!\n\nКроме того, вас ждут:\n- демонстрация решения знаменитых «Ханойских башен» (TOWERS OF HANOI);\n- новая порция музыки для 128K;\n- программа для анализа чисел;\n- новый кроссворд;\n- простая однострочная процедура перенумерации (renumber) для нередактируемых строк с кодом в REM!\n\nТакже будет специальная процедура очистки экрана в машинном коде (точнее, даже две процедуры), потрясающая полноформатная ролевая игра «THE VALLEY OF ADVENTURE» и, конечно же, все постоянные рубрики: OUTCLASS, куча читательских писем («Откуда ТЫ знаешь?», — слышу я ваш возглас. Ну а откуда мне знать, что завтра снова взойдёт солнце?), новые порции клипарта и — о да! — изящная процедура, выводящая на экран настраиваемые пользователем сообщения прямо во время загрузки с ленты!\n\nВсё остальное я, как обычно, постараюсь утрамбовать в ADD-ENDERS.\n\nBrian.\n",
+  "text_type": 3
+}

@@ -1,0 +1,50 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "068",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Outlet 68 late editorial: Sinclair User closure, bug fixes for Gridrun and Twistalt, and a potential 30% levy on imported floppy discs.",
+  "meta_description_ru": "Дополнительная редакторская колонка Outlet 68: закрытие Sinclair User, исправления для игр Gridrun и Twistalt, а также возможный налог на импорт дискет.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "sinclair user",
+      "tag_alias": "sinclair-user"
+    },
+    {
+      "tag_name": "gridrun",
+      "tag_alias": "gridrun"
+    },
+    {
+      "tag_name": "twistalt",
+      "tag_alias": "twistalt"
+    },
+    {
+      "tag_name": "floppy disks",
+      "tag_alias": "floppy-disks"
+    }
+  ],
+  "category_ids": [
+    123,
+    130,
+    116
+  ],
+  "body_en_plain": "A P R I L ,  1 9 9 3\n\nAs anticipated a short while ago\nin OUTLET, Sinclair User,the old\nfaithful of the Spectrum maga-\nzines, is to cease publication\nafter this month. Many would say\nit died a long time ago.\n\nOops!The message in GRIDRUN last\nmonth on the tape version said\nit would not work on the +2A and\n+3. Wrong! For some weird reason\nit waits for a keypress as each\nlevel starts and does not lock\nup the keyboard as we thought.\n\nThere could be a hefty 30% levy\non discs imported from the far\neast to help out European manu-\nfacturers who can't compete. The\ntheory is that the discs are\nbeing \"dumped\" - sold at little\nprofit to put European manufact-\nurers out of business so profits\ncan be made later. If this levy\ngoes ahead we do not anticipate\nthat it will affect the price of\nOUTLET although it will eat into\nour meagre profits!\n\nIn TWISTALT in last month's ADD-\nENDERS on the +3 and in Issue 63\non other versions of OUTLET,\nchange the variable 'S' to a 'Z'\nin lines 100, 300, 6250, 8850\nand 9995 as it clashes with the\nsame variable used elsewhere.\nAlso line 1500 should be deleted\n(Sorry to Bill Coats the author\nbut we published the wrong\nTWISTALT!)\n                    Ron & Brian\n\n      OUTLET is produced by\n\n          Chris Oliver\n        Averil  Crowston\n       Ron & Brian Cavers\n\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nA P R I L ,  1 9 9 3\n\nAs anticipated a short while ago in OUTLET, Sinclair User,the old faithful of the Spectrum maga- zines, is to cease publication after this month. Many would say it died a long time ago.\n\nOops!The message in GRIDRUN last month on the tape version said it would not work on the +2A and +3. Wrong! For some weird reason it waits for a keypress as each level starts and does not lock up the keyboard as we thought.\n\nThere could be a hefty 30% levy on discs imported from the far east to help out European manu- facturers who can't compete. The theory is that the discs are being \"dumped\" - sold at little profit to put European manufact- urers out of business so profits can be made later. If this levy goes ahead we do not anticipate that it will affect the price of OUTLET although it will eat into our meagre profits!\n\nIn TWISTALT in last month's ADD- ENDERS on the +3 and in Issue 63 on other versions of OUTLET, change the variable 'S' to a 'Z' in lines 100, 300, 6250, 8850 and 9995 as it clashes with the same variable used elsewhere. Also line 1500 should be deleted (Sorry to Bill Coats the author but we published the wrong TWISTALT!) Ron & Brian\n\nOUTLET is produced by\n\nChris Oliver Averil  Crowston Ron & Brian Cavers\n\nCHEZRON   SOFTWARE 605, Loughborough Road Birstall,Leicester LE4 4NJ.\n",
+  "body_ru": "## Editorial (late)\n\nА П Р Е Л Ь , 1 9 9 3\n\nКак и предполагалось в OUTLET совсем недавно, Sinclair User, старый верный ветеран среди журналов о Spectrum, прекращает свое существование после этого месяца. Многие скажут, что он умер уже давным-давно.\n\nУпс! В сообщении к кассетной версии GRIDRUN в прошлом месяце говорилось, что она не будет работать на +2A и +3. Ошибка! По какой-то странной причине игра ждет нажатия клавиши в начале каждого уровня и вовсе не вешает клавиатуру, как мы думали.\n\nВозможно введение внушительной 30% пошлины на дискеты, импортируемые с Дальнего Востока, чтобы помочь европейским производителям, которые не выдерживают конкуренции. Теория заключается в том, что дискеты «демппингуются» — продаются почти без прибыли, чтобы вытеснить европейских производителей из бизнеса и нажиться позже. Если эту пошлину введут, мы не думаем, что это повлияет на цену OUTLET, хотя и ударит по нашей скромной прибыли!\n\nВ игре TWISTALT из прошлого выпуска ADD-ENDERS на +3 и в номере 63 на других версиях OUTLET замените переменную 'S' на 'Z' в строках 100, 300, 6250, 8850 и 9995, так как она конфликтует с той же переменной, используемой в другом месте. Также строку 1500 следует удалить (просим прощения у автора Bill Coats, но мы опубликовали не тот вариант TWISTALT!).\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n        Averil  Crowston\n       Ron & Brian Cavers\n\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n```\n",
+  "text_type": 3
+}

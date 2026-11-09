@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "096",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Editorial from Outlet #96 (August 1995): planning the 100th bumper issue, Masterfile +3 patch, return of Bad Influence on TV, and correspondence guidelines.",
+  "meta_description_ru": "Редакторская колонка Outlet (август 1995): подготовка к 100-му выпуску, исправление Masterfile для ZX Spectrum +3, анонс телешоу Bad Influence и правила обратной связи.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "masterfile",
+      "tag_alias": "masterfile"
+    },
+    {
+      "tag_name": "bad influence",
+      "tag_alias": "bad-influence"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus-3"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "A U G U S T ,   1 9 9 5\n\nThis Christmas will be the 100th\nissue of OUTLET. Let's try and\nmake it a special bumper issue.\nWe are always glad of programs\nand articles being contributed\nbut would  particularly welcome\nthem at this time!\n\nIn last month's OUTLETTERS, Fred\nRidout asked if there was a way\nto change the BRIGHT bar in the\n+3 version of MASTERFILE (OUTLET\n76) because BRIGHT does not show\non his monitor. We've done this.\n\nCopy all your MF+3 files, except\nMF01.PRG,to a new work disk then\ncopy the new MF01.PRG from the B\nside of this OUTLET disk to that\nwork disk.  It is always wise to\nkeep your original for a while\nin case something goes wrong!The\nbar is now yellow.\n\nIf anyone wants instructions on\nhow to change MF01.PRG, say, to\nget a different colour, then let\nus know and we'll publish the\ndetails.\n\n\nNext month, BAD INFLUENCE should\nreturn to your tv screens. This\nprogram is games-oriented but\ndoes have lots of general inter-\nest for computer users and is\nfar better than GAMESMASTER.Look\nout for it on Thursdays starting\n7th September around 5.00pm-ish.\n\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET. We\nare sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\n\nWe always encourage readers to\nsend in any text on disk but if\nyou send in an order or have a\nquery about your subs, etc it\nmay slightly delay our response\nif you ONLY send a disk file\nwithout a printed copy. This is\nespecially true of +3 disks.Best\nto always send both if you can!\n\n                     Ron & Brian\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nA U G U S T ,   1 9 9 5\n\nThis Christmas will be the 100th issue of OUTLET. Let's try and make it a special bumper issue. We are always glad of programs and articles being contributed but would  particularly welcome them at this time!\n\nIn last month's OUTLETTERS, Fred Ridout asked if there was a way to change the BRIGHT bar in the +3 version of MASTERFILE (OUTLET 76) because BRIGHT does not show on his monitor. We've done this.\n\nCopy all your MF+3 files, except MF01.PRG,to a new work disk then copy the new MF01.PRG from the B side of this OUTLET disk to that work disk.  It is always wise to keep your original for a while in case something goes wrong!The bar is now yellow.\n\nIf anyone wants instructions on how to change MF01.PRG, say, to get a different colour, then let us know and we'll publish the details.\n\nNext month, BAD INFLUENCE should return to your tv screens. This program is games-oriented but does have lots of general inter- est for computer users and is far better than GAMESMASTER.Look out for it on Thursdays starting 7th September around 5.00pm-ish.\n\nMay we remind readers, we cannot answer computer, software, hard- ware or system queries etc., personally by mail.  All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder!Share your problems with others! That way, everyone benefits!\n\nWe always encourage readers to send in any text on disk but if you send in an order or have a query about your subs, etc it may slightly delay our response if you ONLY send a disk file without a printed copy. This is especially true of +3 disks.Best to always send both if you can!\n\nRon & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers CHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF .\n",
+  "body_ru": "## Editorial (late)\n\nА В Г У С Т ,   1 9 9 5\n\nВ это Рождество выйдет 100-й номер OUTLET. Давайте постараемся сделать его особенным, праздничным спецвыпуском! Мы всегда рады присылаемым программам и статьям, но сейчас будем особенно признательны за них!\n\nВ прошлом выпуске OUTLETTERS Фред Ридаут (Fred Ridout) спрашивал, можно ли как-то изменить полосу BRIGHT в версии MASTERFILE для +3 (OUTLET 76), поскольку на его мониторе BRIGHT не отображается. Мы сделали это.\n\nСкопируйте все ваши файлы MF+3, кроме MF01.PRG, на новый рабочий диск, а затем скопируйте новый MF01.PRG со стороны B этого диска OUTLET на этот рабочий диск. Всегда разумно на какое-то время сохранить оригинал на случай, если что-то пойдет не так! Полоса теперь желтого цвета.\n\nЕсли кому-то нужны инструкции, как изменить MF01.PRG, скажем, чтобы получить другой цвет, дайте нам знать, и мы опубликуем подробности.\n\nВ следующем месяце BAD INFLUENCE должна вернуться на ваши телеэкраны. Эта передача ориентирована на игры, но представляет большой общий интерес для пользователей компьютеров и гораздо лучше, чем GAMESMASTER. Ищите ее по четвергам, начиная с 7 сентября, примерно около 17:00.\n\nНапоминаем читателям: мы не можем отвечать на вопросы о компьютерах, софте, железе, системных проблемах и т.д. лично по почте. Все подобные вопросы разбираются через раздел OUTLETTERS в журнале OUTLET. Простите, что мы постоянно твердим об этом, но об этом действительно нужно напоминать постоянно! Делитесь своими проблемами с остальными! Так польза будет для всех!\n\nМы всегда призываем читателей присылать любые тексты на диске, но если вы отправляете заказ или задаете вопрос о подписке и т.д., наш ответ может немного задержаться, если вы пришлете ТОЛЬКО файл на диске без распечатки на бумаге. Особенно это касается дисков +3. Лучше всего всегда присылать и то, и другое, если есть возможность!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n```\n",
+  "text_type": 3
+}

@@ -1,0 +1,43 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "124",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A preview of Outlet issue #125 (January 1998): BASIC utilities, Multiface tools, time-travel musings, High Density discs, a dice game, and more.",
+  "meta_description_ru": "Анонс январского номера журнала Outlet (#125, 1998 год): утилиты для Бейсика, Multiface, размышления о путешествиях во времени, HD-диски и игра в кости.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "chezron",
+      "tag_alias": "chezron"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    },
+    {
+      "tag_name": "multiface",
+      "tag_alias": "multiface"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Next month's issue sees us into\n1998 with quite a few utilities,\nand another superb animation.\nThe utilities include one to\nfind out what variables are\nbeing used in a Basic program\n(very useful when you are\ndeveloping a large and complex\nprogram), a Multiface utility,\nanother to do a double PEEK or\nPOKE (DEEK/DOKE) from Basic,\nand yet another to to dump your\nscreen to a printer in an\namazing variety of formats.\n\n\nHow about a bit of time-travel?\nNext month's OUTPUT takes you\nthere and brings you back, but\nposes a lot of intriguing quest-\nions! Back down to Earth again\nand the DRIVECHAT explains in\ndetail, about High Density Discs\nand also about Inkjet printers.\n\nFancy a little gamble? If so,\nthere is a very good dice-\nrolling game for up to six\nplayers, with or without the\ncomputer taking turns.\n\nAs usual there is a lively\nletters section, enticing\nadverts, more clip-art, etc.,\nall rounded off with a first-\nclass music demo with excellent\ngraphics.\n                        Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Next month's issue sees us into 1998 with quite a few utilities, and another superb animation. The utilities include one to find out what variables are being used in a Basic program (very useful when you are developing a large and complex program), a Multiface utility, another to do a double PEEK or POKE (DEEK/DOKE) from Basic, and yet another to dump your screen to a printer in an amazing variety of formats.\n\nHow about a bit of time-travel? Next month's OUTPUT takes you there and brings you back, but poses a lot of intriguing questions! Back down to Earth again and the DRIVECHAT explains in detail, about High Density Discs and also about Inkjet printers.\n\nFancy a little gamble? If so, there is a very good dice-rolling game for up to six players, with or without the computer taking turns.\n\nAs usual there is a lively letters section, enticing adverts, more clip-art, etc., all rounded off with a first-class music demo with excellent graphics.\n\nChris.\n",
+  "body_ru": "В следующем месяце мы шагнём в 1998 год с целой подборкой утилит и очередной великолепной анимацией. Среди утилит — программа для поиска переменных, используемых в Бейсик-программе (крайне полезная вещь при разработке больших и сложных проектов), утилита для Multiface, подпрограмма для двойного PEEK/POKE (DEEK/DOKE) прямо из Бейсика, а также инструмент для вывода дампа экрана на принтер в самых разнообразных форматах.\n\nКак насчёт небольшого путешествия во времени? В следующем номере колонка OUTPUT перенесёт вас туда и обратно, попутно поставив массу интригующих вопросов! Спускаясь обратно на Землю, рубрика DRIVECHAT подробно расскажет о дискетах высокой плотности (High Density), а также о струйных принтерах.\n\nХотите немного азарта? Вас ждёт отличная игра в кости для компании до шести человек — с участием компьютера или без него.\n\nИ, как обычно, вас ждут оживлённый раздел писем, заманчивые объявления, свежий клипарт и многое другое, а венцом всего станет первоклассное музыкальное демо с прекрасной графикой.\n\nChris.\n",
+  "text_type": 3
+}

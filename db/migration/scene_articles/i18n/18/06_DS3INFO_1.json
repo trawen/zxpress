@@ -1,0 +1,36 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "18",
+  "article_id": "06_DS3INFO_1",
+  "source_lang": "de-AT",
+  "title_en": "Ds3Info 1",
+  "title_ru": "Ds3Info 1",
+  "meta_description_en": "Ds3Info 1 data section from Scene+ #18 (contains raw/encoded control characters).",
+  "meta_description_ru": "Информационный блок Ds3Info 1 из журнала Scene+ #18 (представлен в виде бинарных или управляющих символов).",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene+",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "c64",
+      "tag_alias": "c64"
+    },
+    {
+      "tag_name": "demoscene",
+      "tag_alias": "demoscene"
+    }
+  ],
+  "category_ids": [
+    88,
+    121
+  ],
+  "body_de_plain": "! a Ä 4 a! S + ß + ( + n g# O R a! a Ä 4 aj! + ß+ ( + n g# O R\no! @ @ w C! Z 6, 6,! V 2 2! > 2 > 2! X X w vv! \" >\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "```text\n! a Ä 4 a! S + ß + ( + n g# O R a! a Ä 4 aj! + ß+ ( + n g# O R\no! @ @ w C! Z 6, 6,! V 2 2! > 2 > 2! X X w vv! \" >\n```\n",
+  "body_ru": "```text\n! a Ä 4 a! S + ß + ( + n g# O R a! a Ä 4 aj! + ß+ ( + n g# O R\no! @ @ w C! Z 6, 6,! V 2 2! > 2 > 2! X X w vv! \" >\n```\n",
+  "text_type": 3
+}

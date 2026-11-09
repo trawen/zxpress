@@ -1,0 +1,39 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "031",
+  "article_id": "03_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем выпуске",
+  "meta_description_en": "Preview of contents in the upcoming Outlet #032: Multiface utility, border editor, reviews of EX-BASIC, Disciple, +D and more.",
+  "meta_description_ru": "Анонс материалов следующего выпуска Outlet #032: утилиты для Multiface, редактор бордюра, обзоры софта и железа.",
+  "authors": [
+    "Brian Watson"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "announcement"
+    },
+    {
+      "tag_name": "multiface",
+      "tag_alias": "multiface"
+    },
+    {
+      "tag_name": "checkout",
+      "tag_alias": "checkout"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Next month's OUTLET has a great\nutility to automatically store a\nprogram or screen in your MULTI-\nFACE memory for instant access;a\nsimple game of logic; a program\nto let you to type quick notes\non your printer; part 2 of the\ndatabase info in OUTCLASS with a\nuseful demo and CHECKOUT reviews\nEX-BASIC,LERM'S Code Compressor,\nthe GP100A printer and the +D\nand Disciple interfaces. There's\na program that converts decimal\ninto the 5 bytes used by BASIC\n\nwith lots of info;a utility that\nmoves text from the screen into\na PRINT statement; a screen-dump\nutility for 24-pin printers;more\nclip art;a quiz game for telly\naddicts; a vertical scrolling\nmacro to load into JACKSOFT and\na fantastic BORDER editor giving\nupto 32 different coloured lines\nto pixel precision in the BORDER\nvery easily. Remember those wide\nscreen effects in \"THAT'S THE\nTICKET!\"? This does them better!\n\n                       - Brian.\n",
+  "body_ru_plain": "В следующем номере OUTLET вас\nждёт отличная утилита, чтобы\nавтоматически сохранять програм-\nму или экран в память MULTI-\nFACE для быстрого доступа; про-\nстая логическая игра; программа\nдля быстрой печати заметок на\nпринтере; 2-я часть сведений о\nбазах данных в OUTCLASS с по-\nлезной демкой, а CHECKOUT обоз-\nревает EX-BASIC, LERM'S Code\nCompressor, принтер GP100A и\nинтерфейсы +D и Disciple. А ещё\nпрограмма перевода десятичных\nчисел в 5 байт формата BASIC\n\nс массой деталей; утилита, пере-\nносящая текст с экрана в опера-\nтор PRINT; экранный дамп для 24-\nигольчатых принтеров; ещё клип-\nарт; викторина для телеманов;\nмакрос вертикального скроллинга\nдля загрузки в JACKSOFT и фан-\nтастический редактор BORDER, по-\nзволяющий легко выводить до 32\nразноцветных полос на BORDER\nс точностью до пикселя. Помните\nте широкоэкранные эффекты в\n\"THAT'S THE TICKET!\"? Эта ути-\nлита делает их ещё лучше!\n\n                       - Brian.\n",
+  "body_en": "## Lookahead\n\nNext month's OUTLET has a great utility to automatically store a program or screen in your MULTIFACE memory for instant access; a simple game of logic; a program to let you to type quick notes on your printer; part 2 of the database info in OUTCLASS with a useful demo and CHECKOUT reviews EX-BASIC, LERM'S Code Compressor, the GP100A printer and the +D and Disciple interfaces. There's a program that converts decimal into the 5 bytes used by BASIC with lots of info; a utility that moves text from the screen into a PRINT statement; a screen-dump utility for 24-pin printers; more clip art; a quiz game for telly addicts; a vertical scrolling macro to load into JACKSOFT and a fantastic BORDER editor giving upto 32 different coloured lines to pixel precision in the BORDER very easily. Remember those wide screen effects in \"THAT'S THE TICKET!\"? This does them better!\n\n— Brian.\n",
+  "body_ru": "## В следующем выпуске\n\nВ следующем номере OUTLET вас ждёт отличная утилита, чтобы автоматически сохранять программу или экран в память MULTIFACE для быстрого доступа; простая логическая игра; программа для быстрой печати заметок на принтере; 2-я часть сведений о базах данных в OUTCLASS с полезной демкой, а CHECKOUT обозревает EX-BASIC, LERM'S Code Compressor, принтер GP100A и интерфейсы +D и Disciple. А ещё программа перевода десятичных чисел в 5 байт формата BASIC с массой деталей; утилита, переносящая текст с экрана в оператор PRINT; экранный дамп для 24-игольчатых принтеров; ещё клипарт; викторина для телеманов; макрос вертикального скроллинга для загрузки в JACKSOFT и фантастический редактор BORDER, позволяющий легко выводить до 32 разноцветных полос на BORDER с точностью до пикселя. Помните те широкоэкранные эффекты в \"THAT'S THE TICKET!\"? Эта утилита делает их ещё лучше!\n\n— Brian.\n",
+  "text_type": 3
+}

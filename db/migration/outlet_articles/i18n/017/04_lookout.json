@@ -1,0 +1,50 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "017",
+  "article_id": "04_lookout",
+  "title_en": "Lookout",
+  "title_ru": "Lookout: новости индустрии",
+  "meta_description_en": "Industry news and commentary: booming Christmas sales for Spectrum and C64, MGT SAM Coupé update, Matsushita floppy innovations, and UK Spectrum magazine roundup.",
+  "meta_description_ru": "Новости компьютерного рынка: рождественские продажи Spectrum и C64, анонс MGT SAM Coupé, дисковод Matsushita и краткий обзор британских журналов о ZX Spectrum.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "lookout",
+      "tag_alias": "lookout"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "рынок компьютеров",
+      "tag_alias": "computer-market"
+    },
+    {
+      "tag_name": "8-bit vs 16-bit",
+      "tag_alias": "8-bit-vs-16-bit"
+    },
+    {
+      "tag_name": "обзор прессы",
+      "tag_alias": "press-review"
+    },
+    {
+      "tag_name": "your sinclair",
+      "tag_alias": "your-sinclair"
+    },
+    {
+      "tag_name": "crash",
+      "tag_alias": "crash"
+    }
+  ],
+  "category_ids": [
+    102,
+    131
+  ],
+  "body_en_plain": "It's good to hear that although\nthe High St. spending boom is\ngenerally slowing, sales of home\ncomputers and software were,this\nChristmas, far exceeding every-\none's expectations! It has been\ndescribed as the best Christmas\nsince 1983.Although suppliers of\nthe ST and Amiga had high hopes\nand were prepared, it was huge\nsales of the the 8-bit Spectrum\nand Commodore 64 that caught the\ndistributors and chain stores by\nsurprise.They are still far out-\nselling the newer 16-bitters.One\n\n\ncan only assume that too much\nattention has been paid to the\nhigh-profile given by the media\nto the ST and Amiga which, after\nall, are minority computers\ncompared to the Spectrum! The\nmoral is: Don't be taken in by\nthe 16-byte hype!\n\nApril is the latest date for the\nnew computer from MGT to become\navailable. The entry-level,tape-\nbased version, called the COUPE\nwill be priced at `150. It is\nclaimed it can run most Spectrum\nsoftware. It will come with a\nbuilt-in disk operating system\nso up to two 3.5\" drives can be\nslotted in later or a version\nwhich includes one drive will be\navailable at `220.\n\nThe EEC levy on imported Japan-\nese printers looks set to be\nreduced from 47% to around 24%.\n\nMatsushita has developed a new\n3.5\" disk drive with 542 tracks\nper inch giving a huge 11000K of\nstorage on each disk!\n\nNow the monthly magazines...\n\nYOUR SINCLAIR has listings for a\n128K menu emulator, a password\nroutine, a paint-filler and a\nBORDER stripe routine.\n\nCRASH reviews TasCalc - the\nspreadsheet and DB1 - a +3 disk\ncopier program\n\nI couldn't get a Sinclair User\n\nor Computer Shopper before our\ndeadline.\n\nPERSONAL COMPUTER WORLD has Z80\nlistings for 32-bit square and\nsquare root routines.\n\nThe January issue of EVERYDAY\nELECTRONICS I bought on 1st\nDecember so presumably February\nwill be out by now! Anyway, it\nhas two electronics projects:\nHow to build a Spectrum parallel\nprinter interface and a Christ-\nmas tree lights controller..\n",
+  "body_ru_plain": "Приятно слышать, что хотя бум\nпокупок на High St. в целом\nзамедляется, продажи домашних\nкомпьютеров и ПО в это Рождество\nнамного превзошли все ожидания!\nЕго уже назвали лучшим Рождест-\nвом с 1983 года. Хотя поставщики\nST и Amiga возлагали большие\nнадежды и были готовы, именно\nогромные продажи 8-битных\nSpectrum и Commodore 64 застали\nдистрибьюторов и торговые сети\nврасплох. Они всё ещё далеко\nопережают новые 16-битники.\n\n\nОстаётся лишь предположить, что\nслишком много внимания уделялось\nшумихе в прессе вокруг ST\nи Amiga, которые, в конце концов,\nкомпьютеры меньшинства\nпо сравнению со Spectrum!\nМораль такова: не поддавайтесь\nна 16-байтовую шумиху!\n\nАпрель — крайний срок, когда\nновый компьютер от MGT\nпоявится в продаже. Базовая\nкассетная версия под названием\nCOUPE будет стоить `150.\nЗаявлено, что она запускает\nбольшую часть софта Spectrum.\nВ неё будет встроена дисковая\nОС, так что позже можно встроить\nдо двух дисководов 3.5\", либо\nбудет доступна версия с одним\nприводом по цене `220.\n\nПошлина ЕЭС на импорт японских\nпринтеров, похоже, снизится\nс 47% примерно до 24%.\n\nMatsushita разработала новый\nдисковод 3.5\" с 542 дорожками\nна дюйм, дающий гигантские\n11000K памяти на каждом диске!\n\nТеперь ежемесячные журналы...\n\nВ YOUR SINCLAIR есть листинги\nэмулятора меню 128K, процедуры\nпароля, заливки и процедуры\nполос на BORDER.\n\nCRASH обозревает TasCalc —\nэлектронную таблицу, и DB1 —\nпрограмму копирования дисков +3\n\nЯ не смог достать Sinclair User\n\nили Computer Shopper до сдачи\nномера.\n\nВ PERSONAL COMPUTER WORLD есть\nлистинги Z80 для 32-битных\nпроцедур квадрата и квадратного\nкорня.\n\nЯнварский номер EVERYDAY\nELECTRONICS я купил 1 декабря,\nтак что февральский, вероятно,\nуже вышел! В любом случае, там\nдва проекта по электронике:\nкак собрать параллельный\nинтерфейс принтера для Spectrum\nи контроллер гирлянды на ёлку..\n",
+  "body_en": "## Lookout\n\nIt's good to hear that although the High St. spending boom is generally slowing, sales of home computers and software were, this Christmas, far exceeding everyone's expectations! It has been described as the best Christmas since 1983. Although suppliers of the ST and Amiga had high hopes and were prepared, it was huge sales of the the 8-bit Spectrum and Commodore 64 that caught the distributors and chain stores by surprise. They are still far outselling the newer 16-bitters. One can only assume that too much attention has been paid to the high-profile given by the media to the ST and Amiga which, after all, are minority computers compared to the Spectrum! The moral is: Don't be taken in by the 16-byte hype!\n\nApril is the latest date for the new computer from MGT to become available. The entry-level, tape-based version, called the COUPE will be priced at £150. It is claimed it can run most Spectrum software. It will come with a built-in disk operating system so up to two 3.5\" drives can be slotted in later or a version which includes one drive will be available at £220.\n\nThe EEC levy on imported Japanese printers looks set to be reduced from 47% to around 24%.\n\nMatsushita has developed a new 3.5\" disk drive with 542 tracks per inch giving a huge 11000K of storage on each disk!\n\nNow the monthly magazines...\n\n**YOUR SINCLAIR** has listings for a 128K menu emulator, a password routine, a paint-filler and a BORDER stripe routine.\n\n**CRASH** reviews TasCalc - the spreadsheet and DB1 - a +3 disk copier program.\n\nI couldn't get a Sinclair User or Computer Shopper before our deadline.\n\n**PERSONAL COMPUTER WORLD** has Z80 listings for 32-bit square and square root routines.\n\nThe January issue of **EVERYDAY ELECTRONICS** I bought on 1st December so presumably February will be out by now! Anyway, it has two electronics projects: How to build a Spectrum parallel printer interface and a Christmas tree lights controller..\n",
+  "body_ru": "## Lookout: новости индустрии\n\nПриятно слышать, что хотя бум покупок на High St. в целом замедляется, продажи домашних компьютеров и ПО в это Рождество намного превзошли все ожидания! Его уже назвали лучшим Рождеством с 1983 года. Хотя поставщики ST и Amiga возлагали большие надежды и были готовы, именно огромные продажи 8-битных Spectrum и Commodore 64 застали дистрибьюторов и торговые сети врасплох. Они всё ещё далеко опережают новые 16-битники.\n\nОстаётся лишь предположить, что слишком много внимания уделялось шумихе в прессе вокруг ST и Amiga, которые, в конце концов, компьютеры меньшинства по сравнению со Spectrum! Мораль такова: не поддавайтесь на 16-байтовую шумиху!\n\nАпрель — крайний срок, когда новый компьютер от MGT появится в продаже. Базовая кассетная версия под названием COUPE будет стоить £150. Заявлено, что она запускает большую часть софта Spectrum. В неё будет встроена дисковая ОС, так что позже можно встроить до двух дисководов 3.5\", либо будет доступна версия с одним приводом по цене £220.\n\nПошлина ЕЭС на импорт японских принтеров, похоже, снизится с 47% примерно до 24%.\n\nMatsushita разработала новый дисковод 3.5\" с 542 дорожками на дюйм, дающий гигантские 11000K памяти на каждом диске!\n\n### Теперь ежемесячные журналы...\n\n* **YOUR SINCLAIR**: есть листинги эмулятора меню 128K, процедуры пароля, заливки и процедуры полос на BORDER.\n* **CRASH**: обозревает TasCalc — электронную таблицу, и DB1 — программу копирования дисков +3.\n* **Sinclair User** и **Computer Shopper**: не смог достать до сдачи номера.\n* **PERSONAL COMPUTER WORLD**: есть листинги Z80 для 32-битных процедур квадрата и квадратного корня.\n* **EVERYDAY ELECTRONICS**: январский номер я купил 1 декабря, так что февральский, вероятно, уже вышел! В любом случае, там два проекта по электронике: как собрать параллельный интерфейс принтера для Spectrum и контроллер гирлянды на ёлку...\n",
+  "text_type": 3
+}

@@ -1,0 +1,37 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "015",
+  "article_id": "04_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем выпуске",
+  "meta_description_en": "Preview of the upcoming Christmas issue of Outlet: festive software, a font creator, Part 3 of Chris Oliver's tape-to-drive guide, and various utilities.",
+  "meta_description_ru": "Анонс рождественского выпуска журнала Outlet: праздничные программы, редактор шрифтов, третья часть статьи Chris Oliver о переносе данных и многое другое.",
+  "authors": [
+    "Ron Rowe",
+    "Brian Watson"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "рождество",
+      "tag_alias": "christmas"
+    }
+  ],
+  "category_ids": [
+    123,
+    119
+  ],
+  "body_en_plain": "Next month's our Christmas issue\nand we've some seasonal programs\nto give it the right flavour.\nThere'll be a very flexible font\ncreator; a name and address file\nfor your Christmas card list;\nPart 3 of Chris Oliver's: \"tape\nto drive transfer\" in DRIVECHAT\nand Nick Lewis's OUTCLASS. An\namusing diversion in CARNIVAL; a\nSHOUTBURST on videos and an OUT-\nTAKE! Also on disk and cartridge\nB is a simple auto-transfer of\nBASIC or code to drive;a fractal\n\ndemo; a handy routine to show\nbytes in memory as ASCII,double-\nbytes or straight values;a great\ncalendar planner for ANY year;\nmulti-track tunes;a light sphere\ngenerator; a tiny routine giving\nmulti-keypress detection (SHIFT\nKEY, SHIFT+ENTER,etc) and, for\nTHAT'S THE TICKET fans - the one\nand only, the original XMAS FUN!\n\n                 See you then!\n\n                 - Ron & Brian.\n",
+  "body_ru_plain": "Следующий номер — рождественский\nи у нас припасена подборка\nпраздничных программ для нужного\nнастроения. Будет очень гибкий\nредактор шрифтов; картотека имён\nи адресов для рассылки открыток;\nчасть 3 от Chris Oliver:\n«tape to drive transfer» в руб-\nрике DRIVECHAT и OUTCLASS от\nNick Lewis. Забавное развлечение\nв CARNIVAL; SHOUTBURST о видео\nи OUTTAKE! Также на диске и\nкартридже B: простой автоперенос\nBASIC или кодов на накопитель;\n\nфрактальное демо; удобная проце-\nдура показа байтов в памяти как\nASCII, двухбайтовых чисел или\nпрямых значений; отличный пла-\nнер-календарь на ЛЮБОЙ год;\nмногодорожечные мелодии; гене-\nратор световой сферы; крошечная\nпроцедура обработки мульти-нажа-\nтий (SHIFT KEY, SHIFT+ENTER и\nт.д.) и, для фанатов THAT'S THE\nTICKET — тот самый, неповторимый\nоригинальный XMAS FUN!\n\n              До скорой встречи!\n\n                 - Ron & Brian.\n",
+  "body_en": "## Lookahead\n\nNext month's our Christmas issue and we've some seasonal programs to give it the right flavour. There'll be a very flexible font creator; a name and address file for your Christmas card list; Part 3 of Chris Oliver's: \"tape to drive transfer\" in DRIVECHAT and Nick Lewis's OUTCLASS. An amusing diversion in CARNIVAL; a SHOUTBURST on videos and an OUTTAKE! Also on disk and cartridge B is a simple auto-transfer of BASIC or code to drive; a fractal demo; a handy routine to show bytes in memory as ASCII, double-bytes or straight values; a great calendar planner for ANY year; multi-track tunes; a light sphere generator; a tiny routine giving multi-keypress detection (SHIFT KEY, SHIFT+ENTER, etc) and, for THAT'S THE TICKET fans - the one and only, the original XMAS FUN!\n\nSee you then!\n\n— Ron & Brian.\n",
+  "body_ru": "## В следующем выпуске\n\nСледующий номер — рождественский и у нас припасена подборка праздничных программ для нужного настроения. Будет очень гибкий редактор шрифтов; картотека имён и адресов для рассылки открыток; часть 3 от Chris Oliver: «tape to drive transfer» в рубрике DRIVECHAT и OUTCLASS от Nick Lewis. Забавное развлечение в CARNIVAL; SHOUTBURST о видео и OUTTAKE! Также на диске и картридже B: простой автоперенос BASIC или кодов на накопитель; фрактальное демо; удобная процедура показа байтов в памяти как ASCII, двухбайтовых чисел или прямых значений; отличный планер-календарь на ЛЮБОЙ год; многодорожечные мелодии; генератор световой сферы; крошечная процедура обработки мульти-нажатий (SHIFT KEY, SHIFT+ENTER и т.д.) и, для фанатов THAT'S THE TICKET — тот самый, неповторимый оригинальный XMAS FUN!\n\nДо скорой встречи!\n\n— Ron & Brian.\n",
+  "text_type": 3
+}

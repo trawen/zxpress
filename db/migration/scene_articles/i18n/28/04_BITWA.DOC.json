@@ -1,0 +1,46 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "28",
+  "article_id": "04_BITWA.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Bitwa o Wyspę II: English Release",
+  "title_ru": "Bitwa o Wyspę II: английская версия",
+  "meta_description_en": "Tiger's Claw presents an exclusive English translation and restoration of the strategy wargame Bitwa o Wyspę II for Scene+ readers.",
+  "meta_description_ru": "Tiger's Claw представляет эксклюзивный перевод и восстановление стратегического варгейма Bitwa o Wyspę II на английском языке для читателей журнала Scene+.",
+  "authors": [
+    "Tiger's Claw"
+  ],
+  "tags": [
+    {
+      "tag_name": "scene+",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "bitwa o wyspe ii",
+      "tag_alias": "bitwa-o-wyspe-ii"
+    },
+    {
+      "tag_name": "strategy",
+      "tag_alias": "strategy"
+    },
+    {
+      "tag_name": "tiger's claw",
+      "tag_alias": "tigers-claw"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "BITWA ü\n----------------------------------------------------------------\nBITWA O WYSPE II\n----------------------------------------------------------------\nRestaurierter PC Snapshot eines recht guten\nStrategiespiels(Mensch gegen Computer), es geht um Krieg auf\neiner Insel undich habe es ins englische übersetzt, somit kommen\ndie SCENE+Leser wieder in den Genuß eines Exclusiven Spieles wie\nes schonbei Scorpions der Fall war.\n----------------------------------------------------------------\nExclusive only on SCENE+, Battle for the Isle II,\nenglishversion! Transfered from PC and restored by me, Tiger's\nClaw. Bythe way, this is a strategy wargame for a single player\nvscomputer forces.\n----------------------------------------------------------------\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### BITWA O WYSPE II\n\nA restored PC snapshot of quite a good strategy game (human vs. computer). It is about war on an island, and I translated it into English. Thus, SCENE+ readers can once again enjoy an exclusive game, just as was the case with *Scorpions*.\n\nExclusive only on SCENE+: *Battle for the Isle II*, English version! Transferred from PC and restored by me, Tiger's Claw. By the way, this is a strategy wargame for a single player vs. computer forces.\n",
+  "body_ru": "### BITWA O WYSPE II\n\nВосстановленный с ПК снэпшот довольно хорошей стратегической игры (человек против компьютера). Сюжет посвящён войне на острове. Я перевёл её на английский язык, так что читатели SCENE+ снова могут насладиться эксклюзивной игрой, как это уже было со *Scorpions*.\n\nЭксклюзивно только в SCENE+: *Battle for the Isle II*, английская версия! Перенесена с ПК и восстановлена мной, Tiger's Claw. К слову, это стратегический варгейм для одного игрока против сил компьютера.\n",
+  "text_type": 3
+}

@@ -1,0 +1,39 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "118",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем выпуске",
+  "meta_description_en": "Chris previews the upcoming issue of Outlet, announcing the finale of Vaxtrek, new PD games and demos, and calling for utility submissions.",
+  "meta_description_ru": "Крис анонсирует следующий выпуск журнала Outlet: финал серии Vaxtrek, новые PD-игры и демо, а также призыв присылать полезные утилиты.",
+  "authors": [
+    "Chris Jenkins"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "vaxtrek",
+      "tag_alias": "vaxtrek"
+    },
+    {
+      "tag_name": "public domain",
+      "tag_alias": "public-domain"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "preview"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "After revealing many great\nsecrets of the Universe such as\nexactly where the \"Sheeesh\"\nmechanism is secreted and even\nSpock's first name, sadly, next\nmonth's OUTLET brings the last\nof the VAXTREK series. Unless of\ncourse, somebody out there in\nthe great world of Speccy, can\nreveal some more of the epic\nadventures of Jim and company?\n\n                     more...\n\n\nMore and more super games and\nfantastic demos are entering the\npublic domain so you have lots\nto look forward to. There is\nanother wonderful animation next\nmonth and the usual useful\nutility or two. As Brian keeps\nreminding us, we are always\nwanting utility type programs in\norder to maintain a happy bal-\nance of contents in OUTLET.Don't\nworry if the little routine you\nhave written does not look much,\nwe can always add an introduct-\nion page and dress it up a bit:\nthat's what editors are for!\n\n            Cheers,\n\n               Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "After revealing many great secrets of the Universe such as exactly where the \"Sheeesh\" mechanism is secreted and even Spock's first name, sadly, next month's OUTLET brings the last of the VAXTREK series. Unless of course, somebody out there in the great world of Speccy, can reveal some more of the epic adventures of Jim and company?\n\nMore and more super games and fantastic demos are entering the public domain so you have lots to look forward to. There is another wonderful animation next month and the usual useful utility or two. As Brian keeps reminding us, we are always wanting utility type programs in order to maintain a happy balance of contents in OUTLET. Don't worry if the little routine you have written does not look much, we can always add an introduction page and dress it up a bit: that's what editors are for!\n\nCheers,\n\nChris.\n",
+  "body_ru": "Раскрыв множество великих тайн Вселенной — например, где именно спрятан механизм «Шшшш» и даже как зовут Спока, — в следующем месяце OUTLET, увы, опубликует заключительную часть серии VAXTREK. Если, конечно, кто-нибудь на просторах необъятного мира Спекки не приоткроет завесу над новыми эпическими приключениями Джима и его команды?\n\nВ общественное достояние переходит всё больше отличных игр и фантастических демок, так что вас ждёт много интересного. В следующем месяце появится ещё одна замечательная анимация, а также пара полезных утилит. Как постоянно напоминает Brian, нам всегда нужны программы-утилиты, чтобы поддерживать гармоничный баланс материалов в OUTLET. Не переживайте, если написанная вами подпрограммка кажется невзрачной: мы всегда можем добавить титульную страничку и немного её приукрасить — на то и нужны редакторы!\n\nВсего наилучшего,\n\nChris.\n",
+  "text_type": 3
+}

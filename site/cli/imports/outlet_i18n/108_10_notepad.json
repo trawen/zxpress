@@ -1,0 +1,43 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "108",
+  "article_id": "10_notepad",
+  "title_en": "Notepad",
+  "title_ru": "Notepad",
+  "meta_description_en": "Overview and instructions for the freeware utility NOTEPAD, featured on Outlet disk issue #108.",
+  "meta_description_ru": "Инструкция и обзор бесплатной утилиты NOTEPAD с диска журнала Outlet #108.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "notepad",
+      "tag_alias": "notepad"
+    },
+    {
+      "tag_name": "freeware",
+      "tag_alias": "freeware"
+    },
+    {
+      "tag_name": "utility",
+      "tag_alias": "utility"
+    },
+    {
+      "tag_name": "text editor",
+      "tag_alias": "text-editor"
+    },
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    }
+  ],
+  "category_ids": [
+    62,
+    64,
+    74
+  ],
+  "body_en_plain": "NOTEPAD\n            -------\n\nLike many FREEWARE programs that\nare sent in, the next program,\nNOTEPAD,arrived without any inf-\normation or instructions. Not\nthat it is too difficult to work\nout what's what,but it does help\nto have a few clues to start off\nwith.  But mutual help is what\nOUTLET is all about, so here\ngoes...\n\n\nOn RUNning one is logically en-\nough prompted to Open the NOTE-\nPAD before doing anything else,\nand this gets you over the first\nhurdle of discovering that the\nflickering cursor can be contr-\nolled by Sinclair Joystick No.1.\n(Or keys 6,7,8,9,0, if you have\nno joystick.)\n\nNow the Notepad is open, you are\nable to click onto the options\non the Menu bar (or even invest-\nigate the top blue bar!).\n\nTaking the Menu items from the\nright hand side:-\n\nQUIT is self explanatory, and in\nfact added by ourselves as a\nquick route back to OUTLET.\n\n\nOPTIONS gives a sub-menu with\nthe following options:-\n\nFONT toggles between the Spect-\n     rum font and the OUTLET set\n\nKEYS switches cursor control to\n     keys Q,A,O,P, and SPACE.\n\nJOYSTICK predictably switches\n         back to Sinclair One.\n\nCOLOUR toggles between black on\n       white, and blue on white.\n\nCANCEL as in all sub-menus exits\n       from the sub-menu.\n\nPRINT is obvious and is current-\n      ly set for the +D.\n\nNOTEPAD gives more options...\n\nEDIT provides a full-screen\n   editor with cursor control by\n   the usual Arrow keys.\n\nDELETE Beware, as it seems to\n       delete the WHOLE of the\n       notepad jottings!\n\nFLIP shows your shopping list\n     (after flipping ages) in\nreverse order and mirrored. No\ndoubt Leonardo da Vinci used it?\n\nRESTART returns to OUTLET.\n\nFILE again is straightforward &\n    the BACKUP option saves both\nNOTEPAD Basic and your notes in\nthe form of an Opentype file.\n\n  Press \"N\" now to load NOTEPAD.\n",
+  "body_ru_plain": "",
+  "body_en": "### NOTEPAD\n\nLike many FREEWARE programs that are sent in, the next program, NOTEPAD, arrived without any information or instructions. Not that it is too difficult to work out what's what, but it does help to have a few clues to start off with. But mutual help is what OUTLET is all about, so here goes...\n\nOn RUNning one is logically enough prompted to Open the NOTEPAD before doing anything else, and this gets you over the first hurdle of discovering that the flickering cursor can be controlled by Sinclair Joystick No.1. (Or keys 6, 7, 8, 9, 0, if you have no joystick.)\n\nNow the Notepad is open, you are able to click onto the options on the Menu bar (or even investigate the top blue bar!).\n\nTaking the Menu items from the right hand side:-\n\n* **QUIT** is self explanatory, and in fact added by ourselves as a quick route back to OUTLET.\n* **OPTIONS** gives a sub-menu with the following options:\n  * **FONT** toggles between the Spectrum font and the OUTLET set.\n  * **KEYS** switches cursor control to keys Q, A, O, P, and SPACE.\n  * **JOYSTICK** predictably switches back to Sinclair One.\n  * **COLOUR** toggles between black on white, and blue on white.\n  * **CANCEL** as in all sub-menus exits from the sub-menu.\n* **PRINT** is obvious and is currently set for the +D.\n* **NOTEPAD** gives more options...\n  * **EDIT** provides a full-screen editor with cursor control by the usual Arrow keys.\n  * **DELETE** Beware, as it seems to delete the WHOLE of the notepad jottings!\n  * **FLIP** shows your shopping list (after flipping ages) in reverse order and mirrored. No doubt Leonardo da Vinci used it?\n  * **RESTART** returns to OUTLET.\n* **FILE** again is straightforward & the **BACKUP** option saves both NOTEPAD Basic and your notes in the form of an Opentype file.\n\nPress \"N\" now to load NOTEPAD.\n",
+  "body_ru": "### NOTEPAD\n\nКак и многие присылаемые нам бесплатные программы (FREEWARE), следующая утилита — NOTEPAD — пришла без каких-либо описаний или инструкций. Разобраться в ней, в общем-то, не так уж и сложно, но пара подсказок для старта никогда не помешает. А так как взаимовыручка — это главное кредо OUTLET, то приступим...\n\nПосле запуска (RUN) программа вполне логично предлагает сначала открыть блокнот («Open the NOTEPAD»), прежде чем делать что-либо еще. Это помогает преодолеть первое препятствие — выяснить, что мерцающий курсор управляется с Sinclair Joystick №1 (или клавишами 6, 7, 8, 9, 0, если джойстика у вас нет).\n\nКогда блокнот открыт, вы можете нажимать на пункты строки меню (или даже изучить верхнюю синюю полосу!).\n\nПройдемся по пунктам меню справа налево:\n\n* **QUIT** — говорит сам за себя; этот пункт мы добавили сами для быстрого возврата в меню OUTLET.\n* **OPTIONS** — открывает подменю со следующими настройками:\n  * **FONT** — переключает между стандартным шрифтом Spectrum и набором OUTLET.\n  * **KEYS** — переключает управление курсором на клавиши Q, A, O, P и SPACE.\n  * **JOYSTICK** — ожидаемо возвращает управление на Sinclair 1.\n  * **COLOUR** — переключает цвета: черный на белом или синий на белом.\n  * **CANCEL** — как и во всех подменю, служит для выхода назад.\n* **PRINT** — печать; тут всё понятно, в данный момент настроена под интерфейс +D.\n* **NOTEPAD** — предлагает дополнительные функции:\n  * **EDIT** — полноэкранный редактор с управлением курсором обычными клавишами со стрелками.\n  * **DELETE** — осторожно! Похоже, эта команда удаляет ВСЕ ваши записи в блокноте целиком!\n  * **FLIP** — отображает ваш список покупок (спустя уйму времени на переворот) задом наперед и зеркально. Без сомнения, именно этим пользовался Леонардо да Винчи!\n  * **RESTART** — возвращает в OUTLET.\n* **FILE** — здесь тоже всё просто, а опция **BACKUP** сохраняет и Бейсик-код NOTEPAD, и ваши заметки в виде файла типа Opentype.\n\nНажмите «N» прямо сейчас, чтобы загрузить NOTEPAD.\n",
+  "text_type": 3
+}

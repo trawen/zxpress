@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "078",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Announcement of the upcoming PC edition of Outlet magazine in April 1994: UI design, floppy disc format, and Chezron Software's plans.",
+  "meta_description_ru": "Анонс запуска отдельной PC-версии журнала Outlet в апреле 1994 года: концепция интерфейса, формат 3.5\" дискеты и планы редакции.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "pc",
+      "tag_alias": "pc"
+    },
+    {
+      "tag_name": "дискмаг",
+      "tag_alias": "diskmag"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "F E B R U A R Y ,   1 9 9 4\n\nWe are pleased to announce that\nthe new PC version of OUTLET is\nto be launched at the start of\nApril this year. The supporting\nroutines and structure have now\nbeen finalised.\n\nThe PC version will follow the\nSpectrum ideal of presenting the\nprograms and articles in an easy\nto use way - all linked back to\na CONTENTS page or the NEXT item\nso users can \"browse\".It can run\ndirectly from the high-density\nfloppy disc so you don't waste\ntime sorting out files,unzipping\nthem, copying them to your hard\ndisc, struggling to get them\nrunning before finally deciding\nyou don't want them and have to\nerase them! Alternatively,it can\nbe easily installed on ones hard\ndisc. Individual programs can\nalso be installed on their own.\nEase-of-use is the name of the\ngame! The concept of the RUN,\nCONTENTS, NEXT prompt bar is now\na glorious button bar controlled\nby mouse or keyboard!\n\nThere are some great programs\nand articles already being made\nready for the first issue. We\nhope to go monthly immediately\nbut if it should be temporarily\nbi-monthly for a short time\n(unlikely now) subscribers will\nstill get all the issues.\n\nThis is NOT the Spectrum version\nrunning on the PC but a new, all\nPC OUTLET of about 2 megabytes\ncompressed onto a 1.4 meg 3.5\"\ndisc.We are considering a 5.25\".\n\nPrice has not been decided but\nit will certainly not be any\nmore than the Spectrum version\nand could be less. This will be\nannounced next month when we've\ngiven it some more thought!\n\nContributions of PD, shareware\n- particularly your own and also\nletters to get our OUTLETTERS\nsection under way are welcome!\n\nMore great stuff is coming in on\nthe Spectrum version. You keep\nsending it and we'll keep cramm-\ning it on to your OUTLET disc!\n\n              Ron & Brian\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nF E B R U A R Y ,   1 9 9 4\n\nWe are pleased to announce that the new PC version of OUTLET is to be launched at the start of April this year. The supporting routines and structure have now been finalised.\n\nThe PC version will follow the Spectrum ideal of presenting the programs and articles in an easy to use way - all linked back to a CONTENTS page or the NEXT item so users can \"browse\".It can run directly from the high-density floppy disc so you don't waste time sorting out files,unzipping them, copying them to your hard disc, struggling to get them running before finally deciding you don't want them and have to erase them! Alternatively,it can be easily installed on ones hard disc. Individual programs can also be installed on their own. Ease-of-use is the name of the game! The concept of the RUN, CONTENTS, NEXT prompt bar is now a glorious button bar controlled by mouse or keyboard!\n\nThere are some great programs and articles already being made ready for the first issue. We hope to go monthly immediately but if it should be temporarily bi-monthly for a short time (unlikely now) subscribers will still get all the issues.\n\nThis is NOT the Spectrum version running on the PC but a new, all PC OUTLET of about 2 megabytes compressed onto a 1.4 meg 3.5\" disc.We are considering a 5.25\".\n\nPrice has not been decided but it will certainly not be any more than the Spectrum version and could be less. This will be announced next month when we've given it some more thought!\n\nContributions of PD, shareware - particularly your own and also letters to get our OUTLETTERS section under way are welcome!\n\nMore great stuff is coming in on the Spectrum version. You keep sending it and we'll keep cramm- ing it on to your OUTLET disc!\n\nRon & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers\n\nCHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF.\n",
+  "body_ru": "## Editorial (late)\n\n### Февраль 1994\n\nМы рады объявить, что новая PC-версия OUTLET стартует в начале апреля этого года. Вспомогательные процедуры и структура к настоящему моменту уже окончательно согласованы.\n\nPC-версия последует идеалам Spectrum в плане подачи программ и статей в простом и удобном виде — всё привязано ссылками к странице CONTENTS или следующему пункту NEXT, чтобы пользователи могли просто «листать» журнал. Он может работать прямо с дискеты высокой плотности, так что вы не будете тратить время, разбираясь в файлах, распаковывая их, копируя на жесткий диск и мучаясь с их запуском, лишь затем чтобы в итоге решить, что они вам не нужны, и удалять их! С другой стороны, его можно легко установить и на жесткий диск. Отдельные программы также можно ставить сами по себе. Простота использования — превыше всего! Концепция строки подсказок RUN, CONTENTS, NEXT превратилась в великолепную панель кнопок, управляемую мышью или клавиатурой!\n\nДля первого номера уже готовятся отличные программы и статьи. Мы надеемся сразу же перейти на ежемесячный график, но если на короткое время он временно станет выходить раз в два месяца (что сейчас маловероятно), подписчики в любом случае получат все выпуски.\n\nЭто НЕ версия со Spectrum, запущенная на PC, а совершенно новый, целиком сделанный для PC журнал OUTLET объемом около 2 мегабайт, сжатый на 3.5\" дискету формата 1.4 Мб. Мы также рассматриваем формат 5.25\".\n\nЦена пока не определена, но она точно будет не больше, чем у Spectrum-версии, а возможно, и меньше. Мы объявим об этом в следующем месяце, когда еще немного всё обдумаем!\n\nПриветствуются материалы в PD, shareware — особенно ваши собственные работы, а также письма, чтобы дать старт нашей рубрике OUTLETTERS!\n\nДля Spectrum-версии тоже продолжает поступать много отличного материала. Продолжайте присылать, а мы продолжим втискивать всё это на ваш диск OUTLET!\n\nRon & Brian\n\nOUTLET выпускают:\n\nChris Oliver  \nRon & Brian Cavers  \n\nCHEZRON SOFTWARE  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF.\n",
+  "text_type": 3
+}

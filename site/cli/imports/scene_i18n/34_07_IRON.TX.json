@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "34",
+  "article_id": "07_IRON.TX",
+  "source_lang": "de-AT",
+  "title_en": "Iron Attack Demo",
+  "title_ru": "Iron Attack Demo",
+  "meta_description_en": "Brief description and controls for the playable demo of the Russian strategy wargame Iron Attack on the ZX Spectrum.",
+  "meta_description_ru": "Краткое описание и управление для демо-версии российской пошаговой военной стратегии Iron Attack для ZX Spectrum.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "iron attack",
+      "tag_alias": "iron-attack"
+    },
+    {
+      "tag_name": "strategy",
+      "tag_alias": "strategy"
+    },
+    {
+      "tag_name": "controls",
+      "tag_alias": "controls"
+    },
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "IRO ü - IRON ATTACK DEMO - Das ist ein Strategie-Kriegsspiel\nwelches nur mit Tastaturgesteuert werden kann. Die wichtigsten\nTasten sind: QUAP für Steuerung des Cursors und der Panzer,\nSpace=Selektion, Enter=De=selektion, F=Feuern, E=Zug beenden.\nWeitere Tasten: N=Nächste Einheit, H=Hilfe, M=Karte,\n1=Palettenwechsel.- - This is a strategy wargame playable demo\nfrom russia, controlsonly with keyboard: QAOP to move cursor or\ntanks, SPACE=Select, ENTER=Deselect, F=Fire, E=End Move, N=Next\nunit, H=Help, M=Map,1=Change palette. Q - Spectrum 128. Load in\nUSR 0 mode. Works also in 48\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**IRON ATTACK DEMO**\n\nThis is a strategy wargame that can only be controlled via the keyboard.\n\nThe most important keys are:\n- **Q**, **A**, **O**, **P**: Move cursor and tanks\n- **Space**: Select\n- **Enter**: Deselect\n- **F**: Fire\n- **E**: End turn / End move\n\nAdditional keys:\n- **N**: Next unit\n- **H**: Help\n- **M**: Map\n- **1**: Change palette\n\n*(Original English text from the diskmag:)*  \nThis is a strategy wargame playable demo from Russia, controls only with keyboard: QAOP to move cursor or tanks, SPACE=Select, ENTER=Deselect, F=Fire, E=End Move, N=Next unit, H=Help, M=Map, 1=Change palette.\n\nZX Spectrum 128K. Load in USR 0 mode. Works also on 48K.\n",
+  "body_ru": "**IRON ATTACK DEMO**\n\nЭто военно-стратегическая игра, управление в которой осуществляется только с клавиатуры.\n\nОсновные клавиши:\n- **Q**, **A**, **O**, **P**: управление курсором и танками\n- **Space**: выбор (селекция)\n- **Enter**: отмена выбора\n- **F**: огонь\n- **E**: завершить ход\n\nДополнительные клавиши:\n- **N**: следующий юнит\n- **H**: помощь / справка\n- **M**: карта\n- **1**: смена палитры\n\n*(Оригинальный английский текст из журнала:)*  \nThis is a strategy wargame playable demo from Russia, controls only with keyboard: QAOP to move cursor or tanks, SPACE=Select, ENTER=Deselect, F=Fire, E=End Move, N=Next unit, H=Help, M=Map, 1=Change palette.\n\nПлатформа: ZX Spectrum 128. Загружать в режиме USR 0. Также работает на 48K.\n",
+  "text_type": 3
+}

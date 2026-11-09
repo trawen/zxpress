@@ -1,0 +1,39 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "078",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующих выпусках",
+  "meta_description_en": "Preview of future Outlet issues: an anagram solver, the OUTCLASS Basic series, drive utilities, +D streams, guitar music, demos, and adventure games.",
+  "meta_description_ru": "Анонс будущих номеров журнала Outlet: генератор анаграмм, продолжение серии OUTCLASS по Бейсику, дисковые утилиты, стримы на +D, гитарная музыка и игры.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "lookahead",
+      "tag_alias": "lookahead"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "disciple-+d",
+      "tag_alias": "disciple-d"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "There is a wonderful number of\nnew programs waiting to be\ncrammed in to future editions\nof OUTLET and you can expect\nbigger and better issues than\never before.\n\nNext month we hope to include\nan Anagram producer for all you\ncrossword strugglers. It will\nshow all the anagrams of up to\ntwelve letter combinations, but\nhelpfully ignores the impossible\ncombinations.\n\nThere is a continuation of the\nBasic OUTCLASS series from which\nwe all, whether novices or more\nexperienced programmers, can\npick up helpful tips. There are\nalso several utilities, for a\nvariety of applications such as\ndrive-usage, general program-\nming and one specific to using\nstreams on +D. Hopefully there\nwill be space to include a super\nselection of guitar music,\nanother mind-boggling demo, and\nan introduction to some of the\nadventure games recently\nreleased for the +D.\n\n                     Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "There is a wonderful number of new programs waiting to be crammed in to future editions of OUTLET and you can expect bigger and better issues than ever before.\n\nNext month we hope to include an Anagram producer for all you crossword strugglers. It will show all the anagrams of up to twelve letter combinations, but helpfully ignores the impossible combinations.\n\nThere is a continuation of the Basic OUTCLASS series from which we all, whether novices or more experienced programmers, can pick up helpful tips. There are also several utilities, for a variety of applications such as drive-usage, general programming and one specific to using streams on +D. Hopefully there will be space to include a super selection of guitar music, another mind-boggling demo, and an introduction to some of the adventure games recently released for the +D.\n\nChris.\n",
+  "body_ru": "Огромное количество новых программ уже ждет своей очереди, чтобы попасть в будущие выпуски OUTLET, так что вас ждут номера еще масштабнее и лучше, чем когда-либо.\n\nВ следующем месяце мы надеемся опубликовать генератор анаграмм для всех, кто бьется над кроссвордами. Он находит все анаграммы для комбинаций длиной до двенадцати букв, при этом предусмотрительно отсекая заведомо невозможные варианты.\n\nТакже выйдет продолжение обучающей серии по Бейсику — OUTCLASS, в которой полезные советы найдут как новички, так и опытные программисты. Кроме того, вас ждет подборка утилит самого разного назначения: для работы с дисководом, общего программирования, а также специальная программа для работы с потоками (streams) на +D. Надеемся, что останется место и для отличной подборки гитарной музыки, очередного сногсшибательного демо и обзора текстовых приключенческих игр, недавно вышедших для +D.\n\nChris.\n",
+  "text_type": 3
+}

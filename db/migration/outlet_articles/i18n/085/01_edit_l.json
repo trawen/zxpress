@@ -1,0 +1,54 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "085",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Outlet #85 editorial: 7th anniversary celebration, back issue discounts, memory issues in Mr.Grumpy, bugfix for DISCTIDY, and radio rallies announcements.",
+  "meta_description_ru": "Редакторская колонка Outlet #85: семилетие журнала, скидки на архивные выпуски, предупреждения о багах в Mr.Grumpy и исправление программы DISCTIDY.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "anniversary",
+      "tag_alias": "anniversary"
+    },
+    {
+      "tag_name": "chezron-software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "bugfix",
+      "tag_alias": "bugfix"
+    },
+    {
+      "tag_name": "disctidy",
+      "tag_alias": "disctidy"
+    },
+    {
+      "tag_name": "mr-grumpy",
+      "tag_alias": "mr-grumpy"
+    },
+    {
+      "tag_name": "rallies",
+      "tag_alias": "rallies"
+    }
+  ],
+  "category_ids": [
+    123,
+    76,
+    118
+  ],
+  "body_en_plain": "S E P T E M B E R ,  1 9 9 4\n\nSeptember - another anniversary\nfor OUTLET! It's now seven years\nsince we began and we are rather\npleased we have published EVERY\nmonth since then and never more\nthan a few days late!\n\nTo celebrate and help you to get\nsome (or all!) of those seven\nyears of OUTLET software, we are\nnow discounting the prices of\nback issues which are 12 months\nold or more FOR DISCIPLE/+D AND\nTAPE USERS as follows...\n\n   Up to  5 disks : `2.00 each\n   Up to 11 disks : `1.70 each\n 12 or more disks : `1.50 each\n\nSorry, the above prices cannot\napply to +3 owners because of\nthe relatively high cost of 3\"\ndisks.In fact, we are waiting to\nsee what quality and price the\nnew Amsoft 3\" disks are before\ndeciding what discount can be\noffered to +3 readers.Hopefully,\nwe'll have news next month.\n\nNow, it's problem time.Mr.Grumpy\nin this issue uses PFN print. It\nopens a stream via machine code\nbut it cannot be closed after.\nOur NUCLEAR # routine doesn't\nwork in this case either.\n\nSo,the result is that if you run\nthe Mr.Grumpy program, on exit\nthere are several hundred bytes\nbelow BASIC still wasting space\nand this will crash other\nprograms such as CLIPSTICK which\nneed all the memory they can\nget. We have put Mr.Grumpy late\nin the order of programs to re-\nduce the possibility of problems\nbut if you do have trouble, just\nreset, reload and go straight to\nthe program you want and all\nshould be well.\n\nThe next problem concerns the\nprogram, DISCTIDY from Issue 83.\nIts author, L.G. Baumann has\npointed out an error in our edit\nof the program which crashed it!\nDetails are in his OUTLETTER but\nto save you making the change we\nare republishing DISCTIDY, with\nthe bug removed, in this month's\nADDENDERS. It will be on the +D\nversion only because it is a +D\nspecific program. We apologize\nto Mr. Baumann.\n\nMay we remind readers that all\ngeneral computer,printer,program\nqueries etc, are dealt with in\nOUTLETTERS. We cannot give a\nprivate reply by mail. This is a\nfrequent misunderstanding we'll\nhave to keep making clear.\n\nThere are four rallies this\nmonth - all on the 25th...\n\nHARLOW Amateur Radio Rally,Info:\n               Mike, 0850 487863\nTHE THREE COUNTIES Rally,Malvern\n         Worcs.Info:0905 773181.\nNORTH WAKEFIELD Radio Club Rally\n                Info:0924 362144\nPETERBOROUGH Radio & Electronics\nSociety East of England Rally,\n             Info:Ted,0733 66471\n\n                    Ron & Brian\n\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nS E P T E M B E R ,  1 9 9 4\n\nSeptember - another anniversary for OUTLET! It's now seven years since we began and we are rather pleased we have published EVERY month since then and never more than a few days late!\n\nTo celebrate and help you to get some (or all!) of those seven years of OUTLET software, we are now discounting the prices of back issues which are 12 months old or more FOR DISCIPLE/+D AND TAPE USERS as follows...\n\nUp to  5 disks : `2.00 each Up to 11 disks : `1.70 each 12 or more disks : `1.50 each\n\nSorry, the above prices cannot apply to +3 owners because of the relatively high cost of 3\" disks.In fact, we are waiting to see what quality and price the new Amsoft 3\" disks are before deciding what discount can be offered to +3 readers.Hopefully, we'll have news next month.\n\nNow, it's problem time.Mr.Grumpy in this issue uses PFN print. It opens a stream via machine code but it cannot be closed after. Our NUCLEAR # routine doesn't work in this case either.\n\nSo,the result is that if you run the Mr.Grumpy program, on exit there are several hundred bytes below BASIC still wasting space and this will crash other programs such as CLIPSTICK which need all the memory they can get. We have put Mr.Grumpy late in the order of programs to re- duce the possibility of problems but if you do have trouble, just reset, reload and go straight to the program you want and all should be well.\n\nThe next problem concerns the program, DISCTIDY from Issue 83. Its author, L.G. Baumann has pointed out an error in our edit of the program which crashed it! Details are in his OUTLETTER but to save you making the change we are republishing DISCTIDY, with the bug removed, in this month's ADDENDERS. It will be on the +D version only because it is a +D specific program. We apologize to Mr. Baumann.\n\nMay we remind readers that all general computer,printer,program queries etc, are dealt with in OUTLETTERS. We cannot give a private reply by mail. This is a frequent misunderstanding we'll have to keep making clear.\n\nThere are four rallies this month - all on the 25th...\n\nHARLOW Amateur Radio Rally,Info:\n\n```text\n               Mike, 0850 487863\n```\n\nTHE THREE COUNTIES Rally,Malvern Worcs.Info:0905 773181. NORTH WAKEFIELD Radio Club Rally\n\n```text\n                Info:0924 362144\n```\n\nPETERBOROUGH Radio & Electronics Society East of England Rally, Info:Ted,0733 66471\n\nRon & Brian\n\nOUTLET is produced by Chris Oliver Ron & Brian Cavers CHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF.\n",
+  "body_ru": "## Editorial (late)\n\n### С Е Н Т Я Б Р Ь , 1 9 9 4\n\nСентябрь — очередная годовщина для OUTLET! Прошло уже семь лет с тех пор, как мы начали, и нам очень приятно, что мы выходили КАЖДЫЙ месяц и ни разу не задержались более чем на пару дней!\n\nВ честь этого события, а также чтобы помочь вам приобрести софт за эти семь лет существования OUTLET (или вообще всю коллекцию!), мы снижаем цены на старые выпуски возрастом от 12 месяцев и более ДЛЯ ПОЛЬЗОВАТЕЛЕЙ DISCIPLE/+D И TAPE следующим образом...\n\n```text\n   До 5 дисков      : £2.00 за штуку\n   До 11 дисков     : £1.70 за штуку\n   12 дисков и более: £1.50 за штуку\n```\n\nК сожалению, вышеуказанные цены не распространяются на владельцев +3 из-за относительно высокой стоимости 3-дюймовых дисков. На самом деле мы ждем информации о качестве и цене новых 3\" дисков Amsoft, прежде чем решить, какую скидку можно предложить читателям с +3. Надеемся, новости появятся в следующем месяце.\n\nА теперь о проблемах. Программа Mr.Grumpy в этом выпуске использует печать PFN. Она открывает поток через машинный код, но после этого его невозможно закрыть. Наша подпрограмма NUCLEAR # в данном случае тоже не срабатывает.\n\nВ итоге, если вы запустите Mr.Grumpy, то после выхода из нее ниже BASIC останется занято несколько сотен байтов, тратящих память впустую, что приведет к сбою других программ (например, CLIPSTICK), которым требуется вся доступная память. Мы поместили Mr.Grumpy ближе к концу списка программ, чтобы уменьшить вероятность проблем, но если неприятности все же возникнут, просто сделайте сброс (reset), загрузитесь заново и переходите сразу к нужной программе — все должно быть в порядке.\n\nСледующая проблема касается программы DISCTIDY из выпуска 83. Ее автор, L.G. Baumann, указал на ошибку в нашей редакции программы, из-за которой она вылетала! Подробности есть в его письме в OUTLETTERS, но чтобы вам не пришлось вносить исправления вручную, мы переиздаем DISCTIDY с исправленной ошибкой в ADDENDERS этого месяца. Она выйдет только на версии для +D, так как программа создана специально под +D. Приносим свои извинения Mr. Baumann.\n\nНапоминаем читателям, что все общие вопросы по компьютерам, принтерам, программам и т.д. разбираются в OUTLETTERS. Мы не даем личных ответов по почте. Это частое недоразумение, о котором нам приходится напоминать снова и снова.\n\nВ этом месяце пройдут четыре радиоярмарки — все 25 числа...\n\nHARLOW Amateur Radio Rally, инфо: Mike, 0850 487863  \nTHE THREE COUNTIES Rally, Malvern Worcs., инфо: 0905 773181  \nNORTH WAKEFIELD Radio Club Rally, инфо: 0924 362144  \nPETERBOROUGH Radio & Electronics Society East of England Rally, инфо: Ted, 0733 66471  \n\nRon & Brian\n\n```text\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF.\n```\n",
+  "text_type": 3
+}

@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "126",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead (Outlet #126)",
+  "title_ru": "Анонсы (Outlet #126)",
+  "meta_description_en": "A preview of Outlet #127: M.C. Escher art gallery, RAM-checker utility, sound routines, printer article continuation, games and 48K music.",
+  "meta_description_ru": "Анонс следующего номера журнала Outlet: графика в стиле Эшера, тест памяти, библиотека звуков, статья о принтерах, игры и музыка.",
+  "authors": [
+    "Chris"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "m c escher",
+      "tag_alias": "m-c-escher"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    },
+    {
+      "tag_name": "printers",
+      "tag_alias": "printers"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Is it a bird or is it a fish??\n\nUsers of Softechnics program\nARTIST will be familiar with the\nillusory art of the Dutch artist\nM.C.Escher, as the title picture\nof ARTIST is of a hand which is\ndrawing a second hand which is\ndrawing the first hand which is\ndrawing the second hand which is\ndrawing .......... guess what?\nNext month's OUTLET brings you a\nselection of this fascinating\nartist's creations.\n\n\nAmong the utilities in the pipe-\nline are a speedy RAM-checker, a\nwonderful selection of machine-\ncode sounds to add to your own\nprograms, one to list the\ndefault values of the system\nvariables and another to simpli-\nfy the addition of a distinctive\ntitle to a screen, and also a\nWordsearch grid creator.\n\nOn the leisure side, there's a\nprogram to predict your past,\npresent or future, a fast \"shoot\n-em-up\" game,some good 48k music\nand another fascinating demo.\n\nThen for the technically minded,\ncomes the second part of the\nDRIVECHAT detailing the technic-\nal advances of modern printers.\n\n\nKeep those programs and letters\nrolling in!\n\n           Cheers,\n                        Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Is it a bird or is it a fish??\n\nUsers of Softechnics program ARTIST will be familiar with the illusory art of the Dutch artist M.C.Escher, as the title picture of ARTIST is of a hand which is drawing a second hand which is drawing the first hand which is drawing the second hand which is drawing .......... guess what? Next month's OUTLET brings you a selection of this fascinating artist's creations.\n\nAmong the utilities in the pipeline are a speedy RAM-checker, a wonderful selection of machine-code sounds to add to your own programs, one to list the default values of the system variables and another to simplify the addition of a distinctive title to a screen, and also a Wordsearch grid creator.\n\nOn the leisure side, there's a program to predict your past, present or future, a fast \"shoot-em-up\" game, some good 48k music and another fascinating demo.\n\nThen for the technically minded, comes the second part of the DRIVECHAT detailing the technical advances of modern printers.\n\nKeep those programs and letters rolling in!\n\nCheers,\nChris.\n",
+  "body_ru": "Птица это или рыба??\n\nПользователи программы ARTIST от Softechnics наверняка знакомы с иллюзорным искусством голландского художника М. К. Эшера (M.C.Escher). Ведь заглавная картинка ARTIST изображает руку, рисующую вторую руку, которая рисует первую руку, которая рисует вторую руку, которая рисует... догадайтесь что? В следующем номере OUTLET вас ждет подборка творений этого удивительного художника.\n\nСреди готовящихся утилит — быстрый тестер ОЗУ (RAM-checker), замечательная коллекция звуковых процедур в машинном коде для добавления в ваши собственные программы, утилита для вывода значений системных переменных по умолчанию, инструмент для удобного добавления эффектного заголовка на экран, а также генератор сеток для кроссвордов Wordsearch.\n\nВ развлекательном разделе вас ждут программа для предсказания вашего прошлого, настоящего или будущего, динамичный скролл-шутер («shoot-em-up»), отличная 48K-музыка и еще одна увлекательная демка.\n\nА для любителей техники выйдет вторая часть рубрики DRIVECHAT, подробно рассказывающая о технических новшествах современных принтеров.\n\nПродолжайте присылать нам свои программы и письма!\n\nВсего наилучшего,\nChris.\n",
+  "text_type": 3
+}

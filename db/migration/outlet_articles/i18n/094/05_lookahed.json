@@ -1,0 +1,43 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "094",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонсы следующего номера",
+  "meta_description_en": "Editorial preview for the upcoming issue of Outlet: upcoming utilities, Multiface tools, Pentagram's Megademo finale, and coding articles.",
+  "meta_description_ru": "Анонс материалов следующего номера Outlet: утилиты для Multiface, финал мегадемо от Pentagram, статьи по дизассемблированию и графика.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "multiface",
+      "tag_alias": "multiface"
+    },
+    {
+      "tag_name": "megademo",
+      "tag_alias": "megademo"
+    },
+    {
+      "tag_name": "pentagram",
+      "tag_alias": "pentagram"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "I read a fascinating article\nrecently, in which the author\npointed out how a mere 26 small\nsymbols can be arranged on a\nsheet of paper to portray so\nmany different aspects of impr-\nessions, information, emotions,\nhope, fear, laughter, beauty...\nthe list is endless! We must be\neven more fortunate, as computer\nusers,to have available the add-\ned dimensions of graphics, sound\nand movement.\n\n\nThanks to all you wonderful con-\ntributors,  OUTLET is able to\npresent a truly multi-media ex-\nperience every month.\n\n\nSo what's in the pipeline for\nthe next issue?  --  There is a\nmatrix-making program which runs\nin machine-code to produce\nshapely matrix grids at an acc-\neptable speed;some more anima-\ntion; an OUTCLASS on how to dis-\nassemble code; an OUTPUT about\nmusic with interesting demo\nmusic; an excellent utility to\nuse the Multiface RAM area (much\nimproved over the utility\"MFRAM\"\nwhich was in issue 93).\n\n                   more...\n\n\nThere are several other useful\nutilities:one for clearing discs\none to transform a Basic listing\ninto a Tasword file; and another\nfor +3 users.\n\nThere is a versatile screen\nviewer and dumper and a couple\nof amazing demos, one of which\nis the twelfth and last part of\nPentagram's super Megademo.\n\nOnce again, plenty of variety!\n\n                       Chris\n\n\n\n.\n",
+  "body_ru_plain": "",
+  "body_en": "I read a fascinating article recently, in which the author pointed out how a mere 26 small symbols can be arranged on a sheet of paper to portray so many different aspects of impressions, information, emotions, hope, fear, laughter, beauty... the list is endless! We must be even more fortunate, as computer users, to have available the added dimensions of graphics, sound and movement.\n\nThanks to all you wonderful contributors, OUTLET is able to present a truly multi-media experience every month.\n\nSo what's in the pipeline for the next issue? -- There is a matrix-making program which runs in machine-code to produce shapely matrix grids at an acceptable speed; some more animation; an OUTCLASS on how to disassemble code; an OUTPUT about music with interesting demo music; an excellent utility to use the Multiface RAM area (much improved over the utility \"MFRAM\" which was in issue 93).\n\nThere are several other useful utilities: one for clearing discs, one to transform a Basic listing into a Tasword file, and another for +3 users.\n\nThere is a versatile screen viewer and dumper and a couple of amazing demos, one of which is the twelfth and last part of Pentagram's super Megademo.\n\nOnce again, plenty of variety!\n\nChris\n",
+  "body_ru": "Недавно я прочитал потрясающую статью, автор которой подметил, как всего лишь 26 печатных знаков, расположенных на листе бумаги, способны передать такое невероятное разнообразие впечатлений, информации, эмоций, надежды, страха, смеха, красоты... этот список бесконечен! А нам, пользователям компьютеров, повезло еще больше — ведь в нашем распоряжении есть дополнительные измерения графики, звука и движения.\n\nБлагодаря всем нашим замечательным авторам OUTLET каждый месяц может предлагать читателям поистине мультимедийный опыт.\n\nТак что же готовится к следующему номеру? Вас ждет программа для создания матриц, написанная в машинном коде, которая строит аккуратные координатные сетки с отличной скоростью; новые анимации; статья OUTCLASS о том, как дизассемблировать машинный код; раздел OUTPUT о музыке с интересными музыкальными демо; а также великолепная утилита для работы с областью памяти Multiface RAM (значительно улучшенная по сравнению с утилитой «MFRAM» из 93-го номера).\n\nБудет и несколько других полезных утилит: программа для быстрой очистки дисков, конвертер листингов Бейсика в файлы Tasword и инструмент для владельцев ZX Spectrum +3.\n\nКроме того, вас ждут универсальный просмотрщик и дампер экранов, а также пара впечатляющих демо, одно из которых — двенадцатая, финальная часть грандиозного Megademo от Pentagram.\n\nИ снова — море разнообразия!\n\nChris\n",
+  "text_type": 3
+}

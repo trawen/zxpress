@@ -1,0 +1,39 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "024",
+  "article_id": "03_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "Preview of the upcoming Outlet #025: graphics routines, Disciple/Plus D utilities, Daton Software game, MOLGRUM review, and editorial topics.",
+  "meta_description_ru": "Анонс материалов следующего выпуска журнала Outlet #025: графика, утилиты, игра от Daton Software, обзор MOLGRUM и дискуссионные статьи.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "планы",
+      "tag_alias": "plans"
+    },
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "I've been extra busy these last\nfew months and I'm two or three\nweeks behind schedule so the\ncontents of next month's OUTLET\nhave not yet been finalised. So\nfar, I've planned an all-purpose\npaint-fill routine (postponed\nfrom this month);a neat graphics\nprogram that flips screens; a\ndigital clock;a great disk filer\nutility for the Disciple/Plus D;\na BASIC memuing system;a machine\ncode routine that bit-maps RAM\nand another fine strategy game\nfrom Daton Software.\n\nCHECKOUT looks at MOLGRUM, an\nexcellent program for creating\nmolecular graphics and other 3D\nwire-frame images; OUTPUT takes\na look at hacking games(\"program\nprotection\" returns later) and\nSHOUTBURST asks \"SHOULD there be\nmore girls in computing?\".\n\nWe've got a totally invisible\ncharacter set. Bet you've never\nseen one of those before! It's\nfor use in a situation where\nsomething's PRINTed but you want\nto make sure nothing is seen!\n\nNow,there's about 20K still free\nso I must be able to cram in at\nleast 3 or 4 more items (and you\nshould see some of the goodies\nin the pipeline...)\n                    - Brian.\n",
+  "body_ru_plain": "Последние несколько месяцев я\nбыл страшно занят и отстаю от\nграфика недели на две-три, так\nчто состав следующего номера\nOUTLET пока ещё не утверждён.\nПока что я запланировал\nуниверсальную процедуру заливки\n(отложенную с этого месяца);\nизящную графическую программу,\nпереворачивающую экраны;\nцифровые часы; отличный\nдисковый файлер для\nDisciple/Plus D; систему меню\nна BASIC; процедуру в машинных\nкодах, создающую битмап RAM,\nи ещё одну отличную стратегию\nот Daton Software.\n\nCHECKOUT рассматривает MOLGRUM,\nвеликолепную программу для\nсоздания молекулярной графики и\nдругих 3D-каркасных изображений;\nOUTPUT изучает взлом игр\n(рубрика «защита программ»\nвернётся позже), а SHOUTBURST\nзадаётся вопросом: «ДОЛЖНО ли\nбыть больше девушек\nв компьютерном деле?».\n\nУ нас есть совершенно невидимый\nнабор символов. Бьюсь об заклад,\nвы такого ещё не видели! Он для\nслучаев, когда что-то выводится\nкомандой PRINT, но вы хотите,\nчтобы ничего не было видно!\n\nСейчас свободно ещё около 20K,\nтак что я вполне смогу втиснуть\nкак минимум ещё 3-4 вещицы (а\nвидели бы вы, какие вкусности\nготовятся к выходу...)\n                    - Brian.\n",
+  "body_en": "## Lookahead\n\nI've been extra busy these last few months and I'm two or three weeks behind schedule so the contents of next month's OUTLET have not yet been finalised. So far, I've planned an all-purpose paint-fill routine (postponed from this month); a neat graphics program that flips screens; a digital clock; a great disk filer utility for the Disciple/Plus D; a BASIC memuing system; a machine code routine that bit-maps RAM and another fine strategy game from Daton Software.\n\nCHECKOUT looks at MOLGRUM, an excellent program for creating molecular graphics and other 3D wire-frame images; OUTPUT takes a look at hacking games (\"program protection\" returns later) and SHOUTBURST asks \"SHOULD there be more girls in computing?\".\n\nWe've got a totally invisible character set. Bet you've never seen one of those before! It's for use in a situation where something's PRINTed but you want to make sure nothing is seen!\n\nNow, there's about 20K still free so I must be able to cram in at least 3 or 4 more items (and you should see some of the goodies in the pipeline...)\n\n— Brian.\n",
+  "body_ru": "## Анонс следующего номера\n\nПоследние несколько месяцев я был страшно занят и отстаю от графика недели на две-три, так что состав следующего номера OUTLET пока ещё не утверждён. Пока что я запланировал универсальную процедуру заливки (отложенную с этого месяца); изящную графическую программу, переворачивающую экраны; цифровые часы; отличный дисковый файлер для Disciple/Plus D; систему меню на BASIC; процедуру в машинных кодах, создающую битмап RAM, и ещё одну отличную стратегию от Daton Software.\n\nCHECKOUT рассматривает MOLGRUM, великолепную программу для создания молекулярной графики и других 3D-каркасных изображений; OUTPUT изучает взлом игр (рубрика «защита программ» вернётся позже), а SHOUTBURST задаётся вопросом: «ДОЛЖНО ли быть больше девушек в компьютерном деле?».\n\nУ нас есть совершенно невидимый набор символов. Бьюсь об заклад, вы такого ещё не видели! Он для случаев, когда что-то выводится командой PRINT, но вы хотите, чтобы ничего не было видно!\n\nСейчас свободно ещё около 20K, так что я вполне смогу втиснуть как минимум ещё 3-4 вещицы (а видели бы вы, какие вкусности готовятся к выходу...)\n\n— Brian.\n",
+  "text_type": 3
+}

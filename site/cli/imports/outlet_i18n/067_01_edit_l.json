@@ -1,0 +1,49 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "067",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (Late): March 1993",
+  "title_ru": "Редакторская колонка (дополнение): Март 1993",
+  "meta_description_en": "Outlet #67 late editorial: SAM version merged into FRED, format updates (Plus D, +3, Opus, tape), DUBTEX tip, and W.H. Smith dropping 8-bit software.",
+  "meta_description_ru": "Outlet #67: SAM-версия переходит в журнал FRED, новости по форматам (+3, Plus D, Opus, кассета), совет по DUBTEX и уход W.H. Smith с рынка 8-битного софта.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet-magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "chezron-software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "fred-magazine",
+      "tag_alias": "fred-magazine"
+    },
+    {
+      "tag_name": "sam-coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "plus-d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "w-h-smith",
+      "tag_alias": "w-h-smith"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "M A R C H ,  1 9 9 3\n\nWe are pleased to report the SAM\nversion of OUTLET has now been\nincorporated into FRED magazine\nso subscribers will get complete\nsubscriptions and we shall not\nbe burdended by costly refunds!\n\nIt is worth pointing out that we\nwe would never just \"close down\"\nand abandon anyone like some of\nthe periodical publishers seem\nto do (no names!). So, if the\nOpus and tape versions come to\nan end then you need not fear it\nwill mean you would lose payment\nof your subscription or standing\norder.\n\nHaving said all that, the Plus D\nand Disciple version looks very\nstrong as we have lots of great\nSpectrum programs lined up! In\naddition, one of our staff now\nhas another part-time job so it\nwill greatly relieve Chezron's\nmonthly cashflow! The +3 version\ncould also continue for years\n(depending on spare time!).\n\nAll-in-all it looks brighter and\nit is only the Opus and tape\nversions which have now dwindled\nin sales so much that they could\nbe dropped this year possibly.\n\nHere's a tip for when using our\ndouble-height text, DUBTEX from\nOUTLET 31. It can now be made to\nprint in the input zone (the two\nlines at the bottom of the\nscreen by using POKE 60151,23\nafter using the GO SUB and then\nPRINT USR D; AT 22,0;\"text\" etc.\n\nWe hear that W.H. Smiths are now\nomitting Spectrum software (as\nwell as Commodore 64 and ST)from\ntheir shops after ten years of\nsales! Surely it cannot be long\nbefore YS and SU follow!\n\nBrian Gaff (BG SERVICES) will be\n(probably!) at the ALL-FORMATS\nFAIR at Sandown Park, Esher,\nSurrey (Junction 9/10 off the\nM25) on the 20th March but these\nfairs now generally have little\nSpectrum-specific material on\nsale. O.K. for cheap discs and\nthings like mouse mats though!\n\n                    Ron & Brian\n\n      OUTLET is produced by\n\n          Chris Oliver\n        Averil  Crowston\n       Ron & Brian Cavers\n\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_ru_plain": "",
+  "body_en": "M A R C H ,  1 9 9 3\n\nWe are pleased to report the SAM version of OUTLET has now been incorporated into FRED magazine so subscribers will get complete subscriptions and we shall not be burdened by costly refunds!\n\nIt is worth pointing out that we would never just \"close down\" and abandon anyone like some of the periodical publishers seem to do (no names!). So, if the Opus and tape versions come to an end then you need not fear it will mean you would lose payment of your subscription or standing order.\n\nHaving said all that, the Plus D and Disciple version looks very strong as we have lots of great Spectrum programs lined up! In addition, one of our staff now has another part-time job so it will greatly relieve Chezron's monthly cashflow! The +3 version could also continue for years (depending on spare time!).\n\nAll-in-all it looks brighter and it is only the Opus and tape versions which have now dwindled in sales so much that they could be dropped this year possibly.\n\nHere's a tip for when using our double-height text, DUBTEX from OUTLET 31. It can now be made to print in the input zone (the two lines at the bottom of the screen) by using `POKE 60151,23` after using the `GO SUB` and then `PRINT USR D; AT 22,0;\"text\"` etc.\n\nWe hear that W.H. Smiths are now omitting Spectrum software (as well as Commodore 64 and ST) from their shops after ten years of sales! Surely it cannot be long before YS and SU follow!\n\nBrian Gaff (BG SERVICES) will be (probably!) at the ALL-FORMATS FAIR at Sandown Park, Esher, Surrey (Junction 9/10 off the M25) on the 20th March but these fairs now generally have little Spectrum-specific material on sale. O.K. for cheap discs and things like mouse mats though!\n\nRon & Brian\n\nOUTLET is produced by:\n* Chris Oliver\n* Averil Crowston\n* Ron & Brian Cavers\n\nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "body_ru": "М А Р Т ,  1 9 9 3\n\nМы рады сообщить, что версия OUTLET для SAM теперь объединена с журналом FRED, так что подписчики получат свои подписки полностью, а нам не придётся нести убытки из-за дорогостоящих возвратов средств!\n\nСтоит подчеркнуть, что мы ни в коем случае не стали бы просто «закрываться» и бросать читателей на произвол судьбы, как это порой делают некоторые издатели периодики (не будем называть имен!). Поэтому, если версии для Opus и кассет всё же прекратят существование, вам не стоит бояться потери оплаченной подписки или постоянного поручения.\n\nПри всём при этом версия для Plus D и Disciple чувствует себя весьма уверенно — у нас на очереди множество отличных программ для Spectrum! Кроме того, один из наших сотрудников нашёл подработку, что существенно облегчит ежемесячный денежный поток Chezron! Версия для +3 также вполне может просуществовать ещё долгие годы (в зависимости от наличия свободного времени!).\n\nВ целом будущее выглядит обнадёживающим; только продажи версий для Opus и кассет упали настолько, что в этом году от них, возможно, придётся отказаться.\n\nВот небольшая подсказка по использованию нашей процедуры печати текста двойной высоты DUBTEX из OUTLET 31. Теперь её можно заставить печатать в зоне ввода (две нижние строки экрана): для этого используйте `POKE 60151,23` после вызова `GO SUB`, а затем `PRINT USR D; AT 22,0;\"text\"` и т. д.\n\nДо нас дошли слухи, что сеть W.H. Smith после десяти лет продаж убирает софт для Spectrum (а также для Commodore 64 и ST) со своих полок! Наверняка не за горами и закрытие журналов YS и SU!\n\nБрайан Гафф (BG SERVICES), вероятно, будет присутствовать на ярмарке ALL-FORMATS FAIR в Sandown Park, Esher, Surrey (съезд 9/10 с трассы M25) 20 марта, хотя на этих выставках сейчас, как правило, продаётся мало специфических товаров для Spectrum. Впрочем, туда стоит заглянуть ради дешёвых дискет и ковриков для мыши!\n\nRon & Brian\n\nНад выпуском OUTLET работали:\n* Chris Oliver\n* Averil Crowston\n* Ron & Brian Cavers\n\nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "text_type": 3
+}

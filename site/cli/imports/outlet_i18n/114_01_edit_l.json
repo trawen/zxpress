@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "114",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Editorial for Outlet #114 (February 1997): updates on the new version of PROCROSS, submission guidelines, and upcoming Head Over Heels coverage.",
+  "meta_description_ru": "Редакционная колонка Outlet #114 (февраль 1997): статус разработки новой версии PROCROSS, напоминания читателям и анонс материала по Head Over Heels.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "procross",
+      "tag_alias": "procross"
+    },
+    {
+      "tag_name": "head over heels",
+      "tag_alias": "head-over-heels"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "F E B R U A R Y ,   1 9 9 7\n\nLast month's issue was late due\nto catching up from the after\neffects of Christmas. We apolog-\nize for that. We always try to\nmail OUTLET within the first 10\ndays of the month.\n\n\nAs time permits we are gradually\nproducing an improved version of\nPROCROSS (though this has been\ngoing on for over a year now!).\nThe newer version will have an\nimproved print routine, smoother\nkey control in the editor, up to\n32 characters in the clues, much\nbetter auto-pattern generator\nand anything else we can think\nof! It is still a long way off\nbefore publication as it has to\nkeep getting shelved through the\nlack of time. So, if anyone has\nany ideas for improvements, send\nthem in. We can't promise to act\non every request but welcome any\nsuggestions.\n\nHopefully,the final version will\nautorun from OUTLET instead of\nhaving to load data.\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET. We\nare sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\n\nRemember,we still need YOUR sup-\nport, and contributions of art-\nicles and programs - especially\nutility programs - are always\nwelcome. Even a short routine\ncan be like gold dust to another\nuser! Send 'em in!\n\n\nLast month we requested the info\non HEAD OVER HEELS which we now\nhave so look forward to that in\na few months! Meanwhile there's\nlots of super items in this iss-\nue - so enjoy!\n\n                    Ron & Brian\n\n\n\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nF E B R U A R Y ,   1 9 9 7\n\nLast month's issue was late due to catching up from the after effects of Christmas. We apolog- ize for that. We always try to mail OUTLET within the first 10 days of the month.\n\nAs time permits we are gradually producing an improved version of PROCROSS (though this has been going on for over a year now!). The newer version will have an improved print routine, smoother key control in the editor, up to 32 characters in the clues, much better auto-pattern generator and anything else we can think of! It is still a long way off before publication as it has to keep getting shelved through the lack of time. So, if anyone has any ideas for improvements, send them in. We can't promise to act on every request but welcome any suggestions.\n\nHopefully,the final version will autorun from OUTLET instead of having to load data.\n\nMay we remind readers, we cannot answer computer, software, hard- ware or system queries etc., personally by mail.  All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder!Share your problems with others! That way, everyone benefits!\n\nRemember,we still need YOUR sup- port, and contributions of art- icles and programs - especially utility programs - are always welcome. Even a short routine can be like gold dust to another user! Send 'em in!\n\nLast month we requested the info on HEAD OVER HEELS which we now have so look forward to that in a few months! Meanwhile there's lots of super items in this iss- ue - so enjoy!\n\nRon & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers 34 Saltersgate Drive Birstall, Leicester LE4 3FF .\n",
+  "body_ru": "## От редакции (с опозданием)\n\n### Февраль 1997\n\nПрошлый номер задержался, так как нам пришлось разгребать последствия рождественских праздников. Приносим за это свои извинения. Мы всегда стараемся рассылать OUTLET в течение первых 10 дней месяца.\n\nПо мере возможностей мы постепенно делаем улучшенную версию PROCROSS (хотя эта эпопея длится уже больше года!). В новой версии будет переработана процедура печати, управление клавишами в редакторе станет более плавным, подсказки смогут содержать до 32 символов, появится куда более качественный автогенератор сеток и вообще всё, что мы только сможем придумать! До релиза ещё далеко, поскольку проект то и дело приходится откладывать в долгий ящик из-за нехватки времени. Так что, если у кого-то есть идеи по улучшению — присылайте. Мы не обещаем реализовать абсолютно всё, но будем рады любым предложениям.\n\nНадеемся, финальная версия будет запускаться прямо из OUTLET без необходимости подгружать данные отдельно.\n\nНапоминаем читателям: мы не можем отвечать на вопросы по компьютерам, программам, железу или системе лично по почте. Все подобные вопросы разбираются в рубрике OUTLETTERS на страницах OUTLET. Извините, что постоянно твердим об этом, но об этом действительно необходимо напоминать! Делитесь своими проблемами с другими! Так польза будет для всех!\n\nПомните, нам по-прежнему нужна ВАША поддержка, и ваши материалы — статьи и программы (особенно утилиты) — всегда приветствуются. Даже короткая подпрограмма может оказаться на вес золота для другого пользователя! Присылайте!\n\nВ прошлом месяце мы просили информацию по HEAD OVER HEELS, и теперь она у нас есть — ждите материал через пару месяцев! А пока что в этом номере полно отличных вещей — так что приятного чтения!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n```\n",
+  "text_type": 3
+}

@@ -1,0 +1,46 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "013",
+  "article_id": "06_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "Preview of Outlet issue #14: dot matrix printers, Tasword fonts, machine code tutorial, tape-to-disk transfer, and new software.",
+  "meta_description_ru": "Анонс материалов следующего, 14-го номера журнала Outlet: матричные принтеры, шрифты для Tasword, машинный код, перенос с кассет и игры.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "announcement"
+    },
+    {
+      "tag_name": "tasword 2",
+      "tag_alias": "tasword-2"
+    },
+    {
+      "tag_name": "microdrive",
+      "tag_alias": "microdrive"
+    },
+    {
+      "tag_name": "maze machine",
+      "tag_alias": "maze-machine"
+    },
+    {
+      "tag_name": "memoclock",
+      "tag_alias": "memoclock"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Next month we look at dot matrix\nprinters under a new miscellan-\neous text heading called OUTPUT;\nthere's an amazing dynamic shape\nfill routine that can switch in\na flash through any number of\npatterns for rapid comparison or\nfor animation effects; there's a\ncouple of new mini fonts for use\nwith Tasword 2 and a program to\nhelp you solve wordgrid puzzles\nand this also includes a puzzle.\nOUTCLASS has Machine Code Part 3\n(with a new teacher so behave!)\n\nOn cartridge B and disk versions\nwe also have a DRIVECHAT which\nbegins a look at the principles\nof transferring cassette s/ware\nto disk or microdrive and also a\nlittle piece on positioning the\ndecimal point correctly in on-\nscreen columns of figures. These\ntwo items are coupled with, and\nfollowed by, two short programs:\na tape header reader and a short\nroutine for positioning decimal\npoints.There's another character\nset collection with built-in\nselective SAVEs and block-mixing\nand then MEMOCLOCK which is a\nprogrammable alarm clock with\nmessages to remind you,say, when\nCoronation Street is starting(so\nyou can switch off). Finally,\nthere's MAZE MACHINE which is a\nmaze game.Don't say yes,say YOP!.\n",
+  "body_ru_plain": "В следующем месяце мы рассмотрим\nматричные принтеры в новой раз-\nносторонней рубрике OUTPUT; вас\nждёт отличная процедура динами-\nческой заливки контуров, быстро\nпереключающая любое число узоров\nдля их сравнения или эффектов\nанимации; пара новых мини-шриф-\nтов для работы с Tasword 2 и\nпрограмма для решения кроссвор-\nдов (включая саму головоломку).\nВ OUTCLASS — Машинный код, ч. 3\n(с новым учителем — не шалить!)\n\nНа картридже B и дисковых верси-\nях также есть DRIVECHAT, где раз-\nбираются основы переноса софта с\nкассет на диск или микродрайв,\nа также заметка о правильном вы-\nравнивании десятичной точки в ко-\nлонках чисел на экране. К этим\nдвум статьям прилагаются две ко-\nроткие программы: читалка заго-\nловков с ленты и процедура для\nвыравнивания десятичной точки.\nЕщё есть сборник шрифтов со\nвстроенным выборочным SAVE и\nсмешиванием блоков, а также\nMEMOCLOCK — будильник с напоми-\nнаниями, скажем, о начале сериа-\nла Coronation Street (чтобы вы\nуспели выключить). Напоследок —\nMAZE MACHINE, игра-лабиринт.\nНе говорите «да», скажите YOP!.\n",
+  "body_en": "## Lookahead\n\nNext month we look at dot matrix printers under a new miscellaneous text heading called OUTPUT; there's an amazing dynamic shape fill routine that can switch in a flash through any number of patterns for rapid comparison or for animation effects; there's a couple of new mini fonts for use with Tasword 2 and a program to help you solve wordgrid puzzles and this also includes a puzzle. OUTCLASS has Machine Code Part 3 (with a new teacher so behave!)\n\nOn cartridge B and disk versions we also have a DRIVECHAT which begins a look at the principles of transferring cassette s/ware to disk or microdrive and also a little piece on positioning the decimal point correctly in on-screen columns of figures. These two items are coupled with, and followed by, two short programs: a tape header reader and a short routine for positioning decimal points. There's another character set collection with built-in selective SAVEs and block-mixing and then MEMOCLOCK which is a programmable alarm clock with messages to remind you, say, when Coronation Street is starting (so you can switch off). Finally, there's MAZE MACHINE which is a maze game. Don't say yes, say YOP!.\n",
+  "body_ru": "## В следующем номере\n\nВ следующем месяце мы рассмотрим матричные принтеры в новой разносторонней рубрике OUTPUT; вас ждёт отличная процедура динамической заливки контуров, быстро переключающая любое число узоров для их сравнения или эффектов анимации; пара новых мини-шрифтов для работы с Tasword 2 и программа для решения кроссвордов (включая саму головоломку). В OUTCLASS — Машинный код, ч. 3 (с новым учителем — не шалить!)\n\nНа картридже B и дисковых версиях также есть DRIVECHAT, где разбираются основы переноса софта с кассет на диск или микродрайв, а также заметка о правильном выравнивании десятичной точки в колонках чисел на экране. К этим двум статьям прилагаются две короткие программы: читалка заголовков с ленты и процедура для выравнивания десятичной точки. Ещё есть сборник шрифтов со встроенным выборочным SAVE и смешиванием блоков, а также MEMOCLOCK — будильник с напоминаниями, скажем, о начале сериала Coronation Street (чтобы вы успели выключить). Напоследок — MAZE MACHINE, игра-лабиринт.\n\nНе говорите «да», скажите YOP!.\n",
+  "text_type": 3
+}

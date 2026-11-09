@@ -1,0 +1,48 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "24",
+  "article_id": "11_TIZZU.DOC",
+  "source_lang": "de-AT",
+  "title_en": "TIZZU: Soundtracker Decompiler",
+  "title_ru": "TIZZU: декомпилятор Soundtracker",
+  "meta_description_en": "A brief note from Scene+ #24 introducing TIZZU, a utility designed to decompile compiled Soundtracker modules on the ZX Spectrum.",
+  "meta_description_ru": "Краткая заметка из журнала Scene+ #24 об утилите TIZZU, предназначенной для декомпиляции скомпилированных модулей Soundtracker на ZX Spectrum.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "soundtracker",
+      "tag_alias": "soundtracker"
+    },
+    {
+      "tag_name": "tizzu",
+      "tag_alias": "tizzu"
+    },
+    {
+      "tag_name": "utility",
+      "tag_alias": "utility"
+    },
+    {
+      "tag_name": "ay-3-8910",
+      "tag_alias": "ay-3-8910"
+    }
+  ],
+  "category_ids": [
+    64,
+    68
+  ],
+  "body_de_plain": "TIZZ ü - TIZZU - Wer schon immer mal Soundtracker Songs\ndekompilieren wollte umsie etwas zu verändern oder frende Track\nin eigene Programmeeinzubauen, für den ist dieser Soundtracker\nDecompiler TIZZUgenau das richtige. Weitere Infos sind im\nProgramm selbst.z - If you want to decompile Soundtracker songs\nto change somethingor to take them into your own programms,\ncheck this Soundtracker Decompiler. For further infos read the s\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### TIZZU\n\nIf you have always wanted to decompile Soundtracker songs to tweak them a bit or integrate foreign tracks into your own programs, this Soundtracker decompiler **TIZZU** is just the right tool for you. Further information can be found in the program itself.\n\n*(English summary from the original text:)*  \nIf you want to decompile Soundtracker songs to change something or to take them into your own programs, check this Soundtracker Decompiler. For further infos read the [program's instructions]...\n",
+  "body_ru": "### TIZZU\n\nЕсли вы давно хотели декомпилировать треки из Soundtracker, чтобы немного их подправить или встроить чужую музыку в собственные программы, то этот декомпилятор Soundtracker — **TIZZU** — подойдёт вам как нельзя лучше. Дополнительную информацию можно найти в самой программе.\n\n*(Оригинальная англоязычная приписка:)*  \nIf you want to decompile Soundtracker songs to change something or to take them into your own programs, check this Soundtracker Decompiler. For further infos read the [program's instructions]...\n",
+  "text_type": 3
+}

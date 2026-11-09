@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "36",
+  "article_id": "02_BURAT.TX",
+  "source_lang": "de-AT",
+  "title_en": "Buratino",
+  "title_ru": "Buratino",
+  "meta_description_en": "Brief description of the Russian ZX Spectrum adventure game Buratino from Scene+ #36.",
+  "meta_description_ru": "Краткая аннотация к российской приключенческой игре «Буратино» для ZX Spectrum из журнала Scene+ #36.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "buratino",
+      "tag_alias": "buratino"
+    },
+    {
+      "tag_name": "adventure",
+      "tag_alias": "adventure"
+    },
+    {
+      "tag_name": "game-review",
+      "tag_alias": "game-review"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "BURATINO ü - BURATINO - Russisches Abenteuerspiel,\nKasperltheather, auf Russisch. Wählbare Steuerung, auch Sinclair\nJoystick.4 - Russian action adventure. Controls selectable from\nSinclairstick, keyboard and other. Z -! ü Ä! ö ö! ü Y ß? = (\n0 #\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**BURATINO**\n\nA Russian adventure game, puppet theater, in Russian. Selectable controls, including Sinclair joystick.\n\nRussian action adventure. Controls selectable from Sinclair stick, keyboard, and others.\n",
+  "body_ru": "**BURATINO**\n\nРоссийская приключенческая игра, кукольный театр («Кашперле»), на русском языке. Выбор типа управления, включая Sinclair-джойстик.\n\nРусский экшен-квест (action adventure). Управление на выбор: джойстик Sinclair, клавиатура и другие.\n",
+  "text_type": 3
+}

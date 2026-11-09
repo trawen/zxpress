@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "124",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Christmas editorial from Outlet #124 (1997): announcement of Trapdoor going public domain, call for reader contributions, and holiday greetings.",
+  "meta_description_ru": "Рождественская редакторская колонка журнала Outlet #124 (1997): релиз Trapdoor в public domain, призыв присылать материалы и праздничные поздравления.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "christmas",
+      "tag_alias": "christmas"
+    },
+    {
+      "tag_name": "trapdoor",
+      "tag_alias": "trapdoor"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "C H R I S T M A S,  1 9 9 7\n\nIn this Christmas issue there is\na surprisingly good 'simulation'\nof the classic virtual reality\nDOOM but the icing on the (Xmas)\ncake is the full game TRAPDOOR,\nnow public domain!\n\n\nWith the ever dwindling Spectrum\nmarket every new reader is a big\nhelp. What is especially import-\nant are CONTRIBUTIONS. Remember,\nwe need YOUR support, articles\nand programs, especially utility\nprograms,are always welcome.Even\na short routine can be like gold\nto another user! Send 'em in!\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET.\nWe are sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\n\nAs we come to the end of another\nOUTLET year, we wish all of our\nreaders a VERY MERRY CHRISTMAS\nand a HAPPY, HEALTHY, PROSPEROUS\nNEW YEAR! ENJOY!\n\n                     Ron & Brian\n\n\n\n\n\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n Email: ron.cavers@virgin.net\n\n Make out cheques to Ron Cavers.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nC H R I S T M A S,  1 9 9 7\n\nIn this Christmas issue there is a surprisingly good 'simulation' of the classic virtual reality DOOM but the icing on the (Xmas) cake is the full game TRAPDOOR, now public domain!\n\nWith the ever dwindling Spectrum market every new reader is a big help. What is especially import- ant are CONTRIBUTIONS. Remember, we need YOUR support, articles and programs, especially utility programs,are always welcome.Even a short routine can be like gold to another user! Send 'em in!\n\nMay we remind readers, we cannot answer computer, software, hard- ware or system queries etc., personally by mail.  All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder!Share your problems with others! That way, everyone benefits!\n\nAs we come to the end of another OUTLET year, we wish all of our readers a VERY MERRY CHRISTMAS and a HAPPY, HEALTHY, PROSPEROUS NEW YEAR! ENJOY!\n\nRon & Brian\n\nOUTLET is produced by Chris Oliver Ron & Brian Cavers 34 Saltersgate Drive Birstall, Leicester LE4 3FF\n\nEmail: ron.cavers@virgin.net\n\nMake out cheques to Ron Cavers.\n",
+  "body_ru": "## Editorial (late)\n\n### C H R I S T M A S, 1 9 9 7\n\nВ этом рождественском выпуске вас ждёт удивительно хорошая «симуляция» классики виртуальной реальности DOOM, но вишенкой на (рождественском) торте стала полная игра TRAPDOOR, теперь перешедшая в статус public domain!\n\nНа фоне постоянно сжимающегося рынка Spectrum каждый новый читатель — это огромная помощь. Но что особенно важно, так это МАТЕРИАЛЫ. Помните: нам нужна ВАША поддержка. Статьи и программы, особенно утилиты, приветствуются всегда. Даже короткая подпрограмма может оказаться на вес золота для другого пользователя! Присылайте их нам!\n\nНапоминаем читателям: мы не можем отвечать на вопросы по компьютерам, программному или аппаратному обеспечению, системам и т. д. лично по почте. Все подобные вопросы разбираются через рубрику OUTLETTERS в OUTLET. Простите, что мы постоянно твердим об этом, но об этом действительно нужно напоминать регулярно! Делитесь своими проблемами с другими! Так пользу получат все!\n\nЗавершая очередной год вместе с OUTLET, мы желаем всем нашим читателям ОЧЕНЬ ВЕСЁЛОГО РОЖДЕСТВА и СЧАСТЛИВОГО, ЗДОРОВОГО, БЛАГОПОЛУЧНОГО НОВОГО ГОДА! ПРИЯТНОГО ЧТЕНИЯ!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n Email: ron.cavers@virgin.net\n\n Make out cheques to Ron Cavers.\n```\n",
+  "text_type": 3
+}

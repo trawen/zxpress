@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "137",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A preview of the upcoming issue of Outlet magazine: a decision-making helper, leisure programs, utilities, a code compressor, and more.",
+  "meta_description_ru": "Анонс следующего выпуска журнала Outlet: программа для принятия решений, клипарты, игры, утилиты сжатия кода и изменения скорости загрузки.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "lookahead",
+      "tag_alias": "lookahead"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "announcement",
+      "tag_alias": "announcement"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_en_plain": "Shall I, shan't I ? Maybe... but\non the other hand... We are all\nfamiliar with the quandary when\nit is difficult to arrive at a\ndecision. It helps, of course,\nto talk it over with someone to\nclear your mind. Here is where\nthe ever-helpful Spectrum can\ntake the place of a human: Share\nyour problem with the Speccy in\nnext month's issue of OUTLET and\nit will analyse and compare the\nvarious factors and produce a\nfinal percentage of 'for' and\n'against'.\n\nThere are several \"leisure\"\nitems to enjoy next month, such\nas some clipart, a game, another\nsound sample, and a demo, but\nuseful utilities are still\ncoming in. Look out for a code\ncompressor, a program to alter\nload/save baud rates, and one to\nproduce large text on screen.\n\n            Cheers,\n\n                Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Shall I, shan't I? Maybe... but on the other hand... We are all familiar with the quandary when it is difficult to arrive at a decision. It helps, of course, to talk it over with someone to clear your mind. Here is where the ever-helpful Spectrum can take the place of a human: Share your problem with the Speccy in next month's issue of OUTLET and it will analyse and compare the various factors and produce a final percentage of 'for' and 'against'.\n\nThere are several \"leisure\" items to enjoy next month, such as some clipart, a game, another sound sample, and a demo, but useful utilities are still coming in. Look out for a code compressor, a program to alter load/save baud rates, and one to produce large text on screen.\n\nCheers,\n\nChris.\n",
+  "body_ru": "Сделать или нет? Пожалуй... но с другой стороны... Каждому из нас знакомы муки нерешительности, когда крайне сложно сделать выбор. Конечно, помогает обсудить всё с кем-нибудь, чтобы навести порядок в мыслях. И вот здесь наш неизменно полезный Спектрум вполне может заменить живого собеседника: поделитесь своей дилеммой со Спекки в следующем номере OUTLET — программа проанализирует и сопоставит различные факторы, выдав итоговое процентное соотношение «за» и «против».\n\nВ следующем месяце вас также ждет подборка развлекательных материалов: немного клипартов, игра, еще один звуковой сэмпл и демо. Но и полезные утилиты продолжают поступать! Обратите внимание на компрессор кода, программу для изменения скорости (baud rate) загрузки и сохранения, а также утилиту для вывода на экран крупного текста.\n\nВсего наилучшего,\n\nChris.\n",
+  "text_type": 3
+}

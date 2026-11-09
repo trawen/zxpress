@@ -1,0 +1,37 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "145",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (Late)",
+  "title_ru": "Редакторская колонка (дополнение)",
+  "meta_description_en": "An editorial note from Ron and Brian Cavers in Outlet #145, thanking readers for letters and introducing the issue's highlights.",
+  "meta_description_ru": "Редакторская колонка Рона и Брайана Кейверсов в журнале Outlet #145: благодарность читателям за письма и анонс программ выпуска.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "chezron",
+      "tag_alias": "chezron"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Thanks for your response to our\npoor OUTLETTERS section last\nmonth which is a bit more subst-\nantial this month. Ah well, the\nholiday season must be drawing\nto its end. Some of us don't get\nholidays but continue slaving\nover a hot Spectrum to bring you\na new OUTLET!\n\nLot's of interest this month in-\ncluding a giant character gener-\nator and a complete wordprocess-\nor. Enjoy!\n\n                     Ron & Brian\n\n\n\n\n\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n   Email: outletmag@yahoo.com.\n",
+  "body_ru_plain": "",
+  "body_en": "Thanks for your response to our poor OUTLETTERS section last month which is a bit more substantial this month. Ah well, the holiday season must be drawing to its end. Some of us don't get holidays but continue slaving over a hot Spectrum to bring you a new OUTLET!\n\nLot's of interest this month including a giant character generator and a complete wordprocessor. Enjoy!\n\nRon & Brian\n\n---\n\nOUTLET is produced by\n\nChris Oliver  \nRon & Brian Cavers  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF  \n\nEmail: outletmag@yahoo.com.\n",
+  "body_ru": "Спасибо за ваши отклики на наш скромный раздел OUTLETTERS в прошлом месяце — в этом выпуске он стал заметно солиднее. Что ж, сезон отпусков, похоже, подходит к концу. Кому-то из нас отпуска и вовсе не досталось: мы продолжаем трудиться у раскалённого Спектрума, чтобы выпустить для вас новый OUTLET!\n\nВ этом месяце вас ждёт много интересного, включая генератор гигантских символов и полноценный текстовый процессор. Приятного чтения!\n\nRon & Brian\n\n---\n\nOUTLET выпускают:\n\nChris Oliver  \nRon & Brian Cavers  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF  \n\nEmail: outletmag@yahoo.com.\n",
+  "text_type": 3
+}

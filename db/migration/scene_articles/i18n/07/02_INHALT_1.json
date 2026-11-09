@@ -1,0 +1,48 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "07",
+  "article_id": "02_INHALT_1",
+  "source_lang": "de-AT",
+  "title_en": "Contents of Issue 7/96 (Summer Edition)",
+  "title_ru": "Содержание выпуска 7/96 (Летний выпуск)",
+  "meta_description_en": "Editorial overview of Scene+ #07 (Summer 1996): Sintech news, translation articles, Star Trek Voyager slides, Brutal Worms and Mines games, Sorry and Satisfaction demos.",
+  "meta_description_ru": "Обзор содержания Scene+ #07 (лето 1996): новости Sintech, статьи о переводах, слайдшоу по Star Trek Voyager, игры Brutal Worms и Mines, демоверсии Sorry и Satisfaction.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    },
+    {
+      "tag_name": "sintech",
+      "tag_alias": "sintech"
+    },
+    {
+      "tag_name": "brutal-worms",
+      "tag_alias": "brutal-worms"
+    },
+    {
+      "tag_name": "satisfaction-demo",
+      "tag_alias": "satisfaction-demo"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_de_plain": "INHALT DER AUSGABE 7/96 Sommerausgabe. A: Redaktioneles/Neuigke\niten Wieder einige wissenswerte Sachen rund um die Szene  und\n Scene.Vor allem möchte ich allen die News ans Herz legen, daß\nSintech bald neue Programme bekommt. Lassen wir die Punkte B u\nnd C außer Acht und kommen wir zu:; D: Artikel: Es hat sich w\nohl herumgesprochen daß ich neue Software Teste, daspringt  Cat'\ns  Eye  auch  auf  und  testet  auch  einigey neueProgramme. Es\n gibt auch einen  Artikel  über  die  Probleme  mitübersetzungen\n.R E: Gallerys: Diesesmal saß ich mehrere Tage daran, um  die\n  Bilder  aus  StarTrek  Voyager  und  einigen  anderend Sendun\ngen aufzunehmen,digitaliesieren, bearbeiten, konvertieren, kom\npressieren und alsSlideshow zusammenzufassen. Insgesammt sind es\n  dies esmal  ganzezehn Gallerien! F: Spiele: Diesesmal sin\nes nur zwei Spiele, aber dank Illusion gelang  mirein wirklich t\noller Fang: Brutal Worms von NOP für bis  zu  vier Spieler,  es\n ist  das  altbekannte  Wurm) Frißt und wirdgrößer-Spielpri\nnzip, aber der Coding ist einfach Spitze. In  nurdrei Tagen hat\nNOP es geschafft, dieses Spiel zu schreiben. Das zweite Spiel\nist Mines, von Scalman und einigen anderen.  Eshandelt sich um d\nas in vorangegangener Ausgabe getestete Spiel. G: Demos: Dan\nk Illusion bin ich an Sorry (von  Ex-Exodus,  lest  dazu  denDem\notext) und Satisfaction gekommen, das von den gleichen Leuten wi\ne Doom Demo gecoded wurde. Satiffaction bitte nur  dann  ladenwe\nnn der Compter (128er) in USR 0 Modus ist (im 128 Basic, USR 0 e\ningeben!), ansonsten stürzen einige Parts  ab.  Im  48er  Modusb\nekommt man den Star Wars Scroller nicht  zu  sehen  und  einige\nandere Effekte fehlen auch. Ein Spitzemäßiges Demo, das wie ic\nh Xterminator  kenne,  in  dernächsten SUC-SESSION getestet wird\n.c H: SCENEX: Kurzform von SCENe indEX. Hier werden alle Prog\nramme die in  denersten sechs Ausgaben erschienen sind, noch ein\nmal aufgelistet.  Was in die nächste Ausgabe kommt, weiß ich\nnoch  nicht  da  ichkein Hellseher bin.\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### CONTENTS OF ISSUE 7/96 (Summer Edition)\n\n**A: Editorial / News**\nOnce again, some noteworthy facts around the demoscene and *Scene+*. Above all, I would like to bring everyone's attention to the news that Sintech will soon be receiving new software.\n\nLet's skip points B and C and move on to:\n\n**D: Articles**\nWord seems to have gotten around that I review new software, so Cat's Eye jumped on the bandwagon and also tested several new programs. There is also an article discussing the issues and pitfalls of translations.\n\n**E: Galleries**\nThis time, I spent several days capturing pictures from *Star Trek: Voyager* and a few other broadcasts, digitizing, editing, converting, compressing, and packaging them into slideshows. In total, there are a whopping ten galleries this time!\n\n**F: Games**\nThis time there are only two games, but thanks to Illusion I managed to land a truly fantastic catch: *Brutal Worms* by NOP for up to four players. It features the well-known \"worm eats and grows\" gameplay mechanic, but the coding is simply top-notch. NOP managed to write this game in just three days! The second game is *Mines* by Scalman and others. This is the game that was reviewed in our previous issue.\n\n**G: Demos**\nThanks to Illusion, I got hold of *Sorry* (by Ex-Exodus; be sure to read the demo text) and *Satisfaction*, coded by the same crew behind *Doom Demo*. Please only load *Satisfaction* when the computer (Spectrum 128) is in USR 0 mode (type `USR 0` in 128 BASIC!), otherwise several parts will crash. In 48K mode, you won't see the Star Wars scroller, and several other effects are also missing. It's a top-tier demo that, knowing Xterminator, will likely be reviewed in the next *SUC-SESSION*.\n\n**H: SCENEX**\nShort for *SCENe indEX*. This section lists all the programs that were published across the first six issues once again.\n\nAs for what will be included in the next issue — I don't know yet, as I'm not a clairvoyant.\n",
+  "body_ru": "### СОДЕРЖАНИЕ ВЫПУСКА 7/96 (Летний выпуск)\n\n**A: Редакция / Новости**\nСнова кое-что интересное и полезное о сцене и журнале *Scene+*. Прежде всего хочу обратить внимание всех на новость о том, что Sintech скоро получит новые программы.\n\nОставим пункты B и C без внимания и перейдём сразу к:\n\n**D: Статьи**\nСлух о том, что я тестирую новый софт, похоже, разошёлся: Cat's Eye тоже подключился и сделал обзоры нескольких новых программ. Также есть статья о трудностях и проблемах перевода.\n\n**E: Галереи**\nВ этот раз я потратил несколько дней на то, чтобы захватить кадры из *Star Trek: Voyager* и некоторых других передач, оцифровать, отредактировать, сконвертировать, сжать и собрать их в слайдшоу. В общей сложности на этот раз целых десять галерей!\n\n**F: Игры**\nВ этом номере всего две игры, но благодаря Illusion мне досталась действительно отличная находка: *Brutal Worms* от NOP с поддержкой до четырёх игроков. Это всем известный принцип «червяк ест и растёт», но код сделан просто потрясающе. NOP умудрился написать эту игру всего за три дня! Вторая игра — *Mines* от Scalman и других. Это как раз та игра, обзор которой был в предыдущем номере.\n\n**G: Демо**\nБлагодаря Illusion мне удалось раздобыть *Sorry* (от Ex-Exodus, читайте сопроводительный текст к демо) и *Satisfaction*, написанное теми же авторами, что и *Doom Demo*. Пожалуйста, запускайте *Satisfaction* только тогда, когда компьютер (128K) находится в режиме USR 0 (в 128 BASIC введите `USR 0`!), иначе некоторые части зависнут. В режиме 48K вы не увидите скроллер в стиле Star Wars, и некоторые другие эффекты также будут отсутствовать. Первоклассное демо, которое, зная Xterminator'а, наверняка будет рассмотрено в следующем выпуске *SUC-SESSION*.\n\n**H: SCENEX**\nСокращение от *SCENe indEX*. Здесь снова перечислены все программы, которые выходили в первых шести номерах.\n\nЧто войдёт в следующий выпуск, я пока не знаю — ясновидением я не владею.\n",
+  "text_type": 3
+}

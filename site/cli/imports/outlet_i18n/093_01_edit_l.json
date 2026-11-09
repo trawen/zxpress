@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "093",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Editorial (late) from Outlet #093 (May 1995): UK computer fair and radio rally fixtures for May 1995, plus information on reader query policies.",
+  "meta_description_ru": "Дополнительное редакторское вступление Outlet #093 за май 1995 года: расписание компьютерных ярмарок и радиослетов в Великобритании, а также правила ответов на вопросы читателей.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "computer fairs",
+      "tag_alias": "computer-fairs"
+    },
+    {
+      "tag_name": "events",
+      "tag_alias": "events"
+    }
+  ],
+  "category_ids": [
+    123,
+    118
+  ],
+  "body_en_plain": "M A Y ,   1 9 9 5\n\nWe've had another hectic month,\ncontributions are not bad and\nwe had more letters in the last\nfew days - too late to get in\nthis month so sorry! - they'll\ngo in the next issue!\n\n\nHere are some computer fair fix-\ntures and radio rallies for the\ncoming weeks...\n\n\nMAY 6 Dartmoor Radio Rally. Yel-\n      verton Memorial Village\n      Hall,  Yelverton, Devon.\n      Info: Ron 01822 852586\n\nMAY 6 All Formats Fair.\n      Northumbria Centre,\n      Washington, Dist. 12\n\nMAY 7 All Formats Fair. Woodside\n      Hall, St. Georges Cross,\n      Glasgow\n\nMAY 7 UK Computer Fair. Hallam\n      Univ'sity City Campus,off\n     Arundel Gate.A621 Sheffield\n\n\nMAY 14 Dunstable Downs Radio\n       Club Car Boot Sale.\n       Stockwood Country Park\n       Luton.Info:01582 451057\n\nMAY 14 Mars/Drayton Manor Radio\n       & Computer Rally. Drayton\n       Manor Park, Tamworth,\n       Staffs on A4091. Info:\n       0121 422 9787 (evenings)\n\nMAY 14 UK Computer Fair. East of\n       England Showground,\n       Peterborough\n\nMAY 21 UK Computer Fair. Enderby\n       Leisure Centre, (M1, J21)\n       Leicester\n\nMAY 28 UK Computer Fair. North\n       Kestevan Sports Centre,\n       Lincoln\n\nMAY 28 Plymouth Radio Club Radio\n      Electronics Fair.Plymstock\n      Secondary School, Church\n      Road, Plymstock, Plymouth.\n      Electronic, computer/radio\n     components.Inf:01752 563222\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET.\n                     Ron & Brian\n\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nM A Y ,   1 9 9 5\n\nWe've had another hectic month, contributions are not bad and we had more letters in the last few days - too late to get in this month so sorry! - they'll go in the next issue!\n\nHere are some computer fair fix- tures and radio rallies for the coming weeks...\n\nMAY 6 Dartmoor Radio Rally. Yel- verton Memorial Village Hall,  Yelverton, Devon. Info: Ron 01822 852586\n\nMAY 6 All Formats Fair. Northumbria Centre, Washington, Dist. 12\n\nMAY 7 All Formats Fair. Woodside Hall, St. Georges Cross, Glasgow\n\nMAY 7 UK Computer Fair. Hallam Univ'sity City Campus,off Arundel Gate.A621 Sheffield\n\nMAY 14 Dunstable Downs Radio Club Car Boot Sale. Stockwood Country Park Luton.Info:01582 451057\n\nMAY 14 Mars/Drayton Manor Radio & Computer Rally. Drayton Manor Park, Tamworth, Staffs on A4091. Info: 0121 422 9787 (evenings)\n\nMAY 14 UK Computer Fair. East of England Showground, Peterborough\n\nMAY 21 UK Computer Fair. Enderby Leisure Centre, (M1, J21) Leicester\n\nMAY 28 UK Computer Fair. North Kestevan Sports Centre, Lincoln\n\nMAY 28 Plymouth Radio Club Radio Electronics Fair.Plymstock Secondary School, Church Road, Plymstock, Plymouth. Electronic, computer/radio components.Inf:01752 563222\n\nMay we remind readers, we cannot answer computer, software, hard- ware or system queries etc., personally by mail.  All of such queries are answered through the OUTLETTERS section in OUTLET. Ron & Brian\n\nOUTLET is produced by Chris Oliver Ron & Brian Cavers CHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF .\n",
+  "body_ru": "## Editorial (late)\n\nМАЙ, 1995\n\nУ нас выдался еще один беспокойный месяц, материалов прислали неплохо, а за последние несколько дней пришло еще больше писем — увы, слишком поздно, чтобы попасть в этот номер, так что извините! Они пойдут в следующий выпуск!\n\nВот расписание некоторых компьютерных ярмарок и радиолюбительских слетов на ближайшие недели...\n\n```text\nMAY 6  Dartmoor Radio Rally. Yelverton Memorial Village Hall, Yelverton, Devon. Info: Ron 01822 852586\nMAY 6  All Formats Fair. Northumbria Centre, Washington, Dist. 12\nMAY 7  All Formats Fair. Woodside Hall, St. Georges Cross, Glasgow\nMAY 7  UK Computer Fair. Hallam Univ'sity City Campus, off Arundel Gate. A621 Sheffield\nMAY 14 Dunstable Downs Radio Club Car Boot Sale. Stockwood Country Park, Luton. Info: 01582 451057\nMAY 14 Mars/Drayton Manor Radio & Computer Rally. Drayton Manor Park, Tamworth, Staffs on A4091. Info: 0121 422 9787 (evenings)\nMAY 14 UK Computer Fair. East of England Showground, Peterborough\nMAY 21 UK Computer Fair. Enderby Leisure Centre, (M1, J21), Leicester\nMAY 28 UK Computer Fair. North Kestevan Sports Centre, Lincoln\nMAY 28 Plymouth Radio Club Radio Electronics Fair. Plymstock Secondary School, Church Road, Plymstock, Plymouth. Electronic, computer/radio components. Inf: 01752 563222\n```\n\nНапоминаем читателям, что мы не можем отвечать на вопросы о компьютерах, софте, железе, системных проблемах и т.д. лично по почте. Все подобные вопросы получают ответы через рубрику OUTLETTERS в OUTLET.\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n```\n",
+  "text_type": 3
+}

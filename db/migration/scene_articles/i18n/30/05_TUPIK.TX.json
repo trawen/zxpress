@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "30",
+  "article_id": "05_TUPIK.TX",
+  "source_lang": "de-AT",
+  "title_en": "Tupik Preview",
+  "title_ru": "Превью игры Tupik",
+  "meta_description_en": "Short preview of the Lode Runner-inspired ZX Spectrum game Tupik from Scene+ #30.",
+  "meta_description_ru": "Краткое превью игры Tupik в стиле Lode Runner для ZX Spectrum из журнала Scene+ #30.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "tupik",
+      "tag_alias": "tupik"
+    },
+    {
+      "tag_name": "lode-runner",
+      "tag_alias": "lode-runner"
+    },
+    {
+      "tag_name": "game-preview",
+      "tag_alias": "game-preview"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "TUPI ü - TUPIK PREVIEW- Erinnern Sie sich noch an das Spiel Lode\nRunner? Tupik ist demnicht unähnlich auch wenn ungleich\nschwieriger. Sammle Gold ein, finde Schlüssel, gehe zum Ausgang.\nKlingt einfach? ist es abernicht da ein harter Gegner eingebaut\nwurde.k - Remember the old classic Lode Runner? Tupik looks like\nthisgame, but is much harder. Collect gold, find a key and go\ntolevel's exit. Easy? not really because there is also a\ncomputeropponent, and he will not g\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "# Tupik Preview\n\nDo you still remember the game *Lode Runner*? *Tupik* is quite similar to it, even though it is considerably harder. Collect gold, find keys, and head for the exit. Sounds easy? It really isn't, because a tough computer opponent has been included who will not make things easy for you.\n",
+  "body_ru": "# Превью Tupik\n\nВы ещё помните игру *Lode Runner*? *Tupik* очень на неё похожа, хотя и значительно сложнее. Собирайте золото, находите ключи и добирайтесь до выхода. Звучит просто? Вовсе нет, ведь разработчики добавили серьёзного компьютерного противника, который просто так вам спуску не даст.\n",
+  "text_type": 3
+}

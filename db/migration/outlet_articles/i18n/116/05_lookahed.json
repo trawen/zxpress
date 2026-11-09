@@ -1,0 +1,43 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "116",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of the upcoming issue of Outlet: featuring a Disc-Doctor toolkit, a BASIC relocator, a 128K USR 0 mode switcher, Soundtracker tunes, and a full 3D maze game.",
+  "meta_description_ru": "Анонс следующего номера журнала Outlet: дисковый доктор, перенос Бейсика, режим USR 0 на Spectrum 128, треки для Soundtracker и 3D-лабиринт.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "announcement",
+      "tag_alias": "announcement"
+    },
+    {
+      "tag_name": "spectrum 128",
+      "tag_alias": "spectrum-128"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Lots more to interest and amuse\nyou in next month's OUTLET. The\nutilities include a comprehens-\nive Disc-Doctor toolkit, another\nto alter the location of your\nBasic by a choice of two differ-\nent techniques, and also a util-\nity to switch you into the mys-\nterious third operating mode on\nthe 128k Spectrum - the USR 0\nMode.\n\n               more!...\n\nOn the more leisurely side there\nis some new Soundtracker music\nand after many other items, the\nissue is rounded off by a full-\nscale 3D maze game which could\nkeep you occupied for months!\n\n            Cheers,\n\n                 Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Lots more to interest and amuse you in next month's OUTLET. The utilities include a comprehensive Disc-Doctor toolkit, another to alter the location of your Basic by a choice of two different techniques, and also a utility to switch you into the mysterious third operating mode on the 128k Spectrum - the USR 0 Mode.\n\nOn the more leisurely side there is some new Soundtracker music and after many other items, the issue is rounded off by a full-scale 3D maze game which could keep you occupied for months!\n\nCheers,\n\nChris.\n",
+  "body_ru": "В следующем выпуске OUTLET вас ждет еще больше интересного и увлекательного! Среди системных утилит появится многофункциональный набор инструментов Disc-Doctor, программа для переноса Бейсика двумя различными методами, а также утилита для переключения в загадочный третий режим работы компьютера Spectrum 128 — режим USR 0.\n\nДля отдыха и развлечений мы приготовили новую музыку для Soundtracker, а в завершение номера — помимо множества других материалов — вас ожидает полноценная трехмерная игра-лабиринт, способная занять вас на долгие месяцы!\n\nВсего наилучшего,\n\nChris.\n",
+  "text_type": 3
+}

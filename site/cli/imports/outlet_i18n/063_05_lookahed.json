@@ -1,0 +1,36 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "063",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A preview of what's coming in the bumper Christmas issue of Outlet: new games, utilities, a typing tutor, and an impressive Polish music and graphics demo.",
+  "meta_description_ru": "Анонс праздничного рождественского выпуска Outlet: новые игры, утилиты, клавиатурный тренажёр и впечатляющее польское демо с музыкой и графикой.",
+  "authors": [
+    "Chris"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "announcement",
+      "tag_alias": "announcement"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Don't miss next month's bumper\nChristmas issue which is full of\ngood things for you. Games to\namuse... a fast \"Shoot-em-up\", a\nmore leisurely general knowledge\nquiz, and the excitement of the\nraces -no, not horses - not dogs\n-no,I'll leave you in suspense!\n\nUtilities to use... one to print\nto a serial printer and another\nto feed back screen position\ninformation.\n\nThere is the second programme in\nthe Educational Interlude series\nand a typing tutor to improve\nyour typing skills.\n\nSome gentle music to make a\nchange from all those carols,\nand not least of all, there is a\nreally impressive graphics and\nmusic demo from Poland.\n                          Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Don't miss next month's bumper Christmas issue which is full of good things for you. Games to amuse... a fast \"Shoot-em-up\", a more leisurely general knowledge quiz, and the excitement of the races — no, not horses — not dogs — no, I'll leave you in suspense!\n\nUtilities to use... one to print to a serial printer and another to feed back screen position information.\n\nThere is the second programme in the Educational Interlude series and a typing tutor to improve your typing skills.\n\nSome gentle music to make a change from all those carols, and not least of all, there is a really impressive graphics and music demo from Poland.\n\nChris.\n",
+  "body_ru": "Не пропустите в следующем месяце наш праздничный рождественский выпуск, доверху наполненный интересными вещами. Игры для развлечения... динамичный «shoot-em-up», более размеренная викторина на общую эрудицию, а также азарт гонок — нет, не на лошадях, и не на собаках... впрочем, сохраню интригу!\n\nПолезные утилиты... одна для вывода на последовательный принтер, а другая — для считывания координат экрана.\n\nВас ждёт вторая программа из серии Educational Interlude и клавиатурный тренажёр для совершенствования навыков печати.\n\nПриятная музыка для разнообразия среди всех этих рождественских гимнов и, что немаловажно, по-настоящему впечатляющее польское демо с отличной графикой и звуком.\n\nChris.\n",
+  "text_type": 3
+}

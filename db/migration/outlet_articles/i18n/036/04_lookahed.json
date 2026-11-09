@@ -1,0 +1,48 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "036",
+  "article_id": "04_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Планы на будущее",
+  "meta_description_en": "Outlet magazine editor Brian Gaff previews upcoming features for the next issue: 3D rotation graphics, tape and disc cataloguers, puzzles, and SAM Coupé software.",
+  "meta_description_ru": "Редактор журнала Outlet Брайан Гафф рассказывает о планах на следующий номер: 3D-графика, каталогизаторы для дисков и кассет, головоломки и софт для SAM Coupé.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "announcement"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus3"
+    },
+    {
+      "tag_name": "opus discovery",
+      "tag_alias": "opus-discovery"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "forth",
+      "tag_alias": "forth"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "I'm well behind schedule so next\nissue is not finalised yet but\nplanned so far are...  a program\nwhich rotates an input line into\na 3D shape (a personal favourite\nof mine); a numeric strategy\npuzzle game; an extended cat for\n+3 disc users and a program to\nput an Opus disc catalogue into\nalphabetical order. Ah, cassette\nusers ALSO get a CAT facility\nwhich gives a full on-screen or\nprinted list of the contents of\na tape (very useful to me too!).\n\nNow, we had a revolving Earth in\nIssue 21-ish I think but there's\nanother next month done in a\ntotally different way - smoother\nbut smaller. I see a SHOUTBURST\nabout computer repairs; clip art\n(nuts and bolts and stuff);FOCUS\nis for photographers and gives\nvarious camera settings etc. as\nneeded - very polished; mmm...\nanother strategy puzzle in the\nsame issue... perhaps I'll put\none back an issue. Well, there's\nroom for more in the main OUTLET\nand there are some items already\nin ADD-ENDERS;a version of FORTH\nno less and educational software\namong others. There'll be all\nthe regulars of course as well\nas some interesting SAM-specific\nsoftware in lieu of anything not\ncovertible! See you!    - Brian.\n",
+  "body_ru_plain": "Я сильно выбился из графика, так\nчто следующий номер ещё толком не\nготов, но пока запланировано...\nпрограмма, превращающая вращением\nлинию в 3D-фигуру (мой личный\nфаворит); числовая стратегическая\nголоволомка; расширенный cat для\nдисководов +3 и программа для\nсортировки каталога диска Opus\nпо алфавиту. А для кассетников\nТОЖЕ будет утилита CAT, дающая\nполный список файлов кассеты на\nэкране или на печати (мне она\nтоже очень пригодится!).\n\nТак, где-то в 21-м номере у нас\nбыла вращающаяся Земля, но в\nследующем месяце будет ещё одна,\nсделанная совсем иначе — плавнее,\nхоть и поменьше. Вижу SHOUTBURST\nо ремонте компьютеров; клипарт\n(всякие винтики-шпунтики); FOCUS\nдля фотографов — выдаёт разные\nнастройки камеры и прочее, очень\nладно скроена; ммм... ещё одна\nстратегическая головоломка в том\nже номере... пожалуй, отодвину\nодну на выпуск позже. Что ж, в\nосновном OUTLET место ещё есть,\nда и в ADD-ENDERS кое-что уже\nлежит: ни много ни мало версия\nFORTH и обучающие программы в том\nчисле. Само собой, будут и все\nпостоянные рубрики, а также нечто\nлюбопытное чисто для SAM вместо\nтого, что не удалось перенести!\nДо встречи!             - Brian.\n",
+  "body_en": "## Lookahead\n\nI'm well behind schedule so next issue is not finalised yet but planned so far are... a program which rotates an input line into a 3D shape (a personal favourite of mine); a numeric strategy puzzle game; an extended cat for +3 disc users and a program to put an Opus disc catalogue into alphabetical order. Ah, cassette users ALSO get a CAT facility which gives a full on-screen or printed list of the contents of a tape (very useful to me too!).\n\nNow, we had a revolving Earth in Issue 21-ish I think but there's another next month done in a totally different way - smoother but smaller. I see a SHOUTBURST about computer repairs; clip art (nuts and bolts and stuff); FOCUS is for photographers and gives various camera settings etc. as needed - very polished; mmm... another strategy puzzle in the same issue... perhaps I'll put one back an issue. Well, there's room for more in the main OUTLET and there are some items already in ADD-ENDERS; a version of FORTH no less and educational software among others. There'll be all the regulars of course as well as some interesting SAM-specific software in lieu of anything not covertible! See you! - Brian.\n",
+  "body_ru": "## Планы на будущее\n\nЯ сильно выбился из графика, так что следующий номер ещё толком не готов, но пока запланировано... программа, превращающая вращением линию в 3D-фигуру (мой личный фаворит); числовая стратегическая головоломка; расширенный cat для дисководов +3 и программа для сортировки каталога диска Opus по алфавиту. А для кассетников ТОЖЕ будет утилита CAT, дающая полный список файлов кассеты на экране или на печати (мне она тоже очень пригодится!).\n\nТак, где-то в 21-м номере у нас была вращающаяся Земля, но в следующем месяце будет ещё одна, сделанная совсем иначе — плавнее, хоть и поменьше. Вижу SHOUTBURST о ремонте компьютеров; клипарт (всякие винтики-шпунтики); FOCUS для фотографов — выдаёт разные настройки камеры и прочее, очень ладно скроена; ммм... ещё одна стратегическая головоломка в том же номере... пожалуй, отодвину одну на выпуск позже. Что ж, в основном OUTLET место ещё есть, да и в ADD-ENDERS кое-что уже лежит: ни много ни мало версия FORTH и обучающие программы в том числе. Само собой, будут и все постоянные рубрики, а также нечто любопытное чисто для SAM вместо того, что не удалось перенести!\n\nДо встречи! — Brian.\n",
+  "text_type": 3
+}

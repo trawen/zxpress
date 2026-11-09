@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "146",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Взгляд в будущее",
+  "meta_description_en": "Chris Bourne announces the approaching end of Outlet on the ZX Spectrum, with two remaining issues, and previews what is coming next month.",
+  "meta_description_ru": "Крис Борн сообщает о скором закрытии журнала Outlet для ZX Spectrum: впереди ещё два выпуска. Анонс программ следующего номера.",
+  "authors": [
+    "Chris Bourne"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "lookahead",
+      "tag_alias": "lookahead"
+    },
+    {
+      "tag_name": "announcement",
+      "tag_alias": "announcement"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "It was with a lot of sadness\nthat we had to admit that OUTLET\nfor the Spectrum is not immortal\nand that we could not go on\nchurning it out for ever, but,\nlooking on the bright side,\nthere are still two full issues\nto look forward to, before the\nGrim Reaper strikes!\n\nIn next month's OUTLET, among\nother things, is a very powerful\ndisassembler and hacking utility\nand a further screen-compressor\n\n\nThere will also be a program to\nassist you in solving cross-\nwords, an encrypter and decoder,\nand at least two great demos.\n\nI wonder if in years to come,\nOUTLETs will become collectors'\nitems?\n\n               Cheers, Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "It was with a lot of sadness that we had to admit that OUTLET for the Spectrum is not immortal and that we could not go on churning it out for ever, but, looking on the bright side, there are still two full issues to look forward to, before the Grim Reaper strikes!\n\nIn next month's OUTLET, among other things, is a very powerful disassembler and hacking utility and a further screen-compressor.\n\nThere will also be a program to assist you in solving crosswords, an encrypter and decoder, and at least two great demos.\n\nI wonder if in years to come, OUTLETs will become collectors' items?\n\nCheers, Chris.\n",
+  "body_ru": "С глубокой грустью нам пришлось признать, что OUTLET для Спектрума не вечен, и мы не можем выпускать его бесконечно. Но если взглянуть на светлую сторону, то до того, как нагрянет Костлявая с косой, вас ждут ещё целых два полных выпуска!\n\nВ следующем номере OUTLET среди прочего вас ждут: очень мощный дизассемблер и утилита для взлома, а также ещё один компрессор экранов.\n\nКроме того, будет программа для помощи в разгадывании кроссвордов, шифратор-дешифратор и как минимум две отличные демки.\n\nИнтересно, станут ли выпуски OUTLET коллекционной редкостью спустя годы?\n\nС наилучшими пожеланиями, Chris.\n",
+  "text_type": 3
+}

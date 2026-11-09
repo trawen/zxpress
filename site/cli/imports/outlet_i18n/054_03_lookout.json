@@ -1,0 +1,49 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "054",
+  "article_id": "03_lookout",
+  "title_en": "Lookout: News and Notes for February 1992",
+  "title_ru": "Lookout: Новости и заметки за февраль 1992",
+  "meta_description_en": "Outlet #054 Lookout news column: Specfile+ release, Sinclair & SAM Computing magazine changes format, All-Format Fairs schedule, GamesMaster TV success, and piracy figures.",
+  "meta_description_ru": "Колонка Lookout из Outlet #054: база данных Specfile+, журнал Sinclair & SAM Computing в формате A5, даты компьютерных ярмарок, успех ТВ-шоу GamesMaster и статистика пиратства.",
+  "authors": [
+    "Brian"
+  ],
+  "tags": [
+    {
+      "tag_name": "specfile+",
+      "tag_alias": "specfile-plus"
+    },
+    {
+      "tag_name": "sinclair & sam",
+      "tag_alias": "sinclair-sam"
+    },
+    {
+      "tag_name": "gamesmaster",
+      "tag_alias": "gamesmaster"
+    },
+    {
+      "tag_name": "all-format fairs",
+      "tag_alias": "all-format-fairs"
+    },
+    {
+      "tag_name": "piracy",
+      "tag_alias": "piracy"
+    },
+    {
+      "tag_name": "sd software",
+      "tag_alias": "sd-software"
+    }
+  ],
+  "category_ids": [
+    123,
+    116,
+    101
+  ],
+  "body_en_plain": "F E B R U A R Y, 1 9 9 2\n\n            SPECFILE+\n\nSD SOFTWARE's latest is a filing\nprogram for the Spectrum called\nSPECFILE+. It can hold up to 28K\nof data and uses compression. It\nis said to have a sophisticated\nsearch feature yet is simple to\nuse. Price is `12.95. SD are at\n70 Rainhall Road, Barnoldswick,\nLancashire, England, BB8 6AB.\nShame they don't send a review\ncopy or even press information!\n\n        SHRUNKEN HEADERS\n\n\"SINCLAIR & SAM COMPUTING\", the\nmagazine for serious Sinclair or\nSAM users, is now produced in a\nreduced A5 format but still has\nas much material as the original\nA4 version. Although the text is\ncondensed in proportion it is\nclear and readable. Partly in\ncolour, S & S is quite smart and\nseems to be settling down to a\nbi-monthly delivery that is more\nreliable than at first launch\nlast year.\n\nS & S is available by mail order\nfrom Garner Designs, 57 Lovers\nWalk, Dunstable, Bedfordshire,\nLU5 4BG on subscription of `9.00\nfor 6 issues (plus 75p overseas\npostage).\n\n    ALL-FORMAT FAIRS FIXTURES\n\nFEB  8 Northumbria Centre,\n       Washington A194\n\n    23 Motorcycle Museum, B'ham\n       (off Junction 6, M42)\n\nMAR  8 City Hall, Candleriggs,\n       Glasgow\n\n    14 Horticultural Hall,London\n\n    15 Brunel Centre,Templemeads\n       Bristol\n\n    21 Donington Park, East Mid-\n       lands,Junction 23A, M6\n\n    22 University Sports Centre\n       Calverley St., Leeds\n\nThe organisers say there are car\nparks at all venues (the London\none is a bit meagre though!) and\nadmission is `4. Fairs open from\n10am to 4pm. Contact John Riding\non 0926 613047 for further info.\nGenerally, both SAM and Spectrum\ncomputers, hardware and software\nare on sale along with PC, Amiga\nand ST material as well.\n\n       GAMESMASTER SUCCESS\n\nThe Channel 4 computer games TV\nprogram, GAMESMASTER is reported\nto be a great commercial success\nwith some 2,670,000 viewers and\na phoneline jammed with 20,000\ncalls! Only 16-bit machines and\nconsoles are shown but if you\nlike games, tune in on Tuesdays\nat 6.30pm.\n\n         PIRACY FIGURES\n\nThe SPA claim over `2 billion\nwas lost to software piracy in\nwestern Europe in 1990.As usual,\nthey base these figures on their\nown estimates of the number of\nitems of software the average\ncomputer owner uses compared to\noverall sales for software. This\nis totally false since it makes\nthe assumption that each user\nwould always BUY that software\nif they couldn't get a free copy\nand this is patently absurd. The\nfigures are deliberately shown\nin this way to get more sympathy\nbut it just gets my goat.\n\nNot much news this month - must\nbe the after-Christmas lull!\n                        - Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "FEBRUARY, 1992\n\n### SPECFILE+\n\nSD SOFTWARE's latest is a filing program for the Spectrum called SPECFILE+. It can hold up to 28K of data and uses compression. It is said to have a sophisticated search feature yet is simple to use. Price is £12.95. SD are at 70 Rainhall Road, Barnoldswick, Lancashire, England, BB8 6AB. Shame they don't send a review copy or even press information!\n\n### SHRUNKEN HEADERS\n\n\"SINCLAIR & SAM COMPUTING\", the magazine for serious Sinclair or SAM users, is now produced in a reduced A5 format but still has as much material as the original A4 version. Although the text is condensed in proportion it is clear and readable. Partly in colour, S & S is quite smart and seems to be settling down to a bi-monthly delivery that is more reliable than at first launch last year.\n\nS & S is available by mail order from Garner Designs, 57 Lovers Walk, Dunstable, Bedfordshire, LU5 4BG on subscription of £9.00 for 6 issues (plus 75p overseas postage).\n\n### ALL-FORMAT FAIRS FIXTURES\n\n* **FEB 8:** Northumbria Centre, Washington A194\n* **FEB 23:** Motorcycle Museum, B'ham (off Junction 6, M42)\n* **MAR 8:** City Hall, Candleriggs, Glasgow\n* **MAR 14:** Horticultural Hall, London\n* **MAR 15:** Brunel Centre, Templemeads, Bristol\n* **MAR 21:** Donington Park, East Midlands, Junction 23A, M6\n* **MAR 22:** University Sports Centre, Calverley St., Leeds\n\nThe organisers say there are car parks at all venues (the London one is a bit meagre though!) and admission is £4. Fairs open from 10am to 4pm. Contact John Riding on 0926 613047 for further info. Generally, both SAM and Spectrum computers, hardware and software are on sale along with PC, Amiga and ST material as well.\n\n### GAMESMASTER SUCCESS\n\nThe Channel 4 computer games TV program, GAMESMASTER is reported to be a great commercial success with some 2,670,000 viewers and a phoneline jammed with 20,000 calls! Only 16-bit machines and consoles are shown but if you like games, tune in on Tuesdays at 6.30pm.\n\n### PIRACY FIGURES\n\nThe SPA claim over £2 billion was lost to software piracy in western Europe in 1990. As usual, they base these figures on their own estimates of the number of items of software the average computer owner uses compared to overall sales for software. This is totally false since it makes the assumption that each user would always BUY that software if they couldn't get a free copy and this is patently absurd. The figures are deliberately shown in this way to get more sympathy but it just gets my goat.\n\nNot much news this month — must be the after-Christmas lull!\n\n— Brian.\n",
+  "body_ru": "ФЕВРАЛЬ, 1992\n\n### SPECFILE+\n\nСвежая разработка от SD SOFTWARE — это программа для ведения баз данных на Spectrum под названием SPECFILE+. Она способна хранить до 28 КБ данных и использует сжатие. Заявлено наличие развитых функций поиска при общей простоте использования. Цена составляет £12.95. Адрес SD Software: 70 Rainhall Road, Barnoldswick, Lancashire, England, BB8 6AB. Жаль, что они не присылают копий для рецензий и даже пресс-релизов!\n\n### УМЕНЬШЕННЫЙ ФОРМАТ\n\nЖурнал «SINCLAIR & SAM COMPUTING», ориентированный на серьезных пользователей Sinclair и SAM, теперь выпускается в уменьшенном формате A5, однако содержит столько же материала, сколько и оригинальная версия формата A4. Текст стал плотнее, но при этом остается четким и легко читаемым. Частично цветной, S & S выглядит весьма опрятно и, судя по всему, переходит на стабильный двухмесячный график выхода, куда более надежный, чем в прошлом году при запуске.\n\nS & S доступен по почте от Garner Designs, 57 Lovers Walk, Dunstable, Bedfordshire, LU5 4BG по подписке за £9.00 за 6 номеров (плюс 75 пенсов за пересылку за рубеж).\n\n### РАСПИСАНИЕ ALL-FORMAT FAIRS\n\n* **8 ФЕВ:** Northumbria Centre, Washington A194\n* **23 ФЕВ:** Motorcycle Museum, B'ham (съезд Junction 6, M42)\n* **8 МАР:** City Hall, Candleriggs, Glasgow\n* **14 МАР:** Horticultural Hall, London\n* **15 МАР:** Brunel Centre, Templemeads, Bristol\n* **21 МАР:** Donington Park, East Midlands, Junction 23A, M6\n* **22 МАР:** University Sports Centre, Calverley St., Leeds\n\nОрганизаторы сообщают, что парковки есть на всех площадках (хотя лондонская довольно скромная!), а вход стоит £4. Ярмарки работают с 10:00 до 16:00. Для справок обращайтесь к John Riding по телефону 0926 613047. Как правило, там продаются компьютеры SAM и Spectrum, софт и железо для них, а также материалы для PC, Amiga и ST.\n\n### УСПЕХ GAMESMASTER\n\nТелепрограмма о компьютерных играх GAMESMASTER на Channel 4 показывает потрясающие коммерческие результаты: аудитория достигла около 2 670 000 зрителей, а телефонная линия была буквально заблокирована 20 000 звонков! Показывают исключительно 16-битные компьютеры и приставки, но если вы любите игры — включайте телевизор по вторникам в 18:30.\n\n### СТАТИСТИКА ПИРАТСТВА\n\nАссоциация SPA заявляет, что в 1990 году в Западной Европе из-за программного пиратства было потеряно более 2 миллиардов фунтов стерлингов. Как обычно, они основывают эти цифры на собственных оценках того, сколько программ якобы использует среднестатистический владелец компьютера, сопоставляя это с общими продажами софта. Это совершенно некорректно, поскольку строится на допущении, что каждый пользователь обязательно КУПИЛ БЫ этот софт, не будь у него бесплатной копии, а это откровенный абсурд. Цифры специально подаются в таком ключе, чтобы вызвать больше сочувствия, но меня это просто бесит.\n\nНовостей в этом месяце немного — сказывается послерождественское затишье!\n\n— Brian.\n",
+  "text_type": 3
+}

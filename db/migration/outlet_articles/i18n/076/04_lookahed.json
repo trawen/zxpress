@@ -1,0 +1,35 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "076",
+  "article_id": "04_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A preview of upcoming features for Outlet in 1994: a virtual holiday in Malawi, a multi-base calculator, utilities, sampled music, and demos.",
+  "meta_description_ru": "Анонс материалов журнала Outlet на начало 1994 года: путешествие по Малави, калькулятор с системами счисления от 2 до 16, утилиты, музыка и демо.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "announcement",
+      "tag_alias": "announcement"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Shake off the gloom of 1993 and\nlets all have a holiday in sunny\nMilawe, Africa, to make a good\nstart to 1994. Go on adventurous\njourneys to places with magical\nnames such as NKOPOLA, LIWONDE,\nor MULANJE, and visit a Game\nReserve!... All this without\nmoving away from your favourite\ncomputer.\n\n                        more...\n\nOn the more serious side is a\ncalculating program with a diff-\nerence, as it is able to work\nwith any \"Base\" from 2 (binary)\nto 16 (hexadecimal).\n\nThere are several utilities:-\none for filing, a colourful one,\nand a programming aid. We hope\nto bring you some great\"Sampled-\nsound\" music, and there are lots\nof wonderful state-of-the-art\ndemos in stock, so we'll squeeze\none in if we can. Plus lots of\nother bits and pieces.\n\n                      Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Shake off the gloom of 1993 and lets all have a holiday in sunny Milawe, Africa, to make a good start to 1994. Go on adventurous journeys to places with magical names such as NKOPOLA, LIWONDE, or MULANJE, and visit a Game Reserve!... All this without moving away from your favourite computer.\n\nOn the more serious side is a calculating program with a difference, as it is able to work with any \"Base\" from 2 (binary) to 16 (hexadecimal).\n\nThere are several utilities: one for filing, a colourful one, and a programming aid. We hope to bring you some great \"Sampled-sound\" music, and there are lots of wonderful state-of-the-art demos in stock, so we'll squeeze one in if we can. Plus lots of other bits and pieces.\n\nChris.\n",
+  "body_ru": "Стряхните с себя уныние 1993 года — давайте все вместе отправимся на каникулы в солнечную африканскую Малави, чтобы отлично начать 1994 год! Вас ждут полные приключений путешествия по местам с волшебными названиями — таким как NKOPOLA, LIWONDE или MULANJE, а также визит в охотничий заповедник!... И всё это — не отходя от любимого компьютера.\n\nИз более серьезного материала вас ждет необычный калькулятор, способный работать в любой системе счисления от двоичной (по основанию 2) до шестнадцатеричной (по основанию 16).\n\nТакже готовится несколько утилит: одна для работы с файлами, одна красочная графическая и еще одна в помощь программисту. Мы надеемся порадовать вас отличной оцифрованной музыкой («Sampled-sound»), а в запасе у нас лежит немало великолепных современных демок, так что постараемся втиснуть хотя бы одну, если хватит места. Плюс множество других приятных мелочей.\n\nChris.\n",
+  "text_type": 3
+}

@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "31",
+  "article_id": "03_BOOVIE.TX",
+  "source_lang": "de-AT",
+  "title_en": "Boovie 2 Full Version",
+  "title_ru": "Boovie 2: Полная версия",
+  "meta_description_en": "A brief announcement of Boovie 2 full version included on the Scene+ #31 magazine disk, highlighting new mechanics like bombs and magnets.",
+  "meta_description_ru": "Короткая заметка о публикации полной версии игры Boovie 2 на диске Scene+ #31, с упоминанием бомб и магнитов.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "boovie-2",
+      "tag_alias": "boovie-2"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    },
+    {
+      "tag_name": "puzzle",
+      "tag_alias": "puzzle"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "BOOVIE ü - BOOVIE 2 FULL VERSION - Deutsch - Da der erste Teil\nwie eine Bombe eingeschlagen hat, habe ichbeschloßen auch den\nzweiten Teil dieses genialen Spiels aufs Magazin zu bringen.\nNeuerungen sind auch einige eingebaut, z. B. Bomben oder Magnet.\nSchaut euch am besten den Demomodus einmalan um zu sehen wie\nsich das Spiel spielt.) - English - Well, the first Boovie game\nwas a big impact, so I decided toput also the second game on my\nmagazine. The improvements over Boovie 1 are the Bombs and\nMagnet. Best, you look the demo modeto learn hot to play this\ngreat\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### BOOVIE 2 FULL VERSION\n\nSince the first part was an absolute blast, I decided to include the second installment of this ingenious game on the magazine disk as well. Several new features have been added, such as bombs and magnets. It's best to check out the demo mode first to see how the game is played.\n",
+  "body_ru": "### BOOVIE 2: ПОЛНАЯ ВЕРСИЯ\n\nПоскольку первая часть произвела настоящий фурор, я решил выпустить на диске журнала и продолжение этой гениальной игры. В неё добавлено несколько новшеств, например бомбы и магнит. Лучше всего сначала взглянуть на демонстрационный режим, чтобы понять, как играть.\n",
+  "text_type": 3
+}

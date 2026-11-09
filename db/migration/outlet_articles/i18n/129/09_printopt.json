@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "129",
+  "article_id": "09_printopt",
+  "title_en": "Print Options",
+  "title_ru": "Print Options",
+  "meta_description_en": "M.A. Coles introduces Print Options, a ZX Spectrum utility for configuring Epson-compatible printers with various font styles and escape codes.",
+  "meta_description_ru": "M.A. Coles представляет утилиту Print Options для ZX Spectrum, позволяющую легко настраивать стили печати на Epson-совместимых принтерах с помощью escape-кодов.",
+  "authors": [
+    "M.A. Coles"
+  ],
+  "tags": [
+    {
+      "tag_name": "print options",
+      "tag_alias": "print-options"
+    },
+    {
+      "tag_name": "epson",
+      "tag_alias": "epson"
+    },
+    {
+      "tag_name": "printer",
+      "tag_alias": "printer"
+    },
+    {
+      "tag_name": "utility",
+      "tag_alias": "utility"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    }
+  ],
+  "category_ids": [
+    62,
+    64,
+    74
+  ],
+  "body_en_plain": "PRINT OPTIONS.\n     (FOR EPSON COMPATIBLES)\n          By M.A.Coles\n     -----------------------\n\n\nThe next item,PRINT OPTIONS, has\nbeen written for those of us who\ncan't remember which control\ncodes to send to our printers\nfor a particular style of out-\nput.\n\nDon't forget to turn on your\nprinter!\n\nUpon loading you will be pres-\nented with a list of 12 print\nstyles + a line spacing option\nin the top half of the screen.\nThe Menu bar in the lower screen\noffers four options:-\n\n\n1. STYLE INFO.\nThis will display a brief des-\ncription on the screen of each\nprint style listed.\n\n2. EXAMPLE.\nThis will dump to the printer a\nbrief description of a selected\nprint style, in that print\nstyle.\n\n\n3. PRINTER SETUP.\nThis will send the appropiate\ncontrol codes to the printer for\na selected print style. An input\nof 66 will print a sample of\nstyles selected so far. 99 will\nreset the printer USE WITH CARE.\n\n4. LOAD PROG.\nThis option is used once the\nprinter has been set with a\nprint style/s using option 3 and\nwill allow you to load your main\nprogram.\n\nIf you have set the printer us-\ning Option 3, do not return to\nOption 2 EXAMPLE, because the\nprinter is reset to its power-up\ndefaults on completion of print-\ning an example.\n\n\nUnless otherwise stated, most of\nthe print styles may be combined\nmaking a vast number of print\nstyles available.\n\nNOTE:- If using this program\nin 128K, do not attempt to edit\nline 100, as it is longer than\nthe 128 will display and once\nedited it cannot be re-entered.\n\nEDITOR'S NOTE:-\nYou are probably aware that not\nall Epsons or compatible print-\ners recognise the same command\ncodes so you may have to cust-\nomise the escape codes in line\n100 of the program. My ancient\nLX-86 for instance does not\naccept ESC 114 for INVERSE or\nESC 104 for DOUBLE HEIGHT. (R$\nand V$ in line 100).\n\n     Press \"N\" now to load\n\n        PRINTER OPTIONS!.\n",
+  "body_ru_plain": "",
+  "body_en": "### PRINT OPTIONS.\n**(FOR EPSON COMPATIBLES)**  \n*By M.A. Coles*\n\n---\n\nThe next item, PRINT OPTIONS, has been written for those of us who can't remember which control codes to send to our printers for a particular style of output.\n\nDon't forget to turn on your printer!\n\nUpon loading you will be presented with a list of 12 print styles + a line spacing option in the top half of the screen. The Menu bar in the lower screen offers four options:-\n\n**1. STYLE INFO.**  \nThis will display a brief description on the screen of each print style listed.\n\n**2. EXAMPLE.**  \nThis will dump to the printer a brief description of a selected print style, in that print style.\n\n**3. PRINTER SETUP.**  \nThis will send the appropriate control codes to the printer for a selected print style. An input of `66` will print a sample of styles selected so far. `99` will reset the printer—USE WITH CARE.\n\n**4. LOAD PROG.**  \nThis option is used once the printer has been set with a print style/s using option 3 and will allow you to load your main program.\n\nIf you have set the printer using Option 3, do not return to Option 2 (EXAMPLE), because the printer is reset to its power-up defaults on completion of printing an example.\n\nUnless otherwise stated, most of the print styles may be combined, making a vast number of print styles available.\n\n**NOTE:** If using this program in 128K, do not attempt to edit line 100, as it is longer than the 128 editor will display, and once edited it cannot be re-entered.\n\n**EDITOR'S NOTE:**  \nYou are probably aware that not all Epsons or compatible printers recognise the same command codes, so you may have to customise the escape codes in line 100 of the program. My ancient LX-86, for instance, does not accept `ESC 114` for INVERSE or `ESC 104` for DOUBLE HEIGHT (R$ and V$ in line 100).\n\nPress \"N\" now to load **PRINTER OPTIONS!**\n",
+  "body_ru": "### PRINT OPTIONS.\n**(ДЛЯ EPSON-СОВМЕСТИМЫХ ПРИНТЕРОВ)**  \n*M.A. Coles*\n\n---\n\nСледующая программа, PRINT OPTIONS, была написана для тех из нас, кто не может запомнить, какие именно управляющие коды нужно отправлять принтеру для выбора того или иного стиля печати.\n\nНе забудьте включить ваш принтер!\n\nПосле загрузки в верхней половине экрана появится список из 12 стилей печати плюс опция межстрочного интервала. Панель меню в нижней части экрана предлагает четыре варианта:-\n\n**1. STYLE INFO.**  \nВыводит на экран краткое описание каждого доступного стиля печати.\n\n**2. EXAMPLE.**  \nРаспечатывает на принтере краткое описание выбранного стиля, оформленное этим же стилем.\n\n**3. PRINTER SETUP.**  \nОтправляет в принтер соответствующие управляющие коды для выбранного стиля печати. Ввод числа `66` распечатает образец всех выбранных к этому моменту стилей. Ввод `99` выполнит сброс принтера — ИСПОЛЬЗУЙТЕ С ОСТОРОЖНОСТЬЮ.\n\n**4. LOAD PROG.**  \nИспользуется после того, как принтер был настроен нужным стилем (или стилями) через опцию 3. Этот пункт позволит вам загрузить вашу основную программу.\n\nЕсли вы уже настроили принтер с помощью опции 3, не возвращайтесь к опции 2 (EXAMPLE), поскольку по завершении печати примера принтер сбрасывается к исходным заводским настройкам.\n\nЕсли не указано иное, большинство стилей печати можно комбинировать друг с другом, что дает огромное число возможных вариантов.\n\n**ПРИМЕЧАНИЕ:** При использовании этой программы в режиме 128K не пытайтесь редактировать строку 100: она длиннее, чем способен отобразить редактор 128K, и после редактирования ввести ее заново не удастся.\n\n**ПРИМЕЧАНИЕ РЕДАКТОРА:**  \nВы, вероятно, знаете, что не все принтеры Epson или совместимые модели понимают одинаковые наборы командных кодов, так что вам может потребоваться подправить escape-коды в строке 100 программы. Мой древний LX-86, к примеру, не воспринимает `ESC 114` для инверсного текста (INVERSE) или `ESC 104` для двойной высоты (DOUBLE HEIGHT) — переменные R$ и V$ в строке 100.\n\nНажмите \"N\" прямо сейчас для загрузки **PRINTER OPTIONS!**\n",
+  "text_type": 3
+}

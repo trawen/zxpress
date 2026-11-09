@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "27",
+  "article_id": "14_FOOT.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Foot.Doc: Football Animation",
+  "title_ru": "Foot.Doc: Футбольная анимация",
+  "meta_description_en": "A brief note from Scene+ #27 about the new football animation by F.B.I. as a welcome break from Star Trek animations.",
+  "meta_description_ru": "Короткая заметка из журнала Scene+ #27 о футбольной анимации от F.B.I., разбавившей череду роликов по «Звёздному пути».",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "animation",
+      "tag_alias": "animation"
+    },
+    {
+      "tag_name": "f-b-i",
+      "tag_alias": "f-b-i"
+    },
+    {
+      "tag_name": "football",
+      "tag_alias": "football"
+    }
+  ],
+  "category_ids": [
+    93,
+    116
+  ],
+  "body_de_plain": "FOOTA ü - FOOTBALL ANIMATION - Endlich! Nach meinen vielen STAR\nTREK Animationen kommt F. B. I.zu mir und drück mir seine Fußball\nAnimation in die Klauen. Endlich mal etwas Abwechselung obwohl\nich gar nichts gegen STARTREK habe! Es ist zwar nicht so flüssig\nwie meine Animationen, aber auch sehenswert. - For the\nFootball-crazy Englishmen this will be much moreattractive than\nmy STAR TREK animation from the past issues, unfortunaly not\nfull screen and not too fast but still worth\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**FOOTBALL ANIMATION**\n\nFinally! After all my STAR TREK animations, F.B.I. comes up to me and shoves his football animation right into my claws. Finally a bit of variety, even though I have nothing against STAR TREK at all! While it is not quite as smooth as my animations, it is definitely worth watching.\n\n*For the football-crazy Englishmen this will be much more attractive than my STAR TREK animation from the past issues, unfortunately not full screen and not too fast but still worth*\n",
+  "body_ru": "**ФУТБОЛЬНАЯ АНИМАЦИЯ**\n\nНаконец-то! После череды моих анимаций по «ЗВЁЗДНОМУ ПУТИ» ко мне заглянул F.B.I. и всучил мне прямо в лапы свою футбольную анимацию. Хоть какое-то разнообразие, хотя я вовсе ничего не имею против STAR TREK! Пусть она идёт и не так плавно, как мои работы, но посмотреть всё равно стоит.\n\n*Для помешанных на футболе англичан это наверняка будет куда привлекательнее моих анимаций по STAR TREK из прошлых номеров — к сожалению, не на весь экран и не слишком быстро, но всё же стоит...*\n",
+  "text_type": 3
+}

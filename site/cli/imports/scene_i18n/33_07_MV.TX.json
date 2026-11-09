@@ -1,0 +1,49 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "33",
+  "article_id": "07_MV.TX",
+  "source_lang": "de-AT",
+  "title_en": "Mezi Věžemi 128",
+  "title_ru": "Mezi Věžemi 128",
+  "meta_description_en": "A brief review of the Slovak 3D dungeon crawler Mezi Věžemi 128 for the ZX Spectrum, featuring Amiga mouse support.",
+  "meta_description_ru": "Краткий обзор словацкого 3D-данжен-кроулера Mezi Věžemi 128 для ZX Spectrum с поддержкой мыши от Amiga.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "mezi-vezemi",
+      "tag_alias": "mezi-vezemi"
+    },
+    {
+      "tag_name": "gama",
+      "tag_alias": "gama"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    },
+    {
+      "tag_name": "dungeon-crawler",
+      "tag_alias": "dungeon-crawler"
+    }
+  ],
+  "category_ids": [
+    1,
+    2,
+    3
+  ],
+  "body_de_plain": "M ü - Mezi Vezemi 128 - Zaubersprüche und Untote begegnen euch\nin diesem Spiel von+Gama, eimem Slovakischen Coder. Ihr\nerforscht ein 3D Labirynthund metzelt alle Monster nieder die\nsich euch in den Wegstellen. Das Spiel ist Icongesteuert und man\nkann einenGegenstand (z. B. Waffe) anwählen und dann mit ihm\nKämpfen. Dasbesondere ist daß auch eine Amiga Maus zur Steuerung\nverwendetwerden kann. Steuerung: Amiga Maus, Sinclair\" Joystick,\nCursors undverschiedene Tastaturkombinationen.& - Magic and\nundeath creatures will be found in this game from+Gama, a coder\nfrom Slovakia. You will explore a colorful 3D labirynth and\nslash all monsters that are in your way. The gameis icon\ncontroled, you can select a item and use it againstmonsters.\nThis game uses as a special option for control: theAmiga mouse.\nControl options: Amiga Mouse, Sinclair Joystick, Cursors andsome\nkeyboard opt\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**Mezi Věžemi 128** — Spells and undead creatures await you in this game by Gama, a coder from Slovakia. You will explore a colorful 3D labyrinth and slash all monsters standing in your way.\n\nThe game is icon-driven: you can select an item (e.g. a weapon) and use it in battle against enemies. A special highlight is that an Amiga mouse can also be used for control.\n\n**Controls:** Amiga Mouse, Sinclair Joystick, Cursors, and various keyboard combinations.\n",
+  "body_ru": "**Mezi Věžemi 128** — Заклинания и нежить ждут вас в этой игре от Gama, словацкого кодера. Вам предстоит исследовать красочный трёхмерный лабиринт и рубить всех монстров, вставших на вашем пути.\n\nИгра управляется с помощью иконок: можно выбрать предмет (например, оружие) и сражаться им против чудовищ. Особая изюминка — возможность управления мышью от Amiga.\n\n**Управление:** мышь Amiga, джойстик Sinclair, клавиши Cursor и различные сочетания клавиш.\n",
+  "text_type": 3
+}

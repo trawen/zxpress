@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "021",
+  "article_id": "04_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "Preview of the upcoming Outlet issue (#022): Utility 2, Make Four game, software protection series part 3, Caves of Mystery adventure, and more.",
+  "meta_description_ru": "Анонс следующего номера журнала Outlet (#022): утилиты, игра Make Four, продолжение статей о защите ПО, приключение Caves of Mystery и другие программы.",
+  "authors": [
+    "Brian Clark"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "anons"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "софт",
+      "tag_alias": "software"
+    },
+    {
+      "tag_name": "игры",
+      "tag_alias": "games"
+    }
+  ],
+  "category_ids": [
+    123,
+    118
+  ],
+  "body_en_plain": "Next month's issue has UTILITY 2\nthat includes a BASIC line block\ndelete and a line re-number that\ncan move whole blocks of BASIC\nover other sections to exactly\nwhere you want them AND adjusts\nany GO SUB and GO TO calls etc.!\nThere's an excellent version of\nMAKE FOUR, the board game - also\ncalled Four in a Row. That's not\nwhat I call it when it beats me!\nI've only won once - by chance!\nI'm determined to find a winning\nstrategy - it's got me hooked!\n\nOUTPUT has Part Three of Malcolm\nGoodman's series on program\nprotection; BYTECOUNT is a handy\nutility to find the code length\nof files saved without a header\nor with a false header. I've not\ndecided about OUTCLASS yet - we\nmay skip a month or two but the\nDRIVECHAT is a chunky one with\nlots of different topics - short\ntips and longer items. There's a\nutility to calculate the factors\nof any input value and a program\nthat calculates the position of\nan artificial satellite;a simple\narchitect/ building designer and\na utility to set the colours of\nTasword 2 how YOU want them;twin\nloader programs - one automatic-\nfrom a CAT, the other more rapid\nbut working from DATA. Then we\n\n\nhave a short text and graphic\nadventure named CAVES OF MYSTERY\nto while away an hour. I have a\nlittle more space I think and I\nhave left room for OUTCLASS that\nI can probably use for something\nelse so, as usual, don't be\nsurprised if I squeeze in one or\ntwo more programs!\n\nI've just completed a universal,\nrapid machine code sort routine\nfor BASIC string arrays called\nDIMSORTER to complement this\nissue's INSTAMATCHIT search\nroutine but it may go in Issue\n23. We'll see.\n\n                         - Brian.\n",
+  "body_ru_plain": "В следующем номере вас ждет\nUTILITY 2, куда входит удаление\nблока строк BASIC и перенумера-\nция, умеющая переносить целые\nблоки BASIC через другие секции\nв точности туда, куда нужно, И\nкорректирующая все вызовы\nGO SUB, GO TO и тому подобное!\nТам же великолепная версия\nMAKE FOUR, настольной игры —\nеще известной как Four in a Row.\nЯ зову ее иначе, когда продуваю!\nВыиграл лишь раз — случайно!\nЯ полон решимости найти\nпобедную стратегию — зацепило!\n\nВ OUTPUT — часть 3 цикла статей\nMalcolm Goodman о защите\nпрограмм; BYTECOUNT — удобная\nутилита для выяснения длины\nкода у файлов, сохраненных\nбез заголовка или с фальшивым.\nПо поводу OUTCLASS я еще не\nрешил — быть может, пропустим\nмесяц-другой, но DRIVECHAT\nвышел пухлым, со множеством\nразных тем — от коротких\nсоветов до больших материалов.\nЕсть утилита вычисления дели-\nтелей любого введенного числа\nи программа, вычисляющая\nположение искусственного\nспутника; простой архитектурный/\nстроительный проектировщик и\nутилита для настройки цветов в\nTasword 2 так, как хочется ВАМ;\nдва загрузчика — автоматический\nиз CAT, другой куда быстрее, но\nработающий из DATA. А еще\n\n\nу нас есть небольшое тексто-\nграфическое приключение под\nназванием CAVES OF MYSTERY,\nчтобы скоротать часок. Места,\nкажется, чуть больше, и я оста-\nвил место для OUTCLASS, которое\nнаверняка смогу занять чем-то\nдругим, так что, как обычно, не\nудивляйтесь, если я втисну туда\nеще одну или две программы!\n\nЯ только что закончил универ-\nсальную, быструю машкодную\nпроцедуру сортировки строковых\nмассивов BASIC под названием\nDIMSORTER в дополнение к пои-\nсковой процедуре INSTAMATCHIT\nиз этого номера, но она может\nпойти и в Issue 23.\nПоглядим.\n\n                         - Brian.\n",
+  "body_en": "## Lookahead\n\nNext month's issue has UTILITY 2 that includes a BASIC line block delete and a line re-number that can move whole blocks of BASIC over other sections to exactly where you want them AND adjusts any GO SUB and GO TO calls etc.! There's an excellent version of MAKE FOUR, the board game - also called Four in a Row. That's not what I call it when it beats me! I've only won once - by chance! I'm determined to find a winning strategy - it's got me hooked!\n\nOUTPUT has Part Three of Malcolm Goodman's series on program protection; BYTECOUNT is a handy utility to find the code length of files saved without a header or with a false header. I've not decided about OUTCLASS yet - we may skip a month or two but the DRIVECHAT is a chunky one with lots of different topics - short tips and longer items. There's a utility to calculate the factors of any input value and a program that calculates the position of an artificial satellite; a simple architect/building designer and a utility to set the colours of Tasword 2 how YOU want them; twin loader programs - one automatic - from a CAT, the other more rapid but working from DATA. Then we have a short text and graphic adventure named CAVES OF MYSTERY to while away an hour. I have a little more space I think and I have left room for OUTCLASS that I can probably use for something else so, as usual, don't be surprised if I squeeze in one or two more programs!\n\nI've just completed a universal, rapid machine code sort routine for BASIC string arrays called DIMSORTER to complement this issue's INSTAMATCHIT search routine but it may go in Issue 23. We'll see.\n\n— Brian.\n",
+  "body_ru": "## В следующем номере\n\nВ следующем номере вас ждет UTILITY 2, куда входит удаление блока строк BASIC и перенумерация, умеющая переносить целые блоки BASIC через другие секции в точности туда, куда нужно, И корректирующая все вызовы GO SUB, GO TO и тому подобное! Там же великолепная версия MAKE FOUR, настольной игры — еще известной как Four in a Row. Я зову ее иначе, когда продуваю! Выиграл лишь раз — случайно! Я полон решимости найти победную стратегию — зацепило!\n\nВ OUTPUT — часть 3 цикла статей Malcolm Goodman о защите программ; BYTECOUNT — удобная утилита для выяснения длины кода у файлов, сохраненных без заголовка или с фальшивым. По поводу OUTCLASS я еще не решил — быть может, пропустим месяц-другой, но DRIVECHAT вышел пухлым, со множеством разных тем — от коротких советов до больших материалов. Есть утилита вычисления делителей любого введенного числа и программа, вычисляющая положение искусственного спутника; простой архитектурный/строительный проектировщик и утилита для настройки цветов в Tasword 2 так, как хочется ВАМ; два загрузчика — автоматический из CAT, другой куда быстрее, но работающий из DATA. А еще у нас есть небольшое тексто-графическое приключение под названием CAVES OF MYSTERY, чтобы скоротать часок. Места, кажется, чуть больше, и я оставил место для OUTCLASS, которое наверняка смогу занять чем-то другим, так что, как обычно, не удивляйтесь, если я втисну туда еще одну или две программы!\n\nЯ только что закончил универсальную, быструю машкодную процедуру сортировки строковых массивов BASIC под названием DIMSORTER в дополнение к поисковой процедуре INSTAMATCHIT из этого номера, но она может пойти и в Issue 23. Поглядим.\n\n— Brian.\n",
+  "text_type": 3
+}

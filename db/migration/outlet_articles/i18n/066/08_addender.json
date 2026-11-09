@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "066",
+  "article_id": "08_addender",
+  "title_en": "Addender",
+  "title_ru": "Add-Enders: Дополнения",
+  "meta_description_en": "Brian introduces the Add-Enders section in Outlet #066 for reader contributions, utilities, and extras that didn't fit into the main magazine.",
+  "meta_description_ru": "Брайан представляет раздел Add-Enders в Outlet #066: разнообразные материалы, утилиты и бонусы от читателей, не вошедшие в основной журнал.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron",
+      "tag_alias": "chezron"
+    },
+    {
+      "tag_name": "add-enders",
+      "tag_alias": "add-enders"
+    },
+    {
+      "tag_name": "plus d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "disciple",
+      "tag_alias": "disciple"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_en_plain": "Some items contributed to OUTLET\nhave not yet been included for a\nvariety of reasons. It's a shame\nto leave them on the shelf so,if\nappropriate, they will be added\nto this ADD-ENDERS area of the\nmagazine (not microdrive or Opus\nas there is not enough room).\n\nThe material covers a wide range\nof quality and program types:\nutilities, screens, character\nsets and text articles and SOME\nof it may be unedited, untested,\nnot working fully or properly;\nin need of conversion for your\n\nsystem's syntax or printer etc.;\nwithout full instructions or\nwhatever. Readers will have to\nsift through to see if there is\nanything of interest they can\nmake use of and discard the\nrest. Not everything will appear\non all versions necessarily.\n\nSome Add-Enders may be linked to\nOUTLET in the normal way. These\nwill usually precede this text\nfile. Any items that follow this\narticle will possibly need to be\nLOADed manually or may not auto-\nrun when loaded.\n\nThere may be some info on the\nfollowing pages...\n\nRemaining on the Disciple/Plus D\nversion of OUTLET only is the\nMAX demo from last month which\nwas corrupted by G+DOS.NOTE THAT\nTHIS WILL NOT WORK ON A DISCIPLE\nBUT ONLY ON +D.\n\n                        - Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "Some items contributed to OUTLET have not yet been included for a variety of reasons. It's a shame to leave them on the shelf so, if appropriate, they will be added to this ADD-ENDERS area of the magazine (not microdrive or Opus as there is not enough room).\n\nThe material covers a wide range of quality and program types: utilities, screens, character sets and text articles and SOME of it may be unedited, untested, not working fully or properly; in need of conversion for your system's syntax or printer etc.; without full instructions or whatever. Readers will have to sift through to see if there is anything of interest they can make use of and discard the rest. Not everything will appear on all versions necessarily.\n\nSome Add-Enders may be linked to OUTLET in the normal way. These will usually precede this text file. Any items that follow this article will possibly need to be LOADed manually or may not auto-run when loaded.\n\nThere may be some info on the following pages...\n\nRemaining on the Disciple/Plus D version of OUTLET only is the MAX demo from last month which was corrupted by G+DOS. NOTE THAT THIS WILL NOT WORK ON A DISCIPLE BUT ONLY ON +D.\n\n— Brian.\n",
+  "body_ru": "Некоторые материалы, присланные для OUTLET, до сих пор не были опубликованы по самым разным причинам. Жалко оставлять их пылиться на полке, поэтому по мере возможности они будут размещаться в этом специальном разделе журнала под названием ADD-ENDERS (на версиях для микродрайва и Opus места под них нет).\n\nЭтот материал весьма разнообразен по качеству и типам программ: утилиты, картинки-экраны, наборы шрифтов и текстовые статьи. Кое-что из этого может оказаться неотредактированным, непротестированным, работать не полностью или некорректно; требовать адаптации под синтаксис вашей системы или принтер и т. п.; быть без подробных инструкций и прочего. Читателям придется покопаться во всем этом самостоятельно, чтобы отобрать полезное для себя и отбросить остальное. Кроме того, далеко не всё обязательно появится во всех дисковых версиях выпуска.\n\nНекоторые материалы Add-Enders могут быть привязаны к оболочке OUTLET обычным образом. Обычно они предшествуют данному текстовому файлу. Все файлы, идущие после этой статьи, возможно, придется загружать вручную (LOAD), либо они не запустятся автоматически после загрузки.\n\nНа следующих страницах может быть дополнительная информация...\n\nТолько на версии OUTLET для Disciple/Plus D осталась демо-программа MAX из прошлого номера, которая была повреждена G+DOS. ОБРАТИТЕ ВНИМАНИЕ: ОНА РАБОТАЕТ ТОЛЬКО НА +D, НО НЕ НА DISCIPLE.\n\n— Brian.\n",
+  "text_type": 3
+}

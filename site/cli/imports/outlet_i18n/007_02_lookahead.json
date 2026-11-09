@@ -1,0 +1,37 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "007",
+  "article_id": "02_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "Preview of programs planned for the next issue of Outlet: CHECKADDR RAM tester, Tasword to Pagemaker converter, EP44 routine, games, and Multiface utilities.",
+  "meta_description_ru": "Анонс материалов следующего номера Outlet: тест памяти CHECKADDR, утилиты, игры FASTERMIND и TICKET!, работа с EP44 и Multiface.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "ep44",
+      "tag_alias": "ep44"
+    },
+    {
+      "tag_name": "multiface",
+      "tag_alias": "multiface"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Planned for next month SO FAR is\nCHECKADDR to test your RAM chips\nPOLLY draws polygon patterns and\nFASTERMIND is a number  strategy\npuzzle. We've  a  TASWORD  2  to\nPAGEMAKER convertor, and a  neat\nroutine to enable an EP44  type-\nwriter to act  as  the  Spectrum\nkeyboard. On disc/B cartridge is\nthe  4th  Episode  of   TICKET!,\nJIG!BLOX and an  ERASER  program\nfor MULTIFACE files.  TRI-LOADER\nis a new, intriguing file loader\nplus other undecided items..\n",
+  "body_ru_plain": "В планах на след. месяц ПОКА ЧТО\nCHECKADDR  для тестов чипов ОЗУ,\nPOLLY  рисует узоры полигонов, а\nFASTERMIND - числовая стратегия-\nголоволомка.  Есть конвертер  из\nTASWORD 2 в PAGEMAKER и классная\nутилита,  чтоб  печатная машинка\nEP44  служила  клавиатурой   для\nSpectrum. На диске/картридже  B:\n4-й  эпизод   TICKET!,  JIG!BLOX\nи программа  ERASER  для  файлов\nMULTIFACE.  TRI-LOADER  -  новый\nи интригующий  загрузчик файлов,\nплюс другие нерешённые пункты..\n",
+  "body_en": "## Lookahead\n\nPlanned for next month SO FAR is CHECKADDR to test your RAM chips POLLY draws polygon patterns and FASTERMIND is a number strategy puzzle. We've a TASWORD 2 to PAGEMAKER convertor, and a neat routine to enable an EP44 typewriter to act as the Spectrum keyboard. On disc/B cartridge is the 4th Episode of TICKET!, JIG!BLOX and an ERASER program for MULTIFACE files. TRI-LOADER is a new, intriguing file loader plus other undecided items..\n",
+  "body_ru": "## В следующем номере\n\nВ планах на след. месяц ПОКА ЧТО CHECKADDR для тестов чипов ОЗУ, POLLY рисует узоры полигонов, а FASTERMIND — числовая стратегия-головоломка. Есть конвертер из TASWORD 2 в PAGEMAKER и классная утилита, чтоб печатная машинка EP44 служила клавиатурой для Spectrum. На диске/картридже B: 4-й эпизод TICKET!, JIG!BLOX и программа ERASER для файлов MULTIFACE. TRI-LOADER — новый и интригующий загрузчик файлов, плюс другие нерешённые пункты..\n",
+  "text_type": 3
+}

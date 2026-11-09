@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "086",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of what's coming in the next issue of Outlet: keyboard membrane repair, demos by MQM and The Mad Guys, utilities, and regular columns.",
+  "meta_description_ru": "Анонс следующего выпуска журнала Outlet: ремонт клавиатурной мембраны Спектрума, демо от MQM и The Mad Guys, утилиты и постоянные рубрики.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "announcement",
+      "tag_alias": "announcement"
+    },
+    {
+      "tag_name": "demoscene",
+      "tag_alias": "demoscene"
+    },
+    {
+      "tag_name": "keyboard repair",
+      "tag_alias": "keyboard-repair"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "There is loads more to look\nforward to next month, including\ndetails of how to repair the\nSpectrum key-board membrane (any\nmodel), not one, but TWO top\nquality Demos: a quick one from\nMQM, and a wonderfully mad one\nfrom, you've guessed it, The Mad\nGuys. There's a text compressor,\nsome super Soundtracker select-\nions, more utilities for +D, and\na byte-saving method of storing\ndata in a Basic program!\n\nThere will be more music for the\n128, and of course all the reg-\nular features such as readers'\nletters, the crossword, Outwork,\netc.\n                  Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "There is loads more to look forward to next month, including details of how to repair the Spectrum key-board membrane (any model), not one, but TWO top quality Demos: a quick one from MQM, and a wonderfully mad one from, you've guessed it, The Mad Guys. There's a text compressor, some super Soundtracker selections, more utilities for +D, and a byte-saving method of storing data in a Basic program!\n\nThere will be more music for the 128, and of course all the regular features such as readers' letters, the crossword, Outwork, etc.\n\nChris.\n",
+  "body_ru": "В следующем месяце вас ждёт масса интересного: подробности о том, как отремонтировать клавиатурную мембрану Спектрума (любой модели), и не одно, а целых ДВА первоклассных демо — быстрое от MQM и удивительно безумное от кого бы вы думали? От The Mad Guys. Также будет компрессор текста, отличная подборка треков для Soundtracker, новые утилиты для +D и способ экономии байтов при хранении данных в Бейсик-программе!\n\nБудет ещё больше музыки для 128K и, разумеется, все привычные постоянные рубрики: письма читателей, кроссворд, Outwork и так далее.\n\nChris.\n",
+  "text_type": 3
+}

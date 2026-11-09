@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "047",
+  "article_id": "01_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "Brian Gaff previews upcoming software and features for the next issue of Outlet magazine, including utilities, games, and SAM Coupé content.",
+  "meta_description_ru": "Брайан Гафф рассказывает о планах на следующий номер журнала Outlet: базы данных, дисковые утилиты, игры и материалы для SAM Coupé.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "lookahead",
+      "tag_alias": "lookahead"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-3"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_en_plain": "Well,after my move last month to\na little place not a million\nmiles outside of Leicester City,\nI reckon I lost about two weeks\nwork in all so I've just had to\nthrow a few things together on\nnext month's disc. You probably\nwon't notice any difference.\n\nSo, there are still about three\nbig gaps to fill in next month's\nCONTENTS page but there is lots\nof stuff in stock. Let's have a\nlook what I HAVE got together so\nfar...\n\nThere's a neat card index-type\ndatabase - simple to use but can\nfill a disc with data. As said\nin OUTLETTERS there is a program\nto give very large formats (706K\nI think)on a DS/DD 3.5\" or 5.25\"\ndrive that is connected to a +3\nas the \"B\" drive (excellent way\nto upgrade). There'll be the\nregulars:clipart,a new crossword\npuzzle,more DEMOPIX SAM pictures\n- pages of info and ideas in the\nreaders' letters sections plus\nSAMCLASS, OUTCLASS and more 128K\nmusic(come on you SAM musicians,\nwhy don't YOU send something?).\nThere are a couple of games -one\nBASIC, one machine code. There's\na program to convert open-type\nfiles to Tasword Two or OUTWRITE\nformat on Disciple, +D or SAM.\n                        more...\n\nOh yes, there's actually a new\nmicrodrive utility to give extra\nCAT info. Although we have had\nsuch before, this one may appeal\nto you more.\n\nAs ever, I shall be packing more\nin and SAM users will be getting\nplenty of extras specific to the\nmachine. What is ready now in\nstock looks great but I can't\nsay what will be in next month\nas I'm not sure at the time of\nwriting this which of it will go\nin THIS month!\n\nYou can be sure that there will\nbe plenty for all!\n\n                        - Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "Well, after my move last month to a little place not a million miles outside of Leicester City, I reckon I lost about two weeks work in all so I've just had to throw a few things together on next month's disc. You probably won't notice any difference.\n\nSo, there are still about three big gaps to fill in next month's CONTENTS page but there is lots of stuff in stock. Let's have a look what I HAVE got together so far...\n\nThere's a neat card index-type database — simple to use but can fill a disc with data. As said in OUTLETTERS there is a program to give very large formats (706K I think) on a DS/DD 3.5\" or 5.25\" drive that is connected to a +3 as the \"B\" drive (excellent way to upgrade). There'll be the regulars: clipart, a new crossword puzzle, more DEMOPIX SAM pictures — pages of info and ideas in the readers' letters sections plus SAMCLASS, OUTCLASS and more 128K music (come on you SAM musicians, why don't YOU send something?). There are a couple of games — one BASIC, one machine code. There's a program to convert open-type files to Tasword Two or OUTWRITE format on Disciple, +D or SAM.\n\nOh yes, there's actually a new microdrive utility to give extra CAT info. Although we have had such before, this one may appeal to you more.\n\nAs ever, I shall be packing more in and SAM users will be getting plenty of extras specific to the machine. What is ready now in stock looks great but I can't say what will be in next month as I'm not sure at the time of writing this which of it will go in THIS month!\n\nYou can be sure that there will be plenty for all!\n\n- Brian.\n",
+  "body_ru": "Что ж, после моего переезда в прошлом месяце в местечко не так уж далеко от Лестера, я, пожалуй, потерял около двух недель работы. Так что мне пришлось собирать следующий диск немного в спешке. Впрочем, вы, скорее всего, даже не заметите разницы.\n\nВ оглавлении следующего номера пока остаются три больших пробела, но в запасе у меня полно всего интересного. Давайте глянем, что мне УДАЛОСЬ набрать к этому моменту...\n\nЕсть отличная база данных карточного типа — простая в использовании, но способная заполнить данными целый диск. Как уже упоминалось в OUTLETTERS, будет программа для форматирования дисков повышенной ёмкости (кажется, 706K) на дисководах 3.5\" или 5.25\" DS/DD, подключённых к +3 в качестве дисковода «B» (прекрасный способ апгрейда). Будут и традиционные рубрики: клипарт, новый кроссворд, свежие картинки DEMOPIX для SAM — страницы информации и идей в письмах читателей, а также SAMCLASS, OUTCLASS и новая музыка для 128K (эй, музыканты на SAM, почему бы ВАМ что-нибудь не прислать?). Есть пара игр — одна на Бейсике, вторая в машинных кодах. Будет программа для конвертации открытых файлов в формат Tasword Two или OUTWRITE на Disciple, +D или SAM.\n\nАх да, появится новая утилита для микродрайва, выводящая расширенную информацию по CAT. Хотя у нас уже выходило нечто подобное, этот вариант может понравиться вам больше.\n\nКак обычно, я постараюсь вместить как можно больше, и пользователи SAM получат множество эксклюзивных материалов для своей машины. То, что уже заготовлено, выглядит здорово, но я не могу точно сказать, что именно войдёт в следующий номер, так как на момент написания этих строк ещё даже не решил, что из этого пойдёт в ТЕКУЩИЙ выпуск!\n\nОдно могу сказать наверняка — интересного хватит всем!\n\n- Brian.\n",
+  "text_type": 3
+}

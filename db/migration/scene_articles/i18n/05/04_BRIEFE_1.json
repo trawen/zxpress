@@ -1,0 +1,58 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "05",
+  "article_id": "04_BRIEFE_1",
+  "source_lang": "de-AT",
+  "title_en": "Letters",
+  "title_ru": "Письма",
+  "meta_description_en": "Letters to the Scene+ editorial team: Miles Kinloch discusses the BLOCKMAKER animation routine, while Cat's Eye talks about game development and IFF conversion.",
+  "meta_description_ru": "Письма в редакцию Scene+: Майлз Кинлох о процедуре анимации BLOCKMAKER, а Cat's Eye — о разработке игры и конвертации IFF-графики.",
+  "authors": [
+    "Miles Kinloch",
+    "Cat's Eye",
+    "L.C.D."
+  ],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "letters",
+      "tag_alias": "letters"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "miles kinloch",
+      "tag_alias": "miles-kinloch"
+    },
+    {
+      "tag_name": "cat's eye",
+      "tag_alias": "cats-eye"
+    },
+    {
+      "tag_name": "l.c.d.",
+      "tag_alias": "lcd"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    }
+  ],
+  "category_ids": [
+    153,
+    154,
+    175,
+    176
+  ],
+  "body_de_plain": "Briefe: Wegen des verspäteten versands  der  Ausgabe  4  erreic\nhten  dieRedaktion nur zwei Briefe vor dem Redaktionsschluß:s -\nDear L.C.D., Many thanks for your letters and the issues of S\nCENE. Sorry  notto have written sooner, but I've been very busy\nof late.x Unfortunaly, the BLOCKMAKER Animation system can't ma\nke  use  ofcompressed code as it stands, but the actual  animati\non  routine itself comes from the program BLOCKMOVER (also PD),\nif you  wantto have a look at it. I've enclosed a disk with both\n programs.ß Keep up the good work, and long live the Speccy!0\nBye for now, Miles Kinloch (England) Hallo Miles. Thank yo\nu for the letter and  disc,  unfortunaly  my  animationswouldn't\n fit into Spectrum 48 memory if not  compressed.  Vision has dev\neloped a screen part compressor that  works  faster  thanLDIR, b\nut he does not answer me.` I'm still trying to do a good work o\nn Speccy. I hope the  Speccywill live longer than I.X L.C.D.\n Hi Tigerkralle, entschuldige daß ich mich so lange  nicht  g\nemeldet  habe,  aberhier geht es wirklich chaotisch zu. Den IFF\nConverter konnte ich inzwischen selbst ausprobieren und die Erge\nmnise sehen  wirklichsehr verlockend aus, anbei schicke ich dir\neinige meiner  Bilder für die Gallerie. Laut einer unabhängige\nr Quelle hast Du damit begonnen, dein Buchauf Tasword II umzusch\nreiben, stimmt das? wenn ja,  dann  möchte ich auch daran teilha\nben. Inzwischen habe ich begonnen, ein Spiel zu schreiben. Dac\nhte niedaß es so schwierig sein  könnte  und  möchte  dich  desh\nalb  um einige Tips und hilfen bitten. Ich verwende zum Teil D\neinen StoryTeller, aber eben nur zum Teildenn die die wichtigste\nn Programmteile kommen von mir.  Es  wird ein Abenteuerspiel mit\n Multiple  choice  Walverfahren,  basierenauf einer Zeichentrick\nserie.Ö Cat's Eye (Österreich)  Hallo Katzenauge, danke fü\nr den Brief, es macht nichts daß Du  so  lange  gezögerthast. Es\n stimmt  teilweise,  was  Du  von  Deiner  \"unabhängiger Quelle\"\n  gehört  hast,  ich  transferiere  das  Manuskript: aufDiskett\ne wenn ich Zeit habe. Das fertige Produkt  wird  dann  aneinige\nVerlage  geschickt  und  wird  zu  der  Finanzierung   desSpectr\nums beitragen, vielleicht drucke ich aber ein  Teil  davonin der\n  SCENE  ab.  Momentan  bin  ich  noch  ziemlich  mit   derProgr\nammierung von Legacy beschäftigt.) Toll, schreib doch ein Spiel\n, ich habe wirklich nichts  dagegen,auf der Disk die ich dir sch\nicke, findest Du  einige  Tools  mit denen ich arbeite. Darf i\nch raten? Handelt Dein Spiel entweder von Cat's  Eye,  dendrei J\napanischen Kunstdiebinen, oder von Thundercats?  Kann  ich das S\npiel für die SCENE haben wenn es fertig ist?1 Deine Bilder ähne\nln meinen sehr und kommen auch in die Gallerie.Hast Du auch Pers\nonal Paint benutzt um sie zu schattieren?\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### Letters\n\nDue to the delayed shipping of Issue 4, only two letters reached the editorial team before the deadline:\n\n***\n\nDear L.C.D.,\n\nMany thanks for your letters and the issues of SCENE. Sorry not to have written sooner, but I've been very busy of late.\n\nUnfortunately, the BLOCKMAKER animation system can't make use of compressed code as it stands, but the actual animation routine itself comes from the program BLOCKMOVER (also PD), if you want to have a look at it. I've enclosed a disk with both programs.\n\nKeep up the good work, and long live the Speccy!\n\nBye for now,\n**Miles Kinloch (England)**\n\n***\n\nHello Miles,\n\nThank you for the letter and disc. Unfortunately, my animations wouldn't fit into Spectrum 48 memory if not compressed. Vision has developed a screen part compressor that works faster than LDIR, but he does not answer me.\n\nI'm still trying to do good work on Speccy. I hope the Speccy will live longer than I.\n\n**L.C.D.**\n\n***\n\nHi Tigerkralle,\n\nExcuse me for not getting in touch for so long, but things have been truly chaotic around here. In the meantime, I was able to test the IFF converter myself, and the results look very tempting indeed; enclosed I am sending you a few of my pictures for the gallery.\n\nAccording to an independent source, you have started retyping your book in Tasword II — is that true? If so, I'd like to have a share in it as well. Meanwhile, I've started writing a game. I never thought it could be so difficult, so I would like to ask you for a few tips and some help. In part, I'm using your StoryTeller, but only partly, because the most crucial program routines come from me. It will be an adventure game with multiple-choice decision making, based on an animated cartoon series.\n\n**Cat's Eye (Austria)**\n\n***\n\nHello Katzenauge,\n\nThanks for the letter! Don't worry about taking your time. What you heard from your \"independent source\" is partly true: I am transferring the manuscript onto disk whenever I find the time. The finished product will then be submitted to several publishers and will contribute toward funding the Spectrum; perhaps I will also print an excerpt of it in SCENE. At the moment, I am still quite busy programming *Legacy*.\n\nAwesome, go ahead and write a game, I definitely don't mind! On the disk I'm sending you, you will find several tools that I work with. May I take a guess? Is your game based either on *Cat's Eye* (the three Japanese art thieves) or on *Thundercats*? Can I have the game for SCENE once it is finished?\n\nYour pictures look very much like mine and will definitely be included in the gallery. Did you also use Personal Paint to do the shading?\n\n**L.C.D.**\n",
+  "body_ru": "### Письма\n\nИз-за задержки с рассылкой 4-го номера в редакцию до крайнего срока успели дойти всего два письма:\n\n***\n\nДорогой L.C.D.!\n\nБольшое спасибо за твои письма и выпуски SCENE. Прости, что не написал раньше — в последнее время я был очень занят.\n\nК сожалению, система анимации BLOCKMAKER в её текущем виде не может работать со сжатым кодом, однако сама процедура анимации взята из программы BLOCKMOVER (тоже PD), если захочешь взглянуть. Я приложил дискету с обеими программами.\n\nПродолжай в том же духе, и да здравствует Speccy!\n\nПока,\n**Miles Kinloch (Англия)**\n\n***\n\nПривет, Майлз.\n\nСпасибо за письмо и диск. К сожалению, мои анимации без компрессии просто не поместятся в память Spectrum 48K. Vision разработал компрессор фрагментов экрана, работающий быстрее, чем LDIR, но он мне не отвечает.\n\nЯ всё ещё стараюсь делать хорошие вещи на Speccy. Надеюсь, Speccy проживёт дольше, чем я.\n\n**L.C.D.**\n\n***\n\nПривет, Tigerkralle!\n\nИзвини, что так долго не давал о себе знать, но здесь у нас творится форменный хаос. Тем временем мне удалось самому опробовать IFF-конвертер, и результаты выглядят действительно заманчиво; прилагаю несколько своих картинок для галереи.\n\nПо сведениям из независимого источника, ты начал перебивать свою книгу в Tasword II — это правда? Если да, я бы тоже хотел с ней ознакомиться. Тем временем я начал писать игру. Никогда не думал, что это окажется настолько сложно, поэтому хочу попросить у тебя пару советов и помощь. Частично я использую твой StoryTeller, но лишь частично, поскольку самые важные части программы написаны мной лично. Это будет приключенческая игра с множественным выбором действий, основанная на одном мультсериале.\n\n**Cat's Eye (Австрия)**\n\n***\n\nПривет, Кошачий Глаз!\n\nСпасибо за письмо. Ничего страшного, что так долго тянул. То, что ты слышал от своего «независимого источника», верно лишь отчасти: я переношу рукопись на дискету, когда появляется свободное время. Готовый вариант будет отправлен в несколько издательств и поможет с финансированием Спектрума; возможно, часть текста я опубликую и в SCENE. В данный момент я ещё изрядно занят программированием игры *Legacy*.\n\nЗдорово, обязательно пиши игру, я только за! На диске, который я тебе высылаю, найдёшь несколько утилит, с которыми работаю сам. Можно угадаю? Твоя игра либо про *Cat's Eye* (трёх японских воровок картин), либо по *Thundercats*? Смогу ли я получить игру для SCENE, когда она будет готова?\n\nТвои картинки очень похожи на мои и обязательно попадут в галерею. Ты тоже использовал Personal Paint для наложения теней?\n\n**L.C.D.**\n",
+  "text_type": 3
+}

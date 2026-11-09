@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "125",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонсы следующего номера",
+  "meta_description_en": "A preview of Outlet issue #126: four-stroke engine animation, AY sound chip guide, printer compatibility overview, utilities, Star Trek game, and text adventure.",
+  "meta_description_ru": "Анонс 126-го номера журнала Outlet: анимация четырёхтактного двигателя, программирование чипа AY, гид по принтерам, новые утилиты, игра во вселенной Star Trek и квест.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "ay-3-8912",
+      "tag_alias": "ay-3-8912"
+    },
+    {
+      "tag_name": "printers",
+      "tag_alias": "printers"
+    },
+    {
+      "tag_name": "star trek",
+      "tag_alias": "star-trek"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Back in my student days, a group\nof four fellow young engineers\nperfected their party-piece,\nwhich was to stand in line\nrepresenting the pistons of a\nfour-cylinder four-stroke\ninternal combustion engine. With\ntheir hands on their heads for\nthe inlet and outlet valves,\nknees would be bent in the sequ-\nence 1,3,4,2 as each piston went\ndown and up, and hands would be\nraised for the opening of each\nvalve at the appropriate time.\n\n\nSound effects were added by\nnoisily sucking and blowing for\ninlet and outlet strokes, with a\nbang as each cylinder fired. It\nwas most amusing to watch!\n\nIn next month's OUTLET there is\na neatly detailed,variable-speed\nanimated demonstration of the\nfour-stroke cycle.Not as hilari-\nous as the human representation,\nI'm afraid and without sound\neffects but fascinating and ins-\ntructive for anyone not familiar\nwith the workings of engines.\nAlso, programmers may be inter-\nested to note how the animation\nis created by indexing a table\nin memory and directing the\ntable contents to different\naddresses in the display file.\n\n\nAnother very interesting and\ninformative program next month\nexplains the AY sound chip and\ndemonstrates how to program it.\nThe 128K Spectrum Manual barely\nmentions the sound chip; this\ngoes into the finer details and\npresents the information in a\nmost unusual and novel way.\n\nContinuing with the informative\ntheme is a DRIVECHAT explaining\nabout printers and their compat-\nibility which will be very use-\nful for anybody thinking of re-\nplacing their printer.\n\nThere are several new utilities,\nincluding one to magnify text on\nscreen,one keeps track of credit\ncards,a rapid screen compressor,\nand a pocket phone-directory.\n\nOn the leisure side, there is a\nlightly amusing collection of\nCLIPART, and following on from\nthe VAXTREK adventures which we\nall enjoyed as they were serial-\nised in 23 amazing episodes in\nIssues #97 to #119. Now, in next\nmonth's issue, YOU yourself can\ntake command of the ENTERPRISE,\npursuing the dreaded Klingons to\nthe far reaches of the Galaxy\nand eventually destroying them?\n\nFinally, there is an absorbing\ntext adventure which takes you\ninto the harrowing world of\nespionage.\n\nWell, there seems to be plenty\nof 'meat' to look forward to, as\nwell as all the regular features\n                       Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Back in my student days, a group of four fellow young engineers perfected their party-piece, which was to stand in line representing the pistons of a four-cylinder four-stroke internal combustion engine. With their hands on their heads for the inlet and outlet valves, knees would be bent in the sequence 1, 3, 4, 2 as each piston went down and up, and hands would be raised for the opening of each valve at the appropriate time.\n\nSound effects were added by noisily sucking and blowing for inlet and outlet strokes, with a bang as each cylinder fired. It was most amusing to watch!\n\nIn next month's OUTLET there is a neatly detailed, variable-speed animated demonstration of the four-stroke cycle. Not as hilarious as the human representation, I'm afraid, and without sound effects, but fascinating and instructive for anyone not familiar with the workings of engines. Also, programmers may be interested to note how the animation is created by indexing a table in memory and directing the table contents to different addresses in the display file.\n\nAnother very interesting and informative program next month explains the AY sound chip and demonstrates how to program it. The 128K Spectrum Manual barely mentions the sound chip; this goes into the finer details and presents the information in a most unusual and novel way.\n\nContinuing with the informative theme is a DRIVECHAT explaining about printers and their compatibility, which will be very useful for anybody thinking of replacing their printer.\n\nThere are several new utilities, including one to magnify text on screen, one to keep track of credit cards, a rapid screen compressor, and a pocket phone-directory.\n\nOn the leisure side, there is a lightly amusing collection of CLIPART, and following on from the VAXTREK adventures which we all enjoyed as they were serialised in 23 amazing episodes in Issues #97 to #119. Now, in next month's issue, YOU yourself can take command of the ENTERPRISE, pursuing the dreaded Klingons to the far reaches of the Galaxy and eventually destroying them?\n\nFinally, there is an absorbing text adventure which takes you into the harrowing world of espionage.\n\nWell, there seems to be plenty of 'meat' to look forward to, as well as all the regular features.\n\nChris.\n",
+  "body_ru": "В мои студенческие годы четверо будущих инженеров довели до совершенства свой коронный номер: они выстраивались в ряд, изображая поршни четырёхцилиндрового четырёхтактного двигателя внутреннего сгорания. Держа руки на головах (руки изображали впускные и выпускные клапаны), они поочерёдно приседали в последовательности 1, 3, 4, 2, когда каждый «поршень» двигался вверх и вниз, и в нужный момент вскидывали руки при открытии соответствующего клапана.\n\nЗвуковые эффекты создавались громким втягиванием и выдуванием воздуха на тактах впуска и выпуска, а в момент зажигания в каждом цилиндре раздавался хлопок. Смотрелось это невероятно забавно!\n\nВ следующем выпуске OUTLET вас ждёт аккуратно прорисованная анимационная демонстрация четырёхтактного цикла с регулируемой скоростью. Боюсь, она не настолько уморительна, как человеческое исполнение, да и звуковых эффектов в ней нет, но она будет крайне увлекательной и познавательной для каждого, кто ещё не знаком с принципом работы двигателей. Кроме того, программистам может быть любопытно изучить, как анимация реализована с помощью индексации таблицы в памяти и вывода её содержимого по разным адресам экранной области.\n\nЕщё одна очень интересная и полезная программа следующего номера посвящена звуковому чипу AY и показывает, как его программировать. В руководстве к ZX Spectrum 128K звуковой процессор едва упоминается; этот же материал подробно рассматривает тонкости работы с ним и преподносит информацию весьма необычным и оригинальным способом.\n\nТему полезных материалов продолжит DRIVECHAT о принтерах и их совместимости, что окажется очень кстати для всех, кто подумывает о замене своего печатающего устройства.\n\nТакже появится несколько новых утилит, в том числе программа для увеличения экранного текста, органайзер кредитных карт, быстрый упаковщик экранов и карманный телефонный справочник.\n\nЧто касается раздела развлечений, вас ожидает забавная коллекция клипартов CLIPART, а вслед за приключениями VAXTREK, которыми мы наслаждались на протяжении 23 захватывающих серий с 97-го по 119-й выпуски, в следующем номере ВЫ сами сможете принять командование «Энтерпрайзом»! Сможете ли вы преследовать грозных клингонов до самых дальних уголков Галактики и в конце концов уничтожить их?\n\nНаконец, вас ждёт захватывающий текстовый квест, который перенесёт вас в суровый и полный опасностей мир шпионажа.\n\nЧто ж, поводов ждать следующий номер предостаточно — и это не считая всех наших постоянных рубрик!\n\nChris.\n",
+  "text_type": 3
+}

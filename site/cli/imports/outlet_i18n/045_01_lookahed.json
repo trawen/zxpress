@@ -1,0 +1,43 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "045",
+  "article_id": "01_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A preview of what is planned for the next issue of Outlet: upcoming games, EXBAS, SAM Coupé utilities, and hardware articles.",
+  "meta_description_ru": "Анонс материалов следующего выпуска журнала Outlet: планируемые игры, расширение EXBAS, утилиты для SAM Coupé и статьи о железе.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "lookahead",
+      "tag_alias": "lookahead"
+    },
+    {
+      "tag_name": "plus d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Planned so far for next month is\na full-screen clock (with a face\nand hands!); BOMB! - a strategy\npuzzle; a great version of LIFE\nwith large \"lifeforms\"; a sound-\nto-light kaleidoscopic display;\nCOMBITYPE, which combines parts\nof different character sets and\nmore 128K music with a selection\nof modern guitar solos! There's\na big DRIVECHAT section covering\nUNIDOS BASIC, more on Scart,gold\nedge connectors, postage advice\nand info on address 23728.\n\nSpeaking of UNIDOS BASIC,we have\nour own extended BASIC (for use\nwith the +D) called \"EXBAS\" next\nmonth with loads of extra key-\nwords and commands etc. There's\na new crossword(they keep coming\nin - have you seen THIS month's\nmonster!) as well as all the old\nregulars like OUTCLASS,SAMCLASS,\nOUTLETTERS and LOOKOUT etc.There\nis SAMTOD,a program to alter SAM\ncode and SCREEN$ files on disc\nto Disciple/+D format,useful for\ntransferring text from SAM to\nSpectrum. There should be room\nfor at least one more thing in\nthe main OUTLET as well as extra\nstuff in ADD-ENDERS and,as usual\nif any programs don't convert to\nSAM, I've many SAM-only programs\nto add!\n                        - Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "Planned so far for next month is a full-screen clock (with a face and hands!); BOMB! - a strategy puzzle; a great version of LIFE with large \"lifeforms\"; a sound-to-light kaleidoscopic display; COMBITYPE, which combines parts of different character sets and more 128K music with a selection of modern guitar solos! There's a big DRIVECHAT section covering UNIDOS BASIC, more on Scart, gold edge connectors, postage advice and info on address 23728.\n\nSpeaking of UNIDOS BASIC, we have our own extended BASIC (for use with the +D) called \"EXBAS\" next month with loads of extra keywords and commands etc. There's a new crossword (they keep coming in - have you seen THIS month's monster!) as well as all the old regulars like OUTCLASS, SAMCLASS, OUTLETTERS and LOOKOUT etc. There is SAMTOD, a program to alter SAM code and SCREEN$ files on disc to Disciple/+D format, useful for transferring text from SAM to Spectrum. There should be room for at least one more thing in the main OUTLET as well as extra stuff in ADD-ENDERS and, as usual if any programs don't convert to SAM, I've many SAM-only programs to add!\n\n- Brian.\n",
+  "body_ru": "В следующем месяце пока планируются: полноэкранные часы (с циферблатом и стрелками!); BOMB! — стратегическая головоломка; отличная версия игры «Жизнь» с крупными «формами жизни»; цветомузыкальный калейдоскоп; COMBITYPE, объединяющий части различных наборов символов; а также новая музыка для 128K с подборкой современных гитарных соло! В рубрике DRIVECHAT вас ждёт большой раздел, посвящённый UNIDOS BASIC, продолжение темы SCART, золочёные краевые разъёмы, советы по пересылке почтой и информация об адресе 23728.\n\nК слову об UNIDOS BASIC: в следующем месяце мы представим собственный расширенный Бейсик (для контроллера +D) под названием «EXBAS» с кучей дополнительных ключевых слов, команд и т. д. Будет и новый кроссворд (их продолжают присылать — вы видели монстра в ЭТОМ месяце?!), а также все привычные постоянные рубрики: OUTCLASS, SAMCLASS, OUTLETTERS, LOOKOUT и другие. Также выйдет SAMTOD — утилита для конвертации кода и экранов (SCREEN$) с дисков SAM в формат Disciple/+D, что очень удобно для переноса текстов с SAM на Spectrum. В основном выпуске OUTLET должно остаться место как минимум ещё для одной вещи, плюс материалы в ADD-ENDERS, а если какие-то программы не запустятся на SAM, у меня припасено множество эксклюзивных программ чисто для SAM Coupé!\n\n— Brian.\n",
+  "text_type": 3
+}

@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "108",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of Outlet #109: part two of the Echologia demo, +3 disk access from 48K BASIC, new utilities, party clip art, and music.",
+  "meta_description_ru": "Анонс номера Outlet #109: вторая часть мегадемо Echologia, доступ к диску +3 из 48K BASIC, новые утилиты, клипарт для открыток и музыка.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "echologia",
+      "tag_alias": "echologia"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus-3"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    },
+    {
+      "tag_name": "clip art",
+      "tag_alias": "clip-art"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Needless to say,the second help-\ning of the huge Echologia demo\nwhich is in next month's OUTLET\nis even more amazing than the\nfirst.  How do they do it? And\nthere's more to come in a future\nissue of OUTLET.\n\nAs usual the content of the Sep-\ntember issue is wonderfully var-\nied, with utilities to printout\nthe Basic from a Snapshot anoth-\ner to manipulate file reference\nnumbers, and another to \"date-\nstamp\" your files for posterity.\n\n\nFor +3 users there is a utility\nto provide disk access from 48K\nBASIC!\n\nPlanning a party or needing inv-\nitations or greetings printed?\nNext month's CLIPART will prov-\nide just what you require. The\nDRIVECHAT shares out some useful\nBasic tips for programmers, and\nfor those who like to juggle\nnumbers about, there is a whole\ncompendium of routines to play\nwith.\n\nAlso there is some excellent\n48k music and as usual, another\nstunning demo to round it all\noff.\n                         Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Needless to say, the second helping of the huge Echologia demo which is in next month's OUTLET is even more amazing than the first. How do they do it? And there's more to come in a future issue of OUTLET.\n\nAs usual the content of the September issue is wonderfully varied, with utilities to printout the Basic from a Snapshot another to manipulate file reference numbers, and another to \"date-stamp\" your files for posterity.\n\nFor +3 users there is a utility to provide disk access from 48K BASIC!\n\nPlanning a party or needing invitations or greetings printed? Next month's CLIPART will provide just what you require. The DRIVECHAT shares out some useful Basic tips for programmers, and for those who like to juggle numbers about, there is a whole compendium of routines to play with.\n\nAlso there is some excellent 48k music and as usual, another stunning demo to round it all off.\n\nChris.\n",
+  "body_ru": "Излишне говорить, что вторая часть масштабного демо Echologia, которая выйдет в следующем выпуске OUTLET, впечатляет ещё сильнее, чем первая. Как они это делают? И это ещё не всё — продолжение появится и в дальнейших номерах OUTLET.\n\nКак обычно, содержание сентябрьского выпуска на редкость разнообразно: утилита для распечатки Бейсик-листинга из снапшота, программа для изменения номеров файлов, а также утилита для простановки «даты» на файлы для потомков.\n\nДля владельцев модели +3 припасена утилита, обеспечивающая доступ к дисководу прямо из 48K BASIC!\n\nПланируете вечеринку или собираетесь напечатать приглашения и открытки? Рубрика CLIPART в следующем месяце предложит как раз то, что нужно. В DRIVECHAT появятся полезные советы по Бейсику для программистов, а любителям жонглировать числами наверняка понравится целый сборник готовых процедур.\n\nКроме того, вас ждёт отличная 48K-музыка и, как всегда, ещё одно великолепное демо напоследок.\n\nChris.\n",
+  "text_type": 3
+}

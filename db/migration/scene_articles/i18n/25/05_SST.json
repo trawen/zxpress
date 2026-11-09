@@ -1,0 +1,48 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "25",
+  "article_id": "05_SST",
+  "source_lang": "de-AT",
+  "title_en": "Super Star Trek",
+  "title_ru": "Super Star Trek",
+  "meta_description_en": "A brief look at Super Star Trek on ZX Spectrum: a classic text-based strategy game pitting the Enterprise against the Klingon Empire.",
+  "meta_description_ru": "Краткое описание игры Super Star Trek для ZX Spectrum: текстовая стратегия о противостоянии «Энтерпрайза» и Клингонской империи.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    },
+    {
+      "tag_name": "super star trek",
+      "tag_alias": "super-star-trek"
+    },
+    {
+      "tag_name": "star trek",
+      "tag_alias": "star-trek"
+    },
+    {
+      "tag_name": "strategy",
+      "tag_alias": "strategy"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "SUPER_ST ü SUPER STAR TREK Wie in Allen Star Trek Spielen, geht\nes hier um einen Krieg\"Enterprise gegan das klingonische\nImperium\". Alle Befehlewerden per Tastatur eingegeben und sind\nim Programm bis insletzte Detail beschrieben so daß es keine\nProbleme bereitensollte den Klingonen kräftig mit Phasern\neinzuheizen. Für alle die noch nie ein Star Trek Spiel gesehen\nhaben: Es gehthier nur um Strategie! Keine Action! Kein Blut! o -\nAs in all Star Trek games, you have to defeat\nKlingonbattleships. All orders will be put in by keyboard\ncommands,there is a instruction inside this programm. This game\nhasnotching to do with my STAR TREK CLASSIC, that I have started\ntocode\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**SUPER_ST / SUPER STAR TREK**\n\nAs in all Star Trek games, the subject here is war: the *Enterprise* against the Klingon Empire. All commands are entered via the keyboard and are documented in the program down to the finest detail, so giving the Klingons a proper blast with phasers shouldn't present any trouble at all.\n\nFor anyone who has never seen a Star Trek game before: this is purely about strategy! No action! No blood!\n\n*(Author's original English note:)*  \nAs in all Star Trek games, you have to defeat Klingon battleships. All orders will be put in by keyboard commands, there is an instruction inside this program. This game has nothing to do with my STAR TREK CLASSIC, that I have started to code.\n",
+  "body_ru": "**SUPER_ST / SUPER STAR TREK**\n\nКак и во всех играх серии Star Trek, речь здесь идёт о войне: «Энтерпрайз» против Клингонской империи. Все команды вводятся с клавиатуры и подробно разъяснены в самой программе, так что как следует задать жару клингонам из фазеров не составит никакого труда.\n\nДля тех, кто ни разу в жизни не видел игр Star Trek: здесь всё основано исключительно на стратегии! Никакого экшена! Никакой крови!\n\n*(Оригинальная англоязычная приписка автора:)*  \nКак и во всех играх Star Trek, вам предстоит уничтожать клингонские боевые корабли. Все приказы вводятся с клавиатуры, внутри программы есть руководство. Эта игра не имеет отношения к моему проекту STAR TREK CLASSIC, написание которого я начал.\n",
+  "text_type": 3
+}

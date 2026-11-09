@@ -1,0 +1,41 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "141",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (дополнение)",
+  "meta_description_en": "A brief editorial note from Ron and Brian Cavers in Outlet #141 (May 1999) regarding disk space on the 3\" version and a call for letters.",
+  "meta_description_ru": "Короткая редакторская заметка Рона и Брайана Каверсов из Outlet #141 (май 1999) о нехватке места на 3-дюймовых дискетах и просьбе присылать больше писем.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus3"
+    },
+    {
+      "tag_name": "3-inch disk",
+      "tag_alias": "3-inch-disk"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "M A Y ,   1 9 9 9\n\nWe might be a bit short of room\non the +3 3\" disk this month so\njust in case, we're leaving out\nthe ADDENDERS.There are VERY few\nstill taking the 3\" and we've\njust got some more disks so they\nshould last us a year or so.\n\nThere's a reasonable variety\nthis month but we can always use\nmore utilities - and PLEASE,more\nletters!  Enjoy!\n\n                     Ron & Brian\n\n\n\n\n\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n   Email: outletmag@yahoo.com.\n",
+  "body_ru_plain": "",
+  "body_en": "MAY, 1999\n\nWe might be a bit short of room on the +3 3\" disk this month so just in case, we're leaving out the ADDENDERS. There are VERY few still taking the 3\" and we've just got some more disks so they should last us a year or so.\n\nThere's a reasonable variety this month but we can always use more utilities — and PLEASE, more letters! Enjoy!\n\nRon & Brian\n\n---\n\nOUTLET is produced by\n\nChris Oliver  \nRon & Brian Cavers  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF  \n\nEmail: outletmag@yahoo.com.\n",
+  "body_ru": "МАЙ, 1999\n\nВ этом месяце у нас может оказаться маловато места на 3-дюймовом диске для +3, поэтому на всякий случай мы опускаем рубрику ADDENDERS. Читателей, которые всё ещё заказывают 3\" версию, осталось ОЧЕНЬ мало, и мы как раз раздобыли ещё дискет, так что их должно хватить примерно на год.\n\nВ этом номере собрана неплохая подборка материалов, но нам всегда пригодятся новые утилиты — и ПОЖАЛУЙСТА, пишите больше писем! Приятного чтения!\n\nRon & Brian\n\n---\n\nЖурнал OUTLET выпускают:\n\nChris Oliver  \nRon & Brian Cavers  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF  \n\nEmail: outletmag@yahoo.com.\n",
+  "text_type": 3
+}

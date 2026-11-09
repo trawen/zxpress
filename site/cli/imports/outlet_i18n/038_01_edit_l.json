@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "038",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "От редакции",
+  "meta_description_en": "Editorial from Outlet #038 (October 1990): readership growth, Chezron Software updates, and an important notice for SAM Coupé owners regarding the new ROM pack.",
+  "meta_description_ru": "Редакторская колонка Outlet №38 (октябрь 1990): рост аудитории журнала, планы редакции Chezron Software и предупреждение для владельцев SAM Coupé об обновлении ПЗУ.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "rom",
+      "tag_alias": "rom"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "O C T O B E R ,  1 9 9 0\nOUTLET's readership continues to\ngrow and so does our workload.It\nmeans the next year or so may be\nespecially difficult for us.Many\nprojects are being held up while\nwe concentrate on producing each\nissue of OUTLET!\n\nNevertheless we keep considering\nand experimenting with new ideas\nto make the whole operation more\nefficient and hope to maintain a\nreasonable service as usual.\n\nMay we remind SAM users that the\nold ROM will no longer be tested\nwith each new issue of OUTLET in\nthe near future.We must urge you\nto order the new ROM pack(if you\nhave not already got it)from SAM\nCOMPUTERS LTD or you may find it\nimpossible to run OUTLET. If you\ndo get any major crashes then it\nis almost certainly caused by an\nold ROM fault as we check OUTLET\ncarefully.The odd bug does creep\nin though and all readers should\nremember- programs in ADD-ENDERS\ncan't ALL be guaranteed to work!\n\nWe CAN guarantee WE are working,\nhowever,both to produce the best\nmagazine we can every month(with\nyour help)and to provide as much\nadvice and information as we are\nable!\n\nEnjoy the magazine! There should\nbe something for everybody since\nwe have music,entertainment,clip\nart, utilities, news,OUTLETTERS,\nadverts, information- and even a\ncrossword!\n\n\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_ru_plain": "О К Т Я Б Р Ь ,   1 9 9 0\nЧисло читателей OUTLET растёт,\nа с ним и наша нагрузка. Это\nзначит, что ближайший год может\nбыть для нас особенно нелёгким.\nМногие проекты откладываются,\nпока мы сосредоточены на выпуске\nкаждого номера OUTLET!\n\nТем не менее, мы продолжаем\nобдумывать и испытывать новые\nидеи, чтобы сделать работу ещё\nэффективнее, и надеемся, как\nвсегда, держать планку сервиса.\n\nНапоминаем пользователям SAM,\nчто в скором времени старое ПЗУ\nбольше не будет проверяться с\nкаждым новым номером OUTLET. Мы\nнастоятельно советуем заказать\nновый ROM pack (если у вас его\nещё нет) в SAM COMPUTERS LTD,\nиначе OUTLET может просто не\nзапуститься. Если у вас будут\nвылеты, то почти наверняка из-за\nошибки старого ПЗУ, ведь OUTLET\nмы тщательно проверяем. Хотя и\nредкий баг проскакивает, так что\nпомните: работа программ из\nADD-ENDERS гарантирована НЕ вся!\n\nНо мы МОЖЕМ гарантировать, что\nСАМИ работаем вовсю — и чтобы\nкаждый месяц выпускать лучший\nжурнал (с вашей помощью!), и\nчтобы делиться максимумом\nполезной информации и советов!\n\nПриятного чтения! Здесь каждый\nнайдёт что-то для себя, ведь у\nнас есть музыка, развлечения,\nклипарт, утилиты, новости,\nOUTLETTERS, реклама, полезные\nсведения — и даже кроссворд!\n\n\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_en": "## Editorial (late)\n\n### October, 1990\n\nOUTLET's readership continues to grow and so does our workload. It means the next year or so may be especially difficult for us. Many projects are being held up while we concentrate on producing each issue of OUTLET!\n\nNevertheless we keep considering and experimenting with new ideas to make the whole operation more efficient and hope to maintain a reasonable service as usual.\n\nMay we remind SAM users that the old ROM will no longer be tested with each new issue of OUTLET in the near future. We must urge you to order the new ROM pack (if you have not already got it) from SAM COMPUTERS LTD or you may find it impossible to run OUTLET. If you do get any major crashes then it is almost certainly caused by an old ROM fault as we check OUTLET carefully. The odd bug does creep in though and all readers should remember — programs in ADD-ENDERS can't ALL be guaranteed to work!\n\nWe CAN guarantee WE are working, however, both to produce the best magazine we can every month (with your help) and to provide as much advice and information as we are able!\n\nEnjoy the magazine! There should be something for everybody since we have music, entertainment, clip art, utilities, news, OUTLETTERS, adverts, information — and even a crossword!\n\nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "body_ru": "## Октябрь, 1990\n\nЧисло читателей OUTLET растёт, а с ним и наша нагрузка. Это значит, что ближайший год может быть для нас особенно нелёгким. Многие проекты откладываются, пока мы сосредоточены на выпуске каждого номера OUTLET!\n\nТем не менее, мы продолжаем обдумывать и испытывать новые идеи, чтобы сделать работу ещё эффективнее, и надеемся, как всегда, держать планку сервиса.\n\nНапоминаем пользователям SAM, что в скором времени старое ПЗУ больше не будет проверяться с каждым новым номером OUTLET. Мы настоятельно советуем заказать новый ROM pack (если у вас его ещё нет) в SAM COMPUTERS LTD, иначе OUTLET может просто не запуститься. Если у вас будут вылеты, то почти наверняка из-за ошибки старого ПЗУ, ведь OUTLET мы тщательно проверяем. Хотя и редкий баг проскакивает, так что помните: работа программ из ADD-ENDERS гарантирована НЕ вся!\n\nНо мы МОЖЕМ гарантировать, что САМИ работаем вовсю — и чтобы каждый месяц выпускать лучший журнал (с вашей помощью!), и чтобы делиться максимумом полезной информации и советов!\n\nПриятного чтения! Здесь каждый найдёт что-то для себя, ведь у нас есть музыка, развлечения, клипарт, утилиты, новости, OUTLETTERS, реклама, полезные сведения — и даже кроссворд!\n\n```text\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n```\n",
+  "text_type": 3
+}

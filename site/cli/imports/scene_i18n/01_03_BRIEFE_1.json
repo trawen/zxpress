@@ -1,0 +1,54 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "01",
+  "article_id": "03_BRIEFE_1",
+  "source_lang": "de-AT",
+  "title_en": "Letters",
+  "title_ru": "Письма",
+  "meta_description_en": "Letters to the editor in Scene+ #01 from Ronald Raaijen (Netherlands) regarding club meetings and emulator tape files, and Miles Kinloch (UK) regarding his MK Collection Disk.",
+  "meta_description_ru": "Письма в редакцию журнала Scene+ #01: Рональд Раайен (Нидерланды) о клубных встречах и файлах для эмулятора, а также Майлз Кинлок (Англия) о диске MK Collection.",
+  "authors": [
+    "Ronald Raaijen",
+    "Miles Kinloch",
+    "L.C.D."
+  ],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "letters",
+      "tag_alias": "letters"
+    },
+    {
+      "tag_name": "plus-d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "miles kinloch",
+      "tag_alias": "miles-kinloch"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    }
+  ],
+  "category_ids": [
+    153,
+    154,
+    175,
+    176
+  ],
+  "body_de_plain": "...  Planst  Du  ein  großes  Clubtreffen  wie  in   Köln    und\nFilderstadt? Ein bischen weniger  darf auch sein,  es  muß  aber\ngemütlich sein.\nWenn es soweit ist, teile es  den  Holländischen  Freunden  mit,\ndann kann es eingeplant werden, vielleicht kommen wir  dann  bei\nDir vorbei, Wien ist eine schöne Stadt.\nIst es  möglich  die  Programme  auch  als  Tape-Files  für  den\nEmulator zu machen?...\n\nRonald Raaijen (Holland)\n\n(Sorry wenn ich den Wortlaut nicht 100 %-ig wiedergegeben  habe,\naber sowohl die Gramatik, wie auch die  Handschrift  erschwerten\ndie Aufgabe. LCD.)\n\nSehr geehrter Herr Raajien,\n\nDer Termin für das Clubtreffen steht noch nicht  fest,  es  gibt\nverhandlungen  über  verschiedene  Räumlichkeiten  die  für  das\nTreffen in Frage kommen. Im ASC sind im Augenblick auch noch  zu\nwenige Mitglieder aus Wien, was sich, wie ich hoffe, bald ändert\nEs steht fest, daß das Treffen am einem  Wochenende  stattfinden\nwird, wahrscheinlich an einem Samstag. Ein Termin vor dem Sommer\n'96 wird wohl unmöglich sein, aber im August oder September  ist\nes schon sehr viel wahrscheinlicher.  Abgesehen  davon,  brauche\nich mindestens 20 Zusagen damit es sich lohnt. Gemütlich  wird's\nauf jeden Fall und der Termin wird  rechtzeitig  bekanntgegeben.\nHerr Koning und Sie werden es natürlich auch erfahren, denn alle\ngenauen Informationen und  die  Wegbeschreibung  werden  in  der\nSCENE erscheinen.\nDie SCENE als Tape Files für den Emulator  zu  speichern  dürfte\nProbleme Bereiten, da ich einen Orginal-Spectrum habe und  einen\nPC nicht besitze. Sofern mir bekannt, hat der Emulator aber  die\nMöglichkeit +D Disks zu lesen, also dürfte das kein Problem  für\nSie darstellen. Bei der Gelegenheit möchte ich noch eine  kleine\nKorrektur einbringen: Ich kann zwar kein Holländisch,  aber  mir\nfiel in dem SGG Info auf daß in  der  SCENE-Beschreibung  einige\nFehler stecken, so z.B. erscheint die DISK-SCENE, die ich fortan\nSCENE+ nennen werde, nicht erst seit Febuar, sondern schon  seit\nJänner, abgesehen davon, nicht auf OPUS sondern auf +D Disk, das\nmit dem Tape stimmt! Weitere Fehler konnte ich wegen  mangelnden\nSprachkentnissen nicht finden und um ehrlich zu  sein,  verstehe\nich nichts außer der Beschreibung.\n\n L.C.D.\n\nDear Leszek,\n\nMany thanks for sending me your new games -  excellent  quality,\nand a pleasure to play.\nI'm enclosing my 'MK Collection Disk', recently updated with  my\nlatest items. Anyway, please feel free to include any of  my  PD\nprograms in your Library, and good  luck,  too,  with  your  new\nclub...\n\nMiles Kinloch (England)\n\nThank you for the MK Collection Disk. I have included it  to  my\nPD Library, the programms are excellent too and a good value for\nany  +D user. I think, I will  include  some  Programms  on  the\nSCENE.\nBy the way, I   will  continue  to  write  more  games  in  same\nquality. My next project will be Pyramid Patiece, but it is  not\neasy to write more than one programm at same time and a magazine\ntoo.\n\n L.C.D.\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "...Are you planning a big club meeting like the ones in Cologne and Filderstadt? A bit smaller would also be fine, but it has to be cozy.\n\nWhen the time comes, let the Dutch friends know so we can plan for it; maybe we'll drop by your place, Vienna is a beautiful city.\n\nIs it possible to also release the programs as tape files for the emulator?...\n\nRonald Raaijen (Holland)\n\n*(Sorry if I haven't reproduced the exact wording 100%, but both the grammar and the handwriting made the task rather difficult. LCD.)*\n\n---\n\nDear Mr. Raaijen,\n\nThe date for the club meeting has not been set yet; negotiations are currently underway regarding various venues suitable for the gathering. At the moment, the ASC also has too few members from Vienna, which I hope will change soon. It is certain that the meeting will take place on a weekend, most likely on a Saturday. A date before summer '96 will probably be impossible, but August or September is much more likely. Aside from that, I need at least 20 confirmations to make it worthwhile. In any case, it will be cozy, and the date will be announced in good time. Mr. Koning and you will, of course, also be informed, as all detailed information and directions will appear in SCENE.\n\nSaving SCENE as tape files for the emulator might cause problems, as I own an original Spectrum and do not have a PC. As far as I know, however, the emulator has the ability to read +D disks, so that should not be a problem for you. Taking this opportunity, I would like to make a small correction: while I don't speak Dutch, I noticed in the SGG Info that there were several mistakes in the SCENE description. For example, the DISK-SCENE, which I will henceforth call SCENE+, has not been published since February, but already since January; furthermore, it is not on OPUS, but on +D disk — though the tape version is correct! I couldn't find any further errors due to a lack of language skills, and to be honest, I understand nothing apart from that description.\n\nL.C.D.\n\n---\n\nDear Leszek,\n\nMany thanks for sending me your new games — excellent quality, and a pleasure to play.\n\nI'm enclosing my 'MK Collection Disk', recently updated with my latest items. Anyway, please feel free to include any of my PD programs in your Library, and good luck, too, with your new club...\n\nMiles Kinloch (England)\n\n---\n\nThank you for the MK Collection Disk. I have included it in my PD Library; the programs are excellent too and a good value for any +D user. I think I will include some programs on SCENE.\n\nBy the way, I will continue to write more games of the same quality. My next project will be Pyramid Patience, but it is not easy to write more than one program at the same time and run a magazine too.\n\nL.C.D.\n",
+  "body_ru": "…Планируешь ли ты большую клубную встречу, вроде тех, что проходят в Кёльне и Фильдерштадте? Можно и поскромнее, главное, чтобы было уютно.\n\nКогда придёт время, дай знать голландским друзьям, чтобы мы могли запланировать поездку; возможно, мы заглянем к тебе, Вена — прекрасный город.\n\nЕсть ли возможность выпускать программы также в виде tape-файлов для эмулятора?..\n\nРональд Раайен (Голландия)\n\n*(Прошу прощения, если воспроизвёл формулировку не на все 100%, но и грамматика, и почерк изрядно усложнили задачу. LCD.)*\n\n---\n\nУважаемый господин Раайен,\n\nДата клубной встречи ещё не определена: сейчас ведутся переговоры по поводу различных помещений, подходящих для мероприятия. В данный момент в ASC также пока маловато участников из Вены, но, надеюсь, это скоро изменится. Точно известно, что встреча пройдёт в выходные, скорее всего, в субботу. Дата до лета 1996 года вряд ли реальна, а вот август или сентябрь уже гораздо вероятнее. Кроме того, мне нужно как минимум 20 подтверждений участия, чтобы это имело смысл. В любом случае всё будет душевно, а дату мы объявим заблаговременно. Вы с господином Конингом, разумеется, тоже обо всём узнаете, так как вся подробная информация и схема проезда будут опубликованы в SCENE.\n\nСохранять SCENE в виде tape-файлов для эмулятора, скорее всего, вызовет сложности, поскольку у меня оригинальный Спектрум и нет ПК. Насколько мне известно, в эмуляторе есть возможность читать диски +D, так что для вас это не должно составить проблемы. Пользуясь случаем, хочу внести небольшое исправление: хоть я и не владею голландским, но заметил в SGG Info несколько ошибок в описании SCENE. Так, например, DISK-SCENE (которую я впредь буду называть SCENE+) выходит не с февраля, а уже с января, и к тому же не на дисках OPUS, а на +D; впрочем, насчёт кассеты всё верно! Других ошибок из-за незнания языка я найти не смог, и, честно говоря, ничего, кроме этого описания, не понял.\n\nL.C.D.\n\n---\n\nДорогой Лешек,\n\nБольшое спасибо за твои новые игры — отличное качество, играть одно удовольствие.\n\nПрилагаю свой диск «MK Collection Disk», недавно обновлённый моими последними разработками. В любом случае, можешь смело включать любые мои PD-программы в свою библиотеку, и удачи тебе с твоим новым клубом…\n\nМайлз Кинлок (Англия)\n\n---\n\nСпасибо за MK Collection Disk. Я включил его в свою PD-библиотеку; программы тоже превосходные и станут отличным приобретением для любого пользователя +D. Думаю, я помещу часть программ на SCENE.\n\nК слову, я продолжу писать новые игры такого же качества. Моим следующим проектом будет Pyramid Patience, но писать больше одной программы одновременно и параллельно выпускать журнал — задача не из лёгких.\n\nL.C.D.\n",
+  "text_type": 3
+}

@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "031",
+  "article_id": "01_editorial",
+  "title_en": "Editorial",
+  "title_ru": "От редакции",
+  "meta_description_en": "Editorial for Outlet issue 31: increasing contributor payments, SwiftDisc format interest, errata, and ZX Spectrum +3 listing troubleshooting.",
+  "meta_description_ru": "Редакционная колонка журнала Outlet #031: повышение гонораров авторам, обсуждение формата SwiftDisc, исправления ошибок и технические заметки о ZX Spectrum +3.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "microdrive",
+      "tag_alias": "microdrive"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus3"
+    },
+    {
+      "tag_name": "swiftdisc",
+      "tag_alias": "swiftdisc"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "We're happy to report there is a\nbit more cash in the kitty this\nyear compared to last and so we\nare increasing the payment made\nto readers contributing programs\nand articles etc.by about 25%.\nTypical `5 to `10 items now make\n`7 to `13. Nice littler earners!\n\nA reader's offered to duplicate\nthe microdrive version of OUTLET\nonto SWIFTDISC. It is not likely\nto be practical for us to take\nup this offer but just how many\nreaders would be interested? If\nthere's sufficient demand it may\nbe possible with certain limits.\n\nIn PROT in last month we omitted\nthe most important info in the\ninstructions! Use RANDOMIZE USR\n55000 to actually PRINT the\ncontents of A$. You guessed that\nanyway didn't you?\n\nThe index data was missing from\nthe +3 version of Issue 28 but\nthe data was included in Issue\n29's data so load that in OUTDEX\nand you'll be up to date.\n\nWe have had inquiries as to why\nour listings are corrupted on a\n+3. It is due to the design of\nthe 128K BASIC which turns to a\ndifferent page of memory when\nyou BREAK into a program and can\nno longer find any new character\nset (text shapes) loaded. If you\nreset the computer and MERGE the\nprogram you can see the listing.\n\nYou may have seen advertisements\nfor m/drive cartridges at `4.50\nto `4.75 but be assured we shall\nhold our price for OUTLET on\nmicrodrive until all stocks run\nout even though we are only\nCharging about HALF  the above\nper cartridge INCLUDING OUTLET!\n(Sorry no- you can't buy 500 and\nsell 'em at a profit!)\n\nFinally, thanks to all the many\nreaders who wrote in with the\naddress of a supplier of a print\nhead for the Brother M1009. One\nwill be ordered in due course\nand streaky graphics will be no\nmore...\n\n\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_ru_plain": "Мы рады сообщить, что в кассе в\nэтом году прибавилось деньжат по\nсравнению с прошлым, поэтому мы\nувеличиваем гонорары читателям,\nприсылающим программы, статьи и\nт.д., примерно на 25%. Обычные\nматериалы за `5–`10 теперь при-\nнесут `7–`13. Неплохой приработок!\n\nОдин читатель предложил дублиро-\nвать microdrive-версию OUTLET на\nдискеты SWIFTDISC. Вряд ли это\nбудет нам практически удобно, но\nмногим ли читателям это было бы\nинтересно? Если наберётся доста-\nточный спрос, то в определенных\nрамках это возможно.\n\nВ описании к PROT в прошлом месяце\nмы упустили самое главное! Чтобы\nнапечатать содержимое A$, исполь-\nзуйте RANDOMIZE USR 55000. Впро-\nчем, вы и так догадались, верно?\n\nДанные индекса отсутствовали в\nверсии для +3 в Issue 28, но они\nбыли включены в данные Issue 29,\nтак что загрузите их в OUTDEX,\nи всё будет в порядке.\n\nНам поступали вопросы, почему на\n+3 портятся листинги. Виной тому\nособенность 128K BASIC: при на-\nжатии BREAK он переключается на\nдругую страницу памяти и больше\nне видит загруженный набор симво-\nлов (шрифтов). Если сбросить ком-\nпьютер и сделать MERGE программы,\nлистинг будет виден нормально.\n\nВозможно, вы видели картриджи для\nmicrodrive в рекламе по `4.50–\n`4.75, но уверяем вас: мы будем\nдержать цену на OUTLET на micro-\ndrive, пока не кончатся запасы,\nхотя мы берём всего около ПОЛО-\nВИНЫ от этой суммы за картридж\nВМЕСТЕ С OUTLET! (Увы, нет — ку-\nпить 500 штук и перепродать с\nвыгодой не получится!)\n\nИ наконец, спасибо всем читателям,\nприславшим адрес поставщика пе-\nчатающей головки для Brother\nM1009. В скором времени мы её\nзакажем, и полосатой графике\nпридёт конец...\n\n\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_en": "## Editorial\n\nWe're happy to report there is a bit more cash in the kitty this year compared to last and so we are increasing the payment made to readers contributing programs and articles etc. by about 25%. Typical `5 to `10 items now make `7 to `13. Nice littler earners!\n\nA reader's offered to duplicate the microdrive version of OUTLET onto SWIFTDISC. It is not likely to be practical for us to take up this offer but just how many readers would be interested? If there's sufficient demand it may be possible with certain limits.\n\nIn PROT in last month we omitted the most important info in the instructions! Use RANDOMIZE USR 55000 to actually PRINT the contents of A$. You guessed that anyway didn't you?\n\nThe index data was missing from the +3 version of Issue 28 but the data was included in Issue 29's data so load that in OUTDEX and you'll be up to date.\n\nWe have had inquiries as to why our listings are corrupted on a +3. It is due to the design of the 128K BASIC which turns to a different page of memory when you BREAK into a program and can no longer find any new character set (text shapes) loaded. If you reset the computer and MERGE the program you can see the listing.\n\nYou may have seen advertisements for m/drive cartridges at `4.50 to `4.75 but be assured we shall hold our price for OUTLET on microdrive until all stocks run out even though we are only Charging about HALF the above per cartridge INCLUDING OUTLET! (Sorry no- you can't buy 500 and sell 'em at a profit!)\n\nFinally, thanks to all the many readers who wrote in with the address of a supplier of a print head for the Brother M1009. One will be ordered in due course and streaky graphics will be no more...\n\nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "body_ru": "## От редакции\n\nМы рады сообщить, что в кассе в этом году прибавилось деньжат по сравнению с прошлым, поэтому мы увеличиваем гонорары читателям, присылающим программы, статьи и т.д., примерно на 25%. Обычные материалы за `5–`10 теперь принесут `7–`13. Неплохой приработок!\n\nОдин читатель предложил дублировать microdrive-версию OUTLET на дискеты SWIFTDISC. Вряд ли это будет нам практически удобно, но многим ли читателям это было бы интересно? Если наберётся достаточный спрос, то в определенных рамках это возможно.\n\nВ описании к PROT в прошлом месяце мы упустили самое главное! Чтобы напечатать содержимое A$, используйте RANDOMIZE USR 55000. Впрочем, вы и так догадались, верно?\n\nДанные индекса отсутствовали в версии для +3 в Issue 28, но они были включены в данные Issue 29, так что загрузите их в OUTDEX, и всё будет в порядке.\n\nНам поступали вопросы, почему на +3 портятся листинги. Виной тому особенность 128K BASIC: при нажатии BREAK он переключается на другую страницу памяти и больше не видит загруженный набор символов (шрифтов). Если сбросить компьютер и сделать MERGE программы, листинг будет виден нормально.\n\nВозможно, вы видели картриджи для microdrive в рекламе по `4.50–`4.75, но уверяем вас: мы будем держать цену на OUTLET на microdrive, пока не кончатся запасы, хотя мы берём всего около ПОЛОВИНЫ от этой суммы за картридж ВМЕСТЕ С OUTLET! (Увы, нет — купить 500 штук и перепродать с выгодой не получится!)\n\nИ наконец, спасибо всем читателям, приславшим адрес поставщика печатающей головки для Brother M1009. В скором времени мы её закажем, и полосатой графике придёт конец...\n\n```text\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n```\n",
+  "text_type": 3
+}

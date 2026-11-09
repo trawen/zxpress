@@ -1,0 +1,43 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "107",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонсы",
+  "meta_description_en": "A sneak peek at the contents of Outlet #108: the Best Demo of 1995, light-guns, Mandelbrot maps by Francis Miles, fonts, and utilities.",
+  "meta_description_ru": "Анонс следующего выпуска Outlet #108: «Лучшее демо 1995 года», световые перья и пистолеты, фракталы Мандельброта от Фрэнсиса Майлза, шрифты и утилиты.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "lookahead",
+      "tag_alias": "lookahead"
+    },
+    {
+      "tag_name": "demo",
+      "tag_alias": "demo"
+    },
+    {
+      "tag_name": "mandelbrot",
+      "tag_alias": "mandelbrot"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "The demo in next month's OUTLET\nis not just another amazing one,\nbut is the start of the one vot-\ned \"Best Demo of 1995\"!! We have\nnot been told who did the voting\nbut I'm sure that when you see\nit, you will agree with whoever\nit was. I say \"the start\" as it\nis Mega-huge so we have split it\nin three parts to avoid swamping\na single issue of OUTLET.\n\nDRIVECHAT next month is on the\nsubject of Light-Pens and Light-\nGuns.\n\nThere are another twelve fonts\nto add to your collection and a\nutility which is able to move\nthe location of Basic in memory,\nso that it could run high up\nabove any low-addressed code for\ninstance.\n\n\nOUTLETTERS' pages are, as usual,\nfull of hints and tips, and the\n'chatty' bit tagged onto the end\nof the latest thrilling episode\nof VAXTREK has some really use-\nful information on how to get\nrid of those nasty Black Holes\nin space!And talking about holes\nthere is a demonstration of one\ntheory about the reason for the\nSpectrum Screen being 32 charac-\nter-squares wide.\n\n\nIf, like myself, you delight in\nexploring the intricate patterns\nof Mandelbrots, you are in for a\ntreat.  Francis Miles has under-\ntaken the massive task of plott-\ning the complete Mandelbrot\n\"coastline\" and we hope to bring\nyou the first volume of maps in\nnext month's issue.\n\nAnd there is plenty more includ-\ning an astounding OUTPUT from\nBrian Cavers concerning certain\nsurprising matters which just\nsort of 'dropped into his head'.\n\n                       Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "The demo in next month's OUTLET is not just another amazing one, but is the start of the one voted \"Best Demo of 1995\"!! We have not been told who did the voting but I'm sure that when you see it, you will agree with whoever it was. I say \"the start\" as it is Mega-huge so we have split it in three parts to avoid swamping a single issue of OUTLET.\n\nDRIVECHAT next month is on the subject of Light-Pens and Light-Guns.\n\nThere are another twelve fonts to add to your collection and a utility which is able to move the location of Basic in memory, so that it could run high up above any low-addressed code for instance.\n\nOUTLETTERS' pages are, as usual, full of hints and tips, and the 'chatty' bit tagged onto the end of the latest thrilling episode of VAXTREK has some really useful information on how to get rid of those nasty Black Holes in space! And talking about holes there is a demonstration of one theory about the reason for the Spectrum Screen being 32 character-squares wide.\n\nIf, like myself, you delight in exploring the intricate patterns of Mandelbrots, you are in for a treat. Francis Miles has undertaken the massive task of plotting the complete Mandelbrot \"coastline\" and we hope to bring you the first volume of maps in next month's issue.\n\nAnd there is plenty more including an astounding OUTPUT from Brian Cavers concerning certain surprising matters which just sort of 'dropped into his head'.\n\nChris.\n",
+  "body_ru": "В следующем номере OUTLET вас ждёт не просто очередное потрясающее демо, а первая часть работы, признанной «Лучшим демо 1995 года»! Нам не сообщили, кто именно проводил голосование, но я уверен: увидев его, вы согласитесь с судьями, кем бы они ни были. Я говорю «первая часть», поскольку релиз поистине огромен, и нам пришлось разделить его на три выпуска, чтобы не перегружать один номер OUTLET.\n\nРубрика DRIVECHAT в следующем месяце будет посвящена световым перьям (Light-Pens) и световым пистолетам (Light-Guns).\n\nТакже вашу коллекцию пополнят ещё двенадцать шрифтов и утилита, способная перемещать область Бейсика в памяти — например, чтобы запускать его высоко в памяти поверх любого кода, расположенного по младшим адресам.\n\nСтраницы OUTLETTERS, как обычно, полны подсказок и полезных советов, а небольшое дополнение в конце очередного захватывающего эпизода VAXTREK содержит ценную информацию о том, как избавиться от коварных Чёрных Дыр в космосе! И раз уж зашла речь о дырах — вас ждёт наглядная демонстрация одной теории о том, почему экран Спектрума имеет ширину именно в 32 знакоместа.\n\nЕсли вы, как и я, любите исследовать замысловатые узоры фракталов Мандельброта, вас ожидает настоящий подарок. Francis Miles взял на себя колоссальный труд по отрисовке полной «береговой линии» множества Мандельброта, и мы надеемся опубликовать первый том этих карт уже в следующем выпуске.\n\nИ это далеко не всё: вас также ждёт поразительная статья OUTPUT от Brian Cavers, посвящённая весьма неожиданным мыслям, которые просто «взбрели ему в голову».\n\nChris.\n",
+  "text_type": 3
+}

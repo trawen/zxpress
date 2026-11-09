@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "039",
+  "article_id": "04_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "Preview of the upcoming Christmas issue of Outlet magazine (#40), featuring UNFRAG, CHARS128, DEVAL utilities, games, music, and software reviews.",
+  "meta_description_ru": "Анонс рождественского выпуска журнала Outlet (#40): утилиты UNFRAG, CHARS128, DEVAL, новые игры, музыка, клипарты и обзоры софта.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "announcement"
+    },
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "In next month's Christmas issue\nthere'll be UNFRAG, to speed up\nloading from much-used +3 discs;\nCHARS128 which lets you use new\ncharacter sets in high memory in\n128K mode without corrupting the\nlisting; ORDERNUM,a new strategy\npuzzle; DEVAL, to REMOVE VAL\"99\"\netc. from BASIC(which got pushed\nback from this month due to lack\nof space) and REEL, a short tune\nin both 48K and 128K. CHECKOUT\nreviews M3UNLOCK, FILEMASTER and\nBETADOS.               more...\n\nThere'll be more 128K music with\nMADONNA in glorious colour; PLOT\n192 lets you PLOT in the INPUT\narea of the screen;XMASCLIP is a\nChristmas clip art screen; there\nis a mega-sized DRIVECHAT which\nwill have subjects like keyboard\nupgrade, a DIY save/load switch,\nMANDELBROT revisited and common\nSpectrum troubles. BACKGROUND\nputs coloured window backgrounds\non screen; BERTBALL is erm.... a\nball game; even OUTCLASS has a\nplayable platform & ladders game\nas a demo! Then there'll be Hugh\nMcGregor's Xmas Crossword; more\nclip art and mandelbrot screens\nin ADD-ENDERS as well as lots of\nother stuff! SAM programs will\nreplace any of the above that do\nnot convert! It'll be Merry!\n                        - Brian.\n",
+  "body_ru_plain": "В рождественском выпуске следу-\nющего месяца вас ждёт UNFRAG,\nускоряющая загрузку с заезжен-\nных дисков +3; CHARS128, позво-\nляющая использовать новые набо-\nры символов в верхней памяти в\n128K-режиме, не повреждая лис-\nтинг; ORDERNUM, новая головолом-\nка-стратегия; DEVAL, чтобы УБИ-\nРАТЬ VAL\"99\" и т.п. из BASIC\n(перенесённая из этого номера\nиз-за нехватки места) и REEL —\nкороткая мелодия под 48K и 128K.\nВ CHECKOUT — обзоры M3UNLOCK,\nFILEMASTER и BETADOS.   далее...\n\nБудет ещё музыка под 128K вместе\nс MADONNA в великолепном цвете;\nPLOT 192 позволит делать PLOT в\nобласти экрана INPUT; XMASCLIP —\nрождественский экран клипарта;\nа также гигантский DRIVECHAT,\nгде поднимутся темы вроде апгре-\nйда клавиатуры, самодельного пе-\nреключателя save/load, возврата\nк MANDELBROT и типичных непола-\nдок Спектрума. BACKGROUND выво-\nдит цветной фон окон на экран;\nBERTBALL — это, эээ... игра с\nмячом; даже в OUTCLASS будет иг-\nрабельная платформенно-лестнич-\nная игра в качестве демки! Ещё\nбудет рождественский кроссворд\nот Hugh McGregor; больше клипар-\nта и экранов Мандельброта в\nADD-ENDERS, а также куча всего\nдругого! Программы для SAM заме-\nнят всё вышеперечисленное, что не\nудастся сконвертировать! Будет\nвесело!\n                        - Brian.\n",
+  "body_en": "## Lookahead\n\nIn next month's Christmas issue there'll be UNFRAG, to speed up loading from much-used +3 discs; CHARS128 which lets you use new character sets in high memory in 128K mode without corrupting the listing; ORDERNUM, a new strategy puzzle; DEVAL, to REMOVE VAL\"99\" etc. from BASIC (which got pushed back from this month due to lack of space) and REEL, a short tune in both 48K and 128K. CHECKOUT reviews M3UNLOCK, FILEMASTER and BETADOS.\n\nThere'll be more 128K music with MADONNA in glorious colour; PLOT 192 lets you PLOT in the INPUT area of the screen; XMASCLIP is a Christmas clip art screen; there is a mega-sized DRIVECHAT which will have subjects like keyboard upgrade, a DIY save/load switch, MANDELBROT revisited and common Spectrum troubles. BACKGROUND puts coloured window backgrounds on screen; BERTBALL is erm.... a ball game; even OUTCLASS has a playable platform & ladders game as a demo! Then there'll be Hugh McGregor's Xmas Crossword; more clip art and mandelbrot screens in ADD-ENDERS as well as lots of other stuff! SAM programs will replace any of the above that do not convert! It'll be Merry!\n\n— Brian.\n",
+  "body_ru": "## В следующем номере\n\nВ рождественском выпуске следующего месяца вас ждёт UNFRAG, ускоряющая загрузку с заезженных дисков +3; CHARS128, позволяющая использовать новые наборы символов в верхней памяти в 128K-режиме, не повреждая листинг; ORDERNUM, новая головоломка-стратегия; DEVAL, чтобы УБИРАТЬ VAL\"99\" и т.п. из BASIC (перенесённая из этого номера из-за нехватки места) и REEL — короткая мелодия под 48K и 128K. В CHECKOUT — обзоры M3UNLOCK, FILEMASTER и BETADOS.\n\nБудет ещё музыка под 128K вместе с MADONNA в великолепном цвете; PLOT 192 позволит делать PLOT в области экрана INPUT; XMASCLIP — рождественский экран клипарта; а также гигантский DRIVECHAT, где поднимутся темы вроде апгрейда клавиатуры, самодельного переключателя save/load, возврата к MANDELBROT и типичных неполадок Спектрума. BACKGROUND выводит цветной фон окон на экран; BERTBALL — это, эээ... игра с мячом; даже в OUTCLASS будет играбельная платформенно-лестничная игра в качестве демки! Ещё будет рождественский кроссворд от Hugh McGregor; больше клипарта и экранов Мандельброта в ADD-ENDERS, а также куча всего другого! Программы для SAM заменят всё вышеперечисленное, что не удастся сконвертировать! Будет весело!\n\n— Brian.\n",
+  "text_type": 3
+}

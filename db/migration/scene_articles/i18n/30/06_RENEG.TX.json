@@ -1,0 +1,45 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "30",
+  "article_id": "06_RENEG.TX",
+  "source_lang": "de-AT",
+  "title_en": "Renegade Demo",
+  "title_ru": "Renegade Demo",
+  "meta_description_en": "A brief note from Scene+ #30 on Theo Devil's Renegade Demo, featuring ripped graphics and scroll routines intended for Sinclair User.",
+  "meta_description_ru": "Заметка из Scene+ #30 о Renegade Demo от Theo Devil со скроллером и графикой из игры Renegade, созданной для журнала Sinclair User.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "renegade",
+      "tag_alias": "renegade"
+    },
+    {
+      "tag_name": "demo",
+      "tag_alias": "demo"
+    },
+    {
+      "tag_name": "sinclair-user",
+      "tag_alias": "sinclair-user"
+    }
+  ],
+  "category_ids": [
+    88,
+    93,
+    94
+  ],
+  "body_de_plain": "RENEGADE ü - RENEGADE DEMO- Theo Devil hat dieses Demo für\nSinclair User geschrieben,eigentlich hat er die Scrollroutine\nund die Grafik aus Renegadeherausgerippt, allerdings erschien es\nmeines wissens nach nieauf einer Covertape. T - Theo Devil wrote\nthis demo for Sinclair User, O. K., in truth hehas ripped the\nscrollroutine and GFX from RENEGADE game, but thedemo has never\nappeared (correct me if I'm wrong) on acov\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### RENEGADE DEMO\n\nTheo Devil wrote this demo for *Sinclair User*. To be precise, he ripped the scroll routine and the graphics straight out of the game *Renegade*. As far as I know, however, it was never actually published on any covertape. *(Correct me if I'm wrong...)*\n",
+  "body_ru": "### RENEGADE DEMO\n\nТео Девил (Theo Devil) написал это демо для журнала *Sinclair User*. Строго говоря, он просто срипил скролл и графику прямо из игры *Renegade*. Впрочем, насколько мне известно, на кассетах-приложениях (covertape) оно так никогда и не выходило. *(Поправьте меня, если я ошибаюсь...)*\n",
+  "text_type": 3
+}

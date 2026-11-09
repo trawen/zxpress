@@ -1,0 +1,35 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "144",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем выпуске",
+  "meta_description_en": "A brief preview of what is coming in the next issue of Outlet (September): lottery number picker, word processor, I/O ports project, and music demo.",
+  "meta_description_ru": "Анонс следующего сентябрьского выпуска журнала Outlet: генератор номеров для лотереи, текстовый процессор, проект по портам ввода-вывода и музыкальное демо.",
+  "authors": [
+    "Chris"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "announcement",
+      "tag_alias": "announcement"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "September could be your lucky\nmonth! In OUTLET next month\nthere is a program which picks\nthe winning (?) numbers for the\nlottery, but failing that there\nis a simple little demo which\nwill guarantee you instant\ninsomnia, if not insanity!\n\n\nOn the practical side there is a\nfully fledged word processor for\n\nthe Spectrum,a generator to pro-\nduce giant characters,a technic-\nal project using the I/O ports,\nand the author of the \"OUTPUT\"\nsection invents just about every\nthing you can think of.\n\nPlenty to interest all tastes\nagain, and rounded off with a\ndishy music demo.\n                     Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "September could be your lucky month! In OUTLET next month there is a program which picks the winning (?) numbers for the lottery, but failing that there is a simple little demo which will guarantee you instant insomnia, if not insanity!\n\nOn the practical side there is a fully fledged word processor for the Spectrum, a generator to produce giant characters, a technical project using the I/O ports, and the author of the \"OUTPUT\" section invents just about everything you can think of.\n\nPlenty to interest all tastes again, and rounded off with a dishy music demo.\n\nChris.\n",
+  "body_ru": "Сентябрь может стать вашим счастливым месяцем! В следующем номере OUTLET вас ждёт программа, выбирающая выигрышные (?) номера для лотереи. А если она не сработает — простенькое маленькое демо, которое гарантирует мгновенную бессонницу, если не помешательство!\n\nЧто касается практической стороны: полноценный текстовый процессор для Spectrum, генератор гигантских символов, аппаратный проект с использованием портов ввода-вывода, а автор рубрики «OUTPUT» изобретёт практически всё, что только можно придумать.\n\nСнова масса интересного на любой вкус, а под занавес — классное музыкальное демо.\n\nChris.\n",
+  "text_type": 3
+}

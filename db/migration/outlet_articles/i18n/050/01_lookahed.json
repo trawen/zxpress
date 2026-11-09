@@ -1,0 +1,47 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "050",
+  "article_id": "01_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "Brian Kempshall previews Outlet #051: a +3 sector editor, Plus D disc search, SIDECOPY printer utility, diary app, Atom Field puzzle game, and more.",
+  "meta_description_ru": "Брайан Кемпшалл анонсирует 51-й номер журнала Outlet: секторный редактор для +3, дисковый поиск для Plus D, утилита SIDECOPY, игра Atom Field и многое другое.",
+  "authors": [
+    "Brian Kempshall"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus-3"
+    },
+    {
+      "tag_name": "plus d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "disciple",
+      "tag_alias": "disciple"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Next month in OUTLET there will\nbe a direct Plus 3 sector editor\nand including the sector read/\nwrite routines for use in your\nown programs so +3ers can dabble\nwith your discs much like Plus D\nand Disciple owners can using\nLOAD & and SAVE &!\n\nMeanwhile, Plus D and Disciple\nusers get their own disc search,\na program using LOAD & to make\nit easier for you to dabble in\nyour discs!\n                      more...\n\nThere'll be more 128K music as\nwell as clip art and, I think, a\nnew crossword.\n\nThere's SIDECOPY to let users of\nZX-type printers get a sideways\nprint-out. You could strings\nsome pictures together to get a\nCinerama effect!\n\nThere's a great diary program by\nthe authors of the popular CARD\nINDEX and a UDG BANK so you can\nhave lots of udgs in memory at\nonce. There's a strategy puzzle\ngame called ATOM FIELD as well\nas the regulars like OUTCLASS. I\nhave items for DRIVECHAT and\nCHECKOUT to sort out yet so I'm\nnot sure exactly what there is.\n                        - Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "Next month in OUTLET there will be a direct Plus 3 sector editor and including the sector read/write routines for use in your own programs so +3ers can dabble with your discs much like Plus D and Disciple owners can using LOAD & and SAVE &!\n\nMeanwhile, Plus D and Disciple users get their own disc search, a program using LOAD & to make it easier for you to dabble in your discs!\n\nThere'll be more 128K music as well as clip art and, I think, a new crossword.\n\nThere's SIDECOPY to let users of ZX-type printers get a sideways print-out. You could strings some pictures together to get a Cinerama effect!\n\nThere's a great diary program by the authors of the popular CARD INDEX and a UDG BANK so you can have lots of udgs in memory at once. There's a strategy puzzle game called ATOM FIELD as well as the regulars like OUTCLASS. I have items for DRIVECHAT and CHECKOUT to sort out yet so I'm not sure exactly what there is.\n\n— Brian.\n",
+  "body_ru": "В следующем месяце в OUTLET появится прямой секторный редактор для Plus 3, включающий подпрограммы чтения и записи секторов для использования в ваших собственных программах. Так что владельцы +3 смогут поковыряться в своих дисках почти так же, как пользователи Plus D и Disciple с помощью LOAD & и SAVE &!\n\nТем временем пользователи Plus D и Disciple получат собственную утилиту поиска по диску — программу, использующую LOAD &, чтобы вам было проще исследовать содержимое ваших дискет!\n\nТакже будет больше музыки для 128K, клипарт и, кажется, новый кроссворд.\n\nВас ждёт утилита SIDECOPY, позволяющая владельцам принтеров стандарта ZX делать распечатки с поворотом на бок. Можно будет склеить несколько картинок в ряд и получить эффект широкоэкранной панорамы (Cinerama)!\n\nБудет отличная программа-ежедневник от авторов популярного CARD INDEX и утилита UDG BANK, позволяющая держать в памяти сразу множество пользовательских символов (UDG). Появится стратегическая игра-головоломка под названием ATOM FIELD, а также привычные регулярные рубрики вроде OUTCLASS. Материалы для DRIVECHAT и CHECKOUT мне ещё предстоит разобрать, так что пока не могу сказать наверняка, что именно туда войдёт.\n\n— Brian.\n",
+  "text_type": 3
+}

@@ -1,0 +1,38 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "117",
+  "article_id": "10_discdoc",
+  "title_en": "Disc Doctor",
+  "title_ru": "Disc Doctor",
+  "meta_description_en": "Instructions and overview for Disc Doctor, a mouse/pointer-driven +D disk viewer, sector editor, and disc verification utility featured in Outlet #117.",
+  "meta_description_ru": "Инструкция и описание утилиты Disc Doctor для дисковой системы +D из журнала Outlet #117: просмотр и редактирование секторов, каталогизация и верификация диска.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "+d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "sector editor",
+      "tag_alias": "sector-editor"
+    },
+    {
+      "tag_name": "disk utility",
+      "tag_alias": "disk-utility"
+    },
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    }
+  ],
+  "category_ids": [
+    64,
+    73
+  ],
+  "body_en_plain": "DISC DOCTOR\n          -----------\nThe next item is a +D disk view\nand editor.WARNING! You can lose\nfiles and data on a disk if you\nuse the edit option in the Sect-\nor editor and resave the sector!\nPractice on an unimportant disk\nunless you know what you are do-\ning!\n\nIts a move-the-pointer-and-click\ntype of program so study all the\ninfo...\n\n           The keys:\n\n\nQ move pointer up\nA move pointer down\nO move pointer left\nP move pointer right\n\nM selects the option pointed to.\n\nTo exit any of the menus windows\njust point to the small box in\nthe top left-hand corner of the\nwindow and press M. Each window\nhas to be closed in this way\nbefore returning to the previous\none. The small box on the first\nwindow returns you to Basic, and\nreloads OUTLET's CONTENTS page.\n\n\nThe first menu has three options\n\n1. Sector Edit\n2. Catalogue\n3. Verify\n\nVERIFY: Repairs damaged sectors\non the disc.\n\nCATALOGUE: Presents two options,\n\nRecat Drive and Get Facts.\n\nRecat Drive catalogues the disc\nin drive 1.\n\nGet Facts gives you the file in-\nformation on the selected file.\nTo do this just point at the\nfilename and press M, this will\nhighlight it, then point to Get\nFacts and press M.\n\nThe two arrows on the right-hand\nside enable you to scroll up and\ndown the catalogue by pointing\nat the appropriate arrow, and\npressing M.\n\nLastly  the  EDIT  option. This\nmenu gives you the facility to\nedit a sector and alter it,trace\na program across the disc, move\nto the next track or sector,move\nto the previous track or sector,\ncopy a sector into memory so you\ncan paste it to another sector.\n\nTo edit a sector select EDIT.\nThis gives a display of the con-\ntents of that sector. To alter a\nbyte just point to it and press\nM, type a decimal value, then\npress ENTER.\n\n\nRevert in this menu restores the\noriginal value of the sector.\n\nSave saves the ammended sector\nto disc.\n\nLocate returns to the main EDIT\nmenu.\n\n\n\n\n        Select 'N' now,\n     to load \"DISCDOCTOR\".\n",
+  "body_ru_plain": "",
+  "body_en": "# DISC DOCTOR\n\nThe next item is a +D disk view and editor.\n\n**WARNING!** You can lose files and data on a disk if you use the edit option in the Sector editor and resave the sector! Practice on an unimportant disk unless you know what you are doing!\n\nIt's a move-the-pointer-and-click type of program so study all the info...\n\n### The keys:\n\n* `Q` — move pointer up\n* `A` — move pointer down\n* `O` — move pointer left\n* `P` — move pointer right\n* `M` — selects the option pointed to.\n\nTo exit any of the menu windows, just point to the small box in the top left-hand corner of the window and press `M`. Each window has to be closed in this way before returning to the previous one. The small box on the first window returns you to BASIC, and reloads OUTLET's CONTENTS page.\n\nThe first menu has three options:\n\n1. Sector Edit\n2. Catalogue\n3. Verify\n\n**VERIFY:** Repairs damaged sectors on the disc.\n\n**CATALOGUE:** Presents two options: *Recat Drive* and *Get Facts*.\n\n* *Recat Drive* catalogues the disc in drive 1.\n* *Get Facts* gives you the file information on the selected file. To do this just point at the filename and press `M`, this will highlight it, then point to *Get Facts* and press `M`.\n\nThe two arrows on the right-hand side enable you to scroll up and down the catalogue by pointing at the appropriate arrow, and pressing `M`.\n\nLastly, the **EDIT** option. This menu gives you the facility to edit a sector and alter it, trace a program across the disc, move to the next track or sector, move to the previous track or sector, or copy a sector into memory so you can paste it to another sector.\n\nTo edit a sector select `EDIT`. This gives a display of the contents of that sector. To alter a byte, just point to it and press `M`, type a decimal value, then press `ENTER`.\n\n* `Revert` in this menu restores the original value of the sector.\n* `Save` saves the amended sector to disc.\n* `Locate` returns to the main EDIT menu.\n\nSelect 'N' now, to load \"DISCDOCTOR\".\n",
+  "body_ru": "# DISC DOCTOR\n\nСледующая программа — это просмотрщик и дисковый редактор для системы +D.\n\n**ВНИМАНИЕ!** Вы можете потерять файлы и данные на диске, если воспользуетесь функцией редактирования в дисковом редакторе и перезапишете сектор! Если вы не до конца уверены в своих действиях, сначала потренируйтесь на ненужном диске!\n\nУправление в программе построено по принципу наведения указателя и клика, так что внимательно ознакомьтесь со всей информацией...\n\n### Клавиши управления:\n\n* `Q` — переместить курсор вверх\n* `A` — переместить курсор вниз\n* `O` — переместить курсор влево\n* `P` — переместить курсор вправо\n* `M` — выбор пункта, на который указывает курсор.\n\nЧтобы закрыть любое меню-окно, наведите курсор на маленький квадратик в верхнем левом углу окна и нажмите `M`. Каждое окно необходимо закрывать именно так перед возвратом в предыдущее. Нажатие на квадратик в самом первом окне вернет вас в BASIC и перезагрузит страницу меню (CONTENTS) журнала OUTLET.\n\nВ главном меню представлены три пункта:\n\n1. Sector Edit\n2. Catalogue\n3. Verify\n\n**VERIFY:** Восстанавливает поврежденные секторы на диске.\n\n**CATALOGUE:** Предлагает два варианта: *Recat Drive* и *Get Facts*.\n\n* *Recat Drive* перечитывает каталог диска в дисководе 1.\n* *Get Facts* выводит подробную информацию о выбранном файле. Для этого наведите курсор на имя файла и нажмите `M` (файл подсветится), затем наведите курсор на *Get Facts* и снова нажмите `M`.\n\nДве стрелочки справа позволяют прокручивать каталог вверх и вниз: достаточно навести указатель на нужную стрелку и нажать `M`.\n\nИ наконец, пункт **EDIT**. Это меню предоставляет возможности редактирования сектора и изменения его содержимого, отслеживания цепочки программы по диску, перехода к следующей/предыдущей дорожке или сектору, а также копирования сектора в память для последующей вставки в другой сектор.\n\nДля редактирования сектора выберите `EDIT`. На экране появится содержимое сектора. Чтобы изменить байт, наведите на него курсор, нажмите `M`, введите десятичное значение и нажмите `ENTER`.\n\n* `Revert` в этом меню возвращает исходное содержимое сектора.\n* `Save` сохраняет измененный сектор на диск.\n* `Locate` возвращает в главное меню EDIT.\n\nНажмите 'N' прямо сейчас, чтобы загрузить \"DISCDOCTOR\".\n",
+  "text_type": 3
+}

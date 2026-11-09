@@ -1,0 +1,43 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "145",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A sneak peek into Outlet #146: a DIY light gun project, disc file recovery toolkit, SPECDRAW utility, betting calculator, and a Patience card game.",
+  "meta_description_ru": "Анонс следующего выпуска журнала Outlet (#146): схема светового пистолета, утилита восстановления файлов с диска, SPECDRAW, игра «Пасьянс» и многое другое.",
+  "authors": [
+    "Chris"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "light gun",
+      "tag_alias": "light-gun"
+    },
+    {
+      "tag_name": "specdraw",
+      "tag_alias": "specdraw"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "hardware",
+      "tag_alias": "hardware"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Have you got that robot Buggy\n(OUTLET #143) trundling around\nyet? Even if you haven't, you\nmight like to have a go at a\ndifferent hardware project:-\nnext month's OUTLET has all the\ncircuit diagrams and construct-\nion details for building a Light\ngun! BANG!\n\n\nBy way of utilities next month\nthere is a disc toolkit which\namong other things will recover\nerased files;there's a demonstr-\nation of how the System Variable\n\"COORDS\" can be used,and there's\nSPECDRAW to compliment SPECWORD\nin this current issue.\n\n\nFor those who like a wager,\nthere's a program which makes\ncalculating your bets easy as it\ndoes it for you! There's an\nexcellent dissertation on\nEnglish words, some comments on\nthe progress in electronics, and\na first class version of the\nclassic card game of Patience,\nwhich can while away many an\nhour (maybe too many?).\n\n\nAmong all the usual items there\nis some more art-work, a music\ndemo, and yet another demo.\nLots again to look forward to!\n\n                         Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Have you got that robot Buggy (OUTLET #143) trundling around yet? Even if you haven't, you might like to have a go at a different hardware project: next month's OUTLET has all the circuit diagrams and construction details for building a Light gun! BANG!\n\nBy way of utilities next month there is a disc toolkit which among other things will recover erased files; there's a demonstration of how the System Variable \"COORDS\" can be used, and there's SPECDRAW to compliment SPECWORD in this current issue.\n\nFor those who like a wager, there's a program which makes calculating your bets easy as it does it for you! There's an excellent dissertation on English words, some comments on the progress in electronics, and a first class version of the classic card game of Patience, which can while away many an hour (maybe too many?).\n\nAmong all the usual items there is some more art-work, a music demo, and yet another demo. Lots again to look forward to!\n\nChris.\n",
+  "body_ru": "У вас уже вовсю разъезжает робот-багги из OUTLET #143? Даже если нет, возможно, вы захотите попробовать свои силы в другом аппаратном проекте: в следующем номере OUTLET будут опубликованы принципиальные схемы и подробные инструкции по сборке светового пистолета! БАХ!\n\nЧто касается утилит, в следующем месяце вас ждет дисковый набор инструментов, который, помимо прочего, умеет восстанавливать удаленные файлы; демонстрация работы с системной переменной «COORDS», а также графический редактор SPECDRAW в дополнение к текстовому редактору SPECWORD из текущего номера.\n\nДля любителей пари найдется программа, которая берет на себя все расчеты ставок! Кроме того, вас ждут превосходное исследование английских слов, заметки о развитии электроники и первоклассная версия классической карточной игры «Пасьянс» (Patience), за которой можно скоротать не один час (а может, и слишком много часов?).\n\nСреди привычных рубрик — новые графические работы, музыкальное демо и еще одна демонстрашка. Впереди снова масса интересного!\n\nChris.\n",
+  "text_type": 3
+}

@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "35",
+  "article_id": "05_B5.TX",
+  "source_lang": "de-AT",
+  "title_en": "Babylon 5 128 (Game & Demo)",
+  "title_ru": "Babylon 5 128 (Игра и демо)",
+  "meta_description_en": "A brief look at the Russian ZX Spectrum game Babylon 5 128 and its rolling demo, created with the Zombi engine, from Scene+ #35.",
+  "meta_description_ru": "Краткая заметка о российской игре Babylon 5 128 и её демоверсии на движке Zombi для ZX Spectrum из журнала Scene+ #35.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "babylon-5",
+      "tag_alias": "babylon-5"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    }
+  ],
+  "category_ids": [
+    1,
+    2
+  ],
+  "body_de_plain": "B5_DEM ü - BABYLON 5 128 GAME/ BABYLON 5 128 DEMO& - Auf der\nZombi Engine basierendes Spiel aus Russland, welches aufden\nMotiven der BABYLON 5 TV-Serie angelehnt ist. Über den Zieldes\nSpieles ist mir leider noch nichts bekannt da alle TexteRussisch\nsind. Die selbstablaufende Demoversion könnte dahilfreich\nwerden. Auf jeden Fall ist dieses Spiel ein großes Plus für\nSpeccynachdem die PC version gecancelt wurde.g - This game uses\nthe Zombi engine, and it is based on the BABYLON TV-Series.\nUnfortunaly I did not know anything how to playthis game,\nbecause it's russian. The non-playable demo willprobaly help\nyou. Anyway, it is a big plus for the Spectrum after the PC\nversionwas\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**B5_DEM** — *BABYLON 5 128 GAME / BABYLON 5 128 DEMO*\n\n[DE] A game from Russia based on the Zombi engine, inspired by the motifs of the BABYLON 5 TV series. Unfortunately, I don't know anything about the goal of the game yet, as all the text is in Russian. The self-running demo version might prove helpful here. In any case, this game is a big plus for the Speccy after the PC version was cancelled.\n\n[EN] This game uses the Zombi engine, and it is based on the BABYLON 5 TV series. Unfortunately, I did not know anything how to play this game, because it's Russian. The non-playable demo will probably help you. Anyway, it is a big plus for the Spectrum after the PC version was cancelled.\n",
+  "body_ru": "**B5_DEM** — *BABYLON 5 128 GAME / BABYLON 5 128 DEMO*\n\nИгра из России на движке Zombi, созданная по мотивам телесериала BABYLON 5. К сожалению, о цели игры мне пока ничего не известно, так как весь текст на русском языке. Возможно, здесь поможет автодемо-версия. В любом случае, эта игра — большой плюс для Спекки, особенно после того, как версию для PC отменили.\n",
+  "text_type": 3
+}

@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "099",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead: Issue 100 Preview",
+  "title_ru": "Взгляд в будущее: Анонс 100-го номера",
+  "meta_description_en": "A preview of the milestone 100th issue of Outlet magazine, featuring holiday games, entertainment, animations, and useful utilities.",
+  "meta_description_ru": "Анонс юбилейного сотого выпуска журнала Outlet: праздничные игры, викторины, анимация и полезные утилиты для ZX Spectrum.",
+  "authors": [
+    "Chris"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "anniversary",
+      "tag_alias": "anniversary"
+    },
+    {
+      "tag_name": "issue 100",
+      "tag_alias": "issue-100"
+    }
+  ],
+  "category_ids": [
+    123,
+    125
+  ],
+  "body_en_plain": "You may notice the lights and\ndecorations going up all over\nthe place, but most people will\nnot realise that is not just for\nChristmas, but also to celebrate\nthe 100th issue of OUTLET.!\n\n\nYes, Brian and Ron and everybody\nelse who has helped in the prod-\nuction of OUTLET, especially you\nwonderful contributors, deserve\ncongratulations on reaching this\nmilestone.\n\n\nSo the theme of next month's\nissue is mainly on the lighter\nside of computing. Gather your\nfriends and relations round the\ncosy Spectrum and have a good\nold-fashioned sing-song, or\nfeeling more energetic? Have a\ngame of darts at the keyboard.\nTo stretch your mind there is a\nQuiz, and watch out Mr. Disney,\nthere is another wonderful ani-\nmation.\n\n\nBetween the fun and games (Yes\nthere is even a full commercial\nArcade game, with the author's\npermission, of course), we have\nfound space for a few of the\nmore serious aspects...\n\n\n\nThere is a utility to construct\nyour own graph paper with vari-\nable scales, and with a few key\npresses you will be able to do\nwhat Monks in the Middle ages\ntook whole lifetimes to do! No.\nSorry, it's NOT making Benedic-\ntine ..... We're still working\non that one!\n\nAnyway, here's to the next 100\nissues of OUTLET.\n\n                        Chris\n.\n",
+  "body_ru_plain": "",
+  "body_en": "You may notice the lights and decorations going up all over the place, but most people will not realise that is not just for Christmas, but also to celebrate the 100th issue of OUTLET.!\n\nYes, Brian and Ron and everybody else who has helped in the production of OUTLET, especially you wonderful contributors, deserve congratulations on reaching this milestone.\n\nSo the theme of next month's issue is mainly on the lighter side of computing. Gather your friends and relations round the cosy Spectrum and have a good old-fashioned sing-song, or feeling more energetic? Have a game of darts at the keyboard. To stretch your mind there is a Quiz, and watch out Mr. Disney, there is another wonderful animation.\n\nBetween the fun and games (Yes there is even a full commercial Arcade game, with the author's permission, of course), we have found space for a few of the more serious aspects...\n\nThere is a utility to construct your own graph paper with variable scales, and with a few key presses you will be able to do what Monks in the Middle ages took whole lifetimes to do! No. Sorry, it's NOT making Benedictine ..... We're still working on that one!\n\nAnyway, here's to the next 100 issues of OUTLET.\n\nChris\n",
+  "body_ru": "Вы наверняка заметили, как вокруг зажигаются праздничные огни и развешиваются гирлянды, но большинство людей даже не догадываются, что всё это не только ради Рождества, но и в честь сотого номера OUTLET!\n\nДа, Брайан (Brian), Рон (Ron) и все остальные, кто помогал в выпуске OUTLET, а особенно вы, наши замечательные авторы материалов, заслуживаете самых искренних поздравлений с достижением этого важного рубежа.\n\nПоэтому тема следующего номера будет в основном посвящена развлекательной стороне компьютерной жизни. Собирайте друзей и родственников вокруг уютного Спектрума, чтобы от души попеть хором, или, если чувствуете прилив сил, сыграть в дартс прямо на клавиатуре. Для разминки ума вас ждёт викторина, а мистеру Диснею стоит насторожиться — ведь у нас есть ещё одна великолепная анимация.\n\nПомимо веселья и игр (да, там будет даже полноценная коммерческая аркада — разумеется, с официального разрешения автора), мы нашли место и для более серьёзных вещей...\n\nВас ждёт утилита для создания миллиметровки и графиков с настраиваемым масштабом, а несколькими нажатиями клавиш вы сможете проделать то, на что у средневековых монахов уходила целая жизнь! Нет, к сожалению, речь не о варке ликёра «Бенедиктин»... над этим мы всё ещё работаем!\n\nВ любом случае — выпьем за следующие 100 номеров OUTLET!\n\nChris\n",
+  "text_type": 3
+}

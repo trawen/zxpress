@@ -1,0 +1,41 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "024",
+  "article_id": "01_editorial",
+  "title_en": "Editorial",
+  "title_ru": "От редакции",
+  "meta_description_en": "Editorial of Outlet #024: call for reader utility requests, project offers, and details on an Interface 1 direct command bug fix in the ERASE ALL BUT routine.",
+  "meta_description_ru": "Редакционная колонка Outlet #024: приглашение авторов и предложений от читателей, а также разбор бага с Interface 1 в процедуре ERASE ALL BUT.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "interface 1",
+      "tag_alias": "interface-1"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "баги",
+      "tag_alias": "bugs"
+    }
+  ],
+  "category_ids": [
+    123,
+    76
+  ],
+  "body_en_plain": "If there is a special utility or\nany particular type of program\nyou need,please write in and, if\nfeasible, we'll try to produce\nit and put it in a future issue\nof OUTLET for you. Conversely,if\nyou'd like a programming project\nlet us know!\n\nThere's one funny bug to report\nthis month. After using the\n\"ERASE ALL BUT...\" option that\nappears in many OUTLET programs\nthen the next I'face 1 direct\ncommand may be ignored THE FIRST\nTIME! Enter it again and it's\naccepted!Very wierd! The routine\nPUSHES 4867 (1303 hex) on the\nstack and jumps to 1B76H which\nis a common exit. Anway, it has\nnow been re-written and the\nproblem solved but some programs\nin the pipeline still have the\nold routine so be prepared!\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_ru_plain": "Если вам нужна особая утилита или\nкакой-то конкретный тип программ,\nпожалуйста, напишите нам, и, если\nэто осуществимо, мы попробуем её\nсделать и включить для вас в один\nиз будущих номеров OUTLET. И\nнаоборот, если вы хотите взяться\nза проект, дайте нам знать!\n\nВ этом месяце всплыл один\nзабавный баг. После использования\nопции \"ERASE ALL BUT...\", которая\nвстречается во многих программах\nOUTLET, следующая прямая команда\nдля I'face 1 может игнорироваться\nВ ПЕРВЫЙ РАЗ! Введите её снова, и\nона принимается! Очень странно!\nПроцедура кладёт в стек через\nPUSH 4867 (1303 hex) и переходит\nна 1B76H — стандартную точку\nвыхода. Впрочем, сейчас она уже\nпереписана, и проблема решена, но\nв некоторых программах на подходе\nвсё ещё осталась старая процедура,\nтак что будьте готовы!\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_en": "## Editorial\n\nIf there is a special utility or any particular type of program you need, please write in and, if feasible, we'll try to produce it and put it in a future issue of OUTLET for you. Conversely, if you'd like a programming project let us know!\n\nThere's one funny bug to report this month. After using the \"ERASE ALL BUT...\" option that appears in many OUTLET programs then the next I'face 1 direct command may be ignored THE FIRST TIME! Enter it again and it's accepted! Very wierd! The routine PUSHES 4867 (1303 hex) on the stack and jumps to 1B76H which is a common exit. Anway, it has now been re-written and the problem solved but some programs in the pipeline still have the old routine so be prepared!\n\nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "body_ru": "## От редакции\n\nЕсли вам нужна особая утилита или какой-то конкретный тип программ, пожалуйста, напишите нам, и, если это осуществимо, мы попробуем её сделать и включить для вас в один из будущих номеров OUTLET. И наоборот, если вы хотите взяться за проект, дайте нам знать!\n\nВ этом месяце всплыл один забавный баг. После использования опции \"ERASE ALL BUT...\", которая встречается во многих программах OUTLET, следующая прямая команда для I'face 1 может игнорироваться В ПЕРВЫЙ РАЗ! Введите её снова, и она принимается! Очень странно! Процедура кладёт в стек через PUSH 4867 (1303 hex) и переходит на 1B76H — стандартную точку выхода. Впрочем, сейчас она уже переписана, и проблема решена, но в некоторых программах на подходе всё ещё осталась старая процедура, так что будьте готовы!\n\nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "text_type": 3
+}

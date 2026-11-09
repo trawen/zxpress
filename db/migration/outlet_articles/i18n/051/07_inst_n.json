@@ -1,0 +1,39 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "051",
+  "article_id": "07_inst_n",
+  "title_en": "DAY-II-DAY",
+  "title_ru": "DAY-II-DAY",
+  "meta_description_en": "Instructions for the DAY-II-DAY diary and memo program featured in Outlet #051, detailing options, storage, and date reminders.",
+  "meta_description_ru": "Инструкция к программе-ежедневнику DAY-II-DAY из журнала Outlet #051: ввод дней рождений и памяток, поиск и напоминания о событиях.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "day-ii-day",
+      "tag_alias": "day-ii-day"
+    },
+    {
+      "tag_name": "diary",
+      "tag_alias": "diary"
+    },
+    {
+      "tag_name": "utility",
+      "tag_alias": "utility"
+    },
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    }
+  ],
+  "category_ids": [
+    62,
+    64,
+    74
+  ],
+  "body_en_plain": "DAY-II-DAY\n           ++++++++++\nThe next item following this:-\n\"DAY-II-DAY\", is a Diary/Memo\nprogram that allows you to enter\nbirthdays and memos for each day\nof the year and, when run and\ntoday's date is entered, reminds\nyou of any birthdays or other\nevents you have stored that will\nbe coming up within the next 10\ndays.\n\nThe program when first run asks\nyou for the current year. This\nshould be entered as just the\nlast two numbers(i.e., 91). This\nallows the program to determine\nwhether it is a leap year or\nnot. The program then sets up\ntwo DATA files on the disc to\nhold the DATA that you enter\nand, as the program constantly\naccesses the disc, it should be\nleft in Drive 1 while the\nprogram is in use.\n\nThe program has three options\n\n 1 - Enter Birthdays/Memos\n\n 2 - Search Birthdays/Memos\n\n 3 - List Birthdays/Memos\n\nOption 1 allows you to enter\nbirthdays or memos. The birthday\noption has a 10-letter limit on\nthe name and the memo option has\na 50-letter limit. The date is\nentered as 'date' and 'month';\ne.g., 23, 12 for 23 December.\n\nOption 2 searches for any birth-\ndays or memos during the next 10\ndays and any that occur today\nthen lists them on the screen.\n\nOption 3 Lists ALL the birthdays\nthat have been entered with\nnames and dates.If you choose to\nLIST the memos it just gives a\nlist of the dates for which they\nhave been entered. Choose Option\n2 and enter the appropriate date\nto read the memo.\n\nTo clear the data files 'BREAK'\nand 'RUN'the program. This will\ngive you the option to OVERWRITE\nthe files with new empty files\nif you wish.\n\n\n\n\n\n\n\n Press 'N' to load \"DAY II DAY\".\n",
+  "body_ru_plain": "",
+  "body_en": "### DAY-II-DAY\n\nThe next item following this, \"DAY-II-DAY\", is a Diary/Memo program that allows you to enter birthdays and memos for each day of the year and, when run and today's date is entered, reminds you of any birthdays or other events you have stored that will be coming up within the next 10 days.\n\nThe program when first run asks you for the current year. This should be entered as just the last two numbers (i.e., 91). This allows the program to determine whether it is a leap year or not. The program then sets up two DATA files on the disc to hold the DATA that you enter and, as the program constantly accesses the disc, it should be left in Drive 1 while the program is in use.\n\nThe program has three options:\n\n1. **Enter Birthdays/Memos**\n2. **Search Birthdays/Memos**\n3. **List Birthdays/Memos**\n\n**Option 1** allows you to enter birthdays or memos. The birthday option has a 10-letter limit on the name and the memo option has a 50-letter limit. The date is entered as 'date' and 'month'; e.g., `23, 12` for 23 December.\n\n**Option 2** searches for any birthdays or memos during the next 10 days and any that occur today, then lists them on the screen.\n\n**Option 3** lists ALL the birthdays that have been entered with names and dates. If you choose to LIST the memos it just gives a list of the dates for which they have been entered. Choose Option 2 and enter the appropriate date to read the memo.\n\nTo clear the data files, press 'BREAK' and 'RUN' the program. This will give you the option to OVERWRITE the files with new empty files if you wish.\n\nPress 'N' to load \"DAY II DAY\".\n",
+  "body_ru": "### DAY-II-DAY\n\nСледующая за этим разделом программа, «DAY-II-DAY», представляет собой органайзер/ежедневник, позволяющий вносить дни рождения и памятки на каждый день года. При запуске и вводе сегодняшней даты она напомнит вам обо всех сохранённых событиях или днях рождения, которые произойдут в ближайшие 10 дней.\n\nПри первом запуске программа запрашивает текущий год. Его следует ввести двумя последними цифрами (например, 91). Это позволяет программе определить, является ли год високосным. Затем программа создаёт на диске два файла данных для хранения введённой информации. Поскольку программа постоянно обращается к диску, его следует оставлять в дисководе 1 на всё время работы.\n\nВ программе предусмотрено три пункта меню:\n\n1. **Enter Birthdays/Memos** (Ввод дней рождений/заметок)\n2. **Search Birthdays/Memos** (Поиск дней рождений/заметок)\n3. **List Birthdays/Memos** (Список дней рождений/заметок)\n\n**Пункт 1** позволяет вводить дни рождения или заметки. Для имён в днях рождения установлено ограничение в 10 символов, а для заметок — в 50 символов. Дата вводится в формате «число» и «месяц», например: `23, 12` для 23 декабря.\n\n**Пункт 2** ищет любые дни рождения или памятки, приходящиеся на сегодня или на ближайшие 10 дней, и выводит их список на экран.\n\n**Пункт 3** выводит ВСЕ введённые дни рождения с именами и датами. Если выбрать вывод заметок (memos), на экране появится лишь список дат, на которые они записаны. Чтобы прочитать саму заметку, выберите пункт 2 и введите соответствующую дату.\n\nЧтобы очистить файлы данных, нажмите 'BREAK' и снова запустите программу ('RUN'). Это даст возможность перезаписать файлы новыми, пустыми, если вы того пожелаете.\n\nНажмите 'N' для загрузки «DAY II DAY».\n",
+  "text_type": 3
+}

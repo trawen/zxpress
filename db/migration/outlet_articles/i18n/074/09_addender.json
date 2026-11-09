@@ -1,0 +1,48 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "074",
+  "article_id": "09_addender",
+  "title_en": "Add-Enders",
+  "title_ru": "Дополнения (Add-Enders)",
+  "meta_description_en": "Brian introduces the Add-Enders bonus section in Outlet #074: Music File, Alchnews 8 & 9, Tas2 files, ROM Index correction, Bugfixer, and Linescan.x.",
+  "meta_description_ru": "Брайан представляет бонусный раздел Add-Enders в Outlet #074: Music File, Alchnews 8 и 9, файлы Tas2, исправление ROM Index, Bugfixer и Linescan.x.",
+  "authors": [
+    "Brian"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet-magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "alchnews",
+      "tag_alias": "alchnews"
+    },
+    {
+      "tag_name": "betados",
+      "tag_alias": "betados"
+    },
+    {
+      "tag_name": "bugfixer",
+      "tag_alias": "bugfixer"
+    },
+    {
+      "tag_name": "disciple",
+      "tag_alias": "disciple"
+    },
+    {
+      "tag_name": "tasword",
+      "tag_alias": "tasword"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_en_plain": "Some items contributed to OUTLET\nhave not yet been included for a\nvariety of reasons. It's a shame\nto leave them on the shelf so,if\nappropriate, they will be added\nto this ADD-ENDERS area of the\nmagazine (not microdrive or Opus\nas there is not enough room).\n\nThe material covers a wide range\nof quality and program types:\nutilities, screens, character\nsets and text articles and SOME\nof it may be unedited, untested,\nnot working fully or properly;\nin need of conversion for your\n\nsystem's syntax or printer etc.;\nwithout full instructions or\nwhatever. Readers will have to\nsift through to see if there is\nanything of interest they can\nmake use of and discard the\nrest. Not everything will appear\non all versions necessarily.\n\nSome Add-Enders may be linked to\nOUTLET in the normal way. These\nwill usually precede this text\nfile. Any items that follow this\narticle will possibly need to be\nLOADed manually or may not auto-\nrun when loaded.\n\nThere may be some info on the\nfollowing pages...\n\nNext is a new version of MUSIC\nFILE. Please read Chris Oliver's\nOUTLETTER in MORE MAIL for info\non this.\n\nAfter that are two issues of\nALCHNEWS, a text disc magazine.\nThere is ALCHNEWS 8 which should\nreturn to CONTENTS automatically\non its last page and ALCHNEWS 9.\nThere are two parts to ALCHNEWS\n9 but don't confuse either of\nthem with ALCHNEWS 8. There is\nan option to return to CONTENTS\nin ALCHNEWS 9 as well as select\nPart 1 or 2.\n\nALCHNEWS is followed by our Tas2\nreader: BLAST IT. As loaded, it\ncontains a Tas2 file which is\nPart 1 of ALCHNEWS PD catalogue.\n\nYou can read or print this file\nfrom the BLAST IT reader if you\ndon't have Tasword 2. Part 2 of\nthe PD Catalogue can also be\nloaded into BLAST IT as well as\na PD Tas2 file giving info on\nthe 48K ROM. Details of file\nnames are given at the top of\nPart 1 of the PD catalogue file.\n\nSpeaking of the Spectrum ROM,the\nfile\"sc\" in the recent ROM INDEX\nseries by Francis Miles was, as\npointed out by a reader, the\nwrong text. Francis has sent us\nthe right \"sc\" file and this is\nin this month's ADDENDERS.\n\nBUGFIXER, by Miles Kinloch,cures\na BETADOS bug. Read Miles' OUT-\nLETTER this issue for details.\n\nFinally, there is \"LINESCAN.X\".\nThis is a +D execute file and so\nwill only be on the Disciple/+D\nversion of OUTLET. It is also\ndescribed in Miles Kinloch's\nOUTLETTER.\n\nPlenty to keep you all occupied\nthis month! Right,I must go and\nwatch the chess now so see you\nnext month.\n                          Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "Some items contributed to OUTLET have not yet been included for a variety of reasons. It's a shame to leave them on the shelf so, if appropriate, they will be added to this ADD-ENDERS area of the magazine (not microdrive or Opus as there is not enough room).\n\nThe material covers a wide range of quality and program types: utilities, screens, character sets and text articles and SOME of it may be unedited, untested, not working fully or properly; in need of conversion for your system's syntax or printer etc.; without full instructions or whatever. Readers will have to sift through to see if there is anything of interest they can make use of and discard the rest. Not everything will appear on all versions necessarily.\n\nSome Add-Enders may be linked to OUTLET in the normal way. These will usually precede this text file. Any items that follow this article will possibly need to be LOADed manually or may not auto-run when loaded.\n\nThere may be some info on the following pages...\n\nNext is a new version of MUSIC FILE. Please read Chris Oliver's OUTLETTER in MORE MAIL for info on this.\n\nAfter that are two issues of ALCHNEWS, a text disc magazine. There is ALCHNEWS 8 which should return to CONTENTS automatically on its last page and ALCHNEWS 9. There are two parts to ALCHNEWS 9 but don't confuse either of them with ALCHNEWS 8. There is an option to return to CONTENTS in ALCHNEWS 9 as well as select Part 1 or 2.\n\nALCHNEWS is followed by our Tas2 reader: BLAST IT. As loaded, it contains a Tas2 file which is Part 1 of ALCHNEWS PD catalogue.\n\nYou can read or print this file from the BLAST IT reader if you don't have Tasword 2. Part 2 of the PD Catalogue can also be loaded into BLAST IT as well as a PD Tas2 file giving info on the 48K ROM. Details of file names are given at the top of Part 1 of the PD catalogue file.\n\nSpeaking of the Spectrum ROM, the file \"sc\" in the recent ROM INDEX series by Francis Miles was, as pointed out by a reader, the wrong text. Francis has sent us the right \"sc\" file and this is in this month's ADDENDERS.\n\nBUGFIXER, by Miles Kinloch, cures a BETADOS bug. Read Miles' OUTLETTER this issue for details.\n\nFinally, there is \"LINESCAN.X\". This is a +D execute file and so will only be on the Disciple/+D version of OUTLET. It is also described in Miles Kinloch's OUTLETTER.\n\nPlenty to keep you all occupied this month! Right, I must go and watch the chess now so see you next month.\n\nBrian.\n",
+  "body_ru": "Некоторые материалы, присланные в OUTLET, до сих пор не были включены в журнал по разным причинам. Жаль оставлять их пылиться на полке, поэтому при наличии возможности они будут добавляться в этот раздел журнала под названием ADD-ENDERS («Дополнения») — за исключением версий для microdrive или Opus, так как там попросту не хватает места.\n\nМатериалы охватывают самый широкий спектр тем и форматов: утилиты, экраны, шрифты и текстовые статьи. Кое-что из этого может быть неотредактированным, непротестированным, работать не до конца или со сбоями, требовать адаптации под синтаксис вашей системы или принтер, быть без подробных инструкций и так далее. Читателям придется покопаться во всем этом самостоятельно, чтобы отобрать то, что представляет интерес, а остальное отсеять. Кроме того, далеко не всё обязательно появится во всех версиях диска.\n\nНекоторые дополнения могут запускаться прямо из оболочки OUTLET обычным способом. Как правило, в меню они идут перед этим текстовым файлом. Все программы, которые перечислены далее, возможно, потребуется загружать вручную (командой LOAD), либо они не запустятся автоматически при загрузке.\n\nНиже приведена краткая информация о них...\n\nДалее идет новая версия MUSIC FILE. Подробности читайте в письме Криса Оливера (Chris Oliver) в рубрике MORE MAIL.\n\nПосле этого следуют два выпуска дискового текстового журнала ALCHNEWS. Это ALCHNEWS 8 (который на последней странице должен автоматически возвращаться в оглавление CONTENTS) и ALCHNEWS 9. ALCHNEWS 9 состоит из двух частей, но не перепутайте их с ALCHNEWS 8. В ALCHNEWS 9 есть опция возврата в CONTENTS, а также выбор Части 1 или 2.\n\nВслед за ALCHNEWS идет наш просмотрщик файлов Tasword 2 — программа BLAST IT. При загрузке в нее уже помещен файл формата Tas2, представляющий собой первую часть каталога PD-программ от ALCHNEWS.\n\nВы можете прочитать или распечатать этот файл прямо из просмотрщика BLAST IT, если у вас нет редактора Tasword 2. Вторая часть каталога PD также может быть загружена в BLAST IT, равно как и общедоступный файл Tas2 со справочной информацией о ПЗУ 48K. Имена файлов указаны в верхней части файла каталога PD (Часть 1).\n\nК слову о ПЗУ Спектрума: файл «sc» из недавней серии ROM INDEX от Фрэнсиса Майлза (Francis Miles), как справедливо заметил один из читателей, содержал не тот текст. Фрэнсис прислал нам правильный файл «sc», и он включен в раздел ADDENDERS этого месяца.\n\nУтилита BUGFIXER от Майлза Кинлоха (Miles Kinloch) исправляет ошибку в BETADOS. Подробности читайте в его письме в этом номере.\n\nИ наконец, файл «LINESCAN.X». Это исполняемый файл для системы +D, поэтому он присутствует только на версии OUTLET для Disciple/+D. Он также описан в письме Майлза Кинлоха.\n\nВ этом месяце вам точно будет чем заняться! Ну всё, мне пора идти смотреть шахматы, так что увидимся в следующем месяце.\n\nBrian.\n",
+  "text_type": 3
+}

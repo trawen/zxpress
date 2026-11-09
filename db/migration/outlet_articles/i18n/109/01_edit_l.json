@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "109",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Outlet #109 editorial: marking the 11th year of publication, searching for Graphic Adventure Creator manual, and introducing a +3 disk routine for 48K BASIC.",
+  "meta_description_ru": "Редакторская колонка журнала Outlet #109: начало 11-го года издания, поиск руководства к Graphic Adventure Creator и анонс утилиты для ZX Spectrum +3.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "gac",
+      "tag_alias": "gac"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus-3"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "S E P T E M B E R ,   1 9 9 6\n\nOur apologies if you should get\nthis month's OUTLET a few days\nlater than normal due to some\nextra work around the house that\nheld up work on getting all the\nissues produced.\n\n\nHowever,  you should still have\nreceived your new OUTLET within\nthe first ten days of the month\n(hopefully) and that's our real\ntarget. We are entering the 11th\nyear of OUTLET this month and it\nseems, as we think back, that\npractically every issue has gone\nout within that ten-day period.\n(This amazes us even if it does\nnot surprise you!).\n\nNow a request:has anyone got the\ninstructions for the GRAPHIC AD-\nVENTURE CREATOR please? If so,\ncan you send us a copy? We want\nto publish the program in OUTLET\n(it is now public domain) but it\nis pretty useless without the\ninformation as to how to use it.\nThanks.\n\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET. We\nare sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\nContributions have improved to a\nreasonable extent recently but\nremember, we need YOUR support,\nand contributions of articles\nand programs, especially utility\nprograms, are now needed more\nthan ever. Even a short routine\ncan be like gold dust to another\nuser! Send 'em in!\n\n\nThere's an interesting program\nin this month's issue for Plus 3\nusers. It lets you use the disk\ndrive from 48K BASIC! This could\nbe quite useful for running any\nof those games that only work in\n48K mode! Enjoy!\n\n                    Ron & Brian\n\n\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nS E P T E M B E R ,   1 9 9 6\n\nOur apologies if you should get this month's OUTLET a few days later than normal due to some extra work around the house that held up work on getting all the issues produced.\n\nHowever,  you should still have received your new OUTLET within the first ten days of the month (hopefully) and that's our real target. We are entering the 11th year of OUTLET this month and it seems, as we think back, that practically every issue has gone out within that ten-day period. (This amazes us even if it does not surprise you!).\n\nNow a request:has anyone got the instructions for the GRAPHIC AD- VENTURE CREATOR please? If so, can you send us a copy? We want to publish the program in OUTLET (it is now public domain) but it is pretty useless without the information as to how to use it. Thanks.\n\nMay we remind readers, we cannot answer computer, software, hard- ware or system queries etc., personally by mail.  All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder!Share your problems with others! That way, everyone benefits!\n\nContributions have improved to a reasonable extent recently but remember, we need YOUR support, and contributions of articles and programs, especially utility programs, are now needed more than ever. Even a short routine can be like gold dust to another user! Send 'em in!\n\nThere's an interesting program in this month's issue for Plus 3 users. It lets you use the disk drive from 48K BASIC! This could be quite useful for running any of those games that only work in 48K mode! Enjoy!\n\nRon & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers\n\nCHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF .\n",
+  "body_ru": "## Editorial (late)\n\n### Сентябрь 1996 г.\n\nПриносим свои извинения, если в этом месяце вы получили OUTLET на несколько дней позже обычного — виной тому непредвиденные домашние хлопоты, которые задержали процесс выпуска тиража.\n\nТем не менее, вы всё равно должны были получить свежий OUTLET в течение первых десяти дней месяца (мы надеемся), а это и есть наша главная цель. В этом месяце пошел уже 11-й год существования OUTLET, и, оглядываясь назад, кажется, что практически каждый номер выходил в эти самые десятидневные сроки. (Это поражает нас самих, даже если вас это ничуть не удивляет!).\n\nА теперь просьба: нет ли у кого-нибудь инструкции к GRAPHIC ADVENTURE CREATOR? Если есть, не могли бы вы прислать нам копию? Мы хотим опубликовать эту программу в OUTLET (теперь она перешла в общественное достояние), но без руководства пользователя от неё мало толку. Заранее спасибо.\n\nНапоминаем читателям: мы не можем отвечать на вопросы по компьютерам, программному обеспечению, железу, системам и т. д. лично по почте. Все подобные вопросы разбираются в рубрике OUTLETTERS на страницах OUTLET. Извините, что постоянно твердим об этом, но об этом правиле действительно нужно напоминать регулярно! Делитесь своими проблемами с остальными! Так польза будет для каждого!\n\nВ последнее время приток материалов заметно оживился, но помните: нам нужна ВАША поддержка. Статьи и программы, особенно утилиты, сейчас нужны как никогда. Даже короткая подпрограмма может оказаться на вес золота для другого пользователя! Присылайте их нам!\n\nВ этом выпуске есть интересная программа для владельцев Plus 3. Она позволяет работать с дисководом прямо из 48K BASIC! Это может быть весьма полезно для запуска тех игр, которые работают только в режиме 48K! Приятного чтения и использования!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n```\n",
+  "text_type": 3
+}

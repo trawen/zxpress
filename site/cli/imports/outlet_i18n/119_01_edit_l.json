@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "119",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Outlet #119 editorial (July 1997): late release explanation, Hotmail email issues, call for reader letters, software contributions, and crosswords.",
+  "meta_description_ru": "Редакционная колонка Outlet №119 (июль 1997): задержка выпуска, проблемы с почтой Hotmail, призыв присылать письма, программы и кроссворды.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "email",
+      "tag_alias": "email"
+    },
+    {
+      "tag_name": "обратная связь",
+      "tag_alias": "feedback"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "J U L Y ,   1 9 9 7\n\nOur apologies should you receive\nthis issue a bit late but one of\nour PCs was not working for some\ndays right at the end of last\nmonth and other things have held\nus up - but here we are at last!\n\n\nWe are having problems with Hot\nMail's email facility and they\nhave so far failed to respond to\nus when we reported the problem!\nTherefore,until this is resolved\ncan you please forware any email\nto Ron's private box...\n\n     ron.cavers@virgin.net\n\nIf anyone has sent email recent-\nly to the hotmail address, we'd\nbe grateful if you would send\nanother copy to the new address.\n\nThis may be why there were fewer\nOUTLETTERS this month but if not\nwe do really need your letters -\neven a short tip or question as\nthey are the lifeblood of OUTLET\nand part of its 'personality'!\n\n\nRemember,we still need YOUR sup-\nport, and contributions of art-\nicles and programs - especially\nutility programs - are always\nwelcome. Even a short routine\ncan be like gold dust to another\nuser! Send 'em in! We could also\nuse some new cross word puzzles\nfor PROCROSS as our stock is now\na bit low!\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET.\nWe are sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\nWe can always use more readers\nbut there are few places where\nwe can advertise economicially.\nSo, this month we are including\na new recruitment form. Please\nkeep it in mind and if you can\npass it on to anyone who might\nbe interested or spread it round\nwhere appropriate then please do\nso!\n                     Ron & Brian\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n Email: ron.cavers@virgin.net\n Make out cheques to Ron Cavers.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nJ U L Y ,   1 9 9 7\n\nOur apologies should you receive this issue a bit late but one of our PCs was not working for some days right at the end of last month and other things have held us up - but here we are at last!\n\nWe are having problems with Hot Mail's email facility and they have so far failed to respond to us when we reported the problem! Therefore,until this is resolved can you please forware any email to Ron's private box...\n\nron.cavers@virgin.net\n\nIf anyone has sent email recent- ly to the hotmail address, we'd be grateful if you would send another copy to the new address.\n\nThis may be why there were fewer OUTLETTERS this month but if not we do really need your letters - even a short tip or question as they are the lifeblood of OUTLET and part of its 'personality'!\n\nRemember,we still need YOUR sup- port, and contributions of art- icles and programs - especially utility programs - are always welcome. Even a short routine can be like gold dust to another user! Send 'em in! We could also use some new cross word puzzles for PROCROSS as our stock is now a bit low!\n\nMay we remind readers, we cannot answer computer, software, hard- ware or system queries etc., personally by mail.  All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder!Share your problems with others! That way, everyone benefits!\n\nWe can always use more readers but there are few places where we can advertise economicially. So, this month we are including a new recruitment form. Please keep it in mind and if you can pass it on to anyone who might be interested or spread it round where appropriate then please do so! Ron & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers 34 Saltersgate Drive Birstall, Leicester LE4 3FF\n\nEmail: ron.cavers@virgin.net Make out cheques to Ron Cavers.\n",
+  "body_ru": "## Editorial (late)\n\nИ Ю Л Ь , 1 9 9 7\n\nПриносим свои извинения, если вы получили этот номер с небольшим опозданием: один из наших PC не работал несколько дней в самом конце прошлого месяца, да и другие дела нас задержали — но вот мы наконец-то здесь!\n\nУ нас возникли проблемы с почтовым сервисом Hotmail, и они до сих пор не соизволили нам ответить после отправки отчета об ошибке! Поэтому, пока всё не разрешится, пожалуйста, пересылайте всю электронную почту на личный ящик Ron:\n\n```text\n     ron.cavers@virgin.net\n```\n\nЕсли кто-то отправлял письма недавно на hotmail-адрес, мы будем очень благодарны, если вы продублируете их на этот новый адрес.\n\nВозможно, именно из-за этого в текущем месяце пришло меньше писем для OUTLETTERS, но если дело не в почте, то нам действительно очень нужны ваши письма — даже короткая подсказка или вопрос, ведь они — жизненная сила OUTLET и часть его неповторимого характера!\n\nПомните, нам по-прежнему нужна ВАША поддержка: статьи и программы (особенно утилиты) приветствуются всегда. Даже коротенькая процедура может оказаться на вес золота для другого пользователя! Присылайте! Нам также не помешали бы новые кроссворды для PROCROSS, так как наши запасы подходят к концу!\n\nНапоминаем читателям: мы не можем отвечать на вопросы о компьютерах, софте, железе или системах лично по почте. Ответы на все подобные запросы публикуются исключительно в рубрике OUTLETTERS на страницах OUTLET. Простите, что постоянно твердим об этом, но об этом правиле нужно напоминать непрерывно! Делитесь своими проблемами с остальными! Так польза будет для всех!\n\nНам всегда не хватает читателей, однако мест, где можно было бы дать рекламу без лишних затрат, совсем немного. Поэтому в этом месяце мы добавляем новую форму подписки. Пожалуйста, имейте её в виду, и если вы можете передать её кому-то заинтересованному или распространить там, где это уместно, сделайте это!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n Email: ron.cavers@virgin.net\n Make out cheques to Ron Cavers.\n```\n",
+  "text_type": 3
+}

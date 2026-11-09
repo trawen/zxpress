@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "24",
+  "article_id": "08_SPECIA.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Special Delivery on the Cover Disk",
+  "title_ru": "Игра Special Delivery на диске журнала",
+  "meta_description_en": "Note on the game Special Delivery included in Scene+ #24: converted from CD-ROM with a universal loader.",
+  "meta_description_ru": "Заметка об игре Special Delivery на диске Scene+ #24: конверсия с CD-ROM с универсальным загрузчиком.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    },
+    {
+      "tag_name": "special-delivery",
+      "tag_alias": "special-delivery"
+    },
+    {
+      "tag_name": "uniloader",
+      "tag_alias": "uniloader"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "SPECIA ü - SPECIAL DELIVERY - Der wohl einzige Beweis dafür daß\ndiese Ausgabe zu Weihnachtenhätte erscheinen sollen. Ich habe es\nvon der SPECCY CD ROM konvertiert und mit einem Uniloader\nausgestattet um es von jedemSystem lauffähig zu machen (+D User\nhätten sich wohl mit einem Snapshot zufriedengegeben, aber das\nist nicht meine Art, nichtso wie andere Magazine). X - This is\nthe only evidence, that this issue should be finishet atX-mas. I\nhave converted it from the Speccy CD to a Uniloaderversion (no\nfu..ing snaps like in the other\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**SPECIAL DELIVERY** — Probably the only proof that this issue was supposed to come out at Christmas. I converted it from the SPECCY CD ROM and equipped it with a uniloader to make it runnable on any system (+D users probably would have settled for a snapshot, but that is not my style, unlike other magazines).\n\n*(English original note:)*  \nThis is the only evidence, that this issue should be finishet at X-mas. I have converted it from the Speccy CD to a Uniloader version (no fu..ing snaps like in the other...\n",
+  "body_ru": "**SPECIAL DELIVERY** — Пожалуй, единственное доказательство того, что этот выпуск должен был выйти на Рождество. Я сконвертировал игру со сборника SPECCY CD ROM и снабдил её универсальным загрузчиком (Uniloader), чтобы она работала на любой дисковой системе (пользователи +D, вероятно, довольствовались бы обычным снэпшотом, но это не в моём духе, в отличие от некоторых других журналов).\n\n*(Английская заметка из оригинала:)*  \nThis is the only evidence, that this issue should be finishet at X-mas. I have converted it from the Speccy CD to a Uniloader version (no fu..ing snaps like in the other...\n",
+  "text_type": 3
+}

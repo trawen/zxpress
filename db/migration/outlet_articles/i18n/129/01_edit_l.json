@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "129",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Editorial (late) for Outlet #129 (May 1998): copyright reminder, OUTDEX database maintenance in Masterfile, and Through the Trapdoor release.",
+  "meta_description_ru": "Редакторская колонка Outlet #129 (май 1998): замечание об авторском праве, переполнение базы OUTDEX в Masterfile и игра Through the Trapdoor.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "copyright",
+      "tag_alias": "copyright"
+    },
+    {
+      "tag_name": "outdex",
+      "tag_alias": "outdex"
+    },
+    {
+      "tag_name": "through the trapdoor",
+      "tag_alias": "through-the-trapdoor"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "M A Y ,  1 9 9 8\n\nThere is an important note about\ncopyright in OUTLETTERS in this\nmonth's OUTLET that some readers\nmight not have realized so do\nplease read it carefully. OUTLET\nis copyright and should not be\nduplicated to others.\n\nIf you have had OUTDEX,our index\nto OUTLET, since the beginning\nand updated it each month, you\nwill probably find it is full up\nagain at last issue. It can hold\nabout 64 issues.\n\nSave your previous data file out\nof MASTERFILE as say, OUDX64.127\n(or save the whole MASTERFILE\nprogram including the data if\nyou prefer) and start again with\nthe Issue 128 data in this issue\nof OUTLET.We'll remind you again\nin August, 2002. Probably.\n\nIf your OUTDEX is incomplete you\nwill find it will become full at\ndifferent months but you might\nprefer to save it now anyway in\ncase you add back issues later.\n\n\nThere's another super full game\nin this issue which is now PD.It\nis THROUGH THE TRAPDOOR - the\nfollow up to TRAPDOOR which we\nhad in Issue 124. It's good fun\nbut tough so any hints would be\nmost welcome!\n\n                   Ron & Brian\n\n\n\n\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n Email: ron.cavers@virgin.net.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nM A Y ,  1 9 9 8\n\nThere is an important note about copyright in OUTLETTERS in this month's OUTLET that some readers might not have realized so do please read it carefully. OUTLET is copyright and should not be duplicated to others.\n\nIf you have had OUTDEX,our index to OUTLET, since the beginning and updated it each month, you will probably find it is full up again at last issue. It can hold about 64 issues.\n\nSave your previous data file out of MASTERFILE as say, OUDX64.127 (or save the whole MASTERFILE program including the data if you prefer) and start again with the Issue 128 data in this issue of OUTLET.We'll remind you again in August, 2002. Probably.\n\nIf your OUTDEX is incomplete you will find it will become full at different months but you might prefer to save it now anyway in case you add back issues later.\n\nThere's another super full game in this issue which is now PD.It is THROUGH THE TRAPDOOR - the follow up to TRAPDOOR which we had in Issue 124. It's good fun but tough so any hints would be most welcome!\n\nRon & Brian\n\nOUTLET is produced by Chris Oliver Ron & Brian Cavers 34 Saltersgate Drive Birstall, Leicester LE4 3FF\n\nEmail: ron.cavers@virgin.net.\n",
+  "body_ru": "## Editorial (late)\n\nМАЙ 1998\n\nВ рубрике OUTLETTERS этого номера OUTLET есть важное примечание по поводу авторских прав, о котором некоторые читатели могли и не догадываться, так что, пожалуйста, прочтите его внимательно. OUTLET защищён авторским правом и не подлежит копированию для третьих лиц.\n\nЕсли у вас есть OUTDEX, наш каталог для OUTLET, с самого начала и вы обновляли его каждый месяц, то, скорее всего, обнаружите, что в прошлом выпуске он снова заполнился до предела. Он вмещает около 64 номеров.\n\nСохраните ваш предыдущий файл данных из MASTERFILE под именем, скажем, OUDX64.127 (или сохраните всю программу MASTERFILE вместе с данными, если вам так удобнее) и начните заново с данных для Issue 128 из этого номера OUTLET. Мы напомним вам снова в августе 2002 года. Наверное.\n\nЕсли ваш OUTDEX неполон, он заполнится в другие месяцы, но вы всё равно можете сохранить его прямо сейчас — на случай, если позже решите добавить старые номера.\n\nВ этом номере есть ещё одна отличная полная игра, которая теперь перешла в статус PD. Это THROUGH THE TRAPDOOR — продолжение TRAPDOOR, которая была у нас в Issue 124. Игра весёлая, но сложная, так что любые подсказки будут очень кстати!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n Email: ron.cavers@virgin.net.\n```\n",
+  "text_type": 3
+}

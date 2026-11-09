@@ -1,0 +1,43 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "111",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонсы",
+  "meta_description_en": "A preview of what's coming in the next (Christmas) issue of Outlet magazine, including fractal tools, utilities, a megademo, and a Boovie game.",
+  "meta_description_ru": "Анонс следующего (рождественского) номера журнала Outlet: программы для работы с фракталами, утилиты, мегадемо и игра с Boovie.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "fractals",
+      "tag_alias": "fractals"
+    },
+    {
+      "tag_name": "boovie",
+      "tag_alias": "boovie"
+    },
+    {
+      "tag_name": "megademo",
+      "tag_alias": "megademo"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "For fractal fans there should be\na couple of programs to look\nforward to next month: The final\nvolume of the atlas of the\n\"coastline\" of a Mandelbrot,\nwhich zooms in with greater\nmagnifications (up to 4999), and\nalso a program which can very\nquickly draw any one of an\nalmost infinite number of Chaos\ndiagrams.\n\n                     more...\n\nThere are several utility prog-\nrams, some of which cater for\nminority groups of users. There\nis one for tape users, one for\n+3 users, and another to check\nout your Microdrive and\nInterface 1, for anybody still\nusing them.\n\nThere is the first part of\nanother amazing megademo, and\nyou'll just love the game with\nlittle Boovie! Many other\ngoodies in store and since next\nmonth's will be the Christmas\nedition, we will try to add a\nlittle extra in the shape of a\ndemo preview.\n                         Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "For fractal fans there should be a couple of programs to look forward to next month: The final volume of the atlas of the \"coastline\" of a Mandelbrot, which zooms in with greater magnifications (up to 4999), and also a program which can very quickly draw any one of an almost infinite number of Chaos diagrams.\n\nThere are several utility programs, some of which cater for minority groups of users. There is one for tape users, one for +3 users, and another to check out your Microdrive and Interface 1, for anybody still using them.\n\nThere is the first part of another amazing megademo, and you'll just love the game with little Boovie! Many other goodies in store and since next month's will be the Christmas edition, we will try to add a little extra in the shape of a demo preview.\n\nChris.\n",
+  "body_ru": "Поклонников фракталов в следующем месяце ждут пару интересных программ: заключительная часть атласа «береговой линии» Мандельброта с ещё большим приближением (до 4999x), а также программа, способная очень быстро отрисовывать любую из практически бесконечного числа диаграмм Хаоса.\n\nТакже готовится несколько утилит, в том числе для редких конфигураций: программа для пользователей кассет, утилита для владельцев +3, а также тест Microdrive и Interface 1 — для тех, кто ими всё ещё пользуется.\n\nКроме того, выйдет первая часть очередного потрясающего мегадемо, а игра с маленьким Boovie вам наверняка полюбится! В запасе ещё много интересного, и поскольку следующий номер будет рождественским, мы постараемся приготовить для вас особый сюрприз в виде демо-превью.\n\nChris.\n",
+  "text_type": 3
+}

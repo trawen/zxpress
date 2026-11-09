@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "104",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A preview of Outlet #105 featuring the Lottery Players' Companion, utility programs, ZX Spectrum +3 Drivechat, a game, and music tribute.",
+  "meta_description_ru": "Анонс 105-го выпуска Outlet: программа Lottery Players' Companion, дисковые утилиты, колонка Drivechat о Spectrum +3, игра и музыкальное демо.",
+  "authors": [
+    "Chris Jenkins"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "lottery",
+      "tag_alias": "lottery"
+    },
+    {
+      "tag_name": "spectrum +3",
+      "tag_alias": "spectrum-3"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Next month's OUTLET presents you\nwith the Lottery Players'Compan-\nion which no lottery fan should\nbe without.  It stores the full\nstatistics of the National Lott-\nery up to the date of writing,\n-  and provides enough space to\ncontinue building up and analys-\ning all the results for the next\neighteen years or so!!  It will\nalso select a set of numbers for\nyou to try.\n\n\nThere are several utilities\nincluding one to extract a snap-\nshotted screen from the snapshot\nand another which carries out a\nrapid search of complete discs.\n\nOver the years we have many\ntimes cursed the non-compatabil-\nity of the Spectrum +3 which\noften creates problems in the\npreparation of OUTLET, but we\nkeep an open mind and next\nmonth's DRIVECHAT sings the\npraises of the better features\nof the +3.\n\nYou can also look forward to a\nfirst class -  and wonderfully\naddictive but simple game  -  a\nmusical tribute to Rene of \"Allo\n-Allo\" fame,and yet another huge\nmultipart demo!        - Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Next month's OUTLET presents you with the Lottery Players' Companion which no lottery fan should be without. It stores the full statistics of the National Lottery up to the date of writing, - and provides enough space to continue building up and analysing all the results for the next eighteen years or so!! It will also select a set of numbers for you to try.\n\nThere are several utilities including one to extract a snapshotted screen from the snapshot and another which carries out a rapid search of complete discs.\n\nOver the years we have many times cursed the non-compatability of the Spectrum +3 which often creates problems in the preparation of OUTLET, but we keep an open mind and next month's DRIVECHAT sings the praises of the better features of the +3.\n\nYou can also look forward to a first class - and wonderfully addictive but simple game - a musical tribute to Rene of \"Allo -Allo\" fame, and yet another huge multipart demo!\n\n- Chris.\n",
+  "body_ru": "В следующем выпуске OUTLET вас ждёт программа Lottery Players' Companion, без которой не обойтись ни одному поклоннику лотерей. Она хранит полную статистику Национальной лотереи на момент написания статьи — и оставляет достаточно места, чтобы продолжать собирать и анализировать результаты ещё на протяжении примерно восемнадцати лет! Кроме того, она умеет подбирать для вас случайную комбинацию номеров.\n\nТакже в номере будет несколько утилит, в том числе программа для извлечения заставки (экрана) из с snapshot-файла и инструмент для быстрого поиска данных по целым дискам.\n\nЗа долгие годы мы не раз проклинали несовместимость Spectrum +3, которая часто создаёт трудности при подготовке OUTLET, но мы стараемся оставаться объективными: в следующем выпуске колонка DRIVECHAT воздаст должное лучшим особенностям модели +3.\n\nКроме того, вас ждут первоклассная — невероятно увлекательная, но простая — игра, музыкальное посвящение Рене из знаменитого сериала «'Allo 'Allo!», а также очередное масштабное многосегментное демо!\n\n— Chris.\n",
+  "text_type": 3
+}

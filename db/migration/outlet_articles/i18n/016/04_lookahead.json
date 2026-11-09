@@ -1,0 +1,42 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "016",
+  "article_id": "04_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "Preview of the upcoming New Year issue of Outlet magazine: Pacman-style maze game, graphical CAT, BASIC utilities, machine code routines, and Craldon Creek finale.",
+  "meta_description_ru": "Анонс новогоднего номера журнала Outlet: лабиринтная игра, графический CAT, утилиты для BASIC и машинного кода, финал квеста Craldon Creek.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "anons"
+    },
+    {
+      "tag_name": "craldon creek",
+      "tag_alias": "craldon-creek"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    },
+    {
+      "tag_name": "outclass",
+      "tag_alias": "outclass"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "In the New Year issue we have a\nprogram to create graphical CAT\ndisplays; a smarter AUTOCHARS;an\nangagram solver; an extended CAT\nprogram for microdrivers;a very\nenjoyable\"pacman\"-type maze game\n(that I HAD to tear myself away\nfrom on first test to get this\nissue done!); an OUTCLASS lesson\nfrom Nick (taskmaster) Lewis; a\nmachine code routine that exits\nfrom awkward BASIC loops; a CODE\nshifter that can re-locate some\n\"un-relocatable\" code programs;a\n\npattern-generator;an interrupt-\ndriven message scroller; some\ncode that keeps the BASIC line\nyou're examining at the TOP of\nthe LIST(it drives me crazy when\nyou press ENTER and the line\ndrops like a stone to the bottom\nof the screen); a program and an\nalgorithm which demonstrates the\nnew \"law of chaos\" which is now\nbeing explored by scientists and\nthe final episode of our text\nadventure: CRALDON CREEK.I think\nthere's still room for more so I\nwill try and squeeze something\nextra in if I can.Not forgetting\nall OUTLET's regular features of\ncourse! Now, let me get back to\ntesting that game.Can't sit here\ntalking all day-must get on with\nmy work! The sacrifices I make\nfor you all(sigh!)..\n",
+  "body_ru_plain": "В новогоднем выпуске вас ждёт\nпрограмма графического CAT;\nпоумневший AUTOCHARS; решение\nанаграмм; расширенный CAT для\nмикродрайвов; увлекательнейшая\nигра-лабиринт типа \"pacman\"\n(от которой мне ПРИШЛОСЬ себя\nоторвать при первом тесте, чтоб\nдоделать номер!); урок OUTCLASS\nот Nick (надсмотрщика) Lewis;\nпроцедура в машкоде для выхода\nиз корявых циклов BASIC; CODE-\nсдвигатель, способный двигать\n\"несдвигаемые\" программы в коде;\n\nгенератор узоров; скроллер\nсообщений на прерываниях; блок\nкода, держащий текущую строку\nBASIC на САМОМ ВЕРХУ ЛИСТИНГА\n(меня бесит, когда жмёшь ENTER,\nи строка камнем падает на дно\nэкрана); программа и алгоритм,\nнаглядно демонстрирующие новый\n«закон хаоса», который сейчас\nисследуют учёные; и финальная\nчасть нашей текстовой игры:\nCRALDON CREEK. По-моему, место\nещё осталось, так что я попробую\nвпихнуть что-нибудь ещё, если\nсмогу. Не забывая, конечно, про\nпостоянные рубрики OUTLET! А\nтеперь я вернусь к тестированию\nигры. Нельзя же болтать весь\nдень — надо работать! На какие\nжертвы ради вас не пойдёшь\n(тяжкий вздох!)..\n",
+  "body_en": "## Lookahead\n\nIn the New Year issue we have:\n\n* a program to create graphical CAT displays;\n* a smarter AUTOCHARS;\n* an anagram solver;\n* an extended CAT program for microdrivers;\n* a very enjoyable \"pacman\"-type maze game (that I HAD to tear myself away from on first test to get this issue done!);\n* an OUTCLASS lesson from Nick (taskmaster) Lewis;\n* a machine code routine that exits from awkward BASIC loops;\n* a CODE shifter that can re-locate some \"un-relocatable\" code programs;\n* a pattern-generator;\n* an interrupt-driven message scroller;\n* some code that keeps the BASIC line you're examining at the TOP of the LIST (it drives me crazy when you press ENTER and the line drops like a stone to the bottom of the screen);\n* a program and an algorithm which demonstrates the new \"law of chaos\" which is now being explored by scientists;\n* and the final episode of our text adventure: CRALDON CREEK.\n\nI think there's still room for more so I will try and squeeze something extra in if I can. Not forgetting all OUTLET's regular features of course! Now, let me get back to testing that game. Can't sit here talking all day—must get on with my work! The sacrifices I make for you all (sigh!)..\n",
+  "body_ru": "## В следующем номере\n\nВ новогоднем выпуске вас ждёт:\n\n* программа графического CAT;\n* поумневший AUTOCHARS;\n* решение анаграмм;\n* расширенный CAT для микродрайвов;\n* увлекательнейшая игра-лабиринт типа \"pacman\" (от которой мне ПРИШЛОСЬ себя оторвать при первом тесте, чтоб доделать номер!);\n* урок OUTCLASS от Nick (надсмотрщика) Lewis;\n* процедура в машкоде для выхода из корявых циклов BASIC;\n* CODE-сдвигатель, способный двигать \"несдвигаемые\" программы в коде;\n* генератор узоров;\n* скроллер сообщений на прерываниях;\n* блок кода, держащий текущую строку BASIC на САМОМ ВЕРХУ ЛИСТИНГА (меня бесит, когда жмёшь ENTER, и строка камнем падает на дно экрана);\n* программа и алгоритм, наглядно демонстрирующие новый «закон хаоса», который сейчас исследуют учёные;\n* и финальная часть нашей текстовой игры: CRALDON CREEK.\n\nПо-моему, место ещё осталось, так что я попробую впихнуть что-нибудь ещё, если смогу. Не забывая, конечно, про постоянные рубрики OUTLET! А теперь я вернусь к тестированию игры. Нельзя же болтать весь день — надо работать! На какие жертвы ради вас не пойдёшь (тяжкий вздох!)..\n",
+  "text_type": 3
+}

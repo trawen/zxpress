@@ -1,0 +1,48 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "115",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Editorial for Outlet #115 (March 1997): Graphic Adventure Creator adapted for +D, Zoo Hero demo game, index updates, and drive belt repair for ZX Spectrum +3.",
+  "meta_description_ru": "Редакционная колонка Outlet #115 (март 1997): адаптация Graphic Adventure Creator для +D, демо-игра Zoo Hero, индексные файлы и ремонт дисковода ZX Spectrum +3.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "gac",
+      "tag_alias": "gac"
+    },
+    {
+      "tag_name": "+d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus-3"
+    },
+    {
+      "tag_name": "zoo hero",
+      "tag_alias": "zoo-hero"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "M A R C H , 1 9 9 7\nThere's some excellent software\nin this month's OUTLET as usual\nbut GRAPHIC ADVENTURE CREATOR\ndeserves special attention and\neven if you already have a copy,\nif you have a +D then now you\ncan use GAC with a disk drive!\n\n\nYou can even save and reload the\ngame position onto +D disk!\n\nPlus 3 readers can still use GAC\nby loading it from disk but will\nhave to load and save data from\ntape.\n\nA complete, though short, demo\ngame called ZOO HERO is also in\nthis issue to demonstrate the\nsort of game you can create with\nGAC. Have a go! - and send any\ngood ones in to OUTLET and share\nit with others!\n\nAlso in this issue but not shown\non the CONTENTS page are updated\nindex data files: ind.a-d, e-m,\nand n-z from Francis Miles. Read\nMalcolm Goodman's OUTLETTER for\ndetails.\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET. We\nare sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\n\nRemember,we still need YOUR sup-\nport, and contributions of art-\nicles and programs - especially\nutility programs - are always\nwelcome. Even a short routine\ncan be like gold dust to another\nuser! Send 'em in!\n\n\nIf your +3 disk drive has been\nacting unreliably then the prob-\nlem may be a slipping belt. Read\nDRIVECHAT in this issue for a\nvery detailed, idiot-proof guide\nto how to fit a new belt and\nwhere to get one from!\n\n\n                    Ron & Brian\n\n\n\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nM A R C H , 1 9 9 7 There's some excellent software in this month's OUTLET as usual but GRAPHIC ADVENTURE CREATOR deserves special attention and even if you already have a copy, if you have a +D then now you can use GAC with a disk drive!\n\nYou can even save and reload the game position onto +D disk!\n\nPlus 3 readers can still use GAC by loading it from disk but will have to load and save data from tape.\n\nA complete, though short, demo game called ZOO HERO is also in this issue to demonstrate the sort of game you can create with GAC. Have a go! - and send any good ones in to OUTLET and share it with others!\n\nAlso in this issue but not shown on the CONTENTS page are updated index data files: ind.a-d, e-m, and n-z from Francis Miles. Read Malcolm Goodman's OUTLETTER for details.\n\nMay we remind readers, we cannot answer computer, software, hard- ware or system queries etc., personally by mail.  All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder!Share your problems with others! That way, everyone benefits!\n\nRemember,we still need YOUR sup- port, and contributions of art- icles and programs - especially utility programs - are always welcome. Even a short routine can be like gold dust to another user! Send 'em in!\n\nIf your +3 disk drive has been acting unreliably then the prob- lem may be a slipping belt. Read DRIVECHAT in this issue for a very detailed, idiot-proof guide to how to fit a new belt and where to get one from!\n\nRon & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers 34 Saltersgate Drive Birstall, Leicester LE4 3FF .\n",
+  "body_ru": "## Editorial (late)\n\n### Март 1997\n\nВ этом выпуске OUTLET, как обычно, представлено отличное программное обеспечение, но GRAPHIC ADVENTURE CREATOR заслуживает особого внимания. И даже если у вас уже есть копия, то теперь, при наличии интерфейса +D, вы сможете использовать GAC с дисководом!\n\nВы даже можете сохранять и загружать состояние игры на диск +D!\n\nЧитатели с компьютером +3 по-прежнему могут использовать GAC, загружая его с диска, но загружать и сохранять игровые данные им придется с ленты.\n\nВ этот выпуск также включена законченная, хотя и короткая, демо-игра под названием ZOO HERO, призванная продемонстрировать, какие игры можно создавать с помощью GAC. Попробуйте сами! И присылайте свои удачные работы в OUTLET, чтобы поделиться ими с другими!\n\nКроме того, в этом выпуске (хотя они и не указаны на странице CONTENTS) присутствуют обновленные индексные файлы данных: ind.a-d, e-m и n-z от Francis Miles. Подробности читайте в рубрике OUTLETTER от Malcolm Goodman.\n\nНапоминаем читателям: мы не можем отвечать на вопросы о компьютерах, софте, железе или системных проблемах лично по почте. Все подобные вопросы разбираются через раздел OUTLETTERS в OUTLET. Простите, что постоянно твердим об этом, но об этом правиле действительно необходимо напоминать регулярно! Делитесь своими проблемами с остальными! Так польза будет для каждого!\n\nПомните, нам по-прежнему нужна ВАША поддержка. Статьи и программы — особенно утилиты — приветствуются всегда. Даже короткая подпрограмма может оказаться на вес золота для другого пользователя! Присылайте их нам!\n\nЕсли дисковод вашего +3 работает нестабильно, возможно, проблема в проскальзывающем пассике. Читайте DRIVECHAT в этом номере — там вы найдете подробнейшее и предельно понятное руководство о том, как установить новый пассик и где его достать!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n```\n",
+  "text_type": 3
+}

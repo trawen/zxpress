@@ -1,0 +1,35 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "069",
+  "article_id": "04_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A quick preview of the upcoming issue of Outlet: new utilities, games, a London Underground database, BASIC tutorials, and more.",
+  "meta_description_ru": "Краткий анонс следующего выпуска журнала Outlet: утилиты для дисков, база лондонского метро, игры, уроки Бейсика и демки.",
+  "authors": [
+    "Chris Jenkins"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "announcement",
+      "tag_alias": "announcement"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "In next month's OUTLET there are\na couple of utilities, one for\nchecking your discs and another\nfor changing Snap-file names.\nThere's a database so that you\ndon't get lost on the London\nUnderground, a couple of games,\nanother amazing demo to push\nthe Spectrum to its limits, more\nClip-art,a flashy Border routine\na fishy interlude, another cross\nword, the first in a new series\nof Basic programming tutorials,\nplus extras in Addenders for\n\"D\"ers. Don't miss it.  Chris..\n",
+  "body_ru_plain": "",
+  "body_en": "In next month's OUTLET there are a couple of utilities, one for checking your discs and another for changing Snap-file names. There's a database so that you don't get lost on the London Underground, a couple of games, another amazing demo to push the Spectrum to its limits, more Clip-art, a flashy Border routine, a fishy interlude, another crossword, the first in a new series of Basic programming tutorials, plus extras in Addenders for \"D\"ers. Don't miss it.\n\nChris..\n",
+  "body_ru": "В следующем номере OUTLET вас ждёт пара утилит: одна для проверки дисков, а другая для переименования сброшенных Snap-файлов. Также будет база данных, чтобы не заблудиться в лондонском метро, пара игр, очередное потрясающее демо, выжимающее все соки из Спектрума, новая порция клипартов, эффектная процедура на бордюре, «рыбная» интерлюдия, очередной кроссворд, первая статья из новой серии уроков программирования на Бейсике, а также дополнения в рубрике Addenders для владельцев дисководов. Не пропустите!\n\nChris..\n",
+  "text_type": 3
+}

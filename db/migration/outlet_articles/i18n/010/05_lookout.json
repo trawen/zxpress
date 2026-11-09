@@ -1,0 +1,49 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "010",
+  "article_id": "05_lookout",
+  "title_en": "Lookout",
+  "title_ru": "Lookout: Обзор прессы",
+  "meta_description_en": "A monthly review of British computing magazines (Your Sinclair, Sinclair User, etc.) and rumours surrounding the potential launch of the Spectrum +4.",
+  "meta_description_ru": "Обзор британских компьютерных журналов (Your Sinclair, Sinclair User и др.) за месяц, а также слухи о разработке и характеристиках компьютера Spectrum +4.",
+  "authors": [
+    "Brian"
+  ],
+  "tags": [
+    {
+      "tag_name": "your sinclair",
+      "tag_alias": "your-sinclair"
+    },
+    {
+      "tag_name": "sinclair user",
+      "tag_alias": "sinclair-user"
+    },
+    {
+      "tag_name": "обзор прессы",
+      "tag_alias": "press-review"
+    },
+    {
+      "tag_name": "spectrum +4",
+      "tag_alias": "spectrum-4"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "слухи",
+      "tag_alias": "rumours"
+    }
+  ],
+  "category_ids": [
+    130,
+    131,
+    124
+  ],
+  "body_en_plain": "Once again,Spectrum coverage for\nthe all-round user is very thin\nin the monthly magazines. YOUR\nSINCLAIR seems to be extending\nits programming pages slightly\nand has listings for a message\nscroller; a BASIC wordwrap; a\nroutine to hack through code and\ndisplay any graphics found and a\nBASIC program that seems to be a\nmenu file loader for the +3 but\nlooks poorly written. There is\nalso a review of Digimouse and\nthe Kempston mouse.\n\nCOMPUTER SHOPPER has no Spectrum\nsection this month 'though there\nis a Spectrum fractal graphics\nlisting in the Amiga area! Iron-\nically OUTLET has a small advert\nthere so hopefully readers will\nfind it by vainly searching for\nthe non-existent Spectrum page!\n\nSINCLAIR USER has good guidance\non using PLOT, DRAW and CIRCLE\nfrom machine code (made confus-\ning for beginners by switching\nbetween decimal and hex without\nexplanation). Still,I discovered\nwhy I had trouble using the DRAW\nroutine in the ROM!There's also\na decent problems page.\n\nI saw nothing in YOUR COMPUTER\nand was unable to get a PERSONAL\nCOMPUTER WORLD or a CRASH this\n\nmonth. POPULAR COMPUTING WEEKLY\nis still, I think, the best\nall-round read but, of course,\nbeing a weekly, any issue with\nindividual items we might report\non would no longer be available\nby the time you receive OUTLET.\n\nVery little Spectrum news this\nmonth other than that there are\nmore and more rumours that the\nSpectrum +4 will be launched in\nlate summer.It should use a much\nfaster Z80 chip; has a 320 X 200\nresolution screen with FULL res\ncolour (not limited to character\nsquare resolution as on present\nSpectrums); up to 512K of memory\nand improved sound. It may be a\nvery serious blow to MGT's \"SAM\"\nproject and even take away some\nAtari ST sales...     - Brian.\n",
+  "body_ru_plain": "И снова материалы по Spectrum для\nуниверсального пользователя очень\nскудны в ежемесячных журналах.\nYOUR SINCLAIR, похоже, немного\nрасширяет свои страницы по прог-\nраммированию: там есть листинги\nбегущей строки; переноса слов в\nBASIC; процедуры для прочесывания\nкода и вывода найденной графики,\nа также BASIC-программы, похожей\nна загрузчик файлов с меню для +3,\nно выглядящей довольно коряво.\nЕсть и обзор Digimouse и мыши\nKempston mouse.\n\nВ COMPUTER SHOPPER в этом месяце\nнет раздела по Spectrum, хотя\nв рубрике Amiga затесался листинг\nфрактальной графики для Spectrum!\nПо иронии судьбы, у OUTLET там\nесть маленькая реклама, так что,\nнадеюсь, читатели найдут ее в\nтщетных поисках несуществующей\nстраницы по Spectrum!\n\nВ SINCLAIR USER есть толковое\nруководство по использованию\nPLOT, DRAW и CIRCLE из машинного\nкода (правда, запутанное для\nновичков переключением между dec\nи hex без пояснений). И все же\nя выяснил, почему у меня были\nпроблемы с вызовом процедуры\nDRAW из ROM! Там также есть\nприличная колонка проблем.\n\nВ YOUR COMPUTER я ничего не нашел\nи не смог достать свежий номер\nPERSONAL COMPUTER WORLD или CRASH\n\nв этом месяце. Журнал POPULAR\nCOMPUTING WEEKLY все еще остается,\nна мой взгляд, лучшим универсаль-\nным чтивом, но, будучи еженедель-\nником, любой номер с материалами,\nо которых мы могли бы упомянуть,\nуже пропадет из продажи к тому\nмоменту, как вы получите OUTLET.\n\nНовостей о Spectrum в этом месяце\nкот наплакал, разве что ходит все\nбольше слухов о том, что в конце\nлета выйдет Spectrum +4. В нем\nдолжен стоять гораздо более быст-\nрый чип Z80; экран 320 X 200 точек\nс ПОЛНОЦВЕТНЫМ разрешением (без\nограничений знакомест, как на ны-\nнешних Spectrum); до 512K памяти\nи улучшенный звук. Это может стать\nочень серьезным ударом по проекту\n\"SAM\" от MGT и даже откусить кусок\nпродаж у Atari ST...  - Brian.\n",
+  "body_en": "## Lookout\n\nOnce again, Spectrum coverage for the all-round user is very thin in the monthly magazines. YOUR SINCLAIR seems to be extending its programming pages slightly and has listings for a message scroller; a BASIC wordwrap; a routine to hack through code and display any graphics found and a BASIC program that seems to be a menu file loader for the +3 but looks poorly written. There is also a review of Digimouse and the Kempston mouse.\n\nCOMPUTER SHOPPER has no Spectrum section this month 'though there is a Spectrum fractal graphics listing in the Amiga area! Ironically OUTLET has a small advert there so hopefully readers will find it by vainly searching for the non-existent Spectrum page!\n\nSINCLAIR USER has good guidance on using PLOT, DRAW and CIRCLE from machine code (made confusing for beginners by switching between decimal and hex without explanation). Still, I discovered why I had trouble using the DRAW routine in the ROM! There's also a decent problems page.\n\nI saw nothing in YOUR COMPUTER and was unable to get a PERSONAL COMPUTER WORLD or a CRASH this month. POPULAR COMPUTING WEEKLY is still, I think, the best all-round read but, of course, being a weekly, any issue with individual items we might report on would no longer be available by the time you receive OUTLET.\n\nVery little Spectrum news this month other than that there are more and more rumours that the Spectrum +4 will be launched in late summer. It should use a much faster Z80 chip; has a 320 X 200 resolution screen with FULL res colour (not limited to character square resolution as on present Spectrums); up to 512K of memory and improved sound. It may be a very serious blow to MGT's \"SAM\" project and even take away some Atari ST sales...\n\n- Brian.\n",
+  "body_ru": "## Lookout: Обзор прессы\n\nИ снова материалы по Spectrum для универсального пользователя очень скудны в ежемесячных журналах. **YOUR SINCLAIR**, похоже, немного расширяет свои страницы по программированию: там есть листинги бегущей строки; переноса слов в BASIC; процедуры для прочесывания кода и вывода найденной графики, а также BASIC-программы, похожей на загрузчик файлов с меню для +3, но выглядящей довольно коряво. Есть и обзор Digimouse и мыши Kempston mouse.\n\nВ **COMPUTER SHOPPER** в этом месяце нет раздела по Spectrum, хотя в рубрике Amiga затесался листинг фрактальной графики для Spectrum! По иронии судьбы, у OUTLET там есть маленькая реклама, так что, надеюсь, читатели найдут ее в тщетных поисках несуществующей страницы по Spectrum!\n\nВ **SINCLAIR USER** есть толковое руководство по использованию PLOT, DRAW и CIRCLE из машинного кода (правда, запутанное для новичков переключением между dec и hex без пояснений). И все же я выяснил, почему у меня были проблемы с вызовом процедуры DRAW из ROM! Там также есть приличная колонка проблем.\n\nВ **YOUR COMPUTER** я ничего не нашел и не смог достать свежий номер **PERSONAL COMPUTER WORLD** или **CRASH** в этом месяце. Журнал **POPULAR COMPUTING WEEKLY** все еще остается, на мой взгляд, лучшим универсальным чтивом, но, будучи еженедельником, любой номер с материалами, о которых мы могли бы упомянуть, уже пропадет из продажи к тому моменту, как вы получите OUTLET.\n\nНовостей о Spectrum в этом месяце кот наплакал, разве что ходит все больше слухов о том, что в конце лета выйдет Spectrum +4. В нем должен стоять гораздо более быстрый чип Z80; экран 320 X 200 точек с ПОЛНОЦВЕТНЫМ разрешением (без ограничений знакомест, как на нынешних Spectrum); до 512K памяти и улучшенный звук. Это может стать очень серьезным ударом по проекту \"SAM\" от MGT и даже откусить кусок продаж у Atari ST...\n\n— Brian.\n",
+  "text_type": 3
+}

@@ -1,0 +1,41 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "058",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial: Chezron Policy",
+  "title_ru": "Редакторская колонка: Политика Chezron",
+  "meta_description_en": "Chezron Software outlines its customer service policy: a 21-day no-quibble guarantee, immediate error resolution, and full responsibility for postal deliveries.",
+  "meta_description_ru": "Chezron Software напоминает о стандартах обслуживания: безусловный возврат денег в течение 21 дня, быстрое исправление ошибок и полная ответственность за доставку.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "customer service",
+      "tag_alias": "customer-service"
+    },
+    {
+      "tag_name": "mail order",
+      "tag_alias": "mail-order"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "J U N E ,   1 9 9 2\n\nIn recent months, several mail-\norder companies have given cause\nfor complaint: poor service,lack\nof response to inquiries, etc.\nIt's now worth reminding Chezron\ncustomers of our own policy...\n\nWE HAVE a no-quibble guarantee\non EVERYTHING. This means if you\ndon't want it you need only send\nit back within 21 days to get a\nfull refund WITHOUT QUESTION.You\ndon't need to offer any reason\nor beg or grovel or argue - the\nrefund is yours BY RIGHT.\n\nWe GIVE high priority and extra\ndiligence and attention if an\nerror should occur. This means\nif something goes wrong we try\nour best to make sure you don't\nget two errors in a row. Most of\nus are tolerant of the odd mis-\ntake; it's the repetition and/or\nthe repeatedly ignoring people\nthat is guaranteed to annoy! It\nhas happened on occasion that we\nhave made the same error twice\nbut it is very rare!\n\nWE ACCEPT responsibility for the\ndelivery of our products to you.\nIt is not YOUR responsibility or\nthe Post Office's responsibility\n- it is OUR responsibility. If\nwe choose a delivery system that\nfails us,like the mail,then that\nis OUR problem - not yours. If\nthere is a loss it must be OURS.\n\nHuman error is certain to occur\nbut rest assured if we receive a\ncomplaint it is given special\nattention not simply reprocessed\nwith the other orders.\n\nThat's no big deal is it?\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_ru_plain": "",
+  "body_en": "JUNE, 1992\n\nIn recent months, several mail-order companies have given cause for complaint: poor service, lack of response to inquiries, etc. It's now worth reminding Chezron customers of our own policy...\n\nWE HAVE a no-quibble guarantee on EVERYTHING. This means if you don't want it you need only send it back within 21 days to get a full refund WITHOUT QUESTION. You don't need to offer any reason or beg or grovel or argue — the refund is yours BY RIGHT.\n\nWe GIVE high priority and extra diligence and attention if an error should occur. This means if something goes wrong we try our best to make sure you don't get two errors in a row. Most of us are tolerant of the odd mistake; it's the repetition and/or the repeatedly ignoring people that is guaranteed to annoy! It has happened on occasion that we have made the same error twice but it is very rare!\n\nWE ACCEPT responsibility for the delivery of our products to you. It is not YOUR responsibility or the Post Office's responsibility — it is OUR responsibility. If we choose a delivery system that fails us, like the mail, then that is OUR problem — not yours. If there is a loss it must be OURS.\n\nHuman error is certain to occur but rest assured if we receive a complaint it is given special attention not simply reprocessed with the other orders.\n\nThat's no big deal is it?\n\nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "body_ru": "ИЮНЬ, 1992\n\nВ последние месяцы сразу несколько компаний почтовой торговли дали немало поводов для жалоб: отвратительный сервис, игнорирование писем и запросов и тому подобное. Самое время напомнить клиентам Chezron о наших собственных правилах...\n\nУ НАС ДЕЙСТВУЕТ безусловная гарантия возврата денег на ВСЁ. Это значит, что если товар вам не подошел, вам достаточно просто отправить его обратно в течение 21 дня, чтобы получить полный возврат средств БЕЗ ЛИШНИХ ВОПРОСОВ. Вам не нужно объяснять причины, упрашивать, унижаться или спорить — возврат денег принадлежит вам ПО ПРАВУ.\n\nМы УДЕЛЯЕМ первостепенное внимание, проявляем максимальное усердие и заботу в тех случаях, когда случается накладка. Это значит, что если что-то пошло не так, мы приложим все усилия, чтобы вы не столкнулись со второй ошибкой подряд. Большинство из нас спокойно относится к редким случайным оплошностям; по-настоящему раздражают именно систематические ошибки и/или упорное игнорирование клиентов! Изредка случалось, что мы повторяли одну и ту же ошибку дважды, но это происходит крайне редко!\n\nМы БЕРЕМ НА СЕБЯ полную ответственность за доставку наших товаров до ваших рук. Это не ВАША забота и не забота почтовой службы — это НАША ответственность. Если мы выбираем способ доставки, который дает сбой (например, почту), то это НАША проблема, а не ваша. И если посылка теряется, этот убыток должны нести МЫ.\n\nЧеловеческий фактор неизбежен, но будьте уверены: если мы получаем претензию, к ней относятся с особым вниманием, а не просто пускают по кругу вместе с обычными заказами.\n\nВ этом ведь нет ничего сложного, правда?\n\nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "text_type": 3
+}

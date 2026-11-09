@@ -1,0 +1,47 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "061",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A preview of the software, games, and features coming in the next issue of Outlet magazine, presented by Brian Gaff.",
+  "meta_description_ru": "Анонс программ, игр и материалов следующего номера журнала Outlet от редактора Брайана Гаффа.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    },
+    {
+      "tag_name": "demoscene",
+      "tag_alias": "demoscene"
+    },
+    {
+      "tag_name": "music",
+      "tag_alias": "music"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Next month we have MAGIC SQUARE:\nan excellently-presented sliding\nblock puzzle; POWER:to calculate\nyour electric/gas bills etc.;\nVARSGARD: a programmer's utility\nthat protects variables; SOLVEX:\na program that solves single-\nvariable equations; BIM BAM: yet\nanother brilliant graphics/128K\nsound demo from Eastern Europe;\nPOKER: a programmer's utility to\nemulate the SAM's multi-POKE\ncommand and a fractal pattern\ngenerator.            more...\n\nThere's more clip art, a new\ncrossword puzzle;THE SECRET CITY\nOF KHOKOS KHAN: a text adventure\nby the author of THE GREEN FROG\nand the SANTA ADVENTURE; there's\na short DRIVECHAT on Spectrum\nspares and a great compilation\nof 128K classical guitar music!\n\nHave I missed anything? Well, if\nI have I'll just cram it into\nADD-ENDERS!\n                       - Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "Next month we have MAGIC SQUARE: an excellently-presented sliding block puzzle; POWER: to calculate your electric/gas bills etc.; VARSGARD: a programmer's utility that protects variables; SOLVEX: a program that solves single-variable equations; BIM BAM: yet another brilliant graphics/128K sound demo from Eastern Europe; POKER: a programmer's utility to emulate the SAM's multi-POKE command and a fractal pattern generator. more...\n\nThere's more clip art, a new crossword puzzle; THE SECRET CITY OF KHOKOS KHAN: a text adventure by the author of THE GREEN FROG and the SANTA ADVENTURE; there's a short DRIVECHAT on Spectrum spares and a great compilation of 128K classical guitar music!\n\nHave I missed anything? Well, if I have I'll just cram it into ADD-ENDERS!\n\n- Brian.\n",
+  "body_ru": "В следующем месяце вас ждут MAGIC SQUARE — великолепно оформленная головоломка с пятнашками; POWER — программа для расчета счетов за электричество, газ и т. д.; VARSGARD — утилита для программистов, защищающая переменные; SOLVEX — программа для решения уравнений с одной переменной; BIM BAM — еще одно потрясающее графическое/128K звуковое демо из Восточной Европы; POKER — утилита для программистов, эмулирующая команду мульти-POKE из SAM Coupé, а также генератор фрактальных узоров. И это еще не все...\n\nВас ждет новая порция клипартов, свежий кроссворд; THE SECRET CITY OF KHOKOS KHAN — текстовый квест от автора THE GREEN FROG и SANTA ADVENTURE; небольшая колонка DRIVECHAT о запасных частях для Спектрума и великолепный сборник музыки для классической гитары под 128K!\n\nЯ что-то упустил? Что ж, если и так, то я просто втисну это в ADD-ENDERS!\n\n— Brian.\n",
+  "text_type": 3
+}

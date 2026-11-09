@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "29",
+  "article_id": "07_KILL.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Kill Enemy 128 Playable Demo",
+  "title_ru": "Kill Enemy 128 Playable Demo",
+  "meta_description_en": "A brief mini-review of the ZX Spectrum 128 playable demo Kill Enemy, a Doom-style 3D raycasting engine clone with 45-degree rotation.",
+  "meta_description_ru": "Краткая заметка о демо-версии Kill Enemy для ZX Spectrum 128 — 3D-клоне в стиле Doom с поворотом на 45 градусов.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "kill-enemy",
+      "tag_alias": "kill-enemy"
+    },
+    {
+      "tag_name": "doom-clone",
+      "tag_alias": "doom-clone"
+    },
+    {
+      "tag_name": "3d-engine",
+      "tag_alias": "3d-engine"
+    }
+  ],
+  "category_ids": [
+    1,
+    2
+  ],
+  "body_de_plain": "K_ENEM ü - * KILL ENEMY 128 PLAYABLE DEMO - Nicht genug gedoomt?\nDies ist zwar auch ein Klon, aber diedrehung um die eigene Achse\nerfolgt in 45 Grad Schritten. Ichfinde daß es sehr gelungen ist,\nnur leider kann man keine Türen offnen, Karte anschauen oder gar\nGegner töten.n - Are you not doomed to death? This is also a\nclone, but with 45degr. spin. I think, this demo is very good,\nbut you have noenemies to shoot, and you cannot open any\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### KILL ENEMY 128 PLAYABLE DEMO\n\nStill haven't had enough of Doom? This is another clone, but here turning around your axis is done in 45-degree steps. I think it is very well made; unfortunately, you cannot open doors, view an automap, or kill any enemies yet.\n\n*(Original English blurb from the mag)*: Are you not doomed to death? This is also a clone, but with 45-degree spin. I think this demo is very good, but you have no enemies to shoot, and you cannot open any doors.\n",
+  "body_ru": "### KILL ENEMY 128 PLAYABLE DEMO\n\nЕщё не наигрались в Doom? Перед нами очередной клон, однако здесь поворот вокруг собственной оси происходит с шагом в 45 градусов. На мой взгляд, получилось весьма добротно, но, к сожалению, пока нельзя открывать двери, просматривать карту и уж тем более отстреливать врагов.\n\n*(Оригинальная англоязычная приписка из журнала)*: Still not doomed to death? Это тоже клон, но с поворотом на 45 градусов. По-моему, демо вышло отличным, вот только стрелять не в кого и двери открыть нельзя.\n",
+  "text_type": 3
+}

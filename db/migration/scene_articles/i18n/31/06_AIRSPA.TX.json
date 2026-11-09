@@ -1,0 +1,49 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "31",
+  "article_id": "06_AIRSPA.TX",
+  "source_lang": "de-AT",
+  "title_en": "Airspace 128 (Mini-Review)",
+  "title_ru": "Airspace 128 (Мини-обзор)",
+  "meta_description_en": "Short review of the ZX Spectrum demo Airspace 128 submitted to the Funtop '98 demoparty.",
+  "meta_description_ru": "Короткий отзыв о демо Airspace 128 для ZX Spectrum, представленном на демопати Funtop '98.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "funtop-98",
+      "tag_alias": "funtop-98"
+    },
+    {
+      "tag_name": "airspace-128",
+      "tag_alias": "airspace-128"
+    },
+    {
+      "tag_name": "demoscene",
+      "tag_alias": "demoscene"
+    },
+    {
+      "tag_name": "review",
+      "tag_alias": "review"
+    }
+  ],
+  "category_ids": [
+    89,
+    93,
+    94
+  ],
+  "body_de_plain": "AIRSPACE ü - AIRSPACE 128 - Deutsch - Ich frage mich, wieso\ndieses Demo überhaupt an dem Funtop'98teilgenohmen hatte. Die\nrussischen Coder müßten ja eigentlichwissen daß sie damit keine\nChance hatten zu gewinnen. Na ja,jedenfalls ist es besser als\nmeine einenen Demos.q - English - I Ask myself, why anyone has\nput this Demo into the Funtop'98compo, because it hasn't any\nchance to win. O. K., it is betterthan my own demos, but the\ngraphic is horrible. It was probalywriten in just one day! Hey!\nGod took seven days to code ourhom\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### AIRSPACE 128\n\nI wonder why this demo even entered the Funtop '98 compo. The Russian coders should have known that they had no chance to win with it. Well, in any case, it is better than my own demos.\n\n*Author's English commentary:*\n> I ask myself why anyone put this demo into the Funtop '98 compo, because it hasn't any chance to win. OK, it is better than my own demos, but the graphics are horrible. It was probably written in just one day! Hey! God took seven days to code our home...\n",
+  "body_ru": "### AIRSPACE 128\n\nЯ вот спрашиваю себя, зачем это демо вообще участвовало в Funtop '98? Русские кодеры вроде бы должны были понимать, что у них нет ни единого шанса на победу. Ну да ладно, во всяком случае, это лучше моих собственных демок.\n\n*Комментарий автора на английском:*\n> Спрашиваю себя, зачем вообще кто-то отправил эту дему на конкурс Funtop '98 — ведь шансов победить не было никаких. Ладно, она лучше моих собственных демок, но графика просто ужасна. Её, наверное, написали всего за один день! Эй! Богу потребовалось целых семь дней, чтобы закодить наш дом...\n",
+  "text_type": 3
+}

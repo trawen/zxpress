@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "133",
+  "article_id": "09_datalins",
+  "title_en": "Datalines",
+  "title_ru": "Datalines",
+  "meta_description_en": "L.G. Baumann introduces DATALINES, a ZX Spectrum utility that converts machine code into BASIC DATA statements, avoiding issues with REM statements.",
+  "meta_description_ru": "Л. Г. Бауманн представляет утилиту DATALINES для ZX Spectrum, которая переводит машинный код в строки BASIC DATA во избежание проблем с операторами REM.",
+  "authors": [
+    "L.G. Baumann"
+  ],
+  "tags": [
+    {
+      "tag_name": "datalines",
+      "tag_alias": "datalines"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    },
+    {
+      "tag_name": "machine code",
+      "tag_alias": "machine-code"
+    },
+    {
+      "tag_name": "utility",
+      "tag_alias": "utility"
+    },
+    {
+      "tag_name": "data statements",
+      "tag_alias": "data-statements"
+    }
+  ],
+  "category_ids": [
+    30,
+    64,
+    74
+  ],
+  "body_en_plain": "DATALINES by L.G. Baumann\n   -------------------------\nI have sometimes wanted to move\nCode into \"READ DATA\" lines for\nincorporation into a program.\n\nOne reason is that in Outlet a\none-line code utility is held in\na REM statement. When this is\nmerged into a program it is\nfollowed by a large blank space\nand the subsequent lines some-\ntimes cannot be listed readily.\n\n\nAlso, until Malcolm Goodman's\nRELINER appeared in Outlet 125\n[Actually there was a similar\nprogram called \"RELINO\" way back\nin Issue 49. Ed.] there was the\npossibility that an attempt to\nedit to a new line number could\ndestroy the REM code.\n\nA third reason is that in ent-\nering code into a data statement\nthere is always the possibility\nof the code figures being wrong-\nly entered.\n\nFor the above reasons I wrote a\nprogram some years ago to move\ncode into data lines, but do not\noften use it.However,I thought I\nwould send it in as it might be\nof interest and use to others.\n\n\nBrief instructions appear in\nLine 105.These have been arrang-\ned so that they can easily be\nread in the program itself and\ndo not have to be screened. When\nrun, just follow the prompts. In\nits present set-up it can be\ntried to move, say, 81 bytes of\ncode starting at, say, address\n12345 to see how it works.\n\nNote that the very first line in\nthe program must be a DATA line\nand cannot be preceded by any\nother line.\n\n                     L.G.Baumann\n\n\n          more...\n\n\n\nEditors warning:-\n\nNote that unless several modifi-\ncations are made, DATALINES will\nonly work in 48k mode as it uses\nthe printer buffer area, which,\nas you will know, holds the\nextra system variables in 128k\nmode.\n\n\n         Press \"N\" now\n           to load...\n\n           DATALINES.\n",
+  "body_ru_plain": "",
+  "body_en": "### DATALINES by L.G. Baumann\n\nI have sometimes wanted to move Code into \"READ DATA\" lines for incorporation into a program.\n\nOne reason is that in Outlet a one-line code utility is held in a REM statement. When this is merged into a program it is followed by a large blank space and the subsequent lines sometimes cannot be listed readily.\n\nAlso, until Malcolm Goodman's RELINER appeared in Outlet 125 [Actually there was a similar program called \"RELINO\" way back in Issue 49. Ed.] there was the possibility that an attempt to edit to a new line number could destroy the REM code.\n\nA third reason is that in entering code into a data statement there is always the possibility of the code figures being wrongly entered.\n\nFor the above reasons I wrote a program some years ago to move code into data lines, but do not often use it. However, I thought I would send it in as it might be of interest and use to others.\n\nBrief instructions appear in Line 105. These have been arranged so that they can easily be read in the program itself and do not have to be screened. When run, just follow the prompts. In its present set-up it can be tried to move, say, 81 bytes of code starting at, say, address 12345 to see how it works.\n\nNote that the very first line in the program must be a DATA line and cannot be preceded by any other line.\n\n— L.G. Baumann\n\n* * *\n\n### Editor's warning:\n\nNote that unless several modifications are made, DATALINES will only work in 48k mode as it uses the printer buffer area, which, as you will know, holds the extra system variables in 128k mode.\n\nPress \"N\" now to load... DATALINES.\n",
+  "body_ru": "### DATALINES — Л. Г. Бауманн\n\nМне время от времени требовалось переносить машинный код в строки «READ DATA» для внедрения в программу.\n\nОдна из причин заключается в том, что в Outlet однострочные утилиты в машинном коде хранятся в операторе REM. Когда такую строку объединяют (MERGE) с программой, за ней часто образуется большое пустое пространство, из-за чего последующие строки порой невозможно нормально просмотреть по команде LIST.\n\nКроме того, пока в Outlet 125 не появился RELINER Малкольма Гудмана [Вообще-то похожая программа под названием «RELINO» публиковалась ещё в 49-м выпуске. — Прим. ред.], существовал риск того, что попытка отредактировать номер строки повредит сам машинный код в REM.\n\nТретья причина: при ручном вводе байтов кода в операторы DATA всегда есть вероятность опечататься и внести неверные числа.\n\nИз-за перечисленных причин я несколько лет назад написал программу для переноса кода в строки DATA, хотя пользуюсь ею нечасто. Тем не менее, я решил отправить её в редакцию — возможно, она заинтересует и пригодится другим читателям.\n\nКраткая инструкция находится в строке 105. Она оформлена так, чтобы её можно было легко прочитать прямо в листинге программы, не выводя на экран специально. При запуске просто следуйте подсказкам. В текущем виде можно попробовать переместить, скажем, 81 байт кода, начиная с адреса 12345, чтобы посмотреть, как всё работает.\n\nОбратите внимание: самой первой строкой в программе обязательно должна быть строка DATA, перед ней не должно быть никаких других строк.\n\n— L.G. Baumann\n\n* * *\n\n### Предупреждение редактора:\n\nИмейте в виду, что без внесения ряда изменений DATALINES будет работать только в режиме 48K, поскольку она использует область буфера принтера — которая, как вам известно, в режиме 128K занята дополнительными системными переменными.\n\nНажмите «N» сейчас для загрузки... DATALINES.\n",
+  "text_type": 3
+}

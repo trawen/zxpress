@@ -1,0 +1,53 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "030",
+  "article_id": "05_lookout",
+  "title_en": "Lookout",
+  "title_ru": "Lookout: Обзор новостей",
+  "meta_description_en": "ZX Spectrum industry and press news: Future Publishing acquires Your Sinclair, All-Formats Computer Fair 1990 announcement, and magazine roundup.",
+  "meta_description_ru": "Новости прессы и индустрии ZX Spectrum: покупка Your Sinclair издательством Future, анонс All-Formats Computer Fair 1990 и краткий обзор журналов.",
+  "authors": [
+    "Brian"
+  ],
+  "tags": [
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "your sinclair",
+      "tag_alias": "your-sinclair"
+    },
+    {
+      "tag_name": "sinclair user",
+      "tag_alias": "sinclair-user"
+    },
+    {
+      "tag_name": "computer shopper",
+      "tag_alias": "computer-shopper"
+    },
+    {
+      "tag_name": "mgt",
+      "tag_alias": "mgt"
+    },
+    {
+      "tag_name": "выставки",
+      "tag_alias": "exhibitions"
+    },
+    {
+      "tag_name": "пресса",
+      "tag_alias": "press"
+    }
+  ],
+  "category_ids": [
+    130,
+    131,
+    116
+  ],
+  "body_en_plain": "Well, what's new this month?-Not\na lot actually. The latest SAM\nand microdrive cartridge info is\nin the editorial.\n\n\nFUTURE PUBLISHING(the publishers\nof NEW COMPUTER EXPRESS) have\nbought YOUR SINCLAIR from DENNIS\nPUBLISHING. I wonder if there'll\nbe any changes in presentation\nor policy? Anything must be an\nimprovement.Perhaps they'll even\ninclude something on computing.\n\nThe ALL-FORMATS COMPUTER FAIR\nwill be held at the ROYAL\nHORTICULTURAl HALL, Westminster\non 10th February, 1990. It will\nbe something like a glorified ZX\nMicrofair with nobs on.The nobs,\nin this case, being MGT who will\ndominate all with a large stage\nset. All those of us who have\nspent hour on frustrating hour,\ntweaking our cassette recorders\nto try and load a SAM program\nwill no doubt be queuing up\nholding custard pies (with black\nand white striped borders).`3.00\nto get in. Ring 0225 447453 for\nmore details.\n\nDid I say there wasn't much news\nthis month?Yes, well there's not\nmuch in the magazines either...\n\nNOTHING of a serious nature in\nSINCLAIR USER worth reporting at\nall!\n\nYOUR SINCLAIR has listings for\nan interrupt-driven routine that\nplays music while a program is\nrunning and,a Mandelbrot pattern\ngenerator and precious little\nelse.\n\nEven COMPUTER SHOPPER has little\nto relate. The language section\nlooks at \"classical\" BASIC while\nSINCLAIR SCENE looks back at the\nCOMPUTER SHOPPER SHOW but mostly\ndiscusses QL software.\n\nLet's hope all is well with the\nSAM COUPE and things get more\ninteresting - perhaps even a new\nmagazine?....          - Brian.\n",
+  "body_ru_plain": "Ну, что новенького в этом месяце?\nДа не особо много, на самом деле.\nСвежая информация о SAM и картри-\nджах microdrive — в редакторской\nколонке.\n\nFUTURE PUBLISHING (издатели\nNEW COMPUTER EXPRESS) выкупили\nYOUR SINCLAIR у DENNIS\nPUBLISHING. Интересно, изменится\nли подача материала или политика?\nЛюбые перемены будут к лучшему.\nБыть может, они даже начнут пи-\nсать о самих компьютерах.\n\nВыставка ALL-FORMATS COMPUTER FAIR\nпройдёт в ROYAL HORTICULTURAL\nHALL в Westminster 10 февраля 1990\nгода. Это будет нечто вроде про-\nславленной ZX Microfair, да со вся-\nкими наворотами. Главным «наворо-\nтом» в данном случае станет MGT,\nкоторая затмит всех своей огромной\nсценой. Все мы, потратившие часы\nв тщетных попытках настроить свои\nмагнитофоны, чтобы загрузить хоть\nодну программу для SAM, без сомне-\nния выстроимся в очередь с кремо-\nвыми пирогами наготове (с чёрно-\nбелой полосатой каймой). Вход —\n`3.00. Звоните 0225 447453 для\nподробностей.\n\nЯ говорил, что новостей в этом\nмесяце маловато? Да, но и в жур-\nналах тоже почти ничего нет...\n\nВ SINCLAIR USER ВООБЩЕ нет ничего\nсерьёзного, о чём стоило бы упо-\nмянуть!\n\nВ YOUR SINCLAIR есть листинги:\nпроцедура на прерываниях, которая\nиграет музыку во время работы про-\nграммы, генератор фракталов Ман-\nдельброта — и практически всё.\n\nДаже COMPUTER SHOPPER мало чем мо-\nжет порадовать. Раздел языков рас-\nсматривает «классический» BASIC,\nа SINCLAIR SCENE вспоминает вы-\nставку COMPUTER SHOPPER SHOW, но\nв основном обсуждает софт для QL.\n\nБудем надеяться, что с SAM COUPE\nвсё наладится и дела пойдут весе-\nлее — может, появится даже новый\nжурнал?....            - Brian.\n",
+  "body_en": "## Lookout\n\nWell, what's new this month? - Not a lot actually. The latest SAM and microdrive cartridge info is in the editorial.\n\nFUTURE PUBLISHING (the publishers of NEW COMPUTER EXPRESS) have bought YOUR SINCLAIR from DENNIS PUBLISHING. I wonder if there'll be any changes in presentation or policy? Anything must be an improvement. Perhaps they'll even include something on computing.\n\nThe ALL-FORMATS COMPUTER FAIR will be held at the ROYAL HORTICULTURAL HALL, Westminster on 10th February, 1990. It will be something like a glorified ZX Microfair with nobs on. The nobs, in this case, being MGT who will dominate all with a large stage set. All those of us who have spent hour on frustrating hour, tweaking our cassette recorders to try and load a SAM program will no doubt be queuing up holding custard pies (with black and white striped borders). £3.00 to get in. Ring 0225 447453 for more details.\n\nDid I say there wasn't much news this month? Yes, well there's not much in the magazines either...\n\nNOTHING of a serious nature in SINCLAIR USER worth reporting at all!\n\nYOUR SINCLAIR has listings for an interrupt-driven routine that plays music while a program is running and, a Mandelbrot pattern generator and precious little else.\n\nEven COMPUTER SHOPPER has little to relate. The language section looks at \"classical\" BASIC while SINCLAIR SCENE looks back at the COMPUTER SHOPPER SHOW but mostly discusses QL software.\n\nLet's hope all is well with the SAM COUPE and things get more interesting — perhaps even a new magazine?....\n\n— Brian.\n",
+  "body_ru": "## Lookout: Обзор новостей\n\nНу, что новенького в этом месяце? Да не особо много, на самом деле. Свежая информация о SAM и картриджах microdrive — в редакторской колонке.\n\nFUTURE PUBLISHING (издатели NEW COMPUTER EXPRESS) выкупили YOUR SINCLAIR у DENNIS PUBLISHING. Интересно, изменится ли подача материала или политика? Любые перемены будут к лучшему. Быть может, они даже начнут писать о самих компьютерах.\n\nВыставка ALL-FORMATS COMPUTER FAIR пройдёт в ROYAL HORTICULTURAL HALL в Westminster 10 февраля 1990 года. Это будет нечто вроде прославленной ZX Microfair, да со всякими наворотами. Главным «наворотом» в данном случае станет MGT, которая затмит всех своей огромной сценой. Все мы, потратившие часы в тщетных попытках настроить свои магнитофоны, чтобы загрузить хоть одну программу для SAM, без сомнения выстроимся в очередь с кремовыми пирогами наготове (с чёрно-белой полосатой каймой). Вход — `3.00. Звоните 0225 447453 для подробностей.\n\nЯ говорил, что новостей в этом месяце маловато? Да, но и в журналах тоже почти ничего нет...\n\nВ SINCLAIR USER ВООБЩЕ нет ничего серьёзного, о чём стоило бы упомянуть!\n\nВ YOUR SINCLAIR есть листинги: процедура на прерываниях, которая играет музыку во время работы программы, генератор фракталов Мандельброта — и практически всё.\n\nДаже COMPUTER SHOPPER мало чем может порадовать. Раздел языков рассматривает «классический» BASIC, а SINCLAIR SCENE вспоминает выставку COMPUTER SHOPPER SHOW, но в основном обсуждает софт для QL.\n\nБудем надеяться, что с SAM COUPE всё наладится и дела пойдут веселее — может, появится даже новый журнал?....\n\n— Brian.\n",
+  "text_type": 3
+}

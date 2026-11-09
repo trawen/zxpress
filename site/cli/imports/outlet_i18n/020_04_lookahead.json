@@ -1,0 +1,43 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "020",
+  "article_id": "04_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "Preview of the next issue of Outlet magazine: font/UDG editor, software protection article, microdrive CAT utility, Elfindor text adventure, and Jacksoft macro.",
+  "meta_description_ru": "Анонс следующего выпуска журнала Outlet: редактор шрифтов, статья о защите программ, утилиты, игра Elfindor от Sigmasoft и листинг макроса для Jacksoft.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "elfindor",
+      "tag_alias": "elfindor"
+    },
+    {
+      "tag_name": "microdrive",
+      "tag_alias": "microdrive"
+    },
+    {
+      "tag_name": "jacksoft",
+      "tag_alias": "jacksoft"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Next month's issue has a pocket-\nsized font/udg editor which runs\nin screen memory; 3 column,news-\npaper style print-outs from the\nOUTLET text mode; Part 2 of the\narticle on program protection; a\nhigh-speed microdrive extended-\ninfo CAT program and a general-\npurpose, VERY high-speed string\narray search utility.At the time\nof writing,I don't know if there\nwill be an OUTCLASS as I haven't\nyet heard from Nick Lewis about\nthis month's!\n\nDRIVECHAT has some notes on how\na universal error trap might be\nmade to work; there's a little\nBREAKOUT-type game; a football\nleague compiler for soccer fans;\na special screen reveal utility;\na simple implementation of LOGO\nand a great full-length text\nadventure from SIGMASOFT called\nELFINDOR. Don't miss it!\n\nI'm also adding the machine code\n\"macro\" that locates the address\nof any BASIC variable from the\nstring array search program as a\nJACKSOFT assembler listing so\nyou can merge it in your own\nprograms to pass data to machine\ncode programs. There's also room\nfor one or two other programs so\nI'll cram in even more!\n                        - Brian.\n",
+  "body_ru_plain": "В номере следующего месяца вас\nждёт карманный редактор шрифтов/\nUDG, работающий прямо в экранной\nпамяти; распечатка в 3 колонки в\nгазетном стиле из текстового ре-\nжима OUTLET; часть 2 статьи о\nзащите программ; скоростная про-\nграмма CAT с расширенной инфор-\nмацией для microdrive и универ-\nсальная, ОЧЕНЬ быстрая утилита\nпоиска в строковом массиве. На\nмомент написания я ещё не знаю,\nвыйдет ли OUTCLASS, поскольку от\nNick Lewis о номере за этот\nмесяц пока ничего не слышно!\n\nВ DRIVECHAT есть заметки о том,\nкак можно реализовать универ-\nсальный перехватчик ошибок;\nимеется небольшая игра типа\nBREAKOUT; составитель футбольной\nлиги для фанатов; специальная\nутилита проявления экрана;\nпростая реализация LOGO и заме-\nчательная полноразмерная тексто-\nвая адвентюра от SIGMASOFT под\nназванием ELFINDOR. Не пропусти-\nте!\n\nЯ также добавляю «макрос» в ма-\nшинном коде, находящий адрес лю-\nбой переменной BASIC из програм-\nмы поиска в строковом массиве, в\nвиде листинга для ассемблера\nJACKSOFT, чтобы вы могли объеди-\nнять его со своими программами\nдля передачи данных в машинный\nкод. Там ещё есть место для пары\nпрограмм, так что я натолкаю ту-\nда ещё больше всего!\n                        - Brian.\n",
+  "body_en": "## Lookahead\n\nNext month's issue has a pocket-sized font/udg editor which runs in screen memory; 3 column, newspaper style print-outs from the OUTLET text mode; Part 2 of the article on program protection; a high-speed microdrive extended-info CAT program and a general-purpose, VERY high-speed string array search utility. At the time of writing, I don't know if there will be an OUTCLASS as I haven't yet heard from Nick Lewis about this month's!\n\nDRIVECHAT has some notes on how a universal error trap might be made to work; there's a little BREAKOUT-type game; a football league compiler for soccer fans; a special screen reveal utility; a simple implementation of LOGO and a great full-length text adventure from SIGMASOFT called ELFINDOR. Don't miss it!\n\nI'm also adding the machine code \"macro\" that locates the address of any BASIC variable from the string array search program as a JACKSOFT assembler listing so you can merge it in your own programs to pass data to machine code programs. There's also room for one or two other programs so I'll cram in even more!\n\n— Brian.\n",
+  "body_ru": "## В следующем номере\n\nВ номере следующего месяца вас ждёт карманный редактор шрифтов/UDG, работающий прямо в экранной памяти; распечатка в 3 колонки в газетном стиле из текстового режима OUTLET; часть 2 статьи о защите программ; скоростная программа CAT с расширенной информацией для microdrive и универсальная, ОЧЕНЬ быстрая утилита поиска в строковом массиве. На момент написания я ещё не знаю, выйдет ли OUTCLASS, поскольку от Nick Lewis о номере за этот месяц пока ничего не слышно!\n\nВ DRIVECHAT есть заметки о том, как можно реализовать универсальный перехватчик ошибок; имеется небольшая игра типа BREAKOUT; составитель футбольной лиги для фанатов; специальная утилита проявления экрана; простая реализация LOGO и замечательная полноразмерная текстовая адвентюра от SIGMASOFT под названием ELFINDOR. Не пропустите!\n\nЯ также добавляю «макрос» в машинном коде, находящий адрес любой переменной BASIC из программы поиска в строковом массиве, в виде листинга для ассемблера JACKSOFT, чтобы вы могли объединять его со своими программами для передачи данных в машинный код. Там ещё есть место для пары программ, так что я натолкаю туда ещё больше всего!\n\n— Brian.\n",
+  "text_type": 3
+}

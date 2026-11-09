@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "023",
+  "article_id": "04_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем выпуске",
+  "meta_description_en": "Preview of the upcoming Outlet #024: upgraded COL 80 utility, Tasword 2 tweaks, CHEZFILL routine, 3D sphere rotation effect, and upcoming reader contributions.",
+  "meta_description_ru": "Анонс материалов 24-го выпуска журнала Outlet: новая версия COL 80, модификации для Tasword 2, заливка CHEZFILL, вращение сферы вокруг экрана и новые утилиты.",
+  "authors": [
+    "Brian Watson"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "tasword 2",
+      "tag_alias": "tasword-2"
+    },
+    {
+      "tag_name": "col 80",
+      "tag_alias": "col-80"
+    },
+    {
+      "tag_name": "chezfill",
+      "tag_alias": "chezfill"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Next month in OUTLET we have a\nnew version of COL 80 - the 80\ncolumn OUTLET text file print\nutility.Thanks to Ian Hughes,who\nhas converted the decompressor\nroutine into machine code, the\nprogram now runs very quickly!We\nalso have a handy screen store\nutility,a percentage calculator,\nanother strategy board game from\nDaton Software(alias Dave Tonks)\nand Part 4 of Malcolm Goodman's\nOUTPUT on \"Program Protection\"\nas well as OUTCLASS of course.\n\nDRIVECHAT has several different\ntips and ideas including two\nseparate contributions on ways\nof customising Tasword 2. There\nis also a great new utility to\nadd tabulation and a header to\nTasword 2 and other mods includ-\ning suppression of the loss of\nmargin settings when exiting the\neditor. Then there's CHEZFILL -\na useful shape filler in a REM,\na utility to mask colour codes\nin listings so you can read any\nobscured parts, a crossword\ncompiler program and an advance\non Geoff Wearmouth's GLOBAL PLOT\n(Issue 18). This can immediately\nwrap any SCREEN$ around a sphere\nand spin it slowly round!There's\nroom for 2 or 3 more programs so\nthere'll be something for all!\n                       - Brian.\n",
+  "body_ru_plain": "В следующем месяце в OUTLET вас\nждёт новая версия COL 80 —\n80-колоночной утилиты печати\nтекстовых файлов OUTLET. Спасибо\nIan Hughes, переписавшему про-\nцедуру распаковки в машинный\nкод: теперь программа буквально\nлетает! Также у нас есть удобная\nутилита сохранения экранов,\nпроцентный калькулятор, ещё одна\nнастольная стратегия от Daton\nSoftware (он же Dave Tonks) и\n4-я часть статьи Malcolm Goodman\nиз рубрики OUTPUT о «Защите про-\nграмм», ну и OUTCLASS, конечно.\n\nВ DRIVECHAT будет масса полезных\nсоветов и идей, включая два не-\nзависимых материала о настройке\nTasword 2 под себя. Будет и от-\nличная новая утилита, добавляю-\nщая табуляцию и колонтитул в\nTasword 2, а также прочие моды,\nвключая запрет сброса настроек\nполей при выходе из редактора.\nКроме того, вас ждут CHEZFILL —\nудобная заливка контуров внутри\nREM, утилита для маскировки цве-\nтовых кодов в листингах (чтобы\nчитать скрытые части текста),\nсоставитель кроссвордов и улуч-\nшенная версия GLOBAL PLOT от\nGeoff Wearmouth (из 18 выпуска).\nОна может мгновенно натянуть лю-\nбой SCREEN$ на сферу и медленно\nвращать её! Места хватит ещё на\n2-3 программы, так что найдётся\nчто-то для каждого!\n                       - Brian.\n",
+  "body_en": "## Lookahead\n\nNext month in OUTLET we have a new version of COL 80 - the 80 column OUTLET text file print utility. Thanks to Ian Hughes, who has converted the decompressor routine into machine code, the program now runs very quickly! We also have a handy screen store utility, a percentage calculator, another strategy board game from Daton Software (alias Dave Tonks) and Part 4 of Malcolm Goodman's OUTPUT on \"Program Protection\" as well as OUTCLASS of course.\n\nDRIVECHAT has several different tips and ideas including two separate contributions on ways of customising Tasword 2. There is also a great new utility to add tabulation and a header to Tasword 2 and other mods including suppression of the loss of margin settings when exiting the editor. Then there's CHEZFILL - a useful shape filler in a REM, a utility to mask colour codes in listings so you can read any obscured parts, a crossword compiler program and an advance on Geoff Wearmouth's GLOBAL PLOT (Issue 18). This can immediately wrap any SCREEN$ around a sphere and spin it slowly round! There's room for 2 or 3 more programs so there'll be something for all!\n\n\\- Brian.\n",
+  "body_ru": "## В следующем выпуске\n\nВ следующем месяце в OUTLET вас ждёт новая версия COL 80 — 80-колоночной утилиты печати текстовых файлов OUTLET. Спасибо Ian Hughes, переписавшему процедуру распаковки в машинный код: теперь программа буквально летает! Также у нас есть удобная утилита сохранения экранов, процентный калькулятор, ещё одна настольная стратегия от Daton Software (он же Dave Tonks) и 4-я часть статьи Malcolm Goodman из рубрики OUTPUT о «Защите программ», ну и OUTCLASS, конечно.\n\nВ DRIVECHAT будет масса полезных советов и идей, включая два независимых материала о настройке Tasword 2 под себя. Будет и отличная новая утилита, добавляющая табуляцию и колонтитул в Tasword 2, а также прочие моды, включая запрет сброса настроек полей при выходе из редактора. Кроме того, вас ждут CHEZFILL — удобная заливка контуров внутри REM, утилита для маскировки цветовых кодов в листингах (чтобы читать скрытые части текста), составитель кроссвордов и улучшенная версия GLOBAL PLOT от Geoff Wearmouth (из 18 выпуска). Она может мгновенно натянуть любой SCREEN$ на сферу и медленно вращать её! Места хватит ещё на 2-3 программы, так что найдётся что-то для каждого!\n\n— Brian.\n",
+  "text_type": 3
+}

@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "148",
+  "article_id": "04_lookahed",
+  "title_en": "Lookahead: Farewell",
+  "title_ru": "Взгляд вперёд: Прощание",
+  "meta_description_en": "Chris Oliver's farewell message in the final issue of Outlet (#148), reflecting on 7 years and 843 prepared programs for the ZX Spectrum disk magazine.",
+  "meta_description_ru": "Прощальное слово Криса Оливера в финальном номере Outlet (#148): итоги 7 лет работы и 843 подготовленных программ для дискового журнала ZX Spectrum.",
+  "authors": [
+    "Chris Oliver"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chris oliver",
+      "tag_alias": "chris-oliver"
+    },
+    {
+      "tag_name": "brian gaff",
+      "tag_alias": "brian-gaff"
+    },
+    {
+      "tag_name": "ron linfoot",
+      "tag_alias": "ron-linfoot"
+    },
+    {
+      "tag_name": "final issue",
+      "tag_alias": "final-issue"
+    }
+  ],
+  "category_ids": [
+    123,
+    138
+  ],
+  "body_en_plain": "All good things, they say, come\nto an end, and this is the final\nissue of OUTLET on the Spectrum.\n\nMany thanks to Brian and Ron for\nproducing such a high quality\nmagazine for more than twelve\nyears! The greatest compliment\nto myself was that nobody seemed\nto notice when I took over (with\na lot of help initially from\nBrian) the preparation of progr-\nams and editing them all togeth-\ner from December 1992 onwards.\n\n\nI just don't know how Brian and\nRon found time to do everything\nthemselves previously without\noutside help?\n\nJust for the record,during these\nlast seven years I have person-\nally prepared 843 programs from\nvarious sources, which have been\npublished in OUTLET, and there\nhave been many many more prepar-\ned by Brian and Ron. \"What does\nthis preparation involve?\", we\nare sometimes asked. I once sat\ndown and started to write about\nwhat was required, but soon\nrealised it would take a book to\nexplain it all, and meanwhile I\nwas not getting any programs\nready for OUTLET.Briefly though,\nwe have to provide answers and\n\n\nsolutions to the following for\neach program:- a) What is it\nmeant to do? b) Does it do it?\nd)Any bugs? e)Any small improve-\nments needed? f) Is it compat-\nible with all modes and Spectrum\nvariants? g) Does it exit to\nBasic?\n\nNext, we merge in the OUTLET\nlinking Basic, add a title page\nwith a picture if suitable, and\ntest it all through. So far, so\ngood, but later when it is added\nto an OUTLET disc with other\nprograms,a most peculiar phenom-\nenon occurs.For obscure reasons,\nsome programs which performed\nquite happily on their own,\nsuddenly start crashing or even\naffecting other programs on the\ndisc.\n\nOh well, life is never dull, and\nin spite of all the frustrations\nI must say that I have really\nenjoyed helping to create the\nbest magazine for the Spectrum.\n\nVery many thanks to all you who\nhave contributed over the years,\nand best wishes to you all as we\nstep forward into the new Mill-\nennium. I wonder what amazing\ntechnological advances will be\nmade over the next thousand\nyears?\n\nFarewell, and cheers,\n\n           Chris Oliver.\n",
+  "body_ru_plain": "",
+  "body_en": "All good things, they say, come to an end, and this is the final issue of OUTLET on the Spectrum.\n\nMany thanks to Brian and Ron for producing such a high quality magazine for more than twelve years! The greatest compliment to myself was that nobody seemed to notice when I took over (with a lot of help initially from Brian) the preparation of programs and editing them all together from December 1992 onwards.\n\nI just don't know how Brian and Ron found time to do everything themselves previously without outside help?\n\nJust for the record, during these last seven years I have personally prepared 843 programs from various sources, which have been published in OUTLET, and there have been many many more prepared by Brian and Ron. \"What does this preparation involve?\", we are sometimes asked. I once sat down and started to write about what was required, but soon realised it would take a book to explain it all, and meanwhile I was not getting any programs ready for OUTLET. Briefly though, we have to provide answers and solutions to the following for each program:\n\na) What is it meant to do?\nb) Does it do it?\nd) Any bugs?\ne) Any small improvements needed?\nf) Is it compatible with all modes and Spectrum variants?\ng) Does it exit to Basic?\n\nNext, we merge in the OUTLET linking Basic, add a title page with a picture if suitable, and test it all through. So far, so good, but later when it is added to an OUTLET disc with other programs, a most peculiar phenomenon occurs. For obscure reasons, some programs which performed quite happily on their own, suddenly start crashing or even affecting other programs on the disc.\n\nOh well, life is never dull, and in spite of all the frustrations I must say that I have really enjoyed helping to create the best magazine for the Spectrum.\n\nVery many thanks to all you who have contributed over the years, and best wishes to you all as we step forward into the new Millennium. I wonder what amazing technological advances will be made over the next thousand years?\n\nFarewell, and cheers,\n\nChris Oliver.\n",
+  "body_ru": "Говорят, всё хорошее когда-нибудь заканчивается, и перед вами — последний номер OUTLET для Спектрума.\n\nОгромное спасибо Brian и Ron за выпуск столь высококачественного журнала на протяжении более двенадцати лет! Лучшим комплиментом для меня стало то, что, похоже, никто даже не заметил, как с декабря 1992 года я взял на себя (поначалу с большой помощью Brian) подготовку программ и их общее сведение воедино.\n\nЯ просто ума не приложу, как Brian и Ron раньше успевали делать абсолютно всё сами, без посторонней помощи?\n\nПросто для статистики: за последние семь лет я лично подготовил 843 программы из самых разных источников, которые были опубликованы в OUTLET, и ещё намного, намного больше было подготовлено Brian и Ron. «Что вообще входит в эту подготовку?» — иногда спрашивают нас. Однажды я сел и попытался описать все необходимые действия, но вскоре понял, что для этого потребуется целая книга, а тем временем подготовка программ для OUTLET стояла на месте. Но если вкратце, для каждой программы нам приходится находить ответы и решения по следующим пунктам:\n\na) Что эта программа должна делать?\nb) Делает ли она это?\nd) Есть ли ошибки?\ne) Нужны ли небольшие улучшения?\nf) Совместима ли она со всеми режимами и моделями Spectrum?\ng) Корректно ли она выходит в Бейсик?\n\nЗатем мы интегрируем загрузочный Бейсик-блок OUTLET, добавляем титульный экран с картинкой (если это уместно) и тщательно всё тестируем. До этого момента всё идёт гладко, однако позже, когда программа добавляется на диск OUTLET по соседству с другими, возникает крайне любопытный феномен: по совершенно непонятным причинам некоторые программы, прекрасно работавшие по отдельности, внезапно начинают зависать или даже портить работу других программ на диске.\n\nЧто ж, жизнь никогда не бывает скучной, и, несмотря на все трудности, должен сказать, что мне доставляло искреннее удовольствие помогать создавать лучший журнал для Спектрума.\n\nОгромное спасибо всем, кто присылал материалы на протяжении этих лет, и наилучшие пожелания всем вам на пороге нового тысячелетия. Интересно, какие потрясающие технологические прорывы произойдут за следующие тысячу лет?\n\nПрощайте, и всего наилучшего,\n\nChris Oliver.\n",
+  "text_type": 3
+}

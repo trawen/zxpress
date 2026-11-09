@@ -1,0 +1,39 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "147",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of Outlet #148: the upcoming Christmas and final ZX Spectrum issue featuring games, demos, a Spectrum analogue clock, Japanese patience, and more.",
+  "meta_description_ru": "Анонс Outlet #148: рождественского и последнего выпуска журнала для ZX Spectrum — игры, демо, аналоговые часы, японский пасьянс и «Windows для Спектрума».",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron",
+      "tag_alias": "chezron"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus-3"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "anons"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Being both the Christmas issue\nand the last issue for the\nSpectrum, there's a sort of \"End\nof Term\" feeling in the air, so\nit is mostly fun and games next\nmonth. Mostly, but not all. In\namongst the games and demos\nthere is for instance \"Windows\nfor the Spectrum\"!Not comparable\nwith Windows 98 for the PC, [you\nmean it doesn't have irritating\nquirks,an almost useless on-line\nhelp and doesn't crash regularly\nthen? -Ed] but quite impressive.\n\n\nIn recent OUTLETs there have\nbeen several hardware projects\nso that when you no longer\nrequire your Spectrum to read\nthe monthly OUTLET, you can use\nit for controlling robots etc.\nIn next month's issue there is\nanother possible use for a\nredundant Spectrum:-  a nicely\ndesigned analogue clock. Display\nthis on the screen of Grandad's\nold black and white Telly in its\nwalnut veneered case, and you\nhave a very handsome timepiece\nand \"talking point\".\n\nI'm familiar with several diff-\nerent games of Patience, includ-\ning Chinese patience, but I've\nnot come across Japanese pati-\nence before, which is just one\nof the games next month.\n\nYes, next month's OUTLET will be\ncrammed full with several games\nand lots of demos and a great\nanimated cartoon. It will be so\nfull in fact that it would over-\nflow the standard Plus3 3\" disc!\n[so we are considering issuing a\ndouble disk for the 3\" - Ed]\n\n                 Cheers, Chris..\n",
+  "body_ru_plain": "",
+  "body_en": "Being both the Christmas issue and the last issue for the Spectrum, there's a sort of \"End of Term\" feeling in the air, so it is mostly fun and games next month. Mostly, but not all. In amongst the games and demos there is for instance \"Windows for the Spectrum\"! Not comparable with Windows 98 for the PC, [you mean it doesn't have irritating quirks, an almost useless on-line help and doesn't crash regularly then? -Ed] but quite impressive.\n\nIn recent OUTLETs there have been several hardware projects so that when you no longer require your Spectrum to read the monthly OUTLET, you can use it for controlling robots etc. In next month's issue there is another possible use for a redundant Spectrum: a nicely designed analogue clock. Display this on the screen of Grandad's old black and white Telly in its walnut veneered case, and you have a very handsome timepiece and \"talking point\".\n\nI'm familiar with several different games of Patience, including Chinese patience, but I've not come across Japanese patience before, which is just one of the games next month.\n\nYes, next month's OUTLET will be crammed full with several games and lots of demos and a great animated cartoon. It will be so full in fact that it would overflow the standard Plus3 3\" disc! [so we are considering issuing a double disk for the 3\" - Ed]\n\nCheers, Chris..\n",
+  "body_ru": "Поскольку следующий номер будет одновременно и рождественским, и последним выпуском для Спектрума, в воздухе витает ощущение «окончания четверти», так что в следующем месяце вас ждут в основном игры и развлечения. В основном, но не только. Среди игр и демоверсий найдётся, к примеру, «Windows для Спектрума»! Она, конечно, несравнима с Windows 98 для PC [хотите сказать, в ней нет раздражающих глюков, бесполезной справки и она не вылетает каждые пять минут? — Ред.], но всё равно весьма впечатляет.\n\nВ недавних номерах OUTLET было представлено несколько аппаратных проектов, благодаря которым, когда Спектрум перестанет быть нужен для чтения ежемесячного журнала, его можно будет приспособить для управления роботами и тому подобного. В следующем выпуске появится ещё один вариант применения освободившегося Спектрума — красиво оформленные аналоговые часы. Выведите их на экран дедушкиного старого чёрно-белого телевизора в корпусе из орехового шпона — и вы получите великолепные стильные часы и отличный повод для беседы с гостями.\n\nЯ знаком со множеством видов пасьянса, включая китайский, но вот с японским пасьянсом мне раньше сталкиваться не доводилось — а это лишь одна из игр следующего номера.\n\nДа, следующий выпуск OUTLET будет буквально забит играми, кучей демок и отличным анимационным мультиком. Диск окажется настолько полон, что всё это едва ли поместится на стандартную 3-дюймовую дискету для Plus3! [поэтому мы обдумываем выпуск двухдискового издания для 3\" — Ред.]\n\nВсего наилучшего, Chris..\n",
+  "text_type": 3
+}

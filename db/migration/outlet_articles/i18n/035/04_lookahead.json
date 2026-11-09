@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "035",
+  "article_id": "04_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем выпуске",
+  "meta_description_en": "Preview of the upcoming Outlet #36: fast graphics routines, Hacker's Workbench review, Crashout game, 128K music, and SAM Coupé software plans.",
+  "meta_description_ru": "Анонс материалов 36-го номера журнала Outlet: новые графические процедуры, утилита Hacker's Workbench, игра Crashout, музыка для 128K и софт для SAM Coupé.",
+  "authors": [
+    "Brian Renwick"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "announcement"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "crashout",
+      "tag_alias": "crashout"
+    },
+    {
+      "tag_name": "планы",
+      "tag_alias": "plans"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Planned for next month is a high\nspeed CIRCLE routine;an interest\ncalculator;an Opus file-handler;\nan unusual clip art screen;a UDG\nprint program;a \"strategy\" game;\na scroll routine and Bach plays\nin 128K mode! There's a possibly\nendless rapid line-patternmaker;\na shape-fill routine; CHECKOUT\nreviews \"HACKER'S WORKBENCH\" (+D\nand Disciple snapshot file hack\nutility) and a really great game\ncalled CRASHOUT with good sound\nand gameplay. There'll be a new\n\ncrossword puzzle in ADD-ENDERS\n(and other stuff) as well as all\nthe regulars like OUTCLASS and\nthe ever-green-and-growing mail\nbag of OUTLETTERS from readers.\nThere's also a program which can\nlet you create screens of text\nof the giant RTCLIP letters from\nIssue 30.One screen is included.\nYou just type like a giant word\nprocessor!\n\nMany of the above are unlikely\nto work on SAM but we've a good\nstock of SAM programs to replace\nany that won't convert.\n                         - Brian.\n",
+  "body_ru_plain": "В следующем месяце планируется:\nскоростная процедура CIRCLE;\nкалькулятор процентов; файловый\nменеджер для Opus; необычный\nэкран с клипартом; программа\nпечати UDG; «стратегия»;\nпроцедура скроллинга и Бах,\nзвучащий в режиме 128K! А также,\nвозможно, бесконечный генератор\nбыстрых линейных узоров;\nпроцедура заливки контуров;\nCHECKOUT с обзором на утилиту\n\"HACKER'S WORKBENCH\" (для работы\nсо снэпшотами +D и Disciple)\nи действительно отличная игра\nпод названием CRASHOUT с хорошим\nзвуком и геймплеем. В рубрике\n\nADD-ENDERS появится новый\nкроссворд (и кое-что ещё),\nа также наши постоянные разделы,\nвключая OUTCLASS и вечно зелёный\nи пухнущий мешок писем от\nчитателей в OUTLETTERS.\nЕщё будет программа, позволяющая\nсоздавать текстовые экраны\nгигантскими буквами RTCLIP из\nIssue 30. Один экран прилагается.\nВы просто печатаете, словно в\nгигантском текстовом процессоре!\n\nМногое из вышеперечисленного\nвряд ли заработает на SAM,\nно у нас есть солидный запас\nпрограмм для SAM, чтобы заменить\nвсё, что не удастся перенести.\n                         - Brian.\n",
+  "body_en": "## Lookahead\n\nPlanned for next month is a high speed CIRCLE routine; an interest calculator; an Opus file-handler; an unusual clip art screen; a UDG print program; a \"strategy\" game; a scroll routine and Bach plays in 128K mode! There's a possibly endless rapid line-patternmaker; a shape-fill routine; CHECKOUT reviews \"HACKER'S WORKBENCH\" (+D and Disciple snapshot file hack utility) and a really great game called CRASHOUT with good sound and gameplay. There'll be a new crossword puzzle in ADD-ENDERS (and other stuff) as well as all the regulars like OUTCLASS and the ever-green-and-growing mail bag of OUTLETTERS from readers. There's also a program which can let you create screens of text of the giant RTCLIP letters from Issue 30. One screen is included. You just type like a giant word processor!\n\nMany of the above are unlikely to work on SAM but we've a good stock of SAM programs to replace any that won't convert.\n\n— Brian.\n",
+  "body_ru": "## В следующем выпуске\n\nВ следующем месяце планируется: скоростная процедура CIRCLE; калькулятор процентов; файловый менеджер для Opus; необычный экран с клипартом; программа печати UDG; «стратегия»; процедура скроллинга и Бах, звучащий в режиме 128K! А также, возможно, бесконечный генератор быстрых линейных узоров; процедура заливки контуров; CHECKOUT с обзором на утилиту \"HACKER'S WORKBENCH\" (для работы со снэпшотами +D и Disciple) и действительно отличная игра под названием CRASHOUT с хорошим звуком и геймплеем.\n\nВ рубрике ADD-ENDERS появится новый кроссворд (и кое-что ещё), а также наши постоянные разделы, включая OUTCLASS и вечно зелёный и пухнущий мешок писем от читателей в OUTLETTERS. Ещё будет программа, позволяющая создавать текстовые экраны гигантскими буквами RTCLIP из Issue 30. Один экран прилагается. Вы просто печатаете, словно в гигантском текстовом процессоре!\n\nМногое из вышеперечисленного вряд ли заработает на SAM, но у нас есть солидный запас программ для SAM, чтобы заменить всё, что не удастся перенести.\n\n— Brian.\n",
+  "text_type": 3
+}

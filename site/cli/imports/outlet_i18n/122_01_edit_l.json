@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "122",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Editorial note from Outlet #122 (October 1997): welcoming former Spectrum Discovery Club members, call for contributions, and Big Six lottery bug fix.",
+  "meta_description_ru": "Редакционная заметка Outlet #122 (октябрь 1997): приветствие бывшим членам Spectrum Discovery Club, призыв слать материалы, фикс бага в Big Six.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "chris oliver",
+      "tag_alias": "chris-oliver"
+    },
+    {
+      "tag_name": "discovery club",
+      "tag_alias": "discovery-club"
+    },
+    {
+      "tag_name": "big six",
+      "tag_alias": "big-six"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "O C T O B E R,  1 9 9 7\n\nA warm welcome to all of the new\nreaders joining us this month\nwho were formally Spectrum Disc-\novery Club members - thanks to\nthe valiant recruitment efforts\nof our programs editor: Chris\nOliver!\n\nWith the ever dwindling Spectrum\nmarket every new reader is a big\nhelp. What is especially import-\nant are CONTRIBUTIONS. Remember,\nwe need YOUR support, articles\nand programs, especially utility\nprograms,are always welcome.Even\na short routine can be like gold\nto another user! Send 'em in!\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET.\nWe are sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\n\nWe are pleased to report that\nthe 'date' bug in our BIG SIX\nnational lottery program has now\nbeen fixed. The new program is\nstill under test and we are also\nconsidering adding an option to\ndeal with the Wednesday draw.The\nimproved BIG SIX will appear in\na future OUTLET.\n\n                     Ron & Brian\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n Email: ron.cavers@virgin.net\n Make out cheques to Ron Cavers.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nO C T O B E R,  1 9 9 7\n\nA warm welcome to all of the new readers joining us this month who were formally Spectrum Disc- overy Club members - thanks to the valiant recruitment efforts of our programs editor: Chris Oliver!\n\nWith the ever dwindling Spectrum market every new reader is a big help. What is especially import- ant are CONTRIBUTIONS. Remember, we need YOUR support, articles and programs, especially utility programs,are always welcome.Even a short routine can be like gold to another user! Send 'em in!\n\nMay we remind readers, we cannot answer computer, software, hard- ware or system queries etc., personally by mail.  All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder!Share your problems with others! That way, everyone benefits!\n\nWe are pleased to report that the 'date' bug in our BIG SIX national lottery program has now been fixed. The new program is still under test and we are also considering adding an option to deal with the Wednesday draw.The improved BIG SIX will appear in a future OUTLET.\n\nRon & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers 34 Saltersgate Drive Birstall, Leicester LE4 3FF\n\nEmail: ron.cavers@virgin.net Make out cheques to Ron Cavers.\n",
+  "body_ru": "## Editorial (late)\n\nО К Т Я Б Р Ь, 1 9 9 7\n\nСердечно приветствуем всех новых читателей, присоединившихся к нам в этом месяце, которые ранее состояли в Spectrum Discovery Club — и всё это благодаря героическим усилиям по привлечению подписчиков нашего редактора программ Криса Оливера (Chris Oliver)!\n\nНа фоне постоянно сжимающегося рынка Spectrum каждый новый читатель — это огромная помощь. Но что особенно важно, так это МАТЕРИАЛЫ. Помните: нам нужна ВАША поддержка. Статьи и программы, особенно утилиты, приветствуются всегда. Даже короткая подпрограмма может оказаться на вес золота для другого пользователя! Присылайте их!\n\nНапоминаем читателям: мы не можем отвечать на вопросы по компьютерам, софту, «железу» или системам лично по почте. Ответы на все подобные запросы публикуются в рубрике OUTLETTERS журнала OUTLET. Нам жаль постоянно твердить об этом, но об этом правиле действительно необходимо напоминать регулярно! Делитесь своими проблемами с остальными! Так польза будет для всех!\n\nМы рады сообщить, что ошибка с датой в нашей программе национальной лотереи BIG SIX была исправлена. Новая версия всё ещё тестируется, и мы также подумываем добавить опцию для учета розыгрышей по средам. Улучшенная BIG SIX появится в одном из будущих выпусков OUTLET.\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n Email: ron.cavers@virgin.net\n Make out cheques to Ron Cavers.\n```\n",
+  "text_type": 3
+}

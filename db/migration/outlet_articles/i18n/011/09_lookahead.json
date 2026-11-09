@@ -1,0 +1,42 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "011",
+  "article_id": "09_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего выпуска",
+  "meta_description_en": "Preview of the upcoming Outlet #012 celebrating its first birthday: Z80 assembler, Outclasses tutorials, racing game, video database, and screen dump utilities.",
+  "meta_description_ru": "Анонс праздничного 12-го номера журнала Outlet: ассемблер Z80, первые уроки Outclasses, гоночная игра, база видеокассет и графические утилиты к первому дню рождения издания.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "outclasses",
+      "tag_alias": "outclasses"
+    },
+    {
+      "tag_name": "assembler",
+      "tag_alias": "assembler"
+    },
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    }
+  ],
+  "category_ids": [
+    123,
+    118
+  ],
+  "body_en_plain": "Next month we have a program to\nprint out an expense sheet with\nminimum hassle; a line editor\nroutine to provide an alternate\nINPUT routine anywhere on screen\nyou want; a message scroller for\nprogram prompts on over-crowded\nprogram screens and an excellent\nZ80 machine code assembler with\nfull-screen text editor coupled\nwith the first of our OUTCLASSES\ngently introducing machine code\nprogramming by example instead\nof by studying too much theory!\n\nAlso on disc and the B cart is\nan infuriating race game which\nwill make you DETERMINED to beat\nit (just one more go);a splendid\ndatabase to get all your video\ncassettes organised; a versatile\nscreen dump utility; a graphics\nprogram providing all you need\nto draw prize-winning high-res\nscreens, a mixer, a blender, a\ncuddly toy....\n\nYes, we've made next month's an\nextra good-value issue - well it\nis OUTLET'S FIRST BIRTHDAY!!.\n",
+  "body_ru_plain": "В следующем месяце вас ждёт программа\nдля распечатки отчёта о расходах без\nлишних хлопот; процедура строчного\nредактора, дающая альтернативный\nINPUT в любом месте экрана, где вам\nугодно; скроллер сообщений для подсказок\nна перегруженных экранах программ, а\nтакже великолепный ассемблер машинного\nкода Z80 с полноэкранным текстовым\nредактором в связке с первым выпуском\nнаших уроков OUTCLASSES, мягко вводящих\nв программирование на машинном коде на\nживых примерах вместо зубрёжки теории!\n\nТакже на диске и картридже B —\nдоводящая до бешенства гоночная игра,\nв которой вы ТВЁРДО РЕШИТЕ победить\n(ну ещё разок!); великолепная база\nданных, чтобы навести порядок во всех\nваших видеокассетах; универсальная\nутилита сброса экрана (screen dump);\nграфическая программа со всем\nнеобходимым для создания первоклассных\nэкранов высокого разрешения, миксер,\nблендер, мягкая игрушка...\n\nДа, следующий номер мы сделали особо\nбогатым — ну так ведь это ПЕРВЫЙ\nДЕНЬ РОЖДЕНИЯ OUTLET!!\n",
+  "body_en": "## Lookahead\n\nNext month we have a program to print out an expense sheet with minimum hassle; a line editor routine to provide an alternate INPUT routine anywhere on screen you want; a message scroller for program prompts on over-crowded program screens and an excellent Z80 machine code assembler with full-screen text editor coupled with the first of our OUTCLASSES gently introducing machine code programming by example instead of by studying too much theory!\n\nAlso on disc and the B cart is an infuriating race game which will make you DETERMINED to beat it (just one more go); a splendid database to get all your video cassettes organised; a versatile screen dump utility; a graphics program providing all you need to draw prize-winning high-res screens, a mixer, a blender, a cuddly toy....\n\nYes, we've made next month's an extra good-value issue - well it is OUTLET'S FIRST BIRTHDAY!!.\n",
+  "body_ru": "## Анонс следующего выпуска\n\nВ следующем месяце вас ждёт программа для распечатки отчёта о расходах без лишних хлопот; процедура строчного редактора, дающая альтернативный INPUT в любом месте экрана, где вам угодно; скроллер сообщений для подсказок на перегруженных экранах программ, а также великолепный ассемблер машинного кода Z80 с полноэкранным текстовым редактором в связке с первым выпуском наших уроков OUTCLASSES, мягко вводящих в программирование на машинном коде на живых примерах вместо зубрёжки теории!\n\nТакже на диске и картридже B — доводящая до бешенства гоночная игра, в которой вы ТВЁРДО РЕШИТЕ победить (ну ещё разок!); великолепная база данных, чтобы навести порядок во всех ваших видеокассетах; универсальная утилита сброса экрана (screen dump); графическая программа со всем необходимым для создания первоклассных экранов высокого разрешения, миксер, блендер, мягкая игрушка...\n\nДа, следующий номер мы сделали особо богатым — ну так ведь это ПЕРВЫЙ ДЕНЬ РОЖДЕНИЯ OUTLET!!\n",
+  "text_type": 3
+}

@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "025",
+  "article_id": "02_editorial",
+  "title_en": "Editorial",
+  "title_ru": "От редакции",
+  "meta_description_en": "Outlet #025 editorial: announcing the upcoming 3\" disc version for ZX Spectrum +3, seeking RAMTOP routines, planning a UDG bank project, and celebrating Outlet's 3rd year.",
+  "meta_description_ru": "Редакционная колонка Outlet #025: анонс версии журнала на 3\" диске для ZX Spectrum +3, поиск метода сдвига RAMTOP, сбор банка UDG и благодарности к 3-летию журнала.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus3"
+    },
+    {
+      "tag_name": "udg",
+      "tag_alias": "udg"
+    },
+    {
+      "tag_name": "ramtop",
+      "tag_alias": "ramtop"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_en_plain": "A new, +3 version of OUTLET will\nbe launched next month!The price\nhas not been decided at the time\nof writing as we are considering\nthe higher price of 3\" discs but\nit should be around the `3.50 to\n`4.00 mark.It will fill one side\nof a \"super-formatted\" disc!\n\nIf anyone has a way of moving up\nRAMTOP (but without clearing the\nscreen)on the +3 please write in\nand tell us as our CLEARCUT does\nnot work!\n\nDespite writing several times we\nhave still not received any word\nfrom that reviewer at the \"Dutch\nDiscovery Club\"  about reviewing\nthe \"AMX Mouse\" routine he wrote\nso we've given up on that one!\n\nOne project we have planned is a\ngeneral-purpose UDG bank program\nso if you have any UDGs send 'em\nin!If you don't have the UDG but\nwould like to request one send a\ndescription. The concept is when\nyou need some UDGs you load this\nprogram and pick what you want.\n\nFinally,as we enter OUTLET's 3rd\nyear we'd like to thank everyone\nfor their support which has been\nterrific - we have learned a lot\nand enjoyed and used - and still\nuse -  many of the programs sent\nin to us so we are sure that you\ndo too!\n\n\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_ru_plain": "Новая версия OUTLET для +3 будет\nзапущена в следующем месяце!Цена\nна момент написания не определе-\nна, ведь мы учитываем более выс-\nокую цену 3\" дисков,но она будет\nв районе от `3.50 до `4.00.Она  \nзаймет одну сторону             \n\"суперформатированного\" диска!  \n\nЕсли у кого-то есть способ сдви-\nнуть RAMTOP вверх (но без очист-\nки экрана) на +3, напишите нам, \nведь наш CLEARCUT не работает!  \n\nНесмотря на несколько писем, мы \nтак и не получили ответа от того\nрецензента из \"Dutch Discovery  \nClub\" насчет обзора подпрограммы\nдля \"AMX Mouse\", написанной им, \nтак что мы бросили эту затею!   \n\nОдин из запланированных нами    \nпроектов — универсальная прог-  \nрамма банка UDG, так что если у \nвас есть UDG, присылайте их!Если\nу вас нет нужного UDG, но хотите\nзаказать его, пришлите описание.\nСуть в том, что когда вам нужны \nUDG, вы грузите эту программу и \nвыбираете все, что вам угодно.  \n\nИ наконец, на пороге 3-го года  \nOUTLET, мы хотим поблагодарить  \nвсех за поддержку — она была по-\nтрясающей! Мы многому научились,\nс удовольствием использовали — и\nдо сих пор используем — многие  \nиз присланных нам программ, так \nчто уверены: вы делаете то же!  \n\n\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_en": "## Editorial\n\nA new, +3 version of OUTLET will be launched next month! The price has not been decided at the time of writing as we are considering the higher price of 3\" discs but it should be around the `3.50 to `4.00 mark. It will fill one side of a \"super-formatted\" disc!\n\nIf anyone has a way of moving up RAMTOP (but without clearing the screen) on the +3 please write in and tell us as our CLEARCUT does not work!\n\nDespite writing several times we have still not received any word from that reviewer at the \"Dutch Discovery Club\" about reviewing the \"AMX Mouse\" routine he wrote so we've given up on that one!\n\nOne project we have planned is a general-purpose UDG bank program so if you have any UDGs send 'em in! If you don't have the UDG but would like to request one send a description. The concept is when you need some UDGs you load this program and pick what you want.\n\nFinally, as we enter OUTLET's 3rd year we'd like to thank everyone for their support which has been terrific - we have learned a lot and enjoyed and used - and still use - many of the programs sent in to us so we are sure that you do too!\n\n```text\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n```\n",
+  "body_ru": "## От редакции\n\nНовая версия OUTLET для +3 будет запущена в следующем месяце! Цена на момент написания не определена, ведь мы учитываем более высокую цену 3\" дисков, но она будет в районе от `3.50 до `4.00. Она займет одну сторону \"суперформатированного\" диска!\n\nЕсли у кого-то есть способ сдвинуть RAMTOP вверх (но без очистки экрана) на +3, напишите нам, ведь наш CLEARCUT не работает!\n\nНесмотря на несколько писем, мы так и не получили ответа от того рецензента из \"Dutch Discovery Club\" насчет обзора подпрограммы для \"AMX Mouse\", написанной им, так что мы бросили эту затею!\n\nОдин из запланированных нами проектов — универсальная программа банка UDG, так что если у вас есть UDG, присылайте их! Если у вас нет нужного UDG, но хотите заказать его, пришлите описание. Суть в том, что когда вам нужны UDG, вы грузите эту программу и выбираете все, что вам угодно.\n\nИ наконец, на пороге 3-го года OUTLET, мы хотим поблагодарить всех за поддержку — она была потрясающей! Мы многому научились, с удовольствием использовали — и до сих пор используем — многие из присланных нам программ, так что уверены: вы делаете то же!\n\n```text\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n```\n",
+  "text_type": 3
+}

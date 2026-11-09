@@ -1,0 +1,40 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "24",
+  "article_id": "06_BLOW.DOC",
+  "source_lang": "de-AT",
+  "title_en": "The Main Blow (Glavnyj Udar)",
+  "title_ru": "Главный удар (The Main Blow)",
+  "meta_description_en": "A brief note on Glavnyj Udar (The Main Blow), a Russian graphic hack/clone of Silkworm for the ZX Spectrum, from Scene+ #24.",
+  "meta_description_ru": "Краткая заметка об игре «Главный удар» (The Main Blow) — российском графическом моде/клоне Silkworm для ZX Spectrum из журнала Scene+ #24.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "silkworm",
+      "tag_alias": "silkworm"
+    },
+    {
+      "tag_name": "glavnyj-udar",
+      "tag_alias": "glavnyj-udar"
+    }
+  ],
+  "category_ids": [
+    1,
+    2
+  ],
+  "body_de_plain": "MAI ü - GLUANYJ UDAR-THE MAIN BLOW - Ein Russischer Silkworm\nClone oder Silkworm mit veränderterGraphik (Ich tippe auf das\nzweite!). Ein ausführlicher Testbefindet sich auf einer der\nfrüheren Ausgaben.. - A Russian Silkworm clone or Silkworm with\nchanged graphic (Ithink, it's really Silkworm with a different\ngraphic). A fulltest (in german) is in a earlier i\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### GLAVNYJ UDAR — THE MAIN BLOW\n\nA Russian *Silkworm* clone or *Silkworm* with modified graphics (I'd bet on the latter!). A detailed review (in German) can be found in one of the earlier issues...\n",
+  "body_ru": "### GLAVNYJ UDAR — THE MAIN BLOW (ГЛАВНЫЙ УДАР)\n\nРоссийский клон *Silkworm* или же сам *Silkworm* с перерисованной графикой (я ставлю на второе!). Подробный обзор (на немецком языке) опубликован в одном из предыдущих номеров...\n",
+  "text_type": 3
+}

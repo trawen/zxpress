@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "097",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of Outlet #98: the Vaxtrek serial, Pentagram Megademo part 11, Slovak demo, dual ROM info, and utilities.",
+  "meta_description_ru": "Анонс Outlet #98: сериал Vaxtrek, часть 11 Pentagram Megademo, словацкое демо, схема подключения двух ПЗУ и новые утилиты.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "vaxtrek",
+      "tag_alias": "vaxtrek"
+    },
+    {
+      "tag_name": "megademo",
+      "tag_alias": "megademo"
+    },
+    {
+      "tag_name": "pentagram",
+      "tag_alias": "pentagram"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "You may - or may not - have seen\nour new VAXTREK serial which has\nstarted this month...  The next\nthrilling episode will be in\nnext month's issue, except that\nit's not the next episode, but\nthe following one...\n\n           Confused?\n\n               Probably, but it\nis because the crew have had to\ngo into a time warp for reasons\nvery important to Lt. Uhura!\n\n\nI too seem to have gone into a\ntime warp  (well,  that's my\nexcuse), as I put the last part,\n(part 12) of Pentagram's wonder-\nful Megademo in OUTLET #95\ninstead of part 11. To get back\non track we will put the part 11\nas an extra Demo next month in\naddition to a delightful music\nand graphics Slovacian one.\n\nThere is information on how to\nhave two different ROMs connect-\ned and several utilities: one\nwhich gives an easier to follow\nprintout of a Basic listing,\nanother to make picture frames.\nThere's also a classic card\ngame and lots lots more to make\nanother full and interesting\nissue of OUTLET.\n                        Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "You may — or may not — have seen our new VAXTREK serial which has started this month... The next thrilling episode will be in next month's issue, except that it's not the next episode, but the following one...\n\nConfused?\n\nProbably, but it is because the crew have had to go into a time warp for reasons very important to Lt. Uhura!\n\nI too seem to have gone into a time warp (well, that's my excuse), as I put the last part, (part 12) of Pentagram's wonderful Megademo in OUTLET #95 instead of part 11. To get back on track we will put the part 11 as an extra Demo next month in addition to a delightful music and graphics Slovacian one.\n\nThere is information on how to have two different ROMs connected and several utilities: one which gives an easier to follow printout of a Basic listing, another to make picture frames. There's also a classic card game and lots lots more to make another full and interesting issue of OUTLET.\n\nChris.\n",
+  "body_ru": "Возможно, вы уже обратили внимание (а может, и нет) на наш новый сериал VAXTREK, стартовавший в этом месяце... Следующая захватывающая серия появится в следующем номере — правда, это будет не очередная, а сразу через одну...\n\nЗапутались?\n\nВполне вероятно! Но дело в том, что экипажу пришлось совершить прыжок во временную воронку по причинам, чрезвычайно важным для лейтенанта Ухуры!\n\nПохоже, я и сам угодил в такое искривление времени (по крайней мере, это отличное оправдание), так как в OUTLET #95 вместо 11-й части великолепного Megademo от Pentagram поместил заключительную, 12-ю. Чтобы исправить оплошность, в следующем месяце мы добавим 11-ю часть в качестве бонусного демо — вдобавок к замечательной словацкой демке с отличной графикой и музыкой.\n\nТакже вас ждёт материал о том, как подключить два разных ПЗУ, и несколько утилит: одна позволяет распечатать листинг на Бейсике в более наглядном и удобном виде, а другая предназначена для создания рамок к изображениям. Кроме того, будет классическая карточная игра и многое, многое другое — следующий номер OUTLET обещает быть по-настоящему полным и интересным.\n\nChris.\n",
+  "text_type": 3
+}

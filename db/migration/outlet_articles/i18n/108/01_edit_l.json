@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "108",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Outlet #108 late editorial: Northern Sam & Spectrum Show 1996 announcement, OUTLETTERS policy, and call for reader contributions.",
+  "meta_description_ru": "Дополнительная редакторская колонка Outlet #108: анонс The Northern Sam & Spectrum Show 1996, правила рубрики OUTLETTERS и призыв присылать программы.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "sam and spectrum show",
+      "tag_alias": "sam-and-spectrum-show"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "masterfile +3",
+      "tag_alias": "masterfile-plus3"
+    }
+  ],
+  "category_ids": [
+    123,
+    118
+  ],
+  "body_en_plain": "A U G U S T ,   1 9 9 6\n\nThe Northern Sam & Spectrum Show\nis on 21st September: Methodist\nHall,Wetherby,Yorks. Wetherby is\non the A1 between Leeds and York\nand the show is 10.30am to 4pm.\nEntry `1.50. Info: 0113 2374800.\n\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET. We\nare sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\nContributions have improved to a\nreasonable extent recently but\nremember, we need YOUR support,\nand contributions of articles\nand programs, especially utility\nprograms, are now needed more\nthan ever. Even a short routine\ncan be like gold dust to another\nuser! Send 'em in!\n\n\nMichael Atkins has sent in an\nupdate to his OUTLETTERS data-\nbase. This is in MASTERFILE +3\nformat so is only on the +3 ver-\nsion of OUTLET as \"OUTLET2\".\nMASTERFILE +3 is in OUTLET 76\n(+3 only).\n\n                    Ron & Brian\n\n\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nA U G U S T ,   1 9 9 6\n\nThe Northern Sam & Spectrum Show is on 21st September: Methodist Hall,Wetherby,Yorks. Wetherby is on the A1 between Leeds and York and the show is 10.30am to 4pm. Entry `1.50. Info: 0113 2374800.\n\nMay we remind readers, we cannot answer computer, software, hard- ware or system queries etc., personally by mail.  All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder!Share your problems with others! That way, everyone benefits!\n\nContributions have improved to a reasonable extent recently but remember, we need YOUR support, and contributions of articles and programs, especially utility programs, are now needed more than ever. Even a short routine can be like gold dust to another user! Send 'em in!\n\nMichael Atkins has sent in an update to his OUTLETTERS data- base. This is in MASTERFILE +3 format so is only on the +3 ver- sion of OUTLET as \"OUTLET2\". MASTERFILE +3 is in OUTLET 76 (+3 only).\n\nRon & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers\n\nCHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF .\n",
+  "body_ru": "## Editorial (late)\n\n### А В Г У С Т ,   1 9 9 6\n\nThe Northern Sam & Spectrum Show пройдет 21 сентября в Methodist Hall, Wetherby, Yorks. Wetherby находится на трассе A1 между Leeds и York, выставка открыта с 10:30 до 16:00. Вход: £1.50. Справки по тел.: 0113 2374800.\n\nНапоминаем читателям: мы не можем отвечать на вопросы о компьютерах, софте, железе, системных проблемах и т.д. лично по почте. Все подобные вопросы разбираются в рубрике OUTLETTERS журнала OUTLET. Нам жаль постоянно твердить об этом, но об этом напоминании забывать нельзя! Делитесь своими проблемами с остальными! Так польза будет для всех!\n\nВ последнее время количество присылаемых материалов заметно выросло, но помните: нам нужна ВАША поддержка. Статьи и программы, особенно утилиты, сейчас нужны как никогда. Даже короткая подпрограмма может оказаться на вес золота для другого пользователя! Присылайте их нам!\n\nMichael Atkins прислал обновление для своей базы данных OUTLETTERS. Она выполнена в формате MASTERFILE +3, поэтому представлена только в версии OUTLET для +3 под именем «OUTLET2». Сам MASTERFILE +3 выходил в OUTLET 76 (только для +3).\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n```\n",
+  "text_type": 3
+}

@@ -1,0 +1,49 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "139",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial",
+  "title_ru": "Колонка редактора",
+  "meta_description_en": "A late editorial note from Outlet #139 (March 1999): call for PD utilities and a highlight of the Rainbow Dumper colour screen print utility.",
+  "meta_description_ru": "Заметка от редакции из журнала Outlet #139 (март 1999): призыв присылать PD-утилиты и анонс программы Rainbow Dumper для цветной печати.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "public domain",
+      "tag_alias": "public-domain"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    },
+    {
+      "tag_name": "rainbow dumper",
+      "tag_alias": "rainbow-dumper"
+    },
+    {
+      "tag_name": "printers",
+      "tag_alias": "printers"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "M A R C H ,   1 9 9 9\n\nSearch your software for any PD\nutilities you might share with\nother OUTLET readers. We've lots\nof demos and leisure software to\ntake us into the next millenium\nbut we'd like more utilities!\n\n\nIf you have a colour printer you\nwill be delighted with RAINBOW\nDUMPER in this issue. It's the\nbest (in fact the only) Spectrum\ncolour screen print program that\nwe've seen!\n\n                     Ron & Brian\n\n\n\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n   Email: outletmag@yahoo.com.\n",
+  "body_ru_plain": "",
+  "body_en": "MARCH, 1999\n\nSearch your software for any PD utilities you might share with other OUTLET readers. We've lots of demos and leisure software to take us into the next millenium but we'd like more utilities!\n\nIf you have a colour printer you will be delighted with RAINBOW DUMPER in this issue. It's the best (in fact the only) Spectrum colour screen print program that we've seen!\n\nRon & Brian\n\n---\n\nOUTLET is produced by\n\nChris Oliver  \nRon & Brian Cavers  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF  \n\nEmail: outletmag@yahoo.com.\n",
+  "body_ru": "МАРТ, 1999\n\nПоищите среди своих программ общедоступные (PD) утилиты, которыми вы могли бы поделиться с другими читателями OUTLET. Демок и развлекательного софта у нас хватит вплоть до следующего тысячелетия, но нам бы очень хотелось побольше утилит!\n\nЕсли у вас есть цветной принтер, вы непременно оцените программу RAINBOW DUMPER в этом номере. Это лучшая (по сути, единственная) виденная нами программа для цветной печати экрана на Spectrum!\n\nRon & Brian\n\n---\n\nOUTLET выпускают:\n\nChris Oliver  \nRon & Brian Cavers  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF  \n\nEmail: outletmag@yahoo.com.\n",
+  "text_type": 3
+}

@@ -1,0 +1,48 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "33",
+  "article_id": "08_ARMA.TX",
+  "source_lang": "de-AT",
+  "title_en": "Armageddon (SVC)",
+  "title_ru": "Armageddon (SVC)",
+  "meta_description_en": "Mini-review of the Russian action game Armageddon by SVC for the ZX Spectrum, featured in Scene+ #33.",
+  "meta_description_ru": "Мини-обзор российской экшен-игры Armageddon от SVC для ZX Spectrum из журнала Scene+ #33.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "armageddon",
+      "tag_alias": "armageddon"
+    },
+    {
+      "tag_name": "svc",
+      "tag_alias": "svc"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    },
+    {
+      "tag_name": "review",
+      "tag_alias": "review"
+    }
+  ],
+  "category_ids": [
+    1,
+    2
+  ],
+  "body_de_plain": "ARMA ü - Armageddon (SVC) - Ein Actionspiel aus Rußland das auf\nder RAMBO 5 Enginebasiert, aber dennoch seine\nExistenzberechtigung hat. Ja, esmacht Spaß die Soldaten zu\nkillen und alle anderen Diener derHölle zurück zum Teufel zu\nschicken., Steuerung: Sinclair 1/2, Cursor, Kempston und\nKeyboard (QAOPM)> - A action game from Russia based on the RAMBO\n-I engine, but Ilike this game really. It is a fun to kill the\nsoldiers fromhell and to send them back to their master.ä\nControls: Sinclair 1/2, Cursor, Kempston and Keyboard\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### Armageddon (SVC)\n\nAn action game from Russia based on the *Rambo 5* engine, but it definitely has a right to exist. Yes, it's fun to kill the soldiers and send all the other minions of hell back to the devil.\n\nControls: Sinclair 1/2, Cursor, Kempston, and Keyboard (QAOPM).\n\n*(English blurb from original text)*: An action game from Russia based on the RAMBO engine, but I really like this game. It is fun to kill the soldiers from hell and send them back to their master. Controls: Sinclair 1/2, Cursor, Kempston, and Keyboard.\n",
+  "body_ru": "### Armageddon (SVC)\n\nЭкшен-игра из России, созданная на движке *Rambo 5*, но вполне заслуживающая права на существование. Да, чертовски весело отстреливать солдат и отправлять всех этих адских прислужников обратно к черту.\n\nУправление: Sinclair 1/2, Cursor, Kempston и клавиатура (QAOPM).\n\n*(Оригинальная англоязычная приписка)*: Экшен из России на движке RAMBO, но мне эта игра действительно нравится. Весело уничтожать солдат ада и отправлять их обратно к их повелителю. Управление: Sinclair 1/2, Cursor, Kempston и клавиатура.\n",
+  "text_type": 3
+}

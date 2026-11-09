@@ -1,0 +1,38 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "026",
+  "article_id": "04_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего выпуска",
+  "meta_description_en": "A preview of the upcoming issue of Outlet magazine: graphics software, linear interpolation, machine code debugger, Opus disc backup, and protection routines.",
+  "meta_description_ru": "Анонс материалов следующего номера дискового журнала Outlet: графика, математика, пошаговый отладчик машинного кода, бэкап дисков Opus и защита ПО.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "opus discovery",
+      "tag_alias": "opus-discovery"
+    },
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_en_plain": "Planned for next month we have a\n'picture-mixer'graphics program;\na 'DRIVE DIARY';our own high-res\nscreen dump as a \"stand-alone\"\nroutine you can MERGE into your\nown programs; SPECMAP 2- another\nmemory-mapping routine; a simple\nprogram to convert measurements;\nOUTCLASS of course and OUTPUT is\nPart 6 of the series on program\nprotection. There's a marvellous\n'frame-snapshot'graphics program\nand demo and a very interesting\nprogram which deals with linear\n\ninterpolation (for you maths\nexperts). This is followed by a\ngame of HANGMAN(you can't say we\ndon't have variety!).\n\nWe've an excellent program which\nruns machine code step-by-step\nand displays the full details of\nregisters etc.(instructional and\nuseful when tracing bugs); a mod\nto update and remove most of the\nbugs from JACKSOFT; a drawing\nprogram with a difference - IT\nDRAWS THE PICTURES ITSELF! - Yes\n- it actually draws landscapes-\nmillions of 'em!\n\nFinally,there's TRANSBACK,a sort\nof sequel to UNITRANS -it backs\nup your entire Opus OUTLET disc\n(or any Opus disc!) to tape!.\n",
+  "body_ru_plain": "В планах на следующий месяц у\nнас графическая программа\n«picture-mixer»; 'DRIVE DIARY';\nнаша собственная подпрограмма\nдампа экрана высокого разрешения\nв автономном виде — её можно\nдобавить по MERGE в ваши личные\nпрограммы; SPECMAP 2 — ещё одна\nпроцедура карты памяти; простая\nпрограмма пересчёта измерений;\nсамо собой, OUTCLASS, а в OUTPUT\nбудет часть 6 из серии статей о\nзащите программ. Ещё изумительная\nграфическая программа\n'frame-snapshot' с демонстрацией\nи весьма интересная программа,\nпосвящённая линейной\n\nинтерполяции (для знатоков\nматематики). За этим следует\nигра HANGMAN (уж в чём нас точно\nне упрекнёшь, так в однообразии!).\n\nУ нас есть отличная программа,\nвыполняющая машинный код\nпошагово с подробным выводом\nсодержимого регистров и т.п.\n(познавательно и крайне полезно\nпри отладке); модификация для\nобновления и исправления большей\nчасти ошибок в JACKSOFT; а также\nрисовалка с изюминкой — ОНА\nРИСУЕТ КАРТИНКИ САМА! — Да-да,\nона в самом деле рисует пейзажи —\nмиллионы пейзажей!\n\nИ наконец, TRANSBACK — своего\nрода продолжение UNITRANS: она\nделает резервную копию всего\nдиска Opus OUTLET (или вообще\nлюбого диска Opus!) на ленту!.\n",
+  "body_en": "## Lookahead\n\nPlanned for next month we have a 'picture-mixer' graphics program; a 'DRIVE DIARY'; our own high-res screen dump as a \"stand-alone\" routine you can MERGE into your own programs; SPECMAP 2 - another memory-mapping routine; a simple program to convert measurements; OUTCLASS of course and OUTPUT is Part 6 of the series on program protection. There's a marvellous 'frame-snapshot' graphics program and demo and a very interesting program which deals with linear interpolation (for you maths experts). This is followed by a game of HANGMAN (you can't say we don't have variety!).\n\nWe've an excellent program which runs machine code step-by-step and displays the full details of registers etc. (instructional and useful when tracing bugs); a mod to update and remove most of the bugs from JACKSOFT; a drawing program with a difference - IT DRAWS THE PICTURES ITSELF! - Yes - it actually draws landscapes - millions of 'em!\n\nFinally, there's TRANSBACK, a sort of sequel to UNITRANS - it backs up your entire Opus OUTLET disc (or any Opus disc!) to tape!.\n",
+  "body_ru": "## Анонс следующего выпуска\n\nВ планах на следующий месяц у нас графическая программа «picture-mixer»; 'DRIVE DIARY'; наша собственная подпрограмма дампа экрана высокого разрешения в автономном виде — её можно добавить по MERGE в ваши личные программы; SPECMAP 2 — ещё одна процедура карты памяти; простая программа пересчёта измерений; само собой, OUTCLASS, а в OUTPUT будет часть 6 из серии статей о защите программ. Ещё изумительная графическая программа 'frame-snapshot' с демонстрацией и весьма интересная программа, посвящённая линейной интерполяции (для знатоков математики). За этим следует игра HANGMAN (уж в чём нас точно не упрекнёшь, так в однообразии!).\n\nУ нас есть отличная программа, выполняющая машинный код пошагово с подробным выводом содержимого регистров и т.п. (познавательно и крайне полезно при отладке); модификация для обновления и исправления большей части ошибок в JACKSOFT; а также рисовалка с изюминкой — ОНА РИСУЕТ КАРТИНКИ САМА! — Да-да, она в самом деле рисует пейзажи — миллионы пейзажей!\n\nИ наконец, TRANSBACK — своего рода продолжение UNITRANS: она делает резервную копию всего диска Opus OUTLET (или вообще любого диска Opus!) на ленту!.\n",
+  "text_type": 3
+}

@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "33",
+  "article_id": "06_MATHEG.TX",
+  "source_lang": "de-AT",
+  "title_en": "Mathegenie",
+  "title_ru": "Mathegenie",
+  "meta_description_en": "A brief note about Mathegenie, a mathematical logic game for the ZX Spectrum featured in Scene+ magazine.",
+  "meta_description_ru": "Краткая заметка об игре Mathegenie — математической головоломке для ZX Spectrum из журнала Scene+.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    },
+    {
+      "tag_name": "mathegenie",
+      "tag_alias": "mathegenie"
+    },
+    {
+      "tag_name": "logic-game",
+      "tag_alias": "logic-game"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "MATHEGENIE ü - MATHEGENIE- Ein mathematisches denkspiel, die\ngenaue Anleitung hierzu solltesich in der Zeitschrift befinden.a\n- Mathematical logic game, the instruction for it is in\nprogrammitself and in the paper magazine.a -! ü Ä! ö ö! ü Y ß\n? = ( 0 #\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### MATHEGENIE\n\nA mathematical logic game; detailed instructions for it should be found in the printed magazine.\n\n*English description from original note:*\nMathematical logic game, the instruction for it is in the program itself and in the paper magazine.\n",
+  "body_ru": "### MATHEGENIE\n\nМатематическая логическая игра; подробное руководство к ней можно найти в печатном номере журнала.\n\n*Английское примечание из оригинала:*\nМатематическая логическая игра; инструкции находятся как в самой программе, так и в бумажном журнале.\n",
+  "text_type": 3
+}

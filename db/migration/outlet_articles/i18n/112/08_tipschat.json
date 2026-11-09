@@ -1,0 +1,48 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "112",
+  "article_id": "08_tipschat",
+  "title_en": "Useful BASIC Commands",
+  "title_ru": "Полезные команды Бейсика",
+  "meta_description_en": "David Wornham shares a handy reference list of Sinclair BASIC tips, system variable POKEs, +3 and +D disk commands, and ROM routines for ZX Spectrum.",
+  "meta_description_ru": "Дэвид Ворнхэм делится подборкой полезных команд Sinclair BASIC, POKE системных переменных, дисковых команд для +3 и +D, а также вызовов процедур ПЗУ ZX Spectrum.",
+  "authors": [
+    "David Wornham"
+  ],
+  "tags": [
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    },
+    {
+      "tag_name": "pokes",
+      "tag_alias": "pokes"
+    },
+    {
+      "tag_name": "system variables",
+      "tag_alias": "system-variables"
+    },
+    {
+      "tag_name": "plus3",
+      "tag_alias": "plus3"
+    },
+    {
+      "tag_name": "plus-d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "tips & tricks",
+      "tag_alias": "tips-tricks"
+    }
+  ],
+  "category_ids": [
+    29,
+    30
+  ],
+  "body_en_plain": "USEFUL BASIC COMMANDS\n        by David Wornham\n     ---------------------\n\nBeginning on the following page\nis my list of Basic commands I\nhave compiled over the years,\nand have found extremely useful.\nSome I have not tried so cannot\nguarantee their success!...\n\n\nBinary to decimal PRINT BIN 010\n\nCapitals change LET CAP=USR 4317\n\nCapitals on       POKE 23658,8\n\nCapitals off      POKE 23658,0\n\nChange +3 filename...\n         MOVE \"name1\" TO \"name2\"\n\nCopy all files on disk...\n+3          COPY \"A:*.*\" TO \"B:\"\n+D          SAVE D1 \"*\" TO D2\n\nCursor=?          POKE 23617,236\n\nCursor=L(normal)  POKE 23617,0\n\nCursor=E(Extended)POKE 23617,1\n\nCursor=G(Graphics)POKE 23617,2\n\nCopy all sectors from\nDrive 2 to 1(+D) FORMAT D1 TO 2\n      (CAUTION: FORMATS DRIVE 1)\n\nError buzz OFF    POKE 23608,0\n\nKeyboard Beep      POKE 23609,40\n                   (40 can vary)\n\nLast key pressed...\n         PRINT CHR$ (PEEK 23560)\n\nLine 1 (BASIC) change to 0...\nPOKE,PEEK 23635+256*PEEK 23636,0\n\nLine 0 (BASIC) change to 1...\nPOKE PEEK 23635+256*PEEK 23636,1\n\n\nMemory left, in bytes...\n            PRINT 65536-USR 7962\n\n\nMicrodrive space reserve...\n                    POKE 63132,4\n       (M'drive needs 595 bytes)\n\nMode 48K to 128K...\n             RANDOMIZE USR 23354\n         (Don't use 48K printer)\n\nMode 48K identify\n          IF PEEK 75=191 THEN...\n\nMode 128K identify...\n        IF PEEK 23388=16 THEN...\n\nPRINT on line 23 upwards...\nPRINT #0;\".....\n\nPLOT to PRINT\n    X=INT(X/255*31): Y=(Y-175)/8\n\nPRINT to PLOT\n      X=INT(X/31*255): Y=175-Y*8\n\nPrinter bug cure (on some +3s)..\n     POKE 23354,62:POKE 23355,16\n\nProgram unreadable  POKE 23606,5\n                (use with care!)\n\nSCREEN copy to printer...\n             RANDOMIZE USR 23370\n\nSCREEN$ SAVE top third\n                 CODE 16384,2048\n\nSCROLL automatic    POKE 23692,0\n\nSCROLL one line   PRINT USR 3280\n\nSCROLL whole page to top...\n          RANDOMIZE USR 3330:CLS\n\nSinclair screen font...\n      POKE 23607,60:POKE 23606,0\n\n\nTape load omit print filename...\nPOKE23570,16:LOAD\"\":POKE 23570,6\n\nTape save prompt omit...\n                  POKE 23736,181\n\n\n                   David Wornham.\n",
+  "body_ru_plain": "",
+  "body_en": "# USEFUL BASIC COMMANDS\n\n**by David Wornham**\n\nBeginning below is my list of BASIC commands I have compiled over the years, and have found extremely useful. Some I have not tried so cannot guarantee their success!...\n\n---\n\n* **Binary to decimal:**  \n  `PRINT BIN 010`\n\n* **Capitals change:**  \n  `LET CAP=USR 4317`\n\n* **Capitals on:**  \n  `POKE 23658,8`\n\n* **Capitals off:**  \n  `POKE 23658,0`\n\n* **Change +3 filename:**  \n  `MOVE \"name1\" TO \"name2\"`\n\n* **Copy all files on disk:**  \n  +3: `COPY \"A:*.*\" TO \"B:\"`  \n  +D: `SAVE D1 \"*\" TO D2`\n\n* **Cursor = ?:**  \n  `POKE 23617,236`\n\n* **Cursor = L (normal):**  \n  `POKE 23617,0`\n\n* **Cursor = E (Extended):**  \n  `POKE 23617,1`\n\n* **Cursor = G (Graphics):**  \n  `POKE 23617,2`\n\n* **Copy all sectors from Drive 2 to 1 (+D):**  \n  `FORMAT D1 TO 2`  \n  *(CAUTION: FORMATS DRIVE 1)*\n\n* **Error buzz OFF:**  \n  `POKE 23608,0`\n\n* **Keyboard Beep:**  \n  `POKE 23609,40`  \n  *(40 can vary)*\n\n* **Last key pressed:**  \n  `PRINT CHR$ (PEEK 23560)`\n\n* **Line 1 (BASIC) change to 0:**  \n  `POKE PEEK 23635+256*PEEK 23636,0`\n\n* **Line 0 (BASIC) change to 1:**  \n  `POKE PEEK 23635+256*PEEK 23636,1`\n\n* **Memory left, in bytes:**  \n  `PRINT 65536-USR 7962`\n\n* **Microdrive space reserve:**  \n  `POKE 63132,4`  \n  *(Microdrive needs 595 bytes)*\n\n* **Mode 48K to 128K:**  \n  `RANDOMIZE USR 23354`  \n  *(Don't use 48K printer)*\n\n* **Mode 48K identify:**  \n  `IF PEEK 75=191 THEN...`\n\n* **Mode 128K identify:**  \n  `IF PEEK 23388=16 THEN...`\n\n* **PRINT on line 23 upwards:**  \n  `PRINT #0;\".....\"`\n\n* **PLOT to PRINT conversion:**  \n  `X=INT(X/255*31): Y=(Y-175)/8`\n\n* **PRINT to PLOT conversion:**  \n  `X=INT(X/31*255): Y=175-Y*8`\n\n* **Printer bug cure (on some +3s):**  \n  `POKE 23354,62: POKE 23355,16`\n\n* **Program unreadable:**  \n  `POKE 23606,5`  \n  *(use with care!)*\n\n* **SCREEN copy to printer:**  \n  `RANDOMIZE USR 23370`\n\n* **SCREEN$ SAVE top third:**  \n  `CODE 16384,2048`\n\n* **SCROLL automatic:**  \n  `POKE 23692,0`\n\n* **SCROLL one line:**  \n  `PRINT USR 3280`\n\n* **SCROLL whole page to top:**  \n  `RANDOMIZE USR 3330: CLS`\n\n* **Sinclair screen font:**  \n  `POKE 23607,60: POKE 23606,0`\n\n* **Tape load omit print filename:**  \n  `POKE 23570,16: LOAD \"\": POKE 23570,6`\n\n* **Tape save prompt omit:**  \n  `POKE 23736,181`\n\n*David Wornham.*\n",
+  "body_ru": "# ПОЛЕЗНЫЕ КОМАНДЫ БЕЙСИКА\n\n**Дэвид Ворнхэм (David Wornham)**\n\nНиже приведён список команд Бейсика, который я собирал годами и находил чрезвычайно полезным. Некоторые из них я сам не проверял, так что гарантировать их работоспособность не могу!..\n\n---\n\n* **Двоичное число в десятичное:**  \n  `PRINT BIN 010`\n\n* **Переключение регистра (заглавные/строчные):**  \n  `LET CAP=USR 4317`\n\n* **Включить Caps Lock:**  \n  `POKE 23658,8`\n\n* **Выключить Caps Lock:**  \n  `POKE 23658,0`\n\n* **Переименовать файл на +3:**  \n  `MOVE \"name1\" TO \"name2\"`\n\n* **Скопировать все файлы на диске:**  \n  +3: `COPY \"A:*.*\" TO \"B:\"`  \n  +D: `SAVE D1 \"*\" TO D2`\n\n* **Курсор = ?:**  \n  `POKE 23617,236`\n\n* **Курсор = L (обычный):**  \n  `POKE 23617,0`\n\n* **Курсор = E (расширенный/Extended):**  \n  `POKE 23617,1`\n\n* **Курсор = G (графический):**  \n  `POKE 23617,2`\n\n* **Скопировать все секторы с дисковода 2 на 1 (+D):**  \n  `FORMAT D1 TO 2`  \n  *(ВНИМАНИЕ: ФОРМАТИРУЕТ ДИСКОВОД 1)*\n\n* **Отключить зуммер ошибки:**  \n  `POKE 23608,0`\n\n* **Клик/бип клавиатуры:**  \n  `POKE 23609,40`  \n  *(значение 40 можно менять)*\n\n* **Последняя нажатая клавиша:**  \n  `PRINT CHR$ (PEEK 23560)`\n\n* **Изменить строку 1 (Бейсик) на строку 0:**  \n  `POKE PEEK 23635+256*PEEK 23636,0`\n\n* **Изменить строку 0 (Бейсик) на строку 1:**  \n  `POKE PEEK 23635+256*PEEK 23636,1`\n\n* **Свободная память в байтах:**  \n  `PRINT 65536-USR 7962`\n\n* **Резервирование памяти под Microdrive:**  \n  `POKE 63132,4`  \n  *(микродрайву требуется 595 байт)*\n\n* **Переход из режима 48K в 128K:**  \n  `RANDOMIZE USR 23354`  \n  *(не используйте принтер от 48K)*\n\n* **Определение режима 48K:**  \n  `IF PEEK 75=191 THEN...`\n\n* **Определение режима 128K:**  \n  `IF PEEK 23388=16 THEN...`\n\n* **Печать в нижней строке (23 и выше):**  \n  `PRINT #0;\".....\"`\n\n* **Пересчёт координат PLOT в PRINT:**  \n  `X=INT(X/255*31): Y=(Y-175)/8`\n\n* **Пересчёт координат PRINT в PLOT:**  \n  `X=INT(X/31*255): Y=175-Y*8`\n\n* **Устранение бага с принтером (на некоторых моделях +3):**  \n  `POKE 23354,62: POKE 23355,16`\n\n* **Сделать программу нечитаемой:**  \n  `POKE 23606,5`  \n  *(использовать с осторожностью!)*\n\n* **Печать экрана (SCREEN) на принтере:**  \n  `RANDOMIZE USR 23370`\n\n* **SCREEN$ SAVE только верхней трети экрана:**  \n  `CODE 16384,2048`\n\n* **Автоматический SCROLL:**  \n  `POKE 23692,0`\n\n* **Прокрутка (SCROLL) на одну строку:**  \n  `PRINT USR 3280`\n\n* **Прокрутка всей страницы вверх:**  \n  `RANDOMIZE USR 3330: CLS`\n\n* **Стандартный экранный шрифт Sinclair:**  \n  `POKE 23607,60: POKE 23606,0`\n\n* **Загрузка с кассеты без вывода имени файла:**  \n  `POKE 23570,16: LOAD \"\": POKE 23570,6`\n\n* **Отключение запроса подтверждения при записи на ленту:**  \n  `POKE 23736,181`\n\n*David Wornham.*\n",
+  "text_type": 3
+}

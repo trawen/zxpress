@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "095",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A preview of Outlet #096 contents: Radio Rally report, animation utility, cat clip-art, programming tools, a German multipart demo, and more.",
+  "meta_description_ru": "Анонс выпуска Outlet #096: репортаж с Radio-Rally, утилита для создания анимации, кошачий клипарт, немецкое мультипарт-демо и многое другое.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "radio rally",
+      "tag_alias": "radio-rally"
+    },
+    {
+      "tag_name": "animation",
+      "tag_alias": "animation"
+    },
+    {
+      "tag_name": "demoscene",
+      "tag_alias": "demoscene"
+    }
+  ],
+  "category_ids": [
+    123,
+    125
+  ],
+  "body_en_plain": "What goes on at a Radio-Rally?\nDo they race uphill in mud like\na Motorcycle Rally? Is there a\nConcours d'Elegance to see who's\ngot the shiniest knobs and dials\nlike a Veteran Car Rally? Well\nthere are some similarities but\nif, like me, you've never been\nto a Radio Rally, you can find\nout the fascinating goings-on in\nnext month's OUTLET.  Also next\nmonth there is not only a superb\nanimation but an excellent util-\nity for you to create your own\nanimation sequences.\n\nStill on the graphics side,there\nis some purr-fectly appealing\nclip-art which will particularly\nappeal to cat lovers! Then there\nare several useful programming\nutilities, some really wierd\nmusic, a word-puzzle as well as\nthe usual crossword, a speedy\nlittle game to test your driving\nskills, and a very pleasing\nmultipart music + graphics demo\nfrom our friends in Germany,\nwhich will increase your know-\nledge of the worldwide spread of\nSpectrum users. (There is also a\nbewitching mirrored scroll for\nthe credits in the last part of\nthe Demo!).\n\n                         Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "What goes on at a Radio-Rally? Do they race uphill in mud like a Motorcycle Rally? Is there a Concours d'Elegance to see who's got the shiniest knobs and dials like a Veteran Car Rally? Well there are some similarities but if, like me, you've never been to a Radio Rally, you can find out the fascinating goings-on in next month's OUTLET. Also next month there is not only a superb animation but an excellent utility for you to create your own animation sequences.\n\nStill on the graphics side, there is some purr-fectly appealing clip-art which will particularly appeal to cat lovers! Then there are several useful programming utilities, some really weird music, a word-puzzle as well as the usual crossword, a speedy little game to test your driving skills, and a very pleasing multipart music + graphics demo from our friends in Germany, which will increase your knowledge of the worldwide spread of Spectrum users. (There is also a bewitching mirrored scroll for the credits in the last part of the Demo!).\n\nChris.\n",
+  "body_ru": "Что вообще происходит на радио-ралли (Radio-Rally)? Гоняют ли там по уши в грязи на крутые склоны, как на мотоциклетных ралли? Проводится ли там Конкурс элегантности (Concours d'Elegance), чтобы выяснить, у кого самые блестящие ручки настройки и шкалы, как на ралли ретро-автомобилей? Что ж, определенные сходства есть, но если вы, как и я, никогда не бывали на радио-ралли, обо всех этих увлекательных событиях вы сможете узнать в следующем выпуске OUTLET. Кроме того, в следующем месяце вас ждет не только великолепная анимация, но и отличная утилита для создания собственных анимационных роликов.\n\nВозвращаясь к графике: мы приготовили «мурр-чательный» клипарт, который особенно понравится любителям кошек! Также вас ждут несколько полезных утилит для программирования, весьма необычная музыка, словесная головоломка в дополнение к традиционному кроссворду, шустрая небольшая игра для проверки навыков вождения, а также очень приятное мультипарт-демо с графикой и музыкой от наших друзей из Германии, которое расширит ваши представления о распространении пользователей Спектрума по всему миру. (Кстати, в финальной части этого демо есть завораживающий зеркальный скроллер с титрами!).\n\nChris.\n",
+  "text_type": 3
+}

@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "072",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Outlet magazine editorial (August 1993): Chezron Software relocation, reader suggestions for promotion, and exploring a future PC version of Outlet.",
+  "meta_description_ru": "Редакторская колонка журнала Outlet (август 1993): переезд Chezron Software, идеи читателей по продвижению издания и планы создания PC-версии журнала.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "promotion",
+      "tag_alias": "promotion"
+    },
+    {
+      "tag_name": "pc",
+      "tag_alias": "pc"
+    }
+  ],
+  "category_ids": [
+    123,
+    138
+  ],
+  "body_en_plain": "A U G U S T , 1 9 9 3\n\nWe have received several ideas\nfor promotion of OUTLET recently\nfor which we are grateful but\nplease be patient with us if it\nseems we don't always follow\nthrough and keep sending ideas!\n\nThe workload is so immense that,\nwhat with the recent move of\nChezron and the investigation of\nthe PC as a possible future\nOUTLET version, even what seems\nlike a simple job of preparing\nleaflets or placing an advert is\nvery difficult to fulfil. It is\nmade harder to make the effort\nbecause of our experience of so\nmany things we have tried which\nonly result in a tiny (or even\nnone!) return for the trouble\ninvolved!\n\nSo, anyone who has sent in an\nidea meaning to be helpful,don't\nbe put off if we don't seem to\nfollow up and trust us that we\ndo give careful consideration to\nall suggestions.\n\nWho knows? Maybe in a year or so\nthe PC version will be making\nenough money for us to employ a\nperson to handle promotions! We\ncan then resurrect these ideas.\n\nMay we draw the attention of\nRobert Smith, who wanted a music\nfile program, to Jim Hossack's\nMUSICFILE (OUTLET 71 ADDENDERS).\n\n                    Ron & Brian\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nA U G U S T , 1 9 9 3\n\nWe have received several ideas for promotion of OUTLET recently for which we are grateful but please be patient with us if it seems we don't always follow through and keep sending ideas!\n\nThe workload is so immense that, what with the recent move of Chezron and the investigation of the PC as a possible future OUTLET version, even what seems like a simple job of preparing leaflets or placing an advert is very difficult to fulfil. It is made harder to make the effort because of our experience of so many things we have tried which only result in a tiny (or even none!) return for the trouble involved!\n\nSo, anyone who has sent in an idea meaning to be helpful,don't be put off if we don't seem to follow up and trust us that we do give careful consideration to all suggestions.\n\nWho knows? Maybe in a year or so the PC version will be making enough money for us to employ a person to handle promotions! We can then resurrect these ideas.\n\nMay we draw the attention of Robert Smith, who wanted a music file program, to Jim Hossack's MUSICFILE (OUTLET 71 ADDENDERS).\n\nRon & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers\n\nCHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF.\n",
+  "body_ru": "## Editorial (late)\n\n### А В Г У С Т , 1 9 9 3\n\nВ последнее время мы получили несколько идей по продвижению OUTLET, за что очень благодарны, но, пожалуйста, проявите терпение, если вам кажется, что мы не всегда воплощаем их в жизнь — и продолжайте присылать свои предложения!\n\nОбъём работы настолько огромен, что с учётом недавнего переезда Chezron и изучения PC как возможной будущей платформы для версии OUTLET, даже такая, казалось бы, простая задача, как подготовка листовок или размещение рекламы, даётся с большим трудом. Прилагать усилия ещё тяжелее из-за нашего прошлого опыта: столько всего мы перепробовали, и это принесло лишь крошечную (а то и вовсе нулевую!) отдачу за все хлопоты!\n\nПоэтому все, кто присылал идеи из желания помочь: не опускайте руки, если мы не беремся за них сразу, и поверьте — мы внимательно рассматриваем каждое предложение.\n\nКто знает? Может быть, через год или около того PC-версия будет приносить достаточно денег, чтобы мы могли нанять человека, который займётся раскруткой! Тогда мы сможем вернуться к этим идеям.\n\nПользуясь случаем, хотим обратить внимание Robert Smith, искавшего программу для работы с музыкальными файлами, на MUSICFILE от Jim Hossack (OUTLET 71 ADDENDERS).\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF.\n```\n",
+  "text_type": 3
+}

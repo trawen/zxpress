@@ -1,0 +1,39 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "041",
+  "article_id": "04_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "Brian previews upcoming features for the next Outlet: fast oval drawing routines, runic fonts, +3 RAM paging, and SAM Coupé programs.",
+  "meta_description_ru": "Брайан анонсирует материалы следующего номера Outlet: быстрая отрисовка овалов, рунический шрифт, перенос ПЗУ 48K в ОЗУ на +3 и новинки для SAM Coupé.",
+  "authors": [
+    "Brian Renwick"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "spectrum +3",
+      "tag_alias": "spectrum-3"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "I'm way behind with next month's\nOUTLET so can only tell you SOME\nof the things planned. There'll\nbe a high-speed machine code\nroutine to draw ovals (open or\nsolid);a special routine to give\nlarge, \"runic\"-style lettering;\na semaphore code trainer;code to\nput the 48K Spectrum into RAM on\na +3 so you can POKE it and make\nchanges; clip art; a Disciple/+D\nsector copy;more 128K music; a\nmusic quiz; a text adventure; a\nnew crossword....\n\nAs I say, there's still more to\ndo and more spaces to fill so\nyou can look forward to more\ngoodies than mentioned plus, of\ncourse, the usual regulars, like\nOUTCLASS etc. - not to mention\nADD-ENDERS.\n\nRemember, many of these programs\nwill be replaced in OUTLET's SAM\nversion with SAM-specific items\nof which we have a goodly stock!\n\nWe hope soon to have a different\nOUTCLASS in SAM too which will\nbe written especially for SAM.It\nmay be called SAMCLASS.\n\nDon't miss it!\n\n                       - Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "I'm way behind with next month's OUTLET so can only tell you SOME of the things planned. There'll be a high-speed machine code routine to draw ovals (open or solid); a special routine to give large, \"runic\"-style lettering; a semaphore code trainer; code to put the 48K Spectrum into RAM on a +3 so you can POKE it and make changes; clip art; a Disciple/+D sector copy; more 128K music; a music quiz; a text adventure; a new crossword....\n\nAs I say, there's still more to do and more spaces to fill so you can look forward to more goodies than mentioned plus, of course, the usual regulars, like OUTCLASS etc. — not to mention ADD-ENDERS.\n\nRemember, many of these programs will be replaced in OUTLET's SAM version with SAM-specific items of which we have a goodly stock!\n\nWe hope soon to have a different OUTCLASS in SAM too which will be written especially for SAM. It may be called SAMCLASS.\n\nDon't miss it!\n\n— Brian.\n",
+  "body_ru": "Я сильно опаздываю с подготовкой следующего номера OUTLET, поэтому могу рассказать лишь о НЕКОТОРЫХ запланированных вещах. Вас ждут: высокоскоростная подпрограмма в машинных кодах для рисования овалов (контурных или закрашенных); специальная процедура для вывода крупных букв в «руническом» стиле; тренажёр семафорной азбуки; код для загрузки ПЗУ Spectrum 48K в ОЗУ на +3 (чтобы можно было делать POKE и вносить изменения); клипарт; посекторный копировщик для Disciple/+D; ещё больше музыки для 128K; музыкальная викторина; текстовый квест; новый кроссворд....\n\nКак я уже сказал, предстоит ещё много работы и осталось заполнить свободные места, так что вы можете рассчитывать на ещё большее число вкусностей, чем перечислено, плюс, разумеется, наши постоянные рубрики вроде OUTCLASS и тому подобные — не говоря уже об ADD-ENDERS.\n\nПомните, что в версии OUTLET для SAM многие из этих программ будут заменены специальными разработками под SAM, которых у нас накопился приличный запас!\n\nМы надеемся вскоре сделать отдельный раздел OUTCLASS и для SAM, написанный специально для этого компьютера. Возможно, он будет называться SAMCLASS.\n\nНе пропустите!\n\n— Brian.\n",
+  "text_type": 3
+}

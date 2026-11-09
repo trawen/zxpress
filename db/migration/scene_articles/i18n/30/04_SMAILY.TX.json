@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "30",
+  "article_id": "04_SMAILY.TX",
+  "source_lang": "de-AT",
+  "title_en": "Smaily: Mini-Review",
+  "title_ru": "Smaily: мини-обзор",
+  "meta_description_en": "A brief review of the ZX Spectrum game Smaily from Scene+ #30: a colorful Super Pac-Man clone where you defeat terrorists.",
+  "meta_description_ru": "Краткий обзор игры Smaily для ZX Spectrum из журнала Scene+ #30: красочный клон Super Pac-Man, в котором нужно бороться с террористами.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "smaily",
+      "tag_alias": "smaily"
+    },
+    {
+      "tag_name": "game-review",
+      "tag_alias": "game-review"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    }
+  ],
+  "category_ids": [
+    1,
+    2
+  ],
+  "body_de_plain": "SMAIL ü - SMAILY - Sehr Farbenfrohes und gut programmiertes\nIntro und ebensolchesSpiel. In der Rolle eines Superpacmans muß\nman Terroristenbesiegen. Auch wenn die Grundidee etwas\nStumpfsinnig erscheint,macht das Spiel doch Spaß vor allem durch\ndie extragegenstände. - A great colorful and well coded intro\nand also a well codedgame. As a kind of Super pacman you must\ndefeat terrorists. Themain idea is a bit old but the game is\nfunny with all the extra-equipment, p\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### SMAILY\n\nA very colorful and well-programmed intro, followed by an equally well-crafted game. Taking on the role of a kind of Super Pac-Man, you have to defeat terrorists. Even though the core concept might seem a bit mindless or old, the game is genuinely fun, especially thanks to all the bonus items and extra equipment.\n",
+  "body_ru": "### SMAILY\n\nОчень красочное и отлично запрограммированное интро, а за ним — столь же добротно сделанная игра. В роли этакого Супер-Пэкмена вам предстоит побеждать террористов. Хотя сама идея и кажется немного примитивной, играть всё равно весело — в первую очередь благодаря множеству дополнительных предметов и бонусов.\n",
+  "text_type": 3
+}

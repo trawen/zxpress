@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "28",
+  "article_id": "08_RAGE.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Rage 128",
+  "title_ru": "Rage 128",
+  "meta_description_en": "Brief note on the restored release of the Rage 128 demo for ZX Spectrum, noting its Pentagon-specific synchronization and effects.",
+  "meta_description_ru": "Краткая заметка о восстановленном релизе демо Rage 128 для ZX Spectrum, с примечанием о синхронизации под Pentagon.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "pentagon",
+      "tag_alias": "pentagon"
+    },
+    {
+      "tag_name": "demo",
+      "tag_alias": "demo"
+    },
+    {
+      "tag_name": "demoparty",
+      "tag_alias": "demoparty"
+    }
+  ],
+  "category_ids": [
+    93,
+    94
+  ],
+  "body_de_plain": "RAGE ü\n----------------------------------------------------------------\nRAGE 128 (USR 0)\n----------------------------------------------------------------\nRestauriertes PC. AP File, ein geniales Demo aber leider\nfürPentagon synchronisiert, aus diesem Geund bekommt man auf\neinemSpectrum nichts von den letzten Effekten mit. Ich habe\nalles aufeinem Pentagon mitbekommen und muß sagen daß es\nwirklich genialist. Auch die anderen FX sibd nicht ganz ohne.\n----------------------------------------------------------------\nRestored PC. AP File, a genial demo but unfortunaly\nsyncronizedonly for Pentagon so no spectrum user will see the\nfinal FX withthe animated overscan.\n--------------------------------------------------------------------------------------------------------------------------------\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### RAGE 128 (USR 0)\n\nRestored PC. AP file. A brilliant demo, but unfortunately synchronized specifically for the Pentagon, which is why you won't see anything of the final effects on a standard Spectrum. I watched the whole thing on a Pentagon and must say it really is brilliant. The other FX aren't bad at all, either.\n\n---\n\nRestored PC. AP File, a genial demo but unfortunaly syncronized only for Pentagon so no spectrum user will see the final FX with the animated overscan.\n",
+  "body_ru": "### RAGE 128 (USR 0)\n\nВосстановленный PC. AP файл. Гениальное демо, но, к сожалению, синхронизированное исключительно под Pentagon, из-за чего на обычном Спектруме ничего из финальных эффектов увидеть не удастся. Я посмотрел его целиком на Пентагоне и должен сказать, что это действительно потрясающе. Остальные FX тоже весьма впечатляют.\n\n---\n\n*Восстановленный PC. AP файл — отличное демо, но, к сожалению, синхронизированное только под Pentagon, так что обычные пользователи Spectrum не увидят финальные эффекты с анимированным оверсканом.*\n",
+  "text_type": 3
+}

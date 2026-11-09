@@ -1,0 +1,360 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    
+<head>
+            <base href="https://spectrumcomputing.co.uk/">
+        <meta charset="utf-8">
+    <!--
+    
+                      _                                                        _   _                              _    
+                     | |                                                      | | (_)                            | |   
+  ___ _ __   ___  ___| |_ _ __ _   _ _ __ ___   ___ ___  _ __ ___  _ __  _   _| |_ _ _ __   __ _   ___ ___  _   _| | __
+ / __| '_ \ / _ \/ __| __| '__| | | | '_ ` _ \ / __/ _ \| '_ ` _ \| '_ \| | | | __| | '_ \ / _` | / __/ _ \| | | | |/ /
+ \__ \ |_) |  __/ (__| |_| |  | |_| | | | | | | (_| (_) | | | | | | |_) | |_| | |_| | | | | (_| || (_| (_) | |_| |   < 
+ |___/ .__/ \___|\___|\__|_|   \__,_|_| |_| |_|\___\___/|_| |_| |_| .__/ \__,_|\__|_|_| |_|\__, (_)___\___(_)__,_|_|\_\
+     | |                                                          | |                       __/ |                      
+     |_|                                                          |_|                      |___/                       
+
+     -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Spectrum Computing, a database of Sinclair ZX Spectrum games, software and hardware">
+              <meta name="keywords" content="Sinclair ZX Spectrum, ZX Spectrum, games, retrogaming, ZXDB, database">
+              <meta name="author" content="">
+              <title>Spectrum Computing - ZX Spectrum games, software and hardware</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes,minimal-ui">        <style>
+            .container #table-general {
+                border-collapse: separate;
+                border-spacing: 0 4px;
+            }
+
+            .container table td {
+                padding-left: 8px;
+            }
+
+            .container table td:first-child {
+                padding-left: 0px;
+            }
+        </style>
+
+        <style>
+        /* critial CSS style to prevent quick listing to f*ck up random */
+        .btn-group-justified {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: separate;
+        }
+
+        .btn-group-justified>.btn,
+        .btn-group-justified>.btn-group {
+            display: table-cell;
+            float: none;
+            width: 1%;
+        }
+
+        .btn-group-justified>.btn-group .btn {
+            width: 100%;
+        }
+
+        .btn-group-justified>.btn-group .dropdown-menu {
+            left: auto;
+        }
+    </style>
+
+
+    <!-- preconnecto to required origins -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com?display=swap">
+
+    <!-- mobile icons and browser bar colours -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=Om5AKpBR0Y">
+    <link rel="icon" type="image/png" href="favicon-32x32.png?v=Om5AKpBR0Y" sizes="32x32">
+    <link rel="icon" type="image/png" href="android-chrome-192x192.png?v=Om5AKpBR0Y" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicon-16x16.png?v=Om5AKpBR0Y" sizes="16x16">
+    <link rel="manifest" href="/manifest.json?v=Om5AKpBR0Y">
+    <link rel="mask-icon" href="safari-pinned-tab.svg?v=Om5AKpBR0Y">
+    <link rel="shortcut icon" href="favicon.ico?v=Om5AKpBR0Y">
+    <meta name="msapplication-TileImage" content="mstile-144x144.png?v=Om5AKpBR0Y">
+
+    <meta name="msapplication-TileColor" content="#29282d">
+    <meta name="theme-color" content="#29282d">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="preload" href="/vendor/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+    </noscript>
+
+    <!-- Custom CSS -->
+    <link href="/dist/css/bootstrap-select.min.css" rel="stylesheet" type="text/css">
+    <link href="/dist/css/zxdb.css" rel="stylesheet" type="text/css">
+    <link href="/dist/css/full-slider.css" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap 3 Card CSS -->
+    <link rel="preload" href="/searchresult/card.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/searchresult/card.css">
+    </noscript>
+
+    <!-- Custom Fonts -->
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="icon" type="image/png" href="favicon.png" sizes="16x16">
+</head>
+    <body>
+    <!-- -->
+<!-- sc_body.php FILE STARTS HERE -->
+<script>
+  function checkQuickSearchType(e) {
+    const searchType = e.quick.value;
+    if (searchType === 'f') e.action = '/searchfile/index.php';
+  }
+</script>
+
+
+<!-- DEBUG INFO -->
+
+
+<div id="header">
+  <div class="container">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse  navbar-static-top" style="margin-bottom: 0">
+      <div class="navbar-header" style="margin-bottom: 50px;">
+
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#zxdbNavbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a href="/" title="Spectrum Computing" class="navbar-brand"><img src="/img/logo.svg" class="site_logo" alt="Spectrum Computing Logo"></a>
+      </div>
+
+      <!-- /.navbar-header -->
+
+      <ul class="nav navbar-top-links navbar-right" style="margin-top: 10px; margin-right: 0px; margin-left: 0px;">
+        <li class="sidebar-search">
+                      <div class="col-xs-12 avatar-header white_search_text"><span><i class="bi bi-box-arrow-in-right align-middle" style="font-size: 2.5rem; "></i><a class="login-header" href="#modalLogin" data-toggle="modal">LOGIN</a></span></div>
+          
+          <!-- new search  -->
+          <div class="white_search_text" style="text-align:left">
+            <form name="frm" class="form-inline transparent" id="newSearchForm" action="/list" method="get" onsubmit="checkQuickSearchType(this)">
+              <input type="hidden" name="inc_xrt" value="0">
+              <div class="input-group stylish-input-group">
+                <SELECT NAME="quick" id="quick" style="background-color:#0000;border:none;margin-left:0px;text-transform: uppercase;">
+                  <OPTION VALUE="s" SELECTED>Quick Search: Software</option>
+                  <OPTION VALUE="f" >Quick Search: Files</option>
+                  <OPTION VALUE="h" >Quick Search: Hardware</option>
+                  <OPTION VALUE="b" >Quick Search: Book</option>
+                  <OPTION VALUE="m" >Quick Search: Magazine</option>
+                  <OPTION VALUE="y" >Quick Search: Entity</option>
+                  <!--<OPTION  VALUE="p" >Quick Search: Publisher</option>-->
+                  <!--<OPTION  VALUE="a" >Quick Search: Author</option>-->
+                  <OPTION VALUE="g" >Quick Search: Group</option>
+                  <OPTION VALUE="c" >Quick Search: Licence</option>
+                  <OPTION VALUE="" >Quick Search: All</option>
+                </SELECT>
+                <br>
+                <input style="padding: 0px 0px;background-color:#0000; color: #fff;" type="text" class="form-control index-search" autocomplete="off" placeholder="Type here. Change search type above." name="text" id="text" value="">
+                <span class="input-group-addon" style="padding: 6px 0px;">
+                  <button type="submit" style="margin-top:25px" title="SEARCH"> <span class="glyphicon glyphicon-search"></span> </button>
+                </span>
+              </div>
+            </form>
+          </div>
+          <!-- end new search  -->
+
+          <!-- /input-group -->
+        </li>
+        <!-- /.dropdown -->
+      </ul>
+
+      <!-- /.navbar-top-links -->
+
+
+      <!-- RN - added  style="position:static" to make search clicable on small screens < 992px-->
+      <div class="col-md-12" role="navigation" style="position:static">
+        <div class="row">
+          <div class="collapse navbar-collapse" id="zxdbNavbar">
+            <ul class="nav nav-justified" id="navbar-collapse">
+              <li> <a href="/">Home</a> </li>
+              <li> <a href="/forums">Forums</a> </li>
+              <li> <a href="/releases">Releases</a> </li>
+              <li> <a href="/inlays">Inlays</a> </li>
+              <li> <a href="/scores">Scores</a> </li>
+              <li> <a href="/magazines">Magazines</a> </li>
+              <li> <a href="/help/">Help!</a> </li>
+              <li> <a href="/contacts">Contacts</a> </li>
+            </ul>
+          </div>
+          <!-- /.sidebar-collapse -->
+
+        </div>
+      </div>
+
+    </nav>
+    <!-- /.navbar-static-side -->
+
+  </div>
+</div>
+<!-- .header -->
+    <div class="container" id="wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <br><br>
+                  <div class="panel panel-primary">
+                  <div class="panel-heading ">WOOT! Tape Magazine</div>
+                  <div class="panel-body">
+                  <div class="panel-default">
+                  <div class="row zxdb_stripes2"><div class="col-sm-2"><b>Magazine: </b></div><div class="col-sm-8"><a href="/magazine/312/WOOT_Tape_Magazine">WOOT! Tape Magazine</a></div></div>
+                  <div class="row zxdb_stripes2"><div class="col-sm-2"><b>Language: </b></div><div class="col-sm-8">English</div></div><div class="row zxdb_stripes2"><div class="col-sm-2"><b>Publisher: </b></div><div class="col-sm-8"><a href="/list?label_id=13986">Stonechat Productions</a></div></div><div class="row zxdb_stripes2"><div class="col-sm-2"><b>Country: </b></div><div class="col-sm-8">UK</div></div>
+                  <div class="row zxdb_stripes2"><div class="col-sm-2"><b>Type: </b></div><div class="col-sm-8">Electronic Magazine</div></div><div class="row zxdb_stripes2"><div class="col-sm-2"><b>Associated: </b></div><div class="col-sm-8"><a href="/list?mag_id=312">8 title(s)</a></div></div></div></div></div><div class="panel panel-primary "><div class="panel-heading p_cyan">Magazine Issues</div><div class="panel-body">
+              <div class="panel-default">
+              <div class="hidden-xs hidden-sm row zxdb_header">
+              <div class="col-lg-5 "><b>Issue</b></div>
+              <div class="col-lg-2 "><b>Availability</b></div>
+              <div class="col-lg-3 "><b>Cover</b></div>
+              </div><div class="row zxdb_stripes">
+                  <div class="col-lg-5 text-left"><b>
+                      <a href="/issue/4050/WOOT_Tape_Magazine/0">#0 - 2016/Dec special "ZXMAS 2016"<span class="visible-xs visible-sm"><br></span></a>
+                  </b> <span class="visible-xs visible-sm"><br></span></div>
+                  <div class="col-lg-2 text-left"><a href="/entry/30342/ZX-Spectrum/WOOT_Tape_Magazine_issue_#0-ZXMAS_2016_Edition">OK</a><span class="visible-xs visible-sm"><br></span></div></div><div class="row zxdb_stripes">
+                  <div class="col-lg-5 text-left"><b>
+                      <a href="/issue/4051/WOOT_Tape_Magazine/1">#1 - 2017/Dec/11 special "ZXMAS 2017"<span class="visible-xs visible-sm"><br></span></a>
+                  </b> <span class="visible-xs visible-sm"><br></span></div>
+                  <div class="col-lg-2 text-left"><a href="/entry/32177/ZX-Spectrum/WOOT_Tape_Magazine_issue_#1-ZXMAS_2017_Edition">OK</a><span class="visible-xs visible-sm"><br></span></div></div><div class="row zxdb_stripes">
+                  <div class="col-lg-5 text-left"><b>
+                      <a href="/issue/4052/WOOT_Tape_Magazine/2">#2 - 2018/Dec/20 special "ZXMAS 2018"<span class="visible-xs visible-sm"><br></span></a>
+                  </b> <span class="visible-xs visible-sm"><br></span></div>
+                  <div class="col-lg-2 text-left"><a href="/entry/34609/ZX-Spectrum/WOOT_Tape_Magazine_issue_#2-ZXMAS_2018_Edition">OK</a><span class="visible-xs visible-sm"><br></span></div></div><div class="row zxdb_stripes">
+                  <div class="col-lg-5 text-left"><b>
+                      <a href="/issue/6505/WOOT_Tape_Magazine/3">#3 - 2019/Dec/23 special "ZXMAS 2019"<span class="visible-xs visible-sm"><br></span></a>
+                  </b> <span class="visible-xs visible-sm"><br></span></div>
+                  <div class="col-lg-2 text-left"><a href="/entry/35139/ZX-Spectrum/WOOT_Tape_Magazine_issue_#3-ZXMAS_2019_Edition">OK</a><span class="visible-xs visible-sm"><br></span></div></div><div class="row zxdb_stripes">
+                  <div class="col-lg-5 text-left"><b>
+                      <a href="/issue/7153/WOOT_Tape_Magazine/4">#4 - 2020/Dec/18 special "ZXMAS 2020"<span class="visible-xs visible-sm"><br></span></a>
+                  </b> <span class="visible-xs visible-sm"><br></span></div>
+                  <div class="col-lg-2 text-left"><a href="/entry/36545/ZX-Spectrum/WOOT_Tape_Magazine_issue_#4-ZXMAS_2020_Edition">OK</a><span class="visible-xs visible-sm"><br></span></div></div><div class="row zxdb_stripes">
+                  <div class="col-lg-5 text-left"><b>
+                      <a href="/issue/10681/WOOT_Tape_Magazine/5">#5 - 2021/Dec/22 special "ZXMAS 2021"<span class="visible-xs visible-sm"><br></span></a>
+                  </b> <span class="visible-xs visible-sm"><br></span></div>
+                  <div class="col-lg-2 text-left"><a href="/entry/36512/ZX-Spectrum/WOOT_Tape_Magazine_issue_#5-ZXMAS_2021_Edition">OK</a><span class="visible-xs visible-sm"><br></span></div></div><div class="row zxdb_stripes">
+                  <div class="col-lg-5 text-left"><b>
+                      <a href="/issue/12207/WOOT_Tape_Magazine/6">#6 - 2022/Dec/22 special "ZXMAS 2022"<span class="visible-xs visible-sm"><br></span></a>
+                  </b> <span class="visible-xs visible-sm"><br></span></div>
+                  <div class="col-lg-2 text-left"><a href="/entry/39024/ZX-Spectrum/WOOT_Tape_Magazine_issue_#6-ZXMAS_2022_Edition">OK</a><span class="visible-xs visible-sm"><br></span></div></div><div class="row zxdb_stripes">
+                  <div class="col-lg-5 text-left"><b>
+                      <a href="/issue/35336/WOOT_Tape_Magazine/7">#7 - 2023/Dec/23 special "ZXMAS 2023"<span class="visible-xs visible-sm"><br></span></a>
+                  </b> <span class="visible-xs visible-sm"><br></span></div>
+                  <div class="col-lg-2 text-left"><a href="/entry/42579/ZX-Spectrum/WOOT_Tape_Magazine_issue_#7-ZXMAS_2023_Edition">OK</a><span class="visible-xs visible-sm"><br></span></div></div></div>
+              </div>
+              </div>            </div>
+            <!-- /.panel-body -->
+        </div>
+    </div>
+    <div id="footer">
+  <div class="container">
+    <div class="container footer-above"><br>
+      <div class="footer-col col-md-4">
+        <p><small>This website uses ZXDB which was created by Einar Saukas</small></p>
+      </div>
+      <div class="footer-col col-md-4">
+        <ul class="list-inline">
+          <li> <a href="mailto:spectrumcomputing.co.uk@gmail.com?Subject=Spectrum%20Computing%20contact" class="btn-social btn-outline"><i class="fa fa-fw a fa-envelope"></i></a> </li>
+        </ul>
+      </div>
+      <div class="footer-col col-md-4">
+        <p></p>
+        <p>
+          <picture>
+            <source srcset="/img/logo_footer.webp" type="image/webp">
+            <img src="/img/logo_footer.png" alt="Spectrum Computing Footer logo">
+          </picture>
+        </p>
+      </div>
+    </div>
+  </div> <!-- container -->
+</div>
+<!-- /#page-wrapper -->
+<!-- /#wrapper -->
+<!-- jQuery -->
+<script src="/vendor/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Bootstrap Font Icon CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css?display=swap">
+
+<!-- Custom Theme JavaScript -->
+<script src="/dist/js/bootstrap-select.min.js"></script>
+<script src="/dist/js/zxdb.min.js"></script>
+
+<!-- Custom Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i?subset=latin-ext&display=swap" rel="stylesheet">
+
+<!-- Auto suggest in Quick Search -->
+<script src="/suggest/js/bootstrap-autocomplete.min.js"></script>
+<script src="/suggest/js/autocomplete.js"></script>
+
+<!-- x-rated confirmation -->
+<script src="/restricted/js/confirmation.js"></script>
+
+<link href="/suggest/css/style.css" rel="stylesheet" type="text/css">
+<script>
+    $(document).ready(function() {
+        $('#modalLogin').on('shown.bs.modal', function() {
+            $('#username').focus();
+        })
+    });
+</script>
+
+<div id="modalLogin" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <form action="/forums/ucp.php?mode=login" method="post" id="login">
+                <div class="modal-header">
+                    <button type="button" tabindex="-1" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title"><b>LOGIN</b></h5>
+                    <p>This will log you in to both the main site and the forum.</p>
+                </div>
+                <div class="modal-body">
+                    <!-- Email input -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <label class="form-label" for="username">Username</label>
+                        <input type="text" tabindex="1" name="username" id="username" size="25" value="" autocomplete="on" class="form-control">
+                    </div>
+
+                    <!-- Password input -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <label class="form-label" for="password">Password</label>
+                        <input type="password" tabindex="2" id="password" name="password" size="25" autocomplete="off" class="form-control">
+                    </div>
+
+                    <input type="hidden" name="creation_time" value="1794237851">
+                    <input type="hidden" name="form_token" value="6ec2e908ff015f2a50cb0f4bfbe167c8f3b7f4d5">
+                    <input type="hidden" name="sid" value="d69744a6b5ad06223f39de1679a06901">
+                    <input type="hidden" name="redirect" value="/user/">
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" tabindex="3" name="login" value="Login" class="btn btn-primary">Sign In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    </body>
+
+    </html>

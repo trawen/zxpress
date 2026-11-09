@@ -1,0 +1,48 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "098",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Outlet #98 editorial: final part of Megademo, upcoming Channel 5 broadcasts and TV tuning, a call for utility software, and BASIC to Tasword 2 conversion.",
+  "meta_description_ru": "Редакторская колонка Outlet #98: финал Megademo, влияние вещания Channel 5 на частоты Spectrum, призыв присылать утилиты и конвертер BASIC в Tasword 2.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "channel 5",
+      "tag_alias": "channel-5"
+    },
+    {
+      "tag_name": "tasword 2",
+      "tag_alias": "tasword-2"
+    },
+    {
+      "tag_name": "megademo",
+      "tag_alias": "megademo"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "O C T O B E R ,   1 9 9 5\n\nAs mentioned last month, we have\nPart 11 of the fantastic Mega-\ndemo in this issue which finally\ncompletes it (even though Part\n12 got ahead into Issue 95!). Do\nnot worry though - we have other\ndemos for future issues!\n\n\nChannel 5 Television should be\nstarting broadcasting next year.\nHow this will affect those of us\nwhose Spectrums are tuned to the\nsame wavelength is not clear. It\nmay only affect Spectrums that\nare plugged into a television\nvia an aerial splitter connector\n(Y connector) where an aerial is\nalso connected.\n\nAnyone who knows more about this\nmight care to write in to our\nOUTLETTERS section and share all\nyou know with the rest of us!\n\nIt is not too difficult to re-\ntune the Spectrum itself - but\nsome care is needed.More on that\nif and when it happens!\n\n\n\nWe've a decent stockpile of good\nprograms lined up for OUTLET but\nleisure software like games are\nnow tending to be greater in\nproportion so please let us have\nyour contributions - any sort of\nprograms or articles or screens\nare welcome but we do especially\nwant utilities so we can keep a\ngood balance!\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET. We\nare sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\nThere's a program to convert a\nBASIC listing into Tasword 2\nformat in this issue. This would\nbe useful where, for example,\none wanted to include part of a\nroutine in a letter etc. What\nwould also be useful is the rev-\nerse - to be able to program in\nTasword 2 and then convert it to\nBASIC! Anyone care to try?!!...\n\n                     Ron & Brian\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nO C T O B E R ,   1 9 9 5\n\nAs mentioned last month, we have Part 11 of the fantastic Mega- demo in this issue which finally completes it (even though Part 12 got ahead into Issue 95!). Do not worry though - we have other demos for future issues!\n\nChannel 5 Television should be starting broadcasting next year. How this will affect those of us whose Spectrums are tuned to the same wavelength is not clear. It may only affect Spectrums that are plugged into a television via an aerial splitter connector (Y connector) where an aerial is also connected.\n\nAnyone who knows more about this might care to write in to our OUTLETTERS section and share all you know with the rest of us!\n\nIt is not too difficult to re- tune the Spectrum itself - but some care is needed.More on that if and when it happens!\n\nWe've a decent stockpile of good programs lined up for OUTLET but leisure software like games are now tending to be greater in proportion so please let us have your contributions - any sort of programs or articles or screens are welcome but we do especially want utilities so we can keep a good balance!\n\nMay we remind readers, we cannot answer computer, software, hard- ware or system queries etc., personally by mail.  All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder!Share your problems with others! That way, everyone benefits!\n\nThere's a program to convert a BASIC listing into Tasword 2 format in this issue. This would be useful where, for example, one wanted to include part of a routine in a letter etc. What would also be useful is the rev- erse - to be able to program in Tasword 2 and then convert it to BASIC! Anyone care to try?!!...\n\nRon & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers CHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF .\n",
+  "body_ru": "## Editorial (late)\n\nО К Т Я Б Р Ь , 1 9 9 5\n\nКак упоминалось в прошлом месяце, в этом номере у нас Part 11 фантастического Megademo, которая наконец-то завершает его (хотя Part 12 и проскочила вперед в Issue 95!). Но не волнуйтесь — у нас есть и другие демоверсии для будущих выпусков!\n\nТелеканал Channel 5 Television должен начать вещание в следующем году. Как это повлияет на тех из нас, чьи Spectrum настроены на ту же длину волны, пока неясно. Возможно, это затронет только те компьютеры, которые подключены к телевизору через антенный разветвитель (Y-коннектор), куда также подключена антенна.\n\nЕсли кто-то знает об этом больше, напишите в нашу рубрику OUTLETTERS и поделитесь информацией со всеми остальными!\n\nПеренастроить сам Spectrum не так уж сложно, но здесь требуется некоторая осторожность. Подробнее об этом — если и когда это произойдет!\n\nУ нас накопился приличный запас хороших программ для OUTLET, но развлекательный софт вроде игр сейчас начинает преобладать, так что, пожалуйста, присылайте свои работы. Приветствуются любые программы, статьи или экраны, но особенно нам нужны утилиты, чтобы поддерживать хороший баланс!\n\nНапоминаем читателям: мы не можем отвечать на вопросы о компьютерах, софте, железе или системных проблемах лично по почте. Ответы на все подобные вопросы публикуются в рубрике OUTLETTERS в журнале OUTLET. Простите, что постоянно твердим об этом, но об этом действительно нужно напоминать регулярно! Делитесь своими проблемами с другими! Так польза будет для всех!\n\nВ этом номере есть программа для конвертации листинга на BASIC в формат Tasword 2. Это может пригодиться, например, если вы хотите вставить часть подпрограммы в письмо и т.д. Но было бы полезно сделать и обратное — иметь возможность программировать в Tasword 2, а затем конвертировать текст в BASIC! Есть желающие попробовать?!!...\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n```\n",
+  "text_type": 3
+}

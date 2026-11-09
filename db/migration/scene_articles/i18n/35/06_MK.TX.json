@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "35",
+  "article_id": "06_MK.TX",
+  "source_lang": "de-AT",
+  "title_en": "Mortal Kombat Demo 128",
+  "title_ru": "Mortal Kombat Demo 128",
+  "meta_description_en": "A brief note and review of Mortal Kombat Demo 128 for the ZX Spectrum from Scene+ #35.",
+  "meta_description_ru": "Краткая заметка о Mortal Kombat Demo 128 для ZX Spectrum из журнала Scene+ #35.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    },
+    {
+      "tag_name": "mortal-kombat",
+      "tag_alias": "mortal-kombat"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    }
+  ],
+  "category_ids": [
+    1,
+    2
+  ],
+  "body_de_plain": "MKDEM ü - MORTAL KOMBAT DEMO 128 - Gab es das nicht schon\neinmal? Moment mal, ich schaue mal inSCENEX nachK. Ja,\nallerdings gibt es auf dem Speccy zweiverschiedene Mortal\nKombats. In diesem Demo könnt ihr leider die Kämpfer nicht\nauswählen, esist der Scorpion als Vorgabe gespeichert und die\nTasten die manzum kämpfen benutzt, die stehen im Intro.) - Was\nthere not a MK demo some time ago?&. Looking at the Scenexyou\nwill find it, but there are two Mortal Kombat versions\nonSpeccy. In this demo you can't choose any fighter, so you\nallways fightwith Scorpion. The keys you can use are listed in\nthe intro, andnow, LET'\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### MORTAL KOMBAT DEMO 128\n\nDidn't we have this before? Wait a second, let me check in SCENEX... Yes, indeed, there are two different Mortal Kombat games on the Speccy. In this demo, you unfortunately cannot select your fighter; Scorpion is preset by default, and the control keys used for fighting are listed in the intro.\n\n*(Original English text from the magazine)*:\nWas there not a MK demo some time ago? Looking at the Scenex you will find it, but there are two Mortal Kombat versions on Speccy. In this demo you can't choose any fighter, so you always fight with Scorpion. The keys you can use are listed in the intro, and now, LET'...\n",
+  "body_ru": "### MORTAL KOMBAT DEMO 128\n\nРазве этого уже не было? Минуточку, сейчас загляну в SCENEX... Да, действительно, на Спекки существует две разные версии Mortal Kombat. В этой демо-версии, к сожалению, нельзя выбирать бойцов: по умолчанию задан Скорпион (Scorpion), а клавиши управления боем перечислены во вступительном интро.\n\n*(Оригинальный английский текст из журнала)*:\nРазве не было демо-версии MK некоторое время назад? Если посмотреть в Scenex, вы её найдёте, однако на Speccy есть две версии Mortal Kombat. В этой демо-версии нельзя выбирать бойца, поэтому вы всегда дерётесь за Скорпиона. Клавиши управления указаны в интро, а теперь — В БОЙ!...\n",
+  "text_type": 3
+}

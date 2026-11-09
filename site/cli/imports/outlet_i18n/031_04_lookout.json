@@ -1,0 +1,53 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "031",
+  "article_id": "04_lookout",
+  "title_en": "Lookout: SAM Coupé News and Optical Processors",
+  "title_ru": "Lookout: Новости SAM Coupé и оптические процессоры",
+  "meta_description_en": "Tech and magazine roundup: SAM Coupé software support from MGT and Tasman, AT&T's optical processor, and reviews of Your Sinclair, Sinclair User, and Computer Shopper.",
+  "meta_description_ru": "Новости технологий и прессы: поддержка софта для SAM Coupé от MGT и Tasman, лазерный процессор AT&T, краткий обзор Your Sinclair, Sinclair User и Computer Shopper.",
+  "authors": [
+    "Brian"
+  ],
+  "tags": [
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "mgt",
+      "tag_alias": "mgt"
+    },
+    {
+      "tag_name": "tasword",
+      "tag_alias": "tasword"
+    },
+    {
+      "tag_name": "your sinclair",
+      "tag_alias": "your-sinclair"
+    },
+    {
+      "tag_name": "sinclair user",
+      "tag_alias": "sinclair-user"
+    },
+    {
+      "tag_name": "computer shopper",
+      "tag_alias": "computer-shopper"
+    },
+    {
+      "tag_name": "microdrive",
+      "tag_alias": "microdrive"
+    }
+  ],
+  "category_ids": [
+    131,
+    102,
+    124
+  ],
+  "body_en_plain": "The huge OUTLETTERS and SAM info\nleaves us little room here but\nthere is not that much to report\nanyway! MGT claim 24 software\nproducers are committed to the\nSAM already (Mostly games\ndevelopers but without the user\nbase created by entertainment\nsoftware SAM may fade taking the\nmore \"serious\" stuff with it!).\n\nOn the same subject, MGT are now\noffering SAMs at `50 less to all\n(genuine) software producers and\nthe like!\n\nTasman are one of the few who\nare to produce useful software\nand have already launched an\ninterim version of their Tasword\n2. Call them on 0532 43801. I'm\nnot sure what good a word pro-\ncessor is when a printer inter-\nface is still not available (at\nthe time of writing this).\n\nThe only other general news is\nthat AT&T in the U.S. now have\na simple prototype computer\noperating using an optical laser\nprocessor. Optical computers may\nwell be THE computers at the end\nof this decade as they run at\n1000 times the speed of present\ncomputers which are limited by\nthe speed of electricity in the\nsilicon chip.\n\nYOUR SINCLAIR has listings for a\nmemory mapper; a BASIC scroller;\na fast block printer and a sound\nto light display.\n\nSINCLAIR USER has only a problem\npage of interest and we may well\ndrop it from this section if it\ndoes not re-instate at least a\npage of something remotely to do\nwith computing.\n\nCOMPUTER SHOPPER looks at the\nCHAOS theory, reviews SAM (but,\nlike most of the media, ignore\nits faults)and have an interest-\ning report on m/drive cartridges\nin which they say production may\nrestart if Sinclair Research,who\nhave 500,000 cases, can find a\nnew tape supplier!\n                        - Brian.\n",
+  "body_ru_plain": "Огромный раздел OUTLETTERS и\nматериалы о SAM почти не оста-\nвили нам здесь места, но сооб-\nщать особо и нечего! MGT утвер-\nждает, что уже 24 производителя\nПО взялись за SAM (в основном\nразработчики игр, но ведь без\nпользовательской базы, создан-\nной развлекательным софтом,\nSAM может угаснуть, утянув за\nсобой и более «серьёзные» вещи!).\n\nПо той же теме: MGT теперь пред-\nлагает SAM на `50 дешевле для\nвсех (настоящих) создателей ПО\nи им подобных!\n\nTasman — одни из немногих, кто\nсобирается выпускать полезный\nсофт, и они уже выпустили про-\nмежуточную версию своего\nTasword 2. Звоните им по номеру\n0532 43801. Правда, я не уверен,\nкакой прок от текстового редак-\nтора, когда интерфейс для прин-\nтера всё ещё недоступен (на мо-\nмент написания этих строк).\n\nЕдинственная другая общая новость:\nAT&T в США создали простой про-\nтотип компьютера, работающий на\nоптическом лазерном процессоре.\nОптические компьютеры вполне мо-\nгут стать ТЕМИ САМЫМИ компьюте-\nрами к концу этого десятилетия,\nведь они работают в 1000 раз\nбыстрее нынешних машин, ско-\nрость которых ограничена скоро-\nстью электричества в кремниевом\nчипе.\n\nВ YOUR SINCLAIR есть листинги\nдля анализатора распределения\nпамяти (memory mapper), скрол-\nлера на BASIC, быстрой блочной\nпечати и цветомузыки (sound to\nlight display).\n\nВ SINCLAIR USER интерес пред-\nставляет лишь страница ответов\nна проблемы читателей, и мы\nвполне можем выкинуть журнал из\nэтого обзора, если они не вер-\nнут хотя бы страницу чего-то,\nхоть отдалённо связанного с ком-\nпьютерами.\n\nCOMPUTER SHOPPER изучает теорию\nCHAOS, обозревает SAM (но, как\nи большинство изданий, закры-\nвает глаза на его недостатки) и\nпубликует любопытный отчёт о\nкартриджах для m/drive, где\nговорится, что производство мо-\nжет возобновиться, если Sinclair\nResearch, имеющая 500 000 кор-\nпусов, сможет найти нового по-\nставщика магнитной ленты!\n                        - Brian.\n",
+  "body_en": "## Lookout\n\nThe huge OUTLETTERS and SAM info leaves us little room here but there is not that much to report anyway! MGT claim 24 software producers are committed to the SAM already (Mostly games developers but without the user base created by entertainment software SAM may fade taking the more \"serious\" stuff with it!).\n\nOn the same subject, MGT are now offering SAMs at £50 less to all (genuine) software producers and the like!\n\nTasman are one of the few who are to produce useful software and have already launched an interim version of their Tasword 2. Call them on 0532 43801. I'm not sure what good a word processor is when a printer interface is still not available (at the time of writing this).\n\nThe only other general news is that AT&T in the U.S. now have a simple prototype computer operating using an optical laser processor. Optical computers may well be THE computers at the end of this decade as they run at 1000 times the speed of present computers which are limited by the speed of electricity in the silicon chip.\n\nYOUR SINCLAIR has listings for a memory mapper; a BASIC scroller; a fast block printer and a sound to light display.\n\nSINCLAIR USER has only a problem page of interest and we may well drop it from this section if it does not re-instate at least a page of something remotely to do with computing.\n\nCOMPUTER SHOPPER looks at the CHAOS theory, reviews SAM (but, like most of the media, ignore its faults) and have an interesting report on m/drive cartridges in which they say production may restart if Sinclair Research, who have 500,000 cases, can find a new tape supplier!\n\n— Brian.\n",
+  "body_ru": "## Lookout: Новости SAM Coupé и оптические процессоры\n\nОгромный раздел OUTLETTERS и материалы о SAM почти не оставили нам здесь места, но сообщать особо и нечего! MGT утверждает, что уже 24 производителя ПО взялись за SAM (в основном разработчики игр, но ведь без пользовательской базы, созданной развлекательным софтом, SAM может угаснуть, утянув за собой и более «серьёзные» вещи!).\n\nПо той же теме: MGT теперь предлагает SAM на £50 дешевле для всех (настоящих) создателей ПО и им подобных!\n\nTasman — одни из немногих, кто собирается выпускать полезный софт, и они уже выпустили промежуточную версию своего Tasword 2. Звоните им по номеру 0532 43801. Правда, я не уверен, какой прок от текстового редактора, когда интерфейс для принтера всё ещё недоступен (на момент написания этих строк).\n\nЕдинственная другая общая новость: AT&T в США создали простой прототип компьютера, работающий на оптическом лазерном процессоре. Оптические компьютеры вполне могут стать ТЕМИ САМЫМИ компьютерами к концу этого десятилетия, ведь они работают в 1000 раз быстрее нынешних машин, скорость которых ограничена скоростью электричества в кремниевом чипе.\n\nВ YOUR SINCLAIR есть листинги для анализатора распределения памяти (memory mapper), скроллера на BASIC, быстрой блочной печати и цветомузыки (sound to light display).\n\nВ SINCLAIR USER интерес представляет лишь страница ответов на проблемы читателей, и мы вполне можем выкинуть журнал из этого обзора, если они не вернут хотя бы страницу чего-то, хоть отдалённо связанного с компьютерами.\n\nCOMPUTER SHOPPER изучает теорию CHAOS, обозревает SAM (но, как и большинство изданий, закрывает глаза на его недостатки) и публикует любопытный отчёт о картриджах для m/drive, где говорится, что производство может возобновиться, если Sinclair Research, имеющая 500 000 корпусов, сможет найти нового поставщика магнитной ленты!\n\n— Brian.\n",
+  "text_type": 3
+}

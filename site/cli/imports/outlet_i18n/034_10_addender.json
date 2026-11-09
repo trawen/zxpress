@@ -1,0 +1,47 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "034",
+  "article_id": "10_addender",
+  "title_en": "Addender",
+  "title_ru": "Рубрика Addender",
+  "meta_description_en": "Introduction to the Add-Enders section in Outlet #034 for miscellaneous contributions. Details on TEDSTAS by Ted Payne — a disk-modified Tasword 2 for ZX Spectrum +3.",
+  "meta_description_ru": "Анонс рубрики Add-Enders в Outlet #034: публикация накопившихся утилит и материалов. Описание TEDSTAS от Ted Payne — адаптации Tasword 2 для диска на ZX Spectrum +3.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "add-enders",
+      "tag_alias": "add-enders"
+    },
+    {
+      "tag_name": "tedstas",
+      "tag_alias": "tedstas"
+    },
+    {
+      "tag_name": "tasword 2",
+      "tag_alias": "tasword-2"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus3"
+    },
+    {
+      "tag_name": "текстовые редакторы",
+      "tag_alias": "tekstovye-redaktory"
+    }
+  ],
+  "category_ids": [
+    123,
+    64,
+    47
+  ],
+  "body_en_plain": "Some items contributed to OUTLET\nhave not yet been included for a\nvariety of reasons. It's a shame\nto leave them on the shelf so,if\nappropriate, they will be added\nto this ADD-ENDERS area of the\nmagazine (not microdrive or Opus\nas there is not enough room).\n\nThe material covers a wide range\nof quality and program types:\nutilities, screens, character\nsets and text articles and SOME\nof it may be unedited, untested,\nnot working fully or properly;\nin need of conversion for your\n\nsystem's syntax or printer etc.;\nwithout full instructions or\nwhatever. Readers will have to\nsift through to see if there is\nanything of interest they can\nmake use of and discard the\nrest. Not everything will appear\non all versions necessarily.\n\nSome Add-Enders may be linked to\nOUTLET in the normal way. These\nwill usually precede this text\nfile. Any items that follow this\narticle will possibly need to be\nLOADed manually or may not auto-\nrun when loaded.\n\nThere may be some info on the\nfollowing pages...\n\nThe next item after this article\nis the only unlinked item this\nmonth:- 'TEDSTAS'. It's Ted\nPayne's modified Tasword 2 BASIC\nand enables disk operation and\nadds '.let' to filenames. It\nonly shows such names in a CAT.\n\nThe BASIC may be complete or may\nneed to be MERGEd into Tasword 2\nBASIC - I'm not sure.\n\nThere is also some extra code:-\n'tedstas#' 55360,2303 to load in\nthe Tasword code. The Tasword\nhelp pages will THEN show the +3\nkeys.\n\nThe BASIC will NOT auto-run and\nyou MUST have the original\nTasword 2 code to use with it..\n",
+  "body_ru_plain": "Некоторые материалы, присланные\nв OUTLET, ещё не были включены\nпо разным причинам. Жаль остав-\nлять их на полке, поэтому, если\nуместно, они будут добавлены\nв этот раздел ADD-ENDERS нашего\nжурнала (не на microdrive или\nOpus, так как не хватает места).\n\nМатериалы охватывают широкий\nспектр качества и типов программ:\nутилиты, экраны, наборы шрифтов\nи текстовые статьи, и ЧАСТЬ из\nних может быть неотредактирована,\nне проверена, работать не вполне\nкорректно или не до конца;\nнуждаться в переделке под син-\n\nтаксис вашей системы, принтер\nи т.д.; быть без полных инструк-\nций и тому подобное. Читателям\nпридётся покопаться, чтобы по-\nсмотреть, есть ли что-то инте-\nресное, что можно использовать,\nа остальное отбросить. Далеко не\nвсё появится во всех версиях.\n\nНекоторые Add-Enders могут быть\nпривязаны к OUTLET обычным спо-\nсобом. Обычно они предшествуют\nэтому текстовому файлу. Всё, что\nидёт после этой статьи, возмож-\nно, придётся загружать вручную\nчерез LOAD, либо оно не будет\nавтозапускаться при загрузке.\n\nНа следующих страницах может\nбыть какая-то информация...\n\nСледующий пункт за этой статьёй\n— единственный непривязанный\nв этом месяце: 'TEDSTAS'. Это\nмодифицированный Ted Payne BASIC\nTasword 2; он включает работу с\nдиском и добавляет расширение\n'.let' к именам файлов. По ко-\nманде CAT выводятся только они.\n\nЭтот BASIC может быть полным, а\nможет требовать объединения\nчерез MERGE с BASIC Tasword 2 —\nя не уверен точно.\n\nЕсть ещё дополнительный код:\n'tedstas#' 55360,2303 для загруз-\nки в код Tasword. Страницы по-\nмощи Tasword ТОГДА покажут\nклавиши для +3.\n\nЭтот BASIC НЕ запустится автома-\nтически, и у вас ОБЯЗАТЕЛЬНО\nдолжен быть оригинальный код\nTasword 2 для его работы..\n",
+  "body_en": "## Addender\n\nSome items contributed to OUTLET have not yet been included for a variety of reasons. It's a shame to leave them on the shelf so, if appropriate, they will be added to this ADD-ENDERS area of the magazine (not microdrive or Opus as there is not enough room).\n\nThe material covers a wide range of quality and program types: utilities, screens, character sets and text articles and SOME of it may be unedited, untested, not working fully or properly; in need of conversion for your system's syntax or printer etc.; without full instructions or whatever. Readers will have to sift through to see if there is anything of interest they can make use of and discard the rest. Not everything will appear on all versions necessarily.\n\nSome Add-Enders may be linked to OUTLET in the normal way. These will usually precede this text file. Any items that follow this article will possibly need to be LOADed manually or may not auto-run when loaded.\n\nThere may be some info on the following pages...\n\nThe next item after this article is the only unlinked item this month: — 'TEDSTAS'. It's Ted Payne's modified Tasword 2 BASIC and enables disk operation and adds '.let' to filenames. It only shows such names in a CAT.\n\nThe BASIC may be complete or may need to be MERGEd into Tasword 2 BASIC — I'm not sure.\n\nThere is also some extra code: — 'tedstas#' 55360,2303 to load in the Tasword code. The Tasword help pages will THEN show the +3 keys.\n\nThe BASIC will NOT auto-run and you MUST have the original Tasword 2 code to use with it..\n",
+  "body_ru": "## Addender\n\nНекоторые материалы, присланные в OUTLET, ещё не были включены по разным причинам. Жаль оставлять их на полке, поэтому, если уместно, они будут добавлены в этот раздел ADD-ENDERS нашего журнала (не на microdrive или Opus, так как не хватает места).\n\nМатериалы охватывают широкий спектр качества и типов программ: утилиты, экраны, наборы шрифтов и текстовые статьи, и ЧАСТЬ из них может быть неотредактирована, не проверена, работать не вполне корректно или не до конца; нуждаться в переделке под синтаксис вашей системы, принтер и т.д.; быть без полных инструкций и тому подобное. Читателям придётся покопаться, чтобы посмотреть, есть ли что-то интересное, что можно использовать, а остальное отбросить. Далеко не всё появится во всех версиях.\n\nНекоторые Add-Enders могут быть привязаны к OUTLET обычным способом. Обычно они предшествуют этому текстовому файлу. Всё, что идёт после этой статьи, возможно, придётся загружать вручную через LOAD, либо оно не будет автозапускаться при загрузке.\n\nНа следующих страницах может быть какая-то информация...\n\n---\n\nСледующий пункт за этой статьёй — единственный непривязанный в этом месяце: **'TEDSTAS'**. Это модифицированный Ted Payne BASIC Tasword 2; он включает работу с диском и добавляет расширение `.let` к именам файлов. По команде CAT выводятся только они.\n\nЭтот BASIC может быть полным, а может требовать объединения через MERGE с BASIC Tasword 2 — я не уверен точно.\n\nЕсть ещё дополнительный код: `'tedstas#' 55360,2303` для загрузки в код Tasword. Страницы помощи Tasword ТОГДА покажут клавиши для +3.\n\nЭтот BASIC НЕ запустится автоматически, и у вас ОБЯЗАТЕЛЬНО должен быть оригинальный код Tasword 2 для его работы...\n",
+  "text_type": 3
+}

@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "114",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead: Outlet March Preview",
+  "title_ru": "Анонс: В следующем выпуске Outlet",
+  "meta_description_en": "Chris Cowley previews the upcoming March issue of Outlet, featuring Graphic Adventure Creator (GAC), Zoo Hero, +3 drive belt guide, and more.",
+  "meta_description_ru": "Крис Коули анонсирует мартовский номер журнала Outlet: Graphic Adventure Creator (GAC), игра Zoo Hero, замена пассика в +3 и многое другое.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "gac",
+      "tag_alias": "gac"
+    },
+    {
+      "tag_name": "zoo hero",
+      "tag_alias": "zoo-hero"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus3"
+    }
+  ],
+  "category_ids": [
+    123,
+    119
+  ],
+  "body_en_plain": "Have you ever thought of produc-\ning your own adventure game? A\nreal good one with options in\nall directions, lots of action,\nwith pictures to enhance the\nscene, and so many objects to\npick up that one cannot carry\nany more when it comes to coll-\nect the crucial sword to slay\nthe Dragon, or the key to enter\nthe treasure vault??  Phew! The\nweeks required to code all that\nlot might put you off a bit, but\ndon't despair, help is at hand\n\nin next month's OUTLET in the\nshape of \"GAC\" the Graphic Adv-\nenture Creator. Brian Cavers has\ntried it out and found it quite\neasy to use, and to prove it,has\nused it to create a short adv-\nenture, \"ZOO HERO\" (also in next\nmonth's issue). Enjoy playing\nZOO HERO and then I'll bet that\nsomebody out there will have a\nbright idea and sit down and\nproduce a full-length, full-bod-\nied, full-blooded,full-of-every-\nthing ADVENTURE!! ?\n\nThere are even a few, well quite\na lot really, other interesting\nitems in the March issue includ-\ning a utility to extend your\nBeeper (Pardon? But all is expl-\nained).\n\nIn addition there is a utility\nto put a cat in a string (see\nprevious bracketted remark);\ntechnical instructions on fitt-\ning a +3 drive belt; a utility\nto calculate your next gas bill\nor check a previous one; an\nOUTCLASS which explores'Waitkey'\nroutines in machine code; and\nfinally after many other bits\nand bobs, there is an indispens-\nible guide for anyone planning\nto visit Jurassic Park, giving\nintimate details of numerous\ntypes of Dinosaur.Now then,could\nTHAT be an idea for a graphic\nadventure?\n              Cheers,\n\n                  Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Have you ever thought of producing your own adventure game? A real good one with options in all directions, lots of action, with pictures to enhance the scene, and so many objects to pick up that one cannot carry any more when it comes to collect the crucial sword to slay the Dragon, or the key to enter the treasure vault?? Phew! The weeks required to code all that lot might put you off a bit, but don't despair, help is at hand in next month's OUTLET in the shape of \"GAC\" the Graphic Adventure Creator.\n\nBrian Cavers has tried it out and found it quite easy to use, and to prove it, has used it to create a short adventure, \"ZOO HERO\" (also in next month's issue). Enjoy playing ZOO HERO and then I'll bet that somebody out there will have a bright idea and sit down and produce a full-length, full-bodied, full-blooded, full-of-everything ADVENTURE!! ?\n\nThere are even a few, well quite a lot really, other interesting items in the March issue including a utility to extend your Beeper (Pardon? But all is explained).\n\nIn addition there is a utility to put a cat in a string (see previous bracketted remark); technical instructions on fitting a +3 drive belt; a utility to calculate your next gas bill or check a previous one; an OUTCLASS which explores 'Waitkey' routines in machine code; and finally after many other bits and bobs, there is an indispensible guide for anyone planning to visit Jurassic Park, giving intimate details of numerous types of Dinosaur. Now then, could THAT be an idea for a graphic adventure?\n\nCheers,\n\nChris.\n",
+  "body_ru": "Задумывались ли вы когда-нибудь о создании собственной приключенческой игры? По-настоящему классной — с путями во все стороны, динамичным сюжетом, иллюстрациями для атмосферы и таким количеством предметов, что их просто невозможно унести, когда приходит пора брать тот самый меч, чтобы сразить Дракона, или ключ от сокровищницы?! Уф! Недели, которые уйдут на кодинг всего этого добра, могут кого угодно отпугнуть. Но не отчаивайтесь: помощь уже близко!\n\nВ мартовском номере OUTLET вас ждет «GAC» — Graphic Adventure Creator. Brian Cavers опробовал его и счел весьма простым в освоении. В качестве доказательства он создал небольшую адвентюру «ZOO HERO» (она также выйдет в следующем номере). Сыграйте в ZOO HERO — и я готов поспорить, что у кого-нибудь из вас появится блестящая идея, вы сядете и напишете полноценную, проработанную, насыщенную всем на свете ПРИКЛЮЧЕНЧЕСКУЮ ИГРУ!!\n\nКроме того, в мартовском выпуске будет еще немало интересного, в том числе утилита для «удлинения» бипера (что-что? Спокойно, там всё объяснено).\n\nА еще: утилита, чтобы «засунуть кота в строку» (см. предыдущее замечание в скобках); техническое руководство по замене пассика дисковода на ZX Spectrum +3; программка для расчета счета за газ; выпуск OUTCLASS с разбором подпрограмм ожидания нажатия клавиш ('Waitkey') в машинных кодах; и, наконец, среди прочих полезных мелочей — незаменимый путеводитель для всех, кто собрался в «Парк Юрского периода», с подробнейшими описаниями множества видов динозавров. Ну что, разве это не готовая идея для графической адвентюры?\n\nУдачи,\n\nChris.\n",
+  "text_type": 3
+}

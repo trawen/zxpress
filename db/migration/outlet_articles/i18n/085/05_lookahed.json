@@ -1,0 +1,39 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "085",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of what's coming up in the October issue of Outlet magazine (Issue #86): utilities, demos, +3 internals, and more.",
+  "meta_description_ru": "Анонс октябрьского выпуска журнала Outlet (#86): новые утилиты, демо, секреты Spectrum +3 и защита от сброса.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "announcement",
+      "tag_alias": "announcement"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "I was tempted to say that \"Next\nmonth's mixture will be much the\nsame again\", but that could give\na false impression of dullness,\nand your wonderful contributions\ncan never be accused of that.\nFrom sparkling little gems of\nutilities to deep probing\ntechnical treatise on the inner\nworkings of the computer, there\nis sure to be something to\ninterest everyone...\n\nAmong the utilities next month\nis one which does something\nwhich was thought to be\nimpossible, which is to change\nmodes from within a running\nprogram from 128k mode to 48k\nmode, AND BACK AGAIN! Another\nutility allows you to copy an\nOpus disc straight to +D, and\nanother prints out your text in\nbooklet form. You are invited\n\"OUT TO T\" again, as the routine\nfrom OUTLET #22 is upgraded.\nThere's music, a new pattern\nmaker, a crossword, at least one\namazing Demo, info about things\nthat lurk in the +3 (and\nprobably go bump in the night),\ninstructions on ways to prevent\nSnap-ers, and much, much more.\nAll in your October OUTLET.\n                        Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "I was tempted to say that \"Next month's mixture will be much the same again\", but that could give a false impression of dullness, and your wonderful contributions can never be accused of that. From sparkling little gems of utilities to deep probing technical treatise on the inner workings of the computer, there is sure to be something to interest everyone...\n\nAmong the utilities next month is one which does something which was thought to be impossible, which is to change modes from within a running program from 128k mode to 48k mode, AND BACK AGAIN! Another utility allows you to copy an Opus disc straight to +D, and another prints out your text in booklet form. You are invited \"OUT TO T\" again, as the routine from OUTLET #22 is upgraded. There's music, a new pattern maker, a crossword, at least one amazing Demo, info about things that lurk in the +3 (and probably go bump in the night), instructions on ways to prevent Snap-ers, and much, much more. All in your October OUTLET.\n\nChris.\n",
+  "body_ru": "У меня было искушение сказать, что «в следующем месяце вас ждет примерно то же самое», но это могло бы создать ложное впечатление скуки, в которой ваши замечательные работы уж точно нельзя упрекнуть. От сверкающих жемчужин среди утилит до глубоких технических исследований внутреннего устройства компьютера — здесь наверняка найдется что-то интересное для каждого...\n\nСреди утилит следующего номера появится программа, делающая то, что считалось невозможным: переключение прямо из работающей программы из режима 128k в режим 48k И ОБРАТНО! Еще одна утилита позволит вам копировать диски Opus напрямую на +D, а третья распечатает ваш текст в виде буклета. Вас снова приглашают «OUT TO T» — процедура из OUTLET #22 получила обновление. Будет музыка, новый редактор узоров, кроссворд, как минимум одно потрясающее демо, информация о тайнах, скрывающихся внутри +3 (и, вероятно, пугающих по ночам), инструкции по защите от снятия дампов (снапшотов) и многое, многое другое. Всё это — в октябрьском выпуске OUTLET.\n\nChris.\n",
+  "text_type": 3
+}

@@ -1,0 +1,48 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "31",
+  "article_id": "07_CIRCLE.TX",
+  "source_lang": "de-AT",
+  "title_en": "Circlelusions",
+  "title_ru": "Circlelusions",
+  "meta_description_en": "A brief mini-review of the demo Circlelusions by Speccy Boyz from Scene+ magazine.",
+  "meta_description_ru": "Краткая заметка-обзор о демо Circlelusions от группы Speccy Boyz из журнала Scene+.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "speccy-boyz",
+      "tag_alias": "speccy-boyz"
+    },
+    {
+      "tag_name": "circlelusions",
+      "tag_alias": "circlelusions"
+    },
+    {
+      "tag_name": "demoscene",
+      "tag_alias": "demoscene"
+    },
+    {
+      "tag_name": "demo",
+      "tag_alias": "demo"
+    }
+  ],
+  "category_ids": [
+    93,
+    94
+  ],
+  "body_de_plain": "CLUSIONS ü - CIRCLELUSIONS- Deutsch - Speccy Boyz sind zurück\nmit ihren vielleicht letzten Demo, unddieses ist wirklich\nfabelhaft. Was man so alles aus Kreisen somachen kannm!?! -\nEnglish - Speccy Boyz are back with their probaly last demo, a\ngenial demowith lot of examples what you can do with just a few\ncircles. I hope SB will code more such damn good\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### Circlelusions\n\n**German:** Speccy Boyz are back with what might be their last demo, and it is truly fabulous. Look at all the things you can do with circles!\n\n**English:** Speccy Boyz are back with their probably last demo, a brilliant demo with lots of examples of what you can do with just a few circles. I hope SB will code more such damn good demos!\n",
+  "body_ru": "### Circlelusions\n\n**Немецкий:** Speccy Boyz вернулись со своим, возможно, последним демо, и оно действительно великолепно. Чего только нельзя сотворить из одних лишь окружностей!\n\n**Английский:** Speccy Boyz вернулись со своим, вероятно, последним демо — гениальной работой с множеством примеров того, что можно сделать всего лишь с помощью нескольких кругов. Надеюсь, SB напишут ещё больше таких чертовски крутых демо!\n",
+  "text_type": 3
+}

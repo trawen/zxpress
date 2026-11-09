@@ -1,0 +1,45 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "33",
+  "article_id": "09_KRTEK.TX",
+  "source_lang": "de-AT",
+  "title_en": "Krtek a autíčko",
+  "title_ru": "Krtek a autíčko",
+  "meta_description_en": "Brief overview of the ZX Spectrum game Krtek a autíčko, based on the popular Czech cartoon about the Little Mole, featured in Scene+ #33.",
+  "meta_description_ru": "Краткий обзор игры Krtek a autíčko для ZX Spectrum по мотивам популярного чешского мультфильма о Кротике из журнала Scene+ #33.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "krtek",
+      "tag_alias": "krtek"
+    },
+    {
+      "tag_name": "game-review",
+      "tag_alias": "game-review"
+    },
+    {
+      "tag_name": "czech",
+      "tag_alias": "czech"
+    }
+  ],
+  "category_ids": [
+    1,
+    2,
+    3
+  ],
+  "body_de_plain": "KRTE ü - KRTEK A AUTICKO (MAULWURF UND EIN AUTO)' - Dieses Spiel\nbasiert auf einer im Osten sehr populären Zeichen=trickserie.\nIhr müßt bei dem Spiel nur die auf dem Lastwagenbefindenden\n\"Tetris\"-Steine in die richtige Form bringen. Dazuwerden andere\nSteine von Platformen runtergeworfen, zertrampelt (pro Apfel\nkann ein Stein zertrampelt werden) und es darf auchnoch\ngeschoßen werden wenn Munition aufgesammelt werden. Die\nSteuerung ist frei wählbar. - This game is based on a very\npopular eastern cartoon. You mustcomplete the \"Tetris\"-like\nshapes on the truck to finish everylevel. You can push the\nshapes out of platforms and destroyblocks (this action will cost\na apple) and you can collect ammoto shoot nasties. Controls are\nde\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**KRTEK A AUTÍČKO (The Little Mole and the Car)** — This game is based on an animated series that is very popular in Eastern Europe.\n\nAll you have to do in this game is arrange the \"Tetris\" blocks on the truck into the correct shape. To achieve this, other blocks can be pushed off platforms or trampled (you can trample one block per collected apple), and you can also shoot if you collect ammunition. The controls are fully redefinable.\n\n*(Original English summary from the magazine:)*\nThis game is based on a very popular eastern cartoon. You must complete the \"Tetris\"-like shapes on the truck to finish every level. You can push the shapes off platforms and destroy blocks (this action costs an apple), and you can collect ammo to shoot nasties. Controls are definable.\n",
+  "body_ru": "**KRTEK A AUTÍČKO («Кротик и машинка»)** — Эта игра создана по мотивам очень популярного в странах Восточной Европы мультипликационного сериала.\n\nВсё, что вам нужно делать в этой игре — это сложить расположенные на грузовике блоки наподобие «Тетриса» в правильную форму. Для этого другие блоки можно сбрасывать с платформ, растаптывать (за каждое съеденное яблоко можно растоптать один блок), а также расстреливать врагов, если собрать патроны. Управление можно настроить по своему усмотрению.\n\n*(Оригинальная англоязычная заметка из журнала:)*\nThis game is based on a very popular eastern cartoon. You must complete the \"Tetris\"-like shapes on the truck to finish every level. You can push the shapes out of platforms and destroy blocks (this action will cost a apple) and you can collect ammo to shoot nasties. Controls are de[finable].\n",
+  "text_type": 3
+}

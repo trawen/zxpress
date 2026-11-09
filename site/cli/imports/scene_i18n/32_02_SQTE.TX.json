@@ -1,0 +1,49 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "32",
+  "article_id": "02_SQTE.TX",
+  "source_lang": "de-AT",
+  "title_en": "SQ-Tracker",
+  "title_ru": "SQ-Tracker",
+  "meta_description_en": "A brief overview of SQ-Tracker for the ZX Spectrum with AY chip, highlighting its independent pattern assignment per channel and superior sound capabilities.",
+  "meta_description_ru": "Краткое представление музыкального редактора SQ-Tracker для ZX Spectrum с AY-чипом: независимое назначение паттернов по каналам и улучшенные возможности звука.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "sq-tracker",
+      "tag_alias": "sq-tracker"
+    },
+    {
+      "tag_name": "ay-3-8912",
+      "tag_alias": "ay-3-8912"
+    },
+    {
+      "tag_name": "music-editor",
+      "tag_alias": "music-editor"
+    },
+    {
+      "tag_name": "soundtracker",
+      "tag_alias": "soundtracker"
+    }
+  ],
+  "category_ids": [
+    68,
+    34,
+    64
+  ],
+  "body_de_plain": "SQT ü - SQ-Tracker (AY Chip wird benötigt)\" - Nach dem\nSoundtracker kommt nun der SQ Tracker, die vorteileliegen bei\nden verbeserten Soundmöglichkeiten und bei der Zuweisung der\nPatterns, jeder einyelne Soundkanal kann einzelnzugewiesen\nwerden, dadurch spart man Platz. Man kann z. B. einen Kanal nur\nfür die Beats zuweisen, während alle anderen Kanäledie restliche\nMusik abspielen. Auf der Disk befindet sich auchein Stück das\nmit SQ Tracker geschrieben wurde und sich durchdie Qualität\nhervorhebt. Ich glaube daß Thomas euch die genauere Erklärung\nzum Programm geben kamm.\" Der dazu passende Compiler wird in der\nnächten Ausgabenachgeliefert. - After the sucsess of\nSoundtracker, here comes the SQ-Tracker andit features more\npossibilites of editing than any other tracker, example: every\nsingle channel can be set to any patternindividualy. I have also\nincluded the Axel F. song on the discand there is more to come.\nNearly all new songs are written inthis new format, so I hope,\nThomas will bring you theinstruction to this excellent\nprogramm. The Compiler will follow in the next is\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**SQ-Tracker (AY Chip Required)**\n\nFollowing Soundtracker comes SQ-Tracker. Its key advantages lie in enhanced sound capabilities and flexible pattern assignment: each individual sound channel can be assigned separately, saving memory. For example, one channel can be dedicated solely to beats while the other channels play the rest of the music. Included on the disk is a track created in SQ-Tracker that stands out for its high quality. I believe Thomas will provide you with a more detailed explanation of the program soon. The matching compiler will be supplied in the next issue.\n\n* * *\n\n*(Editor's English note:)*\nAfter the success of Soundtracker, here comes the SQ-Tracker, and it features more possibilities of editing than any other tracker. For example: every single channel can be set to any pattern individually. I have also included the Axel F. song on the disk and there is more to come. Nearly all new songs are written in this new format, so I hope Thomas will bring you the instructions for this excellent program. The compiler will follow in the next issue.\n",
+  "body_ru": "**SQ-Tracker (требуется чип AY)**\n\nВслед за Soundtracker появляется SQ-Tracker. Его главные преимущества заключаются в расширенных возможностях звучания и гибком назначении паттернов: каждый отдельный звуковой канал можно назначать независимо, что существенно экономит память. Например, один канал можно выделить исключительно под ударные, в то время как остальные каналы играют основную мелодию. На диске также записан трек, созданный в SQ-Tracker, который выделяется своим высоким качеством. Надеюсь, Томас подготовит для вас подробное руководство по работе с этой программой. Соответствующий компилятор будет представлен в следующем выпуске.\n\n* * *\n\n*(Оригинальная английская заметка редакции:)*\nПосле успеха Soundtracker встречайте SQ-Tracker — он предлагает гораздо больше возможностей редактирования, чем любой другой трекер. Например, каждый канал можно индивидуально настроить на любой паттерн. Я также добавил на диск композицию «Axel F.», и впереди будет ещё больше музыки. Практически все новые треки сейчас пишутся в этом новом формате, поэтому я надеюсь, что Томас подготовит инструкции к этой замечательной программе. Компилятор появится в следующем номере.\n",
+  "text_type": 3
+}

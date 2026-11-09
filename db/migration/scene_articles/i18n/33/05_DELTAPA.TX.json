@@ -1,0 +1,49 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "33",
+  "article_id": "05_DELTAPA.TX",
+  "source_lang": "de-AT",
+  "title_en": "Delta Packer-Pack",
+  "title_ru": "Delta Packer-Pack",
+  "meta_description_en": "A brief overview of Delta Packer-Pack, a utility suite for creating delta animations on the ZX Spectrum, featured in Scene+ #33.",
+  "meta_description_ru": "Краткое описание набора утилит Delta Packer-Pack для создания дельта-анимаций на ZX Spectrum из журнала Scene+ #33.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "delta-packer",
+      "tag_alias": "delta-packer"
+    },
+    {
+      "tag_name": "animation",
+      "tag_alias": "animation"
+    },
+    {
+      "tag_name": "graphics",
+      "tag_alias": "graphics"
+    },
+    {
+      "tag_name": "demoscene",
+      "tag_alias": "demoscene"
+    }
+  ],
+  "category_ids": [
+    64,
+    45,
+    35
+  ],
+  "body_de_plain": "DELDEM1. X ü - DELTA PACKER-PACK - Ein Set aus mehreren\nProgrammen zum erstellen von DeltaAnimationen, bestehend aus\neinem Basic-Programm zum erstelleneines MC-Players (das von\njeder Adresse gehen kann), Batchloader zum einladen mehrerer\nScreens zu einer Sequenz, undeinigen Demos. Nicht alle Programme\nkönnen von Hauptmenü ausgestartet werden. Da es relativ\nprimitive Programme sind, gibtes auch keine Menüs und alle\nEinstellungen müssen innerhalb desBasic-programmteiles\ndurchgeführt werden.. - A set of some programms to create delta\nanimations, contains ofa Basic programm to poke a MC-Player\nroutine (running from everyadress), a batch loader for loading\nscreens and join them to aanimation, and some action demos. Not\nall programms can bestarted from the main menu. Because all\nthese are a bitprimitive, there will be no menus and all setings\nmust be doneinside the Basic\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### DELDEM1.X — DELTA PACKER-PACK\n\nA suite of several programs for creating delta animations. It consists of a BASIC program to generate a machine code player routine (which can run from any memory address), a batch loader to load multiple screens into a sequence, and several demo files.\n\nNot all programs can be launched directly from the main menu. Because these tools are relatively primitive, they do not feature dedicated menu interfaces; all configuration and settings must be adjusted directly inside the BASIC program code.\n",
+  "body_ru": "### DELDEM1.X — DELTA PACKER-PACK\n\nНабор из нескольких программ для создания дельта-анимаций. В него входят: бейсик-программа для генерации плеера в машинных кодах (способного работать с любого адреса памяти), пакетный загрузчик для объединения нескольких экранов в единую анимационную последовательность, а также несколько демок.\n\nНе все программы пакета можно запустить из главного меню. Поскольку утилиты довольно простые, в них нет собственного меню настроек — все необходимые параметры требуется задавать непосредственно внутри кода на Бейсике.\n",
+  "text_type": 3
+}

@@ -1,0 +1,48 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "30",
+  "article_id": "08_IU.TX",
+  "source_lang": "de-AT",
+  "title_en": "Inner Universe Demo",
+  "title_ru": "Inner Universe Demo",
+  "meta_description_en": "A brief note from Scene+ #30 explaining why the Inner Universe demo was included on the disk as a replacement for the Walker game preview.",
+  "meta_description_ru": "Короткая заметка из Scene+ #30 с пояснением, почему демо Inner Universe заменило на диске превью игры Walker.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "inner-universe",
+      "tag_alias": "inner-universe"
+    },
+    {
+      "tag_name": "walker",
+      "tag_alias": "walker"
+    },
+    {
+      "tag_name": "demo",
+      "tag_alias": "demo"
+    },
+    {
+      "tag_name": "pentagon",
+      "tag_alias": "pentagon"
+    }
+  ],
+  "category_ids": [
+    93,
+    88
+  ],
+  "body_de_plain": "I. NI ü - INNER UNIVERSE DEMO - Statt des neuen Spielepreviews\nvon WALKER welches wie sichherausstellte, nur am Pentagon und\nmit Emulatoren lauffähig war, mußte ich schnell ersatz finden,\ndaher dieses etwas ältere Demo. Doch keine Angst, es ist eines\nder besseren und arbeitet auchmit Speccy zusammen. - Unfortunaly\nthe WALKER preview is not working on a normalSpectrum, only on\nPentagon and on Spectrum Emulators (X128, ZX 32), so I was not\nable to put this megahot stuff on the disc,Inner Universe is the\nReplacement for it, but don't worry, thedemo is still good\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### INNER UNIVERSE DEMO\n\nInstead of the new game preview of WALKER, which turned out to only run on a Pentagon and on emulators, I had to find a quick replacement, hence this somewhat older demo. But don't worry, it is one of the better ones and works properly with a regular Speccy.\n\n*(Original English note from the author:)*\n> Unfortunately the WALKER preview is not working on a normal Spectrum, only on Pentagon and on Spectrum Emulators (X128, ZX 32), so I was not able to put this megahot stuff on the disc. Inner Universe is the replacement for it, but don't worry, the demo is still good.\n",
+  "body_ru": "### INNER UNIVERSE DEMO\n\nВместо нового превью игры WALKER, которое, как выяснилось, работает только на Pentagon и в эмуляторах, мне пришлось срочно искать замену, поэтому представляем это демо чуть постарше. Но не переживайте, это одна из лучших работ, и она отлично работает на обычном Спекки.\n\n*(Оригинальное примечание автора на английском:)*\n> К сожалению, превью WALKER не запускается на обычном Spectrum, только на Pentagon и в эмуляторах Спектрума (X128, ZX 32), поэтому я не смог поместить эту горячую новинку на диск. Inner Universe послужила ей заменой, но не волнуйтесь, эта демка всё равно хороша.\n",
+  "text_type": 3
+}

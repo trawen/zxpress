@@ -1,0 +1,51 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "012",
+  "article_id": "04_lookout",
+  "title_en": "Lookout",
+  "title_ru": "Lookout: Обзор новостей",
+  "meta_description_en": "Lookout section from Outlet #012: UK microcomputer news, printer levies, RAM shortages, and a brief review of current computer magazines (YS, SU, PCW).",
+  "meta_description_ru": "Рубрика Lookout журнала Outlet #012: новости компьютерного рынка Великобритании, пошлины на принтеры, дефицит памяти и краткий обзор свежей прессы (YS, SU, PCW).",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "lookout",
+      "tag_alias": "lookout"
+    },
+    {
+      "tag_name": "новости",
+      "tag_alias": "news"
+    },
+    {
+      "tag_name": "пресса",
+      "tag_alias": "press"
+    },
+    {
+      "tag_name": "your sinclair",
+      "tag_alias": "your-sinclair"
+    },
+    {
+      "tag_name": "sinclair user",
+      "tag_alias": "sinclair-user"
+    },
+    {
+      "tag_name": "loki",
+      "tag_alias": "loki"
+    }
+  ],
+  "category_ids": [
+    123,
+    131,
+    136
+  ],
+  "body_en_plain": "The EEC levy on Japanese printer\nimports is now to be imposed on\ndaisy-wheel printers as well as\ndot-matrix. FOCUS, publishers of\nPopular Computing Weekly are to\nlaunch the first weekly magazine\ndedicated to games only called\n\"COMPUTER GAMESWEEK\". PCW itself\nwill remain unchanged in its own\ncoverage of games reviews. The\nmemory chip shortage may worsen\naccording to one source.It seems\nlikely Currys will stop selling\ncomputers and related goods due\nto low profits. An exhibition of\nthe \"forgotten\" micros - Dragon,\nEinstein, Oric,etc. will be held\non 12th November at the Aston\nVilla Sports and Leisure Centre,\nBirmingham.\n\nNo YOUR COMPUTER this month and\nCRASH appeared too late for us.\nYOUR SINCLAIR has listings for a\nsprite editor and a faster PRINT\nroutine. Two inexpensive colour\nprinters are reviewed. SINCLAIR\nUSER has a PLOT & DRAW routine\nand other methods to save memory\nif lots of pictures are needed.\nPERSONAL COMPUTER WORLD has an\nabsorbing item on a new\"console\"\ncreated by ex-Sinclair employees\nusing the Z80 with extra custom\nchips for high quality graphics\nand sound at low cost.There's no\nkeyboard needed but one could be\nadded. Software loads from the\nbuilt-in cassette deck so should\nbe cheap. Clearly, this is the\n\"Loki\" research finally bearing\nfruit!Program File looks at code\ncompression methods..\n",
+  "body_ru_plain": "Пошлина ЕЭС на импорт японских\nпринтеров теперь распространится\nне только на матричные, но и на\nлепестковые. FOCUS, издатели\nPopular Computing Weekly, выпус-\nтят первый еженедельник только\nоб играх: \"COMPUTER GAMESWEEK\".\nСам PCW сохранит свой обычный\nобъём игровых обзоров. Дефицит\nчипов памяти, судя по одному из\nисточников, может усилиться.\nПохоже, Currys прекратит продажу\nкомпьютеров и комплектующих\nиз-за низкой прибыли. Выставка\n«забытых» микро — Dragon,\nEinstein, Oric и др. пройдёт\n12 ноября в Aston Villa Sports\nand Leisure Centre, Birmingham.\n\nВ этом месяце YOUR COMPUTER нет,\nа CRASH вышел для нас с опозда-\nнием. В YOUR SINCLAIR есть лис-\nтинги спрайтового редактора и\nбыстрой процедуры PRINT. Также\nдан обзор двух недорогих цветных\nпринтеров. В SINCLAIR USER есть\nпроцедура PLOT & DRAW и другие\nспособы экономить память, если\nтребуется много картинок. В но-\nмере PERSONAL COMPUTER WORLD —\nзахватывающий материал о новой\n«консоли» от экс-сотрудников\nSinclair на Z80 с заказными чи-\nпами для отличной графики и зву-\nка при низкой цене. Клавиатура\nне нужна, но её можно добавить.\nИгры грузятся со встроенного\nмагнитофона, так что софт будет\nдешёвым. Похоже, проект \"Loki\"\nнаконец-то приносит плоды!\nProgram File рассматривает мето-\nды сжатия кода..\n",
+  "body_en": "## Lookout\n\nThe EEC levy on Japanese printer imports is now to be imposed on daisy-wheel printers as well as dot-matrix. FOCUS, publishers of Popular Computing Weekly are to launch the first weekly magazine dedicated to games only called \"COMPUTER GAMESWEEK\". PCW itself will remain unchanged in its own coverage of games reviews. The memory chip shortage may worsen according to one source. It seems likely Currys will stop selling computers and related goods due to low profits. An exhibition of the \"forgotten\" micros - Dragon, Einstein, Oric, etc. will be held on 12th November at the Aston Villa Sports and Leisure Centre, Birmingham.\n\nNo YOUR COMPUTER this month and CRASH appeared too late for us. YOUR SINCLAIR has listings for a sprite editor and a faster PRINT routine. Two inexpensive colour printers are reviewed. SINCLAIR USER has a PLOT & DRAW routine and other methods to save memory if lots of pictures are needed. PERSONAL COMPUTER WORLD has an absorbing item on a new \"console\" created by ex-Sinclair employees using the Z80 with extra custom chips for high quality graphics and sound at low cost. There's no keyboard needed but one could be added. Software loads from the built-in cassette deck so should be cheap. Clearly, this is the \"Loki\" research finally bearing fruit! Program File looks at code compression methods..\n",
+  "body_ru": "## Lookout: Обзор новостей\n\nПошлина ЕЭС на импорт японских принтеров теперь распространится не только на матричные, но и на лепестковые. FOCUS, издатели Popular Computing Weekly, выпустят первый еженедельник только об играх: \"COMPUTER GAMESWEEK\". Сам PCW сохранит свой обычный объём игровых обзоров. Дефицит чипов памяти, судя по одному из источников, может усилиться. Похоже, Currys прекратит продажу компьютеров и комплектующих из-за низкой прибыли. Выставка «забытых» микро — Dragon, Einstein, Oric и др. пройдёт 12 ноября в Aston Villa Sports and Leisure Centre, Birmingham.\n\nВ этом месяце YOUR COMPUTER нет, а CRASH вышел для нас с опозданием. В YOUR SINCLAIR есть листинги спрайтового редактора и быстрой процедуры PRINT. Также дан обзор двух недорогих цветных принтеров. В SINCLAIR USER есть процедура PLOT & DRAW и другие способы экономить память, если требуется много картинок. В номере PERSONAL COMPUTER WORLD — захватывающий материал о новой «консоли» от экс-сотрудников Sinclair на Z80 с заказными чипами для отличной графики и звука при низкой цене. Клавиатура не нужна, но её можно добавить. Игры грузятся со встроенного магнитофона, так что софт будет дешёвым. Похоже, проект \"Loki\" наконец-то приносит плоды! Program File рассматривает методы сжатия кода...\n",
+  "text_type": 3
+}

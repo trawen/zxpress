@@ -1,0 +1,46 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "083",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Editorial (late)",
+  "meta_description_en": "Late editorial from Outlet #83: news regarding 3\" disk supply for the +3 version and a calendar of UK amateur radio rallies and computer fairs for July 1994.",
+  "meta_description_ru": "Дополнительная редакторская колонка Outlet #83: новости о поставке 3\" дискет и расписание британских радиоярмарок и компьютерных выставок на июль 1994 года.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "computer fairs",
+      "tag_alias": "computer-fairs"
+    },
+    {
+      "tag_name": "radio rally",
+      "tag_alias": "radio-rally"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-3"
+    }
+  ],
+  "category_ids": [
+    123,
+    116,
+    118
+  ],
+  "body_en_plain": "J U L Y ,   1 9 9 4\n\nWell,this has been an uneventful\nmonth, no big problems or crises\nto report.The good news is we've\nheard that a new supply of 3\"\ndisks should be with us in a few\nweeks for our +3 version.\n\nHere are more radio rally fixt-\nures for the near future sent in\nby Ron Smith. Ron tells us that\nparking is normally very good\nand admission varies from `1 to\n`2.50 depending on location and\nsize. Children are normally let\nin free. Often, computer-related\nproducts are also on sale. \"All\nrallies have what is known as a\n'talk in'. This is mainly for\namateur rai so operators and\nlisteners who have radios (not\nnormal domestic/car radios) that\ncan tune to those frequencies.\nThe idea is to guide visitors to\nthe locations in their cars. The\nfrequencies are...\n\n2 Mtrs 145.550 Mhz Channel S22\n70 Cms 433.550 Mhz Channel SU22\n(Some use CBs on Channel 19).\n\n9/10 JUL VHF/UHF DX CONVENTION.\n         Lectures Sat/Sun. trade\nstands and computer software,\nalso demonstrations.Refreshments\n-details Tony G4APA 0270 761805.\n\n\n10 JUL Sussex AR & Computer Fair\n       Brighton Racecourse.\n10.30am.Amateur Radio & computer\ninterests + bring & buy stall.\nAdmission:`1.50. Refreshments &\nfree car park. Info: Ron G8VEH,\nQTHR. Tel: 0903 763978 or 0273\n417756 office hours.\n\n\n17 JUL Country Wide Computer\n       Fairs, Brighton. No info\non this one but ring 0225 868100\nfor details.\n\n23 JUL All Formats Computer Fair\n       Northumbria Centre, Wash-\nington, Dist 12. 10am-4pm. `4\n\n24 JUL Colchester Radio & Compu-\n       ter Rally. St. Helena\nSchool, Sheepen Road, Colchester\n10am-4pm. `1. Car park. Info:\nFrank, G3FIJ on 0206 851189.\n\nYou may not get much if anything\nrelating to the Spectrum at some\nof them but computing generally.\n\n                   Ron & Brian\n\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nJ U L Y ,   1 9 9 4\n\nWell,this has been an uneventful month, no big problems or crises to report.The good news is we've heard that a new supply of 3\" disks should be with us in a few weeks for our +3 version.\n\nHere are more radio rally fixt- ures for the near future sent in by Ron Smith. Ron tells us that parking is normally very good and admission varies from `1 to `2.50 depending on location and size. Children are normally let in free. Often, computer-related products are also on sale. \"All rallies have what is known as a 'talk in'. This is mainly for amateur rai so operators and listeners who have radios (not normal domestic/car radios) that can tune to those frequencies. The idea is to guide visitors to the locations in their cars. The frequencies are...\n\n2 Mtrs 145.550 Mhz Channel S22 70 Cms 433.550 Mhz Channel SU22 (Some use CBs on Channel 19).\n\n9/10 JUL VHF/UHF DX CONVENTION. Lectures Sat/Sun. trade stands and computer software, also demonstrations.Refreshments -details Tony G4APA 0270 761805.\n\n10 JUL Sussex AR & Computer Fair Brighton Racecourse. 10.30am.Amateur Radio & computer interests + bring & buy stall. Admission:`1.50. Refreshments & free car park. Info: Ron G8VEH, QTHR. Tel: 0903 763978 or 0273 417756 office hours.\n\n17 JUL Country Wide Computer Fairs, Brighton. No info on this one but ring 0225 868100 for details.\n\n23 JUL All Formats Computer Fair Northumbria Centre, Wash- ington, Dist 12. 10am-4pm. `4\n\n24 JUL Colchester Radio & Compu- ter Rally. St. Helena School, Sheepen Road, Colchester 10am-4pm. `1. Car park. Info: Frank, G3FIJ on 0206 851189.\n\nYou may not get much if anything relating to the Spectrum at some of them but computing generally.\n\nRon & Brian\n\nOUTLET is produced by Chris Oliver Ron & Brian Cavers CHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF.\n",
+  "body_ru": "## Editorial (late)\n\n### Июль 1994\n\nЧто ж, месяц выдался спокойным, никаких серьёзных проблем или кризисов не предвидится. Хорошая новость: нам сообщили, что через пару недель ожидается новая партия 3-дюймовых дискет для нашей версии под +3.\n\nВот ещё несколько радиоярмарок на ближайшее будущее, присланных Ron Smith. Рон сообщает, что с парковкой там обычно всё отлично, а входная плата составляет от £1 до £2.50 в зависимости от места и масштаба. Детей обычно пускают бесплатно. Зачастую там продаются и околокомпьютерные товары. «На всех слётах работает так называемый \"talk in\" (радиопривод). Это в основном для радиолюбителей и слушателей, у которых есть приёмники (не обычные бытовые или автомобильные магнитолы), способные настраиваться на соответствующие частоты. Смысл в том, чтобы сориентировать приезжающих на машинах посетителей на подъезде к месту проведения. Частоты следующие...\n\n2 м — 145.550 МГц, канал S22  \n70 см — 433.550 МГц, канал SU22  \n(Некоторые используют CB на 19-м канале).\n\n**9/10 июля — VHF/UHF DX CONVENTION.**  \nЛекции сб/вс, торговые ряды и софт, а также демонстрации. Буфет. Подробности: Tony G4APA, тел. 0270 761805.\n\n**10 июля — Sussex AR & Computer Fair**  \nBrighton Racecourse.  \n10:30. Любительское радио и компьютерные интересы + барахолка (bring & buy). Вход: £1.50. Буфет и бесплатная парковка. Инфо: Ron G8VEH, QTHR. Тел.: 0903 763978 или 0273 417756 в рабочее время.\n\n**17 июля — Country Wide Computer Fairs, Brighton.**  \nИнформации по этому мероприятию нет, но подробности можно узнать по телефону 0225 868100.\n\n**23 июля — All Formats Computer Fair**  \nNorthumbria Centre, Washington, Dist 12. С 10:00 до 16:00. £4.\n\n**24 июля — Colchester Radio & Computer Rally.**  \nSt. Helena School, Sheepen Road, Colchester. С 10:00 до 16:00. £1. Парковка. Инфо: Frank, G3FIJ по тел. 0206 851189.\n\nВозможно, на некоторых из них вы найдёте не так уж много (если вообще хоть что-то), относящегося конкретно к Spectrum, но компьютерная тематика там представлена в целом.\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF.\n```\n",
+  "text_type": 3
+}

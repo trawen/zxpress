@@ -1,0 +1,53 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "028",
+  "article_id": "05_lookout",
+  "title_en": "Lookout",
+  "title_ru": "Lookout: Новости индустрии",
+  "meta_description_en": "Industry news: ZX Spectrum Christmas sales, Clive Sinclair's wafer scale device, SAM Coupé retail prices, Codemasters CD system, and a UK magazine roundup.",
+  "meta_description_ru": "Новости компьютерного мира: продажи ZX Spectrum, накопитель Клайва Синклера на кремниевых пластинах, цены на SAM Coupé, CD-игры Codemasters и дайджест прессы.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "clive sinclair",
+      "tag_alias": "clive-sinclair"
+    },
+    {
+      "tag_name": "codemasters",
+      "tag_alias": "codemasters"
+    },
+    {
+      "tag_name": "your sinclair",
+      "tag_alias": "your-sinclair"
+    },
+    {
+      "tag_name": "sinclair user",
+      "tag_alias": "sinclair-user"
+    },
+    {
+      "tag_name": "computer shopper",
+      "tag_alias": "computer-shopper"
+    },
+    {
+      "tag_name": "cd-rom",
+      "tag_alias": "cd-rom"
+    }
+  ],
+  "category_ids": [
+    10,
+    131,
+    136
+  ],
+  "body_en_plain": "Currys, who have not stocked any\ncomputers all year, are selling\nSpectrums again this Christmas.\nOther suppliers: Dixons, Comet,\nRumbelows, Tandy, Woolworths,\nAllders, Menzies and Toys R Us.\n\nSir Clive Sinclair has launched\nhis wafer scale device at last.\nIt can store data like a disc\ndrive but, without moving parts,\nis a hundred times faster and is\nmore reliable. I understand the\ndevice can hold 160 megabytes of\ndata but costs about `10,000!\n\nI've heard the new SAM computer\nfrom MGT will be able to read ST\ndiscs and a routine will be made\navailable to load ST screens.\nThe final prices of SAM products\nincluding VAT are COUPE-`169.95,\nCOUPE WITH 1 DRIVE-`249.90,EXTRA\nDRIVE- `89.95,EXTRA 256K RAMPACK\n`39.95,+D DRIVELINK-`19.95,RS232\n/CENTRONICS I'FACE+CABLE `29.95.\n\nIt's interesting to hear that\nCodemasters have found a simple\nway to use standard CD players\nwith the Spectrum to get loading\ntimes 15 times faster than tape.\nThey've brought out a games\ncompilation on CD disc which is\nsupplied with a special cable.\nCD's are in use with computers\nalready of course but as direct\n\nhigh-speed digital devices. The\nmethod used by Codemasters seems\nto be using the high reliability\nof CD storage to increase the\nbaud rate and load like audio\ntape.\n\n\nDecember's YOUR SINCLAIR has a 4\npage advert for the COUPE and\nlistings for an interrupt-driven\npointer (to select icons etc.),\na screen \"wibbler\" and a sparkle\npattern generator.\n\n\nSINCLAIR USER has the MGT spread\ntoo; an article on programming a\nnew driving simulator game and a\nlisting for a paintfill routine.\n\nCOMPUTER SHOPPER has an article\non laser printers followed by a\nfew reviews. The programming\nsection looks at BASIC interrupt\nhandling and Sinclair Scene has\nan item on light guns; a review\nof PROFILE - a Disciple/+D disc\neditor, file transfer + database\nutility;looks at a +3 newsletter\nand FRACTAL REPORT. Finally, we\nhave at last managed to get\nOUTLET included in their CLUB\nCONTACT section which will help\nto bring in new readers. Great!\n\n                     - Brian.\n",
+  "body_ru_plain": "Currys, не торговавшие компьютерами\nвесь год, на это Рождество снова\nпродают Spectrum. Другие продавцы:\nDixons, Comet, Rumbelows, Tandy,\nWoolworths, Allders, Menzies\nи Toys R Us.\n\nСэр Clive Sinclair наконец-то\nвыпустил своё устройство на базе\nкремниевых пластин (wafer scale).\nОно хранит данные, как дисковод,\nно без движущихся частей, в сотню\nраз быстрее и надёжнее. Насколько\nмне известно, устройство вмещает\n160 мегабайт, но стоит около\n`10,000!\n\nЯ слышал, что новый компьютер\nSAM от MGT сможет читать диски\nот ST, и будет выпущена подпрог-\nрамма для загрузки экранов ST.\nОкончательные цены на продукты SAM\nс учётом НДС: COUPE — `169.95,\nCOUPE C 1 ДИСКОВОДОМ — `249.90,\nДОП. ДИСКОВОД — `89.95, ДОП. 256K\nRAMPACK — `39.95, +D DRIVELINK —\n`19.95, RS232/CENTRONICS ИНТЕРФЕЙС\n+ КАБЕЛЬ — `29.95.\n\nЛюбопытно узнать, что Codemasters\nнашли простой способ использовать\nстандартные CD-плееры со Spectrum,\nчтобы получить загрузку в 15 раз\nбыстрее, чем с ленты. Они выпустили\nсборник игр на компакт-диске,\nкоторый поставляется со специальным\nкабелем. Конечно, CD уже давно\nприменяются с компьютерами,\n\nно как прямые высокоскоростные\nцифровые устройства. Метод же\nCodemasters, судя по всему,\nиспользует высокую надёжность CD\nдля поднятия скорости в бодах\nи грузит данные как аудиокассету.\n\nВ декабрьском номере YOUR SINCLAIR\nесть 4-страничная реклама COUPE\nи листинги: прерывание для стрелки-\nуказателя (выбор иконок и т.п.),\nэкранный «вибблер» и генератор\nискрящихся узоров.\n\nВ SINCLAIR USER тоже есть разворот\nот MGT; статья о программировании\nнового автосимулятора и листинг\nпроцедуры заливки (paintfill).\n\nВ COMPUTER SHOPPER — статья\nо лазерных принтерах и несколько\nобзоров. В разделе программирования\nрассматривается обработка прерываний\nв BASIC, а в Sinclair Scene — заметка\nо световых пистолетах; обзор PROFILE\n(дисковый редактор, передача файлов\nи БД для Disciple/+D); взгляд на\nбюллетень по +3 и FRACTAL REPORT.\nНаконец, нам удалось добиться того,\nчтобы OUTLET включили в их раздел\nCLUB CONTACT, что поможет привлечь\nновых читателей. Здорово!\n\n                     - Brian.\n",
+  "body_en": "## Lookout\n\nCurrys, who have not stocked any computers all year, are selling Spectrums again this Christmas. Other suppliers: Dixons, Comet, Rumbelows, Tandy, Woolworths, Allders, Menzies and Toys R Us.\n\nSir Clive Sinclair has launched his wafer scale device at last. It can store data like a disc drive but, without moving parts, is a hundred times faster and is more reliable. I understand the device can hold 160 megabytes of data but costs about £10,000!\n\nI've heard the new SAM computer from MGT will be able to read ST discs and a routine will be made available to load ST screens. The final prices of SAM products including VAT are COUPE - £169.95, COUPE WITH 1 DRIVE - £249.90, EXTRA DRIVE - £89.95, EXTRA 256K RAMPACK - £39.95, +D DRIVELINK - £19.95, RS232 /CENTRONICS I'FACE+CABLE - £29.95.\n\nIt's interesting to hear that Codemasters have found a simple way to use standard CD players with the Spectrum to get loading times 15 times faster than tape. They've brought out a games compilation on CD disc which is supplied with a special cable. CD's are in use with computers already of course but as direct high-speed digital devices. The method used by Codemasters seems to be using the high reliability of CD storage to increase the baud rate and load like audio tape.\n\nDecember's YOUR SINCLAIR has a 4 page advert for the COUPE and listings for an interrupt-driven pointer (to select icons etc.), a screen \"wibbler\" and a sparkle pattern generator.\n\nSINCLAIR USER has the MGT spread too; an article on programming a new driving simulator game and a listing for a paintfill routine.\n\nCOMPUTER SHOPPER has an article on laser printers followed by a few reviews. The programming section looks at BASIC interrupt handling and Sinclair Scene has an item on light guns; a review of PROFILE - a Disciple/+D disc editor, file transfer + database utility; looks at a +3 newsletter and FRACTAL REPORT. Finally, we have at last managed to get OUTLET included in their CLUB CONTACT section which will help to bring in new readers. Great!\n\n\\- Brian.\n",
+  "body_ru": "## Lookout: Новости индустрии\n\nCurrys, не торговавшие компьютерами весь год, на это Рождество снова продают Spectrum. Другие продавцы: Dixons, Comet, Rumbelows, Tandy, Woolworths, Allders, Menzies и Toys R Us.\n\nСэр Clive Sinclair наконец-то выпустил своё устройство на базе кремниевых пластин (wafer scale). Оно хранит данные, как дисковод, но без движущихся частей, в сотню раз быстрее и надёжнее. Насколько мне известно, устройство вмещает 160 мегабайт, но стоит около £10,000!\n\nЯ слышал, что новый компьютер SAM от MGT сможет читать диски от ST, и будет выпущена подпрограмма для загрузки экранов ST. Окончательные цены на продукты SAM с учётом НДС:\n\n| Продукт | Цена |\n|---|---|\n| COUPE | £169.95 |\n| COUPE C 1 ДИСКОВОДОМ | £249.90 |\n| ДОП. ДИСКОВОД | £89.95 |\n| ДОП. 256K RAMPACK | £39.95 |\n| +D DRIVELINK | £19.95 |\n| RS232/CENTRONICS ИНТЕРФЕЙС + КАБЕЛЬ | £29.95 |\n\nЛюбопытно узнать, что Codemasters нашли простой способ использовать стандартные CD-плееры со Spectrum, чтобы получить загрузку в 15 раз быстрее, чем с ленты. Они выпустили сборник игр на компакт-диске, который поставляется со специальным кабелем. Конечно, CD уже давно применяются с компьютерами, но как прямые высокоскоростные цифровые устройства. Метод же Codemasters, судя по всему, использует высокую надёжность CD для поднятия скорости в бодах и грузит данные как аудиокассету.\n\nВ декабрьском номере YOUR SINCLAIR есть 4-страничная реклама COUPE и листинги: прерывание для стрелки-указателя (выбор иконок и т.п.), экранный «вибблер» и генератор искрящихся узоров.\n\nВ SINCLAIR USER тоже есть разворот от MGT; статья о программировании нового автосимулятора и листинг процедуры заливки (paintfill).\n\nВ COMPUTER SHOPPER — статья о лазерных принтерах и несколько обзоров. В разделе программирования рассматривается обработка прерываний в BASIC, а в Sinclair Scene — заметка о световых пистолетах; обзор PROFILE (дисковый редактор, передача файлов и БД для Disciple/+D); взгляд на бюллетень по +3 и FRACTAL REPORT. Наконец, нам удалось добиться того, чтобы OUTLET включили в их раздел CLUB CONTACT, что поможет привлечь новых читателей. Здорово!\n\n— Brian.\n",
+  "text_type": 3
+}

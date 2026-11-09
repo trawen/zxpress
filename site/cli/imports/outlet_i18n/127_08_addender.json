@@ -1,0 +1,43 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "127",
+  "article_id": "08_addender",
+  "title_en": "Add-Enders: Skipper",
+  "title_ru": "Дополнения: Skipper",
+  "meta_description_en": "Introduction to Outlet's Add-Enders section featuring Skipper, a handy 48K BASIC line-editing utility revived from earlier magazine issues.",
+  "meta_description_ru": "Рубрика «Дополнения» журнала Outlet и утилита Skipper — удобный инструмент редактирования строк в 48K BASIC, переизданный из ранних номеров.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "skipper",
+      "tag_alias": "skipper"
+    },
+    {
+      "tag_name": "48k basic",
+      "tag_alias": "48k-basic"
+    },
+    {
+      "tag_name": "basic utility",
+      "tag_alias": "basic-utility"
+    },
+    {
+      "tag_name": "editor",
+      "tag_alias": "editor"
+    }
+  ],
+  "category_ids": [
+    64,
+    30,
+    123
+  ],
+  "body_en_plain": "Some items contributed to OUTLET\nhave not yet been included for a\nvariety of reasons. It's a shame\nto leave them on the shelf so,if\nappropriate, they will be added\nto this ADD-ENDERS area of the\nmagazine (not microdrive or Opus\nas there is not enough room).\n\nThe material covers a wide range\nof quality and program types:\nutilities, screens, character\nsets and text articles and SOME\nof it may be unedited, untested,\nnot working fully or properly;\nin need of conversion for your\n\nsystem's syntax or printer etc.;\nwithout full instructions or\nwhatever. Readers will have to\nsift through to see if there is\nanything of interest they can\nmake use of and discard the\nrest. Not everything will appear\non all versions necessarily.\n\nSome Add-Enders may be linked to\nOUTLET in the normal way. These\nwill usually precede this text\nfile. Any items that follow this\narticle will possibly need to be\nLOADed manually or may not auto-\nrun when loaded.\n\nThere may be some info on the\nfollowing pages...\n\nThere was a letter from\nL.G.Baumann in OUTLETTERS in the\nJanuary 1997 issue (#125) in\nwhich he suggested reproducing\nsome of the better programs from\nearly issues of OUTLET, for the\nbenefit of newer subscribers.\n\n\nMr. Baumann kindly included a\nselection of his \"Top Ten\"\nutilities that he suggests will\nbe of use or interest to others.\n\n\nWe can think of no reason why\nsuch programs cannot be included\nas an ADDENDER each month provi-\nded there is enough space on the\ndisc.\n\n\nPerhaps you would like to submit\nyour own list of \"HOTSHOTS\" that\nyou would like to see again or\nconsider to be of special value\nto other readers? Be warned,how-\never, that most of those magical\ndemos we had in the past will be\nmuch too large for inclusion!\n\nIn this issue is \"SKIPPER\" which\nis a very useful editing tool\nfor 48K BASIC as by using the\nUP/DOWN keys, the cursor jumps\nrapidly through the basic line\nbeing edited.\n\nSKIPPER first appeared in OUTLET\nIssue #9 and was updated in #53.\nUse MERGE \"SKIPPER\" to merge it\ninto your programs. It's at line\n9970 but can be moved anywhere.\n\n\nIt must be initialized with RUN\n(or GO TO) 9970. Thereafter you\ncan use RANDOMIZE USR 65000 to\nturn it on and off. Line 9970\nitself is big so you can edit it\nto try out SKIPPER. Try it on\nand off to see the difference!\n\n\n\n\n Press \"N\" now to load SKIPPER.\n",
+  "body_ru_plain": "",
+  "body_en": "Some items contributed to OUTLET have not yet been included for a variety of reasons. It's a shame to leave them on the shelf so, if appropriate, they will be added to this ADD-ENDERS area of the magazine (not microdrive or Opus as there is not enough room).\n\nThe material covers a wide range of quality and program types: utilities, screens, character sets and text articles and SOME of it may be unedited, untested, not working fully or properly; in need of conversion for your system's syntax or printer etc.; without full instructions or whatever. Readers will have to sift through to see if there is anything of interest they can make use of and discard the rest. Not everything will appear on all versions necessarily.\n\nSome Add-Enders may be linked to OUTLET in the normal way. These will usually precede this text file. Any items that follow this article will possibly need to be LOADed manually or may not auto-run when loaded.\n\nThere may be some info on the following pages...\n\nThere was a letter from L.G.Baumann in OUTLETTERS in the January 1997 issue (#125) in which he suggested reproducing some of the better programs from early issues of OUTLET, for the benefit of newer subscribers.\n\nMr. Baumann kindly included a selection of his \"Top Ten\" utilities that he suggests will be of use or interest to others.\n\nWe can think of no reason why such programs cannot be included as an ADDENDER each month provided there is enough space on the disc.\n\nPerhaps you would like to submit your own list of \"HOTSHOTS\" that you would like to see again or consider to be of special value to other readers? Be warned, however, that most of those magical demos we had in the past will be much too large for inclusion!\n\nIn this issue is \"SKIPPER\" which is a very useful editing tool for 48K BASIC as by using the UP/DOWN keys, the cursor jumps rapidly through the basic line being edited.\n\nSKIPPER first appeared in OUTLET Issue #9 and was updated in #53. Use `MERGE \"SKIPPER\"` to merge it into your programs. It's at line 9970 but can be moved anywhere.\n\nIt must be initialized with `RUN` (or `GO TO`) `9970`. Thereafter you can use `RANDOMIZE USR 65000` to turn it on and off. Line 9970 itself is big so you can edit it to try out SKIPPER. Try it on and off to see the difference!\n\nPress \"N\" now to load SKIPPER.\n",
+  "body_ru": "Некоторые материалы, присланные в OUTLET, по разным причинам до сих пор не попали в журнал. Жаль оставлять их пылиться на полке, поэтому при наличии свободного места они будут публиковаться в специальном разделе журнала — ADD-ENDERS («Дополнения») (кроме версий для Microdrive и Opus, где места совсем мало).\n\nЭтот материал охватывает самый разный диапазон качества и категорий: утилиты, экраны, шрифты и текстовые статьи. Кое-что из этого может быть неотредактированным, непротестированным, работать не до конца правильно, требовать адаптации под синтаксис вашей системы или принтер, быть без подробных инструкций и так далее. Читателям придётся покопаться в этом самостоятельно, чтобы найти что-то полезное для себя, а остальное отсеять. Кроме того, не всё обязательно появится во всех версиях выпуска.\n\nНекоторые дополнения могут быть встроены в меню OUTLET стандартным образом — обычно они предшествуют этому тексту. Все файлы, идущие после этой статьи, возможно, придётся загружать вручную, либо они не будут запускаться автоматически при загрузке.\n\nДалее следует дополнительная информация...\n\nВ январском выпуске за 1997 год (#125) в рубрике писем OUTLETTERS было опубликовано письмо от L.G.Baumann. Он предложил переиздавать лучшие программы из ранних номеров OUTLET на радость новым подписчикам.\n\nМистер Бауманн любезно приложил список из десяти своих любимых утилит («Top Ten»), которые, по его мнению, могут оказаться полезными или интересными другим.\n\nМы не видим причин, почему бы не включать подобные программы в раздел ADDENDER каждый месяц, если на диске остаётся свободное место.\n\nВозможно, вы тоже хотите прислать собственный список программ-фаворитов («HOTSHOTS»), которые вам хотелось бы увидеть снова или которые вы считаете особенно ценными для других читателей? Однако предупреждаем: большинство тех потрясающих демок, что выходили у нас в прошлом, занимают слишком много места, чтобы их можно было переиздать!\n\nВ этом номере представлена утилита **SKIPPER** — крайне полезный инструмент редактирования для 48K BASIC. С её помощью клавиши UP/DOWN заставляют курсор быстро перескакивать по редактируемой строке Бейсика.\n\nВпервые SKIPPER появился в OUTLET #9 и был обновлён в номере #53. Используйте команду `MERGE \"SKIPPER\"`, чтобы объединить её со своей программой. Она расположена в строке 9970, но её можно переместить куда угодно.\n\nДля инициализации утилиты выполните команду `RUN` (или `GO TO`) `9970`. После этого включать и выключать её можно с помощью `RANDOMIZE USR 65000`. Сама строка 9970 достаточно длинная, так что вы можете попробовать отредактировать её, чтобы протестировать SKIPPER в действии. Попробуйте включать и выключать её, чтобы почувствовать разницу!\n\nНажмите «N» сейчас, чтобы загрузить SKIPPER.\n",
+  "text_type": 3
+}

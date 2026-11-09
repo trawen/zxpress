@@ -1,0 +1,43 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "054",
+  "article_id": "01_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of the software, utilities, and demos planned for Outlet issue #55, including Crazy Demo, DataPass, Horizon, and more.",
+  "meta_description_ru": "Анонс программ, утилит и демо для следующего, 55-го номера журнала Outlet: Crazy Demo, DataPass, Horizon и многое другое.",
+  "authors": [
+    "Brian"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "crazy demo",
+      "tag_alias": "crazy-demo"
+    },
+    {
+      "tag_name": "утилиты",
+      "tag_alias": "utilities"
+    },
+    {
+      "tag_name": "bjorn nyborg",
+      "tag_alias": "bjorn-nyborg"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Planned for next month is CRAZY\nDEMO, an excellent graphics demo\n(with 128K sound but it works in\n48K - silently!). This is one of\na series of nice demos we have\nlined up over the coming year.\nRemember BERUSKA last month?That\nwas the first and the rest all\nhave the same imagination and\noriginality. DATAPASS is a mach-\nine code programmer's utility\nand will make passing values to\na code routine from BASIC much\nneater than just POKE this and\nPOKE that!             more...\n\nHORIZON is an interrupt-driven\nroutine to give a BORDER with\ntwo colours; EXTEXT is a great\nprogram for extracting text that\nis hidden in machine code - WITH\nany colour or control codes all\nshown; BLOCKGRAPH displays a\ngraph in block form from your\nown input values; TEXTLOAD shows\nyour own changing messages on\nscreen -while loading from tape!\nThere's all the usuals of course\nwith loads of readers' letters\nand info, more clip art(aircraft\nthis time); a pattern-generator;\na smooth, machine code message\nscrolling routine and a great\nnew text adventure from Bjorn\nNyborg (author of our Christmas\nSANTA ADVENTURE) called \"QUEST\nFOR THE GREEN FROG\"!See you next\nmonth!                   - Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "Planned for next month is CRAZY DEMO, an excellent graphics demo (with 128K sound but it works in 48K — silently!). This is one of a series of nice demos we have lined up over the coming year. Remember BERUSKA last month? That was the first and the rest all have the same imagination and originality. DATAPASS is a machine code programmer's utility and will make passing values to a code routine from BASIC much neater than just POKE this and POKE that!\n\nHORIZON is an interrupt-driven routine to give a BORDER with two colours; EXTEXT is a great program for extracting text that is hidden in machine code — WITH any colour or control codes all shown; BLOCKGRAPH displays a graph in block form from your own input values; TEXTLOAD shows your own changing messages on screen — while loading from tape!\n\nThere's all the usuals of course with loads of readers' letters and info, more clip art (aircraft this time); a pattern-generator; a smooth, machine code message scrolling routine and a great new text adventure from Bjorn Nyborg (author of our Christmas SANTA ADVENTURE) called \"QUEST FOR THE GREEN FROG\"!\n\nSee you next month!\n\n— Brian.\n",
+  "body_ru": "В следующем месяце запланирована CRAZY DEMO — великолепная графическая демка (со звуком для 128K, но работающая и на 48K — правда, без звука!). Это одна из целой серии отличных демок, которые мы подготовили на предстоящий год. Помните BERUSKA в прошлом месяце? Это была первая ласточка, и все остальные сделаны с такой же фантазией и оригинальностью. DATAPASS — это утилита для программистов на машинном коде, которая позволит передавать значения в кодовую процедуру из BASIC намного аккуратнее, чем просто бесконечные «POKE туда, POKE сюда»!\n\nHORIZON — это работающая по прерываниям процедура, создающая двухцветный бордюр (BORDER); EXTEXT — отличная программа для извлечения текста, скрытого внутри машинного кода, причём с отображением всех цветовых и управляющих кодов; BLOCKGRAPH выводит столбчатую диаграмму по вашим собственным значениям; TEXTLOAD отображает на экране сменяющиеся пользовательские сообщения — прямо во время загрузки с ленты!\n\nРазумеется, вас ждут и все привычные рубрики: куча писем читателей и полезной информации, ещё больше клипартов (на этот раз с самолётами); генератор узоров; плавная процедура скроллинга текста на машинном коде и замечательное новое текстовое приключение от Bjorn Nyborg (автора нашей рождественской SANTA ADVENTURE) под названием «QUEST FOR THE GREEN FROG»!\n\nДо встречи в следующем месяце!\n\n— Brian.\n",
+  "text_type": 3
+}

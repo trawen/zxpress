@@ -1,0 +1,52 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "043",
+  "article_id": "01_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонсы следующего номера",
+  "meta_description_en": "A preview of Outlet #044 contents: Disciple/+D CATLOADER, Malcolm Goodman's protection series, The Mansion text adventure, utilities, and more.",
+  "meta_description_ru": "Анонс материалов 44-го выпуска Outlet: версия CATLOADER для Disciple/+D, статья о защите от Малькольма Гудмана, квест The Mansion, утилиты и другое.",
+  "authors": [
+    "Brian Gawith"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "disciple",
+      "tag_alias": "disciple"
+    },
+    {
+      "tag_name": "+d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "catloader",
+      "tag_alias": "catloader"
+    },
+    {
+      "tag_name": "malcolm goodman",
+      "tag_alias": "malcolm-goodman"
+    },
+    {
+      "tag_name": "bob smith",
+      "tag_alias": "bob-smith"
+    }
+  ],
+  "category_ids": [
+    123,
+    9
+  ],
+  "body_en_plain": "Planned so far for next month is\nan excellent Disciple/+D version\nof our CATLOADER. If you have a\nDisciple or +D then don't miss\nthis because it is easily the\nbest method of using your drives\nwith single-key loading, mass\nselective file copying/erasing\netc. There will be TC,a database\nfor games pokes etc., clip art,\nand a shaded screen dump routine\n- for ZX-type printers.\n\nThere'll be a pattern-generator\nwhich can be influenced by the\nuser while running; OUTPUT, the\n8th part of Malcolm Goodman's\nseries on program protection (at\nlast! - Delayed for a couple of\nreasons).\n\nAlso (at last!) is BoB Smith's\nfull text adventure THE MANSION\n(also delayed because I couldn't\nfit it in before!).\n\nI've quite a few articles on all\ndifferent topics which I will\nput in DRIVECHAT. OUTCLASS and\nSAMCLASS will be there of course\nand there's a new crossword, an\nexcellent high-score table rout-\nine and a giant banner printing\nroutine!              - Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "Planned so far for next month is an excellent Disciple/+D version of our CATLOADER. If you have a Disciple or +D then don't miss this because it is easily the best method of using your drives with single-key loading, mass selective file copying/erasing etc. There will be TC, a database for games pokes etc., clip art, and a shaded screen dump routine - for ZX-type printers.\n\nThere'll be a pattern-generator which can be influenced by the user while running; OUTPUT, the 8th part of Malcolm Goodman's series on program protection (at last! - Delayed for a couple of reasons).\n\nAlso (at last!) is BoB Smith's full text adventure THE MANSION (also delayed because I couldn't fit it in before!).\n\nI've quite a few articles on all different topics which I will put in DRIVECHAT. OUTCLASS and SAMCLASS will be there of course and there's a new crossword, an excellent high-score table routine and a giant banner printing routine!\n\n— Brian.\n",
+  "body_ru": "В следующем месяце планируется отличная версия нашего CATLOADER для Disciple/+D. Если у вас есть Disciple или +D, не пропустите: это определенно лучший способ работы с дисководами с загрузкой по одной клавише, массовым выборочным копированием/удалением файлов и т. д. Также будет TC — база данных для игровых поков и прочего, клипарт и процедура полутонового дампа экрана для принтеров типа ZX.\n\nБудет генератор узоров, параметры которого пользователь может менять прямо во время работы; рубрика OUTPUT с 8-й частью серии статей Малькольма Гудмана о защите программ (наконец-то! Выпуск откладывался по паре причин).\n\nКроме того (тоже наконец-то!), выйдет полноценный текстовый квест Боба Смита THE MANSION (он тоже задержался, так как раньше просто не помещался на диск!).\n\nУ меня накопилось немало статей на самые разные темы, которые войдут в DRIVECHAT. Разумеется, будут OUTCLASS и SAMCLASS, а также новый кроссворд, отличная процедура таблицы рекордов и программа печати гигантских баннеров!\n\n— Brian.\n",
+  "text_type": 3
+}

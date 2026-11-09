@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "057",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (Late): End of the Microdrive Era",
+  "title_ru": "Редакторская колонка (доп.): Конец эпохи Microdrive",
+  "meta_description_en": "Chezron Software calls for tutorial writers and announces that Outlet will end its Sinclair Microdrive version in December 1992 after five years of support.",
+  "meta_description_ru": "Chezron Software ищет авторов обучающих статей и объявляет о закрытии версии журнала Outlet на Sinclair Microdrive в декабре 1992 года после пяти лет поддержки.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "microdrive",
+      "tag_alias": "microdrive"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "дискмаги",
+      "tag_alias": "diskmags"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "M A Y ,  1 9 9 2\n\nWe still need writers for both\nSAMCLASS and OUTCLASS articles\non either machine code or BASIC;\npreferably short. A small fee is\npaid. One-off items accepted but\na regular arrangement is better.\n\nA definite decision has now been\ntaken to finish the microdrive\nversion of OUTLET at the end of\nthis year. The last microdrive\nissue will thus be December,1992\nand no subscriptions will be\naccepted which extend beyond the\nlimit.\n\nIt will be sad in a way because\nthe whole thing started on the\nmicrodrive and one can't help\nbut see the influence of these\nroots in so many other disc mag-\nazines. However, we have been\nencouraging microdrive users to\nchange to other systems for some\ntime and there are now only a\nhandful of the cartridge version\nsold each month which is way out\nof proportion to the conversion\nwork involved each month.\n\nBy the end of the year, OUTLET\nwill have been published on the\nmicrodrive for over five years!\nIt is doubtful if any other\nsoftware is still being produced\non microdrive and highly unlike-\nly that any other software house\nhas published as much as we have\nin the format!\n\n\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_ru_plain": "",
+  "body_en": "MAY, 1992\n\nWe still need writers for both SAMCLASS and OUTCLASS articles on either machine code or BASIC; preferably short. A small fee is paid. One-off items accepted but a regular arrangement is better.\n\nA definite decision has now been taken to finish the microdrive version of OUTLET at the end of this year. The last microdrive issue will thus be December, 1992 and no subscriptions will be accepted which extend beyond the limit.\n\nIt will be sad in a way because the whole thing started on the microdrive and one can't help but see the influence of these roots in so many other disc magazines. However, we have been encouraging microdrive users to change to other systems for some time and there are now only a handful of the cartridge version sold each month which is way out of proportion to the conversion work involved each month.\n\nBy the end of the year, OUTLET will have been published on the microdrive for over five years! It is doubtful if any other software is still being produced on microdrive and highly unlikely that any other software house has published as much as we have in the format!\n\nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "body_ru": "МАЙ, 1992\n\nНам по-прежнему требуются авторы статей для рубрик SAMCLASS и OUTCLASS, посвящённых как машинному коду, так и Бейсику; предпочтительно небольшого объёма. За материалы выплачивается скромный гонорар. Мы принимаем разовые публикации, однако регулярное сотрудничество предпочтительнее.\n\nПринято окончательное решение прекратить выпуск версии OUTLET на Microdrive в конце этого года. Таким образом, последним номером на микродрайве станет выпуск за декабрь 1992 года, и подписка, выходящая за эти временные рамки, приниматься больше не будет.\n\nВ каком-то смысле это грустно, ведь весь проект начинался именно на Microdrive, и нельзя не заметить влияние этих корней во множестве других дисковых журналов. Тем не менее, мы уже некоторое время призывали пользователей микродрайвов переходить на другие системы, и сейчас картриджная версия расходится буквально единичными тиражами каждый месяц, что совершенно несопоставимо с объёмом работы по ежемесячной конвертации.\n\nК концу года OUTLET просуществует на микродрайве уже более пяти лет! Сомнительно, чтобы какой-либо другой софт всё ещё производился на картриджах Microdrive, и крайне маловероятно, что хоть один другой софтверный дом выпустил в этом формате столько же, сколько мы!\n\nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "text_type": 3
+}

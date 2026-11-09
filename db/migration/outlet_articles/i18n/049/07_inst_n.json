@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "049",
+  "article_id": "07_inst_n",
+  "title_en": "Diskmaster Two!",
+  "title_ru": "Diskmaster Two!",
+  "meta_description_en": "User instructions for Diskmaster Two! by Paul Preston, a disk management and file copying utility for the Opus Discovery drive on the ZX Spectrum.",
+  "meta_description_ru": "Инструкция к утилите Diskmaster Two! Пола Престона — дисковому менеджеру и копировщику для дисковода Opus Discovery на ZX Spectrum.",
+  "authors": [
+    "Paul Preston"
+  ],
+  "tags": [
+    {
+      "tag_name": "diskmaster",
+      "tag_alias": "diskmaster"
+    },
+    {
+      "tag_name": "opus discovery",
+      "tag_alias": "opus-discovery"
+    },
+    {
+      "tag_name": "disk utility",
+      "tag_alias": "disk-utility"
+    },
+    {
+      "tag_name": "ram disk",
+      "tag_alias": "ram-disk"
+    }
+  ],
+  "category_ids": [
+    64,
+    73
+  ],
+  "body_en_plain": "Diskmaster Two!\n         by Paul Preston\n         ---------------\n\nI have improved upon my program:\nDISKMASTER which appeared in\nOutlet 36. The major improvement\nis that the bottom two lines now\ndisplay file information for the\nhighlighted program but also the\ndisplay has been quickened and a\nhelp page included.\n\nThe program is designed to work\nwith an Opus Discovery with any\nsector size disks. The program\nalso makes use of the larger RAM\ndisk in 128K mode but works\nequally as well in 48K mode.\n\nThe program allows filenames to\nbe displayed in alphabetical,\nfile type or normal Opus cata-\nlogue order.\n\nCopying from disk to disk can be\ndone by copying a selected group\nof files to RAM disk then\nsetting Source to the RAM disk\nand destination to the required\ndrive. Alternatively files can\nbe copied individually by\nsetting source disk to 1 say and\ndestination to 2 for example.\n\nList of commands:-\n\nCURSOR move a highlighted block\nKEYS  around. Keep holding\n      CURSOR RIGHT to go to the\n      next page of files.\n\nENTER to select or deselect a\n      file.\n\nA     to select ALL the files.\n\nC     to copy all selected files\n      from source to destination\n\nE     to erase all selected\n      files from source.\n\nF     to format the RAM disk.\n\nH     to go to the help page.\n\n[On   S alters Source drive No.\nHelp  D   \" Destination \"    \"\nPage] Any other key returns to\n      the main screen.\n\nM     to alter sort mode; Cycle\n      thru' alphabetical, file\n      type order and Opus normal\n      catalogue order.\n\nR     to reset Spectrum.\n\nSPACE to read a new disk.\n\n\n\n                 - Paul Preston\n\n\nPRESS N TO LOAD DRIVEMASTER TWO!.\n",
+  "body_ru_plain": "",
+  "body_en": "# Diskmaster Two!\n*by Paul Preston*\n\nI have improved upon my program DISKMASTER which appeared in Outlet 36. The major improvement is that the bottom two lines now display file information for the highlighted program, but also the display has been quickened and a help page included.\n\nThe program is designed to work with an Opus Discovery with any sector size disks. The program also makes use of the larger RAM disk in 128K mode but works equally as well in 48K mode.\n\nThe program allows filenames to be displayed in alphabetical, file type or normal Opus catalogue order.\n\nCopying from disk to disk can be done by copying a selected group of files to RAM disk then setting Source to the RAM disk and destination to the required drive. Alternatively files can be copied individually by setting source disk to 1 say and destination to 2 for example.\n\n### List of commands:\n\n* **CURSOR KEYS** — Move a highlighted block around. Keep holding CURSOR RIGHT to go to the next page of files.\n* **ENTER** — Select or deselect a file.\n* **A** — Select ALL the files.\n* **C** — Copy all selected files from source to destination.\n* **E** — Erase all selected files from source.\n* **F** — Format the RAM disk.\n* **H** — Go to the help page.\n  * *[On Help Page]* **S** — Alters Source drive No.\n  * *[On Help Page]* **D** — Alters Destination drive No.\n  * *[On Help Page]* Any other key returns to the main screen.\n* **M** — Alter sort mode; Cycle thru' alphabetical, file type order and Opus normal catalogue order.\n* **R** — Reset Spectrum.\n* **SPACE** — Read a new disk.\n\n— Paul Preston\n\n*(PRESS N TO LOAD DRIVEMASTER TWO!)*\n",
+  "body_ru": "# Diskmaster Two!\n*Пол Престон*\n\nЯ улучшил свою программу DISKMASTER, которая публиковалась в Outlet 36. Главное усовершенствование заключается в том, что две нижние строки теперь отображают информацию о файле для подсвеченной программы. Кроме того, вывод на экран стал быстрее, и была добавлена страница справки.\n\nПрограмма предназначена для работы с дисководом Opus Discovery с дисками любого размера сектора. Она также использует расширенный электронный диск (RAM-диск) в режиме 128K, но точно так же прекрасно работает и в режиме 48K.\n\nУтилита позволяет отображать имена файлов по алфавиту, по типу файлов или в обычном каталожном порядке Opus.\n\nКопирование с диска на диск можно производить, скопировав выбранную группу файлов на RAM-диск, а затем установив Source на RAM-диск, а Destination — на требуемый дисковод. Кроме того, файлы можно копировать напрямую, например, установив диск-источник 1, а диск-приемник — 2.\n\n### Список команд:\n\n* **Клавиши курсора** — перемещение курсора/подсветки. Удерживайте CURSOR RIGHT для перехода на следующую страницу файлов.\n* **ENTER** — выбрать или отменить выбор файла.\n* **A** — выбрать ВСЕ файлы.\n* **C** — скопировать все выбранные файлы из источника в приемник.\n* **E** — стереть все выбранные файлы с источника.\n* **F** — форматировать RAM-диск.\n* **H** — перейти на страницу справки (Help).\n  * *[В окне помощи]* **S** — изменить номер дисковода-источника (Source).\n  * *[В окне помощи]* **D** — изменить номер дисковода-приемника (Destination).\n  * *[В окне помощи]* любая другая клавиша возвращает на главный экран.\n* **M** — сменить режим сортировки (циклический выбор: по алфавиту, по типу файлов или стандартный порядок каталога Opus).\n* **R** — сброс (Reset) Спектрума.\n* **SPACE** — перечитать диск.\n\n— Paul Preston\n\n*(НАЖМИТЕ N, ЧТОБЫ ЗАГРУЗИТЬ DRIVEMASTER TWO!)*\n",
+  "text_type": 3
+}

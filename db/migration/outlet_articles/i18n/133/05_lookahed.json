@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "133",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "Chris Cowley previews the upcoming features of Outlet #134, including Colour Draw, a Basic crash-recovery routine, screen utilities, and games.",
+  "meta_description_ru": "Крис Коули анонсирует материалы следующего номера Outlet: утилиту Colour Draw, подпрограмму восстановления после сбоев в Бейсике, утилиты и игры.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "colour draw",
+      "tag_alias": "colour-draw"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    }
+  ],
+  "category_ids": [
+    123,
+    119
+  ],
+  "body_en_plain": "One of the most frustrating asp-\nects of the otherwise wonderful\nSpectrum is that it is only\npossible to get two colours per\ncharacter square.Correction!Till\nrecently that was the case, then\na utility called \"COLOUR DRAW\"\narrived.\n\nUsing COLOUR DRAW, which is rev-\niewed in next month's OUTLET,you\ncan get up to 15 colours in each\ncell. As the reviewer remarks...\n\"Every Spectrum Artist's dream\"!\n\n\nAnd talking of frustrations:\nsometimes you get a program\nwhich seems to return to Basic\nwithout problem after you have\nused it, but your attempts to do\nanything else, such as loading\nanother program, result in a\ncrash or keyboard lock-up.\n\nVarious factors could cause this\nproblem, like interrupts being\nleft on;the IY register not hol-\nding the correct value; or the\nsystem variable 'CHARS' pointing\nto an address where there is no\ncharacter set so nothing shows\non screen. Next month's OUTLET\nhas a short code routine to cure\nall these problems, and, as the\ncode runs in its own Basic REM,\nthe routine can be added to al-\nmost any program.\n\nOther utilities next month incl-\nude one to print out selected\nparts of the screen, and some\ntest cards for setting up your\nmonitor screen to perfection.\nThere's also a Sneaky Snakey\nsort of game,a nice scrolly mus-\nic demo, and an involving adven-\nture.\n\nIt boosts us no end when you let\nus know that OUTLET brightens up\nyour days. As I write this in\nhigh summer (?) at the beginning\nof August,it's just after midday\nand the lights are on as it is\nso dull outside. The wind and\nrain are lashing the trees, and\nthe temperature cannot be descr-\nibed as better than \"Cool\". Yes,\nwe all need a bit of brightening\nup!               Cheers - Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "One of the most frustrating aspects of the otherwise wonderful Spectrum is that it is only possible to get two colours per character square. Correction! Till recently that was the case, then a utility called \"COLOUR DRAW\" arrived.\n\nUsing COLOUR DRAW, which is reviewed in next month's OUTLET, you can get up to 15 colours in each cell. As the reviewer remarks... \"Every Spectrum Artist's dream\"!\n\nAnd talking of frustrations: sometimes you get a program which seems to return to Basic without problem after you have used it, but your attempts to do anything else, such as loading another program, result in a crash or keyboard lock-up.\n\nVarious factors could cause this problem, like interrupts being left on; the IY register not holding the correct value; or the system variable 'CHARS' pointing to an address where there is no character set so nothing shows on screen. Next month's OUTLET has a short code routine to cure all these problems, and, as the code runs in its own Basic REM, the routine can be added to almost any program.\n\nOther utilities next month include one to print out selected parts of the screen, and some test cards for setting up your monitor screen to perfection. There's also a Sneaky Snakey sort of game, a nice scrolly music demo, and an involving adventure.\n\nIt boosts us no end when you let us know that OUTLET brightens up your days. As I write this in high summer (?) at the beginning of August, it's just after midday and the lights are on as it is so dull outside. The wind and rain are lashing the trees, and the temperature cannot be described as better than \"Cool\". Yes, we all need a bit of brightening up! Cheers — Chris.\n",
+  "body_ru": "Один из самых досадных недостатков замечательного во всех остальных отношениях Спектрума — возможность использовать лишь два цвета на знакоместо. Поправка! До недавнего времени так оно и было, пока не появилась утилита под названием «COLOUR DRAW».\n\nС помощью COLOUR DRAW (обзор которой появится в следующем выпуске OUTLET) вы можете получить до 15 цветов в каждом знакоместе. Как отмечает автор обзора: «Мечта любого спектрумовского художника!»\n\nИ раз уж зашла речь о досадных вещах: порой попадается программа, которая после завершения работы вроде бы без проблем возвращается в Бейсик, но любая попытка сделать что-то ещё — например, загрузить другую программу — приводит к зависанию или блокировке клавиатуры.\n\nПричин у этой проблемы может быть множество: незакрытые прерывания, некорректное значение в регистре IY или системная переменная CHARS, указывающая на адрес, где нет набора символов (из-за чего на экране ничего не отображается). В следующем номере OUTLET выйдет небольшая подпрограмма в машинных кодах, устраняющая все эти неприятности. А поскольку код размещается в собственной строке Basic REM, его можно встроить практически в любую программу.\n\nСреди других утилит следующего номера — программа для печати выбранных областей экрана и тестовые таблицы для идеальной настройки монитора. Также вас ждут игра в духе «змейки», приятное музыкальное демо с бегущей строкой и увлекательное текстовое приключение.\n\nНам невероятно приятно слышать, что OUTLET скрашивает ваши будни. Когда я пишу эти строки в самый разгар лета (?) — в начале августа, — на часах едва перевалило за полдень, а в комнате приходится включать свет, настолько на улице пасмурно. Ветер и дождь хлещут по деревьям, а температуру за окном сложно назвать иначе как «прохладной». Да, всем нам не помешает немного солнечного настроения! Всего наилучшего — Chris.\n",
+  "text_type": 3
+}

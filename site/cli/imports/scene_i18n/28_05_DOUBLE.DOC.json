@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "28",
+  "article_id": "05_DOUBLE.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Double Dash",
+  "title_ru": "Double Dash",
+  "meta_description_en": "Brief note on Double Dash from Scene+ #28: a restored PC snapshot from a World of Spectrum CD, presenting a Boulder Dash clone for two players.",
+  "meta_description_ru": "Краткая заметка об игре Double Dash из журнала Scene+ #28: восстановленный PC-снапшот с диска WoS CD, представляющий собой клон Boulder Dash для двоих.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "double dash",
+      "tag_alias": "double-dash"
+    },
+    {
+      "tag_name": "boulder dash",
+      "tag_alias": "boulder-dash"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "DOUBLE_D. ü\n----------------------------------------------------------------\nDOUBLE DASH\n----------------------------------------------------------------\nRestaurierter PC Snapshot von WOS CD. Ein Boulderdash Clone\nfürzwei Spieler\n----------------------------------------------------------------\nRestored PC Snapshot from WOS CD. A Boulder Dash clone for\ntwoplayers.\n----------------------------------------------------------------\n----------------------------------------------------------------\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "## DOUBLE DASH\n\nRestored PC snapshot from a WOS CD. A Boulder Dash clone for two players.\n",
+  "body_ru": "## DOUBLE DASH\n\nВосстановленный PC-снапшот с компакт-диска World of Spectrum. Клон Boulder Dash для двух игроков.\n",
+  "text_type": 3
+}

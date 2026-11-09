@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "137",
+  "article_id": "08_soundemu",
+  "title_en": "Constructing a 128K Sound Emulator",
+  "title_ru": "Сборка звукового эмулятора 128K",
+  "meta_description_en": "Schematic and guide to building a DIY ZX Spectrum 128K sound emulator using the AY-3-8910 chip on 48K models: FFFD/BFFD port decoding, 74LS27/74LS04 logic, and audio mixing with the beeper.",
+  "meta_description_ru": "Схема и описание сборки звукового адаптера ZX Spectrum 128K на чипе AY-3-8910 для 48K-моделей: дешифрация портов FFFD/BFFD, логика на 74LS27 и 74LS04 и микширование со встроенным бипером.",
+  "authors": [
+    "Mick Florey"
+  ],
+  "tags": [
+    {
+      "tag_name": "ay-3-8910",
+      "tag_alias": "ay-3-8910"
+    },
+    {
+      "tag_name": "sound interface",
+      "tag_alias": "sound-interface"
+    },
+    {
+      "tag_name": "diy",
+      "tag_alias": "diy"
+    },
+    {
+      "tag_name": "схемотехника",
+      "tag_alias": "schematics"
+    },
+    {
+      "tag_name": "железо",
+      "tag_alias": "hardware"
+    }
+  ],
+  "category_ids": [
+    10,
+    12,
+    21
+  ],
+  "body_en_plain": "CONSTRUCTING A 128K SOUND\nEMULATOR By Mick Florey (First\npublished in an SDC Newsletter)\n-------------------------------\nThe chips series:  AY 8910, AY\n8911, and AY 8912 all have the\nsame sound facilities.  The only\ndifferences are the number of\nin/out lines which at this stage\nI am not interested in.\n\n\nTo emulate the 128K sound, all\nthat is required is to correctly\ndecode the address lines with\nthe IORQ, since this is the PORT\naddressed. ie. IN's and OUT's\nare used.\n\nThe addresses used are 65533\n(FFFD hex) and 49149 (BFFD hex),\nthe important address lines to\nnote are A14 and A1. In both\naddresses, A1 has to be low.\nAnother important point is that\nwhen an IN 49149 is used, A5 is\nhi and would not enable the Kem-\npston interface.\n\nPress the Graphics key to see\nthe circuit of of a complete\n128k sound emulator. Here are\nthe component values...\n\n\n R1, R2 = 560 Ohms\n\n R3, R4 = 4k7 Ohms\n\n C1, C2 = 470 pF\n\n IC 1 = AY 8910 Sound chip\n\n IC 2 = 74LS27 Triple 3 i/p NOR\n\n IC 3 = 74LS04 Hex invertor\n\nI was going to include an amp-\nlifier circuit but decided not\nto as the exact circuit that I\nused is in the Maplin catalogue\nutilizing a cheapo TBA 820M\namplifier chip. (The only reason\nfor using this chip, is that I\nhappened to have one). You can\nof course use any suitable ampl-\nifier chip.\n\nR3 and R4 make up a mixer so\nthat the spectrum BEEPS may be\namplified as well as the 128k\nsounds. The values of C1 and C2\ncould be changed to match the\n128k frequencies exactly, but\nyou would need a 128k to match\nit against!\n\n                 Mick Florey.\n",
+  "body_ru_plain": "",
+  "body_en": "## Soundemu\n\nCONSTRUCTING A 128K SOUND EMULATOR By Mick Florey (First published in an SDC Newsletter)\n\n```text\n-------------------------------\n```\n\nThe chips series:  AY 8910, AY 8911, and AY 8912 all have the same sound facilities.  The only differences are the number of in/out lines which at this stage I am not interested in.\n\nTo emulate the 128K sound, all that is required is to correctly decode the address lines with the IORQ, since this is the PORT addressed. ie. IN's and OUT's are used.\n\nThe addresses used are 65533 (FFFD hex) and 49149 (BFFD hex), the important address lines to note are A14 and A1. In both addresses, A1 has to be low. Another important point is that when an IN 49149 is used, A5 is hi and would not enable the Kem- pston interface.\n\nPress the Graphics key to see the circuit of of a complete 128k sound emulator. Here are the component values...\n\nR1, R2 = 560 Ohms\n\nR3, R4 = 4k7 Ohms\n\nC1, C2 = 470 pF\n\nIC 1 = AY 8910 Sound chip\n\nIC 2 = 74LS27 Triple 3 i/p NOR\n\nIC 3 = 74LS04 Hex invertor\n\nI was going to include an amp- lifier circuit but decided not to as the exact circuit that I used is in the Maplin catalogue utilizing a cheapo TBA 820M amplifier chip. (The only reason for using this chip, is that I happened to have one). You can of course use any suitable ampl- ifier chip.\n\nR3 and R4 make up a mixer so that the spectrum BEEPS may be amplified as well as the 128k sounds. The values of C1 and C2 could be changed to match the 128k frequencies exactly, but you would need a 128k to match it against!\n\nMick Florey.\n",
+  "body_ru": "## Сборка звукового эмулятора 128K\n\n**Mick Florey (впервые опубликовано в SDC Newsletter)**\n\n---\n\nМикросхемы серии AY 8910, AY 8911 и AY 8912 обладают совершенно одинаковыми звуковыми возможностями. Единственное различие заключается в количестве линий ввода/вывода, которые на данном этапе меня не интересуют.\n\nЧтобы сэмулировать звук 128K, требуется лишь правильно дешифровать адресные линии совместно с сигналом IORQ, поскольку обращение идет к портам (т.е. используются команды IN и OUT).\n\nИспользуются адреса 65533 (FFFD hex) и 49149 (BFFD hex). Важные адресные линии, на которые стоит обратить внимание — это A14 и A1. В обоих адресах линия A1 должна быть в низком уровне (low). Еще один важный момент: при выполнении команды IN 49149 линия A5 находится в высоком уровне (hi) и не будет активировать интерфейс Kempston.\n\nНажмите клавишу Graphics, чтобы увидеть полную схему звукового эмулятора 128K. А вот номиналы компонентов:\n\n* R1, R2 = 560 Ом\n* R3, R4 = 4.7 кОм\n* C1, C2 = 470 пФ\n* IC 1 = звуковой чип AY 8910\n* IC 2 = 74LS27 (три логических элемента 3-ИЛИ-НЕ)\n* IC 3 = 74LS04 (шесть инверторов НЕ)\n\nЯ собирался добавить схему усилителя, но решил этого не делать, так как точно такая же схема, которую использовал я, есть в каталоге Maplin — она построена на дешевеньком чипе усилителя TBA 820M. (Единственная причина, по которой я использовал именно эту микросхему — она просто случайно оказалась у меня под рукой). Разумеется, вы можете использовать любой подходящий чип усилителя.\n\nРезисторы R3 и R4 образуют микшер, благодаря которому обычные бипы Спектрума могут усиливаться вместе со звуками 128K. Номиналы C1 и C2 можно изменить, чтобы они точно соответствовали частотам 128K, но для точной подгонки вам понадобится настоящий 128K!\n\nMick Florey.\n",
+  "text_type": 3
+}

@@ -296,6 +296,7 @@
 				</ul>
 {/if}
 
+{* Temporarily hidden: magazine history block
 {if $press.description}
 				<section class="smn-press-history" aria-labelledby="smn-press-history-heading">
 					<h2 class="smn-press-history-heading" id="smn-press-history-heading">{if $lng eq 'eng'}Magazine history{else}История журнала{/if}</h2>
@@ -304,6 +305,7 @@
 					</div>
 				</section>
 {/if}
+*}
 			</article>
 
 {elseif $issue_not_found}

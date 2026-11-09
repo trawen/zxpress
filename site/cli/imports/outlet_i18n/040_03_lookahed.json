@@ -1,0 +1,43 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "040",
+  "article_id": "03_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "Preview of the upcoming Outlet issue: new utilities, 3D arcade adventure Ultimate Warrior, BetaDOS review, software for SAM Coupé and ZX Spectrum +3.",
+  "meta_description_ru": "Анонс материалов следующего номера журнала Outlet: новые утилиты, 3D-адвентюра Ultimate Warrior, обзор BetaDOS, программы для SAM Coupé и ZX Spectrum +3.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "announcement"
+    },
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "betados",
+      "tag_alias": "betados"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "As well as all the regulars like\nOUTCLASS,OUTBOARD, LOOKOUT etc.,\nnext month we have new year clip\nart; a new crossword; a terrific\nBASIC listing\"seek out and find\"\nroutine (to track variable names\nor keywords etc.);a huge message\nscroller;a short animation demo;\na hexadecimal/decimal convertor;\n128K music; a screen designer; a\nhome security \"interactive\"guide\nand \"ULTIMATE WARRIOR\" - a great\n3D arcade adventure (like WITCH\nWOOD in Issue 19). more...\n\nCHECKOUT gives another review of\nBETADOS as well as the new voice\nbox for the SAM and availability\nof clip art.\n\nThere's a boot sector editor for\nthe +3 and loads of SAM programs\nin stock to replace those of the\nabove that won't convert(as well\nas some new pictures).\n\nFinally, of course,there will be\nthe stunning stimulation of your\nown brilliant ideas, hints, tips\nand information in \"OUTLETTERS!\"\n(leastways, I hope there will be\nor we'll all look jolly silly).\n\n         Happy New Year!\n\n                        - Brian.\n",
+  "body_ru_plain": "Помимо привычных рубрик, таких\nкак OUTCLASS, OUTBOARD, LOOKOUT\nи т.д., в следующем месяце вас\nждут: новогодний клипарт; новый\nкроссворд; потрясающая утилита\nпоиска по BASIC-листингам (для\nотслеживания имен переменных,\nключевых слов и т.п.); огромный\nскроллер сообщений; небольшое\nанимационное демо; шестнадцате-\nрично/десятичный конвертер; 128K\nмузыка; экранный дизайнер; \"ин-\nтерактивное\" руководство по без-\nопасности дома и \"ULTIMATE\nWARRIOR\" — отличная 3D аркадная\nадвентюра (как WITCH WOOD в вы-\nпуске 19). И это еще не все...\n\nВ CHECKOUT будет еще один обзор\nBETADOS, а также нового voice\nbox для SAM и доступного кли-\nпарта.\n\nЕсть редактор boot-сектора для\n+3 и куча программ для SAM про\nзапас на случай, если что-то из\nвышеперечисленного не удастся\nадаптировать (плюс свежие кар-\nтинки).\n\nИ наконец, вас, конечно же, ждет\nпотрясающий фейерверк ваших же\nблестящих идей, подсказок, со-\nветов и информации в рубрике\n\"OUTLETTERS!\" (по крайней мере,\nя надеюсь, что он будет, иначе\nмы все окажемся в весьма дурац-\nком положении).\n\n        С Новым годом!\n\n                        - Brian.\n",
+  "body_en": "## Lookahead\n\nAs well as all the regulars like OUTCLASS, OUTBOARD, LOOKOUT etc., next month we have new year clip art; a new crossword; a terrific BASIC listing \"seek out and find\" routine (to track variable names or keywords etc.); a huge message scroller; a short animation demo; a hexadecimal/decimal convertor; 128K music; a screen designer; a home security \"interactive\" guide and \"ULTIMATE WARRIOR\" - a great 3D arcade adventure (like WITCH WOOD in Issue 19). And more...\n\nCHECKOUT gives another review of BETADOS as well as the new voice box for the SAM and availability of clip art.\n\nThere's a boot sector editor for the +3 and loads of SAM programs in stock to replace those of the above that won't convert (as well as some new pictures).\n\nFinally, of course, there will be the stunning stimulation of your own brilliant ideas, hints, tips and information in \"OUTLETTERS!\" (leastways, I hope there will be or we'll all look jolly silly).\n\nHappy New Year!\n\n— Brian.\n",
+  "body_ru": "## Анонс следующего номера\n\nПомимо привычных рубрик, таких как OUTCLASS, OUTBOARD, LOOKOUT и т.д., в следующем месяце вас ждут: новогодний клипарт; новый кроссворд; потрясающая утилита поиска по BASIC-листингам (для отслеживания имен переменных, ключевых слов и т.п.); огромный скроллер сообщений; небольшое анимационное демо; шестнадцатерично/десятичный конвертер; 128K музыка; экранный дизайнер; «интерактивное» руководство по безопасности дома и «ULTIMATE WARRIOR» — отличная 3D аркадная адвентюра (как WITCH WOOD в выпуске 19). И это еще не все...\n\nВ CHECKOUT будет еще один обзор BETADOS, а также нового voice box для SAM и доступного клипарта.\n\nЕсть редактор boot-сектора для +3 и куча программ для SAM про запас на случай, если что-то из вышеперечисленного не удастся адаптировать (плюс свежие картинки).\n\nИ наконец, вас, конечно же, ждет потрясающий фейерверк ваших же блестящих идей, подсказок, советов и информации в рубрике «OUTLETTERS!» (по крайней мере, я надеюсь, что он будет, иначе мы все окажемся в весьма дурацком положении).\n\nС Новым годом!\n\n— Brian.\n",
+  "text_type": 3
+}

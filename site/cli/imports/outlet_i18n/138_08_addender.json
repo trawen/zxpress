@@ -1,0 +1,39 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "138",
+  "article_id": "08_addender",
+  "title_en": "Addender",
+  "title_ru": "Addender (Дополнения)",
+  "meta_description_en": "Outlet introduces the Add-Enders section featuring miscellaneous user contributions and provides six ZX81 games for the emulator from Issue #136.",
+  "meta_description_ru": "Редакция Outlet представляет рубрику Add-Enders с дополнительными материалами и публикует шесть игр для эмулятора ZX81 из выпуска #136.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet-magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "zx81",
+      "tag_alias": "zx81"
+    },
+    {
+      "tag_name": "emulator",
+      "tag_alias": "emulator"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    }
+  ],
+  "category_ids": [
+    1,
+    46,
+    116
+  ],
+  "body_en_plain": "Some items contributed to OUTLET\nhave not yet been included for a\nvariety of reasons. It's a shame\nto leave them on the shelf so,if\nappropriate, they will be added\nto this ADD-ENDERS area of the\nmagazine (not microdrive or Opus\nas there is not enough room).\n\nThe material covers a wide range\nof quality and program types:\nutilities, screens, character\nsets and text articles and SOME\nof it may be unedited, untested,\nnot working fully or properly;\nin need of conversion for your\n\nsystem's syntax or printer etc.;\nwithout full instructions or\nwhatever. Readers will have to\nsift through to see if there is\nanything of interest they can\nmake use of and discard the\nrest. Not everything will appear\non all versions necessarily.\n\nSome Add-Enders may be linked to\nOUTLET in the normal way. These\nwill usually precede this text\nfile. Any items that follow this\narticle will possibly need to be\nLOADed manually or may not auto-\nrun when loaded.\n\nThere may be some info on the\nfollowing pages...\n\nThere are another half dozen\nZX81 files on this disc, so that\nyou can have a go with the ZX81\nemulator which appeared in the\nDecember 1998 OUTLET Issue #136\ncomplete with information and\ninstructions for use.\n\n\nThe titles are...\n\nCOSMIC, FAIRWAY, CAR_RACE,\n3D_LABYR, PACMAN, and 3D_GRAND.\n[Don't forget the dashes when\nentering the titles!]\n\n\nAll except one have built-in\ninstructions but here are a few\ncomments...\n\n\nCOSMIC is a shoot-up-the-Aliens-\nbefore-they-bomb-you game.\nControl keys are V-left, M-right\nand SPACE-fire.\n\nFAIRWAY is a self-explanatory\ngolf putting game.\n\nCAR_RACE is a guess what?\n\n3D_LABYR is a 3D maze. If you\nare quick at the start, you are\nshown a map of the maze!\n\nPACMAN, the old favourite.\n\n3D_GRAND (PRIX) has an\ninstruction page and looks good,\nbut can somebody please tell me\nhow to start the engine????\n\n\nWhen you have finished with a\ngame, press 0 & 1 together to\nget the control menu, then go\nthrough the CAT-and-LOAD sequ-\nence (LOAD \"\") to load another\nZX81 file.\n\n\n  You will need to load the\n  emulator from Issue #136..\n",
+  "body_ru_plain": "",
+  "body_en": "Some items contributed to OUTLET have not yet been included for a variety of reasons. It's a shame to leave them on the shelf so, if appropriate, they will be added to this ADD-ENDERS area of the magazine (not microdrive or Opus as there is not enough room).\n\nThe material covers a wide range of quality and program types: utilities, screens, character sets and text articles and SOME of it may be unedited, untested, not working fully or properly; in need of conversion for your system's syntax or printer etc.; without full instructions or whatever. Readers will have to sift through to see if there is anything of interest they can make use of and discard the rest. Not everything will appear on all versions necessarily.\n\nSome Add-Enders may be linked to OUTLET in the normal way. These will usually precede this text file. Any items that follow this article will possibly need to be LOADed manually or may not auto-run when loaded.\n\nThere may be some info on the following pages...\n\nThere are another half dozen ZX81 files on this disc, so that you can have a go with the ZX81 emulator which appeared in the December 1998 OUTLET Issue #136 complete with information and instructions for use.\n\nThe titles are...\n\nCOSMIC, FAIRWAY, CAR_RACE, 3D_LABYR, PACMAN, and 3D_GRAND. [Don't forget the dashes when entering the titles!]\n\nAll except one have built-in instructions but here are a few comments...\n\nCOSMIC is a shoot-up-the-Aliens-before-they-bomb-you game. Control keys are V - left, M - right and SPACE - fire.\n\nFAIRWAY is a self-explanatory golf putting game.\n\nCAR_RACE is a guess what?\n\n3D_LABYR is a 3D maze. If you are quick at the start, you are shown a map of the maze!\n\nPACMAN, the old favourite.\n\n3D_GRAND (PRIX) has an instruction page and looks good, but can somebody please tell me how to start the engine????\n\nWhen you have finished with a game, press 0 & 1 together to get the control menu, then go through the CAT-and-LOAD sequence (LOAD \"\") to load another ZX81 file.\n\nYou will need to load the emulator from Issue #136..\n",
+  "body_ru": "Некоторые материалы, присланные читателями в редакцию OUTLET, до сих пор не были опубликованы по самым разным причинам. Жаль оставлять их пылиться на полке, поэтому по мере возможности мы будем помещать их в специальный раздел журнала — ADD-ENDERS (на версиях для микродрайва и Opus этого раздела нет из-за нехватки места).\n\nЭтот материал весьма разнообразен по качеству и назначению: утилиты, экраны, наборы шрифтов и текстовые статьи. КОЕ-ЧТО из этого может быть неотредактированным, непротестированным, работать не до конца или со сбоями; может требовать адаптации синтаксиса под вашу дисковую систему или принтер; быть без подробных инструкций и так далее. Читателям предстоит самим перебрать всё это, найти полезное и отбросить остальное. Не всё обязательно появится на всех версиях издания.\n\nНекоторые материалы раздела могут запускаться из оболочки OUTLET обычным образом — они обычно предшествуют этому текстовому файлу. Всё, что следует после этой статьи, скорее всего, придется загружать вручную (LOAD), либо оно может не запуститься автоматически.\n\nДалее следует дополнительная информация...\n\nНа этом диске есть ещё полдюжины файлов для ZX81, чтобы вы могли опробовать эмулятор ZX81, опубликованный в декабрьском выпуске OUTLET #136 (1998 г.) вместе со всеми инструкциями и описанием.\n\nСписок игр:\n\nCOSMIC, FAIRWAY, CAR_RACE, 3D_LABYR, PACMAN и 3D_GRAND. [Не забывайте про знак подчеркивания при вводе названий!]\n\nВо всех программах, кроме одной, есть встроенные инструкции, но вот пара пояснений:\n\nCOSMIC — отстреливайте пришельцев до того, как они разбомбят вас. Управление: V — влево, M — вправо, SPACE — огонь.\n\nFAIRWAY — гольф, название говорит само за себя.\n\nCAR_RACE — догадайтесь с одного раза!\n\n3D_LABYR — трёхмерный лабиринт. Если успеете среагировать на старте, вам покажут карту лабиринта!\n\nPACMAN — старая добрая классика.\n\n3D_GRAND (PRIX) — имеет страницу с инструкциями и выглядит симпатично, но подскажите мне кто-нибудь, ради всего святого, как там завести двигатель????\n\nЗакончив игру, нажмите одновременно 0 и 1, чтобы выйти в меню управления, затем выполните последовательность CAT и LOAD (LOAD \"\"), чтобы загрузить следующий файл ZX81.\n\nВам потребуется загрузить сам эмулятор из выпуска #136...\n",
+  "text_type": 3
+}

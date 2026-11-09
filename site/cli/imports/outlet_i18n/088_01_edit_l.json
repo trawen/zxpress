@@ -1,0 +1,46 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "088",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Editorial from Outlet #88 (Christmas 1994): postal delays, mention of Lunter PC Spectrum emulator with +D support, rally fixtures, and call for contributions.",
+  "meta_description_ru": "Редакционная колонка Outlet №88 (рождество 1994): почтовые задержки, анонс эмулятора Lunter с поддержкой +D на PC, расписание выставок и призыв авторов.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "эмуляторы",
+      "tag_alias": "emulators"
+    },
+    {
+      "tag_name": "+d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "fairs & rallies",
+      "tag_alias": "fairs-and-rallies"
+    }
+  ],
+  "category_ids": [
+    123,
+    46,
+    118
+  ],
+  "body_en_plain": "C H R I S T M A S ,   1 9 9 4\n\nSeasons greeting from everyone\nhere at Chezron to all of our\nreaders! Remember to allow for\nthe postal delays at this time\nof year.Especially note the Jan-\nuary issue may be a bit late!\n\n\nTalking about the mail,there's a\nnew automated processing centre\nopening in Leicester early in\nthe new year. How this will aff-\nect delivery is anybody's guess\n- but we all know how computer-\nisation can often be a step back\nparticularly when first set up!\nThe post code is crucial(ours is\non the last page).\n\nThe new version of the Lunter PC\nemulator of the Spectrum is now\nready. It has many new features\nand will be reviewed next month.\nIn particular, note that it now\nhas Disciple/+D emulation on a\nPC disk drive.This means you can\njust put a Spectrum +D disk like\nOUTLET straight in the PC drive\nand run it! (See OUTBOARD).\n\n\nMay we remind readers that we do\nnot answer computer, software,\nhardware or system queries etc.,\npersonally by mail. All such\nqueries are answered through the\nOUTLETTERS section published in\nOUTLET.\n\nWe now have a new list of radio\nand computer rally fixtures for\nthe coming months. There's just\none fixture for December but it\nwould seem there must surely be\nother computer fairs like the\nAll-Formats Fair. If anyone has\na recent list,please send it in.\n\n\n11 DEC Verulam Christmas Rally,\n       Watford Leisure Centre,\n       Info:Walter 0923 262 180\n\n\nThanks for your contributions!\nKeep sending them in. Remember,\nthey don't need to be complete\nprograms - short routines are\nalso helpful to others as well\nas screen pictures and articles\non almost any relevant topic. It\nis always interesting to read,\nfor instance, about software and\nother products that people are\nusing. Articles must be on disk\nor tape though (returned later).\n                    Ron & Brian\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nC H R I S T M A S ,   1 9 9 4\n\nSeasons greeting from everyone here at Chezron to all of our readers! Remember to allow for the postal delays at this time of year.Especially note the Jan- uary issue may be a bit late!\n\nTalking about the mail,there's a new automated processing centre opening in Leicester early in the new year. How this will aff- ect delivery is anybody's guess - but we all know how computer- isation can often be a step back particularly when first set up! The post code is crucial(ours is on the last page).\n\nThe new version of the Lunter PC emulator of the Spectrum is now ready. It has many new features and will be reviewed next month. In particular, note that it now has Disciple/+D emulation on a PC disk drive.This means you can just put a Spectrum +D disk like OUTLET straight in the PC drive and run it! (See OUTBOARD).\n\nMay we remind readers that we do not answer computer, software, hardware or system queries etc., personally by mail. All such queries are answered through the OUTLETTERS section published in OUTLET.\n\nWe now have a new list of radio and computer rally fixtures for the coming months. There's just one fixture for December but it would seem there must surely be other computer fairs like the All-Formats Fair. If anyone has a recent list,please send it in.\n\n11 DEC Verulam Christmas Rally, Watford Leisure Centre, Info:Walter 0923 262 180\n\nThanks for your contributions! Keep sending them in. Remember, they don't need to be complete programs - short routines are also helpful to others as well as screen pictures and articles on almost any relevant topic. It is always interesting to read, for instance, about software and other products that people are using. Articles must be on disk or tape though (returned later). Ron & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers CHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF .\n",
+  "body_ru": "## Editorial (late)\n\n### C H R I S T M A S , 1 9 9 4\n\nСезонные поздравления всем нашим читателям от всего коллектива Chezron! Не забывайте делать поправку на почтовые задержки в это время года. Обратите особое внимание: январский выпуск может немного задержаться!\n\nК слову о почте: в начале нового года в Лестере открывается новый автоматизированный сортировочный центр. Как это повлияет на доставку — остаётся только гадать, но все мы знаем, как компьютеризация порой может стать шагом назад, особенно на этапе запуска! Почтовый индекс теперь имеет решающее значение (наш указан на последней странице).\n\nГотова новая версия эмулятора Спектрума для PC от Lunter. В ней появилось множество новых функций, и мы сделаем на неё обзор в следующем месяце. В частности, обратите внимание, что теперь она поддерживает эмуляцию Disciple/+D на дисководе PC. Это означает, что вы можете просто вставить диск формата Spectrum +D (например, с журналом OUTLET) прямо в дисковод PC и запустить его! (См. раздел OUTBOARD).\n\nНапоминаем читателям, что мы не отвечаем на вопросы по компьютерам, программам, «железу» или системам лично по почте. Все подобные вопросы рассматриваются в рубрике OUTLETTERS, публикуемой в OUTLET.\n\nУ нас появился свежий список запланированных радио- и компьютерных выставок/слётов на ближайшие месяцы. На декабрь запланировано всего одно мероприятие, хотя наверняка должны проходить и другие компьютерные ярмарки, такие как All-Formats Fair. Если у кого-то есть свежее расписание, пожалуйста, присылайте его нам.\n\n```text\n11 DEC Verulam Christmas Rally,\n       Watford Leisure Centre,\n       Info: Walter 0923 262 180\n```\n\nСпасибо за ваши материалы! Продолжайте присылать их. Помните: это не обязательно должны быть законченные программы — короткие полезные процедуры тоже пригодятся другим, равно как и экранные картинки, а также статьи практически на любую актуальную тему. Всегда интересно почитать, например, о программах и других продуктах, которыми пользуются наши читатели. Однако статьи должны быть записаны на дискете или кассете (носители возвращаются).\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n```\n",
+  "text_type": 3
+}

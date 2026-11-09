@@ -1,0 +1,43 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "105",
+  "article_id": "07_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A preview of Outlet issue #106 featuring a program slow-down utility, circle-drawing routines without PI, Tasword/ASCII converter, music decompiler, and more.",
+  "meta_description_ru": "Анонс июньского номера журнала Outlet #106: замедлитель программ, рисование окружностей без числа Пи, конвертер Tasword/ASCII, декомпилятор музыки и другие новинки.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "announcement",
+      "tag_alias": "announcement"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "tasword",
+      "tag_alias": "tasword"
+    },
+    {
+      "tag_name": "graphics",
+      "tag_alias": "graphics"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "It never ceases to amaze me how\nyou, the contributors to OUTLET\ncontinue to come up with fresh\nideas, programs and information\nfor the Classic Computer, the\nSPECTRUM.\n\nJune's issue of OUTLET looks to\nbe fair bursting out (as befits\nthe month) with new programs and\nideas. But don't forget that we\nalways welcome contributions\nfrom any area. What might seem\n\"Old Hat\" to you, may clear\n\n\nsomeone elses mind or give them\ninspiration for a different\napproach to a situation, or even\ntrigger the concept of a brilli-\nant new application.\n\nUsually, we Spectrum users are\npushing to get the highest poss-\nible speed from programs, but\nsometimes it would be useful to\nslow everything down to examine\nexactly what is happening. And\nin next month's OUTLET we have a\nprogram which does that. At a\nvariable rate input by the user,\nall operations are slowed down.\nThere's a discussion of how\ncircles can be drawn without\nusing PI, with a demonstration\nof how it works, and a DRIVECHAT\nwith loads of information about\nprinter control codes.\n\nIf you too were not very impres-\nsed with the Chessboard graphics\nfrom the Spectrum Manual, which\nwere reproduced in OUTLET 102,\ntry some improved ones!\n\nThere are some first class and\nreally useful utilities, includ-\ning one to handle Snapshot files\na DE-compiler of compiled music,\nand a program to change standard\nASCII text files into Tasword II\nformat and vice-versa.\n\nAlso the lighter side of comput-\nering is not forgotten, with a\ndo-it-yourself BINGO kit and at\nleast one wonderful demo.\n\n                          Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "It never ceases to amaze me how you, the contributors to OUTLET, continue to come up with fresh ideas, programs and information for the Classic Computer, the SPECTRUM.\n\nJune's issue of OUTLET looks to be fair bursting out (as befits the month) with new programs and ideas. But don't forget that we always welcome contributions from any area. What might seem \"Old Hat\" to you, may clear someone else's mind or give them inspiration for a different approach to a situation, or even trigger the concept of a brilliant new application.\n\nUsually, we Spectrum users are pushing to get the highest possible speed from programs, but sometimes it would be useful to slow everything down to examine exactly what is happening. And in next month's OUTLET we have a program which does that. At a variable rate input by the user, all operations are slowed down. There's a discussion of how circles can be drawn without using PI, with a demonstration of how it works, and a DRIVECHAT with loads of information about printer control codes.\n\nIf you too were not very impressed with the Chessboard graphics from the Spectrum Manual, which were reproduced in OUTLET 102, try some improved ones!\n\nThere are some first class and really useful utilities, including one to handle Snapshot files, a DE-compiler of compiled music, and a program to change standard ASCII text files into Tasword II format and vice-versa.\n\nAlso the lighter side of computering is not forgotten, with a do-it-yourself BINGO kit and at least one wonderful demo.\n\nChris.\n",
+  "body_ru": "Меня не перестает поражать, как вы, авторы OUTLET, продолжаете генерировать свежие идеи, программы и полезную информацию для классического компьютера — нашего Спектрума.\n\nИюньский номер OUTLET обещает буквально расцвести (как и подобает этому месяцу) новыми разработками и идеями. Но не забывайте, что мы всегда рады материалам на любые темы. То, что вам самим может казаться давно пройденным этапом и «старьем», для кого-то другого станет прозрением, подарит вдохновение взглянуть на задачу под другим углом или даже натолкнет на концепцию потрясающей новой программы.\n\nОбычно мы, спектрумисты, стараемся выжать из программ максимальную скорость, однако порой бывает полезно, наоборот, все замедлить, чтобы детально изучить происходящее. И в следующем выпуске OUTLET будет утилита, делающая именно это: скорость работы замедляется в заданном пользователем темпе. Кроме того, вас ждет статья о рисовании окружностей без использования числа «Пи» с наглядной демонстрацией, а также рубрика DRIVECHAT с огромным количеством информации об управляющих кодах принтеров.\n\nЕсли шахматная графика из официального руководства к Спектруму, которую мы перепечатали в OUTLET 102, вас тоже не впечатлила — попробуйте ее улучшенный вариант!\n\nТакже в номере появятся первоклассные и очень полезные утилиты, среди которых программа для работы со Snapshot-файлами, декомпилятор компилированной музыки, а также конвертер стандартных текстовых файлов ASCII в формат Tasword II и обратно.\n\nНе забыты и простые развлечения: вас ждут набор «Сделай сам BINGO» и как минимум одно замечательное демо.\n\nChris.\n",
+  "text_type": 3
+}

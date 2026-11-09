@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "104",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Late editorial from Outlet #104 (April 1996): 3D stockcar racing demo, Francis Miles' Pickin Part 2, ZX Spectrum +3 disk space details, and query submission policy.",
+  "meta_description_ru": "Дополнительная редакторская колонка Outlet #104 (апрель 1996): анонс 3D stockcar racing, музыка Pickin (Part 2), особенности диска для ZX Spectrum +3 и правила переписки.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus-3"
+    },
+    {
+      "tag_name": "pickin",
+      "tag_alias": "pickin"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "A P R I L ,   1 9 9 6\n\nThere is a really nice one-level\nworking demo of a great new 3D\nstockcar racing game this month.\nYou will see that you can order\nthe full game from the author in\nthe game info- sort of shareware\nconcept.\n\nWow! - contributions of programs\nand of articles to OUTLET have\nIMPROVED this month. Many thanks\nto all who have sent in material\n- you can look forward to lots\nof goodies in forthcoming OUTLET\nissues!\n\n\nWe here at Chezron are working\nlike the clappers too to produce\ngood software - BUT....\n\n\nRemember, we need YOUR support,\nand contributions of articles\nand programs, especially utility\nprograms, are now needed more\nthan ever. Even a short routine\ncan be like gold dust to another\nuser! Send 'em in!\n\n\nPart 2 of Francis Miles' 'PICKIN\n- 128K guitar music - is in this\nissue. Just as with Part 1 in\nlast month's issue, we might not\nget ALL of the music files on\nthe +3 disk - though it looks\nmore hopeful this month as there\nis slightly more room.\n\n+3 users should be alert that it\nis possible that the last one or\ntwo items may not be there! ie,\nthe program may give a disk err-\nor when you select them. Sorry!\n\nWe also found at the last minute\nlast month that the key routine\ncrashes on the +3 so had to put\nin a simple INPUT select. This\nwill probably be true this month\ntoo!\n\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET. We\nare sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\n                    Ron & Brian\n\n\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nA P R I L ,   1 9 9 6\n\nThere is a really nice one-level working demo of a great new 3D stockcar racing game this month. You will see that you can order the full game from the author in the game info- sort of shareware concept.\n\nWow! - contributions of programs and of articles to OUTLET have IMPROVED this month. Many thanks to all who have sent in material - you can look forward to lots of goodies in forthcoming OUTLET issues!\n\nWe here at Chezron are working like the clappers too to produce good software - BUT....\n\nRemember, we need YOUR support, and contributions of articles and programs, especially utility programs, are now needed more than ever. Even a short routine can be like gold dust to another user! Send 'em in!\n\nPart 2 of Francis Miles' 'PICKIN - 128K guitar music - is in this issue. Just as with Part 1 in last month's issue, we might not get ALL of the music files on the +3 disk - though it looks more hopeful this month as there is slightly more room.\n\n+3 users should be alert that it is possible that the last one or two items may not be there! ie, the program may give a disk err- or when you select them. Sorry!\n\nWe also found at the last minute last month that the key routine crashes on the +3 so had to put in a simple INPUT select. This will probably be true this month too!\n\nMay we remind readers, we cannot answer computer, software, hard- ware or system queries etc., personally by mail.  All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder!Share your problems with others! That way, everyone benefits!\n\nRon & Brian\n\nOUTLET is produced by Chris Oliver Ron & Brian Cavers CHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF.\n",
+  "body_ru": "## Editorial (late)\n\n### A P R I L , 1 9 9 6\n\nВ этом месяце вас ждет действительно отличная одноуровневая рабочая демо-версия новой великолепной трехмерной гонки на сток-карах (3D stockcar racing). В описании к игре вы найдете информацию о том, как заказать полную версию у автора — своего рода концепция shareware.\n\nОго! В этом месяце приток программ и статей для OUTLET заметно УЛУЧШИЛСЯ. Огромное спасибо всем, кто прислал свои материалы — в грядущих выпусках OUTLET вас ждет куча всяких вкусностей!\n\nМы здесь, в Chezron, тоже работаем как заведенные, чтобы создавать хороший софт — НО...\n\nПомните, нам нужна ВАША поддержка. Статьи и программы, особенно утилиты, сейчас нужны как никогда. Даже короткая подпрограмма может оказаться на вес золота для другого пользователя! Присылайте их нам!\n\nВ этом номере представлена часть 2 сборника гитарной музыки для 128K 'PICKIN' от Francis Miles. Как и в случае с частью 1 в прошлом месяце, возможно, нам не удастся уместить ВСЕ музыкальные файлы на диск для +3 — хотя в этом месяце шансов больше, так как свободного места чуть-чуть прибавилось.\n\nПользователям +3 следует иметь в виду, что одной-двух последних композиций может не оказаться на месте! То есть программа может выдать ошибку диска при их выборе. Просим прощения!\n\nВ прошлый раз в самую последнюю минуту мы также обнаружили, что процедура опроса клавиш вылетает на +3, поэтому нам пришлось поставить простой выбор через INPUT. Скорее всего, в этом месяце будет так же!\n\nНапоминаем читателям: мы не можем лично отвечать по почте на вопросы по компьютерам, программному или аппаратному обеспечению, системным проблемам и т. д. Все подобные вопросы разбираются через раздел OUTLETTERS в журнале OUTLET. Нам жаль постоянно твердить об этом, но об этом правиле действительно необходимо напоминать всегда! Делитесь своими проблемами с другими! Так польза будет для всех!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF.\n```\n",
+  "text_type": 3
+}

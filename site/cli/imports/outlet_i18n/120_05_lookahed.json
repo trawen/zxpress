@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "120",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A preview of Outlet Issue 121: connecting a 3.5\" drive to the ZX Spectrum +3, 50 fonts for Art Studio, Gasbill update, utilities, and Armageddon.",
+  "meta_description_ru": "Анонс 121-го номера журнала Outlet: подключение дисковода 3.5\" к ZX Spectrum +3, 50 шрифтов для Art Studio, обновление Gasbill, утилиты и Armageddon.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "lookahead",
+      "tag_alias": "lookahead"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-3"
+    },
+    {
+      "tag_name": "art studio",
+      "tag_alias": "art-studio"
+    },
+    {
+      "tag_name": "armageddon",
+      "tag_alias": "armageddon"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Next month there is a useful\nDRIVECHAT for +3 users which\nexplains how a 3.5 inch drive\ncan be connected to the +3,\nwhilst the OUTBURST questions\nthe so-called \"Progress\" of\nmodern life. Then there is a\nbumper bundle of fifty fonts for\nArt Studio, some more wonderful\nanimation, and an update of the\nGasbill program from Issue 115\nto include the new calculation\nthat the gas companies now perf-\norm.\n\n\nThere are several programming\nutilities, plenty of letters and\nsome of your problems solved.\nAmong other things there is a\nglimpse of the famous astronomer\nPatrick Moore,and finally a ver-\nsion of the ultimate battle be-\ntween Good and Evil: Armageddon!\n\n                       Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Next month there is a useful DRIVECHAT for +3 users which explains how a 3.5 inch drive can be connected to the +3, whilst the OUTBURST questions the so-called \"Progress\" of modern life. Then there is a bumper bundle of fifty fonts for Art Studio, some more wonderful animation, and an update of the Gasbill program from Issue 115 to include the new calculation that the gas companies now perform.\n\nThere are several programming utilities, plenty of letters and some of your problems solved. Among other things there is a glimpse of the famous astronomer Patrick Moore, and finally a version of the ultimate battle between Good and Evil: Armageddon!\n\nChris.\n",
+  "body_ru": "В следующем месяце вас ждёт полезный выпуск DRIVECHAT для владельцев +3, в котором объясняется, как подключить 3,5-дюймовый дисковод к +3, в то время как колонка OUTBURST ставит под сомнение так называемый «прогресс» современной жизни. Кроме того, будет увесистый набор из пятидесяти шрифтов для Art Studio, ещё больше замечательной анимации и обновление программы Gasbill из выпуска 115, учитывающее новые методы расчёта, применяемые газовыми компаниями.\n\nТакже вас ждут несколько полезных утилит для программирования, множество писем и ответы на ваши вопросы. Помимо прочего, вы сможете взглянуть на знаменитого астронома Патрика Мура (Patrick Moore) и, наконец, увидеть версию финальной битвы между Добром и Злом: Armageddon!\n\nChris.\n",
+  "text_type": 3
+}

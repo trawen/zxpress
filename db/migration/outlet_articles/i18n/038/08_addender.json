@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "038",
+  "article_id": "08_addender",
+  "title_en": "Addender",
+  "title_ru": "Раздел Add-Enders",
+  "meta_description_en": "Editorial note on the Add-Enders section in Outlet #038, covering contributed utilities, SCREEN$ clip art, the OUTDEMO graphic demo, and the MFPMOD patch for Masterfile.",
+  "meta_description_ru": "Вводная заметка о разделе Add-Enders в журнале Outlet #038: описание присланных программ, экранов SCREEN$, демо OUTDEMO и дополнения MFPMOD для Masterfile.",
+  "authors": [
+    "Brian"
+  ],
+  "tags": [
+    {
+      "tag_name": "Outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "Add-Enders",
+      "tag_alias": "add-enders"
+    },
+    {
+      "tag_name": "Дискмаг",
+      "tag_alias": "diskmag"
+    },
+    {
+      "tag_name": "Материалы читателей",
+      "tag_alias": "reader-submissions"
+    },
+    {
+      "tag_name": "Клип-арт",
+      "tag_alias": "clip-art"
+    }
+  ],
+  "category_ids": [
+    130,
+    119
+  ],
+  "body_en_plain": "Some items contributed to OUTLET\nhave not yet been included for a\nvariety of reasons. It's a shame\nto leave them on the shelf so,if\nappropriate, they will be added\nto this ADD-ENDERS area of the\nmagazine (not microdrive or Opus\nas there is not enough room).\n\nThe material covers a wide range\nof quality and program types:\nutilities, screens, character\nsets and text articles and SOME\nof it may be unedited, untested,\nnot working fully or properly;\nin need of conversion for your\n\nsystem's syntax or printer etc.;\nwithout full instructions or\nwhatever. Readers will have to\nsift through to see if there is\nanything of interest they can\nmake use of and discard the\nrest. Not everything will appear\non all versions necessarily.\n\nSome Add-Enders may be linked to\nOUTLET in the normal way. These\nwill usually precede this text\nfile. Any items that follow this\narticle will possibly need to be\nLOADed manually or may not auto-\nrun when loaded.\n\nThere may be some info on the\nfollowing pages...\n\nNext in ADD-ENDERS is our new\nADD-VERTS section followed by a\nlittle graphic demo I did called\n\"OUTDEMO\".\n\nIn addition there is \"MFPMOD\"\nwhich should be MERGEd into\nMASTERFILE to give a crude print\nout. Please read my reply to Mr.\nE.C. Wignall in OUTLETTERS for\ndetails.\n\nI'll also add lots more clip art\nSCREEN$ which will probably be\nSAVEd under filenames like...\n\"CLIP2. something or other!\n\n                      - Brian.\n",
+  "body_ru_plain": "Некоторые материалы, присланные\nв OUTLET, до сих пор не вошли в\nномер по самым разным причинам.\nЖаль оставлять их на полке, так\nчто по возможности они войдут\nв раздел ADD-ENDERS нашего\nжурнала (кроме версий для\nmicrodrive и Opus, так как\nдля них не хватает места).\n\nМатериал самый разный как по\nкачеству, так и по типам:\nутилиты, экраны, шрифты и\nтекстовые статьи, причём ЧАСТЬ\nиз них может быть не выверена,\nне протестирована, работать не\nвполне корректно; требовать\n\nпеределки под синтаксис вашей\nсистемы, принтер и т.д.; быть\nбез полных инструкций и прочего.\nЧитателям придётся самим всё\nпросмотреть, выбрать то, что\nпредставляет интерес, а лишнее\nотбросить. Не всё обязательно\nпоявится на всех версиях.\n\nНекоторые Add-Enders могут быть\nподключены к OUTLET обычным\nобразом. Они обычно идут перед\nэтим текстом. Все программы,\nидущие после этой статьи,\nвозможно, придётся загружать\n(LOAD) вручную, или же они не\nзапустятся сами после загрузки.\n\nКое-какая информация может быть\nна следующих страницах...\n\nДалее в ADD-ENDERS идёт наша\nновая рубрика ADD-VERTS, а за\nней — небольшое графическое\nдемо \"OUTDEMO\", созданное мной.\n\nКроме того, есть \"MFPMOD\",\nкоторый нужно объединить через\nMERGE с MASTERFILE, чтобы\nполучить черновую распечатку.\nПодробности — в моём ответе\nмистеру E.C. Wignall в рубрике\nOUTLETTERS.\n\nТакже я добавлю ещё кучу\nклип-арта SCREEN$, который\nнаверняка будет сохранён (SAVE)\nпод именами вроде...\n\"CLIP2. что-то там ещё!\n\n                      - Brian.\n",
+  "body_en": "## Addender\n\nSome items contributed to OUTLET have not yet been included for a variety of reasons. It's a shame to leave them on the shelf so, if appropriate, they will be added to this ADD-ENDERS area of the magazine (not microdrive or Opus as there is not enough room).\n\nThe material covers a wide range of quality and program types: utilities, screens, character sets and text articles and SOME of it may be unedited, untested, not working fully or properly; in need of conversion for your system's syntax or printer etc.; without full instructions or whatever. Readers will have to sift through to see if there is anything of interest they can make use of and discard the rest. Not everything will appear on all versions necessarily.\n\nSome Add-Enders may be linked to OUTLET in the normal way. These will usually precede this text file. Any items that follow this article will possibly need to be LOADed manually or may not auto-run when loaded.\n\nThere may be some info on the following pages...\n\nNext in ADD-ENDERS is our new ADD-VERTS section followed by a little graphic demo I did called \"OUTDEMO\".\n\nIn addition there is \"MFPMOD\" which should be MERGEd into MASTERFILE to give a crude print out. Please read my reply to Mr. E.C. Wignall in OUTLETTERS for details.\n\nI'll also add lots more clip art SCREEN$ which will probably be SAVEd under filenames like... \"CLIP2. something or other!\n\n— Brian.\n",
+  "body_ru": "## Раздел Add-Enders\n\nНекоторые материалы, присланные в OUTLET, до сих пор не вошли в номер по самым разным причинам. Жаль оставлять их на полке, так что по возможности они войдут в раздел ADD-ENDERS нашего журнала (кроме версий для microdrive и Opus, так как для них не хватает места).\n\nМатериал самый разный как по качеству, так и по типам: утилиты, экраны, шрифты и текстовые статьи, причём ЧАСТЬ из них может быть не выверена, не протестирована, работать не вполне корректно; требовать переделки под синтаксис вашей системы, принтер и т.д.; быть без полных инструкций и прочего. Читателям придётся самим всё просмотреть, выбрать то, что представляет интерес, а лишнее отбросить. Не всё обязательно появится на всех версиях.\n\nНекоторые Add-Enders могут быть подключены к OUTLET обычным образом. Они обычно идут перед этим текстом. Все программы, идущие после этой статьи, возможно, придётся загружать (LOAD) вручную, или же они не запустятся сами после загрузки.\n\nКое-какая информация может быть на следующих страницах...\n\nДалее в ADD-ENDERS идёт наша новая рубрика ADD-VERTS, а за ней — небольшое графическое демо \"OUTDEMO\", созданное мной.\n\nКроме того, есть \"MFPMOD\", который нужно объединить через MERGE с MASTERFILE, чтобы получить черновую распечатку. Подробности — в моём ответе мистеру E.C. Wignall в рубрике OUTLETTERS.\n\nТакже я добавлю ещё кучу клип-арта SCREEN$, который наверняка будет сохранён (SAVE) под именами вроде... \"CLIP2. что-то там ещё!\n\n\\- Brian.\n",
+  "text_type": 3
+}

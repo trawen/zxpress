@@ -1,0 +1,43 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "052",
+  "article_id": "01_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A preview of the upcoming software and features planned for Outlet issue #053, presented by editor Brian Gaff.",
+  "meta_description_ru": "Анонс программ и статей, запланированных для следующего 53-го номера журнала Outlet от редактора Брайана Гаффа.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "disciple",
+      "tag_alias": "disciple"
+    },
+    {
+      "tag_name": "plus d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "opus discovery",
+      "tag_alias": "opus-discovery"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Planned for next month is PLOTS,\na graph plotting program which\ncan plot your input calculation!\nThere'll be T3PRINT to print\nOpus Discovery OPENTYPE or PRINT\nfiles; a Spectrum TESTCARD to\ntest various Spectrum functions;\nmore great 128K music; OUTCLASS\nof course and a DRIVECHAT with\narticles on RS232.\n\nThere's more clip art and I\nthink I have a new crossword for\nyou.             more...\n\nThere's a game called LIGHT THE\nCONK;a terrific high-res graphic\nprogram that \"twists\" or rotates\nimages; a machine code demo that\nis a short but funny animated\ncartoon and a high-speed copier\nfor Disciple or +D users with\ntwo drives (faster than FORMAT\nD1 TO 2).\n\nThere's $KIPPER which allows the\nup and down cursor to be used in\nan INPUT and all the extra bits\nand pieces in ADD-ENDERS like\nthe continuing magnificent\nserialization of the ROM INDEX!\n\nSee you next month!\n                        - Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "Planned for next month is PLOTS, a graph plotting program which can plot your input calculation! There'll be T3PRINT to print Opus Discovery OPENTYPE or PRINT files; a Spectrum TESTCARD to test various Spectrum functions; more great 128K music; OUTCLASS of course and a DRIVECHAT with articles on RS232.\n\nThere's more clip art and I think I have a new crossword for you.\n\nThere's a game called LIGHT THE CONK; a terrific high-res graphic program that \"twists\" or rotates images; a machine code demo that is a short but funny animated cartoon and a high-speed copier for Disciple or +D users with two drives (faster than FORMAT D1 TO 2).\n\nThere's $KIPPER which allows the up and down cursor to be used in an INPUT and all the extra bits and pieces in ADD-ENDERS like the continuing magnificent serialization of the ROM INDEX!\n\nSee you next month!\n\n- Brian.\n",
+  "body_ru": "В следующем месяце запланирована программа PLOTS — построитель графиков, способный визуализировать ваши вычисления! Также будет T3PRINT для печати файлов Opus Discovery OPENTYPE или PRINT; тестовая таблица Spectrum TESTCARD для проверки различных функций Спектрума; ещё больше отличной 128K-музыки; конечно же, OUTCLASS и рубрика DRIVECHAT со статьями об RS232.\n\nВас ждут новые клипарты и, похоже, свежий кроссворд.\n\nКроме того, готовится игра под названием LIGHT THE CONK; потрясающая графическая программа высокого разрешения, умеющая «скручивать» и вращать изображения; небольшое, но забавное анимационное демо в машинных кодах, а также скоростной копировщик для пользователей систем Disciple и +D с двумя дисководами (работающий быстрее, чем FORMAT D1 TO 2).\n\nПоявится утилита $KIPPER, позволяющая задействовать стрелки вверх и вниз во время работы оператора INPUT, а также различные мелочи в рубрике ADD-ENDERS — включая продолжение великолепной серии материалов ROM INDEX!\n\nДо встречи в следующем месяце!\n\n— Brian.\n",
+  "text_type": 3
+}

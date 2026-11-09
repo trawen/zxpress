@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "121",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of what is coming in the next issue of Outlet magazine, including new utilities, adventures, and games.",
+  "meta_description_ru": "Анонс материалов следующего номера журнала Outlet: полезные утилиты, приключения и игры для ZX Spectrum.",
+  "authors": [
+    "Chris Jenkins"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron",
+      "tag_alias": "chezron"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "tasword",
+      "tag_alias": "tasword"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "A strange encounter on planet\nStrega 3 is one of the items to\nintrigue you in next month's\nOUTLET.\n\n\nThere are many other things to\nlook forward to - including some\nuseful utilities. One to convert\ntext displayed on screen to a\nTasword file, another to run a\ncheck on your RAM chips in the\nSpectrum, and a Label Printer.\n\n\nYou get to meet the seven Dwarfs\nand after a host of other items,\nyou can play a wonderful game\nwith Gregory who has had his\nclock stolen. Have fun!\n\n                        Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "A strange encounter on planet Strega 3 is one of the items to intrigue you in next month's OUTLET.\n\nThere are many other things to look forward to — including some useful utilities. One to convert text displayed on screen to a Tasword file, another to run a check on your RAM chips in the Spectrum, and a Label Printer.\n\nYou get to meet the seven Dwarfs and after a host of other items, you can play a wonderful game with Gregory who has had his clock stolen. Have fun!\n\nChris.\n",
+  "body_ru": "Странная встреча на планете Стрега 3 — лишь один из сюжетов, который ждёт вас в следующем выпуске OUTLET.\n\nВас ожидает и многое другое — включая полезные утилиты: конвертер текста с экрана в файл Tasword, тест микросхем ОЗУ вашего Спектрума, а также программа для печати этикеток Label Printer.\n\nВы встретитесь с семью гномами, а помимо массы других материалов сможете сыграть в замечательную игру про Грегори, у которого украли часы. Приятного времяпрепровождения!\n\nChris.\n",
+  "text_type": 3
+}

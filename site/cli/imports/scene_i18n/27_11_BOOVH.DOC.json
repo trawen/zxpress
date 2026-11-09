@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "27",
+  "article_id": "11_BOOVH.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Boovie Help",
+  "title_ru": "Boovie Help",
+  "meta_description_en": "A brief overview of the BOOV_HLP utility/demo from Scene+ #27: an animated instruction guide featuring gameplay tactics for the game Boovie.",
+  "meta_description_ru": "Краткая заметка о демке BOOV_HLP из Scene+ #27 — анимированном руководстве с тактиками прохождения игры Boovie.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "boovie",
+      "tag_alias": "boovie"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    },
+    {
+      "tag_name": "walkthrough",
+      "tag_alias": "walkthrough"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "BOOV_HLP. ü - BOOVIE HELP - Wieder ein kleines Demo mit einigen\nTaktiken zum Spiel, man kannes auch eine Animierte Anleitung\nnennen.h - Again a Demo for BOOVIE, this time with some tactics\nfor thisgame. You can call it \"an animated instruction\".p -! ü\nÄ! ö ö! ü\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**BOOV_HLP**\n\n**BOOVIE HELP** — Once again, a little demo demonstrating some tactics for the game; you could also call it an animated guide.\n\n*(Again a demo for BOOVIE, this time with some tactics for this game. You can call it \"an animated instruction\".)*\n",
+  "body_ru": "**BOOV_HLP**\n\n**BOOVIE HELP** — Ещё одно небольшое демо, показывающее тактические приёмы для игры; можно сказать, анимированная инструкция.\n\n*(Оригинальный английский текст из журнала: «Again a Demo for BOOVIE, this time with some tactics for this game. You can call it \"an animated instruction\"».)*\n",
+  "text_type": 3
+}

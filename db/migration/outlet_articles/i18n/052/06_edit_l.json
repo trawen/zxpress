@@ -1,0 +1,49 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "052",
+  "article_id": "06_edit_l",
+  "title_en": "Editorial (Late): Christmas 1991 and Copyright Warning",
+  "title_ru": "Редакторская колонка: Рождество 1991 и вопросы авторских прав",
+  "meta_description_en": "Chezron Software's Christmas 1991 editorial in Outlet #052 covers holiday content, clip art notes, and serious warnings regarding game clones and copyright litigation.",
+  "meta_description_ru": "Редакторская колонка Chezron Software к Рождеству 1991 года в Outlet #052: праздничный софт, заметка о клип-арте и предупреждение авторам о клонировании игр и авторских правах.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "copyright",
+      "tag_alias": "copyright"
+    },
+    {
+      "tag_name": "clones",
+      "tag_alias": "clones"
+    },
+    {
+      "tag_name": "sam coupé",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "clip art",
+      "tag_alias": "clip-art"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "CHRISTMAS, 1991\n\nSeason's Greetings to all of our\nreaders!There's a real Christmas\nflavour this month, the Spectrum\nversion especially, with carols,\ntunes,graphics a SANTA ADVENTURE\nand an everlasting calendar!\n\nWe've just a couple of notes to\nmention before you proceed with\nthis month's goodies. Last month\nwe had a CHECKOUT review of the\nclip art being sold by PCG.This,\nit turns out, is actually from\nthe same source as the clip art\nwe've been publishing in OUTLET\nand so much of it you may have\nalready. This wasn't realized at\nthe time; we don't want you to\nspend good money if you have the\nsame art already!\n\nWe have been informed that an ST\npublic domain library has been\nSUCCESSFULLY sued by Waddington\nfor publishing a game called\nSTRABBLE - a variation of the\nfamous SCRABBLE. This is not an\nexact copy but a \"look-alike\".\n\nThis case highlights the care we\nmust take. If you are writing a\nnew game do not simply take the\nprinciples of a copyrighted game\n- even if you change the name. A\ngame like chess is O.K. as it is\nso old that no copyright exists.\n\nOn the SAM COUPE, we've long had\na copy of a public domain\"clone\"\nof TETRIS which we've been very\nreluctant to put in OUTLET. We\nhave also, VERY reluctantly,just\nhad to reject another version of\nthe same game. The odds of any\nserious litigation arising from\nthe publication of such games is\nquite remote but not impossible.\nIt is best to avoid writing any\ngame similar to another which is\ncopyright.\n\nThe whole area is very difficult\nto really define. There is the\nfamous case of PACMAN which is a\ncopyright game of Atari and yet\nhundreds of similar games have\nflooded the market ever since.It\nhas been said that Atari regret\nnot taking action long ago. It\nis clear there are other games\nthat are closely similar and yet\nno action has arisen so it is\nhard to really pin down what is\nright and what is not.\n\nIt's best to play safe and avoid\nproducing games that are very\nsimilar to existing ones and\nespecially not to use exactly\nthe same name which usually will\nenjoy trade mark protection even\nif not registered as such.\n\nNo doubt there will be mistakes\nmade and no doubt there will be\ngames we accept which many will\ndebate as being \"look-alikes\".\nWe shall just have to play it by\near and use our best judgement.\nWe only raise this matter now so\nthat contributors may avoid the\ndisappointment of rejection!\n\nEnought of the serious stuff! It\nIS the festive season so - feast\nyourself on this issue! Enjoy!\n\n\n        MERRY CHRISTMAS!\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_ru_plain": "",
+  "body_en": "### CHRISTMAS, 1991\n\nSeason's Greetings to all of our readers! There's a real Christmas flavour this month, the Spectrum version especially, with carols, tunes, graphics, a SANTA ADVENTURE and an everlasting calendar!\n\nWe've just a couple of notes to mention before you proceed with this month's goodies. Last month we had a CHECKOUT review of the clip art being sold by PCG. This, it turns out, is actually from the same source as the clip art we've been publishing in OUTLET and so much of it you may have already. This wasn't realized at the time; we don't want you to spend good money if you have the same art already!\n\nWe have been informed that an ST public domain library has been SUCCESSFULLY sued by Waddington for publishing a game called STRABBLE — a variation of the famous SCRABBLE. This is not an exact copy but a \"look-alike\".\n\nThis case highlights the care we must take. If you are writing a new game do not simply take the principles of a copyrighted game — even if you change the name. A game like chess is O.K. as it is so old that no copyright exists.\n\nOn the SAM COUPE, we've long had a copy of a public domain \"clone\" of TETRIS which we've been very reluctant to put in OUTLET. We have also, VERY reluctantly, just had to reject another version of the same game. The odds of any serious litigation arising from the publication of such games is quite remote but not impossible. It is best to avoid writing any game similar to another which is copyright.\n\nThe whole area is very difficult to really define. There is the famous case of PACMAN which is a copyright game of Atari and yet hundreds of similar games have flooded the market ever since. It has been said that Atari regret not taking action long ago. It is clear there are other games that are closely similar and yet no action has arisen so it is hard to really pin down what is right and what is not.\n\nIt's best to play safe and avoid producing games that are very similar to existing ones and especially not to use exactly the same name which usually will enjoy trade mark protection even if not registered as such.\n\nNo doubt there will be mistakes made and no doubt there will be games we accept which many will debate as being \"look-alikes\". We shall just have to play it by ear and use our best judgement. We only raise this matter now so that contributors may avoid the disappointment of rejection!\n\nEnough of the serious stuff! It IS the festive season so — feast yourself on this issue! Enjoy!\n\n**MERRY CHRISTMAS!**\n\nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "body_ru": "### РОЖДЕСТВО, 1991\n\nПоздравляем всех наших читателей с праздниками! В этом выпуске царит по-настоящему рождественская атмосфера, особенно в версии для Spectrum: вас ждут рождественские гимны, мелодии, графика, игра SANTA ADVENTURE и вечный календарь!\n\nПрежде чем вы перейдёте к материалам этого номера, мы хотим сделать пару замечаний. В прошлом месяце в рубрике CHECKOUT вышел обзор набора клип-арта, продаваемого компанией PCG. Как выяснилось, он происходит из того же источника, что и графика, которую мы регулярно публиковали в OUTLET, поэтому многое из этого у вас уже может быть. В момент написания обзора мы об этом не знали, а нам вовсе не хочется, чтобы вы тратили кровные деньги на то, что у вас и так есть!\n\nКроме того, нам стало известно, что компания Waddington УСПЕШНО выиграла судебный процесс против одной из библиотек Public Domain для Atari ST за распространение игры STRABBLE — вариации на тему знаменитого SCRABBLE. Это была не точная копия, а игра-подражатель («look-alike»).\n\nЭтот случай показывает, насколько осторожными мы должны быть. Если вы создаёте новую игру, не стоит просто заимствовать правила защищённой авторским правом игры — даже если вы измените название. Классические игры вроде шахмат вполне допустимы, поскольку они настолько древние, что никакого копирайта на них нет.\n\nЧто касается SAM COUPE, у нас уже давно лежит копия PD-«клона» TETRIS, которую мы очень не хотели публиковать в OUTLET. И вот совсем недавно нам пришлось, ОЧЕНЬ неохотно, отклонить ещё одну версию той же игры. Вероятность каких-либо серьёзных судебных исков из-за публикации подобных вещей довольно мала, но вовсе не исключена. Лучше всего избегать написания игр, слишком похожих на другие, защищённые авторским правом.\n\nВсю эту сферу вообще крайне трудно чётко разграничить. Вспомним хрестоматийный пример PACMAN: игра защищена авторскими правами Atari, однако сотни аналогичных клонов наводнили рынок с тех самых пор. Говорят, Atari до сих пор жалеет, что вовремя не приняла меры. Очевидно, что существует множество практически идентичных игр, против которых никаких исков никогда не подавалось, так что провести чёткую грань между дозволенным и недозволенным непросто.\n\nРазумнее всего перестраховаться и не создавать игр, слишком похожих на существующие, а в особенности — не использовать точно такие же названия, которые, как правило, защищены как торговые марки, даже если официально не зарегистрированы в качестве таковых.\n\nОшибки, без сомнения, будут случаться, и наверняка мы примем какие-то игры, по поводу которых пойдут споры, не «подражатели» ли они. Нам остаётся лишь действовать по ситуации и полагаться на здравый смысл. Мы поднимаем этот вопрос сейчас лишь для того, чтобы авторы могли избежать разочарования от отказа в публикации!\n\nНо довольно о серьёзном! Сейчас ВСЁ-ТАКИ пора праздников — так что наслаждайтесь этим номером на полную катушку! Приятного чтения!\n\n**СЧАСТЛИВОГО РОЖДЕСТВА!**\n\nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "text_type": 3
+}

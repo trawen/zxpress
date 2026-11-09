@@ -1,0 +1,48 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "27",
+  "article_id": "10_BOOVI.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Boovie Info",
+  "title_ru": "Boovie Info",
+  "meta_description_en": "A brief overview from Scene+ #27 about the Czech info-demo for the game Boovie, also mentioning KVL's R-Type clone Orion.",
+  "meta_description_ru": "Краткая заметка из Scene+ #27 об чешском инфо-демо к игре Boovie и упоминании клона R-Type — игры Orion от KVL.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "boovie",
+      "tag_alias": "boovie"
+    },
+    {
+      "tag_name": "orion",
+      "tag_alias": "orion"
+    },
+    {
+      "tag_name": "kvl",
+      "tag_alias": "kvl"
+    },
+    {
+      "tag_name": "czech",
+      "tag_alias": "czech"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "BOOV_INF. ü - BOOVIE INFO - Tschechisches (Gesundheit!)\nInfo-Demo zum Spiel BOOVIE, enthältauch eine Notiz über ein\nanderes Spiel von KVL, ORION, einem R-Type Clone das mir etwas\nzu sehr an R-Type erinnert, selbstdie Schußsprites sind\ndieselben. - Czech Information Demo about BOOVIE game, contains\nalso a smallnote about another KVL game, ORION, a R-TYPE clone\nwhich lookstoo much like\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**BOOV_INF** — BOOVIE INFO\n\nA Czech (bless you!) info-demo for the game *BOOVIE*. It also includes a note about another game by KVL: *ORION*, an *R-Type* clone that reminds me a bit too much of *R-Type* — even the shot sprites are identical.\n",
+  "body_ru": "**BOOV_INF** — BOOVIE INFO\n\nЧешское (будьте здоровы!) инфо-демо к игре *BOOVIE*. Также содержит заметку о другой игре от KVL — *ORION*, клоне *R-Type*, который уж слишком сильно напоминает оригинал — даже спрайты выстрелов те же самые.\n",
+  "text_type": 3
+}

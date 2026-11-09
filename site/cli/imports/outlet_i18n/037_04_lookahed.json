@@ -1,0 +1,39 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "037",
+  "article_id": "04_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "Preview of upcoming features in the next issue of Outlet magazine: BASIC utilities, 128K music, camera calculator, games, and more.",
+  "meta_description_ru": "Анонс материалов следующего выпуска журнала Outlet: утилиты BASIC, музыка 128K, фотокалькулятор, игры и новые программы.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "announcement"
+    },
+    {
+      "tag_name": "планы",
+      "tag_alias": "plans"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Planned for next month so far is\nthe ultimate BASIC TRACE utility\nfor you programmers;a routine to\ntrap missing variables;some code\nI have been after for yonks that\nmoves RAMTOP without clearing\nscreen or variables and works in\n128K mode;some 128K music; clip\nart; a routine to toggle between\nthe 48K and 128K BASIC editors\n(with use of the 128K printer\nport in 48K)and there's a clever\nroutine that paints out screens\nlike a rubber eraser.  more...\n\nFor camera enthusiasts there's a\nvery polished program that will\ncalculate and display various\ncamera settings like aperture\netc.There'll be a new crossword;\na platform-and-ladders-type game\nand a program to help Disciple/\n+D users cram more than one\nOUTLET on a disc!There'll be an\nohm/amp/volt calculator for you\nelectronics buffs as well as all\nthe usual regulars including\nOUTCLASS and, I hope, a review\nof LERM's SAMTAPE. There's loads\nof clip art coming in so I'll\nhave to stuff some in ADD-ENDERS\nalong with lots of other goodies\nto keep you all fascinated and\nenthralled.Don't miss it or I'll\nhave to get a proper job.\n                        - Brian.\n",
+  "body_ru_plain": "На следующий месяц пока что\nзапланирована ультимативная\nутилита BASIC TRACE для вас,\nпрограммистов; процедура для\nотлова отсутствующих переменных;\nкод, за которым я гонялся целую\nвечность, передвигающий RAMTOP\nбез очистки экрана и переменных,\nпричём работающий в режиме 128K;\nмузыка для 128K; клипарт;\nпроцедура переключения между\nредакторами 48K и 128K BASIC\n(с использованием порта принтера\n128K в 48K), а также умная\nподпрограмма, стирающая экраны\nподобно ластику.  Далее...\n\nДля любителей фотографии есть\nочень вылизанная программа,\nкоторая рассчитывает и выводит\nразные настройки камеры вроде\nдиафрагмы и т.д. Будет новый\nкроссворд; игра типа «платформы\nи лестницы» и программа в помощь\nпользователям Disciple/+D,\nпозволяющая втиснуть больше\nодного OUTLET на диск! Будет\nкалькулятор ом/ампер/вольт для\nзнатоков электроники, а также\nвсе привычные рубрики, включая\nOUTCLASS и, надеюсь, обзор\nSAMTAPE от LERM. Клипарта\nприсылают навалом, так что\nпридётся запихнуть часть в\nADD-ENDERS вместе с кучей других\nвкусностей, чтобы вам не было\nскучно. Не пропустите, а не то\nмне придётся искать нормальную\nработу.\n                        - Brian.\n",
+  "body_en": "## Lookahead\n\nPlanned for next month so far is the ultimate BASIC TRACE utility for you programmers; a routine to trap missing variables; some code I have been after for yonks that moves RAMTOP without clearing screen or variables and works in 128K mode; some 128K music; clip art; a routine to toggle between the 48K and 128K BASIC editors (with use of the 128K printer port in 48K) and there's a clever routine that paints out screens like a rubber eraser.\n\nFor camera enthusiasts there's a very polished program that will calculate and display various camera settings like aperture etc. There'll be a new crossword; a platform-and-ladders-type game and a program to help Disciple/+D users cram more than one OUTLET on a disc! There'll be an ohm/amp/volt calculator for you electronics buffs as well as all the usual regulars including OUTCLASS and, I hope, a review of LERM's SAMTAPE. There's loads of clip art coming in so I'll have to stuff some in ADD-ENDERS along with lots of other goodies to keep you all fascinated and enthralled. Don't miss it or I'll have to get a proper job.\n\n— Brian.\n",
+  "body_ru": "## Анонс следующего номера\n\nНа следующий месяц пока что запланирована ультимативная утилита BASIC TRACE для вас, программистов; процедура для отлова отсутствующих переменных; код, за которым я гонялся целую вечность, передвигающий RAMTOP без очистки экрана и переменных, причём работающий в режиме 128K; музыка для 128K; клипарт; процедура переключения между редакторами 48K и 128K BASIC (с использованием порта принтера 128K в 48K), а также умная подпрограмма, стирающая экраны подобно ластику. Далее...\n\nДля любителей фотографии есть очень вылизанная программа, которая рассчитывает и выводит разные настройки камеры вроде диафрагмы и т.д. Будет новый кроссворд; игра типа «платформы и лестницы» и программа в помощь пользователям Disciple/+D, позволяющая втиснуть больше одного OUTLET на диск! Будет калькулятор ом/ампер/вольт для знатоков электроники, а также все привычные рубрики, включая OUTCLASS и, надеюсь, обзор SAMTAPE от LERM. Клипарта присылают навалом, так что придётся запихнуть часть в ADD-ENDERS вместе с кучей других вкусностей, чтобы вам не было скучно. Не пропустите, а не то мне придётся искать нормальную работу.\n\n— Brian.\n",
+  "text_type": 3
+}

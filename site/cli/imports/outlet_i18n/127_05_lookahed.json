@@ -1,0 +1,43 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "127",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонсы следующего номера",
+  "meta_description_en": "A preview of the upcoming issue of Outlet: Beta Disc System in Drivechat, new games, utilities, and a health feature on computer posture.",
+  "meta_description_ru": "Анонс следующего номера журнала Outlet: рассказ о Beta Disc System в рубрике Drivechat, новые игры, утилиты и статья о здоровье спины при работе за ПК.",
+  "authors": [
+    "Chris"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "lookahead",
+      "tag_alias": "lookahead"
+    },
+    {
+      "tag_name": "beta-disc",
+      "tag_alias": "beta-disc"
+    },
+    {
+      "tag_name": "drivechat",
+      "tag_alias": "drivechat"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Remember the Beta Disc System?\n........No, nor me, but next\nmonth's DRIVECHAT tells us about\nthis drive system which never\nquite caught on. Surprisingly it\nhad (and still has) several\nexcellent features, as well as\nsome which were not so good.\n\nArticles such as this which\ndiscuss the merits and minus-\npoints of various systems\nhowever obscure or well known,\nwill always be read with avid\n\n\ninterest by us fellow Spectrum\nenthusiasts. So what system do\nyou use? What hardware/software\nhave you discarded in the past,\nand in favour of what and why???\n\nOur stockpile of leisure type\nprograms is still quite healthy,\nso next month there are:-\na brilliant cross between a\nPACMAN and SNAKE game; an\nexcellent demo; and a not too\ndifficult 3D Maze to get lost in\n\nFor those who prefer the more\npractical aspects, there are\nseveral utility type programs:\none that saves your Basic\nvariables separate to the Basic\nfile; a DIY weather mapping\nprogram; one to find the day of\n\n\nthe week of any input date; a\ndictionary construction kit; and\nan interrupt driven music\nplayer.\n\nThen if there's still space\nafter including all your letters\nadverts, and other regular\nfeatures we will squeeze in one\nof your favourite programs from\nan early edition of OUTLET, as\nsuggested in January's OUT-\nLETTERS, and as appears in this\nMarch issue.\n\nFinally, did you know that\nsitting at a computer can damage\nyour back? Don't miss next\nmonth's OUTLET!\n\n               Cheers, Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Remember the Beta Disc System?\n\n........No, nor me, but next month's DRIVECHAT tells us about this drive system which never quite caught on. Surprisingly it had (and still has) several excellent features, as well as some which were not so good.\n\nArticles such as this which discuss the merits and minus-points of various systems however obscure or well known, will always be read with avid interest by us fellow Spectrum enthusiasts. So what system do you use? What hardware/software have you discarded in the past, and in favour of what and why???\n\nOur stockpile of leisure type programs is still quite healthy, so next month there are: a brilliant cross between a PACMAN and SNAKE game; an excellent demo; and a not too difficult 3D Maze to get lost in.\n\nFor those who prefer the more practical aspects, there are several utility type programs: one that saves your Basic variables separate to the Basic file; a DIY weather mapping program; one to find the day of the week of any input date; a dictionary construction kit; and an interrupt driven music player.\n\nThen if there's still space after including all your letters, adverts, and other regular features, we will squeeze in one of your favourite programs from an early edition of OUTLET, as suggested in January's OUT-LETTERS, and as appears in this March issue.\n\nFinally, did you know that sitting at a computer can damage your back? Don't miss next month's OUTLET!\n\nCheers, Chris.\n",
+  "body_ru": "Помните систему Beta Disc?\n\n........Нет? Я тоже, но в рубрике DRIVECHAT следующего месяца нам расскажут об этой дисковой системе, которая так толком и не прижилась. Удивительно, но у неё было (и остаётся) немало отличных качеств, хотя и минусов тоже хватало.\n\nПодобные статьи, в которых разбираются плюсы и минусы различных систем — будь то малоизвестных или широко распространённых — наши собратья-спектрумисты всегда читают с неподдельным интересом. А какую систему используете вы? От какого «железа» или софта вы отказались в прошлом, ради чего именно и почему???\n\nНаши запасы развлекательных программ всё ещё вполне внушительны, поэтому в следующем месяце вас ждут: блестящая смесь PACMAN и змейки (SNAKE); превосходное демо; а также не слишком сложный трёхмерный лабиринт (3D Maze), в котором приятно заблудиться.\n\nДля тех, кто предпочитает более практичные вещи, мы приготовили несколько утилит: программу, которая сохраняет переменные Бейсика отдельно от самого Basic-файла; программу для самостоятельного построения карт погоды; утилиту для определения дня недели по любой введённой дате; конструктор словарей; а также плеер музыки, работающий по прерываниям.\n\nКроме того, если останется место после размещения всех ваших писем, объявлений и других регулярных материалов, мы протиснем одну из ваших любимых программ из ранних выпусков OUTLET — как и предлагалось в январском выпуске OUT-LETTERS, и как сделано в текущем мартовском номере.\n\nИ напоследок: знаете ли вы, что долгое сидение за компьютером может повредить вашу спину? Не пропустите следующий номер OUTLET!\n\nВсего наилучшего, Chris.\n",
+  "text_type": 3
+}

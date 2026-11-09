@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "142",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонсы следующего номера",
+  "meta_description_en": "A preview of the next issue of Outlet magazine: portable Spectrum guide in Drivechat, a TV card game, fractal software, RAM finder, and digital TV discussion.",
+  "meta_description_ru": "Анонс следующего выпуска журнала Outlet: создание портативного Спектрума, карточная игра по телешоу, фракталы, утилита поиска свободной RAM и статья о цифровом ТВ.",
+  "authors": [
+    "Chris"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "portable spectrum",
+      "tag_alias": "portable-spectrum"
+    },
+    {
+      "tag_name": "announcement",
+      "tag_alias": "announcement"
+    }
+  ],
+  "category_ids": [
+    123,
+    124
+  ],
+  "body_en_plain": "Have you ever wished that your\nSpeccy was fully portable, so\nthat you could use it oudoors on\na sunny day instead of being\ncooped up indoors? You could\neven take a portable on holiday\nwith you.... just think of it...\nlounging on the beach reading\nthe latest OUTLET!! Bliss, or\nwhat?? The DRIVECHAT in next\nmonth's issue explains how\nrelatively simple it is, to make\nyourself a portable Spectrum.\n\n\nOther fascinating items in next\nmonth's OUTLET include a simple\nbut very addictive card game,\nwhich has been running for donk-\ney's years on TV, and is still\nrunning successfully!.\n\nThere's an intriguing fractal\nprogram, some superb graphics,\nsome music, and a utility to\nrapidly find where spaces are in\nRAM for lodging code etc.\n\nIf you've not got Brian's superb\nCATLOADER program (I use it all\nthe time, as it makes just about\neverything that much easier!),\n[see OUTVERTS! - Ed] there is an\nalternative AUTOMENU program\nwhich is styled on the 128k menu\npanels.\n\n\nOUTBURST in next month's OUTLET\ndiscusses the advent of Digital\nTelevision, and after loads more\ninteresting items, the issue is\nrounded off with a sound-sample\nand yet another super Demo.\n\nSee you all on the beach with\nyour portable Spectrums!\n\n                        Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Have you ever wished that your Speccy was fully portable, so that you could use it oudoors on a sunny day instead of being cooped up indoors? You could even take a portable on holiday with you.... just think of it... lounging on the beach reading the latest OUTLET!! Bliss, or what?? The DRIVECHAT in next month's issue explains how relatively simple it is, to make yourself a portable Spectrum.\n\nOther fascinating items in next month's OUTLET include a simple but very addictive card game, which has been running for donkey's years on TV, and is still running successfully!\n\nThere's an intriguing fractal program, some superb graphics, some music, and a utility to rapidly find where spaces are in RAM for lodging code etc.\n\nIf you've not got Brian's superb CATLOADER program (I use it all the time, as it makes just about everything that much easier!), [see OUTVERTS! - Ed] there is an alternative AUTOMENU program which is styled on the 128k menu panels.\n\nOUTBURST in next month's OUTLET discusses the advent of Digital Television, and after loads more interesting items, the issue is rounded off with a sound-sample and yet another super Demo.\n\nSee you all on the beach with your portable Spectrums!\n\nChris.\n",
+  "body_ru": "Вам когда-нибудь хотелось, чтобы ваш «Спекки» был полностью портативным, и в солнечный день им можно было пользоваться на свежем воздухе, а не сидеть взаперти дома? Портативку можно было бы даже взять с собой в отпуск... только представьте: лежите вы на пляже и читаете свежий OUTLET! Разве не блаженство? Рубрика DRIVECHAT в следующем выпуске расскажет, насколько просто собрать себе портативный Spectrum.\n\nСреди других увлекательных материалов следующего номера OUTLET — простая, но крайне затягивающая карточная игра, которая уже целую вечность с неизменным успехом идет по телевидению!\n\nТакже вас ждут занятная программа построения фракталов, превосходная графика, музыка и утилита для быстрого поиска свободных областей в ОЗУ для размещения кода и других данных.\n\nЕсли у вас еще нет великолепной программы CATLOADER от Брайана (я сам пользуюсь ей постоянно, с ней всё становится намного проще!) [см. OUTVERTS! — Ред.], то появится альтернативная утилита AUTOMENU, интерфейс которой оформлен в стиле панелей меню Spectrum 128k.\n\nВ рубрике OUTBURST в следующем выпуске мы поговорим о приходе цифрового телевидения. Помимо массы других интересных материалов, номер завершат звуковой сэмпл и очередное супер-демо.\n\nУвидимся на пляже со своими портативными «Спектрумами»!\n\nChris.\n",
+  "text_type": 3
+}

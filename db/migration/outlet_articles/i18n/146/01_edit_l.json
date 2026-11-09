@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "146",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Brief late editorial from Outlet #146: a minor bug fix for CATLOADER on the +D interface and issue greetings.",
+  "meta_description_ru": "Краткая редакторская колонка журнала Outlet #146: исправление мелкого сбоя в CATLOADER для интерфейса +D и анонс выпуска.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "catloader",
+      "tag_alias": "catloader"
+    },
+    {
+      "tag_name": "plus d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "After all these years, CATLOADER\nis still going strong and really\ntrouble free - but one minor and\nmicroscopic glitch is there and\nChris Oliver found it! The patch\nto correct it is in this issue.\nNote, this only affects the +D\nversion - not the +3.\n\nThis month's OUTLET contains the\nusual good mix of items - all\nglitch free of course! Enjoy!\n\n                     Ron & Brian\n\n\n\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n   Email: outletmag@yahoo.com.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nAfter all these years, CATLOADER is still going strong and really trouble free - but one minor and microscopic glitch is there and Chris Oliver found it! The patch to correct it is in this issue. Note, this only affects the +D version - not the +3.\n\nThis month's OUTLET contains the usual good mix of items - all glitch free of course! Enjoy!\n\nRon & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers 34 Saltersgate Drive Birstall, Leicester LE4 3FF\n\nEmail: outletmag@yahoo.com.\n",
+  "body_ru": "## Editorial (late)\n\nСпустя столько лет CATLOADER по-прежнему отлично работает и практически не доставляет хлопот — но один крошечный, микроскопический сбой всё-таки нашёлся, и обнаружил его Chris Oliver! Патч для его исправления включён в этот номер. Обратите внимание, это касается только версии для +D, но не для +3.\n\nВ этом месяце OUTLET предлагает привычную отличную смесь материалов — разумеется, совершенно безглючную! Приятного чтения!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n   Email: outletmag@yahoo.com.\n```\n",
+  "text_type": 3
+}

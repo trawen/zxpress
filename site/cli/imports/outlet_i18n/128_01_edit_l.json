@@ -1,0 +1,46 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "128",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Outlet editorial from April 1998 discussing the Millennium Bug (Y2K), economic consequences, and programmer responsibility for critical software.",
+  "meta_description_ru": "Редакционная заметка Outlet за апрель 1998 года: размышления о «проблеме 2000 года» (Y2K) и ответственности программистов за халатность в критическом софте.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet-magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "y2k",
+      "tag_alias": "y2k"
+    },
+    {
+      "tag_name": "millennium-bug",
+      "tag_alias": "millennium-bug"
+    },
+    {
+      "tag_name": "мнение",
+      "tag_alias": "opinion"
+    }
+  ],
+  "category_ids": [
+    123,
+    101,
+    104
+  ],
+  "body_en_plain": "A P R I L ,   1 9 9 8\n\nIf you receive this OUTLET issue\nin the first 10 days of the\nmonth, don't panic - it just\nmeans we're clawing our way back\nto being on time again! If you\nhave not received this yet then\nignore this message.\n\nAs the year 2000 approaches and\nnow even the government seems to\nbe publicising the dangers of\nthe millenium bug, it is a myst-\nery why nobody seems interested\nin those responsible. The causes\nare mostly ignored; occasionally\nyou hear a weak \"oh, programmers\nin the 1970s never dreamt their\nsoftware would still be in use\nin the year 2000\". There can be\nlittle software from the '70s\nstill in use now. Most must have\nbeen written in the 1990s and\nsome in the later 1980s.\n\nWe are now talking about perhaps\nbillions of pounds of loss to\nthe economy and even risk to our\nhealth and security. Apparently\nthere is hospital equipment that\nmay fail!\n\nHere we have a major crime but\nnobody seems to be looking for\nthe criminals!\n\nProgrammers must, by the very\nnature of their job, be rational\nand methodical. Any programmer\nwho has written software in the\nlate 1980s or 1990s to be used\nin a medical situation and which\nuses only a two-digit year for\nthe date ought to be prosecuted\nand locked up.There is no excuse\nfor such criminal negligence. At\nthe very least,critical software\nought to have had a warning such\nas \"This second-rate software\nwill fail in the year 2000\". Who\ndo these programmers think they\nare? Let these highly-paid cul-\nprits pay the costs!\n\n\nThe Guardian recently reported,\n\"The problem has been recognised\nfor decades... when granting 25\nyear mortgages for example..Most\npleas for action carried little\nweight in the 1980s.\" If that is\nnot a confirmation of guilt then\nwhat is?\n\n                   Ron & Brian\n\n\n\n\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n Email: ron.cavers@virgin.net.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nA P R I L ,   1 9 9 8\n\nIf you receive this OUTLET issue in the first 10 days of the month, don't panic - it just means we're clawing our way back to being on time again! If you have not received this yet then ignore this message.\n\nAs the year 2000 approaches and now even the government seems to be publicising the dangers of the millenium bug, it is a myst- ery why nobody seems interested in those responsible. The causes are mostly ignored; occasionally you hear a weak \"oh, programmers in the 1970s never dreamt their software would still be in use in the year 2000\". There can be little software from the '70s still in use now. Most must have been written in the 1990s and some in the later 1980s.\n\nWe are now talking about perhaps billions of pounds of loss to the economy and even risk to our health and security. Apparently there is hospital equipment that may fail!\n\nHere we have a major crime but nobody seems to be looking for the criminals!\n\nProgrammers must, by the very nature of their job, be rational and methodical. Any programmer who has written software in the late 1980s or 1990s to be used in a medical situation and which uses only a two-digit year for the date ought to be prosecuted and locked up.There is no excuse for such criminal negligence. At the very least,critical software ought to have had a warning such as \"This second-rate software will fail in the year 2000\". Who do these programmers think they are? Let these highly-paid cul- prits pay the costs!\n\nThe Guardian recently reported, \"The problem has been recognised for decades... when granting 25 year mortgages for example..Most pleas for action carried little weight in the 1980s.\" If that is not a confirmation of guilt then what is?\n\nRon & Brian\n\nOUTLET is produced by Chris Oliver Ron & Brian Cavers 34 Saltersgate Drive Birstall, Leicester LE4 3FF\n\nEmail: ron.cavers@virgin.net.\n",
+  "body_ru": "## Editorial (late)\n\nА П Р Е Л Ь , 1 9 9 8\n\nЕсли вы получили этот номер OUTLET в первые 10 дней месяца, не паникуйте — это просто означает, что мы изо всех сил стараемся снова войти в график! Если же вы его еще не получили, проигнорируйте это сообщение.\n\nС приближением 2000 года, когда даже правительство, похоже, вовсю трубит об опасностях «проблемы 2000 года» (millenium bug), остается загадкой, почему никто, кажется, не интересуется теми, кто в этом виноват. Причины по большей части замалчиваются; изредка можно услышать слабое оправдание: «Ой, программисты в 1970-х и подумать не могли, что их софт доживет до 2000 года». Но из 70-х сейчас вряд ли что-то еще работает. Большинство программ должно было быть написано в 1990-х и какая-то часть — в конце 1980-х.\n\nСейчас речь идет об ущербе для экономики, исчисляемом, возможно, миллиардами фунтов, и даже о риске для нашего здоровья и безопасности. Судя по всему, из строя может выйти медицинское оборудование в больницах!\n\nПеред нами крупное преступление, но преступников никто, кажется, не ищет!\n\nПрограммисты уже по самой специфике своей работы должны быть рациональными и методичными. Любого программиста, который в конце 1980-х или в 1990-х написал софт для применения в медицине и использовал при этом лишь две цифры для обозначения года в дате, следует привлечь к суду и посадить за решетку. Такой преступной халатности нет оправдания. Как минимум, в критически важном ПО должно было присутствовать предупреждение вроде: «Этот второсортный софт выйдет из строя в 2000 году». Кем эти программисты себя возомнили? Пусть эти высокооплачиваемые виновники сами оплачивают все расходы!\n\nThe Guardian недавно писала: «Проблема осознавалась десятилетиями... например, при выдаче 25-летних ипотек... Однако в 1980-х большинство призывов к действию всерьез не воспринимались». Если это не признание вины, то что же тогда?\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n Email: ron.cavers@virgin.net.\n```\n",
+  "text_type": 3
+}

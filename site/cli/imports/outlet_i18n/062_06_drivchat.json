@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "062",
+  "article_id": "06_drivchat",
+  "title_en": "Spares",
+  "title_ru": "Запчасти",
+  "meta_description_en": "Malcolm Perry shares useful contacts of UK suppliers and electronics firms stocking ZX Spectrum spares, replacement parts, and disk drives.",
+  "meta_description_ru": "Малкольм Перри делится контактами британских поставщиков и фирм, где можно приобрести запчасти, комплектующие и дисководы для ZX Spectrum.",
+  "authors": [
+    "Malcolm Perry"
+  ],
+  "tags": [
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "hardware",
+      "tag_alias": "hardware"
+    },
+    {
+      "tag_name": "spares",
+      "tag_alias": "spares"
+    },
+    {
+      "tag_name": "disk drives",
+      "tag_alias": "disk-drives"
+    },
+    {
+      "tag_name": "repairs",
+      "tag_alias": "repairs"
+    }
+  ],
+  "category_ids": [
+    10,
+    16,
+    118
+  ],
+  "body_en_plain": "ARTICLE       Author      Page\n -------       ------      ----\n\n\"SPARES\"   Malcolm Perry    02\n\n    \"SPARES\" by Malcolm Perry\n    -------------------------\n\"Where can I get..?\" is a phrase\nthat seems to crop up fairly\noften in OUTLETTERS so the\nfollowing may be of interest as\nat least an enquiry point. At\nthe time of writing I spoke to\nthe firms to tell them of my\nintention of this article and to\nconfirm they have a reasonable\nstock to make it worthwhile but\nobviously stocks of these types\nof spares do fluctuate somewhat.\n\nExamples of items on offer are:\nkeyboards, membranes, complete\nPCBs for various Spectrums such\nas 48k,+2A,+3.+2/+3, instruction\nbooks. as well as new machines\netc.\n\nGraeme Scarr, G. S. Electronics\n0831 513996 (mobile phone as in\nmiddle of moving premises and\nnew phone not yet known but be\nwary as I was once told phoning\nto a mobile phone can be\nexpensive).However,this firm did\nhave the largest variety of\nSpectrum-related items on show.\n\nComputer Supplies Direct, Paul\nElkin, (Market Drayton) 0630\n653193 or Richard Durose\n(Stoke-on-Trent) 0782 311471.\n\nJ&P Electronics (Kidderminster)\n0562 753893 may be able to help\nwith individual components, ICs\nand etc., as well as dealing in\nsecond-hand machines(note though\nthis aspect is more of a side-\nline I would say).\n\nOasis Computer Systems, (South\nGlam)0222 531270 stock bare disc\ndrives of various types (believe\nnot 3\")but they do have the 3.5\"\n780k (DSDD).\n\nFor metal cases for disc drives\nand also to make metal boxes,\ncases, panels, plain or punched\nto order with various finishes,\ncontact H.J. Morgan Smith (High\nWycombe). 0494 532421.\n\n\nThe first two firms mentioned\nalso deal with a variety of\nother makes of computers and\nsystems together with a wide\nrange of general computers,\nprinters,hardware,some software,\nconsumables, leads and so on.\n\nAs it happens I have not had any\nneed to deal with the firms by\nmail or phone but see them at a\nnumber of events I have been to\nand they have all seemed ok to\ndeal with over the counter.\n\nFinding Spectrum spares is a bit\nlike a treasure hunt so more\nclues next month! - only joking,\nbut good hunting!\n\n                  Malcolm Perry.\n",
+  "body_ru_plain": "",
+  "body_en": "## \"SPARES\"\n### by Malcolm Perry\n\n\"Where can I get..?\" is a phrase that seems to crop up fairly often in OUTLETTERS, so the following may be of interest as at least an enquiry point. At the time of writing I spoke to the firms to tell them of my intention of this article and to confirm they have a reasonable stock to make it worthwhile, but obviously stocks of these types of spares do fluctuate somewhat.\n\nExamples of items on offer are: keyboards, membranes, complete PCBs for various Spectrums such as 48k, +2A, +3, +2/+3, instruction books, as well as new machines etc.\n\n* **Graeme Scarr, G. S. Electronics**  \n  0831 513996 (mobile phone as in middle of moving premises and new phone not yet known, but be wary as I was once told phoning to a mobile phone can be expensive). However, this firm did have the largest variety of Spectrum-related items on show.\n\n* **Computer Supplies Direct**  \n  Paul Elkin, (Market Drayton) 0630 653193 or Richard Durose (Stoke-on-Trent) 0782 311471.\n\n* **J&P Electronics** (Kidderminster)  \n  0562 753893 — may be able to help with individual components, ICs and etc., as well as dealing in second-hand machines (note though this aspect is more of a side-line I would say).\n\n* **Oasis Computer Systems** (South Glam)  \n  0222 531270 — stock bare disc drives of various types (believe not 3\", but they do have the 3.5\" 780k DSDD).\n\n* **H.J. Morgan Smith** (High Wycombe)  \n  0494 532421 — for metal cases for disc drives and also to make metal boxes, cases, panels, plain or punched to order with various finishes.\n\nThe first two firms mentioned also deal with a variety of other makes of computers and systems together with a wide range of general computers, printers, hardware, some software, consumables, leads and so on.\n\nAs it happens I have not had any need to deal with the firms by mail or phone, but see them at a number of events I have been to, and they have all seemed ok to deal with over the counter.\n\nFinding Spectrum spares is a bit like a treasure hunt so more clues next month! — only joking, but good hunting!\n\nMalcolm Perry.\n",
+  "body_ru": "## «ЗАПЧАСТИ»\n### Малкольм Перри\n\nВопрос «Где я могу достать?..» довольно часто мелькает в письмах читателей OUTLETTERS, поэтому следующая подборка может оказаться полезной хотя бы в качестве отправной точки для наведения справок. Перед написанием статьи я связался с указанными фирмами, сообщил о своих намерениях и уточнил, располагают ли они достаточным ассортиментом, чтобы публикация имела смысл. Однако понятно, что запасы подобных комплектующих постоянно меняются.\n\nСреди предлагаемых товаров встречаются: клавиатуры, мембраны, готовые платы для различных моделей Spectrum (таких как 48k, +2A, +3, +2/+3), руководства пользователя, а также новые компьютеры и прочее.\n\n* **Graeme Scarr, G. S. Electronics**  \n  0831 513996 (мобильный телефон, так как фирма находится в процессе переезда и постоянный номер пока неизвестен; имейте в виду, что звонки на мобильные могут влететь в копеечку). Тем не менее, у этой компании был самый богатый выбор спектрумовских товаров на выставках.\n\n* **Computer Supplies Direct**  \n  Paul Elkin, (Market Drayton) 0630 653193 или Richard Durose (Stoke-on-Trent) 0782 311471.\n\n* **J&P Electronics** (Kidderminster)  \n  0562 753893 — могут помочь с отдельными радиодеталями, микросхемами и тому подобным, а также торгуют подержанными компьютерами (хотя последнее, на мой взгляд, для них скорее побочная деятельность).\n\n* **Oasis Computer Systems** (South Glam)  \n  0222 531270 — продают бескорпусные дисководы различных типов (кажется, не 3-дюймовые, но 3.5\" 780k DSDD у них точно есть).\n\n* **H.J. Morgan Smith** (High Wycombe)  \n  0494 532421 — металлические корпуса для дисководов, а также изготовление металлических коробок, корпусов и панелей на заказ (гладких или с перфорацией, с различными вариантами отделки).\n\nПервые две упомянутые фирмы также работают с множеством компьютеров других платформ, предлагая широкий спектр ПК, принтеров, «железа», кое-какого софта, расходных материалов, кабелей и тому подобного.\n\nСам я лично не обращался к ним по почте или телефону, однако регулярно встречаю их представителей на компьютерных мероприятиях, и в личном общении за прилавком они производят вполне благоприятное впечатление.\n\nПоиск запчастей для Спектрума напоминает охоту за сокровищами, так что новые подсказки ждите в следующем месяце! Шучу, конечно, но удачной вам охоты!\n\nМалкольм Перри.\n",
+  "text_type": 3
+}

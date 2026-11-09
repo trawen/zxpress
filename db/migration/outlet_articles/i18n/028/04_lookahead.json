@@ -1,0 +1,48 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "028",
+  "article_id": "04_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем выпуске",
+  "meta_description_en": "Preview of the next issue of Outlet magazine: Tasword 2 print utility, Globular Troubles 3D game, Easydraw, Clipcomposer, and upcoming clip art.",
+  "meta_description_ru": "Анонс следующего выпуска журнала Outlet: утилита печати для Tasword 2, игра Globular Troubles, утилиты Easydraw, Clipcomposer и клипарты.",
+  "authors": [
+    "Brian Renwick"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "tasword 2",
+      "tag_alias": "tasword-2"
+    },
+    {
+      "tag_name": "easydraw",
+      "tag_alias": "easydraw"
+    },
+    {
+      "tag_name": "clipcomposer",
+      "tag_alias": "clipcomposer"
+    },
+    {
+      "tag_name": "globular troubles",
+      "tag_alias": "globular-troubles"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_en_plain": "Next month we have a utility for\nTasword 2 that prints 2 columns\nof 64 characters each; a great\nsound-to-light program; a page\nsystem text and graphics editor;\nEASYDRAW to help design high-res\nSCREEN$;a Morse code tutor and a\nprogram for those into maths -\nit solves equations using linear\ninterpolation (postponed from\nNovember). There's also GLOBULAR\nTROUBLES - an excellent strategy\ngame in 3D and probably our best\never! All the regulars as well\nof course and CHECKOUT reviews.\n\nNow, we've had requests for clip\nart and so we plan to have a\nseries of such screens- probably\nnot every month but quite often.\nHowever, not everyone uses a dtp\npackage like WORDMASTER so next\nmonth, to start the ball rolling\nwe have CLIPCOMPOSER you can use\nto extract graphics from clip\nart screens (or any SCREEN$) to\nhelp create your own composite\npictures. The most non-artistic\nuser can make reasonable screens\nwith a little patience. Thus use\nof subsequent OUTLET clip art\nwill not be limited to printing.\nKeep sending in any requests for\nsubject matter and any screens\nthemselves of course!\n                      - Brian.\n",
+  "body_ru_plain": "В следующем месяце вас ждёт\nутилита для Tasword 2, которая\nпечатает в 2 колонки по 64\nсимвола каждая; отличная цвето-\nмузыкальная программа; редактор\nтекста и графики с постраничной\nсистемой; EASYDRAW для создания\nэкранов SCREEN$ высокого\nразрешения; самоучитель азбуки\nМорзе и программа для любителей\nматематики — она решает\nуравнения методом линейной\nинтерполяции (перенесено с\nноября). Также GLOBULAR TROUBLES\n— отличная 3D-стратегия и,\nпожалуй, наша лучшая игра!\nКонечно же, все постоянные\nрубрики и обзоры в CHECKOUT.\n\nК нам поступали просьбы о клип-\nартах, и мы планируем серию\nтаких экранов — пожалуй, не\nкаждый месяц, но довольно часто.\nОднако не все пользуются DTP-\nпакетами вроде WORDMASTER,\nпоэтому в следующем месяце для\nзатравки мы дадим CLIPCOMPOSER,\nс помощью которого можно\nвырезать графику из клипарт-\nэкранов (или любых SCREEN$),\nчтобы собирать собственные ком-\nпозиции. Даже самый далёкий от\nискусства пользователь при\nнебольшом терпении сможет делать\nвполне приличные экраны. Так\nчто использование будущих клип-\nартов OUTLET не ограничится\nлишь печатью. Присылайте свои\nпожелания по темам и, конечно\nже, сами экраны!\n                      - Brian.\n",
+  "body_en": "## Lookahead\n\nNext month we have a utility for Tasword 2 that prints 2 columns of 64 characters each; a great sound-to-light program; a page system text and graphics editor; EASYDRAW to help design high-res SCREEN$; a Morse code tutor and a program for those into maths - it solves equations using linear interpolation (postponed from November). There's also GLOBULAR TROUBLES - an excellent strategy game in 3D and probably our best ever! All the regulars as well of course and CHECKOUT reviews.\n\nNow, we've had requests for clip art and so we plan to have a series of such screens- probably not every month but quite often. However, not everyone uses a dtp package like WORDMASTER so next month, to start the ball rolling we have CLIPCOMPOSER you can use to extract graphics from clip art screens (or any SCREEN$) to help create your own composite pictures. The most non-artistic user can make reasonable screens with a little patience. Thus use of subsequent OUTLET clip art will not be limited to printing. Keep sending in any requests for subject matter and any screens themselves of course!\n\n— Brian.\n",
+  "body_ru": "## В следующем выпуске\n\nВ следующем месяце вас ждёт утилита для Tasword 2, которая печатает в 2 колонки по 64 символа каждая; отличная цветомузыкальная программа; редактор текста и графики с постраничной системой; EASYDRAW для создания экранов SCREEN$ высокого разрешения; самоучитель азбуки Морзе и программа для любителей математики — она решает уравнения методом линейной интерполяции (перенесено с ноября). Также GLOBULAR TROUBLES — отличная 3D-стратегия и, пожалуй, наша лучшая игра! Конечно же, все постоянные рубрики и обзоры в CHECKOUT.\n\nК нам поступали просьбы о клипартах, и мы планируем серию таких экранов — пожалуй, не каждый месяц, но довольно часто. Однако не все пользуются DTP-пакетами вроде WORDMASTER, поэтому в следующем месяце для затравки мы дадим CLIPCOMPOSER, с помощью которого можно вырезать графику из клипарт-экранов (или любых SCREEN$), чтобы собирать собственные композиции. Даже самый далёкий от искусства пользователь при небольшом терпении сможет делать вполне приличные экраны. Так что использование будущих клипартов OUTLET не ограничится лишь печатью. Присылайте свои пожелания по темам и, конечно же, сами экраны!\n\n— Brian.\n",
+  "text_type": 3
+}

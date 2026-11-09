@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "137",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Editorial for the January 1999 issue of Outlet magazine: holiday schedule, Bernadette Dowsland's Colouring Book clipart disk, OUT35TO3 copy program bug fix, and New Year wishes.",
+  "meta_description_ru": "Редакторская колонка январского номера журнала Outlet за 1999 год: задержка выпуска, диск клипартов Colouring Book, исправление ошибки в утилите копирования OUT35TO3 и новогодние пожелания.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet mag",
+      "tag_alias": "outlet-mag"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus-3"
+    },
+    {
+      "tag_name": "bug fix",
+      "tag_alias": "bug-fix"
+    },
+    {
+      "tag_name": "batty",
+      "tag_alias": "batty"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "J A N U A R Y ,   1 9 9 9\n\nWell, we're rather upside down\nafter the Christmas season so\nsorry if you get this a little\nlate. But, though running over\ntime now,we still hope to catch\nup and get this issue to you\nbefore the 10th!\n\nMany thanks for all the Christ-\nmas cards and your good wishes\nfor the new year. We'll make the\nnext millenium yet! We've a fair\nsupply of leisure items but need\nmore utilities so contributions\nof even mini items would be most\nwelcome.\n\nBernadette Dowsland has brought\nout a new disk full of clipart\ncalled \"COLOURING BOOK\" which is\navailable from her usual Tomato\nGirl Services address (see the\nOUTVERTS advert in this and each\nissue) for just `1 plus an SAE.\nIf it's the +3 3\" version you\nwant then also please send her a\nblank 3\" disk. They are just too\nexpensive and difficult to get\nhold of now!\n\n\nLast month we found that the +3\n3\" to 3.5\" OUTLET copy program,\nOUT35TO3 had a glitch. We have\ncorrected the bug and put the\nnew version in this issue. If\nyou have made your own changes\nto the previous version and you\nwould rather just alter that,\nthen just change the CLS in Line\n3000 to CLEAR 32768: GO SUB 9995\n\nIt was only when copying OUTLET\n136 last month that it went\nwrong. Most months it would have\nbeen all right.Without the CLEAR\nit was corrupting the variables.\nServes us right for not doing it\nthe 'proper way' in the first\nplace. The truth is, often you\ndo not need to do a CLEAR so\nlong as you know you have plenty\nof memory free.\n\nWell, there's a good mix in this\nmonth's issue and the game BATTY\nis even more fun with loads of\nlives! Enjoy! - and a Happy New\nYear to All!\n\n                     Ron & Brian\n\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n   Email: outletmag@yahoo.com.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nJ A N U A R Y ,   1 9 9 9\n\nWell, we're rather upside down after the Christmas season so sorry if you get this a little late. But, though running over time now,we still hope to catch up and get this issue to you before the 10th!\n\nMany thanks for all the Christ- mas cards and your good wishes for the new year. We'll make the next millenium yet! We've a fair supply of leisure items but need more utilities so contributions of even mini items would be most welcome.\n\nBernadette Dowsland has brought out a new disk full of clipart called \"COLOURING BOOK\" which is available from her usual Tomato Girl Services address (see the OUTVERTS advert in this and each issue) for just `1 plus an SAE. If it's the +3 3\" version you want then also please send her a blank 3\" disk. They are just too expensive and difficult to get hold of now!\n\nLast month we found that the +3 3\" to 3.5\" OUTLET copy program, OUT35TO3 had a glitch. We have corrected the bug and put the new version in this issue. If you have made your own changes to the previous version and you would rather just alter that, then just change the CLS in Line 3000 to CLEAR 32768: GO SUB 9995\n\nIt was only when copying OUTLET 136 last month that it went wrong. Most months it would have been all right.Without the CLEAR it was corrupting the variables. Serves us right for not doing it the 'proper way' in the first place. The truth is, often you do not need to do a CLEAR so long as you know you have plenty of memory free.\n\nWell, there's a good mix in this month's issue and the game BATTY is even more fun with loads of lives! Enjoy! - and a Happy New Year to All!\n\nRon & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers 34 Saltersgate Drive Birstall, Leicester LE4 3FF\n\nEmail: outletmag@yahoo.com.\n",
+  "body_ru": "## Editorial (late)\n\n### ЯНВАРЬ, 1999\n\nЧто ж, после рождественских праздников у нас всё вверх дном, так что извините, если вы получили этот номер с небольшим опозданием. Но хотя мы и выбились из графика, всё же надеемся нагнать упущенное и доставить вам этот выпуск до 10-го числа!\n\nОгромное спасибо за все рождественские открытки и добрые пожелания к Новому году. Мы ещё доберёмся до следующего тысячелетия! У нас приличный запас развлекательных материалов, но нужно больше утилит, так что присылайте свои работы — даже совсем небольшие программки будут весьма кстати.\n\nBernadette Dowsland выпустила новый диск с клипартом под названием «COLOURING BOOK», который можно заказать по её обычному адресу Tomato Girl Services (см. рекламу OUTVERTS в этом и каждом номере) всего за £1 плюс конверт с маркой и обратным адресом (SAE). Если вам нужна версия для +3 на 3\" диске, пожалуйста, также вложите чистый 3\" диск. Сейчас их стало слишком трудно достать, да и стоят они чересчур дорого!\n\nВ прошлом месяце мы обнаружили, что в программе копирования OUTLET с 3\" на 3.5\" для +3, OUT35TO3, закрался сбой. Мы исправили ошибку и поместили новую версию в этот номер. Если вы уже вносили собственные изменения в предыдущую версию и хотите просто подправить её, замените CLS в строке 3000 на CLEAR 32768: GO SUB 9995.\n\nОшибка проявилась только при копировании OUTLET 136 в прошлом месяце. В большинстве других случаев всё работало бы нормально. Без CLEAR программа портила переменные. Так нам и надо за то, что не сделали всё «как положено» с самого начала. По правде говоря, CLEAR зачастую не требуется, если вы уверены, что свободной памяти более чем достаточно.\n\nЧто ж, в этом номере собрана отличная подборка, а в игру BATTY играть ещё веселее с бесконечными жизнями! Приятного отдыха — и с Новым годом всех вас!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n   Email: outletmag@yahoo.com.\n```\n",
+  "text_type": 3
+}

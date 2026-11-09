@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "067",
+  "article_id": "04_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A preview of the upcoming features in the next issue of Outlet magazine, including new utilities, games, and 128K music.",
+  "meta_description_ru": "Анонс материалов следующего номера журнала Outlet: новые утилиты, игры, музыка для 128K и ускоренная версия QUICKCOP.",
+  "authors": [
+    "Chris Bourne"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "plus d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "quickcop",
+      "tag_alias": "quickcop"
+    }
+  ],
+  "category_ids": [
+    123,
+    9
+  ],
+  "body_en_plain": "There are so many good things in\nthe pipeline, that I cannot be\ncertain what we can squeeze into\nthe next issue. Your letters, of\ncourse, are one of the most\nimportant ingredients, and in\naddition there will be a useful\nprogramming utility or two, a\nclassic board-game for one to\nfour players, some delightful\nmusic, the continuation of\nOutclass, and plenty more.\n                        more...\n\nSTOP PRESS: 128K music, a much\nfaster version of QUICKCOP to\ncopy +D discs, a screen viewer\nand lots more planned for next\nmonth. It's looking good!\n\n                          Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "There are so many good things in the pipeline, that I cannot be certain what we can squeeze into the next issue. Your letters, of course, are one of the most important ingredients, and in addition there will be a useful programming utility or two, a classic board-game for one to four players, some delightful music, the continuation of Outclass, and plenty more.\n\nSTOP PRESS: 128K music, a much faster version of QUICKCOP to copy +D discs, a screen viewer and lots more planned for next month. It's looking good!\n\nChris.\n",
+  "body_ru": "В планах у нас столько всего интересного, что я пока даже не берусь сказать точно, что именно удастся уместить в следующий номер. Ваши письма, конечно же, остаются одной из важнейших составляющих, а в дополнение к ним вас ждут пара полезных утилит для программирования, классическая настольная игра для 1–4 игроков, отличная музыка, продолжение рубрики Outclass и многое другое.\n\nСРОЧНО В НОМЕР: в следующем месяце запланированы музыка для 128K, значительно ускоренная версия копировщика QUICKCOP для дисков +D, просмотрщик экранов и многое другое. Всё выглядит весьма многообещающе!\n\nChris.\n",
+  "text_type": 3
+}

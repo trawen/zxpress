@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "064",
+  "article_id": "04_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A preview of Outlet issue #065: upcoming features, utilities, games, educational programs, and an apology for delaying the Polish Demo.",
+  "meta_description_ru": "Анонс новогоднего выпуска Outlet #065: программы, игры, утилиты и извинения за задержку Polish Demo.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "polish demo",
+      "tag_alias": "polish-demo"
+    },
+    {
+      "tag_name": "tetris",
+      "tag_alias": "tetris"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_en_plain": "First an apology to anyone\nlooking forward to the Polish\nDemo predicted in this issue:-\nwe've had to delay it whilst a\nlast-minute non-compatability\nbug is overcome.\n\nThere are many varied offerings\nto look forward to in the New-\nYear issue.... A beautifully\nillustrated collection of data\nabout the planets and a multi-\nfunction calculator for electri-\ncal values.\n\nIn addition, there will be a\nRoman number converter so that\n(if you really wanted) you could\nhave the ohms in Roman numerals;\nthere is a different type of\npattern maker; An excellent\nversion of the number-puzzle\ngame and a professional version\nof the classic game 'Tetris'.\n\nThe educational slot lets you\nrun your own campaign to be\nelected as a politician. There's\na clever way to cram more\nprograms onto each disc; Another\ncrossword, plus anything else\nthat space permits.     Chris..\n",
+  "body_ru_plain": "",
+  "body_en": "First an apology to anyone looking forward to the Polish Demo predicted in this issue: we've had to delay it whilst a last-minute non-compatibility bug is overcome.\n\nThere are many varied offerings to look forward to in the New Year issue... A beautifully illustrated collection of data about the planets and a multi-function calculator for electrical values.\n\nIn addition, there will be a Roman number converter so that (if you really wanted) you could have the ohms in Roman numerals; there is a different type of pattern maker; an excellent version of the number-puzzle game and a professional version of the classic game 'Tetris'.\n\nThe educational slot lets you run your own campaign to be elected as a politician. There's a clever way to cram more programs onto each disc; another crossword, plus anything else that space permits.\n\nChris..\n",
+  "body_ru": "Прежде всего приносим извинения всем, кто ждал польское демо (Polish Demo), обещанное в этом номере: нам пришлось отложить его публикацию из-за всплывшей в последний момент проблемы с несовместимостью, которую сейчас устраняем.\n\nВ новогоднем выпуске вас ждёт множество самых разных материалов... Прекрасно иллюстрированный справочник с данными о планетах и многофункциональный калькулятор для расчёта электрических величин.\n\nКроме того, будет конвертер римских чисел — так что при желании вы сможете переводить омы в римские цифры; совершенно новый генератор узоров; отличная версия числовой головоломки и профессиональный вариант классической игры «Tetris».\n\nВ образовательной рубрике вы сможете провести собственную предвыборную кампанию и побороться за кресло политика. Также вас ждёт хитроумный способ вместить ещё больше программ на каждый диск, очередной кроссворд и всё остальное, на что только хватит места.\n\nChris..\n",
+  "text_type": 3
+}

@@ -1,0 +1,37 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "009",
+  "article_id": "07_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем выпуске",
+  "meta_description_en": "Preview of upcoming features in the next issue of Outlet magazine: full-screen editor, Marooned! game, and utilities.",
+  "meta_description_ru": "Анонс материалов десятого номера журнала Outlet: текстовый редактор, игра Marooned!, утилиты и рубрики.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "anons"
+    },
+    {
+      "tag_name": "дискмаг",
+      "tag_alias": "diskmag"
+    },
+    {
+      "tag_name": "marooned",
+      "tag_alias": "marooned"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Slightly behind in planning next\nmonth but so far we have a full-\nscreen text editor, a routine to\ntranslate on-screen colours to a\nrandom bit-shading and the first\n\"reference\" type OUTCLASS.One or\ntwo other things  as well as our\nusual features. Also on disc and\nthe  B cartridge will be a world\ntime calculator, a home  finance\nmanager and \"MAROONED!\"- a short\nbut logical, survival adventure.\nThere is also the incredible!The\namazing!- ARNOLD?! See you then!.\n",
+  "body_ru_plain": "Немного отстаем с планами на    \nследующий месяц, но пока готовы:\nполноэкранный текстовый редактор\nпроцедура перевода экранных цве-\nтов в точечную полутоновую штри-\nховку и первый \"справочный\" OUT-\nCLASS. Пара других вещей и наши \nпривычные рубрики. Также на дис-\nке и картридже B: расчет мирово-\nго времени, домашняя бухгалтерия\nи \"MAROONED!\" - короткий, но ло-\nгичный квест на выживание. А еще\nневероятный! Поразительный!-    \nARNOLD?! До скорой встречи!.\n",
+  "body_en": "## Lookahead\n\nSlightly behind in planning next month but so far we have a full-screen text editor, a routine to translate on-screen colours to a random bit-shading and the first \"reference\" type OUTCLASS. One or two other things as well as our usual features. Also on disc and the B cartridge will be a world time calculator, a home finance manager and \"MAROONED!\" - a short but logical, survival adventure. There is also the incredible! The amazing! - ARNOLD?! See you then!.\n",
+  "body_ru": "## В следующем выпуске\n\nНемного отстаем с планами на следующий месяц, но пока готовы: полноэкранный текстовый редактор, процедура перевода экранных цветов в точечную полутоновую штриховку и первый \"справочный\" OUTCLASS. Пара других вещей и наши привычные рубрики.\n\nТакже на диске и картридже B: расчет мирового времени, домашняя бухгалтерия и \"MAROONED!\" — короткий, но логичный квест на выживание.\n\nА еще невероятный! Поразительный! — ARNOLD?! До скорой встречи!.\n",
+  "text_type": 3
+}

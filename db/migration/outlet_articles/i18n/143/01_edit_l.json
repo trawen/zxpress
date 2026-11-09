@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "143",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Editorial note from Outlet #143 (July 1999): announcing a hardware project to build a ZX Spectrum-controlled buggy, plus a call for reader letters.",
+  "meta_description_ru": "Редакционная заметка Outlet #143 (июль 1999): анонс аппаратного проекта по созданию управляемого с ZX Spectrum багги и призыв присылать письма.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "robotics",
+      "tag_alias": "robotics"
+    },
+    {
+      "tag_name": "железо",
+      "tag_alias": "hardware"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "J U L Y ,   1 9 9 9\n\nUnusually, we have a hardware\nproject this month - to build a\nSpectrum-controlled buggy. It\nneeds some expertise but we'd be\ninterested to hear if anyone has\na go! The controller will be in\nnext month.\n\nPlenty of good things in this\nissue as usual but we still want\nyour contributions - especially\nletters - which tend to thin out\naround this holiday time of year\nso let's hear from you!\n\n                    Ron & Brian\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n   Email: outletmag@yahoo.com.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nJ U L Y ,   1 9 9 9\n\nUnusually, we have a hardware project this month - to build a Spectrum-controlled buggy. It needs some expertise but we'd be interested to hear if anyone has a go! The controller will be in next month.\n\nPlenty of good things in this issue as usual but we still want your contributions - especially letters - which tend to thin out around this holiday time of year so let's hear from you!\n\nRon & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers 34 Saltersgate Drive Birstall, Leicester LE4 3FF\n\nEmail: outletmag@yahoo.com.\n",
+  "body_ru": "## Editorial (late)\n\n### И Ю Л Ь ,   1 9 9 9\n\nВ этом месяце у нас необычный проект по «железу» — сборка багги, управляемого Спектрумом. Для этого требуются определенные навыки, но нам было бы очень интересно узнать, попробует ли кто-нибудь взяться за это дело! Схема контроллера появится в следующем месяце.\n\nВ этом номере, как обычно, полно всего интересного, но нам по-прежнему нужны ваши материалы — особенно письма, поток которых обычно редеет в эту пору летних отпусков, так что ждем ваших весточек!\n\nRon & Brian\n\nOUTLET выпускают:\n\nChris Oliver  \nRon & Brian Cavers  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF  \n\nEmail: outletmag@yahoo.com.\n",
+  "text_type": 3
+}

@@ -1,0 +1,52 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "26",
+  "article_id": "10_NEBULA.TXT",
+  "source_lang": "de-AT",
+  "title_en": "Nebula",
+  "title_ru": "Nebula",
+  "meta_description_en": "A brief overview and release note for Julian Gollop's space strategy game Nebula, converted from the Speccy CD '97 for Scene+ #26.",
+  "meta_description_ru": "Краткая заметка о космической стратегии Джулиана Голлопа Nebula, сконвертированной со сборника Speccy CD '97 для журнала Scene+ #26.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    },
+    {
+      "tag_name": "julian-gollop",
+      "tag_alias": "julian-gollop"
+    },
+    {
+      "tag_name": "nebula",
+      "tag_alias": "nebula"
+    },
+    {
+      "tag_name": "strategy",
+      "tag_alias": "strategy"
+    },
+    {
+      "tag_name": "public-domain",
+      "tag_alias": "public-domain"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "NEBUL ü - NEBULA - Nebula ist ein Weltraumstrategiespiel von\nJulian Gallop, derinzwischen alle seine Programme als PD\nfreigegeben hat. Ich habedieses Spiel von der Speccy CD '97\nkonvertiert in der hoffnungdaß es Euch gefällt. Die\nHardcorestrategen unter Euch (Hi Guido!) werden hocherfreut\nsein. Leider kann ich nicht viel mehrdazu sagen daß es in einer\nSpiralgalaxie spielt die von einigen Rassen kontroliert wird,\nund man muß diese Galaxie für sicherobern. Nicht allzu einfach\naber machbar.j - Nebula is a space strategy game written by\nJulian Gallop, whohas put all his games into PD. I have\nconverted it from the Spectrum CD '97 and hope, you will enjoy\nit. I can't tell youmuch about it because I was not playing\nNebula long enough. Justone: Conquer the who\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### Nebula\n\nNebula is a space strategy game written by Julian Gollop, who has since released all of his programs into the public domain. I converted this game from the Speccy CD '97 in the hope that you'll enjoy it. The hardcore strategists among you (Hi Guido!) will be thrilled.\n\nUnfortunately, I cannot say much more about it other than that it is set in a spiral galaxy controlled by several alien races, and you have to conquer this galaxy for yourself. It is not particularly easy, but it is doable.\n\n*(Original English summary from the article:)*\n\n> Nebula is a space strategy game written by Julian Gollop, who has put all his games into PD. I have converted it from the Spectrum CD '97 and hope you will enjoy it. I can't tell you much about it because I was not playing Nebula long enough. Just one: Conquer the whole [galaxy]...\n",
+  "body_ru": "### Nebula\n\nNebula — это космическая военно-стратегическая игра от Джулиана Голлопа (Julian Gollop), который к настоящему моменту перевёл все свои программы в статус Public Domain. Я перенёс эту игру со сборника Speccy CD '97 в надежде, что она вам понравится. Хардкорные стратеги среди вас (привет, Гвидо!) наверняка будут в восторге.\n\nК сожалению, я не могу сказать о ней намного больше, кроме того, что действие происходит в спиральной галактике, контролируемой несколькими расами, и эту галактику вам предстоит завоевать. Задача не из лёгких, но вполне выполнимая.\n\n*(Краткая англоязычная аннотация из статьи:)*\n\n> Nebula is a space strategy game written by Julian Gollop, who has put all his games into PD. I have converted it from the Spectrum CD '97 and hope you will enjoy it. I can't tell you much about it because I was not playing Nebula long enough. Just one: Conquer the whole [galaxy]...\n",
+  "text_type": 3
+}

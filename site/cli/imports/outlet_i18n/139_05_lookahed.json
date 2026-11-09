@@ -1,0 +1,39 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "139",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "Preview of Outlet issue #140: a multicolor graphics editor, REVEAL utility, a Mandelbrot generator, spelling game, demos, and more.",
+  "meta_description_ru": "Анонс Outlet #140: редактор мультиколорной графики, утилита REVEAL, генератор фракталов Мандельброта, обучающая игра, демо и колонка Outburst.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "anons"
+    },
+    {
+      "tag_name": "мультиколор",
+      "tag_alias": "multicolor"
+    },
+    {
+      "tag_name": "утилиты",
+      "tag_alias": "utilites"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Next month's OUTLET promises to\nbe a colourful edition!\nOne of the severest criticisms\nof the Spectrum has alwats been\nits limited colour abilities,\nBUT it IS possible to get more\nthan eight attributes at a time\nin a single character square.\nThe proof of the pudding, as\nthey say, is in next month's\nissue, which brings you COLOUR\nGRAPHIC DESIGNER to create your\nown coloutful pictures, and also\na demonstration to show some-\nthing of what can be achieved.\n\nIn this current issue (#139) is\nthe utility CONCEAL which hides\nfiles. This is complemented next\nmonth by REVEAL which will un-\nhide files on a disc. Other\nutilities include a novel screen\nclearer and a Mandelbrot gener-\nator which differs from previous\nones we have published, as it\nhas colour zoning.\n\nThere is a challenging spelling\ntest presented as a game, and we\nspoil you again with two Demos\nand an excellent arcade game.\nAlso, don't miss the OUTBURST\nillustrating how immoderate\nbehaviour abroad can land you in\ndesperate trouble. Perhaps our\nfootball fans should take heed\nof this warning?\n                        Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Next month's OUTLET promises to be a colourful edition!\n\nOne of the severest criticisms of the Spectrum has always been its limited colour abilities, BUT it IS possible to get more than eight attributes at a time in a single character square. The proof of the pudding, as they say, is in next month's issue, which brings you COLOUR GRAPHIC DESIGNER to create your own colourful pictures, and also a demonstration to show something of what can be achieved.\n\nIn this current issue (#139) is the utility CONCEAL which hides files. This is complemented next month by REVEAL which will un-hide files on a disc. Other utilities include a novel screen clearer and a Mandelbrot generator which differs from previous ones we have published, as it has colour zoning.\n\nThere is a challenging spelling test presented as a game, and we spoil you again with two Demos and an excellent arcade game. Also, don't miss the OUTBURST illustrating how immoderate behaviour abroad can land you in desperate trouble. Perhaps our football fans should take heed of this warning?\n\nChris.\n",
+  "body_ru": "Следующий выпуск OUTLET обещает быть по-настоящему красочным!\n\nОдним из главных поводов для критики Спектрума всегда были его скромные возможности работы с цветом. ОДНАКО вполне реально получить больше восьми атрибутов одновременно в пределах одного знакоместа. Лучшее доказательство — практика: в следующем номере вас ждёт программа COLOUR GRAPHIC DESIGNER для создания собственных цветных шедевров, а также демонстрация того, чего с её помощью можно достичь.\n\nВ текущем номере (#139) представлена утилита CONCEAL, скрывающая файлы. В следующем месяце её дополнит программа REVEAL, которая позволит восстанавливать видимость скрытых файлов на диске. Среди других утилит — оригинальный очиститель экрана и генератор фракталов Мандельброта, отличающийся от публиковавшихся ранее наличием цветового зонирования.\n\nКроме того, вас ждёт непростой тест по правописанию, оформленный в виде игры; мы снова порадуем вас двумя демо и отличной аркадной игрой. И не пропустите рубрику OUTBURST, наглядно показывающую, как разгульное поведение за границей может довести до беды. Возможно, нашим футбольным болельщикам стоит прислушаться к этому предупреждению?\n\nChris.\n",
+  "text_type": 3
+}

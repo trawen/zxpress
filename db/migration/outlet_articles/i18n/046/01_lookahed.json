@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "046",
+  "article_id": "01_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонсы",
+  "meta_description_en": "A preview of upcoming software and features planned for the next issue of Outlet magazine, including ANTIMAZE, Trailracer, utilities, and SAM Coupe content.",
+  "meta_description_ru": "Анонс материалов и программ следующего выпуска журнала Outlet: игра ANTIMAZE, гонки Trailracer, системные утилиты и материалы для SAM Coupe.",
+  "authors": [
+    "Brian"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet-magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "announcements",
+      "tag_alias": "announcements"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "spectrum 128k",
+      "tag_alias": "spectrum-128k"
+    }
+  ],
+  "category_ids": [
+    123,
+    118
+  ],
+  "body_en_plain": "Well, this month has been about\nthe most hectic since we started\nwhat with launching OUTWRITE!and\nmoving home etc. so it's been a\nstruggle to get next month's\nOUTLET started. However,I've got\ntogether the following items...\n\nThe kaleidoscopic,sound-to-light\npattern generator promised last\nmonth (for this issue) has been\nput back to next month. There's\nANTIMAZE, a maze YOU create and\nwhich the computer must solve!\n\nThere's more clip art and 128K\nmusic and an unusual program to\ncalculate big sums. The Spectrum\nhas a limit to the largest sum\nit can add up without losing the\ndecimal; this program pushes it\nfurther.It should convert to SAM\nbut I've not yet looked to see\nif SAM has the same calc limit.\nThere's a fascinating algorythm\nthat creates rug patterns. This\nuses a similar principle to\nJohn Luby's great CARPET WEAVER\n(which at the time of writing I\nplan to put in THIS issue on the\nSAM version and which was in the\nSpectrum version in No.10). One\nof my favourites. I've another\ncrossword puzzle to include and\na great machine code driving\ngame called TRAILRACER!  more...\n\nThere'll be loads more stuff -\nincluding a program to test your\nSpectrum's main systems; one to\ncreate strings of hex digits\n(just like those you get in the\npaper magazine listings with a\nchecksum) and a clever machine\ncode routine that scrolls your\nmessages across the top of the\nscreen - IN THE BORDER AREA!\n\nCHECKOUT has reviews of SAMDISK,\nSC_FILER and GM-BASE.There'll be\nall the regulars of course like\nOUTCLASS,SAMCLASS,OUTLETTERS etc\nas well as what can be added to\nADD-ENDERS!\n\nSome of the above won't run on\nSAM but, as usual, there's extra\nSAM stuff to be added!\n                         -Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "Well, this month has been about the most hectic since we started what with launching OUTWRITE! and moving home etc. so it's been a struggle to get next month's OUTLET started. However, I've got together the following items...\n\nThe kaleidoscopic, sound-to-light pattern generator promised last month (for this issue) has been put back to next month. There's ANTIMAZE, a maze YOU create and which the computer must solve!\n\nThere's more clip art and 128K music and an unusual program to calculate big sums. The Spectrum has a limit to the largest sum it can add up without losing the decimal; this program pushes it further. It should convert to SAM but I've not yet looked to see if SAM has the same calc limit. There's a fascinating algorythm that creates rug patterns. This uses a similar principle to John Luby's great CARPET WEAVER (which at the time of writing I plan to put in THIS issue on the SAM version and which was in the Spectrum version in No.10). One of my favourites. I've another crossword puzzle to include and a great machine code driving game called TRAILRACER! more...\n\nThere'll be loads more stuff — including a program to test your Spectrum's main systems; one to create strings of hex digits (just like those you get in the paper magazine listings with a checksum) and a clever machine code routine that scrolls your messages across the top of the screen — IN THE BORDER AREA!\n\nCHECKOUT has reviews of SAMDISK, SC_FILER and GM-BASE. There'll be all the regulars of course like OUTCLASS, SAMCLASS, OUTLETTERS etc as well as what can be added to ADD-ENDERS!\n\nSome of the above won't run on SAM but, as usual, there's extra SAM stuff to be added!\n\n—Brian.\n",
+  "body_ru": "Ну что ж, этот месяц выдался едва ли не самым беспокойным с момента запуска журнала: мы выпустили OUTWRITE!, переезжали на новую квартиру и так далее, так что взяться за следующий номер OUTLET стоило немалых трудов. Тем не менее, вот что мне уже удалось собрать...\n\nКалейдоскопический светомузыкальный генератор узоров, обещанный в прошлом месяце (для этого выпуска), пришлось отложить на следующий номер. Вас ждет ANTIMAZE — лабиринт, который строите ВЫ, а пройти его должен компьютер!\n\nБудет ещё порция клипарта, музыка для 128K и необычная программа для вычисления больших сумм. У Спектрума есть предел величины чисел, которые он может складывать без потери точности после запятой; эта программа отодвигает этот барьер дальше. Её можно адаптировать и под SAM, но я пока не проверял, есть ли у SAM такое же ограничение при расчетах. Еще есть занятный алгоритм, создающий узоры для ковров. В нем используется принцип, похожий на великолепный CARPET WEAVER Джона Луби (на момент написания этих строк я планирую включить его в ЭТОТ номер для SAM, а версия для Spectrum была в №10). Это одна из моих любимых вещей. Также запланирован еще один кроссворд и отличная гоночная игра в машинных кодах под названием TRAILRACER! И это далеко не всё...\n\nМатериалов будет уйма — в том числе программа для тестирования основных систем Спектрума; утилита для создания строк шестнадцатеричных дампов (совсем как в листингах бумажных журналов с контрольными суммами) и хитроумная процедура в машинных кодах, которая прокручивает сообщения в верхней части экрана — В ОБЛАСТИ БОРДЮРА!\n\nВ рубрике CHECKOUT появятся обзоры SAMDISK, SC_FILER и GM-BASE. Само собой, будут и все постоянные разделы: OUTCLASS, SAMCLASS, OUTLETTERS и другие, а также то, чем удастся пополнить ADD-ENDERS!\n\nКое-что из перечисленного не запустится на SAM, но, как обычно, для SAM Coupe будет добавлено кое-что эксклюзивное!\n\n—Brian.\n",
+  "text_type": 3
+}

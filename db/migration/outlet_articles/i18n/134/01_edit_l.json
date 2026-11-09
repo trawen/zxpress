@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "134",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Outlet #134 editorial note (October 1998): seeking a colour screen dump for ZX Spectrum, call for reader contributions, and editorial contact guidelines.",
+  "meta_description_ru": "Редакционная заметка Outlet #134 (октябрь 1998): поиск утилиты цветной печати для ZX Spectrum, призыв присылать материалы и правила публикации вопросов.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "printers",
+      "tag_alias": "printers"
+    },
+    {
+      "tag_name": "contributions",
+      "tag_alias": "contributions"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "O C T O B E R ,   1 9 9 8\n\nWe have just added a new colour\ninkjet printer to our hardware.\nChecking around it seems quite\namazing that we can find no col-\nour dump for the Spectrum! Does\nanyone know of one?\n\n\nThanks for your contributions!\nKeep sending them in. Remember,\nthey don't need to be complete\nprograms - short routines are\nalso helpful to others as well\nas screen pictures and articles\non almost any relevant topic. It\nis always interesting to read,\nfor instance, about software and\nother products that people are\nusing. Articles must be on disk\nor tape though (returned later).\n\nNow the Spectrum readership is\nnot as large as it was there are\nproportionally fewer contributed\nprograms. It is more important\nthan ever therefore,to give what\nsupport you can  to sustain the\nvariety and scope of items in\nOUTLET. Thanks!\n\n\nMay we remind readers that we do\nnot answer computer,  software,\nhardware or system queries etc.,\npersonally by mail.  All such\nqueries are answered through the\nOUTLETTERS section in OUTLET.\n\n                    Ron & Brian\n\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n   Email: outletmag@yahoo.com.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nO C T O B E R ,   1 9 9 8\n\nWe have just added a new colour inkjet printer to our hardware. Checking around it seems quite amazing that we can find no col- our dump for the Spectrum! Does anyone know of one?\n\nThanks for your contributions! Keep sending them in. Remember, they don't need to be complete programs - short routines are also helpful to others as well as screen pictures and articles on almost any relevant topic. It is always interesting to read, for instance, about software and other products that people are using. Articles must be on disk or tape though (returned later).\n\nNow the Spectrum readership is not as large as it was there are proportionally fewer contributed programs. It is more important than ever therefore,to give what support you can  to sustain the variety and scope of items in OUTLET. Thanks!\n\nMay we remind readers that we do not answer computer,  software, hardware or system queries etc., personally by mail.  All such queries are answered through the OUTLETTERS section in OUTLET.\n\nRon & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers 34 Saltersgate Drive Birstall, Leicester LE4 3FF\n\nEmail: outletmag@yahoo.com.\n",
+  "body_ru": "## Editorial (late)\n\n### Октябрь, 1998\n\nМы только что пополнили наш парк оборудования новым цветным струйным принтером. Поискав вокруг, мы с удивлением обнаружили, что не можем найти ни одной программы для цветного дампа экрана (colour dump) для Spectrum! Знает ли кто-нибудь о существовании таковой?\n\nСпасибо за ваши материалы! Продолжайте присылать их. Помните: это не обязательно должны быть законченные программы — короткие подпрограммы тоже пригодятся другим, равно как и экранные картинки, а также статьи практически на любую подходящую тему. Всегда интересно почитать, например, о софте и других продуктах, которыми пользуются люди. Однако статьи должны быть на диске или кассете (мы вернем их позже).\n\nСейчас читательская аудитория Spectrum уже не так велика, как раньше, поэтому и присылаемых программ стало пропорционально меньше. В связи с этим сейчас важнее, чем когда-либо, оказать посильную поддержку, чтобы сохранить разнообразие и охват материалов в OUTLET. Спасибо!\n\nНапоминаем читателям, что мы не отвечаем на вопросы о компьютерах, программном обеспечении, железе, системных проблемах и т. д. лично по почте. Ответы на все подобные запросы публикуются в рубрике OUTLETTERS журнала OUTLET.\n\nRon & Brian\n\nOUTLET выпускают:\n\nChris Oliver  \nRon & Brian Cavers  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF  \n\nEmail: outletmag@yahoo.com.\n",
+  "text_type": 3
+}

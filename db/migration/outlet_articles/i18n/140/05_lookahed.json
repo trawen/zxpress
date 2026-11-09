@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "140",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонсы",
+  "meta_description_en": "A preview of the software lined up for the next issue of Outlet magazine, including Basic utilities, tape copiers, and demos.",
+  "meta_description_ru": "Анонс программ для следующего выпуска журнала Outlet: утилиты для Бейсика, копировщик для 128K, демо и графика.",
+  "authors": [
+    "Chris"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    },
+    {
+      "tag_name": "demos",
+      "tag_alias": "demos"
+    }
+  ],
+  "category_ids": [
+    123,
+    119
+  ],
+  "body_en_plain": "Although the number of 'leisure'\ntype programs being sent in to\nOUTLET far outweigh the number\nof utility programs,we are still\nmanaging to find a few for you.\n\n\nNext month there is a utility to\nfind the length of a Basic\nprogram, another enables you to\nexperiment with the Spectrum's\nBEEP facility, and a versatile\n128k tape copying utility.\n\nOn the leisure side there are\nplenty of programs to amuse you\nincluding two demos, a Sound-\nSample, some impressive graphic\nartwork, and a 'Do It Yourself'\ntree-growing kit!\n\nKeep those contributions coming\nin, however small they may be.\n\n                       Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Although the number of 'leisure' type programs being sent in to OUTLET far outweigh the number of utility programs, we are still managing to find a few for you.\n\nNext month there is a utility to find the length of a Basic program, another enables you to experiment with the Spectrum's BEEP facility, and a versatile 128k tape copying utility.\n\nOn the leisure side there are plenty of programs to amuse you including two demos, a Sound-Sample, some impressive graphic artwork, and a 'Do It Yourself' tree-growing kit!\n\nKeep those contributions coming in, however small they may be.\n\nChris.\n",
+  "body_ru": "Хотя количество присылаемых в OUTLET развлекательных программ значительно превосходит число утилит, нам всё же удаётся находить кое-что полезное и для вас.\n\nВ следующем месяце вас ждёт утилита для определения длины Бейсик-программы, ещё одна позволит поэкспериментировать со звуковыми возможностями команды BEEP, а также универсальная программа копирования кассет для 128K.\n\nЧто касается развлечений, вас ожидает масса интересного, включая два демо, звуковой семпл, впечатляющие графические работы и набор «Сделай сам» для выращивания деревьев!\n\nПрисылайте свои работы, какими бы скромными они ни казались.\n\nChris.\n",
+  "text_type": 3
+}

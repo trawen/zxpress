@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "070",
+  "article_id": "04_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A preview of the upcoming issue of Outlet: new games, utilities, household electricity bill calculator, classical music, and J. Burczynski's Soundtracker.",
+  "meta_description_ru": "Анонс следующего выпуска журнала Outlet: новые игры, утилиты для программистов, калькулятор счетов за электричество, классическая музыка и Soundtracker.",
+  "authors": [
+    "Chris"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "soundtracker",
+      "tag_alias": "soundtracker"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Next month's OUTLET brings you\nanother selection of wonderful\nthings! There are a couple of\nuseful utilities for programmers\nand also a brand-new game which\nis a sort of cross between good\nold Pacman and Caterpillar, and\na simpler game for those who\njust like wapping a ball about\nwith a bat. There's a personal\nwordlist program which will\nstore all those words whose\nspelling one cannot remember.\n                        more...\n\nThere'll be a calculator for\nHousehold power bills (I've\nadded a facility to this so that\nyou can prepare yourselves for\nthe impact of the addition of\nVAT which, as you probably know,\nis planned to be at the rate of\n8% in 1994, rising to 17.5% in\n1995). To calm you down after\nthat shock there is a delightful\npiece of classical music.\n\nThere's a fresh OUTCLASS with a\ndemo to illustrate what it does,\nand maybe a crossword if there\nis space. We hope to include the\nfirst half of J. Burczynski's\nwonderful Soundtracker system\nfor creating super 3-channel\nsound on any Spectrum with the\nAY-soundchip fitted (either as\n\nan add-on, or resident in the\n128k). This part of Soundtracker\nis the music writer/editor\nsection, and will be followed in\na later issue by the Compiler\nsection.\n                        Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Next month's OUTLET brings you another selection of wonderful things! There are a couple of useful utilities for programmers and also a brand-new game which is a sort of cross between good old Pacman and Caterpillar, and a simpler game for those who just like wapping a ball about with a bat. There's a personal wordlist program which will store all those words whose spelling one cannot remember.\n\nThere'll be a calculator for Household power bills (I've added a facility to this so that you can prepare yourselves for the impact of the addition of VAT which, as you probably know, is planned to be at the rate of 8% in 1994, rising to 17.5% in 1995). To calm you down after that shock there is a delightful piece of classical music.\n\nThere's a fresh OUTCLASS with a demo to illustrate what it does, and maybe a crossword if there is space. We hope to include the first half of J. Burczynski's wonderful Soundtracker system for creating super 3-channel sound on any Spectrum with the AY-soundchip fitted (either as an add-on, or resident in the 128k). This part of Soundtracker is the music writer/editor section, and will be followed in a later issue by the Compiler section.\n\nChris.\n",
+  "body_ru": "В следующем номере OUTLET вас ждет очередная подборка замечательных материалов! В выпуск войдут пара полезных утилит для программистов, а также совершенно новая игра — нечто среднее между старым добрым Pacman и Caterpillar, плюс игра попроще для тех, кто просто любит поотбивать мячик ракеткой. Также будет программа для ведения личного словаря, куда можно записать все те слова, в правописании которых вы вечно сомневаетесь.\n\nКроме того, мы подготовили калькулятор счетов за коммунальное электричество (я добавил в него возможность учесть введение НДС, который, как вы наверняка знаете, планируется на уровне 8% в 1994 году с повышением до 17.5% в 1995-м). А чтобы успокоить нервы после такого потрясения, мы приложим чудесное классическое музыкальное произведение.\n\nВас ждет свежий выпуск OUTCLASS с демонстрационной программой и, возможно, кроссворд, если останется свободное место. Также мы надеемся включить первую часть великолепной системы Soundtracker от J. Burczynski для создания отличного трехканального звука на любом Спектруме с музыкальным сопроцессором AY (будь то внешний модуль или встроенный чип в машинах 128k). В эту часть Soundtracker входит редактор музыки, а модуль компилятора выйдет в одном из последующих номеров.\n\nChris.\n",
+  "text_type": 3
+}

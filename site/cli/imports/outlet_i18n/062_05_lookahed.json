@@ -1,0 +1,47 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "062",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of the upcoming software and features in the next issue of Outlet magazine, including CATRAM, PURSEMT, a video titler, and a 128K demo.",
+  "meta_description_ru": "Анонс следующего номера журнала Outlet: утилиты CATRAM и PURSEMT, генератор титров, обучающая программа, софт для +D и 128K-демо.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    },
+    {
+      "tag_name": "ramdisc",
+      "tag_alias": "ramdisc"
+    },
+    {
+      "tag_name": "plus-d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "demo",
+      "tag_alias": "demo"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "We've a video titler program in\nnext month's issue of OUTLET and\nas well as all the regulars like\nmore clip art, letters, news and\na new crossword puzzle there is\nCATRAM - a great utility to give\nyou a detailed catalogue of your\n128K RAMDISC! (sorry, Sinclair\n128K only - not +3). Another one\nof our programs not compatible\nwith the +3 (blame Amstrad - not\nus!) is a new on-error routine.\nIt will jump to a BASIC line of\nyour choice if there's an error!\n                      more...\n\nA new series of educational pro-\ngrams begins with a class about\nbird names; there will be a disc\nreader program for +D users (I'm\nsorry +3'ers - it is just how it\nworks out some months!); there's\nPURSEMT to help you keep track\nof monthly personal expenses and\na nice pattern generator that\ndraws hedges! There should be a\nDRIVECHAT on various topics (I\nhave several articles to sort\nout) and to round it all off a\ngreat new 128K music/graphic\ndemo from the continent (yes, it\nDOES work on the +3!). It still\nruns on a 48K machine but there\nis no sound.\n                        - Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "We've a video titler program in next month's issue of OUTLET and as well as all the regulars like more clip art, letters, news and a new crossword puzzle there is CATRAM — a great utility to give you a detailed catalogue of your 128K RAMDISC! (sorry, Sinclair 128K only — not +3). Another one of our programs not compatible with the +3 (blame Amstrad — not us!) is a new on-error routine. It will jump to a BASIC line of your choice if there's an error!\n\nA new series of educational programs begins with a class about bird names; there will be a disc reader program for +D users (I'm sorry +3'ers — it is just how it works out some months!); there's PURSEMT to help you keep track of monthly personal expenses and a nice pattern generator that draws hedges! There should be a DRIVECHAT on various topics (I have several articles to sort out) and to round it all off a great new 128K music/graphic demo from the continent (yes, it DOES work on the +3!). It still runs on a 48K machine but there is no sound.\n\n— Brian.\n",
+  "body_ru": "В следующем выпуске OUTLET вас ждёт программа для создания видеотитров, а также все привычные рубрики: новая графика (clip art), письма, новости и свежий кроссворд. Кроме того, вы найдёте CATRAM — отличную утилиту, выводящую подробный каталог электронного диска 128K RAMDISC (увы, только для классического Sinclair 128K — не для +3). Ещё одна программа, несовместимая с +3 (вините Amstrad, а не нас!), — новая процедура обработки ошибок (on-error routine). В случае ошибки она выполняет переход на выбранную вами строку Бейсика!\n\nСтартует новая серия обучающих программ — первый урок посвящён названиям птиц; появится программа чтения дисков для пользователей интерфейса +D (простите, владельцы +3 — в некоторые месяцы так уж складываются обстоятельства!); программа PURSEMT поможет вести учёт личных ежемесячных расходов, а ещё вас ждёт симпатичный генератор узоров, рисующий живые изгороди! Также планируется подборка DRIVECHAT на самые разные темы (мне ещё нужно разобрать несколько статей), и в завершение всего — великолепное новое европейское музыкально-графическое 128K-демо (и да, оно РАБОТАЕТ на +3!). Его можно запустить и на 48K-машине, но уже без звука.\n\n— Brian.\n",
+  "text_type": 3
+}

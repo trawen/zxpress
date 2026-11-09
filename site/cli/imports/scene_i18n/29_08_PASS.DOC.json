@@ -1,0 +1,48 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "29",
+  "article_id": "08_PASS.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Passiance Klondyke 128",
+  "title_ru": "Passiance Klondyke 128",
+  "meta_description_en": "A brief review of the Russian card game Passiance Klondyke 128 from Scene+ #29: rule peculiarities and ULA snow issues.",
+  "meta_description_ru": "Короткий отзыв о карточной игре Passiance Klondyke 128 из журнала Scene+ #29: отличия в правилах и «снег» ULA.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    },
+    {
+      "tag_name": "passiance-klondyke",
+      "tag_alias": "passiance-klondyke"
+    },
+    {
+      "tag_name": "карточные игры",
+      "tag_alias": "card-games"
+    },
+    {
+      "tag_name": "игры",
+      "tag_alias": "games"
+    }
+  ],
+  "category_ids": [
+    1,
+    2
+  ],
+  "body_de_plain": "PASSIANCE ü\n----------------------------------------------------------------\nPASSIANCE KLONDYKE 128\n----------------------------------------------------------------\nNa wer sagt es denn? Nicht nur ich programmiere\nguteKartenspiele, auch die Russen haben Gefallen daran\ngefunden,auch wenn der ULA-Schnee etwas störend wirkt. Im\ngegensatz zuWindoof Solitaire kommt nach dem Ass die Karte 6.\nFalls beimersten Spiel sich keine Karte anklicken läßt, einfach\nneuesSpiel starten.\n----------------------------------------------------------------\nHey, the russian coders do also like the patience games,\nbutthere is again the fu..ing ULA snow. The difference\nbetweenwindow$ Solitaire and Klondyke is the sequence that\nstarts withace and then followed by card 6. If the cards cannot\nbeselected, start a new game.\n----------------------------------------------------------------\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### Passiance Klondyke 128\n\nWho would have thought? I'm not the only one writing good card games; the Russians have developed a taste for them too, even if the ULA snow is a bit annoying. \n\nUnlike Windows Solitaire, the six follows the Ace here. If you can't click on any card during the first deal, just start a new game.\n",
+  "body_ru": "### Passiance Klondyke 128\n\nНу вот, кто бы мог подумать! Не только я программирую хорошие карточные игры — русские тоже вошли во вкус, хотя «снег» ULA слегка раздражает.\n\nВ отличие от пасьянса в Windows, здесь после туза кладётся шестёрка. Если в первой партии карты не реагируют на клики, просто начните новую игру.\n",
+  "text_type": 3
+}

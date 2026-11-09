@@ -1,0 +1,42 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "062",
+  "article_id": "10_addender",
+  "title_en": "Add-Enders",
+  "title_ru": "Add-Enders: Дополнения",
+  "meta_description_en": "Introduction to the Add-Enders section in Outlet #062: miscellaneous reader submissions, SAM/Spectrum correspondence policy, and the TWENTY6 routine by Ted Felstead.",
+  "meta_description_ru": "Вводная заметка к разделу Add-Enders в Outlet #062: неопубликованные материалы читателей, разделение писем для SAM и Spectrum, а также программа TWENTY6 от Ted Felstead.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "add-enders",
+      "tag_alias": "add-enders"
+    },
+    {
+      "tag_name": "ted felstead",
+      "tag_alias": "ted-felstead"
+    }
+  ],
+  "category_ids": [
+    116,
+    121
+  ],
+  "body_en_plain": "Some items contributed to OUTLET\nhave not yet been included for a\nvariety of reasons. It's a shame\nto leave them on the shelf so,if\nappropriate, they will be added\nto this ADD-ENDERS area of the\nmagazine (not microdrive or Opus\nas there is not enough room).\n\nThe material covers a wide range\nof quality and program types:\nutilities, screens, character\nsets and text articles and SOME\nof it may be unedited, untested,\nnot working fully or properly;\nin need of conversion for your\n\nsystem's syntax or printer etc.;\nwithout full instructions or\nwhatever. Readers will have to\nsift through to see if there is\nanything of interest they can\nmake use of and discard the\nrest. Not everything will appear\non all versions necessarily.\n\nSome Add-Enders may be linked to\nOUTLET in the normal way. These\nwill usually precede this text\nfile. Any items that follow this\narticle will possibly need to be\nLOADed manually or may not auto-\nrun when loaded.\n\nThere may be some info on the\nfollowing pages...\n\nMany SAM and Spectrum readers\nsaid they don't want to read\nthrough mixed SAM and Spectrum\nmaterial in OUTLET. Others say\nthey DO want to read info about\nboth! Therefore,SO LONG AS THERE\nIS ROOM,the mail is divided but\nwith SAM mail in the Spectrum\nADDENDERS and the Spectrum mail\nin the SAM ADDENDERS. If you do\nnot want to read it - skip it!\n\nRemaining is a program sent in\nby Ted Felstead called \"TWENTY6\"\nwhich is a routine in answer to\nMalcom Goodman's\"list variables\"\npuzzle that was set recently in\nOUTLETTERS..\n",
+  "body_ru_plain": "",
+  "body_en": "Some items contributed to OUTLET have not yet been included for a variety of reasons. It's a shame to leave them on the shelf so, if appropriate, they will be added to this ADD-ENDERS area of the magazine (not microdrive or Opus as there is not enough room).\n\nThe material covers a wide range of quality and program types: utilities, screens, character sets and text articles and SOME of it may be unedited, untested, not working fully or properly; in need of conversion for your system's syntax or printer etc.; without full instructions or whatever. Readers will have to sift through to see if there is anything of interest they can make use of and discard the rest. Not everything will appear on all versions necessarily.\n\nSome Add-Enders may be linked to OUTLET in the normal way. These will usually precede this text file. Any items that follow this article will possibly need to be LOADed manually or may not auto-run when loaded.\n\nThere may be some info on the following pages...\n\nMany SAM and Spectrum readers said they don't want to read through mixed SAM and Spectrum material in OUTLET. Others say they DO want to read info about both! Therefore, SO LONG AS THERE IS ROOM, the mail is divided but with SAM mail in the Spectrum ADDENDERS and the Spectrum mail in the SAM ADDENDERS. If you do not want to read it - skip it!\n\nRemaining is a program sent in by Ted Felstead called \"TWENTY6\" which is a routine in answer to Malcolm Goodman's \"list variables\" puzzle that was set recently in OUTLETTERS..\n",
+  "body_ru": "Некоторые материалы, присланные в редакцию OUTLET, по разным причинам до сих пор не были опубликованы. Жаль оставлять их пылиться на полке, поэтому, когда это уместно, они будут добавляться в специальный раздел журнала — ADD-ENDERS (за исключением версий на Microdrive и Opus, где для этого просто не хватает места).\n\nКачество и тип этих материалов весьма разнообразны: утилиты, экраны, шрифты и текстовые статьи. Кое-что из этого может быть неотредактированным, непротестированным, работать не полностью или некорректно, требовать адаптации под синтаксис вашей системы или принтер, быть без подробных инструкций и так далее. Читателям придется самостоятельно отбирать то, что покажется интересным или полезным, а остальное отсеивать. Далеко не всё обязательно появится во всех версиях выпуска.\n\nНекоторые материалы раздела Add-Enders могут запускаться из оболочки OUTLET обычным образом — они, как правило, предшествуют этому текстовому файлу. Всё, что следует за этой статьей, возможно, придется загружать вручную (командой LOAD), либо оно может не запуститься автоматически при загрузке.\n\nНа следующих страницах может быть дополнительная информация...\n\nМногие читатели как на SAM, так и на Spectrum отмечали, что не хотят читать материалы вперемешку. Другие же, наоборот, заявляют, что ХОТЯТ читать обо всем сразу! Поэтому, ПОКА ПОЗВОЛЯЕТ МЕСТО, почта разделена: письма по SAM помещаются в ADD-ENDERS версии для Spectrum, а письма по Spectrum — в ADD-ENDERS версии для SAM. Если вы не хотите это читать — просто пропустите!\n\nТакже прилагается программа под названием «TWENTY6», присланная Ted Felstead, — это процедура, являющаяся ответом на головоломку Malcom Goodman по «выводу списка переменных», опубликованную недавно в рубрике OUTLETTERS.\n",
+  "text_type": 3
+}

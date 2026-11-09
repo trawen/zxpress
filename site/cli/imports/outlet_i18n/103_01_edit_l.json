@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "103",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (дополнение)",
+  "meta_description_en": "Outlet #103 late editorial: introducing BASFIX, correcting IY register usage in USR calls, Francis Miles' guitar music on +3, and call for reader contributions.",
+  "meta_description_ru": "Дополнение к редакторской колонке Outlet #103: утилита BASFIX, уточнение по регистру IY при вызове USR, гитарная музыка от Фрэнсиса Майлза на +3 и призыв присылать материалы.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet-magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "chezron-software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    },
+    {
+      "tag_name": "z80",
+      "tag_alias": "z80"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus3"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "M A R C H ,   1 9 9 6\n\nWell, we had a simple BASIC cor-\nruption repair routine,BASREP, a\nfew issues ago but this month we\nhave BASFIX which has to be the\nultimate BASIC repairer for the\nSpectrum! It's the best!\n\n\nOur reply to John Legros in last\nmonth's OUTLETTERS about the IY\nregister was flawed. In fact, IY\nis restored automatically after\na USR call so does not need to\nbe preserved in a machine code\nprogram called by USR. However,\nit DOES need to be preserved if\nyour machine code program is an\ninterrupt-driven one. The only\nregister that needs to be stored\nand restored in a machine code\nprogram called with USR is the\nalternate HL register.\n\nRemember, we need your support,\nand contributions of articles\nand programs, especially utility\nprograms, are now needed more\nthan ever. Even a short routine\ncan be like gold dust to another\nuser! Send 'em in!\n\nOne brilliant contribution this\nmonth is Francis Miles' 'PICKIN\nwhich is 128K guitar music. It's\nunlikely that ALL of the music\nfiles will cram on the +3 disk.\nAt a guess, only one or two will\nnot make it. Because the program\nuses a slightly unusual keyboard\nselect routine it will probably\nnot be practical to try to alter\nit at the last minute. Therefore\n+3 users should be alert that it\nis likely that the last one or\ntwo items may not be there! ie,\nthe program may give a disk err-\nor when you select them. Sorry!\n\nThere is no simple solution to\nthis apart from further hacking\nabout of the program which, in\nthe last few hours before dupli-\ncation can be fraught!\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET. We\nare sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\n                    Ron & Brian\n\n\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF.\n",
+  "body_ru_plain": "",
+  "body_en": "M A R C H ,   1 9 9 6\n\nWell, we had a simple BASIC corruption repair routine, BASREP, a few issues ago but this month we have BASFIX which has to be the ultimate BASIC repairer for the Spectrum! It's the best!\n\nOur reply to John Legros in last month's OUTLETTERS about the IY register was flawed. In fact, IY is restored automatically after a USR call so does not need to be preserved in a machine code program called by USR. However, it DOES need to be preserved if your machine code program is an interrupt-driven one. The only register that needs to be stored and restored in a machine code program called with USR is the alternate HL register.\n\nRemember, we need your support, and contributions of articles and programs, especially utility programs, are now needed more than ever. Even a short routine can be like gold dust to another user! Send 'em in!\n\nOne brilliant contribution this month is Francis Miles' 'PICKIN which is 128K guitar music. It's unlikely that ALL of the music files will cram on the +3 disk. At a guess, only one or two will not make it. Because the program uses a slightly unusual keyboard select routine it will probably not be practical to try to alter it at the last minute. Therefore +3 users should be alert that it is likely that the last one or two items may not be there! ie, the program may give a disk error when you select them. Sorry!\n\nThere is no simple solution to this apart from further hacking about of the program which, in the last few hours before duplication can be fraught!\n\nMay we remind readers, we cannot answer computer, software, hardware or system queries etc., personally by mail. All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder! Share your problems with others! That way, everyone benefits!\n\nRon & Brian\n\nOUTLET is produced by  \nChris Oliver  \nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF.\n",
+  "body_ru": "М А Р Т ,   1 9 9 6\n\nНесколько номеров назад мы публиковали простую подпрограмму для восстановления повреждённых Бейсик-строк — BASREP, а в этом месяце представляем вам BASFIX, который по праву можно считать ультимативным инструментом восстановления Бейсика для Спектрума! Это лучшее решение!\n\nНаш ответ Джону Легро (John Legros) в рубрике OUTLETTERS в прошлом месяце касательно регистра IY был не совсем верен. На самом деле регистр IY восстанавливается автоматически после вызова USR, так что сохранять его в программе в машинных кодах, вызываемой через USR, не требуется. Тем не менее, его ОБЯЗАТЕЛЬНО нужно сохранять, если ваша программа работает по прерываниям. Единственный регистр, который необходимо сохранять и восстанавливать в коде, вызываемом через USR — это альтернативный регистр HL'.\n\nПомните: нам необходима ваша поддержка! Статьи и программы, особенно различные утилиты, нужны сейчас как никогда раньше. Даже коротенькая процедура может оказаться на вес золота для другого пользователя! Присылайте их нам!\n\nОдин из замечательных материалов этого номера — программа «PICKIN» от Фрэнсиса Майлза (Francis Miles), представляющая собой гитарную музыку для 128K. Вряд ли ВСЕ музыкальные файлы поместятся на дискету для +3. Скорее всего, один или два трека просто не влезут. Поскольку в программе используется несколько нестандартный опрос клавиатуры для выбора мелодий, менять что-либо на скорую руку в последнюю минуту нецелесообразно. Поэтому владельцам +3 стоит иметь в виду: последних одного-двух треков на диске может не оказаться! То есть при их выборе программа может выдать ошибку диска. Простите за неудобство!\n\nПростого решения здесь нет, разве что полностью перелопатить программу, а заниматься взломом и переделками за несколько часов до тиражирования — дело крайне рискованное!\n\nНапоминаем читателям: мы не можем отвечать на технические вопросы о компьютерах, софте, железе или системах лично по почте. Все подобные вопросы и ответы публикуются исключительно в рубрике OUTLETTERS на страницах OUTLET. Нам неловко постоянно повторять это, но напоминание действительно необходимо! Делитесь своими проблемами с другими! От этого выиграют все!\n\nRon & Brian\n\nOUTLET выпускают:  \nChris Oliver  \nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF.\n",
+  "text_type": 3
+}

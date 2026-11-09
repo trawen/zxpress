@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "131",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонсы следующего номера",
+  "meta_description_en": "A preview of the upcoming issue of Outlet, featuring Robert Rankin's ancestry paradox, upcoming BetaDos fixes by Miles Kinloch, and utility previews.",
+  "meta_description_ru": "Анонс следующего номера журнала Outlet: парадокс предков Роберта Рэнкина, исправление BetaDos от Майлза Кинлоха и новые утилиты.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "lookahead",
+      "tag_alias": "lookahead"
+    },
+    {
+      "tag_name": "betados",
+      "tag_alias": "betados"
+    },
+    {
+      "tag_name": "humour",
+      "tag_alias": "humour"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_en_plain": "Browsing through the local\nLibrary recently, a title caught\nmy eye.... \"RAIDERS OF THE LOST\nCAR-PARK\" - promising I thought,\nto be a work of some importance.\nThe author, Robert Rankin, tries\nhard (maybe too hard?) to write\nin the style of Douglas Adams,\nof Hitch-hiking fame. At one\npoint he proposes the theory\nthat the human race is in fact\ndeclining in numbers.The reason-\ning goes like this:-\n\nThere is only one of you. Right.\nYou had two parents.Each of your\nparents had two parents who each\nhad two parents, and so on,\ndoubling each generation you\ntrace back. By the time you go\nback a mere twenty-three genera-\ntions, you find you have more\nthan four million people, each\nof whom was necessary for you to\nhave been born at all! Surely\nthere is no flaw in the reason-\ning?\n\nAnyway, we intend to bring you\nmany more OUTLETS before the\nhuman race disappears into its\nown origins. And talking of\nflaws, next month another bug\nin BetaDos is revealed. Miles\nKinloch not only identifies and\n\n\ncures the latest problem, but\nalso takes the opportunity to\nsqueeze a couple of extra valu-\nable utilities into the new Dos.\n\nOther utility programs in next\nmonth's OUTLET will probably\ninclude one to compact a Basic\nprogram so that it takes up less\nmemory space; a screen manipula-\ntor and scaler; and some unusual\ntext styles.\n\nMeanwhile, the OUTPUT section\nexplains some technical termin-\nology, and there is a good music\nDemo, some more delightful\nClassical music and an excellent\ntext adventure to get lost in.\n\n                          Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Browsing through the local Library recently, a title caught my eye.... \"RAIDERS OF THE LOST CAR-PARK\" — promising I thought, to be a work of some importance. The author, Robert Rankin, tries hard (maybe too hard?) to write in the style of Douglas Adams, of Hitch-hiking fame. At one point he proposes the theory that the human race is in fact declining in numbers. The reasoning goes like this:-\n\nThere is only one of you. Right. You had two parents. Each of your parents had two parents who each had two parents, and so on, doubling each generation you trace back. By the time you go back a mere twenty-three generations, you find you have more than four million people, each of whom was necessary for you to have been born at all! Surely there is no flaw in the reasoning?\n\nAnyway, we intend to bring you many more OUTLETS before the human race disappears into its own origins. And talking of flaws, next month another bug in BetaDos is revealed. Miles Kinloch not only identifies and cures the latest problem, but also takes the opportunity to squeeze a couple of extra valuable utilities into the new Dos.\n\nOther utility programs in next month's OUTLET will probably include one to compact a Basic program so that it takes up less memory space; a screen manipulator and scaler; and some unusual text styles.\n\nMeanwhile, the OUTPUT section explains some technical terminology, and there is a good music Demo, some more delightful Classical music and an excellent text adventure to get lost in.\n\nChris.\n",
+  "body_ru": "Просматривая недавно книги в местной библиотеке, я наткнулся взглядом на заголовок... «RAIDERS OF THE LOST CAR-PARK» («В поисках утраченной автостоянки») — название, как мне показалось, обещало труд немалой важности. Автор, Robert Rankin, изо всех сил (возможно, даже слишком?) пытается писать в манере Дугласа Адамса с его знаменитым «Автостопом». В одном месте он выдвигает теорию о том, что человечество на самом деле вымирает и сокращается в численности. Логика там следующая:\n\nВы существуете в единственном экземпляре. Так? У вас было двое родителей. У каждого из них — ещё по двое родителей, у тех — тоже по двое, и так далее, с удвоением в каждом предыдущем поколении. Стоит вам отмотать назад всего двадцать три поколения, как выяснится, что для вашего появления на свет требовалось более четырёх миллионов человек, причём каждый из них был абсолютно необходим! Неужели в этих рассуждениях есть хоть какой-то изъян?\n\nКак бы то ни было, мы намерены выпустить ещё немало номеров OUTLET, прежде чем человеческий род окончательно исчезнет в собственных истоках. И кстати об изъянах: в следующем месяце будет вскрыт очередной баг в BetaDos. Miles Kinloch не только определит причину и исправит свежую проблему, но и воспользуется случаем, чтобы втиснуть в новую DOS парочку полезных утилит.\n\nСреди прочих утилит в следующем номере OUTLET наверняка появятся: упаковщик программ на Basic для экономии памяти; инструмент для масштабирования и манипуляций с экраном, а также несколько необычных стилей текста.\n\nТем временем в разделе OUTPUT мы разберём техническую терминологию, а на диске вас будут ждать отличное музыкальное демо, ещё одна порция восхитительной классической музыки и великолепная текстовая адвентюра, в которой можно пропасть надолго.\n\nChris.\n",
+  "text_type": 3
+}

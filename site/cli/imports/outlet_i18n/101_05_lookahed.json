@@ -1,0 +1,36 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "101",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead: Outlet #102 Preview",
+  "title_ru": "Анонс: В следующем номере Outlet #102",
+  "meta_description_en": "A sneak peek at what's coming in Outlet #101's follow-up issue: 4 billion mazes, Valentine's music, Napoleon's leisure, and useful utilities.",
+  "meta_description_ru": "Анонс следующего выпуска журнала Outlet: генератор 4 миллиардов лабиринтов, романтическая музыка, наполеоновские забавы и полезные утилиты.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "announcements",
+      "tag_alias": "announcements"
+    }
+  ],
+  "category_ids": [
+    123,
+    118
+  ],
+  "body_en_plain": "Just what is the \"SECRET OF THE\nUNIVERSE\" - so important to the\nKlingons that they need to capt-\nure a Starship to find out? Read\nnext month's OUTLET and you too\nwill know the stunning truth!\n\nHowever the star program in the\nFebruary issue is an amazing\nmaze creator with its demo of\nnot just a few mazes - but a\nstaggering.... Well, put it this\nway:- if you completed each maze\nin 10 minutes,  working 24 hours\n\n\na day, 365 days a Year,  (forget\nleap years!)  it would take more\nthan seventy-six Million years\nto do them all!  Yes, there are\nover 4 BILLION different Mazes,\nand scope for even more.  Phew!\n\nSpring is just around the corner\nso there is a nice compilation\nof songs to play to your Valent-\nine (or pet gerbil) but be care-\nful about giving the donkey\nideas as one of the songs is \"I\nGet a Kick out of You\".\n\n\nDid you ever wonder how Napoleon\nspent his time in exile? Now you\ncan amuse yourself in the same\nway, but sorry - Josephine is no\nlonger available.\n\n\nOne more on the leisure-type\ntheme, is a fiendishly difficult\npicture puzzle, but turning to\nthe more serious side, there are\na number of utilities...\n\n ...an extremely fast conversion\nprogram to change Opentype files\ninto normal text(TASWORD 2) type\nfiles, and if you wish to write\nto your aunt in Ossieland there\nis a utility to print your text\nnot only up-side down, but\nany-which-way. And, as always,\nthere is much much much more.\n\n                          Chris\n.\n",
+  "body_ru_plain": "",
+  "body_en": "Just what is the \"SECRET OF THE UNIVERSE\" — so important to the Klingons that they need to capture a Starship to find out? Read next month's OUTLET and you too will know the stunning truth!\n\nHowever the star program in the February issue is an amazing maze creator with its demo of not just a few mazes — but a staggering.... Well, put it this way: if you completed each maze in 10 minutes, working 24 hours a day, 365 days a year (forget leap years!), it would take more than seventy-six million years to do them all! Yes, there are over 4 BILLION different Mazes, and scope for even more. Phew!\n\nSpring is just around the corner so there is a nice compilation of songs to play to your Valentine (or pet gerbil), but be careful about giving the donkey ideas as one of the songs is \"I Get a Kick out of You\".\n\nDid you ever wonder how Napoleon spent his time in exile? Now you can amuse yourself in the same way, but sorry — Josephine is no longer available.\n\nOne more on the leisure-type theme, is a fiendishly difficult picture puzzle, but turning to the more serious side, there are a number of utilities...\n\n...an extremely fast conversion program to change Opentype files into normal text (TASWORD 2) type files, and if you wish to write to your aunt in Ossieland there is a utility to print your text not only up-side down, but any-which-way. And, as always, there is much much much more.\n\nChris\n",
+  "body_ru": "Что же такое «ТАЙНА ВСЕЛЕННОЙ» — настолько важная для клингонов, что ради неё им непременно нужно захватить звездолёт? Читайте следующий выпуск OUTLET, и вы тоже узнаете эту потрясающую истину!\n\nВпрочем, главной звездой февральского номера станет поразительный генератор лабиринтов с демонстрацией не просто нескольких вариантов, а поистине ошеломляющего... Скажем так: если бы вы проходили каждый лабиринт за 10 минут, работая по 24 часа в сутки 365 дней в году (не считая високосных!), на прохождение всех ушло бы более семидесяти шести миллионов лет! Да-да, здесь свыше 4 МИЛЛИАРДОВ различных лабиринтов, и простор для ещё большего числа. Уф!\n\nВесна уже не за горами, поэтому мы приготовили отличную подборку мелодий, которую можно сыграть своей возлюбленной (или домашней песчанке). Но будьте осторожны, не подавайте лишних идей ослу, ведь одна из песен называется «I Get a Kick out of You».\n\nВы когда-нибудь задумывались, как Наполеон коротал время в изгнании? Теперь и вы сможете развлечься точно так же, но увы — Жозефина уже недоступна.\n\nИ ещё одна программа на тему отдыха — дьявольски сложная графическая головоломка. Но если перейти к вещам более серьёзным, вас ждёт целый ряд утилит...\n\n...чрезвычайно быстрый конвертер файлов формата Opentype в обычный текст (в стиле TASWORD 2), а если вы захотите написать тётушке в далёкую Австралию, вам пригодится утилита для печати текста не только вверх тормашками, но и вообще как угодно. И, как всегда, многое, многое, многое другое.\n\nChris\n",
+  "text_type": 3
+}

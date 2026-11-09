@@ -1,0 +1,41 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "010",
+  "article_id": "04_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего выпуска",
+  "meta_description_en": "Preview of the next issue of Outlet magazine: Windowinder and TK50 utilities, Microdrive advice, Devpac CAT routine, and upcoming software.",
+  "meta_description_ru": "Анонс материалов следующего выпуска журнала Outlet: утилиты Windowinder и TK50, советы по Microdrive, дополнения к Devpac и новые программы.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "microdrive",
+      "tag_alias": "microdrive"
+    },
+    {
+      "tag_name": "devpac",
+      "tag_alias": "devpac"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Next month we have WINDOWINDER,\na marvellous window-scrolling\nutility; TK50, an incredible\ntoolkit type program with over\n20 utility routines; details of\nour \"Utility A\" disc/cartridge\nreaders have asked about; a CAT\nroutine to add to the DEVPAC\nassembler if you have got it;\nOUTCLASS continues with its easy\nreference-style format, covering\nBASIC keyword terminology for\nbeginners and non-programmers\nwho just want some guidance.\n\nAlso on disc and the B cartridge\nwe've some lengthy advice about\nmicrodrives from Applied Tech-\nnology;a room-designer program;\na football manager-type program;\na routine to transfer text from\nBASIC DATA statements to Tasword\n2 format and a fresh JIG!BLOX\npicture.\n\nWe've got behind in our schedule\nagain and there's still space to\nfill so there will be more which\nwe've not yet decided upon! Fear\nnot! We'll cram even more in!.\n",
+  "body_ru_plain": "В следующем месяце вас ждут\nWINDOWINDER, великолепная\nутилита для скроллинга окон;\nTK50, невероятный набор\nинструментов с более чем 20\nполезными процедурами; детали\nо нашем диске/картридже\n\"Utility A\", о котором просили\nчитатели; процедура CAT для\nассемблера DEVPAC, если он\nу вас есть; OUTCLASS продолжит\nвыходить в удобном формате\nсправочника, разбирая ключевые\nслова BASIC для новичков и тех,\nкто не программирует, а просто\nхочет получить совет.\n\nТакже на диске и картридже B у\nнас есть обстоятельный совет\nпо microdrives от Applied Tech-\nnology; программа-дизайнер\nкомнат; футбольный менеджер;\nпроцедура для переноса текста\nиз операторов BASIC DATA в\nформат Tasword 2 и свежая\nкартинка для JIG!BLOX.\n\nМы снова выбились из графика,\nи тут ещё есть свободное место,\nтак что будет и кое-что ещё,\nс чем мы пока не определились!\nНе бойтесь! Мы втиснем туда\nещё больше!.\n",
+  "body_en": "## Lookahead\n\nNext month we have WINDOWINDER, a marvellous window-scrolling utility; TK50, an incredible toolkit type program with over 20 utility routines; details of our \"Utility A\" disc/cartridge readers have asked about; a CAT routine to add to the DEVPAC assembler if you have got it; OUTCLASS continues with its easy reference-style format, covering BASIC keyword terminology for beginners and non-programmers who just want some guidance.\n\nAlso on disc and the B cartridge we've some lengthy advice about microdrives from Applied Technology; a room-designer program; a football manager-type program; a routine to transfer text from BASIC DATA statements to Tasword 2 format and a fresh JIG!BLOX picture.\n\nWe've got behind in our schedule again and there's still space to fill so there will be more which we've not yet decided upon! Fear not! We'll cram even more in!.\n",
+  "body_ru": "## Анонс следующего выпуска\n\nВ следующем месяце вас ждут WINDOWINDER, великолепная утилита для скроллинга окон; TK50, невероятный набор инструментов с более чем 20 полезными процедурами; детали о нашем диске/картридже \"Utility A\", о котором просили читатели; процедура CAT для ассемблера DEVPAC, если он у вас есть; OUTCLASS продолжит выходить в удобном формате справочника, разбирая ключевые слова BASIC для новичков и тех, кто не программирует, а просто хочет получить совет.\n\nТакже на диске и картридже B у нас есть обстоятельный совет по microdrives от Applied Technology; программа-дизайнер комнат; футбольный менеджер; процедура для переноса текста из операторов BASIC DATA в формат Tasword 2 и свежая картинка для JIG!BLOX.\n\nМы снова выбились из графика, и тут ещё есть свободное место, так что будет и кое-что ещё, с чем мы пока не определились! Не бойтесь! Мы втиснем туда ещё больше!.\n",
+  "text_type": 3
+}

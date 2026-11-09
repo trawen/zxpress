@@ -1,0 +1,46 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "130",
+  "article_id": "08_addender",
+  "title_en": "Add-Enders",
+  "title_ru": "Дополнения (Add-Enders)",
+  "meta_description_en": "An introduction to the Add-Enders section in Outlet #130, featuring reprinted utilities such as SELECTLLIST and LINEKEEPER.",
+  "meta_description_ru": "Вводная заметка к разделу Add-Enders в Outlet #130: публикация архивных утилит, включая SELECTLLIST и LINEKEEPER.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "add-enders",
+      "tag_alias": "add-enders"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    },
+    {
+      "tag_name": "selectllist",
+      "tag_alias": "selectllist"
+    },
+    {
+      "tag_name": "linekeeper",
+      "tag_alias": "linekeeper"
+    }
+  ],
+  "category_ids": [
+    116,
+    121
+  ],
+  "body_en_plain": "Some items contributed to OUTLET\nhave not yet been included for a\nvariety of reasons. It's a shame\nto leave them on the shelf so,if\nappropriate, they will be added\nto this ADD-ENDERS area of the\nmagazine (not microdrive or Opus\nas there is not enough room).\n\nThe material covers a wide range\nof quality and program types:\nutilities, screens, character\nsets and text articles and SOME\nof it may be unedited, untested,\nnot working fully or properly;\nin need of conversion for your\n\nsystem's syntax or printer etc.;\nwithout full instructions or\nwhatever. Readers will have to\nsift through to see if there is\nanything of interest they can\nmake use of and discard the\nrest. Not everything will appear\non all versions necessarily.\n\nSome Add-Enders may be linked to\nOUTLET in the normal way. These\nwill usually precede this text\nfile. Any items that follow this\narticle will possibly need to be\nLOADed manually or may not auto-\nrun when loaded.\n\nThere may be some info on the\nfollowing pages...\n\nFollowing on from the suggestion\nin a recent OUTLET to reproduce\nsome of the better routines from\nearlier issues of OUTLET for the\nbenefit of newer subscribers, we\nhave \"SELECTLLIST\" which allows\nyou to choose a block of Basic\nlines to send to the printer.\nSELECTLLIST first appeared named\n\"SHORTLIST\" in OUTLET 43, with\ninformation on its use.\n\nAny suggestions of programs that\nyou would like to see again or\nconsider to be of special value\nto other readers are always\nwelcome, and we will include one\nas an ADDENDER each month if\nspace permits. Be warned however\nthat most of those magical Demos\nwill be much too large for incl-\nusion!\n\nPress \"N\" now to load LINEKEEPER\n\n\n\nNote that you will probably get\nan error report when the program\nis loaded from OUTLET, as it is\nnot auto-run.\n\n.\n",
+  "body_ru_plain": "",
+  "body_en": "Some items contributed to OUTLET have not yet been included for a variety of reasons. It's a shame to leave them on the shelf so, if appropriate, they will be added to this ADD-ENDERS area of the magazine (not microdrive or Opus as there is not enough room).\n\nThe material covers a wide range of quality and program types: utilities, screens, character sets and text articles and SOME of it may be unedited, untested, not working fully or properly; in need of conversion for your system's syntax or printer etc.; without full instructions or whatever. Readers will have to sift through to see if there is anything of interest they can make use of and discard the rest. Not everything will appear on all versions necessarily.\n\nSome Add-Enders may be linked to OUTLET in the normal way. These will usually precede this text file. Any items that follow this article will possibly need to be LOADed manually or may not auto-run when loaded.\n\nThere may be some info on the following pages...\n\nFollowing on from the suggestion in a recent OUTLET to reproduce some of the better routines from earlier issues of OUTLET for the benefit of newer subscribers, we have \"SELECTLLIST\" which allows you to choose a block of Basic lines to send to the printer. SELECTLLIST first appeared named \"SHORTLIST\" in OUTLET 43, with information on its use.\n\nAny suggestions of programs that you would like to see again or consider to be of special value to other readers are always welcome, and we will include one as an ADDENDER each month if space permits. Be warned however that most of those magical Demos will be much too large for inclusion!\n\nPress \"N\" now to load LINEKEEPER\n\nNote that you will probably get an error report when the program is loaded from OUTLET, as it is not auto-run.\n",
+  "body_ru": "Некоторые материалы, присланные в редакцию OUTLET, до сих пор не публиковались по разным причинам. Жаль оставлять их пылиться на полке, поэтому, если они подходят, мы будем добавлять их в этот раздел журнала под названием ADD-ENDERS (на версиях для Microdrive и Opus места для них, увы, нет).\n\nЭтот материал весьма разнообразен по качеству и типам программ: утилиты, экраны, наборы шрифтов и текстовые статьи. КОЕ-ЧТО из этого может быть неотредактированным, не протестированным, работать не полностью или некорректно; требовать адаптации под синтаксис вашей дисковой системы или принтер; поставляться без подробных инструкций и т. д. Читателям придется самостоятельно отбирать то, что представляет интерес, отсеивая остальное. Кроме того, не всё обязательно появится во всех версиях издания.\n\nНекоторые материалы раздела могут запускаться из оболочки OUTLET обычным образом — они обычно предшествуют этому текстовому файлу. Всё, что следует после этой статьи, возможно, придется загружать вручную (командой LOAD) или запускать отдельно, так как автозапуск может отсутствовать.\n\nНа следующих страницах приведена дополнительная информация...\n\nСледуя предложению из недавнего выпуска OUTLET воспроизвести некоторые из наиболее удачных подпрограмм прошлых номеров для новых подписчиков, мы представляем «SELECTLLIST». Она позволяет выбрать блок строк на Бейсике для отправки на принтер. Впервые программа SELECTLLIST появилась под названием «SHORTLIST» в OUTLET 43 с описанием работы.\n\nМы всегда рады любым предложениям относительно программ, которые вы хотели бы увидеть снова или считаете особенно полезными для других читателей. При наличии свободного места мы будем включать по одной такой программе в раздел ADDENDER каждый месяц. Однако предупреждаем: большинство тех волшебных демок окажутся слишком большими по объему!\n\nНажмите «N» сейчас, чтобы загрузить LINEKEEPER.\n\nОбратите внимание: при загрузке программы из OUTLET вы, скорее всего, получите отчет об ошибке, так как она не запускается автоматически.\n",
+  "text_type": 3
+}

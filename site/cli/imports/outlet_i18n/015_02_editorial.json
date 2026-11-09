@@ -1,0 +1,49 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "015",
+  "article_id": "02_editorial",
+  "title_en": "Editorial",
+  "title_ru": "От редакции",
+  "meta_description_en": "Editorial column from Outlet #015: announcement of the cassette version of the magazine, and bug fixes for Seal Rescue (#10), Remstore, and Vidlist (#12).",
+  "meta_description_ru": "Колонка редакторов Outlet #015: запуск кассетной версии журнала, а также исправления ошибок в программах Seal Rescue (#10), Remstore и Vidlist (#12).",
+  "authors": [
+    "Ron Baxter",
+    "Brian Clark"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "исправление ошибок",
+      "tag_alias": "bug-fix"
+    },
+    {
+      "tag_name": "seal rescue",
+      "tag_alias": "seal-rescue"
+    },
+    {
+      "tag_name": "vidlist",
+      "tag_alias": "vidlist"
+    },
+    {
+      "tag_name": "remstore",
+      "tag_alias": "remstore"
+    }
+  ],
+  "category_ids": [
+    123,
+    76
+  ],
+  "body_en_plain": "This month we launch yet another\nversion of OUTLET-on cassette at\n`2.75! Note this version won't\nrun from drives as a whole but\nprograms can be transferred\nsingly. If you know anyone with\na Spectrum/Cassette set-up you\nmight tell them the good news!\n\nOUTLET programs usually have an\nERASE at line 9980,SAVE(drive)at\n9982 and now, SAVE(tape) at 9983\n(sometimes 8980, 8982 and 8983).\n\nA rarely-occuring buglet in SEAL\nRESCUE(#10)! Correct with: BREAK\nthen use EDIT to re-number line\n1515 to 1525,delete the original\nline 1515 (just type 1515 and\nENTER) then re-SAVE the program\nusing RUN 9982.\n\nAnother rare bug-in REMSTORE. If\nthe code you wish to store has\nany zeros at the end they'll be\nignored. This may not matter but\nif you get a problem just add a\nbyte of any value(not zero!) to\nthe end of the code.\n\nJohn Luby spotted 2 errors that\ncrept into his VIDLIST program\n(#12)after it editing for OUTLET\n- one was covered in OUTLETTERS\nlast month but you can correct\nboth by using BREAK and MERGEing\nin VIDFIX from this issue (Cart.\nB or end of tape).\n\nDo NOT re-SAVE VIDLIST on the\nOPUS DISK version of OUTLET 12.\nThere's no room on the disk for\neven a few extra bytes! Save it\non a spare disk.\n\n                  - Ron & Brian.\n",
+  "body_ru_plain": "В этом месяце мы запускаем ещё\nодну версию OUTLET — на кассете\nза `2.75! Учтите, что целиком\nс дисковода эта версия работать\nне будет, но программы можно\nпереносить по отдельности. Если\nвы знаете кого-то со связкой\nSpectrum/магнитофон, сообщите им\nэту хорошую новость!\n\nВ программах OUTLET обычно есть\nERASE в строке 9980, SAVE(диск)\nв 9982 и теперь SAVE(лента) в\n9983 (иногда 8980, 8982 и 8983).\n\nРедкий баг в SEAL RESCUE (#10)!\nИсправление: BREAK, затем с\nпомощью EDIT измените номер\nстроки 1515 на 1525, удалите\nисходную строку 1515 (наберите\n1515 и нажмите ENTER), а затем\nпересохраните программу через\nRUN 9982.\n\nЕщё один редкий баг — в REMSTORE.\nЕсли сохраняемый код оканчива-\nется нулями, они игнорируются.\nЭто может быть не критично, но\nесли возникнет проблема, просто\nдобавьте байт с любым значением\n(не ноль!) в самый конец кода.\n\nJohn Luby заметил 2 ошибки,\nзакравшиеся в его программу\nVIDLIST (#12) после правки для\nOUTLET: одна упоминалась в\nOUTLETTERS в прошлом месяце, но\nобе можно исправить, нажав BREAK\nи сделав MERGE программы VIDFIX\nиз этого номера (картридж B или\nконец ленты).\n\nНЕ пересохраняйте VIDLIST на\nдиск OPUS DISK с OUTLET 12.\nТам нет места даже для пары\nлишних байтов! Сохраните её на\nзапасной диск.\n\n                  - Ron & Brian.\n",
+  "body_en": "## Editorial\n\nThis month we launch yet another version of OUTLET-on cassette at `2.75! Note this version won't run from drives as a whole but programs can be transferred singly. If you know anyone with a Spectrum/Cassette set-up you might tell them the good news!\n\nOUTLET programs usually have an ERASE at line 9980, SAVE(drive) at 9982 and now, SAVE(tape) at 9983 (sometimes 8980, 8982 and 8983).\n\nA rarely-occuring buglet in SEAL RESCUE (#10)! Correct with: BREAK then use EDIT to re-number line 1515 to 1525, delete the original line 1515 (just type 1515 and ENTER) then re-SAVE the program using RUN 9982.\n\nAnother rare bug-in REMSTORE. If the code you wish to store has any zeros at the end they'll be ignored. This may not matter but if you get a problem just add a byte of any value (not zero!) to the end of the code.\n\nJohn Luby spotted 2 errors that crept into his VIDLIST program (#12) after it editing for OUTLET - one was covered in OUTLETTERS last month but you can correct both by using BREAK and MERGEing in VIDFIX from this issue (Cart. B or end of tape).\n\nDo NOT re-SAVE VIDLIST on the OPUS DISK version of OUTLET 12. There's no room on the disk for even a few extra bytes! Save it on a spare disk.\n\n— Ron & Brian.\n",
+  "body_ru": "## От редакции\n\nВ этом месяце мы запускаем ещё одну версию OUTLET — на кассете за £2.75! Учтите, что целиком с дисковода эта версия работать не будет, но программы можно переносить по отдельности. Если вы знаете кого-то со связкой Spectrum/магнитофон, сообщите им эту хорошую новость!\n\nВ программах OUTLET обычно есть `ERASE` в строке 9980, `SAVE` (диск) в 9982 и теперь `SAVE` (лента) в 9983 (иногда 8980, 8982 и 8983).\n\nРедкий баг в SEAL RESCUE (#10)! Исправление: `BREAK`, затем с помощью `EDIT` измените номер строки 1515 на 1525, удалите исходную строку 1515 (наберите 1515 и нажмите `ENTER`), а затем пересохраните программу через `RUN 9982`.\n\nЕщё один редкий баг — в REMSTORE. Если сохраняемый код оканчивается нулями, они игнорируются. Это может быть не критично, но если возникнет проблема, просто добавьте байт с любым значением (не ноль!) в самый конец кода.\n\nJohn Luby заметил 2 ошибки, закравшиеся в его программу VIDLIST (#12) после правки для OUTLET: одна упоминалась в OUTLETTERS в прошлом месяце, но обе можно исправить, нажав `BREAK` и сделав `MERGE` программы VIDFIX из этого номера (картридж B или конец ленты).\n\nНЕ пересохраняйте VIDLIST на диск OPUS DISK с OUTLET 12. Там нет места даже для пары лишних байтов! Сохраните её на запасной диск.\n\n*— Ron & Brian.*\n",
+  "text_type": 3
+}

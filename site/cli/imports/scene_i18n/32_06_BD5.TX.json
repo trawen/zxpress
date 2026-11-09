@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "32",
+  "article_id": "06_BD5.TX",
+  "source_lang": "de-AT",
+  "title_en": "Boulder Dash V",
+  "title_ru": "Boulder Dash V",
+  "meta_description_en": "A brief overview of Boulder Dash V, a modified version of the cult ZX Spectrum classic with updated levels and altered engine mechanics, from Scene+ #32.",
+  "meta_description_ru": "Краткая заметка об игре Boulder Dash V для ZX Spectrum с изменёнными уровнями и обновлённым движком из австрийского дискмага Scene+ #32.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    },
+    {
+      "tag_name": "boulder-dash",
+      "tag_alias": "boulder-dash"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "BOULDER ü - BOULDER DASH V - Genau dasselbe Kultspiel wie allen\nbereits bekannt, nur daßnicht nur die Leveldesigns geändert\nwurden, sondern auch einigesan der Engine. So entsteht z. B. ein\nFeind wenn einer der Steineam Boden aufschlägt. Die Steuerung\ndürfte bereits bekannt sein, nur zum starten sollte man die\nTaste 1 drücken!/ - The well known cult game, with some changes,\nnot only the leveldesign but also the engine. eg. if a rock fall\nto ground, itchanges to a monster. Controls arestill the old,\nbut to startthe game you must pres\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### BOULDER 5 – BOULDER DASH V\n\nThe very same cult classic everyone already knows, except not only have the level designs been altered, but some changes have also been made to the engine itself. For instance, an enemy appears whenever a boulder hits the ground. \n\nThe controls should be familiar, but to start the game you have to press key **1**!\n",
+  "body_ru": "### BOULDER 5 – BOULDER DASH V\n\nТа самая культовая игра, хорошо знакомая каждому, однако здесь изменён не только дизайн уровней, но и кое-что в самом движке. К примеру, когда падающий камень ударяется о землю, он превращается во врага.\n\nУправление наверняка всем известно, но чтобы запустить игру, необходимо нажать клавишу **1**!\n",
+  "text_type": 3
+}

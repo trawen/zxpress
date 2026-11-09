@@ -1,0 +1,32 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "138",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Editorial note for Outlet #138 (February 1999): call for reader contributions and brief overview of the issue contents.",
+  "meta_description_ru": "Редакционная колонка журнала Outlet №138 (февраль 1999): призыв присылать письма и краткий обзор содержимого номера.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "F E B R U A R Y ,   1 9 9 9\n\nContributions have improved very\nslightly this month but there's\nnot a lot of Outletters! We need\nyour input -even a short message\nhelps! Share your ideas and info\nwith everyone!\n\n\nThere's a good mix as usual this\nmonth with a code compressor and\neven Beatles music! Enjoy!\n\n                     Ron & Brian\n\n\n\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n   Email: outletmag@yahoo.com.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nF E B R U A R Y ,   1 9 9 9\n\nContributions have improved very slightly this month but there's not a lot of Outletters! We need your input -even a short message helps! Share your ideas and info with everyone!\n\nThere's a good mix as usual this month with a code compressor and even Beatles music! Enjoy!\n\nRon & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers 34 Saltersgate Drive Birstall, Leicester LE4 3FF\n\nEmail: outletmag@yahoo.com.\n",
+  "body_ru": "## Editorial (late)\n\n**Февраль 1999**\n\nКоличество присланных материалов в этом месяце немного увеличилось, но писем (Outletters) по-прежнему мало! Нам нужен ваш отклик — даже короткое сообщение поможет! Делитесь своими идеями и информацией со всеми!\n\nКак обычно, в этом месяце вас ждёт хорошая подборка: компрессор кода и даже музыка Beatles! Приятного чтения!\n\nRon & Brian\n\nOUTLET выпускают:\n\nChris Oliver  \nRon & Brian Cavers  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF  \n\nEmail: outletmag@yahoo.com.\n",
+  "text_type": 3
+}

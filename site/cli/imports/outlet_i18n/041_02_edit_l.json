@@ -1,0 +1,49 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "041",
+  "article_id": "02_edit_l",
+  "title_en": "Editorial: January 1991",
+  "title_ru": "От редакции: январь 1991",
+  "meta_description_en": "Outlet #41 editorial by Ron & Brian Cavers: visiting the All-Formats Fair, fixes for Disciple/+D screen loading, +3 RAM disc bug in SOSTRONG, and a SAM Coupé issue.",
+  "meta_description_ru": "Колонка редакторов Outlet #41 (Ron и Brian Cavers): визит на All-Formats Fair, исправления загрузки экранов на Disciple/+D, RAM-диск +3 и баг с BREAK на SAM Coupé.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "microfair",
+      "tag_alias": "microfair"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "disciple",
+      "tag_alias": "disciple"
+    },
+    {
+      "tag_name": "plus d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "bugfix",
+      "tag_alias": "bugfix"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "J A N U A R Y,   1 9 9 1\n\nWe start this new year with high\nhopes as OUTLET readership grows\nslowly but surely - attracting\nmore contributions, interesting\nideas, info, programs, articles\nand readers' letters!\n\nWe've often considered taking a\nstall again at the ZX Microfairs\nand now, of course, the All-\nFormats Fair. However, we kept\nputting it off because it's such\na major upheaval to plan and to\nparticipate in - especially now\nwe both live in Leicester.At the\nbeginning of December,we decided\nto see if it would be practical\nto make a quick day trip on the\ntrain with the minimum of gear\nand planning - just to see. We\nshared a stall with Brian Gaff\n(trading as B.G. SERVICES and\nselling his FIXIT and VTX5000\nmodems) in order to cut costs.We\nwere delighted to meet some of\nour readers there and hope to be\nable to repeat the trip at some\nof the future fairs.\n\nOne or two readers have pointed\nout that some of our screens are\nnot SAVEd as SCREEN$ but as code\nat a higher address and so will\nnot load correctly using the +D\nor Disciple LOAD P9 etc.,syntax.\nSorry - that was unintentional\nand will be avoided in future if\npossible. LOAD D1;\"NAME\" SCREEN$\nwill meanwhile load any screens\nSAVEd as code.\n\n\"SOSTRONG\" in the Spectrum Issue\n39 used +3 ramdisc syntax which\nfails on other 128K machines. If\nyou load the program, BREAK and\nMERGE \"SOMOD\" from this issue it\nshould be alright. ReSAVE the\nprogram using RUN 9980 (9983 for\ntape).\n\nWe've recently discovered that\npressing the BREAK button at the\nback of the SAM COUPE may often\ncorrupt the PAGE ALLOCATION\nTABLE.This may only affect early\nmachines but we'd like to hear\nfrom anyone with a newer machine\nif this happens.The symptoms are\n\"out of memory\" etc. if you try\nto OPEN a screen, CLEAR etc. (or\nload a program that does) but it\ncould have other effects. RESET\nclears it of course.\n\n      Happy New Year to you\n      all and Good Health!\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_ru_plain": "",
+  "body_en": "J A N U A R Y,   1 9 9 1\n\nWe start this new year with high hopes as OUTLET readership grows slowly but surely — attracting more contributions, interesting ideas, info, programs, articles and readers' letters!\n\nWe've often considered taking a stall again at the ZX Microfairs and now, of course, the All-Formats Fair. However, we kept putting it off because it's such a major upheaval to plan and to participate in — especially now we both live in Leicester. At the beginning of December, we decided to see if it would be practical to make a quick day trip on the train with the minimum of gear and planning — just to see. We shared a stall with Brian Gaff (trading as B.G. SERVICES and selling his FIXIT and VTX5000 modems) in order to cut costs. We were delighted to meet some of our readers there and hope to be able to repeat the trip at some of the future fairs.\n\nOne or two readers have pointed out that some of our screens are not SAVEd as `SCREEN$` but as code at a higher address and so will not load correctly using the +D or Disciple `LOAD P9` etc. syntax. Sorry — that was unintentional and will be avoided in future if possible. `LOAD D1;\"NAME\" SCREEN$` will meanwhile load any screens SAVEd as code.\n\n\"SOSTRONG\" in the Spectrum Issue 39 used +3 ramdisc syntax which fails on other 128K machines. If you load the program, BREAK and MERGE \"SOMOD\" from this issue it should be alright. ReSAVE the program using `RUN 9980` (`9983` for tape).\n\nWe've recently discovered that pressing the BREAK button at the back of the SAM COUPE may often corrupt the PAGE ALLOCATION TABLE. This may only affect early machines but we'd like to hear from anyone with a newer machine if this happens. The symptoms are \"out of memory\" etc. if you try to OPEN a screen, CLEAR etc. (or load a program that does) but it could have other effects. RESET clears it of course.\n\nHappy New Year to you all and Good Health!\n\nRon & Brian Cavers\nCHEZRON SOFTWARE\n605, Loughborough Road\nBirstall, Leicester LE4 4NJ.\n",
+  "body_ru": "Я Н В А Р Ь,   1 9 9 1\n\nМы начинаем этот новый год с большими надеждами: читательская аудитория OUTLET медленно, но верно растет, привлекая все больше материалов, интересных идей, полезных сведений, программ, статей и писем от читателей!\n\nМы не раз думали о том, чтобы снова взять стенд на выставках ZX Microfair и, разумеется, на All-Formats Fair. Однако мы постоянно откладывали это решение, поскольку организация такой поездки сопряжена с немалыми хлопотами — особенно теперь, когда мы оба живем в Лестере. В начале декабря мы решили проверить, насколько реально совершить быструю однодневную поездку на поезде с минимумом аппаратуры и подготовки — просто на пробу. Чтобы снизить расходы, мы разделили стенд с Брайаном Гаффом (Brian Gaff, работающим под вывеской B.G. SERVICES и продающим свою утилиту FIXIT и модемы VTX5000). Мы были очень рады встретиться там с нашими читателями и надеемся повторить такую поездку на будущих выставках.\n\nПара читателей обратила наше внимание на то, что некоторые наши экраны СОХРАНЕНЫ не как `SCREEN$`, а как кодовый блок по более высокому адресу, из-за чего они не загружаются корректно через синтаксис +D или Disciple (`LOAD P9` и т. д.). Просим прощения — это вышло ненамеренно, и в будущем мы постараемся этого избегать. Пока же команда `LOAD D1;\"NAME\" SCREEN$` без проблем загрузит любые экраны, сохраненные как код.\n\nПрограмма «SOSTRONG» из 39-го выпуска использовала синтаксис электронного диска (ramdisc) ZX Spectrum +3, который приводит к ошибкам на других моделях 128K. Если вы загрузите программу, нажмете BREAK и выполните команду `MERGE \"SOMOD\"` из текущего выпуска, всё должно заработать нормально. Заново сохраните программу с помощью `RUN 9980` (`9983` для кассеты).\n\nНедавно мы обнаружили, что нажатие кнопки BREAK на задней панели SAM COUPE нередко повреждает ТАБЛИЦУ РАСПРЕДЕЛЕНИЯ СТРАНИЦ (PAGE ALLOCATION TABLE). Возможно, это касается только ранних версий компьютера, однако мы хотели бы узнать у владельцев более новых ревизий, случается ли у них подобное. Симптомы: сообщение «out of memory» и подобные ошибки при попытке выполнить `OPEN` экрана, `CLEAR` и т. д. (или при загрузке использующей их программы), но возможны и другие побочные эффекты. Кнопка RESET, конечно же, устраняет эту проблему.\n\nСчастливого Нового года всем вам и крепкого здоровья!\n\nRon & Brian Cavers\nCHEZRON SOFTWARE\n605, Loughborough Road\nBirstall, Leicester LE4 4NJ.\n",
+  "text_type": 3
+}

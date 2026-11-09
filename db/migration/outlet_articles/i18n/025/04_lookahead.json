@@ -1,0 +1,36 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "025",
+  "article_id": "04_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего выпуска",
+  "meta_description_en": "Preview of upcoming features in the next issue of Outlet magazine: 3D plotting, disk utilities, software and hardware reviews.",
+  "meta_description_ru": "Анонс материалов следующего выпуска журнала Outlet: 3D-графика, дисковые утилиты, обзоры софта и периферии.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "планы",
+      "tag_alias": "plans"
+    }
+  ],
+  "category_ids": [
+    123,
+    119
+  ],
+  "body_en_plain": "Planned for next month so far we\nhave a fine program that plots a\nfunction as a 3-dimensional mesh\n(I had hours of fun testing it);\nan Opus Discovery extended  CAT;\na routine to save ALL variables;\na game of bowls; OUTPUT with the\nnext Part of\"Program Protection\"\nand a mega-CHECKOUT with reviews\nof SPECCIFAX, SPECTRUM USER, the\nCITIZEN 120D printer,LETTA-HEAD+\nand FARRAT.There's a new demo of\nhigh-res colour(different colour\non each pixel line);a routine to\n\n\nreformat Tasword 2 files from 64\ncolumns to 32;a terrific program\nfrom Ian \"Crash\" Cull which will\nFORMAT your +3 discs to 192K per\nside!; a random number generator\nfor machine code programmers and\nSPIN IT is the final of the four\nstrategy board games from DATON!\n\nFinally, we've OTHER WORLDS from\nGeoff Wearmouth -  graphics that\nare just out of this world!! See\nyou there! Please bring your own\noxygen - it's breathtaking.\n\n                     - Brian.\n",
+  "body_ru_plain": "В планах на следующий месяц пока\nесть отличная программа, строящая\nграфик функции в виде 3D-сетки\n(я часами гонял её на тестах);\nрасширенный CAT для Opus\nDiscovery; процедура сохранения\nВСЕХ переменных; игра в боулз;\nOUTPUT со следующей частью статьи\n\"Program Protection\" и мега-\nCHECKOUT с обзорами SPECCIFAX,\nSPECTRUM USER, принтера\nCITIZEN 120D, LETTA-HEAD+ и\nFARRAT. Новое демо high-res\ncolour (свой цвет на каждую\nпиксельную строку); подпрограмма\n\n\nдля перевода файлов Tasword 2 из\n64 колонок в 32; убойная утилита\nот Ian \"Crash\" Cull, которая\nделает FORMAT ваших дисков для\n+3 на 192K на сторону!; генератор\nслучайных чисел для кодеров на\nмашинном коде, а SPIN IT — финал\nсерии из четырёх настольных\nстратегий от фирмы DATON!\n\nИ наконец, OTHER WORLDS от\nGeoff Wearmouth — графика просто\nнеземная!! До встречи! Прихватите\nс собой кислород — тут дух\nзахватывает.\n\n                     - Brian.\n",
+  "body_en": "## Lookahead\n\nPlanned for next month so far we have a fine program that plots a function as a 3-dimensional mesh (I had hours of fun testing it); an Opus Discovery extended CAT; a routine to save ALL variables; a game of bowls; OUTPUT with the next Part of \"Program Protection\" and a mega-CHECKOUT with reviews of SPECCIFAX, SPECTRUM USER, the CITIZEN 120D printer, LETTA-HEAD+ and FARRAT. There's a new demo of high-res colour (different colour on each pixel line); a routine to reformat Tasword 2 files from 64 columns to 32; a terrific program from Ian \"Crash\" Cull which will FORMAT your +3 discs to 192K per side!; a random number generator for machine code programmers and SPIN IT is the final of the four strategy board games from DATON!\n\nFinally, we've OTHER WORLDS from Geoff Wearmouth - graphics that are just out of this world!! See you there! Please bring your own oxygen - it's breathtaking.\n\n— Brian.\n",
+  "body_ru": "## Анонс следующего выпуска\n\nВ планах на следующий месяц пока есть отличная программа, строящая график функции в виде 3D-сетки (я часами гонял её на тестах); расширенный CAT для Opus Discovery; процедура сохранения ВСЕХ переменных; игра в боулз; OUTPUT со следующей частью статьи \"Program Protection\" и мега-CHECKOUT с обзорами SPECCIFAX, SPECTRUM USER, принтера CITIZEN 120D, LETTA-HEAD+ и FARRAT. Новое демо high-res colour (свой цвет на каждую пиксельную строку); подпрограмма для перевода файлов Tasword 2 из 64 колонок в 32; убойная утилита от Ian \"Crash\" Cull, которая делает FORMAT ваших дисков для +3 на 192K на сторону!; генератор случайных чисел для кодеров на машинном коде, а SPIN IT — финал серии из четырёх настольных стратегий от фирмы DATON!\n\nИ наконец, OTHER WORLDS от Geoff Wearmouth — графика просто неземная!! До встречи! Прихватите с собой кислород — тут дух захватывает.\n\n— Brian.\n",
+  "text_type": 3
+}

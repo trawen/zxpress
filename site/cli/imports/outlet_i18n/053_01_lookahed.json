@@ -1,0 +1,43 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "053",
+  "article_id": "01_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "Brian Renwick previews what's coming in next month's Outlet issue #054: sound sampler, Octunes, Rote, New Angles, disk tools, and more.",
+  "meta_description_ru": "Брайан Ренвик анонсирует содержание следующего выпуска Outlet #054: сэмплер, Octunes, обучающая программа Rote, утилита поворота графики New Angles и дисковые утилиты.",
+  "authors": [
+    "Brian Renwick"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "samplers",
+      "tag_alias": "samplers"
+    },
+    {
+      "tag_name": "ay music",
+      "tag_alias": "ay-music"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Planned for next month is a nice\nsound sampler to enable you to\nuse snatches of sound in your\nown programs; more 128K music in\nOCTUNES - a compilation of eight\ntunes; ROTE - a program to help\nyou learn lists of words such as\nused in spelling or foreign\nlanguage vocabulary etc. (some\ndemo Swedish words included but\nyou can load your own words) and\nNEW ANGLES - a brilliant graphic\nprogram that can rotate images\naround to any angle.\n                       more...\n\nThere'll be all the regulars of\ncourse,loads of letters and info\nand news etc., more clip art; a\ncouple of simple puzzle games;\nOUTCLASS explains the machine\ncode for a high-res pointer and\nthe code is included in POINTER\nso even BASIC programmers can\nuse it!\n\nADMIN is a +3 file-handler while\nDisciple/+D users get UNIDISC\n(BUT NOTE THIS NEEDS THE NEW\nUNIDOS ROM FITTED)!DRIVECHAT has\narticles on simple comms jargon\nand direct Spectrum-to-Spectrum\nvia tape output and amplifier.\n\nThere'll be extra stuff in ADD-\nENDERS as usual! - See you then!\n\n                        - Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "Planned for next month is a nice sound sampler to enable you to use snatches of sound in your own programs; more 128K music in OCTUNES — a compilation of eight tunes; ROTE — a program to help you learn lists of words such as used in spelling or foreign language vocabulary etc. (some demo Swedish words included but you can load your own words) and NEW ANGLES — a brilliant graphic program that can rotate images around to any angle.\n\nThere'll be all the regulars of course, loads of letters and info and news etc., more clip art; a couple of simple puzzle games; OUTCLASS explains the machine code for a high-res pointer and the code is included in POINTER so even BASIC programmers can use it!\n\nADMIN is a +3 file-handler while Disciple/+D users get UNIDISC (BUT NOTE THIS NEEDS THE NEW UNIDOS ROM FITTED)! DRIVECHAT has articles on simple comms jargon and direct Spectrum-to-Spectrum via tape output and amplifier.\n\nThere'll be extra stuff in ADD-ENDERS as usual! — See you then!\n\n— Brian.\n",
+  "body_ru": "В следующем месяце запланирован отличный звуковой сэмплер, который позволит использовать звуковые фрагменты в ваших собственных программах; еще больше 128K-музыки в сборнике OCTUNES из восьми треков; ROTE — программа для заучивания списков слов (для тренировки правописания, иностранных слов и т. д.; в комплекте идет демо-набор шведских слов, но можно загружать и свои); а также NEW ANGLES — великолепная графическая утилита, умеющая поворачивать изображения на произвольный угол.\n\nКонечно же, будут и все постоянные рубрики: куча писем, полезной информации, новостей и прочего; еще больше клипартов; пара незамысловатых головоломок; рубрика OUTCLASS разберет машинный код указателя высокого разрешения, причем код включен в программу POINTER, так что им смогут воспользоваться даже Бейсик-программисты!\n\nADMIN — это файловый менеджер для +3, а пользователи Disciple/+D получат UNIDISC (ОБРАТИТЕ ВНИМАНИЕ: ДЛЯ НЕГО ТРЕБУЕТСЯ УСТАНОВЛЕННОЕ ПЗУ UNIDOS)! В рубрике DRIVECHAT появятся статьи о базовом сетевом сленге и о прямом соединении Spectrum-to-Spectrum через магнитофонный выход и усилитель.\n\nКак обычно, в ADD-ENDERS войдут дополнительные материалы! До встречи!\n\n— Brian.\n",
+  "text_type": 3
+}

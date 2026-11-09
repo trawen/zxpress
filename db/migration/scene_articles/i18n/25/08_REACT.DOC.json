@@ -1,0 +1,52 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "25",
+  "article_id": "08_REACT.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Real Action (Reaction) 128",
+  "title_ru": "Real Action (Reaction) 128",
+  "meta_description_en": "Brief overview of the ZX Spectrum demo Real Action (Reaction) by Jordan (Exodus), released for the Enlight'97 demoparty.",
+  "meta_description_ru": "Краткая заметка о демо для ZX Spectrum Real Action (Reaction), созданном Jordan (Exodus) для Enlight'97.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "real-action",
+      "tag_alias": "real-action"
+    },
+    {
+      "tag_name": "reaction",
+      "tag_alias": "reaction"
+    },
+    {
+      "tag_name": "jordan",
+      "tag_alias": "jordan"
+    },
+    {
+      "tag_name": "enlight-97",
+      "tag_alias": "enlight-97"
+    },
+    {
+      "tag_name": "demo",
+      "tag_alias": "demo"
+    }
+  ],
+  "category_ids": [
+    93,
+    94
+  ],
+  "body_de_plain": "REACTION ü REAL ACTION (REACTION) 128 Quelle: SUC Art:\nSelbstablaufendes Demo (128K)\" Real Action wurde von Jordan (of\nEx Exodus) programmiert alsBeitrag für das Enlight'97, leider\nhat es nicht gewonnen obwohldieses Demo auch hervorragend\nprogrammiert wurde. Einige Teilezeigen verschiedene Figuren nach\njedem Programmstart.u - Source: SUC Sort: Self running demo\n(128K) Real Action was coded by Jordan (of Ex-odus) as a\ncontributionto the Enlight'97, it has not won, but believe me,\nit isexcellently coded. Vectors Part shows one of two\ndifferentfigures after every start. Other parts do it too, it's\nthe styleof\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### REAL ACTION (REACTION) 128\n\n**Source:** SUC  \n**Type:** Self-running demo (128K)  \n\nReal Action was coded by Jordan (of Exodus) as an entry for Enlight'97. Unfortunately, it didn't win, even though this demo was also coded brilliantly. Some parts display different shapes upon each launch of the program.\n\n---\n\n*Original English note from SUC:*\n\n**Source:** SUC  \n**Sort:** Self-running demo (128K)  \n\nReal Action was coded by Jordan (of Exodus) as a contribution to Enlight'97; it did not win, but believe me, it is excellently coded. The vectors part shows one of two different figures after every start. Other parts do it too, it's the style of...\n",
+  "body_ru": "### REAL ACTION (REACTION) 128\n\n**Источник:** SUC  \n**Тип:** Демо (128K)  \n\nДемо Real Action было написано Jordan (из Exodus) в качестве конкурсной работы для Enlight'97. К сожалению, оно не заняло призового места, хотя этот релиз тоже запрограммирован просто превосходно. Некоторые части при каждом запуске программы выводят различные векторные фигуры.\n\n---\n\n*Оригинальная англоязычная заметка из SUC:*\n\n**Source:** SUC  \n**Sort:** Self running demo (128K)  \n\nReal Action was coded by Jordan (of Ex-odus) as a contribution to the Enlight'97, it has not won, but believe me, it is excellently coded. Vectors Part shows one of two different figures after every start. Other parts do it too, it's the style of...\n",
+  "text_type": 3
+}

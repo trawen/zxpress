@@ -1,0 +1,53 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "24",
+  "article_id": "12_TIZZME.DOC",
+  "source_lang": "de-AT",
+  "title_en": "TIZZME: Soundtracker Ripper Utility",
+  "title_ru": "TIZZME: Утилита для извлечения треков Soundtracker",
+  "meta_description_en": "Overview of TIZZME, a ZX Spectrum utility designed for ripping Soundtracker music modules from demos and games without requiring a Multiface interface.",
+  "meta_description_ru": "Краткое описание утилиты TIZZME для ZX Spectrum, позволяющей выдирать музыку формата Soundtracker из демо и игр без использования Multiface.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "tizzme",
+      "tag_alias": "tizzme"
+    },
+    {
+      "tag_name": "soundtracker",
+      "tag_alias": "soundtracker"
+    },
+    {
+      "tag_name": "music ripper",
+      "tag_alias": "music-ripper"
+    },
+    {
+      "tag_name": "plus-d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    }
+  ],
+  "category_ids": [
+    64,
+    34,
+    74
+  ],
+  "body_de_plain": "TIZZM ü - TIZZME - Es gibt ja schon den ST-Ripper (Nicht\nStriper!) für Multiface,für +3 User interessant, da eine +3 Disk\nSpeicheroptionvorhanden ist. Wer allerdings kein Multiface hat,\nnur ein +D,für den ist TIZZME das richtige Programm. Einfach\nDemo laden,wenn die Musik läuft, einfach irgendwie ins Basic\nzurückkehren(z. B. mit Snap Out) und TIZZME laden. Alle ST Songs\nwerdenherausgesucht (funktioniert nicht mit SQ Tracker und\neinigen derRussischen Soundtracker Songs). Ein Decompiler ist\neingebaut! - Now you can take out the most ST-Songs out of the\ngames andDemos. Simply run the prog, go back into Basic and then\nload TIZZME. A Decompiler is\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**TIZZME**\n\nThere is already ST-Ripper (not stripper!) for the Multiface, which is interesting for +3 users as it features a +3 disk save option. However, for those who don't have a Multiface and only own a +D interface, TIZZME is the right program.\n\nJust load the demo, and while the music is playing, return to BASIC by any means (for example, using Snap Out) and then load TIZZME. It will search out all Soundtracker songs (does not work with SQ Tracker and some of the Russian Soundtracker tunes). A decompiler is built in!\n\n*Now you can extract most ST songs out of games and demos. Simply run the prog, go back into BASIC, and then load TIZZME. A decompiler is included.*\n",
+  "body_ru": "**TIZZME**\n\nДля владельцев Multiface уже существует ST-Ripper (не путать со стриптизёром!), который особенно интересен пользователям модели +3 благодаря опции сохранения на дискету +3. Однако для тех, у кого нет Multiface, а есть лишь интерфейс +D, идеальным выбором станет TIZZME.\n\nДостаточно загрузить демо и в момент, когда играет музыка, любым способом выйти обратно в BASIC (например, с помощью Snap Out), после чего загрузить TIZZME. Программа найдет в памяти все композиции формата Soundtracker (не работает с SQ Tracker и некоторыми версиями российских Soundtracker). В утилиту также встроен собственный декомпилятор!\n\n*Теперь вы можете выдирать большинство ST-треков из игр и демо. Просто запустите программу, вернитесь в BASIC и загрузите TIZZME. Декомпилятор прилагается.*\n",
+  "text_type": 3
+}

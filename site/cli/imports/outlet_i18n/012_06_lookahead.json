@@ -1,0 +1,35 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "012",
+  "article_id": "06_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "Brief preview of the upcoming issue of Outlet magazine: disassembler, drive info, character sets, book database, and Z80 instruction list.",
+  "meta_description_ru": "Краткий анонс материалов следующего номера журнала Outlet: дизассемблер, работа с дисководами, шрифты, база книг и справочник Z80.",
+  "authors": [
+    "Brian Renals"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "anons"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Brief LOOKAHEAD to next month!:-\nA beginner's m/code DISassembler\na VAT number checker,easy-to-use\nlarge text using PRINT, OUTCLASS\ncontinues on m/code, FLEXIPAGE\n2000 reviewed; also on B cart &\ndisc:DRIVECHAT info on SWIFTDISC\nand OPUS DISCOVERY, there's a\nneat screen-switching routine, a\ngreat character set collection,a\nhuge database of just about all\nknown books on the Spectrum, a\nfresh JIG!BLOX picture, all Z80\nm/code instructions(alphabetical\norder for reference) & hopefully\nthe versatile screen dump post-\nponed from THIS month! Plus the\nregulars and anything else I can\ncram in! - Brian.\n",
+  "body_ru_plain": "Краткий АНОНС на след. месяц!:-\nДИСассемблер м/кода для новичка,\nпроверка номеров НДС, удобный\nкрупный шрифт через PRINT, а в\nOUTCLASS — снова про м/код, плюс\nобзор FLEXIPAGE 2000; также на\nкартридже B и диске: DRIVECHAT\nо SWIFTDISC и OPUS DISCOVERY,\nаккуратная процедура смены экра-\nнов, отличный сборник шрифтов, а\nтакже огромная база данных почти\nвсех известных книг по Spectrum,\nновая картинка для JIG!BLOX, все\nкоманды м/кода Z80 (по алфавиту\nдля справки) и, будем надеяться,\nуниверсальный дамп экрана, пере-\nнесённый с ЭТОГО номера! Плюс\nпостоянные рубрики и всё прочее,\nчто смогу вместить! - Brian.\n",
+  "body_en": "## Brief Lookahead to next month!\n\nA beginner's m/code DISassembler, a VAT number checker, easy-to-use large text using PRINT, OUTCLASS continues on m/code, FLEXIPAGE 2000 reviewed; also on B cart & disc: DRIVECHAT info on SWIFTDISC and OPUS DISCOVERY, there's a neat screen-switching routine, a great character set collection, a huge database of just about all known books on the Spectrum, a fresh JIG!BLOX picture, all Z80 m/code instructions (alphabetical order for reference) & hopefully the versatile screen dump postponed from THIS month! Plus the regulars and anything else I can cram in!\n\n— Brian.\n",
+  "body_ru": "## Краткий анонс на след. месяц!\n\nДИСассемблер м/кода для новичка, проверка номеров НДС, удобный крупный шрифт через PRINT, а в OUTCLASS — снова про м/код, плюс обзор FLEXIPAGE 2000; также на картридже B и диске: DRIVECHAT о SWIFTDISC и OPUS DISCOVERY, аккуратная процедура смены экранов, отличный сборник шрифтов, а также огромная база данных почти всех известных книг по Spectrum, новая картинка для JIG!BLOX, все команды м/кода Z80 (по алфавиту для справки) и, будем надеяться, универсальный дамп экрана, перенесённый с ЭТОГО номера! Плюс постоянные рубрики и всё прочее, что смогу вместить! \n\n— Brian.\n",
+  "text_type": 3
+}

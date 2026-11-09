@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "128",
+  "article_id": "10_weathmap",
+  "title_en": "WEATHERMAP",
+  "title_ru": "WEATHERMAP — карта погоды",
+  "meta_description_en": "D. Munro explains how the WEATHERMAP program works and how to enter data from BBC shipping forecasts to plot weather charts on ZX Spectrum.",
+  "meta_description_ru": "Д. Манро рассказывает о программе WEATHERMAP для ZX Spectrum: как строить синоптические карты по сводкам погоды BBC Shipping Forecast.",
+  "authors": [
+    "D. Munro"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet-magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    },
+    {
+      "tag_name": "weather",
+      "tag_alias": "weather"
+    },
+    {
+      "tag_name": "d-munro",
+      "tag_alias": "d-munro"
+    }
+  ],
+  "category_ids": [
+    64,
+    74
+  ],
+  "body_en_plain": "WEATHERMAP\n          By D. Munro\n          -----------\n\nThe next program contains three\nsets of data for three different\ndays which will be read in when\nthe RUN option is selected.\n\nAfter each Weather Map has been\ncreated, you are given the opti-\non to print it out.\n\n\nIt may not be obvious where this\ndata came in the first place...\n\nThe idea is that you record any\nof the BBC shipping forecasts on\ntape and then replay them,noting\ndown on paper the wind direct-\nions and wind strengths for each\nSea Area, followed by the baro-\nmetric pressures at each Coastal\nStation. This provides the data\nto be entered into the data\nlines of the program(for example\nlines 1340 to 1420). The general\nsituation (low or high) needs to\nbe recorded as well as the date.\n\nOf course, I could have made the\nprogram ask for the info as In-\nput statements but it is easy to\nmake mistakes in typing and data\nlines are simple to check/amend.\n\nNote that the new data can be\nadded as extra data lines in the\nprogram, but if this is the\ncase, the limit of variable\n'MAPNUM' in line 1305 (presently\nset to 3, ie.<4 ) will need to\nbe adjusted.\n\n\n\n WHEN ENTERING YOUR OWN DATA:-\n\n1. Wind strengths and directions\nmust be in the same order as the\nSea Areas(in lines 1620 to 1640)\nand pressures must be in the\nsame order as the Coastal Stat-\nions (in line 1660).\n\n2. Enter N,E,S,W with leading\nspaces (as in line 1400).\n\n\n3. Enter \"Cyclonic\" as \" C\" and\n\"Variable\" as \" V\" (note leading\nspace for each, as in line 1400)\n\n4. Enter any pressures greater\nthan 1000mb with a leading space\n(as in line 1420).\n\n5. Replace data \"HOMETOWN\" with\nthe name of your home town in\nlines 1640 and 1660.\n\n\n\n         Press 'N' now\n       to load WEATHERMAP.\n",
+  "body_ru_plain": "",
+  "body_en": "### WEATHERMAP\n**By D. Munro**\n\nThe next program contains three sets of data for three different days which will be read in when the RUN option is selected.\n\nAfter each Weather Map has been created, you are given the option to print it out.\n\nIt may not be obvious where this data came in the first place...\n\nThe idea is that you record any of the BBC shipping forecasts on tape and then replay them, noting down on paper the wind directions and wind strengths for each Sea Area, followed by the barometric pressures at each Coastal Station. This provides the data to be entered into the data lines of the program (for example lines 1340 to 1420). The general situation (low or high) needs to be recorded as well as the date.\n\nOf course, I could have made the program ask for the info as Input statements, but it is easy to make mistakes in typing and data lines are simple to check/amend.\n\nNote that new data can be added as extra data lines in the program, but if this is the case, the limit of variable `MAPNUM` in line 1305 (presently set to 3, i.e. `<4`) will need to be adjusted.\n\n#### WHEN ENTERING YOUR OWN DATA:\n\n1. Wind strengths and directions must be in the same order as the Sea Areas (in lines 1620 to 1640) and pressures must be in the same order as the Coastal Stations (in line 1660).\n\n2. Enter N, E, S, W with leading spaces (as in line 1400).\n\n3. Enter \"Cyclonic\" as `\" C\"` and \"Variable\" as `\" V\"` (note leading space for each, as in line 1400).\n\n4. Enter any pressures greater than 1000mb with a leading space (as in line 1420).\n\n5. Replace data `\"HOMETOWN\"` with the name of your home town in lines 1640 and 1660.\n\nPress 'N' now to load WEATHERMAP.\n",
+  "body_ru": "### WEATHERMAP\n**D. Munro**\n\nСледующая программа содержит три набора данных за три разных дня, которые считываются при выборе опции RUN.\n\nПосле того как каждая синоптическая карта будет построена, вам будет предложена возможность распечатать её на принтере.\n\nВозможно, не сразу понятно, откуда вообще берутся эти данные...\n\nИдея заключается в том, чтобы записать на магнитофон любой из морских прогнозов погоды BBC (shipping forecasts), а затем при повторном прослушивании выписать на бумагу направления и силу ветра для каждого морского района (Sea Area), а также атмосферное давление для каждой прибрежной метеостанции (Coastal Station). Полученные цифры и служат данными для ввода в строки `DATA` программы (например, со строки 1340 по 1420). Помимо даты, также необходимо указать общую синоптическую обстановку (циклон или антициклон — low/high).\n\nКонечно, я мог бы сделать ввод данных через операторы `INPUT`, но при таком способе легко опечататься, тогда как строки `DATA` гораздо удобнее проверять и исправлять.\n\nОбратите внимание: новые наборы данных можно добавлять в виде дополнительных строк `DATA`, но в таком случае потребуется скорректировать ограничение переменной `MAPNUM` в строке 1305 (в настоящее время установлено значение 3, т.е. `<4`).\n\n#### ПРАВИЛА ВВОДА СОБСТВЕННЫХ ДАННЫХ:\n\n1. Сила и направления ветра должны следовать строго в том же порядке, что и морские районы (Sea Areas в строках 1620–1640), а значения давления — в том же порядке, что и прибрежные станции (Coastal Stations в строке 1660).\n\n2. Направления N, E, S, W вводите с ведущим пробелом (как в строке 1400).\n\n3. Вводите значение «Cyclonic» как `\" C\"`, а «Variable» как `\" V\"` (обратите внимание на ведущий пробел в обоих случаях, как в строке 1400).\n\n4. Любое давление выше 1000 мбар вводите с ведущим пробелом (как в строке 1420).\n\n5. Замените значение `\"HOMETOWN\"` на название вашего родного города в строках 1640 и 1660.\n\nНажмите «N» сейчас, чтобы загрузить WEATHERMAP.\n",
+  "text_type": 3
+}

@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "073",
+  "article_id": "07_sheetinf",
+  "title_en": "Sheet2 Info",
+  "title_ru": "О программе Sheet2",
+  "meta_description_en": "User guide and overview for Sheet2 by Don Bradshaw, a ZX Spectrum utility designed for creating and printing musical notation and text on dot-matrix printers.",
+  "meta_description_ru": "Руководство к программе Sheet2 Дона Брэдшоу для ZX Spectrum — создание и качественная печать нотных станов и текста на матричном принтере.",
+  "authors": [
+    "Don Bradshaw"
+  ],
+  "tags": [
+    {
+      "tag_name": "Sheet2",
+      "tag_alias": "sheet2"
+    },
+    {
+      "tag_name": "music",
+      "tag_alias": "music"
+    },
+    {
+      "tag_name": "printer",
+      "tag_alias": "printer"
+    },
+    {
+      "tag_name": "utility",
+      "tag_alias": "utility"
+    },
+    {
+      "tag_name": "Don Bradshaw",
+      "tag_alias": "don-bradshaw"
+    }
+  ],
+  "category_ids": [
+    62,
+    64,
+    74
+  ],
+  "body_en_plain": "SHEET2  INFO\n         By Don Bradshaw\n\nThis program was created to per-\nmit printing a page of stave\nlines of music interspersed,\nwhere needed, with optional\nblanklines or normal text lines.\nA sample appears on the intro-\nduction page, showing the first\ntwo bars of \"Jerusalem\". (Note:\nit doesn't actually play it for\nyou).\n\nThere are two main sections to\nthe program, reached from the\nMain Menu:-\n\n\n1). STAVE MENU\n\nThis section is devoted to the\nproduction of the music stave.\nIt assumes that the writer is\nfamiliar with music notation,\nand knows what is required. The\noptions initially available are\nto Quit, Load or Create a stave\nfile. When a file exists in\nmemory additional options are\nSaving or Modifying that file.\nThe stave occupies 2.5 screens\neach overlapping by half a\nscreen width, for continuity.\n\n2). PRINT MENU\n\nWhich is concerned with the\nproduction of the printed page.\n\nInitially the options available\n(prompted by their initial\nletters) are Quit, Load, or\nCreate a print file, but when a\nfile exists in memory,additional\noptions are Save, Edit or Print\nthat file. The edit screen\nrepresents the page to be\nprinted with a maximum of 66\nlines displayed in 3 columns of\n22 lines. These only show the\nitems in brief. It is not\npossible to see what is in the\nprint lines so a record has to\nbe kept of what has been put on\nthem.\n\nForm feed can be included and\nworks whatever has been printed,\nas the program keeps check on\nthe paper feed for the data\nprinted. Printing is carried out\nin NLQ, and the same quality is\nsimulated in the printing of the\nstaves by over-printing slightly\noffset along the line and by\npaper movement.\n\n           ___________\n\n\nEditor's Notes...\n\nWe have added a further invis-\nible option to the Main Menu:-\nPressing \"X\" allows you to Exit\nthe program and return to OUTLET\nvia the CONTENTS page.\n\nThere seems to be a small hiccup\nin the \"Create a Printfile\"\noptions which prevents one\nQuitting before choosing one of\nthe other options. This is no\nhardship however, as one can\nchoose something harmless, such\nas adding a blank line.\n\nNote that you will need your\nprinter connected to kick off\nwith so the correct initialisat-\nion can be carried out. This has\nto be done at the start since\nthe init'n routine is removed\nwith the rest of the OUTLET\nBasic to make space for the\nprogram code and working areas.\n\nPRESS \"N\" TO LOAD \"Sheet2\".....\n",
+  "body_ru_plain": "",
+  "body_en": "### SHEET2 INFO\n\n**By Don Bradshaw**\n\nThis program was created to permit printing a page of stave lines of music interspersed, where needed, with optional blank lines or normal text lines. A sample appears on the introduction page, showing the first two bars of \"Jerusalem\". (Note: it doesn't actually play it for you).\n\nThere are two main sections to the program, reached from the Main Menu:-\n\n#### 1). STAVE MENU\n\nThis section is devoted to the production of the music stave. It assumes that the writer is familiar with music notation, and knows what is required. The options initially available are to Quit, Load or Create a stave file. When a file exists in memory additional options are Saving or Modifying that file. The stave occupies 2.5 screens each overlapping by half a screen width, for continuity.\n\n#### 2). PRINT MENU\n\nWhich is concerned with the production of the printed page.\n\nInitially the options available (prompted by their initial letters) are Quit, Load, or Create a print file, but when a file exists in memory, additional options are Save, Edit or Print that file. The edit screen represents the page to be printed with a maximum of 66 lines displayed in 3 columns of 22 lines. These only show the items in brief. It is not possible to see what is in the print lines so a record has to be kept of what has been put on them.\n\nForm feed can be included and works whatever has been printed, as the program keeps check on the paper feed for the data printed. Printing is carried out in NLQ, and the same quality is simulated in the printing of the staves by over-printing slightly offset along the line and by paper movement.\n\n---\n\n### Editor's Notes...\n\nWe have added a further invisible option to the Main Menu:-\nPressing \"X\" allows you to Exit the program and return to OUTLET via the CONTENTS page.\n\nThere seems to be a small hiccup in the \"Create a Printfile\" options which prevents one Quitting before choosing one of the other options. This is no hardship however, as one can choose something harmless, such as adding a blank line.\n\nNote that you will need your printer connected to kick off with so the correct initialisation can be carried out. This has to be done at the start since the init'n routine is removed with the rest of the OUTLET Basic to make space for the program code and working areas.\n\nPRESS \"N\" TO LOAD \"Sheet2\".....\n",
+  "body_ru": "### ИНФОРМАЦИЯ О SHEET2\n\n**Дон Брэдшоу (Don Bradshaw)**\n\nЭта программа создана для печати страниц с нотными станами (нотными линейками), которые при необходимости можно чередовать с пустыми строками или обычным текстом. Пример показан на вступительной странице: там приведены первые два такта композиции «Jerusalem». (Примечание: сама программа музыку не воспроизводит).\n\nПрограмма состоит из двух основных разделов, доступных из главного меню:-\n\n#### 1). STAVE MENU (Меню нотного стана)\n\nЭтот раздел посвящен созданию нотного стана. Предполагается, что пользователь знаком с нотной грамотой и точно знает, что ему требуется. Изначально доступны пункты Quit (Выход), Load (Загрузка) или Create (Создание) файла стана. Когда файл уже находится в памяти, появляются дополнительные опции — Save (Сохранить) и Modify (Изменить). Нотный стан занимает 2,5 экрана, каждый из которых для непрерывности перекрывается на половину ширины экрана.\n\n#### 2). PRINT MENU (Меню печати)\n\nЭтот раздел отвечает за вывод готовой страницы на принтер.\n\nИзначально доступные пункты (выбираются по первой букве названия) — это Quit, Load или Create файла печати. Однако, когда файл находится в памяти, становятся доступны опции Save, Edit (Редактировать) или Print (Печать). Экран редактирования отображает печатную страницу максимум в 66 строк, сгруппированных в 3 колонки по 22 строки. В них отображается лишь краткая сводка элементов. Увидеть содержимое печатных строк напрямую на экране нельзя, поэтому вам придется вести учет того, что именно в них помещено.\n\nПоддерживается подача страницы (Form feed), которая корректно срабатывает независимо от напечатанного объема, поскольку программа отслеживает протяжку бумаги при выводе данных. Печать осуществляется в режиме NLQ (Near Letter Quality), причем такое же высокое качество имитируется и при печати нотных станов — за счет повторного прохода с небольшим смещением вдоль строки и микроподачи бумаги.\n\n---\n\n### Заметки редактора...\n\nМы добавили в главное меню еще одну скрытую опцию:-\nНажатие клавиши «X» позволяет выйти из программы и вернуться в OUTLET через страницу содержания (CONTENTS).\n\nВ пункте «Create a Printfile» обнаружена небольшая шероховатость: выйти из меню нельзя, пока не будет выбрано одно из действий. Впрочем, это не вызывает трудностей — можно просто выбрать что-то нейтральное, например, добавить пустую строку.\n\nОбратите внимание: принтер должен быть подключен еще до запуска программы, чтобы прошла корректная инициализация. Это необходимо сделать с самого начала, так как процедура инициализации удаляется вместе с остальным Бейсиком OUTLET, освобождая память под машинный код программы и рабочие области.\n\nНАЖМИТЕ «N» ДЛЯ ЗАГРУЗКИ «Sheet2».....\n",
+  "text_type": 3
+}

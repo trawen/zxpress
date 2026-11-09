@@ -1,0 +1,49 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "063",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (Late)",
+  "title_ru": "Редакторская колонка (дополнение)",
+  "meta_description_en": "Outlet editorial notes from November 1992: delay in price rise, end of Microdrive edition, ROM Index loading, and Spectrum vs SAM Coupe reader activity.",
+  "meta_description_ru": "Заметки редакции Outlet за ноябрь 1992 года: перенос повышения цен, закрытие микродрайв-версии, исправление оглавления ROM Index и активность читателей.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "microdrive",
+      "tag_alias": "microdrive"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "rom index",
+      "tag_alias": "rom-index"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "N O V E M B E R ,   1 9 9 2\n\nThe price increase of OUTLET due\nin January may be delayed one or\ntwo months because it is easier\nand more cost-effective to use\nup our present order forms!Sorry\nabout this!\n\nMay we remind the few microdrive\nreaders of OUTLET that the last\nissue of OUTLET on microdrive is\nnext month.\n\nLast month's ROM INDEX was not\nshown on the CONTENTS page. To\nload it, select \"TWENTY6\" then\nselect the \"NEXT ITEM\"when that\nhas loaded. Alternatively, just\nload \"BLASTIT\" direct.\n\nROM INDEX has long since been\ncompleted on the Disciple and +D\nversions of OUTLET due to the\nmuch larger disc capacity. The\n+3 is far behind because of the\nsmall capacity of the 3\" discs\nso SAM Coupe letters may be\nomitted to cram in one or two\nmore ROM INDEX files each month.\n\nCongratulations to the Spectrum\nreadership who, for some unknown\nreason, contribute TEN TIMES the\nnumber of programs,articles,etc,\nthan their SAM equivalents even\nthough there are only TWICE the\nnumber of Spectrum readers to\nSAM! Has anyone any ideas why it\nshould be so?\n                    Ron & Brian\n             ______\n\n      OUTLET is produced by\n\n          Chris Oliver\n        Averil  Crowston\n       Ron & Brian Cavers\n\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_ru_plain": "",
+  "body_en": "### NOVEMBER, 1992\n\nThe price increase of OUTLET due in January may be delayed one or two months because it is easier and more cost-effective to use up our present order forms! Sorry about this!\n\nMay we remind the few microdrive readers of OUTLET that the last issue of OUTLET on microdrive is next month.\n\nLast month's ROM INDEX was not shown on the CONTENTS page. To load it, select \"TWENTY6\" then select the \"NEXT ITEM\" when that has loaded. Alternatively, just load \"BLASTIT\" direct.\n\nROM INDEX has long since been completed on the Disciple and +D versions of OUTLET due to the much larger disc capacity. The +3 is far behind because of the small capacity of the 3\" discs, so SAM Coupe letters may be omitted to cram in one or two more ROM INDEX files each month.\n\nCongratulations to the Spectrum readership who, for some unknown reason, contribute TEN TIMES the number of programs, articles, etc., than their SAM equivalents, even though there are only TWICE the number of Spectrum readers compared to SAM! Has anyone any ideas why it should be so?\n\nRon & Brian\n\n______\n\nOUTLET is produced by\n\nChris Oliver  \nAveril Crowston  \nRon & Brian Cavers  \n\nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "body_ru": "### НОЯБРЬ, 1992\n\nПовышение цен на OUTLET, запланированное на январь, может быть отложено на месяц или два, поскольку нам проще и экономически выгоднее сначала израсходовать текущие бланки заказов! Просим прощения за это!\n\nНапоминаем тем немногим читателям OUTLET, которые всё ещё пользуются микродрайвами: следующий выпуск журнала станет последним, выходящим на Microdrive.\n\nВ прошлом номере материал ROM INDEX не был указан на странице содержания. Чтобы его загрузить, выберите пункт «TWENTY6», а после его загрузки выберите «NEXT ITEM». Либо просто запустите «BLASTIT» напрямую.\n\nПубликация ROM INDEX уже давно завершена в версиях OUTLET для Disciple и +D благодаря значительно большей ёмкости дисков. Версия для +3 сильно отстаёт из-за скромного объёма 3-дюймовых дискет, поэтому мы, возможно, откажемся от писем пользователей SAM Coupe, чтобы вмещать по одному-два дополнительных файла ROM INDEX каждый месяц.\n\nПоздравляем читателей со Спектрумами, которые по какой-то неведомой причине присылают в ДЕСЯТЬ РАЗ больше программ, статей и прочего, чем владельцы SAM, хотя спектрумистов среди наших читателей всего лишь ВДВОЕ больше! Есть ли у кого-нибудь идеи, почему сложилась такая ситуация?\n\nRon & Brian\n\n______\n\nOUTLET выпускают:\n\nChris Oliver  \nAveril Crowston  \nRon & Brian Cavers  \n\nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "text_type": 3
+}

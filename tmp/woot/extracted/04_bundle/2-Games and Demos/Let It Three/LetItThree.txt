@@ -1,0 +1,22 @@
+LET IT THREE LETTER ABBREVIATIONS IN 6/8 TIME
+---------------------------------------------
+
+Written for WOOT 2020 by Andy Jenkinson (uglifruit)
+
+For the ZX Spectrum.
+
+A piece of 1-bit music, with accompanying Attribute-Only Low-Res Art.
+
+This uses a customised version of the TriTone 1-Bit Audio Engine by Shiru to play an version of Let It Be (Lennon/McCartney) that I've arranged in 6/8 time - and used my own dither art tool to draw art based upon three-letter-abbreviations, to be sung in as a 3 syllable swap for the title line of the song.
+
+It took many many attempts to get the timing right of the music to finish correctly with the pictures.  The last image is (obviously) a slightly cleaned up digitised image for you to enjoy.
+
+There didn't really need to be a Read-me for this, I haven't got much to say.  I could point out the the 6/8 arrangement of this I've made is loosely based upon an arrangement of the song for classical guitar by Joe Washington.  It's really quite tricky to play.  Actually nearly all of his arrangements in his book "The Beatles For Classical Guitar" are hard - this song is one of the easier ones.  I'd not recommended that book for beginner guitarists.
+
+The loading screen was quite fun to draw - and as it's only 2k (as it's just the middle of the screen, and has no attributes) - is quite quick to load.  Sometimes I used to get impatient with loading screens that added an appreciable time to the loading, but were not that good.  At least this is small.
+
+Anyway, I hope you enjoy the song/pictures.  And can work out the three letter abbreviation for each pic.  There are no prizes for getting them though - this isn't Pimania!  (Unfortunately)  Oooh - I definitely should make something like that - I'm off to buy/bury some treasure.
+
+
+Andy
+Dec 2020

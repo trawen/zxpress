@@ -1,0 +1,48 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "31",
+  "article_id": "08_EMULAT.TX",
+  "source_lang": "de-AT",
+  "title_en": "Emulate 128",
+  "title_ru": "Emulate 128",
+  "meta_description_en": "A brief mini-review of the ZX Spectrum demo/gift 'Emulate 128', which parodies a Windows PC desktop.",
+  "meta_description_ru": "Краткая заметка-обзор демо/гифта «Emulate 128» для ZX Spectrum, пародирующего рабочий стол Windows.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "emulate-128",
+      "tag_alias": "emulate-128"
+    },
+    {
+      "tag_name": "demoscene",
+      "tag_alias": "demoscene"
+    },
+    {
+      "tag_name": "gift",
+      "tag_alias": "gift"
+    },
+    {
+      "tag_name": "review",
+      "tag_alias": "review"
+    }
+  ],
+  "category_ids": [
+    93,
+    94
+  ],
+  "body_de_plain": "EMULAT ü - EMULATE 128 - Deutsch - Mehr ein GIFT als ein Demo.\nDer Spectrum wird zu einemWindows-PC verwandelt und erledigt\nAufgaben im Multitasking. Bisauf die Idee mit dem Windows ist es\nein gutes Demo.3 - English - More a Gift than a demo. Your\nSpectrum will be changed into afu..ing PC with even more fu..ing\nWindows and shows you amessage and Music together (Wow, are\nthese PC's not powerfulltodays?). Except the Windows desktop it\nis a goo\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### EMULATE 128\n\n**German note:** More of a gift than a demo. The Spectrum is transformed into a Windows PC and handles tasks in multitasking. Aside from the Windows idea, it is a good demo.\n\n**English note:** More of a gift than a demo. Your Spectrum will be changed into a fu..ing PC with even more fu..ing Windows and shows you a message and music together (Wow, are these PCs not powerful today?). Except for the Windows desktop, it is a good demo.\n",
+  "body_ru": "### EMULATE 128\n\n**Немецкая заметка:** Скорее гифт, чем демо. Spectrum превращается в Windows-ПК и выполняет задачи в многозадачном режиме. Если не считать саму идею с Windows, это хорошее демо.\n\n**Английская заметка:** Скорее подарок, чем демо. Ваш Spectrum превратится в грёбаный ПК с ещё более грёбаной Windows и покажет сообщение одновременно с музыкой (ого, ну разве современные ПК не мощные?). За исключением рабочего стола Windows, демо вполне хорошее.\n",
+  "text_type": 3
+}

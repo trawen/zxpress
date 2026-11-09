@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "106",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A sneak peek at what is coming in the next issue of Outlet: \"The Apple Movie\", Mandelbrot graphics, utilities, character sets, and Vaxtrek.",
+  "meta_description_ru": "Анонс следующего выпуска Outlet: «The Apple Movie», фракталы Мандельброта, утилиты, коллекция шрифтов и продолжение сериала Vaxtrek.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "announcements",
+      "tag_alias": "announcements"
+    },
+    {
+      "tag_name": "apple movie",
+      "tag_alias": "apple-movie"
+    },
+    {
+      "tag_name": "vaxtrek",
+      "tag_alias": "vaxtrek"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Showing next month on a Spectrum\nnear you: \"THE APPLE MOVIE\". Yes\nfolks, real motion-pictures on\nthe Spectrum! There are plenty\nof supporting features too, but\nyou'll have to supply your own\nice-creams!\n\nThere are some wonderful Mandel-\nbrot creations, a Random Access\nFile handling program, utilities\nto dump Snapshots to tape and\nthe first of a massive selection\nof character-set fonts, which is\n\n\nsplit into five volumes, other-\nwise they would swamp a complete\nissue of OUTLET.\n\nAnd lots more to make yet anoth-\ner full and varied issue for\nyour edification and enjoyment,\nnot to mention a glimpse of the\nAlternative Universe in the\namazing Vaxtrek series.\n\n                        Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Showing next month on a Spectrum near you: \"THE APPLE MOVIE\". Yes folks, real motion-pictures on the Spectrum! There are plenty of supporting features too, but you'll have to supply your own ice-creams!\n\nThere are some wonderful Mandelbrot creations, a Random Access File handling program, utilities to dump Snapshots to tape and the first of a massive selection of character-set fonts, which is split into five volumes, otherwise they would swamp a complete issue of OUTLET.\n\nAnd lots more to make yet another full and varied issue for your edification and enjoyment, not to mention a glimpse of the Alternative Universe in the amazing Vaxtrek series.\n\nChris.\n",
+  "body_ru": "В следующем месяце на экранах ближайших к вам Спектрумов: «THE APPLE MOVIE». Да, друзья, настоящее кино на Спектруме! Будет и масса сопутствующих материалов, но мороженым вам придется запастись самостоятельно!\n\nВас ждут великолепные фракталы Мандельброта, программа для работы с файлами прямого доступа (Random Access), утилиты для сброса снэпшотов на ленту, а также первая часть гигантской коллекции шрифтов — ее пришлось разбить на пять выпусков, иначе она заняла бы весь журнал целиком.\n\nИ еще много всего интересного, что сделает следующий номер полным и разнообразным для вашего удовольствия и пользы, не говоря уже о погружении в Альтернативную Вселенную в потрясающей серии Vaxtrek.\n\nChris.\n",
+  "text_type": 3
+}

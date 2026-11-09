@@ -1,0 +1,47 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "135",
+  "article_id": "09_addender",
+  "title_en": "Addender: MULTICOPY",
+  "title_ru": "Дополнение: MULTICOPY",
+  "meta_description_en": "Explanation of the Add-Enders section in Outlet magazine and a reprint of L.G. Baumann's Beta DOS utility MULTICOPY.",
+  "meta_description_ru": "Пояснение к разделу Add-Enders журнала Outlet и переиздание утилиты MULTICOPY для Beta DOS от L.G. Baumann.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "add-enders",
+      "tag_alias": "add-enders"
+    },
+    {
+      "tag_name": "multicopy",
+      "tag_alias": "multicopy"
+    },
+    {
+      "tag_name": "beta dos",
+      "tag_alias": "beta-dos"
+    },
+    {
+      "tag_name": "l.g. baumann",
+      "tag_alias": "l-g-baumann"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    }
+  ],
+  "category_ids": [
+    62,
+    73,
+    116
+  ],
+  "body_en_plain": "Some items contributed to OUTLET\nhave not yet been included for a\nvariety of reasons. It's a shame\nto leave them on the shelf so,if\nappropriate, they will be added\nto this ADD-ENDERS area of the\nmagazine (not microdrive or Opus\nas there is not enough room).\n\nThe material covers a wide range\nof quality and program types:\nutilities, screens, character\nsets and text articles and SOME\nof it may be unedited, untested,\nnot working fully or properly;\nin need of conversion for your\n\nsystem's syntax or printer etc.;\nwithout full instructions or\nwhatever. Readers will have to\nsift through to see if there is\nanything of interest they can\nmake use of and discard the\nrest. Not everything will appear\non all versions necessarily.\n\nSome Add-Enders may be linked to\nOUTLET in the normal way. These\nwill usually precede this text\nfile. Any items that follow this\narticle will possibly need to be\nLOADed manually or may not auto-\nrun when loaded.\n\nThere may be some info on the\nfollowing pages...\n\nFollowing on from a suggestion\nin OUTLETTERS to reproduce some\nof the better routines from\nearlier issues of OUTLET for the\nbenefit of newer subscribers,\nthis month we have \"MULTICOPY\"\nfor copying a number of selected\nfiles. Note that it will ONLY\nwork in BetaDos!\n\nMULTICOPY,written by L.G.Baumann\noriginally appeared with full\ninstructions in OUTLET 84.\n\nFor copying selected files, you\nmight also like to investigate\nCATLOADER which also does multi-\nerasing,renaming, and many other\nfile manipulations! See OUTVERTS\nin this issue for a special\noffer for OUTLET subscribers.\n\n\nAny suggestions of programs that\nyou would like to see again or\nconsider to be of special value\nto other readers are always\nwelcome, and we will include one\nas an ADDENDER each month if\nspace permits. Be warned however\nthat most of those magical demos\nwill be much too large for\ninclusion!\n\n          ============\n\n Press \"N\" now to load MULTICOPY.\n",
+  "body_ru_plain": "",
+  "body_en": "Some items contributed to OUTLET have not yet been included for a variety of reasons. It's a shame to leave them on the shelf so, if appropriate, they will be added to this ADD-ENDERS area of the magazine (not microdrive or Opus as there is not enough room).\n\nThe material covers a wide range of quality and program types: utilities, screens, character sets and text articles and SOME of it may be unedited, untested, not working fully or properly; in need of conversion for your system's syntax or printer etc.; without full instructions or whatever. Readers will have to sift through to see if there is anything of interest they can make use of and discard the rest. Not everything will appear on all versions necessarily.\n\nSome Add-Enders may be linked to OUTLET in the normal way. These will usually precede this text file. Any items that follow this article will possibly need to be LOADed manually or may not auto-run when loaded.\n\nThere may be some info on the following pages...\n\nFollowing on from a suggestion in OUTLETTERS to reproduce some of the better routines from earlier issues of OUTLET for the benefit of newer subscribers, this month we have \"MULTICOPY\" for copying a number of selected files. Note that it will ONLY work in BetaDos!\n\nMULTICOPY, written by L.G.Baumann, originally appeared with full instructions in OUTLET 84.\n\nFor copying selected files, you might also like to investigate CATLOADER which also does multi-erasing, renaming, and many other file manipulations! See OUTVERTS in this issue for a special offer for OUTLET subscribers.\n\nAny suggestions of programs that you would like to see again or consider to be of special value to other readers are always welcome, and we will include one as an ADDENDER each month if space permits. Be warned however that most of those magical demos will be much too large for inclusion!\n\n============\n\nPress \"N\" now to load MULTICOPY.\n",
+  "body_ru": "Некоторые материалы, присланные в OUTLET, по разным причинам до сих пор не были опубликованы. Жаль оставлять их пылиться на полке, поэтому по возможности они будут добавляться в специальный раздел ADD-ENDERS на диске журнала (на версиях для микродрайва или Opus места для этого нет).\n\nЭтот материал охватывает самый широкий спектр тем и программ: утилиты, экраны, шрифты и статьи. Кое-что из этого может быть неотредактированным, непротестированным, работать не полностью или не совсем корректно; требовать адаптации под синтаксис вашей системы или принтер; быть без подробных инструкций и так далее. Читателям придется самостоятельно отбирать то, что покажется интересным и полезным, а остальное отсеивать. Далеко не всё обязательно появится во всех версиях выпуска.\n\nНекоторые дополнения могут запускаться из оболочки OUTLET обычным образом — они обычно предшествуют этому текстовому файлу. Всё, что следует после этой статьи, возможно, придется загружать вручную, либо оно может не запуститься автоматически.\n\nНиже представлена сопутствующая информация...\n\nВ ответ на предложение в рубрике OUTLETTERS переиздать некоторые из лучших программ ранних выпусков OUTLET для новых подписчиков, в этом месяце мы представляем утилиту «MULTICOPY» для копирования выбранных файлов. Обратите внимание: она работает ТОЛЬКО в BetaDos!\n\nУтилита MULTICOPY, написанная L.G.Baumann, изначально публиковалась с полным описанием в OUTLET 84.\n\nДля копирования файлов вам также может быть интересна программа CATLOADER, которая дополнительно умеет выполнять множественное удаление, переименование и множество других операций с файлами! Специальное предложение для подписчиков OUTLET смотрите в разделе OUTVERTS этого номера.\n\nМы всегда рады любым предложениям о программах, которые вы хотели бы увидеть снова или считаете особенно полезными для других читателей. При наличии свободного места мы будем включать по одной такой программе в раздел ADDENDER каждый месяц. Однако предупреждаем: большинство потрясающих демоверсий просто слишком велики по объему, чтобы их вместить!\n\n============\n\nНажмите «N», чтобы загрузить MULTICOPY.\n",
+  "text_type": 3
+}

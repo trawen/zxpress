@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "048",
+  "article_id": "01_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "Brian Kempshall previews upcoming features for the next issue of Outlet magazine, including SAM Coupe content, Spectrum utilities, and hardware articles.",
+  "meta_description_ru": "Брайан Кемпшалл рассказывает о планах на следующий выпуск журнала Outlet: материалы для SAM Coupe, утилиты для Spectrum, обзоры мышей и статьи о железе.",
+  "authors": [
+    "Brian Kempshall"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet-magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "opus discovery",
+      "tag_alias": "opus-discovery"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_en_plain": "There are plenty of good things\nplanned for next month but can I\nsay at the start for a change\n(instead of at the end) that I\nhave lots of excellent SAM stuff\nlined up but can't really tell\nuntil near publication what will\nfit in and what won't! At the\ntime of writing this I don't\neven know what's going in THIS\nSAM issue! There are programming\nutilities, demos,Masterdos info,\ngames, applications -a very wide\nvariety of interest!\n\nAnyway, as well as all the usual\nregulars like OUTCLASS,SAMCLASS,\nLOOKOUT, OUTLETTERS,clip art and\nso on there will be a Spectrum\nscreen expander (this runs in\nreal time so you can expand and\nexamine any screen while a\nprogram is running - or even if\nit's not!). There is a sprite\ndemo; a program to put machine\ncode into REMs - another routine\nto renumber such lines (as they\ncan't usually be edited); a\ncomplete electronic circuit\ndesign program with a HUGE work-\ning area of 25 screens (5 by 5)!\nThere's a program to calculate\nthe distance and direction of\nany two points on the planet and\na word puzzle game as well as a\nnew crossword. more...\n\nDRIVECHAT has two articles on\nSCART as well as some personal\nthoughts on the(imaginary)demise\nof the Spectrum and an item on\n128K sound level output.\n\nCHECKOUT reviews both of the new\nmice for the SAM Coupe,DIGITIZER\nand FLEXIPAL.\n\nFor Opus users there's a new,\nimproved version of DISKMASTER\nwhich is looking VERY good.\n\nAs ever, I shall add as much as\npossible to ADD-ENDERS.\n\nSee you next month.\n\n                        - Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "There are plenty of good things planned for next month but can I say at the start for a change (instead of at the end) that I have lots of excellent SAM stuff lined up but can't really tell until near publication what will fit in and what won't! At the time of writing this I don't even know what's going in THIS SAM issue! There are programming utilities, demos, Masterdos info, games, applications — a very wide variety of interest!\n\nAnyway, as well as all the usual regulars like OUTCLASS, SAMCLASS, LOOKOUT, OUTLETTERS, clip art and so on there will be a Spectrum screen expander (this runs in real time so you can expand and examine any screen while a program is running — or even if it's not!). There is a sprite demo; a program to put machine code into REMs — another routine to renumber such lines (as they can't usually be edited); a complete electronic circuit design program with a HUGE working area of 25 screens (5 by 5)! There's a program to calculate the distance and direction of any two points on the planet and a word puzzle game as well as a new crossword. more...\n\nDRIVECHAT has two articles on SCART as well as some personal thoughts on the (imaginary) demise of the Spectrum and an item on 128K sound level output.\n\nCHECKOUT reviews both of the new mice for the SAM Coupe, DIGITIZER and FLEXIPAL.\n\nFor Opus users there's a new, improved version of DISKMASTER which is looking VERY good.\n\nAs ever, I shall add as much as possible to ADD-ENDERS.\n\nSee you next month.\n\n— Brian.\n",
+  "body_ru": "На следующий месяц запланировано множество отличных материалов, но для разнообразия позвольте сказать в самом начале (а не в конце): у меня заготовлена куча замечательных вещей для SAM, однако я вряд ли смогу сказать до самого момента выпуска, что именно влезет на диск, а что нет! На момент написания этих строк я даже не знаю, что войдёт в ТЕКУЩИЙ выпуск для SAM! Там есть и утилиты для программирования, и демо, и информация по Masterdos, игры, приложения — словом, спектр интересов очень широк!\n\nВ любом случае, помимо всех наших привычных постоянных рубрик — OUTCLASS, SAMCLASS, LOOKOUT, OUTLETTERS, клипартов и тому подобного, вас ждёт экранный увеличитель для Spectrum (он работает в реальном времени, так что вы можете увеличивать и изучать любой экран прямо во время выполнения программы — или даже в паузе!). Также в планах спрайтовое демо; программа для внедрения машинного кода в строки REM — и ещё одна подпрограмма для перенумерации таких строк (поскольку их обычно нельзя просто так отредактировать); полноценная программа для проектирования электронных схем с ОГРОМНОЙ рабочей областью в 25 экранов (5 на 5)! Ещё будет программа для расчёта расстояния и направления между двумя любыми точками планеты, игра со словесными головоломками, а также новый кроссворд... и многое другое.\n\nВ DRIVECHAT будет две статьи о разъёме SCART, а также личные мысли по поводу (воображаемой) кончины Спектрума и заметка об уровнях громкости звукового выхода 128K.\n\nВ рубрике CHECKOUT появятся обзоры обеих новых мышей для SAM Coupe, DIGITIZER и FLEXIPAL.\n\nДля пользователей дисководов Opus припасена новая, улучшенная версия DISKMASTER, которая выглядит ОЧЕНЬ достойно.\n\nКак и всегда, я постараюсь забить ADD-ENDERS под завязку.\n\nДо встречи в следующем месяце.\n\n— Brian.\n",
+  "text_type": 3
+}

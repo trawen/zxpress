@@ -1,0 +1,50 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "140",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Chezron Software takes over distribution of Gerton Lunter's Z80 and WinZ80 v4 emulators from Brian Gaff. Price list and ordering details.",
+  "meta_description_ru": "Chezron Software перенимает распространение эмулятора Z80 (WinZ80 v4) Гертона Лунтера у Брайана Гаффа. Прайс-лист версий и условия заказа.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "z80 emulator",
+      "tag_alias": "z80-emulator"
+    },
+    {
+      "tag_name": "winz80",
+      "tag_alias": "winz80"
+    },
+    {
+      "tag_name": "gerton lunter",
+      "tag_alias": "gerton-lunter"
+    },
+    {
+      "tag_name": "brian gaff",
+      "tag_alias": "brian-gaff"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "эмуляторы",
+      "tag_alias": "emulyatory"
+    }
+  ],
+  "category_ids": [
+    46,
+    118,
+    123
+  ],
+  "body_en_plain": "A P R I L ,   1 9 9 9\n\nAs some of you may already be\naware, Brian Gaff (in the guise\nof B.G. Services) has decided to\nstand down as the main distribu-\ntor of the Spectrum Z80 Emulat-\nor.\n\n\nThis change was timed to happen,\nwith distribution responsibilit-\nies passing to Chezron Software\nand with Gerton Lunter's approv-\nal, upon the release of the new\nWindows version - (No.4) which\nis now ready.\n\n\nThe current price list is shown\non the next page.\n\n\n(Note: W+ means WinZ80 - the\nfull Windows version - Win 3.x\nor Win 95)\n\n\n\n\n\n\n\n-------------------------------\nVERSION    `UK   US$   DM   HFL\n-------------------------------\nShareware\n(W+Z80)   2.00  3.00  5.00  5.00\n--------------------------------\nRegistered\nZ80      15.00 25.00 35.00 35.00\nW+       15.00 25.00 35.00 35.00\nW+&Z80   20.00 30.00 50.00 50.00\n--------------------------------\nUpgrades\n(inc.\nZ80 & W+ 10.00 15.00 25.00 25.00\n--------------------------------\nCheques drawn on a U.K. bank can\nbe made payable to either\nChezron Software or R. Cavers.\nEuro cheques should always be\npayable to R. Cavers. Cash can\nbe sent at your own risk so\nplease use Registered Post.\n\nPrices may be altered from time\nto time to reflect changes in\nthe International Exchange\nRates.\n\nQueries can be emailed to the\nusual address:\n\noutletmag@yahoo.com\n\nWe propose to post the shareware\nversion together with the source\ncode (available to registered\nusers only), at the following\nWeb site:\n\nhttp://www.geocities.com/\nSiliconValley/ Orchard/3420\n\nA local Web Site will be avail-\nable soon.\n\n\nWe are sure that everyone will\nwant to join us in thanking\nBrian Gaff for the support he\nhas given to the Z80 Emulator\nover the last several years.\n\n                     Ron & Brian\n\n\n\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n   Email: outletmag@yahoo.com.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nA P R I L ,   1 9 9 9\n\nAs some of you may already be aware, Brian Gaff (in the guise of B.G. Services) has decided to stand down as the main distribu- tor of the Spectrum Z80 Emulat- or.\n\nThis change was timed to happen, with distribution responsibilit- ies passing to Chezron Software and with Gerton Lunter's approv- al, upon the release of the new Windows version - (No.4) which is now ready.\n\nThe current price list is shown on the next page.\n\n(Note: W+ means WinZ80 - the full Windows version - Win 3.x or Win 95)\n\n```text\n-------------------------------\n```\n\nVERSION    `UK   US$   DM   HFL\n\n```text\n-------------------------------\n```\n\nShareware\n\n```text\n(W+Z80)   2.00  3.00  5.00  5.00\n--------------------------------\n```\n\nRegistered\n\n```text\nZ80      15.00 25.00 35.00 35.00\nW+       15.00 25.00 35.00 35.00\nW+&Z80   20.00 30.00 50.00 50.00\n--------------------------------\n```\n\nUpgrades (inc.\n\n```text\nZ80 & W+ 10.00 15.00 25.00 25.00\n--------------------------------\n```\n\nCheques drawn on a U.K. bank can be made payable to either Chezron Software or R. Cavers. Euro cheques should always be payable to R. Cavers. Cash can be sent at your own risk so please use Registered Post.\n\nPrices may be altered from time to time to reflect changes in the International Exchange Rates.\n\nQueries can be emailed to the usual address:\n\noutletmag@yahoo.com\n\nWe propose to post the shareware version together with the source code (available to registered users only), at the following Web site:\n\nhttp://www.geocities.com/ SiliconValley/ Orchard/3420\n\nA local Web Site will be avail- able soon.\n\nWe are sure that everyone will want to join us in thanking Brian Gaff for the support he has given to the Z80 Emulator over the last several years.\n\nRon & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers 34 Saltersgate Drive Birstall, Leicester LE4 3FF\n\nEmail: outletmag@yahoo.com.\n",
+  "body_ru": "## Editorial (late)\n\nА П Р Е Л Ь , 1 9 9 9\n\nКак некоторые из вас, возможно, уже знают, Brian Gaff (под именем B.G. Services) решил сложить с себя обязанности главного дистрибьютора эмулятора Spectrum Z80 Emulator.\n\nЭти изменения были приурочены — с передачей обязанностей по распространению компании Chezron Software и с одобрения Gerton Lunter — к выходу новой версии под Windows (No.4), которая уже готова.\n\nТекущий прайс-лист приведен ниже.\n\n(Примечание: W+ означает WinZ80 — полную версию для Windows — Win 3.x или Win 95)\n\n```text\n--------------------------------\nVERSION     £UK   US$   DM   HFL\n--------------------------------\nShareware\n(W+Z80)    2.00  3.00  5.00  5.00\n--------------------------------\nRegistered\nZ80       15.00 25.00 35.00 35.00\nW+        15.00 25.00 35.00 35.00\nW+&Z80    20.00 30.00 50.00 50.00\n--------------------------------\nUpgrades\n(inc.\nZ80 & W+) 10.00 15.00 25.00 25.00\n--------------------------------\n```\n\nЧеки, выписанные на британский банк, могут быть оформлены на имя Chezron Software или R. Cavers. Еврочеки всегда должны быть оформлены на R. Cavers. Наличные высылаются на ваш собственный страх и риск, поэтому, пожалуйста, используйте заказные письма (Registered Post).\n\nЦены могут время от времени меняться в зависимости от колебаний международных курсов валют.\n\nВопросы можно присылать по электронной почте на обычный адрес:\n\noutletmag@yahoo.com\n\nМы предполагаем выложить shareware-версию вместе с исходным кодом (доступным только для зарегистрированных пользователей) на следующем веб-сайте:\n\nhttp://www.geocities.com/SiliconValley/Orchard/3420\n\nЛокальный веб-сайт будет доступен в ближайшее время.\n\nМы уверены, что все захотят присоединиться к нам и поблагодарить Brian Gaff за поддержку, которую он оказывал Z80 Emulator на протяжении последних нескольких лет.\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n   Email: outletmag@yahoo.com.\n```\n",
+  "text_type": 3
+}

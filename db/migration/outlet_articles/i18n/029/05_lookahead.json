@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "029",
+  "article_id": "05_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "Preview of Outlet issue 30: CATSCAN and CODESCAN utilities, Star LC10 printer fonts, DICE v.2 review, SKETCHER graphics routine, and more.",
+  "meta_description_ru": "Анонс материалов 30-го выпуска журнала Outlet: утилиты CATSCAN и CODESCAN, работа со шрифтами принтера LC10, обзор DICE v.2 и другое.",
+  "authors": [
+    "Brian Renforth"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "announcement"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus-3"
+    },
+    {
+      "tag_name": "утилиты",
+      "tag_alias": "utilities"
+    },
+    {
+      "tag_name": "star lc10",
+      "tag_alias": "star-lc10"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Next month we've a routine that\nCATs a +3 disc then enables you\nto scroll the list of filenames\nup and down and copy a selected\nfilename to a string variable to\nuse as needed,e.g. a select-and-\nload program is included both as\na demo and for use as an auto-\ndisc-program-loader. The program\nis CATSCAN. A different program\nwith a similar name is CODESCAN-\na marvellous utility that tracks\ndown udgs or character sets in\nmemory - loads of features.\n\nPROT places text on-screen with\npixel-precision.CHECKOUT reviews\nDICE V.2 and Lerm's Z80 Toolkit.\nThere's info on font-downloading\nto the popular LC10 printer with\n2 programs for creating/editing\nand downloading fonts. SKETCHER,\nlike BLITZ on the SAM computer,\nlets you put a string of PLOTs\n& DRAWs in memory then processes\nthem at lightning speed!There's\nan improved NOUGHTS and CROSSES,\na great selection of music (even\nbetter than BOOMBOX in Iss.16 so\nget your hi-fi warmed up!); the\nfirst of a series of clip art\nscreens to load in WORDMASTER or\nCLIP COMPOSER(see THIS issue)and\nall the regulars like OUTCLASS\netc.and one or two more odds and\nends!                  - Brian.\n",
+  "body_ru_plain": "В следующем месяце будет под-\nпрограмма, делающая CAT диску на\n+3 и позволяющая прокручивать\nсписок файлов вверх и вниз, а\nзатем копировать выбранное имя\nв строковую переменную для даль-\nнейшей работы (например, выбор и\nзагрузка — прилагается как демо,\nтак и в роли автозагрузчика про-\nграмм с диска). Эта программа —\nCATSCAN. Другая программа с по-\nхожим названием — CODESCAN, от-\nличная утилита, находящая в па-\nмяти udg или наборы шрифтов —\nкуча полезных возможностей!\n\nPROT выводит текст на экран с\nпопиксельной точностью. CHECKOUT\nрассматривает DICE V.2 и Lerm's\nZ80 Toolkit. Будет информация о\nзагрузке шрифтов в популярный\nпринтер LC10 с двумя программами\nдля создания/редактирования и\nзагрузки шрифтов. SKETCHER, как\nи BLITZ на компьютере SAM, поз-\nволяет поместить цепочку PLOT\nи DRAW в память и обрабатывать\nих с молниеносной скоростью! Еще\nулучшенная NOUGHTS and CROSSES,\nотличная подборка музыки (даже\nлучше, чем BOOMBOX в Iss.16, так\nчто прогревайте свои hi-fi!);\nпервый экран из серии клипартов\nдля загрузки в WORDMASTER или\nCLIP COMPOSER (см. ЭТОТ выпуск),\nа также все постоянные рубрики\nвроде OUTCLASS и т.д., плюс еще\nкое-какие мелочи!      - Brian.\n",
+  "body_en": "## Lookahead\n\nNext month we've a routine that CATs a +3 disc then enables you to scroll the list of filenames up and down and copy a selected filename to a string variable to use as needed, e.g. a select-and-load program is included both as a demo and for use as an auto-disc-program-loader. The program is CATSCAN. A different program with a similar name is CODESCAN - a marvellous utility that tracks down udgs or character sets in memory - loads of features.\n\nPROT places text on-screen with pixel-precision. CHECKOUT reviews DICE V.2 and Lerm's Z80 Toolkit. There's info on font-downloading to the popular LC10 printer with 2 programs for creating/editing and downloading fonts. SKETCHER, like BLITZ on the SAM computer, lets you put a string of PLOTs & DRAWs in memory then processes them at lightning speed! There's an improved NOUGHTS and CROSSES, a great selection of music (even better than BOOMBOX in Iss.16 so get your hi-fi warmed up!); the first of a series of clip art screens to load in WORDMASTER or CLIP COMPOSER (see THIS issue) and all the regulars like OUTCLASS etc. and one or two more odds and ends!\n\n— Brian.\n",
+  "body_ru": "## В следующем номере\n\nВ следующем месяце будет подпрограмма, делающая CAT диску на +3 и позволяющая прокручивать список файлов вверх и вниз, а затем копировать выбранное имя в строковую переменную для дальнейшей работы (например, выбор и загрузка — прилагается как демо, так и в роли автозагрузчика программ с диска). Эта программа — CATSCAN. Другая программа с похожим названием — CODESCAN, отличная утилита, находящая в памяти udg или наборы шрифтов — куча полезных возможностей!\n\nPROT выводит текст на экран с попиксельной точностью. CHECKOUT рассматривает DICE V.2 и Lerm's Z80 Toolkit. Будет информация о загрузке шрифтов в популярный принтер LC10 с двумя программами для создания/редактирования и загрузки шрифтов. SKETCHER, как и BLITZ на компьютере SAM, позволяет поместить цепочку PLOT и DRAW в память и обрабатывать их с молниеносной скоростью! Еще улучшенная NOUGHTS and CROSSES, отличная подборка музыки (даже лучше, чем BOOMBOX в Iss.16, так что прогревайте свои hi-fi!); первый экран из серии клипартов для загрузки в WORDMASTER или CLIP COMPOSER (см. ЭТОТ выпуск), а также все постоянные рубрики вроде OUTCLASS и т.д., плюс еще кое-какие мелочи!\n\n— Brian.\n",
+  "text_type": 3
+}

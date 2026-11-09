@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "066",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс выпуска",
+  "meta_description_en": "An overview of what's featured in Outlet #066: Disciple/+D tools, ROM Calculator tutorial, sector editor, bio-rhythms, and more.",
+  "meta_description_ru": "Обзор материалов выпуска Outlet #066: материалы по Disciple/+D, калькулятор ПЗУ, дисковый секторный редактор, биоритмы и многое другое.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "disciple",
+      "tag_alias": "disciple"
+    },
+    {
+      "tag_name": "plus d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "The good news is we have loads\nof material for the Disciple/+D\nsystems - in fact the CONTENTS\npage is not always big enough to\nlist all ADDENDERS! We start two\nnew series: A fresh OUTCLASS\nexplaining use of the Spectrum\nROM Calculator from machine code\nand something totally different\nbut very topical these difficult\ntimes: the first of three\ninformative articles concerning\nfinancial matters and how these\naffect the pound that used to be\nin your pocket.\n\nFor the programmer, there is a\nmagnificent disc sector editor\nand a utility to switch, in BOTH\ndirections, between 128k and 48k\nmodes.\n\nWith Spring in the air, you are\ngiven the opportunity to inves-\ntigate how your Bio-rhythms are\nlikely to affect your love-life\nor influence the other aspects\nof your existence.\n\nA simple introduction to frac-\ntions is nicely enhanced with\ngraphics, and there is also a\nsuper multiple-font print\nroutine for 24-pin printers, not\nto mention a game based on a\nsimple idea, but which probably\nwill give you many frustrating\nhours of enjoyment.      Chris..\n",
+  "body_ru_plain": "",
+  "body_en": "The good news is we have loads of material for the Disciple/+D systems — in fact the CONTENTS page is not always big enough to list all ADDENDERS! We start two new series: A fresh OUTCLASS explaining use of the Spectrum ROM Calculator from machine code and something totally different but very topical these difficult times: the first of three informative articles concerning financial matters and how these affect the pound that used to be in your pocket.\n\nFor the programmer, there is a magnificent disc sector editor and a utility to switch, in BOTH directions, between 128k and 48k modes.\n\nWith Spring in the air, you are given the opportunity to investigate how your Bio-rhythms are likely to affect your love-life or influence the other aspects of your existence.\n\nA simple introduction to fractions is nicely enhanced with graphics, and there is also a super multiple-font print routine for 24-pin printers, not to mention a game based on a simple idea, but which probably will give you many frustrating hours of enjoyment.\n\nChris..\n",
+  "body_ru": "Хорошая новость заключается в том, что у нас скопилась масса материалов для систем Disciple/+D — по правде говоря, страницы оглавления (CONTENTS) порой едва хватает, чтобы вместить все дополнения! Мы начинаем две новые серии: свежий выпуск OUTCLASS, объясняющий использование встроенного в ПЗУ калькулятора Спектрума из машинного кода, и нечто совершенно иное, но весьма актуальное в эти непростые времена: первую из трех познавательных статей о финансовых вопросах и о том, как они влияют на фунт, что когда-то лежал в вашем кармане.\n\nДля программистов у нас есть великолепный дисковый секторный редактор и утилита для переключения между режимами 128k и 48k в ОБОИХ направлениях.\n\nА поскольку в воздухе веет весной, вам предоставляется возможность исследовать, как ваши биоритмы влияют на любовную жизнь и другие сферы существования.\n\nПростое введение в тему дробей снабжено наглядной графикой, а кроме того, вас ждет отличная подпрограмма печати с поддержкой нескольких шрифтов для 24-игольчатых принтеров — не говоря уже об игре с незамысловатой идеей, которая, впрочем, наверняка подарит вам немало часов приятного, пусть и полного досады, времяпрепровождения.\n\nChris..\n",
+  "text_type": 3
+}

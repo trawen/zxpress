@@ -1,0 +1,45 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "34",
+  "article_id": "08_DELTA3.TX",
+  "source_lang": "de-AT",
+  "title_en": "Delta Animation 3",
+  "title_ru": "Delta Animation 3",
+  "meta_description_en": "Description of Delta Animation 3, a highly compressed video demo for the ZX Spectrum 48K that surprised even Russian coders.",
+  "meta_description_ru": "Краткое описание Delta Animation 3 — впечатляющей видеодемонстрации со сжатием delta для ZX Spectrum 48K.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "delta-compression",
+      "tag_alias": "delta-compression"
+    },
+    {
+      "tag_name": "demo",
+      "tag_alias": "demo"
+    },
+    {
+      "tag_name": "video",
+      "tag_alias": "video"
+    }
+  ],
+  "category_ids": [
+    93,
+    43,
+    52
+  ],
+  "body_de_plain": "DELTA ü - Delta Animation 3 - Vorläufig die letzte und mi\nsicherheitbeeindruckensteAnimation die ich je für meinen Delta\nCompressor berechnet habe,bisher waren sogar einige Russen\nerstaunt.y - At moment the last but most imprssive Delta\nAnimation I evermade, it has surprised also some russian\ncoders.p - Spectrum 48. Load in 48\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**DELTA**\n\n**Delta Animation 3**\n\nCurrently the last and certainly the most impressive animation I have ever calculated for my Delta Compressor. So far, even some Russian coders have been surprised by it.\n\n*Platform:* ZX Spectrum 48K. Load in 48K mode.\n",
+  "body_ru": "**DELTA**\n\n**Delta Animation 3**\n\nНа данный момент последняя и, безусловно, самая впечатляющая анимация, которую я когда-либо рассчитывал для своего дельта-компрессора. До сих пор ей удивлялись даже некоторые русские кодеры.\n\n*Платформа:* ZX Spectrum 48K. Загружать в режиме 48K.\n",
+  "text_type": 3
+}

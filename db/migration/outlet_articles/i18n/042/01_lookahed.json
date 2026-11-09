@@ -1,0 +1,43 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "042",
+  "article_id": "01_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Планы на будущее",
+  "meta_description_en": "Brian Gaff shares plans for the upcoming Outlet #43, including Disciple/+D CATLOADER, Zoomlens, Beepbank, and articles on SSTV and BASIC optimization.",
+  "meta_description_ru": "Брайан Гафф делится планами на Outlet #43: CATLOADER для Disciple/+D, утилиты Zoomlens и Beepbank, статьи об SSTV и оптимизации Бейсика.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "catloader",
+      "tag_alias": "catloader"
+    },
+    {
+      "tag_name": "disciple",
+      "tag_alias": "disciple"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Planned for next month so far we\nhave ZOOMLENS - to magnify parts\nof the screen; BEEPBANK - a\n\"library\" of machine code sounds\nto which you can add your own;\nand a new,incredible Disciple/+D\nversion of CATLOADER which gives\none-key loading, selective block\nerase and copying (without reset\nand including SNAP files),rename\nand printouts and... DON'T MISS\nIT! It really is the easiest way\nof using your drive(s). Other\nversions are in OUTLET 33.\n\nThere'll also be  great articles\nabout slow-scan television and a\nmethod of speeding up Spectrum\nBASIC; clip art;a new crossword;\na complete text adventure; a\nmachine code screen switcher; a\nSpectrum LIST or LLIST FROM - TO\nmachine code routine; a video\ndatabase and a... whoops! I'm\nalready about 50K over my limit!\nThat's one thing I must watch\nnow I'm compiling this on my\nDisciple disc! So... if I can't\ncrunch up any of the above I may\nhave to substitute something\nsmaller. We'll see...\n\nAs usual, SAM-specific programs\nwill replace any I can't convert\nand there'll be SAMCLASS and\nDEMOPIX of course!      - Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "Planned for next month so far we have ZOOMLENS — to magnify parts of the screen; BEEPBANK — a \"library\" of machine code sounds to which you can add your own; and a new, incredible Disciple/+D version of CATLOADER which gives one-key loading, selective block erase and copying (without reset and including SNAP files), rename and printouts and... DON'T MISS IT! It really is the easiest way of using your drive(s). Other versions are in OUTLET 33.\n\nThere'll also be great articles about slow-scan television and a method of speeding up Spectrum BASIC; clip art; a new crossword; a complete text adventure; a machine code screen switcher; a Spectrum LIST or LLIST FROM - TO machine code routine; a video database and a... whoops! I'm already about 50K over my limit! That's one thing I must watch now I'm compiling this on my Disciple disc! So... if I can't crunch up any of the above I may have to substitute something smaller. We'll see...\n\nAs usual, SAM-specific programs will replace any I can't convert and there'll be SAMCLASS and DEMOPIX of course!\n\n— Brian.\n",
+  "body_ru": "Среди того, что запланировано на следующий месяц, у нас есть ZOOMLENS — программа для увеличения участков экрана; BEEPBANK — «библиотека» звуков в машинном коде, которую можно дополнять своими собственными; а также новая потрясающая версия CATLOADER для Disciple/+D, позволяющая загружать файлы одной клавишей, выполнять выборочное удаление и копирование блоков (без сброса и включая SNAP-файлы), переименование, распечатку и... НЕ ПРОПУСТИТЕ! Это действительно самый простой способ работы с дисководом (или дисководами). Другие версии выходили в OUTLET 33.\n\nТакже вас ждут отличные статьи о телевидении с медленной развёрткой (SSTV) и способе ускорения Spectrum BASIC; клипарт; новый кроссворд; полноценный текстовый квест; переключатель экранов в машинном коде; подпрограмма в машинном коде для LIST или LLIST с параметрами FROM — TO; база данных видеокассет и... ой! Я уже превысил лимит диска примерно на 50 КБ! За этим приходится следить, когда компилируешь выпуск на диск Disciple! Так что... если мне не удастся хорошенько всё это сжать, возможно, придётся заменить что-то на вещи поменьше. Посмотрим...\n\nКак обычно, программы, специфичные для SAM Coupé, заменят те, что я не смогу сконвертировать, и, конечно же, будут SAMCLASS и DEMOPIX!\n\n— Brian.\n",
+  "text_type": 3
+}

@@ -1,0 +1,41 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "070",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Outlet #70 editorial: announcement of Chezron Software's new postal address and bugfix for the ZX Spectrum +3 print routine.",
+  "meta_description_ru": "Редакционная колонка журнала Outlet №70: смена почтового адреса Chezron Software и исправление ошибки подпрограммы печати для ZX Spectrum +3.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus-3"
+    }
+  ],
+  "category_ids": [
+    123,
+    118
+  ],
+  "body_en_plain": "J U N E ,   1 9 9 3\n\nWe mentioned last month that an\nextra job might delay this issue\nslightly. Well,hopefully this is\non time or only slightly late.\nThe reason for our concern was a\nchange of address!\n\nYes! Please note our new address\nat the end of the editorial. It\nis of course, Ron's home address\n(hence \"chez Ron\") but we didn't\nwant to be specific last month\nin case it didn't happen - you\nknow what these mortgage chains\nand formalities can be like!\n\nAnyway, mark your address book!\nIt is effective immediately but\ndo not worry if you despatched\nanything to the old address in\nthe last few weeks and perhaps\nreading this late -we have asked\nthe post office to forward any\nmail addressed to us at the old\naddress.Please remember to alter\nyour Chezron wallet CLEARLY(only\nthe house number, road and post\ncode have changed) or print a\nsticker.\n\nGarry Rowland has kindly advised\nus that our +3 print routine was\nnot working last month! Sorry,it\nwas due to the new paging and\nour overlooking the +3 overlays!\nAll is now OK and you can print\nlast month's text by switching\ndiscs!\n                    Ron & Brian\n\n             ______\n\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nJ U N E ,   1 9 9 3\n\nWe mentioned last month that an extra job might delay this issue slightly. Well,hopefully this is on time or only slightly late. The reason for our concern was a change of address!\n\nYes! Please note our new address at the end of the editorial. It is of course, Ron's home address (hence \"chez Ron\") but we didn't want to be specific last month in case it didn't happen - you know what these mortgage chains and formalities can be like!\n\nAnyway, mark your address book! It is effective immediately but do not worry if you despatched anything to the old address in the last few weeks and perhaps reading this late -we have asked the post office to forward any mail addressed to us at the old address.Please remember to alter your Chezron wallet CLEARLY(only the house number, road and post code have changed) or print a sticker.\n\nGarry Rowland has kindly advised us that our +3 print routine was not working last month! Sorry,it was due to the new paging and our overlooking the +3 overlays! All is now OK and you can print last month's text by switching discs! Ron & Brian\n\n```text\n             ______\n```\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers\n\nCHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF.\n",
+  "body_ru": "## Editorial (late)\n\nИ Ю Н Ь ,   1 9 9 3\n\nВ прошлом месяце мы упоминали, что дополнительная работа может слегка задержать этот выпуск. Что ж, надеемся, он вышел вовремя или лишь с небольшим опозданием. Причиной нашего беспокойства была смена адреса!\n\nДа! Пожалуйста, обратите внимание на наш новый адрес в конце редакционной статьи. Это, конечно же, домашний адрес Ron (отсюда и «chez Ron»), но в прошлом месяце мы не хотели вдаваться в подробности на случай, если переезд сорвется — вы же знаете, какими бывают эти цепочки с ипотекой и формальности!\n\nВ любом случае, отметьте это в своей адресной книге! Новый адрес действует немедленно, но не волнуйтесь, если за последние несколько недель вы отправили что-то на старый адрес или читаете это с опозданием — мы попросили почтовое отделение пересылать всю входящую корреспонденцию со старого адреса. Пожалуйста, не забудьте ЧЕТКО исправить конверт Chezron (изменились только номер дома, улица и почтовый индекс) или распечатайте наклейку.\n\nGarry Rowland любезно сообщил нам, что в прошлом месяце наша процедура печати для +3 не работала! Просим прощения, это произошло из-за нового механизма страниц памяти и того, что мы упустили из виду оверлеи для +3! Теперь все в порядке, и вы можете распечатать текст из прошлого номера, поменяв диски!\n\nRon & Brian\n\n---\n\nOUTLET выпускают:\n\nChris Oliver  \nRon & Brian Cavers  \n\nCHEZRON SOFTWARE  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF.\n",
+  "text_type": 3
+}

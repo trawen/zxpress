@@ -1,0 +1,48 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "32",
+  "article_id": "05_BEDLAM.TX",
+  "source_lang": "de-AT",
+  "title_en": "Bedlam 128",
+  "title_ru": "Bedlam 128",
+  "meta_description_en": "A brief overview of Bedlam 128 featuring a custom uniloader adapted for Scene+ #32.",
+  "meta_description_ru": "Краткая заметка об игре Bedlam 128 с адаптированным универсальным загрузчиком из журнала Scene+ #32.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    },
+    {
+      "tag_name": "bedlam",
+      "tag_alias": "bedlam"
+    },
+    {
+      "tag_name": "shoot-em-up",
+      "tag_alias": "shoot-em-up"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "BEDLA ü - BEDLAM 128- Vielen von Euch bereits von einer der\nSinclair User Covertapeshinlänglich bekannt, ein Shoot'em up\nSpiel der besseren Sorte. Der einzige Unterschied zu der\nbisherigen Fassung ist der neuevon Mir erstellte Uniloader der\nfür jedes Speichermedium leichtumgeschrieben werden kann. Die\nSteuerung erfolgt über SinclairJoystick, Kempston oder Tastatur.\nEin besonderes Feature ist der Spielmodus für zwei Spieler. -\nMany of you will know this game allready, it was featured on\noneof the SU covertapes, but this version has a\nuniloaderintegrated by me. The game is controled by Sinclair or\nKempstonjoystick and has also a 2 playe\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### Bedlam 128\n\nMany of you will already be well familiar with this game from one of the *Sinclair User* covertapes — a shoot 'em up of the better variety. The only difference compared to the previous release is the new uniloader created by me, which can easily be adapted for any storage medium. \n\nControls are supported via Sinclair joystick, Kempston, or keyboard. A notable feature is the simultaneous two-player mode.\n",
+  "body_ru": "### Bedlam 128\n\nМногим из вас эта игра уже хорошо знакома по кассетам-приложениям журнала *Sinclair User* — это весьма качественный представитель жанра shoot 'em up. Единственное отличие от предыдущей версии — созданный мной новый универсальный загрузчик (uniloader), который можно легко адаптировать под любой накопитель.\n\nУправление поддерживается через Sinclair Joystick, Kempston или клавиатуру. Примечательная особенность игры — режим для двух игроков.\n",
+  "text_type": 3
+}

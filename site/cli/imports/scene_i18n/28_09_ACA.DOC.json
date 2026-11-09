@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "28",
+  "article_id": "09_ACA.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Alien Coming Again 128 Preview",
+  "title_ru": "Alien Coming Again 128 Preview",
+  "meta_description_en": "Brief note from Scene+ #28 on the Alien Coming Again 128 preview, a ZX Spectrum sample demo based on the movie Aliens by Jaxon Hollis.",
+  "meta_description_ru": "Краткая заметка из Scene+ #28 о превью-демо Alien Coming Again 128 с семплами по фильму «Чужие» от Джексона Холлиса для ZX Spectrum.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "aliens",
+      "tag_alias": "aliens"
+    },
+    {
+      "tag_name": "jaxon-hollis",
+      "tag_alias": "jaxon-hollis"
+    },
+    {
+      "tag_name": "sample-demo",
+      "tag_alias": "sample-demo"
+    }
+  ],
+  "category_ids": [
+    93,
+    33
+  ],
+  "body_de_plain": "ACA ü\n----------------------------------------------------------------\nALIEN COMING AGAIN 128 PREVIEW\n----------------------------------------------------------------\nSample Demo basierend auf dem Film ALIENS von Jaxon Hollis.\n----------------------------------------------------------------\nSample demo from Jaxon Hollis based on ALIENS Movie.\n----------------------------------------------------------------\n--------------------------------------------------------------------------------------------------------------------------------\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### ALIEN COMING AGAIN 128 PREVIEW\n\nSample demo based on the movie *ALIENS* by Jaxon Hollis.\n",
+  "body_ru": "### ALIEN COMING AGAIN 128 PREVIEW\n\nДемоверсия с семплами по мотивам фильма «Чужие» (*ALIENS*) от Джексона Холлиса (Jaxon Hollis).\n",
+  "text_type": 3
+}

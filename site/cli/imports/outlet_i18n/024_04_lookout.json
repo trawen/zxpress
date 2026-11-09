@@ -1,0 +1,51 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "024",
+  "article_id": "04_lookout",
+  "title_en": "Lookout",
+  "title_ru": "Lookout: Новости и планы",
+  "meta_description_en": "News and notes from Outlet #24: planning a 3\" disc version for Spectrum +3, MGT 3.5\" drive, legal status of Multiface, and Spectrum press overview.",
+  "meta_description_ru": "Краткие новости Outlet #24: версия журнала на 3\" дисках для Spectrum +3, дисковод MGT, законность Multiface и обзор прессы (Your Sinclair, Sinclair User).",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "spectrum +3",
+      "tag_alias": "spectrum-3"
+    },
+    {
+      "tag_name": "дисководы",
+      "tag_alias": "floppy-drives"
+    },
+    {
+      "tag_name": "multiface",
+      "tag_alias": "multiface"
+    },
+    {
+      "tag_name": "mgt",
+      "tag_alias": "mgt"
+    },
+    {
+      "tag_name": "your sinclair",
+      "tag_alias": "your-sinclair"
+    },
+    {
+      "tag_name": "sinclair user",
+      "tag_alias": "sinclair-user"
+    }
+  ],
+  "category_ids": [
+    131,
+    10,
+    16
+  ],
+  "body_en_plain": "We now have a +3 Spectrum with\na second external drive and are\nexploring the feasibility of a\n3\" disc version of OUTLET. There\nare problems but our initial\ninvestigations are encouraging.\n\nJust as we're gearing up for a\nnew version of OUTLET on +3 disc\nthere are rumours of a shortage\nof 3\" discs! However,Amstrad has\ncome to the rescue with a supply\nof 6 million discs(for the whole\ncountry - not just CHEZRON) so\nall's well.\n\nNick Godwin, who's run ALADDINK,\nthe printer ribbon re-inking\nservice for many years, plans to\nstart a printer user group to\nshare info, experience and even\nmachines themselves. Write to\nWRITE-ON-LINE, c/o Nick Godwin,\n4 Hurker Crescent, Eyemouth,\nBerwickshire TD14 5AP for more\ninformation.\n\nThe most powerful computer on\nearth is now the NCube - 15,000\ntimes faster than an Archimedes,\nable to handle 60,000 million\ninstructions a second with 8,192\nprocessors operating in parallel\nand a storage capacity of 500\nmillion megabytes.Yours for only\n`19 million.Please allow 28 days\nfor delivery.\n\nDevices like Multiface may still\nbe sold because a clause in new\nlegislation permits the sale of\nsuch harware if it can be shown\nthey have a legitimate use- such\nas backing-up programs.\n\nMGT are now selling a new 3.5\",\n700K external drive for the +3\nSpectrum at `99.95.\n\nYOUR SINCLAIR has listings for a\ntext routine (4 sizes/8 styles);\na character set searcher(we have\nour own soon in OUTLET anyway!)\nand a sound-to-light routine.\n\nSINCLAIR USER reviews the new\nSinclair light gun and has the\nlisting for last month's info on\nrunning a simple game while the\nmain game is loading from tape.\n\nFinally, COMPUTER SHOPPER looks\nat CP/M and Cheetah's light gun;\nhas snippets of SAM COUPE info\n(which I think has been covered\nbefore)has useful information on\nmonitors and their programming\nsection looks at recursion..\n",
+  "body_ru_plain": "Теперь у нас есть Spectrum +3 со\nвторым внешним дисководом, и мы\nизучаем возможность выпуска\nверсии OUTLET на 3\" дисках. Есть\nсложности, но первые результаты\nвполне обнадеживают.\n\nИ как раз когда мы готовимся к\nновой версии OUTLET на дисках +3,\nпоползли слухи о нехватке 3\"\nдисков! Впрочем, Amstrad пришла\nна помощь с поставкой в 6\nмиллионов дисков (на всю страну,\nа не только для CHEZRON), так\nчто всё в порядке.\n\nNick Godwin, много лет ведущий\nALADDINK, службу по повторной\nзаправке лент для принтеров,\nпланирует создать группу пользо-\nвателей принтеров для обмена ин-\nформацией, опытом и даже самими\nустройствами. Пишите по адресу:\nWRITE-ON-LINE, c/o Nick Godwin,\n4 Hurker Crescent, Eyemouth,\nBerwickshire TD14 5AP для полу-\nчения подробностей.\n\nСамый мощный компьютер на земле\nсейчас — NCube: в 15,000 раз\nбыстрее Archimedes, способен\nобрабатывать 60,000 миллионов\nинструкций в секунду благодаря\n8,192 параллельным процессорам и\nобладает объёмом накопителей в\n500 миллионов мегабайт. И всего\nза какие-то `19 million. Доставка\nв течение 28 дней.\n\nУстройства вроде Multiface всё\nещё могут продаваться, поскольку\nпункт в новом законодательстве\nразрешает продажу такого железа,\nесли можно доказать его законное\nприменение — например, создание\nрезервных копий программ.\n\nMGT теперь продает новый внешний\nдисковод 3.5\" на 700K для\nSpectrum +3 по цене `99.95.\n\nВ YOUR SINCLAIR есть листинги\nтекстовой процедуры (4 размера /\n8 стилей), поисковика шрифтов\n(впрочем, скоро в OUTLET будет\nнаш собственный!) и программы\nцветомузыки.\n\nSINCLAIR USER обозревает новый\nсветовой пистолет Sinclair и\nдает листинг к прошломесячной\nзаметке о запуске простой игры\nпока с ленты грузится основная.\n\nНаконец, COMPUTER SHOPPER пишет\nо CP/M и световом пистолете от\nCheetah; публикует крупицы инфы\nо SAM COUPE (которые, кажется,\nуже всплывали ранее), приводит\nполезные сведения о мониторах,\nа в разделе программирования\nрассматривает рекурсию..\n",
+  "body_en": "## Lookout\n\nWe now have a +3 Spectrum with a second external drive and are exploring the feasibility of a 3\" disc version of OUTLET. There are problems but our initial investigations are encouraging.\n\nJust as we're gearing up for a new version of OUTLET on +3 disc there are rumours of a shortage of 3\" discs! However, Amstrad has come to the rescue with a supply of 6 million discs (for the whole country - not just CHEZRON) so all's well.\n\nNick Godwin, who's run ALADDINK, the printer ribbon re-inking service for many years, plans to start a printer user group to share info, experience and even machines themselves. Write to WRITE-ON-LINE, c/o Nick Godwin, 4 Hurker Crescent, Eyemouth, Berwickshire TD14 5AP for more information.\n\nThe most powerful computer on earth is now the NCube - 15,000 times faster than an Archimedes, able to handle 60,000 million instructions a second with 8,192 processors operating in parallel and a storage capacity of 500 million megabytes. Yours for only `19 million. Please allow 28 days for delivery.\n\nDevices like Multiface may still be sold because a clause in new legislation permits the sale of such harware if it can be shown they have a legitimate use - such as backing-up programs.\n\nMGT are now selling a new 3.5\", 700K external drive for the +3 Spectrum at `99.95.\n\nYOUR SINCLAIR has listings for a text routine (4 sizes/8 styles); a character set searcher (we have our own soon in OUTLET anyway!) and a sound-to-light routine.\n\nSINCLAIR USER reviews the new Sinclair light gun and has the listing for last month's info on running a simple game while the main game is loading from tape.\n\nFinally, COMPUTER SHOPPER looks at CP/M and Cheetah's light gun; has snippets of SAM COUPE info (which I think has been covered before) has useful information on monitors and their programming section looks at recursion..\n",
+  "body_ru": "## Lookout: Новости и планы\n\nТеперь у нас есть Spectrum +3 со вторым внешним дисководом, и мы изучаем возможность выпуска версии OUTLET на 3\" дисках. Есть сложности, но первые результаты вполне обнадеживают.\n\nИ как раз когда мы готовимся к новой версии OUTLET на дисках +3, поползли слухи о нехватке 3\" дисков! Впрочем, Amstrad пришла на помощь с поставкой в 6 миллионов дисков (на всю страну, а не только для CHEZRON), так что всё в порядке.\n\nNick Godwin, много лет ведущий ALADDINK, службу по повторной заправке лент для принтеров, планирует создать группу пользователей принтеров для обмена информацией, опытом и даже самими устройствами. Пишите по адресу: WRITE-ON-LINE, c/o Nick Godwin, 4 Hurker Crescent, Eyemouth, Berwickshire TD14 5AP для получения подробностей.\n\nСамый мощный компьютер на земле сейчас — NCube: в 15,000 раз быстрее Archimedes, способен обрабатывать 60,000 миллионов инструкций в секунду благодаря 8,192 параллельным процессорам и обладает объёмом накопителей в 500 миллионов мегабайт. И всего за какие-то `19 million. Доставка в течение 28 дней.\n\nУстройства вроде Multiface всё ещё могут продаваться, поскольку пункт в новом законодательстве разрешает продажу такого железа, если можно доказать его законное применение — например, создание резервных копий программ.\n\nMGT теперь продает новый внешний дисковод 3.5\" на 700K для Spectrum +3 по цене `99.95.\n\nВ YOUR SINCLAIR есть листинги текстовой процедуры (4 размера / 8 стилей), поисковика шрифтов (впрочем, скоро в OUTLET будет наш собственный!) и программы цветомузыки.\n\nSINCLAIR USER обозревает новый световой пистолет Sinclair и дает листинг к прошломесячной заметке о запуске простой игры пока с ленты грузится основная.\n\nНаконец, COMPUTER SHOPPER пишет о CP/M и световом пистолете от Cheetah; публикует крупицы инфы о SAM COUPE (которые, кажется, уже всплывали ранее), приводит полезные сведения о мониторах, а в разделе программирования рассматривает рекурсию..\n",
+  "text_type": 3
+}

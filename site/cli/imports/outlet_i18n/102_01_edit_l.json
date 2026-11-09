@@ -1,0 +1,48 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "102",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Editorial for Outlet #102 (February 1996): highlights on BASCOM and Megamaze, mail-in policy for OUTLETTERS, and a call for reader contributions.",
+  "meta_description_ru": "Редакторская колонка журнала Outlet #102 (февраль 1996): анонс программ BASCOM и Megamaze, правила переписки и призыв присылать материалы.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "bascom",
+      "tag_alias": "bascom"
+    },
+    {
+      "tag_name": "megamaze",
+      "tag_alias": "megamaze"
+    },
+    {
+      "tag_name": "puzzlepix",
+      "tag_alias": "puzzlepix"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "F E B R U A R Y,   1 9 9 6\n\nThere is a fascinating and very\nuseful program in this month's\nOUTLET called BASCOM.It runs any\nBASIC commands from machine code\nso making many routines easier\nfor the programmer!\n\n\nAlso this month we have MEGAMAZE\nwhich is simply brilliant!Liter-\nally billions and billions of\nmazes can be generated! There is\nno prize for finishing all three\nscreens in PUZZLEPIX but we'd be\ninterested to hear if anyone is\nsuccessful!\n\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET. We\nare sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\n\nFinally, remember, we still need\nyour support and contributions\nof articles and programs, espec-\nially utility programs are now\nneeded more than ever. Even a\nshort routine can be like gold\ndust to another user! Send 'em\nin!\n\n                    Ron & Brian\n\n\n\n\n\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nF E B R U A R Y,   1 9 9 6\n\nThere is a fascinating and very useful program in this month's OUTLET called BASCOM.It runs any BASIC commands from machine code so making many routines easier for the programmer!\n\nAlso this month we have MEGAMAZE which is simply brilliant!Liter- ally billions and billions of mazes can be generated! There is no prize for finishing all three screens in PUZZLEPIX but we'd be interested to hear if anyone is successful!\n\nMay we remind readers, we cannot answer computer, software, hard- ware or system queries etc., personally by mail.  All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder!Share your problems with others! That way, everyone benefits!\n\nFinally, remember, we still need your support and contributions of articles and programs, espec- ially utility programs are now needed more than ever. Even a short routine can be like gold dust to another user! Send 'em in!\n\nRon & Brian\n\nOUTLET is produced by Chris Oliver Ron & Brian Cavers CHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF .\n",
+  "body_ru": "## Editorial (late)\n\nФ Е В Р А Л Ь, 1 9 9 6\n\nВ этом номере OUTLET вас ждет увлекательная и очень полезная программа под названием BASCOM. Она выполняет любые команды BASIC прямо из машинного кода, что значительно упрощает написание многих процедур для программиста!\n\nТакже в этом месяце у нас есть MEGAMAZE, которая просто великолепна! Она способна генерировать буквально миллиарды и миллиарды лабиринтов! Приза за прохождение всех трех экранов в PUZZLEPIX нет, но нам было бы интересно узнать, удалось ли это кому-нибудь!\n\nНапоминаем читателям: мы не можем отвечать на вопросы о компьютерах, софте, железе или системных тонкостях лично по почте. Все подобные вопросы рассматриваются исключительно в рубрике OUTLETTERS на страницах OUTLET. Нам жаль постоянно твердить об этом, но, похоже, такое напоминание должно быть постоянным! Делитесь своими проблемами с другими — в таком случае выигрывают все!\n\nИ напоследок: помните, что нам по-прежнему нужна ваша поддержка, ваши статьи и программы; особенно утилиты нужны сейчас как никогда. Даже короткая подпрограмма может оказаться на вес золота для другого пользователя! Присылайте их нам!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n```\n",
+  "text_type": 3
+}

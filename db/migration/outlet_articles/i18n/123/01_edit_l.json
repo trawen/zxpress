@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "123",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Late editorial from Outlet #123 (November 1997). Discussing a possible shift to a bi-monthly schedule and urging readers to send in contributions.",
+  "meta_description_ru": "Дополнительная редакторская колонка Outlet #123 (ноябрь 1997). Обсуждение возможного перехода на двухмесячный график и призыв присылать материалы.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "spectrum market",
+      "tag_alias": "spectrum-market"
+    },
+    {
+      "tag_name": "contributions",
+      "tag_alias": "contributions"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "N O V E M B E R,  1 9 9 7\n\nBecause of the reduced number of\ncontributions we are now getting\nhere at OUTLET we want to know\nyour views on whether we should\ngo bi-monthly, ie, issue OUTLET\nonly SIX times a year...\n\n\nPlease read the OUTLETTER from\nBernadette Dowsland and let us\nknow your views about issuing\nOUTLET bi-monthly.You might pre-\nfer to continue monthly but with\nsmaller content if we don't get\nsufficient contributions.We wish\nwe could reduce the price but it\nbarely covers costs as it is. A\nbetter solution would be more\nstuff being sent in!.....\n\nWith the ever dwindling Spectrum\nmarket every new reader is a big\nhelp. What is especially import-\nant are CONTRIBUTIONS. Remember,\nwe need YOUR support, articles\nand programs, especially utility\nprograms,are always welcome.Even\na short routine can be like gold\nto another user! Send 'em in!\n\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET.\nWe are sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\nMeanwhile, there are some real\ngoodies in this month's issue!\n                     Ron & Brian\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n Email: ron.cavers@virgin.net\n Make out cheques to Ron Cavers.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nN O V E M B E R,  1 9 9 7\n\nBecause of the reduced number of contributions we are now getting here at OUTLET we want to know your views on whether we should go bi-monthly, ie, issue OUTLET only SIX times a year...\n\nPlease read the OUTLETTER from Bernadette Dowsland and let us know your views about issuing OUTLET bi-monthly.You might pre- fer to continue monthly but with smaller content if we don't get sufficient contributions.We wish we could reduce the price but it barely covers costs as it is. A better solution would be more stuff being sent in!.....\n\nWith the ever dwindling Spectrum market every new reader is a big help. What is especially import- ant are CONTRIBUTIONS. Remember, we need YOUR support, articles and programs, especially utility programs,are always welcome.Even a short routine can be like gold to another user! Send 'em in!\n\nMay we remind readers, we cannot answer computer, software, hard- ware or system queries etc., personally by mail.  All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder!Share your problems with others! That way, everyone benefits!\n\nMeanwhile, there are some real goodies in this month's issue! Ron & Brian OUTLET is produced by Chris Oliver Ron & Brian Cavers 34 Saltersgate Drive Birstall, Leicester LE4 3FF Email: ron.cavers@virgin.net Make out cheques to Ron Cavers.\n",
+  "body_ru": "## Editorial (late)\n\nН О Я Б Р Ь, 1 9 9 7\n\nИз-за сокращения количества присылаемых материалов мы в OUTLET хотим узнать ваше мнение о том, стоит ли нам переходить на двухмесячный график, то есть выпускать OUTLET всего ШЕСТЬ раз в год...\n\nПожалуйста, прочитайте письмо в OUTLETTER от Bernadette Dowsland и сообщите нам свои мысли по поводу выхода OUTLET раз в два месяца. Возможно, вы предпочли бы, чтобы журнал продолжал выходить ежемесячно, но с меньшим объёмом материалов, если мы не будем получать достаточно статей и программ. Нам бы хотелось снизить цену, но она и так едва покрывает расходы. Куда лучшим решением было бы, если бы нам присылали больше всего!.....\n\nВ условиях постоянно сжимающегося рынка Spectrum каждый новый читатель — это огромная помощь. Но что особенно важно, так это ВАШИ МАТЕРИАЛЫ. Помните: нам нужна ВАША поддержка. Статьям и программам, особенно утилитам, мы рады всегда. Даже короткая подпрограмма может оказаться на вес золота для другого пользователя! Присылайте их нам!\n\nНапоминаем читателям: мы не можем отвечать на вопросы о компьютерах, софте, железе или системных проблемах лично по почте. Все подобные вопросы разбираются в рубрике OUTLETTERS на страницах OUTLET. Простите, что постоянно твердим об этом, но об этом действительно нужно напоминать регулярно! Делитесь своими проблемами с остальными! Так польза будет для каждого!\n\nА пока что в этом номере вас ждут настоящие жемчужины!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n Email: ron.cavers@virgin.net\n Make out cheques to Ron Cavers.\n```\n",
+  "text_type": 3
+}

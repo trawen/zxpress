@@ -1,0 +1,122 @@
+[
+  {
+    "key": "00",
+    "title": "Woot! #00 \u2014 ZXMAS 2016",
+    "file": "WootZXMAS2016.tap",
+    "chars": 10252,
+    "score": 13117,
+    "prose_chunks": 132,
+    "block_name": null,
+    "out": "texts/00.txt"
+  },
+  {
+    "key": "01",
+    "title": "Woot! #01 \u2014 ZXMAS 2017 (48K)",
+    "file": "Woot1(48K).tap",
+    "chars": 11897,
+    "score": 17811,
+    "prose_chunks": 92,
+    "block_name": null,
+    "out": "texts/01.txt"
+  },
+  {
+    "key": "01_128",
+    "title": "Woot! #01 \u2014 ZXMAS 2017 (128K)",
+    "file": "Woot1(128K).tap",
+    "chars": 11897,
+    "score": 17811,
+    "prose_chunks": 92,
+    "block_name": null,
+    "out": "texts/01_128.txt"
+  },
+  {
+    "key": "02",
+    "title": "Woot! #02 \u2014 ZXMAS 2018 (Side 1 magazine)",
+    "file": "Woot2018(Side1).tap",
+    "chars": 18465,
+    "score": 24394,
+    "prose_chunks": 95,
+    "block_name": null,
+    "out": "texts/02.txt"
+  },
+  {
+    "key": "02_side2",
+    "title": "Woot! #02 \u2014 ZXMAS 2018 (Side 2)",
+    "file": "Woot2018(Side2).tap",
+    "chars": 2007,
+    "score": 3993,
+    "prose_chunks": 22,
+    "block_name": null,
+    "out": "texts/02_side2.txt"
+  },
+  {
+    "key": "03",
+    "title": "Woot! #03 \u2014 ZXMAS 2019",
+    "file": "Woot2019_Magazine.tap",
+    "chars": 19436,
+    "score": 25308,
+    "prose_chunks": 124,
+    "block_name": null,
+    "out": "texts/03.txt"
+  },
+  {
+    "key": "04",
+    "title": "Woot! #04 \u2014 ZXMAS 2020",
+    "file": "1-WootZXMAS2020(TapeMagazine).tap",
+    "chars": 24160,
+    "score": 27069,
+    "prose_chunks": 145,
+    "block_name": null,
+    "out": "texts/04.txt"
+  },
+  {
+    "key": "04_covid",
+    "title": "Woot! #04 \u2014 Covid Chronicle",
+    "file": "2-CovidChronicle.tap",
+    "chars": 5259,
+    "score": 8214,
+    "prose_chunks": 74,
+    "block_name": null,
+    "out": "texts/04_covid.txt"
+  },
+  {
+    "key": "04_desert",
+    "title": "Woot! #04 \u2014 Desert Island Tapes",
+    "file": "4-DesertIslandTapes.tap",
+    "chars": 26815,
+    "score": 28669,
+    "prose_chunks": 125,
+    "block_name": null,
+    "out": "texts/04_desert.txt"
+  },
+  {
+    "key": "05",
+    "title": "Woot! #05 \u2014 ZXMAS 2021",
+    "file": "WOOTTapeMagazineIssue5-ZXMAS2021Edition.tap",
+    "chars": 10340,
+    "score": 13283,
+    "prose_chunks": 108,
+    "block_name": null,
+    "out": "texts/05.txt"
+  },
+  {
+    "key": "06",
+    "title": "Woot! #06 \u2014 ZXMAS 2022",
+    "file": "WOOTTapeMagazineIssue6-ZXMAS2022Edition.tap",
+    "chars": 16959,
+    "score": 22954,
+    "prose_chunks": 96,
+    "block_name": null,
+    "out": "texts/06.txt"
+  },
+  {
+    "key": "07",
+    "title": "Woot! #07 \u2014 ZXMAS 2023",
+    "file": "WOOTTapeMagazineIssue7-ZXMAS2023Edition(48K).tap",
+    "chars": 16070,
+    "score": 20011,
+    "prose_chunks": 85,
+    "block_name": null,
+    "out": "texts/07.txt"
+  }
+]

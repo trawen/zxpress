@@ -1,0 +1,43 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "034",
+  "article_id": "04_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "Preview of the upcoming Outlet issue: HIFORM, PICPACKER, BROT fractal generator, Jean-Michel Jarre music, SAM Coupé programs, and regular features.",
+  "meta_description_ru": "Анонс следующего выпуска журнала Outlet: программы HIFORM, PICPACKER, фракталы BROT, музыка Жана-Мишеля Жарра, софт для SAM Coupé и другие новинки.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "софт",
+      "tag_alias": "software"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Next month's OUTLET is looking\nespecially good with HIFORM,a +3\n203K FORMAT;TRANCEPORT- terrific\nJean Michel Jarre music;CHECKOUT\nreviews a Disciple/+D snapshot\nfile compressor;there's clip art\nand even a mind-reading program!\n\nPICPACKER is a more efficient\nscreen compressor than the usual\ntype; SHAPES is a pattern-maker;\nBROT is a mandelbrot fractal art\nprogram; ANIMAL FORM is a high-\nspeed PLOT and DRAW and...\n\n    ...there's a scroll utility;\nECLECTIC - a golf-score program;\nLINESAVER which can save SINGLE\nlines of BASIC from a program;\nthere's a crossword to load into\nPROCROSS (OUTLET 31);OUTCLASS of\ncourse and all the usual regular\nfeatures.\n\nOh yes and don't forget- there's\nlikely to be some extra bits in\nADD-ENDERS!\n\nAs usual, I don't know which of\nthe above will transfer to SAM\nbut I've some great SAM-specific\nprograms ready and waiting to go\ninto OUTLET so you SAM users are\nin for a real treat!\n                       - Brian.\n",
+  "body_ru_plain": "В следующем месяце OUTLET обещает\nбыть особенно хорош: HIFORM —\nформатирование на 203K для +3;\nTRANCEPORT — потрясающая музыка\nJean Michel Jarre; в CHECKOUT —\nобзор компрессора snapshot-файлов\nдля Disciple/+D; будет клипарт и\nдаже программа для чтения мыслей!\n\nPICPACKER — более эффективный,\nчем обычно, экранный компрессор;\nSHAPES — генератор узоров;\nBROT — программа фрактальной\nграфики Мандельброта; ANIMAL\nFORM — скоростные PLOT и DRAW,\nа также...\n\n    ...утилита прокрутки;\nECLECTIC — подсчёт очков в гольфе;\nLINESAVER, умеющая сохранять\nОТДЕЛЬНЫЕ строки BASIC из\nпрограммы; кроссворд для загрузки\nв PROCROSS (OUTLET 31); само\nсобой, OUTCLASS и все привычные\nпостоянные рубрики.\n\nАх да, и не забудьте: скорее\nвсего, будет кое-что новенькое\nв ADD-ENDERS!\n\nКак обычно, я не знаю, что из\nэтого перекочует на SAM, но у\nменя уже готовы отличные чисто\nSAM-программы, ждущие своего\nвыхода в OUTLET, так что вас,\nпользователи SAM, ждёт настоящий\nпраздник!\n                       - Brian.\n",
+  "body_en": "## Lookahead\n\nNext month's OUTLET is looking especially good with HIFORM, a +3 203K FORMAT; TRANCEPORT - terrific Jean Michel Jarre music; CHECKOUT reviews a Disciple/+D snapshot file compressor; there's clip art and even a mind-reading program!\n\nPICPACKER is a more efficient screen compressor than the usual type; SHAPES is a pattern-maker; BROT is a mandelbrot fractal art program; ANIMAL FORM is a high-speed PLOT and DRAW and...\n\n...there's a scroll utility; ECLECTIC - a golf-score program; LINESAVER which can save SINGLE lines of BASIC from a program; there's a crossword to load into PROCROSS (OUTLET 31); OUTCLASS of course and all the usual regular features.\n\nOh yes and don't forget - there's likely to be some extra bits in ADD-ENDERS!\n\nAs usual, I don't know which of the above will transfer to SAM but I've some great SAM-specific programs ready and waiting to go into OUTLET so you SAM users are in for a real treat!\n\n— Brian.\n",
+  "body_ru": "## Анонс следующего номера\n\nВ следующем месяце OUTLET обещает быть особенно хорош: HIFORM — форматирование на 203K для +3; TRANCEPORT — потрясающая музыка Jean Michel Jarre; в CHECKOUT — обзор компрессора snapshot-файлов для Disciple/+D; будет клипарт и даже программа для чтения мыслей!\n\nPICPACKER — более эффективный, чем обычно, экранный компрессор; SHAPES — генератор узоров; BROT — программа фрактальной графики Мандельброта; ANIMAL FORM — скоростные PLOT и DRAW, а также...\n\n...утилита прокрутки; ECLECTIC — подсчёт очков в гольфе; LINESAVER, умеющая сохранять ОТДЕЛЬНЫЕ строки BASIC из программы; кроссворд для загрузки в PROCROSS (OUTLET 31); само собой, OUTCLASS и все привычные постоянные рубрики.\n\nАх да, и не забудьте: скорее всего, будет кое-что новенькое в ADD-ENDERS!\n\nКак обычно, я не знаю, что из этого перекочует на SAM, но у меня уже готовы отличные чисто SAM-программы, ждущие своего выхода в OUTLET, так что вас, пользователи SAM, ждёт настоящий праздник!\n\n— Brian.\n",
+  "text_type": 3
+}

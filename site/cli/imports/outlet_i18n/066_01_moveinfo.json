@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "066",
+  "article_id": "01_moveinfo",
+  "title_en": "MOVE 128 Instructions",
+  "title_ru": "Инструкция к MOVE 128",
+  "meta_description_en": "Instructions for MOVE 128, a high-speed disk copy utility for the Opus Discovery system on 128K ZX Spectrum by Paul Preston.",
+  "meta_description_ru": "Инструкция к утилите MOVE 128 для Opus Discovery и ZX Spectrum 128K от Пола Престона — быстрое копирование дисков через RAM-диск.",
+  "authors": [
+    "Paul Preston"
+  ],
+  "tags": [
+    {
+      "tag_name": "opus discovery",
+      "tag_alias": "opus-discovery"
+    },
+    {
+      "tag_name": "дисковые утилиты",
+      "tag_alias": "disk-utilities"
+    },
+    {
+      "tag_name": "ram disk",
+      "tag_alias": "ram-disk"
+    },
+    {
+      "tag_name": "копировщики",
+      "tag_alias": "copiers"
+    },
+    {
+      "tag_name": "128k",
+      "tag_alias": "128k"
+    }
+  ],
+  "category_ids": [
+    62,
+    73,
+    64
+  ],
+  "body_en_plain": "MOVE 128 Instructions\n\n\nINTRODUCTION\n\nThe next program is FREEWARE.The\nfiles that are needed for a\nworking copy are:-\n\nMOVE 128   - BASIC\n#set6      - CODE\n#a$17      - CODE\n\nThe program is an improved MOVE\ncommand for the Opus Discovery\nwith a RAM disk 6 (2.2 ROM),\n6116 RAM chip fitted and a 128K/\n+2 Spectrum. The program only\ncopies whole disks like the\nDiscovery MOVE command.\n\nTO USE\nThe program must be loaded in\n128K mode as it uses the 128K\nmemory. The program asks you for\ndrive to copy from and drive to\ncopy to. You can copy using the\nsame drive or copy to and from\ndifferent drives. e.g. 1 to 1, 2\nto 2, 2 to 1 and 1 to 2\n\nIf copying to and from the same\ndrive the program will prompt\nyou to change disks.\n\n\nHOW IT WORKS\nThe program creates a 112K RAM\ndisk 6 (#set6 CODE) with 8 byte\nsectors. To do this it needs the\n6116 RAM chip present otherwise\nyou can not alter the way the\nRAM disk is configured. Sectors\nare altered to 8 bytes long to\nminimise wastage. With 256\nsectors if you saved a file 257\nbytes long it would take up\n2*256 sectors thus wasting 255\nbytes. With 8 bytes sectors it\nwould only fill 33 sectors but\nonly waste 7 bytes.\n\nAfter selecting source and\ndestination drives the program\ncopies files to the RAM disk 6\nuntil no more will fit then\ncopies them to your destination\ndrive.\n\nWith a 112K RAM disk a standard\nfull 178K disk can be copied\nwith just 2 disk swaps compared\nwith the 6 required when using\nthe ROM MOVE command.If you have\na 80 track/double sided drive\nand format you disks to 720K.\nMOVE 128 will require 7 disk\nswaps; ROM MOVE will require 23\ndisk swaps to copy a full disk!\n\nNow I think you can see why this\nprogram was written.\n\n               Paul Preston.\n",
+  "body_ru_plain": "",
+  "body_en": "# MOVE 128 Instructions\n\n## INTRODUCTION\n\nThe next program is FREEWARE. The files that are needed for a working copy are:\n\n* MOVE 128   - BASIC\n* #set6      - CODE\n* #a$17      - CODE\n\nThe program is an improved MOVE command for the Opus Discovery with a RAM disk 6 (2.2 ROM), 6116 RAM chip fitted and a 128K/+2 Spectrum. The program only copies whole disks like the Discovery MOVE command.\n\n## TO USE\n\nThe program must be loaded in 128K mode as it uses the 128K memory. The program asks you for drive to copy from and drive to copy to. You can copy using the same drive or copy to and from different drives. e.g. 1 to 1, 2 to 2, 2 to 1 and 1 to 2.\n\nIf copying to and from the same drive the program will prompt you to change disks.\n\n## HOW IT WORKS\n\nThe program creates a 112K RAM disk 6 (`#set6` CODE) with 8 byte sectors. To do this it needs the 6116 RAM chip present otherwise you can not alter the way the RAM disk is configured. Sectors are altered to 8 bytes long to minimise wastage. With 256 sectors if you saved a file 257 bytes long it would take up 2*256 sectors thus wasting 255 bytes. With 8 bytes sectors it would only fill 33 sectors but only waste 7 bytes.\n\nAfter selecting source and destination drives the program copies files to the RAM disk 6 until no more will fit then copies them to your destination drive.\n\nWith a 112K RAM disk a standard full 178K disk can be copied with just 2 disk swaps compared with the 6 required when using the ROM MOVE command. If you have a 80 track/double sided drive and format you disks to 720K, MOVE 128 will require 7 disk swaps; ROM MOVE will require 23 disk swaps to copy a full disk!\n\nNow I think you can see why this program was written.\n\nPaul Preston.\n",
+  "body_ru": "# Инструкция к MOVE 128\n\n## ВВЕДЕНИЕ\n\nДанная программа является бесплатной (FREEWARE). Для её работы необходимы следующие файлы:\n\n* MOVE 128   - BASIC\n* #set6      - CODE\n* #a$17      - CODE\n\nПрограмма представляет собой улучшенную версию команды MOVE для контроллера Opus Discovery с RAM-диском 6 (ROM версии 2.2), установленным чипом памяти 6116 RAM и компьютером ZX Spectrum 128K/+2. Программа копирует только диски целиком, аналогично стандартной команде MOVE в Discovery.\n\n## ИСПОЛЬЗОВАНИЕ\n\nПрограмму необходимо запускать в режиме 128K, так как она задействует дополнительную память 128K. Программа спросит у вас исходный и целевой дисководы. Вы можете копировать на одном и том же дисководе или между разными приводами, например: с 1 на 1, с 2 на 2, с 2 на 1 или с 1 на 2.\n\nПри копировании с использованием одного дисковода программа будет выдавать запрос на смену дискеты.\n\n## КАК ЭТО РАБОТАЕТ\n\nПрограмма создаёт 112K RAM-диск 6 (`#set6` CODE) с размером сектора в 8 байт. Для этого обязательно наличие установленной микросхемы 6116 RAM, иначе перенастроить конфигурацию RAM-диска невозможно. Секторы уменьшены до 8 байт для минимизации потерь дискового пространства. При стандартном размере сектора в 256 байт сохранение файла длиной 257 байт заняло бы 2*256 секторов, впустую растратив 255 байт. При размере сектора 8 байт файл займет 33 сектора и потеряет всего 7 байт.\n\nПосле выбора исходного и целевого дисководов программа копирует файлы на RAM-диск 6 до его заполнения, а затем переносит их на целевой диск.\n\nБлагодаря RAM-диску объёмом 112K стандартная полная дискета на 178K может быть скопирована всего за 2 смены диска — по сравнению с 6 сменами, необходимыми для штатной команды MOVE из ROM. А если у вас установлен дисковод на 80 дорожек (двусторонний) с форматом дисков на 720K, MOVE 128 потребует всего 7 смен дискет, тогда как команда MOVE из ROM заставит переставлять диск 23 раза!\n\nДумаю, теперь понятно, почему была написана эта программа.\n\nPaul Preston.\n",
+  "text_type": 3
+}

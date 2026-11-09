@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "130",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Outlet #130 editorial (June 1998): floppy disks becoming scarce due to CD-ROMs, appeal for reader contributions, and highlights of the issue.",
+  "meta_description_ru": "Редакционная колонка выпуска Outlet #130 (июнь 1998): исчезновение дискет с рынка, призыв присылать письма и программы, анонс материалов номера.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "floppy disks",
+      "tag_alias": "floppy-disks"
+    },
+    {
+      "tag_name": "jean-michel jarre",
+      "tag_alias": "jean-michel-jarre"
+    },
+    {
+      "tag_name": "adventures",
+      "tag_alias": "adventures"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "J U N E ,  1 9 9 8\n\nAs CD ROMS become more and more\nin use it's very noticeable that\nnow even HD (high density) disks\nare become scarcer.You should be\nable to buy them in the shops\nbut bulk purchase adverts are\ndwindling fast!\n\nWe mention this now in case you\nmight want to get in a stock of\ndisks for your own use just in\ncase they do become difficult to\nbuy in a year or so.\n\nWe are getting to that time of\nthe year when less OUTLETTERS\nare sent in. This month is def-\ninitely a bit thin! Remember,\nOUTLET is YOUR magazine and is\nhere for you to share your tips\nand ideas and information - as\nwell as ask questions of course\n- so do please see if you can't\nwrite in about something and\nkeep the OUTLETTERS section more\nactive.\n\nOf course, we still urgently do\nneed your program contributions!\n\n\nThere's some nice Jean Michelle\nJarre music this month and for\ntext adventurers, a submarine to\nexplore!  Enjoy!\n\n                   Ron & Brian\n\n\n\n\n\n\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n Email: ron.cavers@virgin.net.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nJ U N E ,  1 9 9 8\n\nAs CD ROMS become more and more in use it's very noticeable that now even HD (high density) disks are become scarcer.You should be able to buy them in the shops but bulk purchase adverts are dwindling fast!\n\nWe mention this now in case you might want to get in a stock of disks for your own use just in case they do become difficult to buy in a year or so.\n\nWe are getting to that time of the year when less OUTLETTERS are sent in. This month is def- initely a bit thin! Remember, OUTLET is YOUR magazine and is here for you to share your tips and ideas and information - as well as ask questions of course - so do please see if you can't write in about something and keep the OUTLETTERS section more active.\n\nOf course, we still urgently do need your program contributions!\n\nThere's some nice Jean Michelle Jarre music this month and for text adventurers, a submarine to explore!  Enjoy!\n\nRon & Brian\n\nOUTLET is produced by Chris Oliver Ron & Brian Cavers 34 Saltersgate Drive Birstall, Leicester LE4 3FF\n\nEmail: ron.cavers@virgin.net.\n",
+  "body_ru": "## Editorial (late)\n\nИ Ю Н Ь , 1 9 9 8\n\nПо мере того как CD-ROM входят в обиход всё шире, становится весьма заметно, что даже HD-дискеты (высокой плотности) оказываются редкостью. В магазинах их пока ещё можно купить, но вот реклама оптовых закупок стремительно исчезает!\n\nМы упоминаем об этом сейчас на тот случай, если вы захотите запастись дискетами для личных нужд — просто на случай, если через год или около того их станет трудно достать.\n\nМы приближаемся к тому времени года, когда нам присылают меньше писем в раздел OUTLETTERS. Этот месяц определённо выдался бедноватым! Помните, OUTLET — это ВАШ журнал, и он существует для того, чтобы вы делились своими советами, идеями и информацией — а также, разумеется, задавали вопросы. Так что, пожалуйста, постарайтесь написать нам о чём-нибудь и поддержать активность рубрики OUTLETTERS.\n\nРазумеется, нам всё так же срочно требуются ваши программы!\n\nВ этом месяце вас ждёт приятная музыка Jean Michelle Jarre, а для любителей текстовых адвенчур — подводная лодка для исследований! Приятного времяпрепровождения!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n Email: ron.cavers@virgin.net.\n```\n",
+  "text_type": 3
+}

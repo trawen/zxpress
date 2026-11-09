@@ -1,0 +1,51 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "051",
+  "article_id": "01_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of Outlet issue #052: a Christmas adventure game, 128K carols, tape-to-disc transfer guide, BetaBasic on +3, Opus Discovery routines, and more.",
+  "meta_description_ru": "Анонс 52-го номера журнала Outlet: рождественская адвентюра, 128K-музыка, перенос софта с кассет на диск, BetaBasic на +3, Opus Discovery и другое.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus-3"
+    },
+    {
+      "tag_name": "opus discovery",
+      "tag_alias": "opus-discovery"
+    },
+    {
+      "tag_name": "betabasic",
+      "tag_alias": "betabasic"
+    },
+    {
+      "tag_name": "peter fry",
+      "tag_alias": "peter-fry"
+    },
+    {
+      "tag_name": "malcolm goodman",
+      "tag_alias": "malcolm-goodman"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "There'll be a festive Christmas\nissue next month with a full\ntext adventure to rescue Santa\nClaus and two lots of 128K music\ninvolving singa-alonga carols\nand other Christmas tunes.I want\nto hear everybody joining in. In\ntime for the new year is an ever\nlasting calendar too (well it'll\nprobably last about 16,000 years\nor something). There'll be the\nregulars like OUTLETTERS and\nOUTCLASS continues with Malcolm\nGoodman's beginners' course.\n                       more...\n\nOUTPUT has Part 2 of Peter Fry's\nexpert help on transferring\nsoftware from tape to disc. It's\nwritten with +3 discs in mind\nbut most of the principles apply\nto all drives.\n\nAnother item to do with getting\nsoftware on disc is a program\nand guide which lets you run\nBetaBasic on +3 disc. You need,\nof course, your own original\ncopy of BetaBasic on tape!\n\nThere's more clip art, a machine\ncode routine to provide the last\ndrive used for Opus Discovery\nusers and, of course, extra\ngoodies in ADD-ENDERS...\n\n                        - Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "There'll be a festive Christmas issue next month with a full text adventure to rescue Santa Claus and two lots of 128K music involving singa-alonga carols and other Christmas tunes. I want to hear everybody joining in. In time for the new year is an ever lasting calendar too (well it'll probably last about 16,000 years or something). There'll be the regulars like OUTLETTERS and OUTCLASS continues with Malcolm Goodman's beginners' course.\n\nOUTPUT has Part 2 of Peter Fry's expert help on transferring software from tape to disc. It's written with +3 discs in mind but most of the principles apply to all drives.\n\nAnother item to do with getting software on disc is a program and guide which lets you run BetaBasic on +3 disc. You need, of course, your own original copy of BetaBasic on tape!\n\nThere's more clip art, a machine code routine to provide the last drive used for Opus Discovery users and, of course, extra goodies in ADD-ENDERS...\n\n— Brian.\n",
+  "body_ru": "В следующем месяце выйдет праздничный рождественский выпуск с полноценной текстовой адвентюрой о спасении Санта-Клауса и двумя подборками 128K-музыки с рождественскими гимнами для совместного пения и другими праздничными мелодиями. Хочу, чтобы подпевали все! Как раз к Новому году подоспеет и вечный календарь (ну, его хватит примерно на 16 000 лет или около того). Будут и постоянные рубрики, такие как OUTLETTERS, а в OUTCLASS продолжится курс для начинающих от Malcolm Goodman.\n\nВ OUTPUT появится вторая часть экспертного руководства Peter Fry по переносу программ с кассет на диск. Она написана с прицелом на диски +3, но большинство принципов применимо к любым дисководам.\n\nЕщё один материал на тему переноса софта на диск — это программа и инструкция по запуску BetaBasic на дисках +3. Само собой, вам понадобится собственная оригинальная копия BetaBasic на кассете!\n\nТакже вас ждут новые порции клипартов, подпрограмма в машинных кодах для определения последнего использованного накопителя для пользователей Opus Discovery и, конечно же, дополнительные интересные вещи в ADD-ENDERS...\n\n— Brian.\n",
+  "text_type": 3
+}

@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "36",
+  "article_id": "05_MARIO.TX",
+  "source_lang": "de-AT",
+  "title_en": "Dr Mario",
+  "title_ru": "Dr Mario",
+  "meta_description_en": "Short description of Dr Mario, a Columns-style Nintendo puzzle conversion for the ZX Spectrum.",
+  "meta_description_ru": "Краткое описание игры Dr Mario для ZX Spectrum — порта головоломки от Nintendo в духе Columns.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "dr-mario",
+      "tag_alias": "dr-mario"
+    },
+    {
+      "tag_name": "puzzle",
+      "tag_alias": "puzzle"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    },
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "DR. ARIO ü\n----------------------------------------------------------------\nDR MARIO\n----------------------------------------------------------------\nUmsetzung von Nintendo, ein Columns-Klon. Versuchen sie\nalleBakterien zu vernichten indem sie diese mit\ngleichfarbigenPillen belegen so daß sich vier Felder mit\ngleicher Farbe über-oder nebeneinander befinden. Sind alle\nBakterien vernichtet,steigt man eine Stufe höher auf.\n----------------------------------------------------------------\nConversion of a Nintendo hit, a Columns clone. Try to kill\nallbacterias using the medicament bricks. If four bricks\nsamecolour are in the same row or column, they disappear. So\nmake arow with the bacterias as a brick and it will be killed\nand ifyou kill all of them, you will advance a level.\n----------------------------------------------------------------\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### DR MARIO\n\nA conversion of the Nintendo hit, a *Columns* clone. Try to destroy all the bacteria using medicament pills by lining them up so that four segments of the same color are arranged horizontally or vertically. If you make a line of four matching elements including a bacterium, it will be destroyed. Once all bacteria are eradicated, you advance to the next level.\n",
+  "body_ru": "### DR MARIO\n\nАдаптация хита от Nintendo, клон игры *Columns*. Постарайтесь уничтожить все бактерии с помощью пилюль-лекарств, складывая их так, чтобы четыре клетки одинакового цвета оказались рядом по вертикали или горизонтали. Составляя линию с участием бактерии соответствующего цвета, вы уничтожаете её. Когда все бактерии уничтожены, вы переходите на следующий уровень.\n",
+  "text_type": 3
+}

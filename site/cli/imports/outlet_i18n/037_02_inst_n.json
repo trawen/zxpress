@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "037",
+  "article_id": "02_inst_n",
+  "title_en": "Instructions: ALPHACAT",
+  "title_ru": "Инструкция: ALPHACAT",
+  "meta_description_en": "Instructions for ALPHACAT by Paul Preston: sorting Opus Discovery disk catalogues alphabetically and file management caveats under Opus DOS.",
+  "meta_description_ru": "Инструкция к утилите ALPHACAT от Пола Престона: сортировка каталогов дисков Opus Discovery по алфавиту и особенности работы с файлами в Opus DOS.",
+  "authors": [
+    "Paul Preston"
+  ],
+  "tags": [
+    {
+      "tag_name": "alphacat",
+      "tag_alias": "alphacat"
+    },
+    {
+      "tag_name": "opus discovery",
+      "tag_alias": "opus-discovery"
+    },
+    {
+      "tag_name": "opus dos",
+      "tag_alias": "opus-dos"
+    },
+    {
+      "tag_name": "дисковые утилиты",
+      "tag_alias": "disk-utilities"
+    },
+    {
+      "tag_name": "сортировка",
+      "tag_alias": "sorting"
+    }
+  ],
+  "category_ids": [
+    64,
+    73,
+    50
+  ],
+  "body_en_plain": "ALPHACAT by Paul Preston\n    ------------------------\n\nThe next program allows the user\nto sort Opus disk catalogues\nalphabetically. The program uses\na modified version of Dimsorter\nfrom Outlet 23. Dimsorter has\nbeen modified so sorting can\noccur at any character i.e. not\njust the first character of the\nelement.\n\nALPHACAT reads in the catalogue,\nsorts the array then writes out\nthe alphabetical catalogue to\ndisk.\n\nThe following options are avail-\nable :-\n\n D  alters  the  drive  ALPHACAT\n          operates on.\n\n C catalogues drive.\n\n R resets the Spectrum.\n\n S continue to sort menu.\n\n A alphabetical sort.\n\n N normal Opus ascending sector\n             order.\n\nFinally - a warning! Due to the\nrelatively primitive Opus DOS,\nAlphacatted disks can be loaded\nfrom and saved to but erasing is\nnot recommended because any\nsubsequent save gets confused,\nexpecting the catalogue in\nnormal ascending sector order.\nIt is suggested that before\nerasing files, the catalogue is\nconverted back using the Normal\noption on Sort.\n\n            Paul Preston.\n",
+  "body_ru_plain": "ALPHACAT: Paul Preston\n    ------------------------\n\nСледующая программа позволяет\nпользователю сортировать катало-\nги дисков Opus по алфавиту. В\nпрограмме используется модифици-\nрованная версия Dimsorter из\nOutlet 23. Dimsorter был дора-\nботан так, чтобы сортировка мог-\nла происходить по любому симво-\nлу, то есть не только по перво-\nму символу элемента.\n\nALPHACAT считывает каталог, сор-\nтирует массив, а затем записыва-\nет алфавитный каталог обратно\nна диск.\n\nДоступны следующие опции:-\n\n D  меняет дисковод, с которым\n          работает ALPHACAT.\n\n C оглавление диска (каталог).\n\n R сброс Spectrum.\n\n S перейти в меню сортировки.\n\n A сортировка по алфавиту.\n\n N обычный для Opus порядок по\n             возрастанию секторов.\n\nИ напоследок — предупреждение!\nИз-за относительной примитивнос-\nти Opus DOS с дисков, обработан-\nных ALPHACAT, можно загружать и\nсохранять на них, однако стирать\nфайлы не рекомендуется: любое по-\nследующее сохранение собьётся,\nтак как система ожидает каталог\nв нормальном порядке возрастания\nсекторов. Рекомендуется перед\nстиранием файлов вернуть каталог\nв исходный вид с помощью опции\nNormal в меню Sort.\n\n            Paul Preston.\n",
+  "body_en": "## ALPHACAT\n### by Paul Preston\n\nThe next program allows the user to sort Opus disk catalogues alphabetically. The program uses a modified version of Dimsorter from Outlet 23. Dimsorter has been modified so sorting can occur at any character i.e. not just the first character of the element.\n\nALPHACAT reads in the catalogue, sorts the array then writes out the alphabetical catalogue to disk.\n\nThe following options are available:\n\n* **D** — alters the drive ALPHACAT operates on.\n* **C** — catalogues drive.\n* **R** — resets the Spectrum.\n* **S** — continue to sort menu.\n* **A** — alphabetical sort.\n* **N** — normal Opus ascending sector order.\n\nFinally — a warning! Due to the relatively primitive Opus DOS, Alphacatted disks can be loaded from and saved to but erasing is not recommended because any subsequent save gets confused, expecting the catalogue in normal ascending sector order. It is suggested that before erasing files, the catalogue is converted back using the Normal option on Sort.\n\n*Paul Preston.*\n",
+  "body_ru": "## ALPHACAT: Paul Preston\n\nСледующая программа позволяет пользователю сортировать каталоги дисков Opus по алфавиту. В программе используется модифицированная версия Dimsorter из Outlet 23. Dimsorter был доработан так, чтобы сортировка могла происходить по любому символу, то есть не только по первому символу элемента.\n\nALPHACAT считывает каталог, сортирует массив, а затем записывает алфавитный каталог обратно на диск.\n\nДоступны следующие опции:\n\n* **D** — меняет дисковод, с которым работает ALPHACAT.\n* **C** — оглавление диска (каталог).\n* **R** — сброс Spectrum.\n* **S** — перейти в меню сортировки.\n* **A** — сортировка по алфавиту.\n* **N** — обычный для Opus порядок по возрастанию секторов.\n\nИ напоследок — предупреждение! Из-за относительной примитивности Opus DOS с дисков, обработанных ALPHACAT, можно загружать и сохранять на них, однако стирать файлы не рекомендуется: любое последующее сохранение собьётся, так как система ожидает каталог в нормальном порядке возрастания секторов. Рекомендуется перед стиранием файлов вернуть каталог в исходный вид с помощью опции Normal в меню Sort.\n\nPaul Preston.\n",
+  "text_type": 3
+}

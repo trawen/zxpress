@@ -1,0 +1,58 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "065",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Editorial (late)",
+  "meta_description_en": "Outlet #065 late editorial: updates on SAM Outlet discontinuation and Amstrad's historic email from Cliff Lawson granting permission to distribute ZX Spectrum ROMs with PC emulators.",
+  "meta_description_ru": "Редакционная колонка Outlet #065: закрытие версии для SAM Coupé и исторический ответ Amstrad (Клифф Лоусон) о разрешении на свободное распространение ZX Spectrum ROM в эмуляторах.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "amstrad",
+      "tag_alias": "amstrad"
+    },
+    {
+      "tag_name": "cliff lawson",
+      "tag_alias": "cliff-lawson"
+    },
+    {
+      "tag_name": "gerton lunter",
+      "tag_alias": "gerton-lunter"
+    },
+    {
+      "tag_name": "emulators",
+      "tag_alias": "emulators"
+    },
+    {
+      "tag_name": "zx spectrum rom",
+      "tag_alias": "zx-spectrum-rom"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "hobbit",
+      "tag_alias": "hobbit"
+    }
+  ],
+  "category_ids": [
+    123,
+    46,
+    113
+  ],
+  "body_en_plain": "J A N U A R Y ,   1 9 9 3\n\nFirstly,many thanks for all your\nChristmas and New Year greetings\nand cards as well as the moral\nsupport at this difficult time\nof ending the SAM OUTLET - far\ntoo many to publish - THANKS!\n\nThere is the possibility the SAM\nversion may be incorporated into\nanother SAM disc magazine so\nplease be patient until it's all\nsorted out and be assured that\nnobody should lose subscription\npayments etc. Anyone wanting to\nconvert to our Disciple/+D issue\nshould let us know as soon as\npossible.\n\nWe've had the understanding for\nsome time that Amstrad are not\nconcerned about copies being\nmade of the Spectrum ROM for use\nin emulators etc., because they\nno longer manufacture Spectrums.\nThis is particularly relevant to\na Spectrum emulator that runs on\na PC by Gerton Lunter.Gerton has\nwritten to Amstrad and here is\nthe reply (via Email)...\n\nDate: 17 Dec 92 10:37:39 EST\nFrom: \"Cliff Lawson [Amstrad]\"\n<75300.1517@CompuServe.COM>\n\nTo: \"INTERNET:MOUSE@FRW.RUG.NL\"\n<MOUSE@FRW.RUG.NL>\n\nSubject: Re: Spectrum 128 ROM\n\nIt was very good of you to actu-\nally write and ask me about\nthis. I know of several emulator\nprograms which distribute the\nAmstrad copyright code and no\none has ever asked us if they\ncan!!!\n\nThe fact is that at one point,\nwhen we were still selling Spec-\ntrums,we would have taken action\nbecause it was effectively\n\nrobbing us of a potential sale\nof a computer. But now that they\nare no longer made I am more\nthan happy for you to distribute\nthe code because it means that\nlots of people can still benefit\nfrom some of those great old\ngames - I don't think anyone has\never written a game as good as\nthe original\"Ant Attack\" [hear,\nhear! - BC] by Sandy White and\nManic Miner is also one of my\nfavourite computer games.\n\nSo, feel free to distribute our\ncode and the best of luck with\nyour software.\n\n\nCliff Lawson\n(for Amstrad)\n\nAlthough this reply is headed,\n\"Spectrum 128 ROM\" it is clear\nthat it includes both 48K and\n128K ROMs. We are pleased this\nhas now been clarified and it\nwill be very interesting to see\nif the Russian \"Hobbit\" computer\nwill now be produced!\n\n                    Ron & Brian\n             ______\n\n      OUTLET is produced by\n\n          Chris Oliver\n        Averil  Crowston\n       Ron & Brian Cavers\n\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nJ A N U A R Y ,   1 9 9 3\n\nFirstly,many thanks for all your Christmas and New Year greetings and cards as well as the moral support at this difficult time of ending the SAM OUTLET - far too many to publish - THANKS!\n\nThere is the possibility the SAM version may be incorporated into another SAM disc magazine so please be patient until it's all sorted out and be assured that nobody should lose subscription payments etc. Anyone wanting to convert to our Disciple/+D issue should let us know as soon as possible.\n\nWe've had the understanding for some time that Amstrad are not concerned about copies being made of the Spectrum ROM for use in emulators etc., because they no longer manufacture Spectrums. This is particularly relevant to a Spectrum emulator that runs on a PC by Gerton Lunter.Gerton has written to Amstrad and here is the reply (via Email)...\n\nDate: 17 Dec 92 10:37:39 EST From: \"Cliff Lawson [Amstrad]\" <75300.1517@CompuServe.COM>\n\nTo: \"INTERNET:MOUSE@FRW.RUG.NL\" <MOUSE@FRW.RUG.NL>\n\nSubject: Re: Spectrum 128 ROM\n\nIt was very good of you to actu- ally write and ask me about this. I know of several emulator programs which distribute the Amstrad copyright code and no one has ever asked us if they can!!!\n\nThe fact is that at one point, when we were still selling Spec- trums,we would have taken action because it was effectively\n\nrobbing us of a potential sale of a computer. But now that they are no longer made I am more than happy for you to distribute the code because it means that lots of people can still benefit from some of those great old games - I don't think anyone has ever written a game as good as the original\"Ant Attack\" [hear, hear! - BC] by Sandy White and Manic Miner is also one of my favourite computer games.\n\nSo, feel free to distribute our code and the best of luck with your software.\n\nCliff Lawson (for Amstrad)\n\nAlthough this reply is headed, \"Spectrum 128 ROM\" it is clear that it includes both 48K and 128K ROMs. We are pleased this has now been clarified and it will be very interesting to see if the Russian \"Hobbit\" computer will now be produced!\n\nRon & Brian\n\n```text\n             ______\n```\n\nOUTLET is produced by\n\nChris Oliver Averil  Crowston Ron & Brian Cavers\n\nCHEZRON   SOFTWARE 605, Loughborough Road Birstall,Leicester LE4 4NJ.\n",
+  "body_ru": "## Editorial (late)\n\nЯ Н В А Р Ь , 1 9 9 3\n\nПрежде всего, огромное спасибо за все ваши рождественские и новогодние поздравления и открытки, а также за моральную поддержку в это непростое время закрытия SAM OUTLET — их слишком много, чтобы опубликовать все. СПАСИБО!\n\nСуществует вероятность того, что версия для SAM может влиться в другой дисковый журнал для SAM, поэтому, пожалуйста, проявите терпение, пока все не уладится. Будьте уверены, никто не потеряет деньги за подписку и т. д. Все, кто желает переключиться на наш выпуск для Disciple/+D, должны сообщить нам об этом как можно скорее.\n\nУже некоторое время мы предполагали, что Amstrad не возражает против копирования Spectrum ROM для использования в эмуляторах и т. п., поскольку они больше не производят Spectrum. Это особенно актуально для эмулятора Spectrum для PC от Gerton Lunter. Gerton написал в Amstrad, и вот ответ (по электронной почте)...\n\n```text\nDate: 17 Dec 92 10:37:39 EST\nFrom: \"Cliff Lawson [Amstrad]\"\n<75300.1517@CompuServe.COM>\n\nTo: \"INTERNET:MOUSE@FRW.RUG.NL\"\n<MOUSE@FRW.RUG.NL>\n\nSubject: Re: Spectrum 128 ROM\n\nОчень мило с вашей стороны, что вы действительно написали и спросили меня об этом. Я знаю о нескольких программах-эмуляторах, которые распространяют код, защищенный авторским правом Amstrad, и никто никогда не спрашивал у нас разрешения!!!\n\nДело в том, что когда-то, когда мы еще продавали Spectrum, мы бы приняли меры, поскольку это фактически лишало нас потенциальной продажи компьютера. Но теперь, когда они больше не производятся, я более чем счастлив разрешить вам распространять этот код, потому что это означает, что множество людей все еще могут получать удовольствие от некоторых из тех великолепных старых игр — я не думаю, что кто-либо вообще создал игру столь же хорошую, как оригинальный «Ant Attack» [поддерживаю! — BC] от Sandy White, а Manic Miner — тоже одна из моих самых любимых компьютерных игр.\n\nТак что свободно распространяйте наш код и удачи вам с вашим программным обеспечением.\n\n\nCliff Lawson\n(от имени Amstrad)\n```\n\nХотя этот ответ озаглавлен как «Spectrum 128 ROM», совершенно очевидно, что он охватывает как 48K, так и 128K ROM. Мы рады, что теперь этот вопрос прояснился, и будет очень интересно посмотреть, пойдет ли теперь в производство российский компьютер «Hobbit»!\n\nRon & Brian\n\n---\n\nOUTLET выпускают:\n\nChris Oliver  \nAveril Crowston  \nRon & Brian Cavers  \n\nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "text_type": 3
+}

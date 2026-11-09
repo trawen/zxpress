@@ -1,0 +1,45 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "24",
+  "article_id": "09_ACTION.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Action 128K",
+  "title_ru": "Action 128K",
+  "meta_description_en": "A brief note on the Action 128K demo running on an original ZX Spectrum vs. Pentagon 128.",
+  "meta_description_ru": "Краткая заметка о демо Action 128K: проблемы совместимости на обычном ZX Spectrum и идеальная работа на Pentagon 128.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "pentagon-128",
+      "tag_alias": "pentagon-128"
+    },
+    {
+      "tag_name": "demos",
+      "tag_alias": "demos"
+    },
+    {
+      "tag_name": "ula-snow",
+      "tag_alias": "ula-snow"
+    }
+  ],
+  "category_ids": [
+    93,
+    94,
+    25
+  ],
+  "body_de_plain": "ACTIO ü - ACTION 128K - Wie ich schon in der SUC-Session\ngeschrieben habe, ist diesesDemo leider nicht komplett auf dem\nSpectrum lauffähig und auchdie Teile die laufen, bringen auf dem\nSpectrum ULA Schnee undkeine richtige Geschwindigkeit zustande,\naber stellen sie sichdas ganze mal flüssig und sauber vor, so\nsehe ich es immer aufdem Pentagon! M - I wrote about this Demo in\nSUC-Session, it is not runningcompletly on the Spectrum, and the\nrunable parts are slow andsuffered by the ULA-snow. Imagine this\nDemo with some moreparts, no ULA snow and at full speed, that is\nwhat I sß verytime on my\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**ACTION 128K**\n\nAs I already wrote in the SUC Session, this demo unfortunately does not run completely on the Spectrum, and even the parts that do run cause ULA snow on the Spectrum and fail to reach proper speed. But just imagine the whole thing running smoothly and cleanly — that is how I always see it on the Pentagon!\n",
+  "body_ru": "**ACTION 128K**\n\nКак я уже писал в рубрике SUC-Session, это демо, к сожалению, не работает на обычном Спектруме целиком, а те части, что всё-таки запускаются, страдают от «снега» ULA и не выдают нужной скорости. Но представьте себе всё это плавно и без помех — именно так я постоянно вижу его на Пентагоне!\n",
+  "text_type": 3
+}

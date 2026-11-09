@@ -1,0 +1,51 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "038",
+  "article_id": "07_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Планы на следующий номер",
+  "meta_description_en": "Lookahead for the next issue of Outlet magazine: utilities CSIZE, DEVAL, SAMBYTES, Chris Pile's Dr. Kode assembler, Solitaire game, and SAM Coupé content.",
+  "meta_description_ru": "Анонс материалов следующего номера журнала Outlet: утилиты CSIZE, DEVAL, SAMBYTES, ассемблер Dr. Kode от Криса Пайла, игра Solitaire и материалы для SAM Coupé.",
+  "authors": [
+    "Brian Gaff"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "sam coupé",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "chris pile",
+      "tag_alias": "chris-pile"
+    },
+    {
+      "tag_name": "dr. kode",
+      "tag_alias": "dr-kode"
+    },
+    {
+      "tag_name": "csize",
+      "tag_alias": "csize"
+    },
+    {
+      "tag_name": "sambytes",
+      "tag_alias": "sambytes"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Planned so far for next month is\nCSIZE - a new multiple-size text\nutility intended to emulate the\nCSIZE command on the SAM but\nthis is actually more versatile!\nThere's a a very good version of\nSOLITAIRE - the strategy board\ngame of patience. DEVAL removes\nthose VAL statements (used to\nsave memory but which sometimes\nslow down sections of a program\nunacceptably). We have more 128K\nmusic and an excellent cassette\ntape labeller.        more...\n\nSAMBYTES is a routine to load in\ncode from SAM to Spectrum (I use\nit now to transfer our readers'\nTasword Two letters from a SAM\nto a Spectrum for editing). For\nphilatelists there's a very good\nstamp collection database. There\nis another strategy game (rather\nunusual) for one or two players.\n\nOh yes and something v. special!\nIt's DR.KODE -a complete machine\ncode assembler/editor by the\nbrilliant Chris Pile! If you're\njust starting to learn machine\ncode and don't yet have an\nassembler, this is ESSENTIAL. If\nyou already have an assembler -\ncheck this one out - it's most\nmagnificent; it's very valuable\nand it's flippin' FREEWARE!!!!\n                        more...\n\nAs usual, I can't predict which\nwill convert to SAM but I have a\nseparate stockpile of SAM stuff\njust waiting for you including\nplenty more screens!\n\nThere will be all of the usual\nregulars of course, like BoB's\nOUTCLASS and I've still room for\nmore goodies so, see you next\nmonth!\n                       - Brian.\n",
+  "body_ru_plain": "В планах на следующий месяц:\nCSIZE — утилита для вывода\nтекста разных размеров, созданная\nдля эмуляции команды CSIZE с SAM,\nно на деле куда более гибкая!\nБудет отличная версия SOLITAIRE —\nнастольной стратегической игры\nв пасьянс. DEVAL убирает команды\nVAL (их используют для экономии\nпамяти, но порой они невыносимо\nзамедляют отдельные участки\nпрограммы). Ещё будет музыка\nдля 128K и отличный редактор\nвкладышей для кассет.   далее...\n\nSAMBYTES — процедура для загрузки\nкода с SAM на Spectrum (я сам\nиспользую её для переноса писем\nчитателей из Tasword Two с SAM\nна Spectrum для правки). Для\nфилателистов припасена база\nданных почтовых марок. Будет ещё\nодна (весьма необычная) стратегия\nдля одного или двух игроков.\n\nАх да, и кое-что ОЧЕНЬ особое!\nЭто DR.KODE — полноценный ассемб-\nлер/редактор машинного кода от\nвеликолепного Chris Pile! Если вы\nтолько начинаете учить машинный\nкод и у вас ещё нет ассемблера,\nто это ВЕЩЬ ПЕРВОЙ НЕОБХОДИМОСТИ.\nЕсли ассемблер уже есть — всё\nравно гляньте: штука потрясающая,\nкрайне ценная, и это, чёрт возьми,\nFREEWARE!!!!            далее...\n\nКак обычно, не могу предсказать,\nчто удастся перенести на SAM, но\nу меня есть отдельный запас добра\nдля SAM, который только и ждёт\nсвоего часа, включая кучу новых\nкартинок!\n\nКонечно же, будут и все привычные\nрубрики, вроде OUTCLASS от BoB, и\nу меня ещё полно места для разных\nвкусностей, так что до встречи\nв следующем месяце!\n                       - Brian.\n",
+  "body_en": "## Lookahead\n\nPlanned so far for next month is CSIZE - a new multiple-size text utility intended to emulate the CSIZE command on the SAM but this is actually more versatile! There's a very good version of SOLITAIRE - the strategy board game of patience. DEVAL removes those VAL statements (used to save memory but which sometimes slow down sections of a program unacceptably). We have more 128K music and an excellent cassette tape labeller.\n\nSAMBYTES is a routine to load in code from SAM to Spectrum (I use it now to transfer our readers' Tasword Two letters from a SAM to a Spectrum for editing). For philatelists there's a very good stamp collection database. There is another strategy game (rather unusual) for one or two players.\n\nOh yes and something v. special! It's DR.KODE - a complete machine code assembler/editor by the brilliant Chris Pile! If you're just starting to learn machine code and don't yet have an assembler, this is ESSENTIAL. If you already have an assembler - check this one out - it's most magnificent; it's very valuable and it's flippin' FREEWARE!!!!\n\nAs usual, I can't predict which will convert to SAM but I have a separate stockpile of SAM stuff just waiting for you including plenty more screens!\n\nThere will be all of the usual regulars of course, like BoB's OUTCLASS and I've still room for more goodies so, see you next month!\n\n*- Brian.*\n",
+  "body_ru": "## Планы на следующий номер\n\nВ планах на следующий месяц: CSIZE — утилита для вывода текста разных размеров, созданная для эмуляции команды CSIZE с SAM, но на деле куда более гибкая! Будет отличная версия SOLITAIRE — настольной стратегической игры в пасьянс. DEVAL убирает команды VAL (их используют для экономии памяти, но порой они невыносимо замедляют отдельные участки программы). Ещё будет музыка для 128K и отличный редактор вкладышей для кассет.\n\nSAMBYTES — процедура для загрузки кода с SAM на Spectrum (я сам использую её для переноса писем читателей из Tasword Two с SAM на Spectrum для правки). Для филателистов припасена база данных почтовых марок. Будет ещё одна (весьма необычная) стратегия для одного или двух игроков.\n\nАх да, и кое-что ОЧЕНЬ особое! Это DR.KODE — полноценный ассемблер/редактор машинного кода от великолепного Chris Pile! Если вы только начинаете учить машинный код и у вас ещё нет ассемблера, то это ВЕЩЬ ПЕРВОЙ НЕОБХОДИМОСТИ. Если ассемблер уже есть — всё равно гляньте: штука потрясающая, крайне ценная, и это, чёрт возьми, FREEWARE!!!!\n\nКак обычно, не могу предсказать, что удастся перенести на SAM, но у меня есть отдельный запас добра для SAM, который только и ждёт своего часа, включая кучу новых картинок!\n\nКонечно же, будут и все привычные рубрики, вроде OUTCLASS от BoB, и у меня ещё полно места для разных вкусностей, так что до встречи в следующем месяце!\n\n— Brian.\n",
+  "text_type": 3
+}

@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "092",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of Outlet issue #93: disc sector checker, 3D stereogram, ZX Spectrum +2 hardware fixes, Morse code trainer, and games.",
+  "meta_description_ru": "Анонс 93-го номера журнала Outlet: проверка секторов диска, 3D-стереограмма, устранение дефекта ZX Spectrum +2, тренажёр азбуки Морзе и игры.",
+  "authors": [
+    "Chris"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "announcement"
+    },
+    {
+      "tag_name": "стереограмма",
+      "tag_alias": "stereogram"
+    },
+    {
+      "tag_name": "zx spectrum +2",
+      "tag_alias": "zx-spectrum-plus-2"
+    },
+    {
+      "tag_name": "азбука морзе",
+      "tag_alias": "morse-code"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_en_plain": "There's another wonderful\nselection of items and articles\nplanned for next months OUTLET:\nfrom a disc sector checker to\n\"The Final Frontier\", the\nchallenge of deep Space and\nbeyond, where no man ....etc.\n\nThere is a rare article about\nwomen and computing which\nreminds me, there's a Bird-\nSpotter Puzzle, followed by some\nfine specimens of our feathered\nfriends in the OUTLET Aviary.\n\nAre you familiar with the craze\nthat's sweeping the World where\na 3D image is created when you\nlook 'through' a cleverly\ndesigned 2D picture?  Well,\nanyway, we've captured one for\nthe Spectrum! -- Magic!\n\n\nAnother hardware assembly fault\nhas come to light on some +2s,\nso there is a Drivechat to\ndescribe it and how to remedy\nthe fault.\n\nThere is an advanced morse code\npractice program which follows\non from the beginner's morse\ntrainer in last month's OUTLET.\nAfter that, how about a relaxing\ngame of tennis?\n\nAnd there's lots more:-\n\nA utility for the Multiface RAM-\ndisc, and another mind-blowing\ndemo,which pushes the Spectrum\nto its very limits, a crossword,\nand all your fascinating letters\n(always interesting, so keep on\nwriting in!), and plenty more,\nbut that will do for now, to\nwhet your appetite.\n\n                       Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "There's another wonderful selection of items and articles planned for next months OUTLET: from a disc sector checker to \"The Final Frontier\", the challenge of deep Space and beyond, where no man ....etc.\n\nThere is a rare article about women and computing which reminds me, there's a Bird-Spotter Puzzle, followed by some fine specimens of our feathered friends in the OUTLET Aviary.\n\nAre you familiar with the craze that's sweeping the World where a 3D image is created when you look 'through' a cleverly designed 2D picture? Well, anyway, we've captured one for the Spectrum! -- Magic!\n\nAnother hardware assembly fault has come to light on some +2s, so there is a Drivechat to describe it and how to remedy the fault.\n\nThere is an advanced morse code practice program which follows on from the beginner's morse trainer in last month's OUTLET. After that, how about a relaxing game of tennis?\n\nAnd there's lots more:-\n\nA utility for the Multiface RAM-disc, and another mind-blowing demo, which pushes the Spectrum to its very limits, a crossword, and all your fascinating letters (always interesting, so keep on writing in!), and plenty more, but that will do for now, to whet your appetite.\n\nChris.\n",
+  "body_ru": "Для следующего номера OUTLET запланирована ещё одна замечательная подборка материалов и статей: от утилиты проверки секторов диска до «The Final Frontier» — вызова глубин космоса и дальних рубежей, «куда не ступала нога...» и так далее.\n\nВас ждёт редкая статья о женщинах и компьютерах (что, кстати, напомнило мне о головоломке для любителей птиц Bird-Spotter Puzzle), а следом — прекрасные пернатые экземпляры в «Птичнике OUTLET».\n\nЗнакомо ли вам повальное увлечение, захватившее весь мир — когда трёхмерное изображение возникает, если смотреть «сквозь» хитроумный 2D-рисунок? Как бы то ни было, мы перенесли такую стереограмму на Spectrum! Настоящая магия!\n\nКроме того, на некоторых моделях +2 обнаружился очередной аппаратный дефект сборки, так что в рубрике Drivechat мы расскажем о проблеме и о том, как её устранить.\n\nТакже вы найдёте продвинутую программу для тренировки азбуки Морзе, продолжающую тренажёр для начинающих из прошлого номера OUTLET. А после этого — почему бы не сыграть расслабляющую партию в теннис?\n\nИ это далеко не всё:\n\nУтилита для электронного диска Multiface, очередное сногсшибательное демо, выжимающее из Спектрума максимум возможностей, кроссворд, ваши увлекательные письма (их всегда интересно читать, так что продолжайте писать!) и многое другое. Но для затравки пока хватит и этого.\n\nChris.\n",
+  "text_type": 3
+}

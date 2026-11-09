@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "065",
+  "article_id": "04_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем выпуске",
+  "meta_description_en": "A brief lookahead at the upcoming issue of Outlet magazine: utilities, games, and screen tools for ZX Spectrum.",
+  "meta_description_ru": "Краткий анонс следующего номера журнала Outlet: утилиты, игры и экранные инструменты для ZX Spectrum.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet-magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    },
+    {
+      "tag_name": "opus-discovery",
+      "tag_alias": "opus-discovery"
+    },
+    {
+      "tag_name": "disciples",
+      "tag_alias": "disciples"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "No need to travel all the way to\nDelphi to consult the Oracle:\nnext month's OUTLET brings the\nintriguing wisdom of the Muses\nright onto your own VDU screen!\nThere's loads of utilities for\nall systems:- a wonderful rolly-\npolly-scroller, a Snapshot POKER\nfor \"D\"ers, a MOVER for OPUS\nusers and a versatile, moveable\ncopy routine evolved from\nOUTLET's own generalised Dumper.\n\n                        more...\n\nYou'll all enjoy a nice simple\nlittle game and be fascinated by\na mathema-graphical sort of game\nand as usual, anything else we\ncan cram in.         Chris..\n",
+  "body_ru_plain": "",
+  "body_en": "No need to travel all the way to Delphi to consult the Oracle: next month's OUTLET brings the intriguing wisdom of the Muses right onto your own VDU screen!\n\nThere's loads of utilities for all systems: a wonderful rolly-polly-scroller, a Snapshot POKER for \"D\"ers, a MOVER for OPUS users and a versatile, moveable copy routine evolved from OUTLET's own generalised Dumper.\n\nYou'll all enjoy a nice simple little game and be fascinated by a mathema-graphical sort of game and as usual, anything else we can cram in.\n\nChris..\n",
+  "body_ru": "Незачем ехать в Дельфы за предсказанием Оракула: в следующем месяце OUTLET доставит интригующую мудрость Муз прямо на экран вашего монитора!\n\nВас ждёт целая россыпь утилит для самых разных систем: замечательный скроллер, Snapshot POKER для пользователей системы «+D» / «DISCiPLE», утилита MOVER для владельцев дисковода OPUS, а также гибкая перемещаемая процедура копирования, выросшая из собственного универсального дампера OUTLET.\n\nКроме того, всем наверняка понравится простая милая игра, а математико-графическая забава захватит ваше воображение — ну и, как водится, мы постараемся утрамбовать в номер всё, что только поместится.\n\nChris..\n",
+  "text_type": 3
+}

@@ -1,0 +1,47 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "008",
+  "article_id": "02_lookout",
+  "title_en": "Lookout",
+  "title_ru": "Lookout: новости и пресса",
+  "meta_description_en": "Brief ZX Spectrum news and an overview of computer magazines: Your Computer, Your Sinclair, Personal Computer World, and Computer Shopper.",
+  "meta_description_ru": "Краткие новости платформы ZX Spectrum и обзор свежей компьютерной прессы: Your Computer, Your Sinclair, Personal Computer World и Computer Shopper.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "lookout",
+      "tag_alias": "lookout"
+    },
+    {
+      "tag_name": "tas-spell",
+      "tag_alias": "tas-spell"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus-3"
+    },
+    {
+      "tag_name": "пресса",
+      "tag_alias": "press"
+    },
+    {
+      "tag_name": "computer shopper",
+      "tag_alias": "computer-shopper"
+    },
+    {
+      "tag_name": "your sinclair",
+      "tag_alias": "your-sinclair"
+    }
+  ],
+  "category_ids": [
+    124,
+    131,
+    121
+  ],
+  "body_en_plain": "The price of some computers is\nbeing affected by a shortage of\nmemory chips but the cost of the\nSpectrum remains unchanged. Yet\nanother high street shop:Curry's\nare reducing the number of their\nstores that sell computer goods.\nTas-Spell, at `19.95 from Tasman\nis the first spelling checker on\nthe Spectrum.For use with the +3\nonly with Tasword +3, it has got\na 70,000 word dictionary!Rumours\non Micronet that Amstrad are to\nproduce a new Spectrum, the \"+4\"\n\nwith enhanced graphics have been\ndenied. Rumours in OUTLET that\nSir Clive Sinclair has created a\nsilicon replica of Alan Sugar to\nmarket his Z88 have NOT yet been\ndenied. That is the end of the\nnews and now a look at whether\nto bother with YOUR COMPUTER,\nwith only a short PLUS D review;\nYOUR SINCLAIR,with just a screen\ncompressor on p.94 that works on\na similar principle to one that\nwe are producing for OUTLET soon\nor PERSONAL COMPUTER WORLD with\nnothing Spectrumish at all!CRASH\nand SINCLAIR USER were just too\nlate for us but the new magazine\ncalled COMPUTER SHOPPER has its\nown \"Sinclair Scene\"and although\nthis month it is mainly devoted\nto the QL,the magazine does look\n\nvery promising; containing large\namounts of sensible, readable\narticles on computers in general\nand is very good value for 78p.\n(Now, can I squeeze this file in\nthe 2K left on the Opus disc?).\n",
+  "body_ru_plain": "Дефицит чипов памяти повлиял на\nцены ряда компьютеров, однако же\nстоимость Spectrum не меняется.\nИ ещё одна торговая сеть,Curry's,\nсокращает число своих магазинов,\nторгующих компьютерами.Tas-Spell\nот Tasman за `19.95 — это первая\nпрограмма проверки правописания\nдля Spectrum. Работает только на\n+3 с Tasword +3 и имеет словарь\nна 70 000 слов! Слухи в Micronet\nо том, что Amstrad готовит новый\nSpectrum, «+4»,\n\nс улучшенной графикой, были\nопровергнуты. Слухи в OUTLET о\nтом, что Sir Clive Sinclair создал\nкремниевую копию Alan Sugar для\nпродаж своего Z88, пока ЕЩЁ НЕ\nопровергнуты. На этом новости\nзакончены, а теперь о том, стоит\nли смотреть YOUR COMPUTER с его\nкоротким обзором PLUS D; журнал\nYOUR SINCLAIR лишь со сжимателем\nэкранов на стр.94, работающим по\nтому же принципу, что и утилита,\nкоторую мы скоро выпустим для\nOUTLET, или PERSONAL COMPUTER\nWORLD, где про Spectrum нет ровно\nничего! CRASH и SINCLAIR USER\nвышли слишком поздно, но новый\nжурнал COMPUTER SHOPPER имеет свою\nколонку \"Sinclair Scene\", и хотя\nв этом номере речь в основном о\nQL, журнал смотрится\n\nочень многообещающе; в нём полно\nтолковых, интересных статей о\nкомпьютерах вообще, и за свои 78p\nон очень хорош. (А теперь — влезет\nли этот файл в оставшиеся 2K на\nдиске Opus?).\n",
+  "body_en": "The price of some computers is being affected by a shortage of memory chips but the cost of the Spectrum remains unchanged. Yet another high street shop: Curry's are reducing the number of their stores that sell computer goods. Tas-Spell, at £19.95 from Tasman is the first spelling checker on the Spectrum. For use with the +3 only with Tasword +3, it has got a 70,000 word dictionary! Rumours on Micronet that Amstrad are to produce a new Spectrum, the \"+4\" with enhanced graphics have been denied. Rumours in OUTLET that Sir Clive Sinclair has created a silicon replica of Alan Sugar to market his Z88 have NOT yet been denied.\n\nThat is the end of the news and now a look at whether to bother with YOUR COMPUTER, with only a short PLUS D review; YOUR SINCLAIR, with just a screen compressor on p.94 that works on a similar principle to one that we are producing for OUTLET soon or PERSONAL COMPUTER WORLD with nothing Spectrumish at all! CRASH and SINCLAIR USER were just too late for us but the new magazine called COMPUTER SHOPPER has its own \"Sinclair Scene\" and although this month it is mainly devoted to the QL, the magazine does look very promising; containing large amounts of sensible, readable articles on computers in general and is very good value for 78p.\n\n(Now, can I squeeze this file in the 2K left on the Opus disc?).\n",
+  "body_ru": "## Lookout: новости и пресса\n\nДефицит чипов памяти повлиял на цены ряда компьютеров, однако же стоимость Spectrum не меняется. И ещё одна торговая сеть, Curry's, сокращает число своих магазинов, торгующих компьютерами. Tas-Spell от Tasman за `19.95 — это первая программа проверки правописания для Spectrum. Работает только на +3 с Tasword +3 и имеет словарь на 70 000 слов! Слухи в Micronet о том, что Amstrad готовит новый Spectrum, «+4», с улучшенной графикой, были опровергнуты. Слухи в OUTLET о том, что Sir Clive Sinclair создал кремниевую копию Alan Sugar для продаж своего Z88, пока ЕЩЁ НЕ опровергнуты.\n\nНа этом новости закончены, а теперь о том, стоит ли смотреть YOUR COMPUTER с его коротким обзором PLUS D; журнал YOUR SINCLAIR лишь со сжимателем экранов на стр.94, работающим по тому же принципу, что и утилита, которую мы скоро выпустим для OUTLET, или PERSONAL COMPUTER WORLD, где про Spectrum нет ровно ничего! CRASH и SINCLAIR USER вышли слишком поздно, но новый журнал COMPUTER SHOPPER имеет свою колонку \"Sinclair Scene\", и хотя в этом номере речь в основном о QL, журнал смотрится очень многообещающе; в нём полно толковых, интересных статей о компьютерах вообще, и за свои 78p он очень хорош. (А теперь — влезет ли этот файл в оставшиеся 2K на диске Opus?).\n",
+  "text_type": 3
+}

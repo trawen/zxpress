@@ -1,0 +1,43 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "089",
+  "article_id": "06_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of Outlet Issue 90: Strauss intro tune, London Underground planner, traffic lights simulator, programming utilities, and a mega demo.",
+  "meta_description_ru": "Анонс 90-го номера журнала Outlet: музыка Штрауса, планировщик метро Лондона, симулятор светофора, утилиты для Бейсика и большое демо.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "announcement",
+      "tag_alias": "announcement"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    },
+    {
+      "tag_name": "music",
+      "tag_alias": "music"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Not least of the ejoyable items\nnext month, is the introduction\nmusic that accompanies the cover\npage.\n\n\nIncidentally, that intro music\nis provided each month by Paul\nOliver, and for February it is a\ndelightful piece by Strauss.\n\n\n                       more...\n\nAnother remarkable selection of\ndifferent applications for the\nSpectrum are included: one to\nkeep track of your weight fluct-\nuations, another which could be\nof use to model enthusiasts as\nit simulates the sequence of\nchanging traffic lights and\ncould be used to control LEDs\nvia a simple interface, and yet\nanother to plan your route\nthrough the maze of the London\nUnderground.\n\n\nNo need to go to the zoo - just\nsit back and see the OUTLET\nMenagerie of animal sketches!\n\n\n                    more!...\n\nAs usual, there will be useful\nprogramming utilities: a way of\nstoring DATA as bytes in a REM,\nwhich gives both space-saving\nand increased speed advantages;\na way of breaking into programs\nwhich have the BREAK key dis-\nabled; and a piece of code which\nwill tell you where the RETURN\nfrom a Basic line will take you.\n\nThe second half of the DRIVECHAT\nabout Direct-Video is included,\nand the issue is rounded off by\na nice large demo which, among\nother things, makes excellent\nuse of the UNISCROLL routines\nthat \"Vision\" (of The Mad-Guys)\nrevealed to us in Issue 80.\n                        Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Not least of the enjoyable items next month is the introduction music that accompanies the cover page.\n\nIncidentally, that intro music is provided each month by Paul Oliver, and for February it is a delightful piece by Strauss.\n\nAnother remarkable selection of different applications for the Spectrum are included: one to keep track of your weight fluctuations, another which could be of use to model enthusiasts as it simulates the sequence of changing traffic lights and could be used to control LEDs via a simple interface, and yet another to plan your route through the maze of the London Underground.\n\nNo need to go to the zoo — just sit back and see the OUTLET Menagerie of animal sketches!\n\nAs usual, there will be useful programming utilities: a way of storing DATA as bytes in a REM, which gives both space-saving and increased speed advantages; a way of breaking into programs which have the BREAK key disabled; and a piece of code which will tell you where the RETURN from a Basic line will take you.\n\nThe second half of the DRIVECHAT about Direct-Video is included, and the issue is rounded off by a nice large demo which, among other things, makes excellent use of the UNISCROLL routines that \"Vision\" (of The Mad-Guys) revealed to us in Issue 80.\n\nChris.\n",
+  "body_ru": "Одной из весьма приятных вещей в следующем месяце станет вступительная музыка, сопровождающая титульную страницу.\n\nК слову, эту вводную музыку для нас каждый месяц готовит Paul Oliver, и на февраль он выбрал восхитительное произведение Штрауса.\n\nТакже в номер включена замечательная подборка самых разных программ для Spectrum: одна поможет отслеживать колебания вашего веса; другая пригодится моделистам, поскольку она имитирует переключение сигналов светофора и через простой интерфейс может управлять светодиодами; а третья позволит спланировать маршрут по лабиринтам лондонского метро.\n\nВам даже не придется идти в зоопарк — просто устройтесь поудобнее и посмотрите зверинец графических зарисовок от OUTLET!\n\nКак обычно, вас ждут полезные утилиты для программирования: метод хранения DATA в виде байтов внутри строки REM, что дает экономию памяти и выигрыш в скорости; способ прерывания программ, в которых заблокирована клавиша BREAK; а также небольшая подпрограмма, показывающая, куда именно вернет выполнение команда RETURN из строки Бейсика.\n\nКроме того, вы найдете вторую часть беседы DRIVECHAT о Direct-Video, а завершит номер отличное объемное демо, в котором помимо прочего прекрасно используются процедуры скроллинга UNISCROLL, предоставленные автором \"Vision\" (из The Mad-Guys) в 80-м номере.\n\nChris.\n",
+  "text_type": 3
+}

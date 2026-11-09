@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "122",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A preview of Outlet #123 featuring an astronomy program, Peanuts animation, disk and BASIC utilities, a dictator simulation game, and trivia.",
+  "meta_description_ru": "Анонс журнала Outlet #123: астрономическая программа, анимация Peanuts, утилиты для диска и Бейсика, игра про диктатора и викторина.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "astronomy",
+      "tag_alias": "astronomy"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Heavens above! Yes, literally:\nNext month's OUTLET contains a\nsuper astronomy program. You can\nsee what the night-sky would\nlook like from anywhere in the\nworld, at any time, on any date.\nYou can plot the constellations,\nfind the positions of major and\nminor planets, and see an anim-\nated display of the planets mov-\ning in relation to the Sun and\neach other.\n\n\n\nAnd talking of animations:--\n\"Peanuts\" fans will just love\nthe antics of \"Rerun\"!\n\n\nAs usual there are some useful\nutilities: one to space out a\nBasic listing to make it easier\nto follow; another enables you\nto organise a disc directory;\nand a modification to improve\nthe Word Master Word Processor.\n\n\nBecome a dictator for as long as\nyou can survive. You can be a\ngood ruler trying to keep all\nthe factions contented, or a\nrather naughty one who syphons\noff national funds to your Swiss\nbank account!!\n\n\nFinally, how did the girl\nHeloisa Pinheira become famous?\nFind out in next month's OUTLET.\n\n                     Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Heavens above! Yes, literally: Next month's OUTLET contains a super astronomy program. You can see what the night-sky would look like from anywhere in the world, at any time, on any date. You can plot the constellations, find the positions of major and minor planets, and see an animated display of the planets moving in relation to the Sun and each other.\n\nAnd talking of animations:-- \"Peanuts\" fans will just love the antics of \"Rerun\"!\n\nAs usual there are some useful utilities: one to space out a Basic listing to make it easier to follow; another enables you to organise a disc directory; and a modification to improve the Word Master Word Processor.\n\nBecome a dictator for as long as you can survive. You can be a good ruler trying to keep all the factions contented, or a rather naughty one who syphons off national funds to your Swiss bank account!!\n\nFinally, how did the girl Heloisa Pinheira become famous? Find out in next month's OUTLET.\n\nChris.\n",
+  "body_ru": "Небеса над нами! Да, буквально: в следующем выпуске OUTLET вас ждёт потрясающая астрономическая программа. Вы сможете увидеть, как выглядит ночное небо из любой точки мира, в любое время и в любую дату. Можно выводить на экран созвездия, определять координаты больших и малых планет и наблюдать анимацию движения планет относительно Солнца и друг друга.\n\nИ кстати об анимации: поклонники комикса «Peanuts» будут в восторге от проделок «Rerun»!\n\nКак обычно, припасены и полезные утилиты: одна расставляет пробелы и форматирует листинг на Бейсике для удобства чтения; другая помогает навести порядок в каталоге диска; а также модификация, улучшающая текстовый процессор Word Master.\n\nПопробуйте стать диктатором — на столько, сколько сможете продержаться у власти. Вы можете быть справедливым правителем, пытающимся угодить всем фракциям, или коварным тираном, выводящим государственную казну на свой счёт в швейцарском банке!!\n\nНаконец, как прославилась девушка по имени Heloisa Pinheira? Узнайте в следующем номере OUTLET.\n\nChris.\n",
+  "text_type": 3
+}

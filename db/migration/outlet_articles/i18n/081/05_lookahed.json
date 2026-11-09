@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "081",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of what's coming in the June issue of Outlet: Tornado disassembler, fast disk loader, file converter, Garry Rowland's font routine, and more.",
+  "meta_description_ru": "Анонс июньского номера журнала Outlet: дизассемблер к Tornado, быстрый загрузчик для диска, конвертер текстовых файлов, статья Garry Rowland и другое.",
+  "authors": [
+    "Chris Jenkins"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "tornado",
+      "tag_alias": "tornado"
+    },
+    {
+      "tag_name": "garry rowland",
+      "tag_alias": "garry-rowland"
+    },
+    {
+      "tag_name": "tasword",
+      "tag_alias": "tasword"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Plenty to look forward to in the\nJune issue:-  The superb Dis-\nassembler which compliments the\nTORNADO Assembler in this issue,\na new disc quick-loader program,\na mini Art Gallery, a File\nchanger wich converts ASCII\nfiles between about seven diff-\nerent formats including Tasword\n2, Tasword 3, Wordmaster and PC!\n\nmore...\n\nGarry Rowland does an OUTCLASS\non how to use his latest PFN\nfont-print system, and there's\nsome lovely classical music. We\nhave lots of amazing demos in\nstock so there will be at least\none of these (maybe two if there\nis space!), and lots more.\n\n                          Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Plenty to look forward to in the June issue:— The superb Disassembler which compliments the TORNADO Assembler in this issue, a new disc quick-loader program, a mini Art Gallery, a File changer which converts ASCII files between about seven different formats including Tasword 2, Tasword 3, Wordmaster and PC!\n\nmore...\n\nGarry Rowland does an OUTCLASS on how to use his latest PFN font-print system, and there's some lovely classical music. We have lots of amazing demos in stock so there will be at least one of these (maybe two if there is space!), and lots more.\n\nChris.\n",
+  "body_ru": "В июньском выпуске вас ожидает много интересного: великолепный дизассемблер, дополняющий ассемблер TORNADO из текущего номера; новый быстрый загрузчик с диска; мини-галерея графики; утилита смены форматов, конвертирующая ASCII-файлы между примерно семью различными форматами, включая Tasword 2, Tasword 3, Wordmaster и PC!\n\nИ ещё...\n\nGarry Rowland в рубрике OUTCLASS расскажет, как использовать его новейшую систему печати шрифтов PFN, а также будет прекрасная классическая музыка. У нас в запасе скопилось множество потрясающих демо, так что хотя бы одно из них обязательно появится в номере (а может и два, если позволит место!), и многое другое.\n\nChris.\n",
+  "text_type": 3
+}

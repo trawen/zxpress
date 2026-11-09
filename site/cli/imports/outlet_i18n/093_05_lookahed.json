@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "093",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "A preview of the upcoming issue of Outlet: screen compressors, utilities, keyboard repair, puzzles, music, and an impressive demo.",
+  "meta_description_ru": "Анонс следующего выпуска журнала Outlet: экранный компрессор, утилиты, ремонт клавиатуры Spectrum, головоломки, музыка и впечатляющее демо.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron",
+      "tag_alias": "chezron"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    },
+    {
+      "tag_name": "hardware",
+      "tag_alias": "hardware"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "There are several useful utility\nprograms waiting to appear in\nnext month's OUTLET. The most\nstriking (to me) is a very effi-\ncient screen compressor followed\nby a very attractive animation\nto demonstrate the compressor's\ncapabilities. Another utility\ntransforms a Basic listing into\na Tasword file, there's a hyper-\nspeed tapeloader and a different\nsort of message scroller.\n\n                         more...\n\nTo keep your brain active, there\nis a numerical puzzle and an\n\"XORcise\" in Binary functions.\n\nOn the practical side, there is\na description of a Spectrum\nkeyboard design-fault with fully\ndetailed instructions on how to\ncure it.\n\nThere is some pleasant classical\nmusic and some er.. well...\n\"unusual\" sort of music; some\nexcellent quality clip-art and\nall rounded off with one of the\nmost impressive demos yet, which\nhas the Spectrum doing all sorts\nof things which should not be\npossible!\n                        Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "There are several useful utility programs waiting to appear in next month's OUTLET. The most striking (to me) is a very efficient screen compressor followed by a very attractive animation to demonstrate the compressor's capabilities. Another utility transforms a Basic listing into a Tasword file, there's a hyperspeed tapeloader and a different sort of message scroller.\n\nTo keep your brain active, there is a numerical puzzle and an \"XORcise\" in Binary functions.\n\nOn the practical side, there is a description of a Spectrum keyboard design-fault with fully detailed instructions on how to cure it.\n\nThere is some pleasant classical music and some er.. well... \"unusual\" sort of music; some excellent quality clip-art and all rounded off with one of the most impressive demos yet, which has the Spectrum doing all sorts of things which should not be possible!\n\nChris.\n",
+  "body_ru": "В следующем номере OUTLET вас ждет несколько полезных утилит. Самая примечательная (на мой взгляд) — это высокоэффективный экранный компрессор с очень привлекательной анимацией, демонстрирующей его возможности. Другая утилита преобразует листинг на Бейсике в файл для Tasword; кроме того, есть сверхбыстрый загрузчик с ленты и необычный вариант скроллера сообщений.\n\nЧтобы размять мозги, приготовлена числовая головоломка и «XORcise» — упражнения с двоичными операциями.\n\nЧто касается аппаратной части, вас ждет описание конструктивного дефекта клавиатуры Спектрума с подробнейшими инструкциями по его устранению.\n\nТакже в номере будет приятная классическая музыка и кое-какая... гм... весьма «необычная» музыка; подборка клипартов отличного качества, а венчает все это одно из самых впечатляющих демо, заставляющее Spectrum вытворять вещи, которые считались попросту невозможными!\n\nChris.\n",
+  "text_type": 3
+}

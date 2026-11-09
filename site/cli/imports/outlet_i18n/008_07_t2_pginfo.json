@@ -1,0 +1,48 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "008",
+  "article_id": "07_t2_pginfo",
+  "title_en": "Loading Tasword 2 Files into Pagemaker",
+  "title_ru": "Загрузка файлов Tasword 2 в Pagemaker",
+  "meta_description_en": "Guide to using the T2-PG utility to import Tasword 2 text files into Pagemaker from The Artist II package.",
+  "meta_description_ru": "Руководство по использованию утилиты T2-PG для импорта файлов текстового редактора Tasword 2 в программу Pagemaker (пакет The Artist II).",
+  "authors": [
+    "Frank Gilbert"
+  ],
+  "tags": [
+    {
+      "tag_name": "tasword 2",
+      "tag_alias": "tasword-2"
+    },
+    {
+      "tag_name": "pagemaker",
+      "tag_alias": "pagemaker"
+    },
+    {
+      "tag_name": "the artist ii",
+      "tag_alias": "the-artist-ii"
+    },
+    {
+      "tag_name": "t2-pg",
+      "tag_alias": "t2-pg"
+    },
+    {
+      "tag_name": "конвертер",
+      "tag_alias": "converter"
+    },
+    {
+      "tag_name": "текст",
+      "tag_alias": "text"
+    }
+  ],
+  "category_ids": [
+    64,
+    74
+  ],
+  "body_en_plain": "LOADING TASWORD 2 FILES INTO\n  PAGEMAKER   -  Frank Gilbert\n  ----------------------------\nThe next item after this is a\nshort program [called \"T2-PG\"]\nwhich will be useful to all\nArtist II users who do not own\nTHE WRITER.It will enable you to\nimport Tasword 2 files, (maximum\n96 lines, which is all that\nPagemaker can handle at one\ntime), to the Pagemaker program\nincluded with Artist II.\n\nOn-screen instructions ask you\nto insert your Tasword file disk\n/cartridge. You can then choose\nwhether to translate another\nfile or LOAD Pagemaker.\n\nOnce Pagemaker is loaded, select\noption 1 (Load Writer file) from\nthe main menu, place the disk/\ncartridge containing the\ntranslated file into the drive\nand load it. Pagemaker will then\ntreat it exactly like a Writer\nfile, enabling you to mix text\nand pictures freely on the same\npage.\n\nHints and tips:\n\n1. Delete all graphic characters\n   from your Tasword 2 file\n\n\n   before translation. They just\n   leave spaces in Pagemaker\n   text.\n\n2. If your are using any of the\n   alternative fonts available\n   from Pagemaker, include the\n   control codes(/0, /1, /2, /3,\n   /4) in your Tasword 2 file\n   before translation. Also, as\n   Pagemaker handles and prints\n   files in blocks of 24 lines,\n   repeat the font control code\n   before each block of 24 lines\n   (the manual fails to warn you\n   about the need to do this).\n\n3. Text is not ASCII  coded.\n   This makes little difference,\n   except that Tasword 2 treats\n   the hash sign as a ` sign\n\n   when printed.Pagemaker treats\n   it as a hash sign. So, if you\n   want a ` sign, type a ` sign!\n\n        That's about it!\n\n         - Fran\n",
+  "body_ru_plain": "ЗАГРУЗКА ФАЙЛОВ TASWORD 2 В\n  PAGEMAKER   -  Frank Gilbert\n  ----------------------------\nСледующим пунктом после этого\nидёт небольшая программа [под\nназванием \"T2-PG\"], которая\nпригодится всем пользователям\nArtist II, у кого нет пакета\nTHE WRITER. Она позволит вам\nимпортировать файлы Tasword 2\n(максимум 96 строк — это всё,\nчто Pagemaker способен принять\nза один раз) в Pagemaker,\nвходящий в комплект Artist II.\n\nИнструкции на экране предложат\nвам вставить диск/картридж с\nфайлом Tasword. Затем можно\nвыбрать: преобразовать ещё\nодин файл или загрузить (LOAD)\nPagemaker.\n\nКогда Pagemaker загрузится,\nвыберите в главном меню\nпункт 1 (Load Writer file),\nвставьте диск/картридж со\nсконвертированным файлом в\nдисковод и загрузите его.\nPagemaker будет работать с ним\nточно так же, как с файлом\nWriter, позволяя свободно\nсовмещать текст и картинки на\nодной странице.\n\nСоветы и подсказки:\n\n1. Удалите все графические\n   символы из файла Tasword 2\n\n\n   перед конвертацией. В\n   тексте Pagemaker от них\n   останутся лишь пробелы.\n\n2. Если вы используете какой-то\n   из альтернативных шрифтов\n   Pagemaker, вставьте коды\n   управления (/0, /1, /2, /3,\n   /4) в файл Tasword 2 перед\n   конвертацией. Кроме того,\n   поскольку Pagemaker обраба-\n   тывает и печатает файлы\n   блоками по 24 строки, повто-\n   ряйте код шрифта перед каж-\n   дым блоком из 24 строк\n   (в руководстве о такой\n   необходимости не сказано).\n\n3. Текст закодирован не в ASCII.\n   Разница невелика, за исключе-\n   нием того, что Tasword 2 при\n   печати воспринимает решётку\n   как знак `\n\n   Pagemaker считает её решёт-\n   кой. Так что если вам нужен\n   знак `, вводите знак `!\n\n        Вот, пожалуй, и всё!\n\n         - Fran\n",
+  "body_en": "## Loading Tasword 2 Files Into Pagemaker\n### Frank Gilbert\n\nThe next item after this is a short program [called \"T2-PG\"] which will be useful to all Artist II users who do not own THE WRITER. It will enable you to import Tasword 2 files, (maximum 96 lines, which is all that Pagemaker can handle at one time), to the Pagemaker program included with Artist II.\n\nOn-screen instructions ask you to insert your Tasword file disk/cartridge. You can then choose whether to translate another file or LOAD Pagemaker.\n\nOnce Pagemaker is loaded, select option 1 (Load Writer file) from the main menu, place the disk/cartridge containing the translated file into the drive and load it. Pagemaker will then treat it exactly like a Writer file, enabling you to mix text and pictures freely on the same page.\n\n### Hints and tips:\n\n1. Delete all graphic characters from your Tasword 2 file before translation. They just leave spaces in Pagemaker text.\n\n2. If your are using any of the alternative fonts available from Pagemaker, include the control codes (/0, /1, /2, /3, /4) in your Tasword 2 file before translation. Also, as Pagemaker handles and prints files in blocks of 24 lines, repeat the font control code before each block of 24 lines (the manual fails to warn you about the need to do this).\n\n3. Text is not ASCII coded. This makes little difference, except that Tasword 2 treats the hash sign as a \\` sign when printed. Pagemaker treats it as a hash sign. So, if you want a \\` sign, type a \\` sign!\n\nThat's about it!\n\n— Fran\n",
+  "body_ru": "## Загрузка файлов Tasword 2 в Pagemaker\n\n**Frank Gilbert**\n\nСледующим пунктом после этого идёт небольшая программа [под названием \"T2-PG\"], которая пригодится всем пользователям Artist II, у кого нет пакета THE WRITER. Она позволит вам импортировать файлы Tasword 2 (максимум 96 строк — это всё, что Pagemaker способен принять за один раз) в Pagemaker, входящий в комплект Artist II.\n\nИнструкции на экране предложат вам вставить диск/картридж с файлом Tasword. Затем можно выбрать: преобразовать ещё один файл или загрузить (LOAD) Pagemaker.\n\nКогда Pagemaker загрузится, выберите в главном меню пункт 1 (Load Writer file), вставьте диск/картридж со сконвертированным файлом в дисковод и загрузите его. Pagemaker будет работать с ним точно так же, как с файлом Writer, позволяя свободно совмещать текст и картинки на одной странице.\n\n### Советы и подсказки:\n\n1. Удалите все графические символы из файла Tasword 2 перед конвертацией. В тексте Pagemaker от них останутся лишь пробелы.\n\n2. Если вы используете какой-то из альтернативных шрифтов Pagemaker, вставьте коды управления (/0, /1, /2, /3, /4) в файл Tasword 2 перед конвертацией. Кроме того, поскольку Pagemaker обрабатывает и печатает файлы блоками по 24 строки, повторяйте код шрифта перед каждым блоком из 24 строк (в руководстве о такой необходимости не сказано).\n\n3. Текст закодирован не в ASCII. Разница невелика, за исключением того, что Tasword 2 при печати воспринимает решётку как знак `, а Pagemaker считает её решёткой. Так что если вам нужен знак `, вводите знак `!\n\nВот, пожалуй, и всё!\n\n— Frank\n",
+  "text_type": 3
+}

@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "139",
+  "article_id": "09_addender",
+  "title_en": "Addender",
+  "title_ru": "Дополнение",
+  "meta_description_en": "Introduction to the Add-Enders section in Outlet magazine and instructions for using the PRNTINIT BASIC subroutine by Brian Cavers for printer setup.",
+  "meta_description_ru": "Анонс рубрики Add-Enders в журнале Outlet и описание подпрограммы PRNTINIT от Brian Cavers для настройки принтера в программах на Бейсике.",
+  "authors": [
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet-magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    },
+    {
+      "tag_name": "printer",
+      "tag_alias": "printer"
+    },
+    {
+      "tag_name": "prntinit",
+      "tag_alias": "prntinit"
+    },
+    {
+      "tag_name": "subroutine",
+      "tag_alias": "subroutine"
+    }
+  ],
+  "category_ids": [
+    30,
+    57,
+    123
+  ],
+  "body_en_plain": "Some items contributed to OUTLET\nhave not yet been included for a\nvariety of reasons. It's a shame\nto leave them on the shelf so,if\nappropriate, they will be added\nto this ADD-ENDERS area of the\nmagazine (not microdrive or Opus\nas there is not enough room).\n\nThe material covers a wide range\nof quality and program types:\nutilities, screens, character\nsets and text articles and SOME\nof it may be unedited, untested,\nnot working fully or properly;\nin need of conversion for your\n\nsystem's syntax or printer etc.;\nwithout full instructions or\nwhatever. Readers will have to\nsift through to see if there is\nanything of interest they can\nmake use of and discard the\nrest. Not everything will appear\non all versions necessarily.\n\nSome Add-Enders may be linked to\nOUTLET in the normal way. These\nwill usually precede this text\nfile. Any items that follow this\narticle will possibly need to be\nLOADed manually or may not auto-\nrun when loaded.\n\nThere may be some info on the\nfollowing pages...\n\nFollowing on from the suggestion\nin a recent OUTLET to reproduce\nsome of the useful routines from\nearlier issues of OUTLET for the\nbenefit of newer subscribers,\nhere is a subroutine written by\nBrian Cavers, which we merge\ninto OUTLET programs that need\nyour printer set up to printout\ntext.\n\n\nThe subroutine file is named\n'PRNTINIT'. To use it in your\nown program, first define the\ntwo variables 'SET' and 'ZX' at\nthe start of your program with\nthe statements:\n\n     LET SET=0 : LET ZX=0\n\n\nMerge PRNTINIT into your program\nand add in the command:\n\n           GOSUB 9800\n\n ...just before the first LPRINT\nin your program, and resave the\nprogram.\n\n\nWhen you run your program, you\nwill see the familiar Menu bar\noffering a choice of printer\ninterface, and when the choice\nhas been made, variable SET will\nbe given a non-zero value so\nthat an immediate return is made\nthe next time(s) the subroutine\nis called, so the set-up is\nperformed only once.\n\n\nAny suggestions of programs that\nyou would like to see again or\nconsider to be of special value\nto other readers are always\nwelcome, and we will include one\nas an ADDENDER each month if\nspace permits. Be warned however\nthat most of those magical demos\nwill be much too large for\ninclusion!\n\n          ============\n\nPress \"N\" now to load PRNTINIT\n\n\nNote that you will probably get\nan error report when the program\nis loaded from OUTLET, as it is\nnot Auto-run..\n",
+  "body_ru_plain": "",
+  "body_en": "## Addender\n\nSome items contributed to OUTLET have not yet been included for a variety of reasons. It's a shame to leave them on the shelf so,if appropriate, they will be added to this ADD-ENDERS area of the magazine (not microdrive or Opus as there is not enough room).\n\nThe material covers a wide range of quality and program types: utilities, screens, character sets and text articles and SOME of it may be unedited, untested, not working fully or properly; in need of conversion for your\n\nsystem's syntax or printer etc.; without full instructions or whatever. Readers will have to sift through to see if there is anything of interest they can make use of and discard the rest. Not everything will appear on all versions necessarily.\n\nSome Add-Enders may be linked to OUTLET in the normal way. These will usually precede this text file. Any items that follow this article will possibly need to be LOADed manually or may not auto- run when loaded.\n\nThere may be some info on the following pages...\n\nFollowing on from the suggestion in a recent OUTLET to reproduce some of the useful routines from earlier issues of OUTLET for the benefit of newer subscribers, here is a subroutine written by Brian Cavers, which we merge into OUTLET programs that need your printer set up to printout text.\n\nThe subroutine file is named 'PRNTINIT'. To use it in your own program, first define the two variables 'SET' and 'ZX' at the start of your program with the statements:\n\nLET SET=0 : LET ZX=0\n\nMerge PRNTINIT into your program and add in the command:\n\nGOSUB 9800\n\n...just before the first LPRINT in your program, and resave the program.\n\nWhen you run your program, you will see the familiar Menu bar offering a choice of printer interface, and when the choice has been made, variable SET will be given a non-zero value so that an immediate return is made the next time(s) the subroutine is called, so the set-up is performed only once.\n\nAny suggestions of programs that you would like to see again or consider to be of special value to other readers are always welcome, and we will include one as an ADDENDER each month if space permits. Be warned however that most of those magical demos will be much too large for inclusion!\n\n```text\n          ============\n```\n\nPress \"N\" now to load PRNTINIT\n\nNote that you will probably get an error report when the program is loaded from OUTLET, as it is not Auto-run..\n",
+  "body_ru": "## Addender\n\nНекоторые материалы, присланные в OUTLET, до сих пор не были включены в номер по разным причинам. Жаль оставлять их пылиться на полке, поэтому, если сочтём уместным, мы будем добавлять их в этот раздел журнала под названием ADD-ENDERS (на версиях для Microdrive и Opus места под него нет).\n\nЭтот материал охватывает самый разный диапазон качества и типов программ: утилиты, экраны, шрифты и текстовые статьи, и ЧАСТЬ из них может быть не отредактирована, не протестирована, работать не полностью или некорректно; требовать адаптации под синтаксис вашей системы или принтер и т.д.; поставляться без подробных инструкций или чего-то подобного. Читателям придётся покопаться в этом всём, чтобы найти что-то интересное для себя и отбросить остальное. Не всё обязательно появится на всех версиях.\n\nНекоторые материалы из Add-Enders могут быть привязаны к меню OUTLET обычным образом. Обычно они предшествуют этому текстовому файлу. Любые материалы, идущие после этой статьи, возможно, придётся загружать вручную с помощью команды LOAD, либо они не будут автоматически запускаться при загрузке.\n\nВозможно, какая-то информация найдётся на следующих страницах...\n\nВ продолжение предложения из недавнего номера OUTLET воспроизвести некоторые полезные подпрограммы из ранних выпусков OUTLET для удобства новых подписчиков, представляем подпрограмму, написанную Brian Cavers. Мы объединяем её с теми программами OUTLET, которым требуется настройка принтера для распечатки текста.\n\nФайл подпрограммы называется 'PRNTINIT'. Чтобы использовать её в собственной программе, сначала определите две переменные, 'SET' и 'ZX', в самом начале вашей программы с помощью операторов:\n\n```text\n     LET SET=0 : LET ZX=0\n```\n\nОбъедините (MERGE) PRNTINIT с вашей программой и добавьте команду:\n\n```text\n           GOSUB 9800\n```\n\n...прямо перед первой командой LPRINT в вашей программе, после чего заново сохраните её.\n\nПри запуске программы вы увидите привычное меню с предложением выбрать интерфейс принтера. После того как выбор будет сделан, переменной SET будет присвоено ненулевое значение, благодаря чему при последующих вызовах подпрограммы произойдёт немедленный возврат, и настройка выполнится только один раз.\n\nЛюбые предложения о программах, которые вы хотели бы увидеть снова или считаете особенно полезными для других читателей, всегда приветствуются, и мы будем включать по одной в качестве ADDENDER каждый месяц, если позволит место. Однако учтите, что большинство тех потрясающих демо окажутся слишком большими по объёму!\n\n```text\n          ============\n```\n\nНажмите «N» прямо сейчас, чтобы загрузить PRNTINIT.\n\nОбратите внимание, что при загрузке программы из OUTLET вы, вероятно, получите отчет об ошибке, так как она не запускается автоматически (Auto-run)...\n",
+  "text_type": 3
+}

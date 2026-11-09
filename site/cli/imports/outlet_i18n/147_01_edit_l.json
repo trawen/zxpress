@@ -1,0 +1,52 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "147",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Editorial update in Outlet #147: one issue left before closure, PC Outlet and Z80 emulator, wiring circuits from Malcolm Perry, and teasing the grand finale.",
+  "meta_description_ru": "Редакторское дополнение к Outlet #147: закрытие издания через выпуск, продвижение PC Outlet и эмулятора Z80, схемы от Malcolm Perry и анонс финала.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "z80 emulator",
+      "tag_alias": "z80-emulator"
+    },
+    {
+      "tag_name": "pc outlet",
+      "tag_alias": "pc-outlet"
+    },
+    {
+      "tag_name": "malcolm perry",
+      "tag_alias": "malcolm-perry"
+    },
+    {
+      "tag_name": "spectrum +2b",
+      "tag_alias": "spectrum-2b"
+    },
+    {
+      "tag_name": "spectrum +3a",
+      "tag_alias": "spectrum-3a"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "With the closure of the Spectrum\nOUTLET now only one issue away,\nit's time to remind readers the\nPC version is still going strong\nand so is the premier Spectrum\nZ80 emulator for the PC.This is\nnow only available from us here\nat Chezron Software.\n\n\nQuite a simple,old,secondhand PC\nwill run the emulator so long as\nit has VGA. You could use it as\na Spectrum as well as taking the\nPC OUTLET for an easier intro to\nthe PC and eventually the Inter-\nnet! Details of the Z80 Spectrum\nemulator are in OUTVERTS along\nwith information on where to get\nthe tape interface if needed.\n\nWe'd like to give a big thankyou\nto Malcolm Perry who has just\nsent in the wiring circuits for\nthe Spectrum +2B/+3B, the +3A,\nand the +2B cassette interface,\nin response to a request from\nRon Webster in Issue 145.Malcolm\nsays the +3A should be close to\nthe +2A as they are basically\nthe same design except for the\ntape/disk interface.\n\nWell, OK,there are less and less\nutility programs in OUTLET but\nwe are still filling it up and\nnext month's final issue will be\nabsolutely bursting! It will be\nthe biggest ever OUTLET as we go\nout with a BANG!\n\n                     Ron & Brian\n\n\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n   Email: outletmag@yahoo.com.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nWith the closure of the Spectrum OUTLET now only one issue away, it's time to remind readers the PC version is still going strong and so is the premier Spectrum Z80 emulator for the PC.This is now only available from us here at Chezron Software.\n\nQuite a simple,old,secondhand PC will run the emulator so long as it has VGA. You could use it as a Spectrum as well as taking the PC OUTLET for an easier intro to the PC and eventually the Inter- net! Details of the Z80 Spectrum emulator are in OUTVERTS along with information on where to get the tape interface if needed.\n\nWe'd like to give a big thankyou to Malcolm Perry who has just sent in the wiring circuits for the Spectrum +2B/+3B, the +3A, and the +2B cassette interface, in response to a request from Ron Webster in Issue 145.Malcolm says the +3A should be close to the +2A as they are basically the same design except for the tape/disk interface.\n\nWell, OK,there are less and less utility programs in OUTLET but we are still filling it up and next month's final issue will be absolutely bursting! It will be the biggest ever OUTLET as we go out with a BANG!\n\nRon & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers 34 Saltersgate Drive Birstall, Leicester LE4 3FF\n\nEmail: outletmag@yahoo.com.\n",
+  "body_ru": "## Editorial (late)\n\nДо закрытия Spectrum OUTLET остался всего один выпуск, и пришло время напомнить читателям, что версия для PC по-прежнему активно развивается, равно как и лучший эмулятор Spectrum для PC — Z80. Теперь его можно приобрести только у нас, в Chezron Software.\n\nДля запуска эмулятора подойдет даже совсем простенький, старый б/у PC, главное, чтобы на нем была VGA-карта. Вы можете использовать его как Spectrum, а также читать PC OUTLET для более простого знакомства с PC и, в конечном итоге, с Интернетом! Подробности об эмуляторе Spectrum Z80 приведены в OUTVERTS вместе с информацией о том, где при необходимости достать интерфейс для работы с магнитофоном.\n\nМы хотим выразить огромную благодарность Malcolm Perry, который только что прислал электрические схемы для Spectrum +2B/+3B, +3A и кассетного интерфейса +2B в ответ на просьбу Ron Webster в 145-м номере. Malcolm говорит, что схема +3A должна быть близка к +2A, поскольку конструктивно они практически одинаковы, за исключением интерфейса ленты/диска.\n\nДа, конечно, утилит в OUTLET становится все меньше и меньше, но мы все равно заполняем выпуск под завязку, а уж заключительный номер в следующем месяце будет просто ломиться от материалов! Это будет самый грандиозный OUTLET за всю историю — мы уйдем, хлопнув дверью с настоящим грохотом!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n   Email: outletmag@yahoo.com.\n```\n",
+  "text_type": 3
+}

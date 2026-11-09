@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "073",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Outlet editorial from September 1993: winding down the Opus version, status of the tape edition, and plans to launch a PC version of the magazine.",
+  "meta_description_ru": "Редакционная колонка журнала Outlet за сентябрь 1993: закрытие версии для Opus, состояние кассетного релиза и планы по выпуску PC-версии издания.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "opus discovery",
+      "tag_alias": "opus-discovery"
+    },
+    {
+      "tag_name": "pc",
+      "tag_alias": "pc"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "S E P T E M B E R ,   1 9 9 3\n\nWell, the Opus version of OUTLET\nhas ended and the few remaining\nsubscriptions refunded. We are\nentering OUTLET's SEVENTH year\nthis month so the Opus version\nran for an incredible SIX years!\n\nThe only other version that is a\nbit wobbly at the moment is the\ntape version with only a handful\nof regulars but we intend to\nkeep it going for the time being\nand will always plan on several\nmonths notice if it should be\nwound down. The +D/Disciple and\n+3 versions look sound as far\nahead as we can see but we could\ncertainly use more sales!\n\nThe PC version is now gradually\ntaking shape and hopefully in\nthe new year will help support\nChezron(and thereby the Spectrum\nversions!) to continue forever\nor perhaps a bit longer.We would\nbe grateful for general articles\nabout the PC as well as programs\nNOW so please contribute!\n\nThe sort of articles we want are\nsay, using a printer with a PC,\nkeyboard problems, programming\ntips for QUICK BASIC - ANYTHING\nof any nature to do with the PC\n- but not too topical as it will\nnot get published for some time.\nIf we can just get two or three\narticles in hand,we can plan the\nfirst issue - and keep those\nSPECTRUM articles and programs\ncoming too!\n                    Ron & Brian\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nS E P T E M B E R ,   1 9 9 3\n\nWell, the Opus version of OUTLET has ended and the few remaining subscriptions refunded. We are entering OUTLET's SEVENTH year this month so the Opus version ran for an incredible SIX years!\n\nThe only other version that is a bit wobbly at the moment is the tape version with only a handful of regulars but we intend to keep it going for the time being and will always plan on several months notice if it should be wound down. The +D/Disciple and +3 versions look sound as far ahead as we can see but we could certainly use more sales!\n\nThe PC version is now gradually taking shape and hopefully in the new year will help support Chezron(and thereby the Spectrum versions!) to continue forever or perhaps a bit longer.We would be grateful for general articles about the PC as well as programs NOW so please contribute!\n\nThe sort of articles we want are say, using a printer with a PC, keyboard problems, programming tips for QUICK BASIC - ANYTHING of any nature to do with the PC - but not too topical as it will not get published for some time. If we can just get two or three articles in hand,we can plan the first issue - and keep those SPECTRUM articles and programs coming too! Ron & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers CHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF.\n",
+  "body_ru": "## Editorial (late)\n\n**С Е Н Т Я Б Р Ь , 1 9 9 3**\n\nЧто ж, версия OUTLET для Opus подошла к концу, а деньги за немногочисленные оставшиеся подписки возвращены. В этом месяце OUTLET вступает в свой СЕДЬМОЙ год, так что версия для Opus просуществовала невероятные ШЕСТЬ лет!\n\nЕдинственная другая версия, чьё положение сейчас немного шатко — это кассетная, у которой осталась лишь горстка постоянных подписчиков. Тем не менее мы намерены пока продолжать её выпуск и обязательно предупредим за несколько месяцев, если дело дойдёт до закрытия. Версии для +D/Disciple и +3 выглядят надёжно на всём обозримом будущем, но нам определённо не помешало бы больше продаж!\n\nВерсия для PC сейчас постепенно обретает форму и, будем надеяться, в новом году поможет Chezron (а тем самым и версиям для Spectrum!) продолжать жить вечно или, быть может, чуточку дольше. Мы были бы признательны за общие статьи о PC, а также за программы уже СЕЙЧАС, так что, пожалуйста, присылайте свои материалы!\n\nНас интересуют статьи, скажем, об использовании принтера с PC, проблемах с клавиатурой, советах по программированию на QUICK BASIC — буквально О ЧЁМ УГОДНО, имеющем отношение к PC, но не слишком привязанном к текущему моменту, поскольку опубликовано это будет не сразу. Если мы сможем получить на руки хотя бы две-три статьи, то сможем спланировать первый выпуск. И продолжайте присылать статьи и программы для SPECTRUM!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF.\n```\n",
+  "text_type": 3
+}

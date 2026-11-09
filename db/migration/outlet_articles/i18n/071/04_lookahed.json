@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "071",
+  "article_id": "04_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Взгляд в будущее",
+  "meta_description_en": "A preview of upcoming Outlet issues: dropping Opus Discovery support, upcoming large demos, Masterfile, Soundtracker compiler, and new utilities.",
+  "meta_description_ru": "Анонс будущих номеров журнала Outlet: отказ от поддержки Opus Discovery, снятие лимита в 178Кб, компилятор Soundtracker, Masterfile и новые утилиты.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "opus discovery",
+      "tag_alias": "opus-discovery"
+    },
+    {
+      "tag_name": "soundtracker",
+      "tag_alias": "soundtracker"
+    },
+    {
+      "tag_name": "masterfile",
+      "tag_alias": "masterfile"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    }
+  ],
+  "category_ids": [
+    123,
+    125
+  ],
+  "body_en_plain": "It's a shame the Opus Discovery\nversion has to be dropped after\nSeptember but the good news is\nwe will no longer be limited by\nthe restrictive 178K of an Opus\ndisc. This means we can include\nthe larger programs which have\nbeen stock-piling because they\nwould have taken up too much\nspace. There are some wonderful\ndemos to look forward to(several\nover 100K bytes long); there is\nthe all-time classic MASTERFILE\nas mentioned last month and lots\nmore.\n\nBut there are still two issues\nin which to squeeze as much as\npossible in 178K So, next month\nwe'll have the compiler part of\nSOUNDTRACKER to compliment the\neditor in this issue with a demo\nof the wonderful sounds it can\nproduce. Talking of demos, next\nmonth there should be one which\ndoes impossible things with the\nSpectrum attributes!There's clip\nart, not to be confused with a\nbank of 12 sets of fascinating\nUDGs.OUTCLASS explains mysteries\nof OPENTYPE files and DRIVECHAT\nhas valuable info on hook codes.\nThere is a calendar program with\na difference; a couple of useful\nprogramming utilities and a\nchance to pit your wits against\nthe computer in a classic game\nof strategy.            - Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "It's a shame the Opus Discovery version has to be dropped after September but the good news is we will no longer be limited by the restrictive 178K of an Opus disc. This means we can include the larger programs which have been stock-piling because they would have taken up too much space. There are some wonderful demos to look forward to (several over 100K bytes long); there is the all-time classic MASTERFILE as mentioned last month and lots more.\n\nBut there are still two issues in which to squeeze as much as possible in 178K. So, next month we'll have the compiler part of SOUNDTRACKER to compliment the editor in this issue with a demo of the wonderful sounds it can produce. Talking of demos, next month there should be one which does impossible things with the Spectrum attributes! There's clip art, not to be confused with a bank of 12 sets of fascinating UDGs. OUTCLASS explains mysteries of OPENTYPE files and DRIVECHAT has valuable info on hook codes. There is a calendar program with a difference; a couple of useful programming utilities and a chance to pit your wits against the computer in a classic game of strategy.\n\n— Chris.\n",
+  "body_ru": "Очень жаль, что после сентября нам придётся отказаться от версии журнала для Opus Discovery, но есть и хорошая новость: мы больше не будем скованы тесными рамками дискет Opus объёмом всего 178 КБ. Это значит, что мы наконец-то сможем выпустить более крупные программы, которые долго копились в архиве из-за нехватки свободного места. Вас ждут замечательные демо (некоторые размером более 100 килобайт), нестареющая классика MASTERFILE (о которой упоминалось в прошлом месяце) и многое другое.\n\nОднако у нас в запасе есть ещё два номера, в которые нужно постараться вместить максимум возможного в эти 178 КБ. Так что в следующем месяце мы выпустим компилятор для SOUNDTRACKER в дополнение к редактору из текущего номера, сопроводив его демо-треком с прекрасными звуками, которые он способен выдавать. Кстати о демо: в следующем месяце должна выйти программа, которая вытворяет совершенно невероятные вещи со спектрумовскими атрибутами! Также вас ждёт клипарт (не путать с набором из 12 банков великолепных UDG). В рубрике OUTCLASS будут раскрыты тайны файлов типа OPENTYPE, а DRIVECHAT поделится ценной информацией о hook-кодах. Кроме того, будет необычная программа-календарь, пара полезных утилит для программистов и возможность сразиться умом с компьютером в классической стратегической игре.\n\n— Chris.\n",
+  "text_type": 3
+}

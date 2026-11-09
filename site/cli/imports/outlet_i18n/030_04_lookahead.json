@@ -1,0 +1,37 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "030",
+  "article_id": "04_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "Preview of the next issue of Outlet magazine: GP100A printer review, EX-BASIC, sorting algorithms comparison, disc utilities, and games.",
+  "meta_description_ru": "Анонс следующего выпуска журнала Outlet: обзор принтера GP100A, EX-BASIC, сравнение алгоритмов сортировки, дисковые утилиты и игры.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "announcement"
+    },
+    {
+      "tag_name": "в следующем номере",
+      "tag_alias": "lookahead"
+    },
+    {
+      "tag_name": "zx spectrum",
+      "tag_alias": "zx-spectrum"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Next month we've more clip art;\na program that compares sorting\nalgorithms with lots of info; a\nscrolling maze game; reviews of\nthe GP100A printer and EX-BASIC\nand the best crossword compiler/\npresenter we've ever seen on the\nSpectrum! There's a disc sector\ncopy utility for the Disciple or\n+D; a resistor value calculator;\ndouble-size text in easy-to-use\nPRINT commands (see this month's\nOUTCLASS); BEST SOUNDS No.2! and\nall the regular features!.\n",
+  "body_ru_plain": "В следующем месяце: ещё больше\nклипарта; программа для сравнения\nалгоритмов сортировки с массой\nполезной информации; лабиринт\nсо скроллингом; обзоры принтера\nGP100A и EX-BASIC, а также самый\nлучший компилятор/решатель\nкроссвордов из всех, что мы\nвидели на Spectrum! Утилита для\nпосекторного копирования дисков\nна Disciple или +D; калькулятор\nноминалов резисторов; текст\nдвойного размера через простые\nкоманды PRINT (см. OUTCLASS в\nэтом месяце); BEST SOUNDS No.2!\nи все постоянные рубрики!.\n",
+  "body_en": "Next month we've more clip art; a program that compares sorting algorithms with lots of info; a scrolling maze game; reviews of the GP100A printer and EX-BASIC and the best crossword compiler/presenter we've ever seen on the Spectrum! There's a disc sector copy utility for the Disciple or +D; a resistor value calculator; double-size text in easy-to-use PRINT commands (see this month's OUTCLASS); BEST SOUNDS No.2! and all the regular features!.\n",
+  "body_ru": "## В следующем номере\n\nВ следующем месяце: ещё больше клипарта; программа для сравнения алгоритмов сортировки с массой полезной информации; лабиринт со скроллингом; обзоры принтера GP100A и EX-BASIC, а также самый лучший компилятор/решатель кроссвордов из всех, что мы видели на Spectrum! Утилита для посекторного копирования дисков на Disciple или +D; калькулятор номиналов резисторов; текст двойного размера через простые команды PRINT (см. OUTCLASS в этом месяце); BEST SOUNDS No.2! и все постоянные рубрики!\n",
+  "text_type": 3
+}

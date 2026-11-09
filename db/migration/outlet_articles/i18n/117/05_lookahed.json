@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "117",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead: Issue 118",
+  "title_ru": "Анонс: Выпуск 118",
+  "meta_description_en": "A sneak peek at Outlet Issue 118: the 'WORST' music demo, new coding utilities, X-Fonts, monitor connection guides, and Russian multiplication.",
+  "meta_description_ru": "Анонс Outlet №118: музыкальное демо «WORST», новые утилиты для программирования, X-Fonts, статья о подключении мониторов и метод «русского умножения».",
+  "authors": [
+    "Chris"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet-magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "lookahead",
+      "tag_alias": "lookahead"
+    },
+    {
+      "tag_name": "demoscene",
+      "tag_alias": "demoscene"
+    },
+    {
+      "tag_name": "utilities",
+      "tag_alias": "utilities"
+    },
+    {
+      "tag_name": "fonts",
+      "tag_alias": "fonts"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Last month, in OUTLET Issue 116,\nwe had a demo called \"BAD\" which\nwas really quite good, so next\nmonth we have a demo called\n\"WORST\" which is an excellent\nmusic demo giving a choice of 22\nsuper Soundtracker tracks. Are\nthe authors so modest or is it\njust their sense of humour, to\ngive their creation a derogatory\ntitle?\n\n                    more...\n\n\nThere are plenty of brand new\nutilities to try out:- one to\nput code into a string variable,\nanother which resides in lines\nnumbered 10,000 upwards (is this\nimpossible, or what????), and a\nvery useful interrupt creator to\nremove the hard work of produc-\ning interrupt tables and setting\nup the pointers etc.\n\nYou have possibly been watching\nthe \"X-Files\" on T.V.?... Now\nwatch out for the \"X-Fonts\" for\nthe Spectrum in OUTLET!\n\nThe DRIVECHAT next month gives\nus more technical information\nabout Monitors and interconnect-\nions,whilst OUTCLASS reveals the\namazing principles of Russian\nmultiplication.\n\nThere's also a wonderful word\npuzzle creator program, and a\nfull-scale game with superb\ngraphics and animation.\n\nYes, it's yet another OUTLET\nthat you will not want to miss!\n\n            Cheers,\n\n                 Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Last month, in OUTLET Issue 116, we had a demo called \"BAD\" which was really quite good, so next month we have a demo called \"WORST\" which is an excellent music demo giving a choice of 22 super Soundtracker tracks. Are the authors so modest or is it just their sense of humour, to give their creation a derogatory title?\n\nThere are plenty of brand new utilities to try out: one to put code into a string variable, another which resides in lines numbered 10,000 upwards (is this impossible, or what????), and a very useful interrupt creator to remove the hard work of producing interrupt tables and setting up the pointers etc.\n\nYou have possibly been watching the \"X-Files\" on T.V.?... Now watch out for the \"X-Fonts\" for the Spectrum in OUTLET!\n\nThe DRIVECHAT next month gives us more technical information about Monitors and interconnections, whilst OUTCLASS reveals the amazing principles of Russian multiplication.\n\nThere's also a wonderful word puzzle creator program, and a full-scale game with superb graphics and animation.\n\nYes, it's yet another OUTLET that you will not want to miss!\n\nCheers,\n\nChris.\n",
+  "body_ru": "В прошлом месяце, в 116-м выпуске OUTLET, у нас было демо под названием «BAD», которое на самом деле оказалось весьма хорошим. Поэтому в следующем номере вас ждет демо под названием «WORST» — великолепная музыкальная программа, предлагающая на выбор 22 превосходных трека из Soundtracker. То ли авторы столь скромны, то ли это просто своеобразное чувство юмора — давать своему творению такое уничижительное название?\n\nТакже вас ожидает множество абсолютно новых утилит: одна позволяет помещать машинный код в строковую переменную, другая располагается в строках Бейсика с номерами от 10 000 и выше (разве такое возможно?!), а чрезвычайно полезный генератор прерываний избавит вас от рутины при создании таблиц векторов и настройке указателей.\n\nВозможно, вы смотрели «Секретные материалы» (X-Files) по телевизору?.. Теперь встречайте «X-Fonts» для Спектрума на страницах OUTLET!\n\nВ рубрике DRIVECHAT в следующем месяце будет представлена техническая информация о мониторах и схемах их подключения, а OUTCLASS раскроет удивительные принципы «русского умножения».\n\nКроме того, вас ждут замечательная программа для создания словесных головоломок и полноценная игра с превосходной графикой и анимацией.\n\nДа, это очередной выпуск OUTLET, который вы точно не захотите пропустить!\n\nВсего наилучшего,\n\nChris.\n",
+  "text_type": 3
+}

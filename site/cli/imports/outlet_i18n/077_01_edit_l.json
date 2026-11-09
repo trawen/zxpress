@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "077",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Editorial note from Outlet issue 77 (January 1994): reflections on the past year, announcement of the upcoming PC version, and news on Spectrum 48K+ membranes.",
+  "meta_description_ru": "Вступительное слово редакции журнала Outlet за январь 1994 года: итоги прошедшего года, анонс версии журнала для PC и информация о мембранах для Spectrum 48K+.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "spectrum 48k+",
+      "tag_alias": "spectrum-48k-plus"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "J A N U A R Y ,   1 9 9 4\n\nHappy New Year to All! Last year\nwas rather difficult for us but,\nalthough OUTLET sales dwindled,\nthey seem to have stabilised and\ncontribution of programs and so\non are extremely good!\n\nThe new PC version must launch\nin the first third of this year\nso any PC users, please send in\nitems for our first issue - PD,\nshareware,articles, even a brief\nOUTLETTER wishing us well!\n\nWe've had inquiries for Spectrum\n48K+ keyboard membranes.BG SERV-\nICES (address in OUTBOARD) now\nhave some at `15 each; it may be\nworth getting a spare!\n\n                    Ron & Brian\n\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nJ A N U A R Y ,   1 9 9 4\n\nHappy New Year to All! Last year was rather difficult for us but, although OUTLET sales dwindled, they seem to have stabilised and contribution of programs and so on are extremely good!\n\nThe new PC version must launch in the first third of this year so any PC users, please send in items for our first issue - PD, shareware,articles, even a brief OUTLETTER wishing us well!\n\nWe've had inquiries for Spectrum 48K+ keyboard membranes.BG SERV- ICES (address in OUTBOARD) now have some at `15 each; it may be worth getting a spare!\n\nRon & Brian\n\nOUTLET is produced by Chris Oliver Ron & Brian Cavers CHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF.\n",
+  "body_ru": "## ЯНВАРЬ 1994\n\nС Новым годом всех! Прошлый год был для нас довольно трудным, но, хотя продажи OUTLET и снизились, похоже, они стабилизировались, а поступления программ и прочих материалов просто отличные!\n\nНовая версия для PC должна выйти в первой трети этого года, поэтому всех пользователей PC просим присылать материалы для нашего первого выпуска — PD, shareware, статьи или даже короткое письмо в OUTLETTER с добрыми пожеланиями!\n\nК нам поступали запросы насчёт клавиатурных мембран для Spectrum 48K+. У BG SERVICES (адрес в OUTBOARD) сейчас есть некоторое количество по £15 за штуку; возможно, стоит обзавестись запасной!\n\n*Ron & Brian*\n\nOUTLET выпускают:  \nChris Oliver  \nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF.\n",
+  "text_type": 3
+}

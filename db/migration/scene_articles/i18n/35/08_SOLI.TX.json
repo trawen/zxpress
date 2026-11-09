@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "35",
+  "article_id": "08_SOLI.TX",
+  "source_lang": "de-AT",
+  "title_en": "Solitaire",
+  "title_ru": "Solitaire",
+  "meta_description_en": "Mini-review of an unknown author's Windows-like Solitaire card game for the ZX Spectrum from Scene+ #35.",
+  "meta_description_ru": "Мини-обзор карточного пасьянса Solitaire для ZX Spectrum от неизвестного автора из Scene+ #35.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "solitaire",
+      "tag_alias": "solitaire"
+    },
+    {
+      "tag_name": "карточные игры",
+      "tag_alias": "card-games"
+    },
+    {
+      "tag_name": "обзор",
+      "tag_alias": "review"
+    }
+  ],
+  "category_ids": [
+    1,
+    2
+  ],
+  "body_de_plain": "SOLITAIR ü - SOLITAIRE - Als der Ehemalige Patiencen-Master\nfreut es mich daß noch andereProgrammierer diese Spiele mögen.\nHier ist die Version von Jemanden anderen von unbekannter\nHerkunft, auf jeden Fall istdie Tastenwahl englisch gehalten.\nDiese Version entspricht dem Windows Solitaire, leider passiert\nnichts nachdem man gewonnenhat. D - As an old Patience-Master I\nlike to see that also other coderslike this kind of games. This\ngame is written by a unknownauthor from unknown orgin, but\nfortunaly the key selector isenglish. This version is like the\nWindows version, but notchinghappens after you win tha\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### Solitaire\n\nAs a former Patience Master, it pleases me to see that other programmers enjoy these games too. Here is a version by someone else of unknown origin; at any rate, the key selection is in English.\n\nThis version corresponds to Windows Solitaire. Unfortunately, nothing happens after you win the game.\n",
+  "body_ru": "### Solitaire\n\nКак бывшему «мастеру пасьянсов», мне приятно видеть, что и другие программисты любят подобные игры. Перед нами версия от стороннего автора неизвестного происхождения, но выбор клавиш управления в любом случае сделан на английском.\n\nЭта версия аналогична пасьянсу «Косынка» из Windows. К сожалению, после победы здесь ровным счётом ничего не происходит.\n",
+  "text_type": 3
+}

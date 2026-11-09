@@ -1,0 +1,47 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "09",
+  "article_id": "03_BRIEFE_1",
+  "source_lang": "de-AT",
+  "title_en": "Letters: Cat's Eye & Tiger's Claw",
+  "title_ru": "Письма: Cat's Eye и Tiger's Claw",
+  "meta_description_en": "Cat's Eye writes to Scene+ about the Skeleton Dance demo, ordering a Pentagon 128, Disciple heat issues, and the upcoming Vienna meeting. Answered by Tiger's Claw.",
+  "meta_description_ru": "Cat's Eye пишет в Scene+ о демо Skeleton Dance, покупке Pentagon 128, перегреве Disciple и встрече спектрумистов в Вене. Ответ Tiger's Claw.",
+  "authors": [
+    "Cat's Eye",
+    "Tiger's Claw"
+  ],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "letters",
+      "tag_alias": "letters"
+    },
+    {
+      "tag_name": "pentagon",
+      "tag_alias": "pentagon"
+    },
+    {
+      "tag_name": "disciple",
+      "tag_alias": "disciple"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    }
+  ],
+  "category_ids": [
+    154,
+    176
+  ],
+  "body_de_plain": "BRIEFE Hallo LCD! Zuerst mal, ich habe mir das Skeleton Dance\ngenauer angesehen,ist es möglich daß die Animation aus dem\nMONKEY ISLAND II stammt? Wegen des Pentagons: Ich wäre daran\nsehr interessiert, was würdeer inclusive Postversand kosten?\nWirst Du dann auch die SCENE+ auf Beta Disc machen? Mein\nDisciple hält ja nicht Ewig und dieHitzeentwicklung wirkt sich\nLebensverkürzend aus. Ich bin zwar kein Mitglied in SPC oder\nSUC und will es auch nictin der Zukunft werden, trotzdem finde\nich dieseMeinungsverschiedenheiten echt Scheiße., Wann ist das\nClubtreffen in Wien geplant?) Cat's Eye Antwort: Ja, Die\nAnimation stammt eindeutig aus dem erwähntem Spiel,\naberverändert das irgendwas? Es ist immer noch ein schönes\nDemo.ö Wenn ich die genaue Pentagon Preisliste bekomme, schicke\nich Dirauch eine Kopie, und ja, ich werde die SCENE+ auch auf\nBeta und MB02 machen. Was das Disciple angeht, bei mir habe ich\ndenSpannungsregler 7805 nach außen verlegt und auf ein Stück\nBlechaufgeschraubt, das verringert die Hitzeentwicklung\nundverlängert die Lebensdauer. Den Pentagon werde ich demnächst$\nbestellen und einenausführlichen Test mit Digibildern machen./\nDas Clubtreffen in Wien ist fest für den Frühling geplant,\nApriloder Mai, die Details werden zwei Monate früher\nbekanntgegeben. Tiger's Claw P. S. Schreibt m\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### Letters\n\nHello LCD!\n\nFirst of all, I took a closer look at *Skeleton Dance* — is it possible that the animation was taken from *MONKEY ISLAND II*?\n\nRegarding the Pentagon: I'd be very interested in it, how much would it cost including postage? Will you also release SCENE+ on Beta Disc then? My Disciple won't last forever, and the heat buildup definitely shortens its lifespan.\n\nWhile I am not a member of SPC or SUC and have no intention of joining in the future, I still think these disputes are totally shitty. When is the club meeting in Vienna scheduled?\n\n— **Cat's Eye**\n\n***\n\n**Reply:**\n\nYes, the animation clearly comes from the mentioned game, but does that change anything? It is still a beautiful demo.\n\nOnce I receive the exact Pentagon price list, I will send you a copy as well. And yes, I will also be releasing SCENE+ on Beta Disc and MB02.\n\nAs for the Disciple: on my own unit, I relocated the 7805 voltage regulator to the outside and screwed it onto a piece of sheet metal — this reduces heat buildup and extends its lifespan.\n\nI will be ordering the Pentagon soon and will write an extensive review with digital photos.\n\nThe club meeting in Vienna is firmly scheduled for spring (April or May); the details will be announced two months in advance.\n\n— **Tiger's Claw**\n\n*P.S. Write m...*\n",
+  "body_ru": "### Письма\n\nПривет, LCD!\n\nВо-первых, я тут внимательнее присмотрелся к *Skeleton Dance* — возможно ли, что анимация взята из *MONKEY ISLAND II*?\n\nНасчет Пентагона: мне это очень интересно, сколько он будет стоить вместе с пересылкой по почте? Будешь ли ты тогда выпускать SCENE+ и под Beta Disc? Мой Disciple ведь не вечен, а сильный нагрев явно сокращает срок его службы.\n\nХоть я и не состою ни в SPC, ни в SUC, и вступать туда в будущем не собираюсь, но считаю эти разногласия полным дерьмом. Когда планируется встреча клуба в Вене?\n\n— **Cat's Eye**\n\n***\n\n**Ответ:**\n\nДа, анимация совершенно точно взята из упомянутой игры, но разве это что-то меняет? Это по-прежнему отличное демо.\n\nКак только я получу точный прайс-лист на Pentagon, я вышлю тебе копию. И да, я буду выпускать SCENE+ также под Beta Disc и MB02.\n\nЧто касается Disciple: у себя я вынес стабилизатор напряжения 7805 наружу и прикрутил его к куску листового металла — это снижает нагрев и продлевает жизнь устройству.\n\nPentagon я закажу в ближайшее время и сделаю подробный обзор с цифровыми фотографиями.\n\nВстреча клуба в Вене твердо намечена на весну, апрель или май; подробности будут объявлены за два месяца.\n\n— **Tiger's Claw**\n\n*P.S. Пишите м...*\n",
+  "text_type": 3
+}

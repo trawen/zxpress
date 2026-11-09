@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "032",
+  "article_id": "04_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "Взгляд в будущее: планы на следующий выпуск",
+  "meta_description_en": "Preview of the next issue of Outlet magazine: the first official SAM Coupé version and upcoming software highlights, including Catloader, Vector 3D, and Megadem.",
+  "meta_description_ru": "Анонс следующего выпуска журнала Outlet: первая официальная версия для SAM Coupé и обзор планируемых программ, включая Catloader, Vector 3D и Megadem.",
+  "authors": [
+    "Brian"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "catloader",
+      "tag_alias": "catloader"
+    },
+    {
+      "tag_name": "софт",
+      "tag_alias": "software"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "Next month there should be the\nfirst \"official\" SAM version of\nOUTLET. ALL regular text items:\nOUTLETTERS, OUTCLASS,etc. will\nalso be in the new issue but it\nremains to be seen which of the\nprograms can be converted. Extra\nSAM-specific programs will be\nadded however so it'll be value\nguaranteed as usual!\n\nI can also guarantee right now\nthat TWO of the following WILL\nbe included in the SAM version..\n\nCATLOADER is a long-standing and\nreliable CHEZRON program being a\nsingle-press automatic program\nloader with extra features. It's\nbeen updated, improved and there\nare now versions for Microdrive,\nOpus, +3 and SAM (the latter has\neven MORE features!). We hope to\nprovide a version for Disciple/\nPlus D eventually. We've used\nCATLOADER for years and, after\nhaving tried many other loaders,\n(including the Atari ST's mouse\nand windows)are still happy with\nit! Don't miss this!\n\nVECTOR 3D is a 3D graphics demo;\nZX128 enables ZX-type printers\nin 128K mode; ZIG-ZAG is a nice\nstrategy game; OUTPUT is the 7th\npart of \"Program Protection\".\n\nWHATSORT is a demo of many sort\nalgorithms with info; MULTICALC\nis a simple calc program; BANDIT\nis a fruit-machine simulator and\nECLECTIC is a scoring system and\nprint-out facility for a golfing\ncompetition.\n\nThere's MEGADEM which is over 6\nminutes of graphic demos and\nmore clip art in SPORTCLIP (this\nis the other program that I know\nWILL run on the SAM).\n\nSee you next month!\n\n                      - Brian.\n",
+  "body_ru_plain": "В следующем месяце выйдет первая\n«официальная» SAM-версия OUTLET.\nВСЕ постоянные текстовые рубрики:\nOUTLETTERS, OUTCLASS и т. д. тоже\nбудут в новом номере, но пока\nнеясно, какие именно программы\nудастся перенести. Однако будут\nдобавлены отдельные программы\nспециально для SAM, так что\nотличное наполнение, как всегда,\nгарантировано!\n\nТакже я могу прямо сейчас\nгарантировать, что ДВЕ из ниже-\nперечисленных ТОЧНО войдут\nв SAM-версию...\n\nCATLOADER — это проверенная\nвременем и надёжная программа от\nCHEZRON, представляющая собой\nавтозагрузчик программ по одному\nнажатию с дополнительными\nвозможностями. Она обновлена,\nулучшена, и теперь есть версии\nдля Microdrive, Opus, +3 и SAM\n(в последней функций ещё БОЛЬШЕ!).\nСо временем мы надеемся выпустить\nверсию и для Disciple/Plus D.\nМы пользовались CATLOADER годами\nи, испробовав кучу других\nзагрузчиков (включая мышь и окна\nAtari ST), по-прежнему довольны\nим! Не пропустите!\n\nVECTOR 3D — это демо 3D-графики;\nZX128 включает принтеры типа ZX\nв режиме 128K; ZIG-ZAG — хорошая\nстратегическая игра; OUTPUT — 7-я\nчасть статьи «Program Protection».\n\nWHATSORT — демо множества алго-\nритмов сортировки с описанием;\nMULTICALC — простой калькулятор;\nBANDIT — симулятор «однорукого\nбандита», а ECLECTIC — система\nподсчёта очков и распечатки для\nсоревнований по гольфу.\n\nЕщё есть MEGADEM — более 6 минут\nграфических демо, а также новая\nграфика в SPORTCLIP (это как раз\nвторая программа, которая, я знаю,\nТОЧНО запустится на SAM).\n\nУвидимся в следующем месяце!\n\n                      - Brian.\n",
+  "body_en": "## Lookahead\n\nNext month there should be the first \"official\" SAM version of OUTLET. ALL regular text items: OUTLETTERS, OUTCLASS, etc. will also be in the new issue but it remains to be seen which of the programs can be converted. Extra SAM-specific programs will be added however so it'll be value guaranteed as usual!\n\nI can also guarantee right now that TWO of the following WILL be included in the SAM version..\n\nCATLOADER is a long-standing and reliable CHEZRON program being a single-press automatic program loader with extra features. It's been updated, improved and there are now versions for Microdrive, Opus, +3 and SAM (the latter has even MORE features!). We hope to provide a version for Disciple/Plus D eventually. We've used CATLOADER for years and, after having tried many other loaders, (including the Atari ST's mouse and windows) are still happy with it! Don't miss this!\n\nVECTOR 3D is a 3D graphics demo; ZX128 enables ZX-type printers in 128K mode; ZIG-ZAG is a nice strategy game; OUTPUT is the 7th part of \"Program Protection\".\n\nWHATSORT is a demo of many sort algorithms with info; MULTICALC is a simple calc program; BANDIT is a fruit-machine simulator and ECLECTIC is a scoring system and print-out facility for a golfing competition.\n\nThere's MEGADEM which is over 6 minutes of graphic demos and more clip art in SPORTCLIP (this is the other program that I know WILL run on the SAM).\n\nSee you next month!\n\n— Brian.\n",
+  "body_ru": "## Взгляд в будущее: планы на следующий выпуск\n\nВ следующем месяце выйдет первая «официальная» SAM-версия OUTLET. ВСЕ постоянные текстовые рубрики: OUTLETTERS, OUTCLASS и т. д. тоже будут в новом номере, но пока неясно, какие именно программы удастся перенести. Однако будут добавлены отдельные программы специально для SAM, так что отличное наполнение, как всегда, гарантировано!\n\nТакже я могу прямо сейчас гарантировать, что ДВЕ из нижеперечисленных ТОЧНО войдут в SAM-версию...\n\n**CATLOADER** — это проверенная временем и надёжная программа от CHEZRON, представляющая собой автозагрузчик программ по одному нажатию с дополнительными возможностями. Она обновлена, улучшена, и теперь есть версии для Microdrive, Opus, +3 и SAM (в последней функций ещё БОЛЬШЕ!). Со временем мы надеемся выпустить версию и для Disciple/Plus D. Мы пользовались CATLOADER годами и, испробовав кучу других загрузчиков (включая мышь и окна Atari ST), по-прежнему довольны им! Не пропустите!\n\n**VECTOR 3D** — это демо 3D-графики; **ZX128** включает принтеры типа ZX в режиме 128K; **ZIG-ZAG** — хорошая стратегическая игра; **OUTPUT** — 7-я часть статьи «Program Protection».\n\n**WHATSORT** — демо множества алгоритмов сортировки с описанием; **MULTICALC** — простой калькулятор; **BANDIT** — симулятор «однорукого бандита», а **ECLECTIC** — система подсчёта очков и распечатки для соревнований по гольфу.\n\nЕщё есть **MEGADEM** — более 6 минут графических демо, а также новая графика в **SPORTCLIP** (это как раз вторая программа, которая, я знаю, ТОЧНО запустится на SAM).\n\nУвидимся в следующем месяце!\n\n— Brian.\n",
+  "text_type": 3
+}

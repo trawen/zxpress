@@ -1,0 +1,40 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "34",
+  "article_id": "05_ZAHL.TX",
+  "source_lang": "de-AT",
+  "title_en": "Zahlenraten",
+  "title_ru": "Zahlenraten",
+  "meta_description_en": "Brief description and loading instructions for the number guessing game Zahlenraten for the ZX Spectrum 48K from Scene+ magazine.",
+  "meta_description_ru": "Краткое описание и инструкция по запуску игры в угадывание чисел Zahlenraten для ZX Spectrum 48K из журнала Scene+.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    },
+    {
+      "tag_name": "zahlenraten",
+      "tag_alias": "zahlenraten"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "ZAHLRATEN ü - Zahlenraten - Können sie eine Zahl erraten die der\nComputer sich ausgesuchthat? Es wird Ihnen nur mitteilt ob die\nvon Ihnen eingetippte Zahl größer oder kleiner als die gesuchte\nist.. - Can you guess a unknown number choosen by the Computer?\nHe willjust tell you if the number is bigger or smaller.q -\nSpectrum 48. Load in 48 K mode, G\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**ZAHLRATEN** — Number guessing — Can you guess a number picked by the computer? It will only tell you whether the number you typed is greater or smaller than the one it is looking for.\n\n*Spectrum 48. Load in 48K mode.*\n",
+  "body_ru": "**ZAHLRATEN** — «Угадай число» — Сможете ли вы отгадать число, задуманное компьютером? Он лишь сообщает вам, больше или меньше введённое вами число, чем искомое.\n\n*Spectrum 48. Загружать в режиме 48K.*\n",
+  "text_type": 3
+}

@@ -1,0 +1,44 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "106",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Outlet #106 late editorial (June 1996): legal disclaimer note, lottery results for BIG SIX, UK home computer statistics, OUTDEX for Masterfile +3, and closure of the OUTWORKS section.",
+  "meta_description_ru": "Редакторская колонка Outlet #106 (июнь 1996): отказ от ответственности, результаты лотереи, статистика домашних ПК в Британии, база OUTDEX для Masterfile +3 и закрытие рубрики OUTWORKS.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "masterfile",
+      "tag_alias": "masterfile"
+    },
+    {
+      "tag_name": "outdex",
+      "tag_alias": "outdex"
+    },
+    {
+      "tag_name": "john cleveland",
+      "tag_alias": "john-cleveland"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "J U N E ,   1 9 9 6\n\nFrom this month we've started to\nput a legal disclaimer in OUTLET\nas most publications do and it\nseems sensible.It also serves to\nremind readers to take care with\nsoftware and information!\n\n\nThere was only time to put the\nlottery results up to 20th April\nin last month's BIG SIX analysis\nprogram so, as promised,here are\nthe results up to 25th May. That\ngives you a starter; after this\nyou must record them yourselves!\n\nWEEK\nNo.  DATE                  BONUS\n--- -----                  -----\n\n76  27.04  4  6 11 18 31 48  41\n\n77  04.05  6 25 26 33 34 47  49\n\n78  11.05  7 10 12 22 34 48  11\n\n79  18.05  4 12 13 33 40 46  41\n\n80  25.05  8 20 26 34 42 43  25\n\n\nAccording to a recent report, a\nTHIRD of British homes have a\ncomputer: the highest proportion\nin the world! The USA only has\nhalf that! This figure includes\n8-bit machines as well as IBM PC\nclones and probably also has all\nthe unused machines stuck on the\nshelves of many households!\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET. We\nare sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\n\nJohn Cleveland has sent in his\nMasterfile +3 version of OUTDEX.\nThis has data up to Issue 102.We\nhave been waiting for space on\nthe +3 OUTLET disk. Although at\nthe time of writing the +3 mast-\ner has not been created, we are\nhopeful there will be room this\nmonth on Side B.\n\nIf there is room, the file is\ncalled OUTDEX1.102. If not, well\nit will have to go in a later\nissue.Note that it does not show\non the CONTENTS page, you need\nto load MASTERFILE+3 from OUTLET\n76 and then load the new data in\nit.\n\nMany thanks to John for all his\nhard work! MF+3 holds more data\nin one file than MF 48K.\n\nRemember, we need YOUR support,\nand contributions of articles\nand programs, especially utility\nprograms, are now needed more\nthan ever. Even a short routine\ncan be like gold dust to another\nuser! Send 'em in!\n\nWe have now dropped our OUTWORKS\nsection. It was a good idea but\ndidn't seem to attract interest!\nWe still welcome project ideas\nbut will put them in OUTLETTERS!\n\n                    Ron & Brian\n\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nJ U N E ,   1 9 9 6\n\nFrom this month we've started to put a legal disclaimer in OUTLET as most publications do and it seems sensible.It also serves to remind readers to take care with software and information!\n\nThere was only time to put the lottery results up to 20th April in last month's BIG SIX analysis program so, as promised,here are the results up to 25th May. That gives you a starter; after this you must record them yourselves!\n\nWEEK No.  DATE                  BONUS\n\n```text\n--- -----                  -----\n```\n\n```text\n76  27.04  4  6 11 18 31 48  41\n```\n\n```text\n77  04.05  6 25 26 33 34 47  49\n```\n\n```text\n78  11.05  7 10 12 22 34 48  11\n```\n\n```text\n79  18.05  4 12 13 33 40 46  41\n```\n\n```text\n80  25.05  8 20 26 34 42 43  25\n```\n\nAccording to a recent report, a THIRD of British homes have a computer: the highest proportion in the world! The USA only has half that! This figure includes 8-bit machines as well as IBM PC clones and probably also has all the unused machines stuck on the shelves of many households!\n\nMay we remind readers, we cannot answer computer, software, hard- ware or system queries etc., personally by mail.  All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder!Share your problems with others! That way, everyone benefits!\n\nJohn Cleveland has sent in his Masterfile +3 version of OUTDEX. This has data up to Issue 102.We have been waiting for space on the +3 OUTLET disk. Although at the time of writing the +3 mast- er has not been created, we are hopeful there will be room this month on Side B.\n\nIf there is room, the file is called OUTDEX1.102. If not, well it will have to go in a later issue.Note that it does not show on the CONTENTS page, you need to load MASTERFILE+3 from OUTLET 76 and then load the new data in it.\n\nMany thanks to John for all his hard work! MF+3 holds more data in one file than MF 48K.\n\nRemember, we need YOUR support, and contributions of articles and programs, especially utility programs, are now needed more than ever. Even a short routine can be like gold dust to another user! Send 'em in!\n\nWe have now dropped our OUTWORKS section. It was a good idea but didn't seem to attract interest! We still welcome project ideas but will put them in OUTLETTERS!\n\nRon & Brian\n\nOUTLET is produced by Chris Oliver Ron & Brian Cavers CHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF.\n",
+  "body_ru": "## Editorial (late)\n\nИ Ю Н Ь ,   1 9 9 6\n\nС этого месяца мы начали публиковать в OUTLET отказ от ответственности, как это делает большинство изданий, и это кажется разумным шагом. Это также послужит напоминанием читателям о необходимости бережно обращаться с софтом и информацией!\n\nВ прошлом месяце в программу анализа BIG SIX удалось включить результаты лотереи только до 20 апреля, поэтому, как и обещали, приводим результаты до 25 мая. Для начала вам хватит, а дальше уже ведите записи самостоятельно!\n\n```text\nWEEK\nNo.  DATE                  BONUS\n--- -----                  -----\n\n76  27.04  4  6 11 18 31 48  41\n\n77  04.05  6 25 26 33 34 47  49\n\n78  11.05  7 10 12 22 34 48  11\n\n79  18.05  4 12 13 33 40 46  41\n\n80  25.05  8 20 26 34 42 43  25\n```\n\nСогласно недавнему отчету, в ТРЕТИ британских домов есть компьютер: это самая высокая доля в мире! В США этот показатель вдвое ниже! Сюда входят как 8-битные машины, так и клоны IBM PC, и, вероятно, также учитываются все те заброшенные компьютеры, которые пылятся на полках у многих семей!\n\nНапоминаем читателям: мы не можем отвечать на вопросы по компьютерам, программам, «железу» или системам лично по почте. Все подобные вопросы разбираются через раздел OUTLETTERS в OUTLET. Простите, что постоянно твердим об этом, но об этом правиле действительно нужно регулярно напоминать! Делитесь своими проблемами с другими! От этого выиграют все!\n\nJohn Cleveland прислал свою версию OUTDEX для Masterfile +3. В ней содержатся данные вплоть до номера 102. Мы ждали свободного места на диске OUTLET для +3. Хотя на момент написания этих строк мастер-диск для +3 еще не собран, мы надеемся, что в этом месяце на стороне B найдется место.\n\nЕсли место будет, файл называется OUTDEX1.102. Если нет — что ж, придется отложить его до следующего номера. Обратите внимание, что он не отображается на странице CONTENTS (Содержание) — вам нужно загрузить MASTERFILE+3 из OUTLET 76, а затем загрузить в него новые данные.\n\nОгромное спасибо Джону за его тяжелый труд! MF+3 вмещает больше данных в одном файле, чем MF 48K.\n\nПомните, нам нужна ВАША поддержка, а присланные статьи и программы — особенно утилиты — сейчас нужны как никогда. Даже короткая подпрограмма может оказаться на вес золота для другого пользователя! Присылайте их нам!\n\nМы убрали раздел OUTWORKS. Идея была хорошей, но, похоже, не вызвала интереса! Мы по-прежнему рады идеям для проектов, но теперь будем публиковать их в OUTLETTERS!\n\nRon & Brian\n\nOUTLET выпускают:\nChris Oliver\nRon & Brian Cavers\nCHEZRON SOFTWARE\n34 Saltersgate Drive\nBirstall, Leicester LE4 3FF.\n",
+  "text_type": 3
+}

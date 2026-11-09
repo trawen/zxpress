@@ -1,0 +1,40 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "34",
+  "article_id": "04_ALIEN.TX",
+  "source_lang": "de-AT",
+  "title_en": "Alien",
+  "title_ru": "Alien",
+  "meta_description_en": "A brief overview and description of the classic ZX Spectrum game Alien, featured in Scene+ #34.",
+  "meta_description_ru": "Краткое описание классической игры Alien для ZX Spectrum 48K из австрийского дискмага Scene+ #34.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "alien",
+      "tag_alias": "alien"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "austria",
+      "tag_alias": "austria"
+    }
+  ],
+  "category_ids": [
+    1,
+    3
+  ],
+  "body_de_plain": "ALIE ü - ALIEN - Als Besatzungsmitglied der Nostromo müssen sie\nin diesem Spielalle Charaktere steuernd den\nSelbstzerstörungscomputeraktivieren, Ripleys Katze einfangen\n(Nicht ohne meine Katze!) und in einer Fluchtkapsel das Schiff\nverlassen. Zuvor darf mansich nicht von dem Alien verspeisen\nlassen. D - As a crew member of the Starship Nostromo you must\ncontrol allother characters to activate the self-destruction\ncomputer, catch Ripley's cat and flee with a escape pod. Be\ncareful andbeware the ALIEN! Q - Spectrum 48. Load in 48\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "**ALIEN**\n\nAs a crew member of the *Nostromo*, in this game you must control all characters to activate the self-destruct computer, catch Ripley's cat (*Not without my cat!*), and abandon ship in an escape pod. Before that, you must make sure not to get eaten by the Alien.\n\n*English description from the original text:*\nAs a crew member of the Starship Nostromo you must control all other characters to activate the self-destruction computer, catch Ripley's cat and flee with an escape pod. Be careful and beware the ALIEN!\n\n**Requirements:** Spectrum 48K. Load in 48K mode.\n",
+  "body_ru": "**ALIEN**\n\nБудучи членом экипажа космического корабля «Ностромо», в этой игре вам предстоит управлять всеми персонажами, чтобы активировать компьютер самоуничтожения, поймать кота Рипли («Не без моего кота!») и покинуть судно на спасательной капсуле. Но перед этим главное — не дать Чужому себя сожрать.\n\n*Описание из оригинала:*\nAs a crew member of the Starship Nostromo you must control all other characters to activate the self-destruction computer, catch Ripley's cat and flee with a escape pod. Be careful and beware the ALIEN!\n\n**Требования:** Spectrum 48K. Загружать в режиме 48K.\n",
+  "text_type": 3
+}

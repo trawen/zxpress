@@ -1,0 +1,46 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "085",
+  "article_id": "09_clipstik",
+  "title_en": "Clipstik",
+  "title_ru": "Clipstik",
+  "meta_description_en": "User guide for the CLIPSTICK screen-image manipulation utility by Roelof & Johan Koning on ZX Spectrum: features, controls, zooming, rotating, and buffer boxes.",
+  "meta_description_ru": "Руководство к утилите CLIPSTICK от Roelof & Johan Koning: функции манипулирования экраном ZX Spectrum, масштабирование, поворот и работа с буферами.",
+  "authors": [
+    "Roelof Koning",
+    "Johan Koning"
+  ],
+  "tags": [
+    {
+      "tag_name": "clipstick",
+      "tag_alias": "clipstick"
+    },
+    {
+      "tag_name": "графический редактор",
+      "tag_alias": "graficheskij-redaktor"
+    },
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "sgg",
+      "tag_alias": "sgg"
+    },
+    {
+      "tag_name": "утилиты",
+      "tag_alias": "utiliti"
+    }
+  ],
+  "category_ids": [
+    62,
+    64,
+    67
+  ],
+  "body_en_plain": "CLIPSTICK By Roelof & Johan\n  Koning of  the  Netherlands\n  Sinclair User  Group  (SGG)\n  ---------------------------\n\nThe next program, CLIPSTICK, is\na screen-image manipulator based\non the idea of CLIP-COMPOSER,\nwhich was in Issue 29 of OUTLET.\nThere are many extra features,\nand CLIPSTICK operates on the\ncomplete screen area.\n\n\nOn first RUNning the program, an\ninfo page is displayed which\ndetails the main movement keys:\nie...    WINDOWMOVE by 6-7-5-8\n         WINDOWSIZE by Q-A-O-P\n         WINDOWSCROLL ARROW-KEYS\n\nRemember \"B\" = Back to OUTLET.\n\nAt any time, the HELP page can\nbe called up by key \"H\", and\nthis displays a full list of all\ncommand keys and their effects.\n\nThe commands are mostly self-\nexplanatory and the program is\nvery easy to use after only a\nshort practice period.\n\nA few further notes on the extra\nfeatures:-\n\n\nROTATE : rotates the contents of\nthe window clockwise in 90\ndegree steps.\n\nZOOM : rapidly magnifies the\ncurrent window image.\n\nUNDO : takes you back one step\nonly, to the previous screen.\n\n\nMONOCHROME : instant clearing of\nattributes in either just the\nwindow, or complete screen to\nblack INK on white PAPER.\n\n\nCLEAR : now gives you three\noptions... Clear inside the\nwindow, outside the window, or\nthe complete screen.\n\n\nNote that the contents of a box\nare not protected, so for\nexample GETting a new window\ninto box \"A\" will wipe out any\nprevious contents of box \"A\".\nThe contents of each box is\ncompacted and placed on the box-\nstack so that memory is used\nto maximum efficiency.\n\n\nSometimes ZOOM and ROTATE will\nbe looking outside the sceen\narea, as they are addressing a\nlarger area than you expected.\nFor example ROTATE needs a\nsquare box, so if the smallest\nside of the box is close to the\nrighthand side or bottom of the\nscreen, it will get information\nfrom outside the screen area.\n\n\nThe information returned often\nlooks like garbage on-screen,\nbut this can usually be cleared\nby placing a window round the\nrubbish and clearing it.\n\nAnother small problem is that\nGETting or SETting a window that\nhas its border in the bottom\nline, will leave some marks\nbehind in that line. Hovever,\ndirectly repeating the same GET\nor SET will remove those marks.\n\nFinally,note control of the all-\nowed box names is in BASIC and\ncan be easily altered so it is\npossible to work with up to 256\nboxes at the same time!\n\nPress \"N\" now to load CLIPSTICK\n.\n",
+  "body_ru_plain": "",
+  "body_en": "## Clipstik\n\nCLIPSTICK By Roelof & Johan Koning of  the  Netherlands Sinclair User  Group  (SGG)\n\n```text\n  ---------------------------\n```\n\nThe next program, CLIPSTICK, is a screen-image manipulator based on the idea of CLIP-COMPOSER, which was in Issue 29 of OUTLET. There are many extra features, and CLIPSTICK operates on the complete screen area.\n\nOn first RUNning the program, an info page is displayed which details the main movement keys: ie...    WINDOWMOVE by 6-7-5-8 WINDOWSIZE by Q-A-O-P WINDOWSCROLL ARROW-KEYS\n\nRemember \"B\" = Back to OUTLET.\n\nAt any time, the HELP page can be called up by key \"H\", and this displays a full list of all command keys and their effects.\n\nThe commands are mostly self- explanatory and the program is very easy to use after only a short practice period.\n\nA few further notes on the extra features:-\n\nROTATE : rotates the contents of the window clockwise in 90 degree steps.\n\nZOOM : rapidly magnifies the current window image.\n\nUNDO : takes you back one step only, to the previous screen.\n\nMONOCHROME : instant clearing of attributes in either just the window, or complete screen to black INK on white PAPER.\n\nCLEAR : now gives you three options... Clear inside the window, outside the window, or the complete screen.\n\nNote that the contents of a box are not protected, so for example GETting a new window into box \"A\" will wipe out any previous contents of box \"A\". The contents of each box is compacted and placed on the box- stack so that memory is used to maximum efficiency.\n\nSometimes ZOOM and ROTATE will be looking outside the sceen area, as they are addressing a larger area than you expected. For example ROTATE needs a square box, so if the smallest side of the box is close to the righthand side or bottom of the screen, it will get information from outside the screen area.\n\nThe information returned often looks like garbage on-screen, but this can usually be cleared by placing a window round the rubbish and clearing it.\n\nAnother small problem is that GETting or SETting a window that has its border in the bottom line, will leave some marks behind in that line. Hovever, directly repeating the same GET or SET will remove those marks.\n\nFinally,note control of the all- owed box names is in BASIC and can be easily altered so it is possible to work with up to 256 boxes at the same time!\n\nPress \"N\" now to load CLIPSTICK .\n",
+  "body_ru": "## CLIPSTICK\n\n**Авторы:** Roelof & Johan Koning из Netherlands Sinclair User Group (SGG)\n\n---\n\nСледующая программа, CLIPSTICK, представляет собой редактор экранной графики, основанный на идее CLIP-COMPOSER, которая публиковалась в 29-м номере OUTLET. В ней появилось множество дополнительных возможностей, и CLIPSTICK работает со всей областью экрана.\n\nПри первом запуске (RUN) выводится информационная страница с подробным описанием основных клавиш перемещения:\nнапример...\n```text\nWINDOWMOVE:    6-7-5-8\nWINDOWSIZE:    Q-A-O-P\nWINDOWSCROLL:  СТРЕЛКИ\n```\n\nПомните: «B» — возврат в OUTLET.\n\nВ любой момент по клавише «H» можно вызвать страницу справки (HELP), где отображается полный список всех командных клавиш и их действий.\n\nКоманды в основном интуитивно понятны, и после непродолжительной практики программой становится очень легко пользоваться.\n\nНесколько дополнительных замечаний о новых возможностях:\n\n**ROTATE** : поворачивает содержимое окна по часовой стрелке с шагом 90 градусов.\n\n**ZOOM** : быстро увеличивает текущее изображение в окне.\n\n**UNDO** : возвращает ровно на один шаг назад, к предыдущему состоянию экрана.\n\n**MONOCHROME** : мгновенная очистка атрибутов до черных чернил (INK) на белой бумаге (PAPER) — либо только внутри окна, либо на всем экране.\n\n**CLEAR** : теперь предлагает три варианта... Очистить внутри окна, снаружи окна или весь экран целиком.\n\nОбратите внимание, что содержимое буферных областей (box) не защищено от перезаписи, поэтому, например, операция GET для нового окна в буфер «A» сотрет все предыдущее содержимое этого буфера. Содержимое каждого буфера сжимается и помещается в стек буферов, что обеспечивает максимально эффективное использование памяти.\n\nИногда ZOOM и ROTATE могут обращаться к областям за пределами экрана, так как они обрабатывают область большего размера, чем вы ожидали. Например, для ROTATE требуется квадратная область, поэтому, если меньшая сторона окна находится близко к правому краю или к нижней части экрана, процедура захватит данные из-за пределов экранной области.\n\nВозвращенная информация часто выглядит на экране как мусор, но его обычно можно убрать, выделив окном этот участок и выполнив очистку.\n\nЕще одна небольшая проблема заключается в том, что при выполнении GET или SET для окна, нижняя граница которого находится на самой нижней строке экрана, на этой строке могут остаться артефакты. Впрочем, повторный вызов того же GET или SET сразу же удалит эти следы.\n\nИ наконец, обратите внимание: управление допустимыми именами буферов реализовано на BASIC и может быть легко изменено, благодаря чему можно работать одновременно с количеством буферов вплоть до 256!\n\nНажмите «N» сейчас, чтобы загрузить CLIPSTICK.\n",
+  "text_type": 3
+}

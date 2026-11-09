@@ -1,0 +1,47 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "014",
+  "article_id": "05_lookout",
+  "title_en": "Lookout",
+  "title_ru": "Lookout: Обзор прессы и новости",
+  "meta_description_en": "Press roundup and news: Your Sinclair review, the demise of Your Computer, a new Sinclair-branded PC from Amstrad, and Anamartic wafer-scale news.",
+  "meta_description_ru": "Краткие новости и обзор прессы: журнал Your Sinclair, закрытие Your Computer, новый PC под маркой Sinclair от Amstrad и инвестиции в Anamartic.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "your sinclair",
+      "tag_alias": "your-sinclair"
+    },
+    {
+      "tag_name": "your computer",
+      "tag_alias": "your-computer"
+    },
+    {
+      "tag_name": "amstrad",
+      "tag_alias": "amstrad"
+    },
+    {
+      "tag_name": "anamartic",
+      "tag_alias": "anamartic"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus-3"
+    },
+    {
+      "tag_name": "пресса",
+      "tag_alias": "press"
+    }
+  ],
+  "category_ids": [
+    130,
+    131,
+    116
+  ],
+  "body_en_plain": "L O O K O U T !\nOur schedule is so messed about\nby the postal strike and various\nevents I can only cover YOUR\nSINCLAIR this month. This has a\nreview of CP/M and Mallard BASIC\nfor the +3. \"Program Pitstop\" is\ndevoted to 128K music routines.\nI might add that the front cover\nsets a new low in bad taste even\nfor my liberal outlook.They must\nbe hoping for publicity at any\ncost.\n\nYOUR COMPUTER has been abandoned\nby its publishers(as I suspected\nlast month)but the name may be\ntaken up by another publisher.In\nmy view YOUR COMPUTER died some\ntime age. R.I.P.\n\nAmstrad have a new computer with\nthe Sinclair name - a PC machine\nat about `300.\n\nWoolworth's will increase the\nnumber of their stores stocking\nsoftware in October so it may be\nworth checking out your local.\n\nAnamartic,Sinclair's wafer-scale\ncompany, has had `6 million plus\ninvested from various sources so\nwe ought to see new data storage\ndevices replacing disk drives\nfor some applications next year.\nRoll on the clockwork microdrive\nI say....\n",
+  "body_ru_plain": "В Н И М А Н И Е !\nНаш график настолько сбит\nзабастовкой почты и прочими\nсобытиями, что в этом месяце\nя могу осветить только YOUR\nSINCLAIR. Там есть обзор CP/M\nи Mallard BASIC для +3. Раздел\n\"Program Pitstop\" посвящён\nмузыкальным процедурам для 128K.\nМогу добавить, что обложка\nставит новый рекорд безвкусицы\nдаже на мой либеральный взгляд.\nДолжно быть, они надеются\nна шумиху любой ценой.\n\nИздатели забросили YOUR COMPUTER\n(как я и ожидал в прошлом\nмесяце), но имя может перенять\nдругой издатель. По-моему,\nYOUR COMPUTER умер уже давно.\nR.I.P.\n\nУ Amstrad новый компьютер с\nмаркой Sinclair — это PC-машина\nпримерно за `300.\n\nWoolworth's в октябре увеличит\nчисло магазинов, продающих\nсофт, так что, возможно, стоит\nзаглянуть в местный филиал.\n\nAnamartic, компания Sinclair\nпо wafer-scale, получила более\n`6 million инвестиций из разных\nисточников, так что в будущем\nгоду мы должны увидеть новые\nнакопители, заменяющие дисководы\nдля некоторых задач. Скорей бы\nзаводной microdrive, скажу я...\n",
+  "body_en": "## LOOKOUT!\n\nOur schedule is so messed about by the postal strike and various events I can only cover YOUR SINCLAIR this month. This has a review of CP/M and Mallard BASIC for the +3. \"Program Pitstop\" is devoted to 128K music routines. I might add that the front cover sets a new low in bad taste even for my liberal outlook. They must be hoping for publicity at any cost.\n\nYOUR COMPUTER has been abandoned by its publishers (as I suspected last month) but the name may be taken up by another publisher. In my view YOUR COMPUTER died some time age. R.I.P.\n\nAmstrad have a new computer with the Sinclair name - a PC machine at about `300.\n\nWoolworth's will increase the number of their stores stocking software in October so it may be worth checking out your local.\n\nAnamartic, Sinclair's wafer-scale company, has had `6 million plus invested from various sources so we ought to see new data storage devices replacing disk drives for some applications next year. Roll on the clockwork microdrive I say....\n",
+  "body_ru": "### Внимание!\n\nНаш график настолько сбит забастовкой почты и прочими событиями, что в этом месяце я могу осветить только YOUR SINCLAIR. Там есть обзор CP/M и Mallard BASIC для +3. Раздел \"Program Pitstop\" посвящён музыкальным процедурам для 128K. Могу добавить, что обложка ставит новый рекорд безвкусицы даже на мой либеральный взгляд. Должно быть, они надеются на шумиху любой ценой.\n\nИздатели забросили YOUR COMPUTER (как я и ожидал в прошлом месяце), но имя может перенять другой издатель. По-моему, YOUR COMPUTER умер уже давно. R.I.P.\n\nУ Amstrad новый компьютер с маркой Sinclair — это PC-машина примерно за `300.\n\nWoolworth's в октябре увеличит число магазинов, продающих софт, так что, возможно, стоит заглянуть в местный филиал.\n\nAnamartic, компания Sinclair по wafer-scale, получила более `6 million инвестиций из разных источников, так что в будущем году мы должны увидеть новые накопители, заменяющие дисководы для некоторых задач. Скорей бы заводной microdrive, скажу я...\n",
+  "text_type": 3
+}

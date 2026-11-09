@@ -1,0 +1,50 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "046",
+  "article_id": "06_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Outlet #046 editorial (June 1991): release and bug fixes for the OUTWRITE! word processor for SAM Coupé by Bob Wilkinson, instructions for upgrading to V1.2, and pricing info.",
+  "meta_description_ru": "Колонка редакторов Outlet #046 (июнь 1991): релиз и исправления текстового процессора OUTWRITE! для SAM Coupé от Bob Wilkinson, инструкции по обновлению до версии 1.2 и цены.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "sam-coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "outwrite",
+      "tag_alias": "outwrite"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "bob wilkinson",
+      "tag_alias": "bob-wilkinson"
+    },
+    {
+      "tag_name": "word processor",
+      "tag_alias": "word-processor"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    }
+  ],
+  "category_ids": [
+    123,
+    74,
+    76
+  ],
+  "body_en_plain": "J U N E, 1 9 9 1\n\nThis will be an extremely short\neditorial due to the upheaval\ncaused by moving home, launching\nOUTWRITE!, holidays, etc. Sorry\nif you have received your OUTLET\na few days late!\n\nThe OUTWRITE! manual is complete\nalthough we hope to improve its\nappearance by having it properly\nprinted. OUTWRITE! too has had\nits minor glitches removed and\nfree upgrades have been sent to\nall existing users. The author\nof OUTWRITE!, Bob Wilkinson, is\nworking on further improvements,\nsuch as block delete,block move,\nmultiple documents and, most\nimportant, variable margins. A\n\"SAVE/LOAD AS ASCII\" option is\nalso being looked at to make it\nmore compatible with other text\nformats.If you want a true, SAM-\nspecific word processor though -\nDON'T WAIT - order now (see ADD-\nVERTS)as the future upgrade will\nonly cost a nominal sum of about\n`2.00 to existing users!\n\nIncidentally, for reference, the\nfirst, pre-production version of\nOUTWRITE! is V1.0; the official\nlaunch version is V1.1. There is\nnow a V1.2 being issued but you\ndo not need it if you have V1.1.\nThe only changes can be done by\nyourself if required.They are:If\nusing the Brother M1009 option\nthen first delete BASIC lines\n1800 and 1810. These incorrectly\nPOKE the BOLD setting.The POKEs,\nin fact, are not needed. If you\nhave already used this just go\nback to your master copy and try\nagain. The other is POKE 66865,0\nto stop possible character loss\nat the end of a line in a large\nfile in insert mode when typing\nvery fast!POKE 73125,50 to alter\nthe version number and resave.\n\nMarket experts tell us OUTWRITE!\nis heavily UNDER-priced.The only\nway it can be sold by dealers,\netc., MUST be at a higher price.\nHowever, WE shall maintain the\npreviously-quoted price of `12\nTO OUTLET READERS so don't be\nconcerned if you see it promoted\nelsewhere at the higher price!\n\nWell, this editorial hasn't been\nthat short after all but it's\nall been about OUTWRITE! Never\nmind, the rest of the magazine\nawaits you...\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nJ U N E, 1 9 9 1\n\nThis will be an extremely short editorial due to the upheaval caused by moving home, launching OUTWRITE!, holidays, etc. Sorry if you have received your OUTLET a few days late!\n\nThe OUTWRITE! manual is complete although we hope to improve its appearance by having it properly printed. OUTWRITE! too has had its minor glitches removed and free upgrades have been sent to all existing users. The author of OUTWRITE!, Bob Wilkinson, is working on further improvements, such as block delete,block move, multiple documents and, most important, variable margins. A \"SAVE/LOAD AS ASCII\" option is also being looked at to make it more compatible with other text formats.If you want a true, SAM- specific word processor though - DON'T WAIT - order now (see ADD- VERTS)as the future upgrade will only cost a nominal sum of about `2.00 to existing users!\n\nIncidentally, for reference, the first, pre-production version of OUTWRITE! is V1.0; the official launch version is V1.1. There is now a V1.2 being issued but you do not need it if you have V1.1. The only changes can be done by yourself if required.They are:If using the Brother M1009 option then first delete BASIC lines 1800 and 1810. These incorrectly POKE the BOLD setting.The POKEs, in fact, are not needed. If you have already used this just go back to your master copy and try again. The other is POKE 66865,0 to stop possible character loss at the end of a line in a large file in insert mode when typing very fast!POKE 73125,50 to alter the version number and resave.\n\nMarket experts tell us OUTWRITE! is heavily UNDER-priced.The only way it can be sold by dealers, etc., MUST be at a higher price. However, WE shall maintain the previously-quoted price of `12 TO OUTLET READERS so don't be concerned if you see it promoted elsewhere at the higher price!\n\nWell, this editorial hasn't been that short after all but it's all been about OUTWRITE! Never mind, the rest of the magazine awaits you...\n\nRon & Brian Cavers CHEZRON   SOFTWARE 605, Loughborough Road Birstall,Leicester LE4 4NJ.\n",
+  "body_ru": "## Editorial (late)\n\n### И Ю Н Ь, 1 9 9 1\n\nЭта колонка редактора будет предельно короткой из-за суматохи, вызванной переездом, запуском OUTWRITE!, отпусками и прочим. Простите, если ваш OUTLET пришел с опозданием на несколько дней!\n\nРуководство к OUTWRITE! готово, хотя мы надеемся улучшить его внешний вид, отпечатав в типографии как следует. В самой OUTWRITE! тоже устранены мелкие недочеты, и бесплатные обновления уже разосланы всем существующим пользователям. Автор OUTWRITE!, Bob Wilkinson, работает над дальнейшими улучшениями, такими как удаление блока, перемещение блока, работа с несколькими документами и, самое главное, настраиваемые поля. Также рассматривается вариант добавления функции «SAVE/LOAD AS ASCII», чтобы сделать программу более совместимой с другими текстовыми форматами. Однако, если вам нужен настоящий текстовый процессор специально для SAM — НЕ ЖДИТЕ — заказывайте прямо сейчас (см. ADD-VERTS), так как будущее обновление обойдется текущим пользователям всего лишь в чисто символическую сумму около `2.00!\n\nК слову, для справки: первая, предсерийная версия OUTWRITE! — это V1.0; официальная релизная версия — V1.1. Сейчас рассылается V1.2, но если у вас уже есть V1.1, она вам не нужна. Все внесенные изменения вы при необходимости можете сделать сами. А именно: если используется вариант Brother M1009, сначала удалите строки BASIC 1800 и 1810. Они ошибочно делают POKE настройки BOLD. Эти POKE на самом деле вообще не нужны. Если вы уже запускали эту версию, просто вернитесь к мастер-копии и повторите попытку. Второе исправление — POKE 66865,0, чтобы предотвратить возможную потерю символов в конце строки в большом файле в режиме вставки при очень быстром наборе текста! Сделайте POKE 73125,50, чтобы изменить номер версии, и пересохраните программу.\n\nЭксперты рынка твердят нам, что цена на OUTWRITE! сильно ЗАНИЖЕНА. Дилеры и прочие распространители СМОГУТ продавать ее только по более высокой цене. Тем не менее, МЫ сохраним ранее объявленную цену `12 ДЛЯ ЧИТАТЕЛЕЙ OUTLET, так что не беспокойтесь, если увидите, что в других местах она рекламируется дороже!\n\nЧто ж, эта колонка редактора в итоге оказалась не такой уж и короткой, хоть и была целиком посвящена OUTWRITE! Ну да ладно, остальная часть журнала уже ждет вас...\n\n```text\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n```\n",
+  "text_type": 3
+}

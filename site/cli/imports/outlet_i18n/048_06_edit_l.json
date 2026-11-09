@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "048",
+  "article_id": "06_edit_l",
+  "title_en": "Editorial (Late) - August 1991",
+  "title_ru": "Редакторская колонка (дополнение) — Август 1991",
+  "meta_description_en": "Editorial note from Chezron Software in Outlet #048: contributor payouts, SAM disk errors, the OPENOUTLET utility, and Spectrum vs SAM Coupe coverage.",
+  "meta_description_ru": "Заметка редакторов Chezron Software в Outlet #048: выплаты авторам, дисковые ошибки на SAM, утилита OPENOUTLET и баланс материалов по Spectrum и SAM.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron",
+      "tag_alias": "chezron"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "openoutlet",
+      "tag_alias": "openoutlet"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "A U G U S T ,  1 9 9 1\n\nOver `5000 has been paid to YOU,\nthe readers of OUTLET in payment\nfor programs and articles that\nyou have contributed to OUTLET\nsince we began in 1987. Can we\nhave it back please?\n\nSeriously, that `5000 figure is\ngenuine and prompts us to remind\nyou all that we do pay for the\nmaterial published. We know that\nmany of you are glad to support\nOUTLET anyway or are just happy\nto be able to share software you\nhave written with others but if\nanyone is a bit short of cash to\npay for their monthly fix of\nOUTLET,you don't need to send in\nmuch to keep you in free OUTLETs\nindefinitely! Many readers take\ncredit for free subscriptions in\nthis way.We thought we'd mention\nit in case anyone wasn't aware -\nthis is not a plea for more and\nmore contributions! Remember,\nthough, payment is sent when\npublished which may take a few\nmonths because there's a queue!\n\nWe've had several SAM OUTLETs\nreturned over the last month or\ntwo with disc errors (which have\nbeen replaced).We think the root\nof the problem may be one of our\ndrives which seems to be faulty\nbut the odd thing is most of the\ndiscs returned load o.k. on our\nsystems! We apologize for any\ninconvenience but please bear\nwith us until we can solve this.\n\nWe've had requests for a method\nof converting our compressed\ntext files back into accessible\nASCII text files. This has not\nproved so easy as it used to be\non the microdrive but at least,\nif you have MASTERDOS on SAM you\ncan now do it with OPENOUTLET in\nthis issue!\n\nThere's an interesting OUTLETTER\nfrom Peter Wheeler this month on\nthe topic of the amount of\nSpectrum \"coverage\" in OUTLET as\nagainst SAM. Let us know your\nviews and suggestions as to any\naction that might be taken!\n\n\n\n\n\n\n\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n     605, Loughborough Road\n   Birstall,Leicester LE4 4NJ.\n",
+  "body_ru_plain": "",
+  "body_en": "AUGUST, 1991\n\nOver £5000 has been paid to YOU, the readers of OUTLET in payment for programs and articles that you have contributed to OUTLET since we began in 1987. Can we have it back please?\n\nSeriously, that £5000 figure is genuine and prompts us to remind you all that we do pay for the material published. We know that many of you are glad to support OUTLET anyway or are just happy to be able to share software you have written with others, but if anyone is a bit short of cash to pay for their monthly fix of OUTLET, you don't need to send in much to keep you in free OUTLETs indefinitely! Many readers take credit for free subscriptions in this way. We thought we'd mention it in case anyone wasn't aware — this is not a plea for more and more contributions! Remember, though, payment is sent when published, which may take a few months because there's a queue!\n\nWe've had several SAM OUTLETs returned over the last month or two with disc errors (which have been replaced). We think the root of the problem may be one of our drives which seems to be faulty, but the odd thing is most of the discs returned load o.k. on our systems! We apologize for any inconvenience, but please bear with us until we can solve this.\n\nWe've had requests for a method of converting our compressed text files back into accessible ASCII text files. This has not proved so easy as it used to be on the microdrive, but at least, if you have MASTERDOS on SAM you can now do it with OPENOUTLET in this issue!\n\nThere's an interesting OUTLETTER from Peter Wheeler this month on the topic of the amount of Spectrum \"coverage\" in OUTLET as against SAM. Let us know your views and suggestions as to any action that might be taken!\n\nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "body_ru": "АВГУСТ 1991\n\nБолее £5000 было выплачено ВАМ, читателям OUTLET, в качестве гонораров за программы и статьи, присланные в редакцию с момента нашего старта в 1987 году. Можно вернуть их обратно, пожалуйста?\n\nА если серьезно, цифра в £5000 абсолютно реальна, и это отличный повод напомнить всем, что мы действительно платим за публикуемые материалы. Мы знаем, что многие из вас рады поддержать OUTLET просто так или искренне счастливы поделиться своими программами с другими. Однако, если кому-то не хватает наличных на ежемесячную «дозу» OUTLET, достаточно присылать совсем немного материала, чтобы бесконечно получать журнал бесплатно! Многие читатели оформляют подписку именно таким зачетом. Мы решили упомянуть об этом на случай, если кто-то не знал — это вовсе не мольба завалить нас новыми работами! Но помните: оплата начисляется по факту публикации, что из-за очереди может занять пару месяцев!\n\nЗа последние месяц-два нам вернули несколько дисков SAM OUTLET из-за ошибок чтения (мы их, конечно же, заменили). Похоже, корень проблемы кроется в одном из наших дисководов, который барахлит. Самое странное, что большинство возвращенных дисков на наших компьютерах читаются безо всяких проблем! Приносим извинения за неудобства и просим проявить терпение, пока мы разбираемся с этой неполадкой.\n\nК нам поступали просьбы предоставить способ конвертации наших сжатых текстовых файлов обратно в обычный ASCII. Это оказалось не так просто, как во времена Microdrive, но по крайней мере владельцы SAM с MASTERDOS теперь могут сделать это с помощью утилиты OPENOUTLET из этого номера!\n\nВ рубрике OUTLETTER в этом месяце опубликовано интересное письмо от Peter Wheeler на тему баланса материалов по Spectrum и SAM Coupe на страницах OUTLET. Напишите нам свое мнение и предложения о том, какие меры стоит предпринять!\n\nRon & Brian Cavers  \nCHEZRON SOFTWARE  \n605, Loughborough Road  \nBirstall, Leicester LE4 4NJ.\n",
+  "text_type": 3
+}

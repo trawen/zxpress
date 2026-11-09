@@ -1,0 +1,49 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "33",
+  "article_id": "03_DELDEM1.TX",
+  "source_lang": "de-AT",
+  "title_en": "Delta Animation Demo 1",
+  "title_ru": "Delta Animation Demo 1",
+  "meta_description_en": "A brief note on Delta Animation Demo 1 from Scene+ #33, demonstrating the delta compressor using an animation from the Legacy project.",
+  "meta_description_ru": "Краткая заметка о Delta Animation Demo 1 из Scene+ #33: демонстрация возможностей дельта-компрессора на материале анимации для проекта Legacy.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "legacy",
+      "tag_alias": "legacy"
+    },
+    {
+      "tag_name": "animation",
+      "tag_alias": "animation"
+    },
+    {
+      "tag_name": "compression",
+      "tag_alias": "compression"
+    },
+    {
+      "tag_name": "demo",
+      "tag_alias": "demo"
+    }
+  ],
+  "category_ids": [
+    45,
+    52,
+    93
+  ],
+  "body_de_plain": "DELT ü - DELTA ANIMATION DEMO 1 - Eine der früheren \"Legacy\"\nAnimationen habe ich verwendet um dieleistungsfähigkeit meines\nDelta-Compressors zu demonstrieren.ü - One of the earlier\nanimations made for \"Legacy\" resampled to usewith my delta\ncompressor to show its full power.p -\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### DELTA ANIMATION DEMO 1\n\nI used one of the earlier animations created for \"Legacy\" to demonstrate the efficiency and power of my delta compressor.\n",
+  "body_ru": "### DELTA ANIMATION DEMO 1\n\nЯ использовал одну из ранних анимаций, созданных для проекта «Legacy», чтобы продемонстрировать всю эффективность и возможности моего дельта-компрессора.\n",
+  "text_type": 3
+}

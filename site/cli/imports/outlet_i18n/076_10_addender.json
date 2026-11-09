@@ -1,0 +1,48 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "076",
+  "article_id": "10_addender",
+  "title_en": "Addender",
+  "title_ru": "Дополнение",
+  "meta_description_en": "Editorial notes on the Add-Enders bonus section in Outlet #76, introducing DiscKit v2, +D Poker, Copy All v2, and Masterfile updates.",
+  "meta_description_ru": "Заметка редактора о бонусном разделе Add-Enders в Outlet #76: утилиты DiscKit v2, +D Poker, Copy All v2 и обновления баз данных Masterfile.",
+  "authors": [
+    "Brian Clark"
+  ],
+  "tags": [
+    {
+      "tag_name": "add-enders",
+      "tag_alias": "add-enders"
+    },
+    {
+      "tag_name": "disckit",
+      "tag_alias": "disckit"
+    },
+    {
+      "tag_name": "+d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "copy all",
+      "tag_alias": "copy-all"
+    },
+    {
+      "tag_name": "masterfile",
+      "tag_alias": "masterfile"
+    },
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    }
+  ],
+  "category_ids": [
+    62,
+    116
+  ],
+  "body_en_plain": "Some items contributed to OUTLET\nhave not yet been included for a\nvariety of reasons. It's a shame\nto leave them on the shelf so,if\nappropriate, they will be added\nto this ADD-ENDERS area of the\nmagazine (not microdrive or Opus\nas there is not enough room).\n\nThe material covers a wide range\nof quality and program types:\nutilities, screens, character\nsets and text articles and SOME\nof it may be unedited, untested,\nnot working fully or properly;\nin need of conversion for your\n\nsystem's syntax or printer etc.;\nwithout full instructions or\nwhatever. Readers will have to\nsift through to see if there is\nanything of interest they can\nmake use of and discard the\nrest. Not everything will appear\non all versions necessarily.\n\nSome Add-Enders may be linked to\nOUTLET in the normal way. These\nwill usually precede this text\nfile. Any items that follow this\narticle will possibly need to be\nLOADed manually or may not auto-\nrun when loaded.\n\nThere may be some info on the\nfollowing pages...\n\nNext in ADDENDERS is DISCKIT V2.\nThe original had some bugs which\nDanny Beach has kindly resolved\nin this new version.More info in\nthe program WHEN YOU RUN IT.\n\nThat's followed by +D POKER that\nlet's you enter Multiface-type\nPOKEs using the +D snapshot but-\nton to change games etc.\n\nCOPY ALL Version 2 follows that.\nBecause we couldn't test COPYALL\n(OUTLET 75) without a 24-pin\nprinter we didn't realize our\nstandard printer merge put it in\nthe wrong mode.COPY ALL V2. puts\nit back in the right mode and\nshould be OK (we hope!). Read\nRick Schuitemaker's OUTLETTER in\nthis issue.\n\nOUTDEX1.63 is index data to load\ninto MASTERFILE. The original\nlast month accidentally had 64\nand 65 data included too! Read\nthis month's editorial for more\ninfo.\n\nDEXSPEC.D is a new printer spec\nfor OUTDEX in MASTERFILE as the\noriginal was not quite right.\nRead the editorial for info.\n\nWe still have MASTERFILE +3 to\ngo in the +3 version only. I'm\nnot sure if there will be room\nthis month. We'll see.If it will\nnot go in then I may take the\nopportunity to put in the ROM\nINFO tasword file which we\ncouldn't fit in the +3 Issue 74.\n                          Brian.\n",
+  "body_ru_plain": "",
+  "body_en": "Some items contributed to OUTLET have not yet been included for a variety of reasons. It's a shame to leave them on the shelf so, if appropriate, they will be added to this ADD-ENDERS area of the magazine (not microdrive or Opus as there is not enough room).\n\nThe material covers a wide range of quality and program types: utilities, screens, character sets and text articles and SOME of it may be unedited, untested, not working fully or properly; in need of conversion for your system's syntax or printer etc.; without full instructions or whatever. Readers will have to sift through to see if there is anything of interest they can make use of and discard the rest. Not everything will appear on all versions necessarily.\n\nSome Add-Enders may be linked to OUTLET in the normal way. These will usually precede this text file. Any items that follow this article will possibly need to be LOADed manually or may not auto-run when loaded.\n\nThere may be some info on the following pages...\n\nNext in ADDENDERS is DISCKIT V2. The original had some bugs which Danny Beach has kindly resolved in this new version. More info in the program WHEN YOU RUN IT.\n\nThat's followed by +D POKER that lets you enter Multiface-type POKEs using the +D snapshot button to change games etc.\n\nCOPY ALL Version 2 follows that. Because we couldn't test COPYALL (OUTLET 75) without a 24-pin printer we didn't realize our standard printer merge put it in the wrong mode. COPY ALL V2 puts it back in the right mode and should be OK (we hope!). Read Rick Schuitemaker's OUTLETTER in this issue.\n\nOUTDEX1.63 is index data to load into MASTERFILE. The original last month accidentally had 64 and 65 data included too! Read this month's editorial for more info.\n\nDEXSPEC.D is a new printer spec for OUTDEX in MASTERFILE as the original was not quite right. Read the editorial for info.\n\nWe still have MASTERFILE +3 to go in the +3 version only. I'm not sure if there will be room this month. We'll see. If it will not go in then I may take the opportunity to put in the ROM INFO tasword file which we couldn't fit in the +3 Issue 74.\n\nBrian.\n",
+  "body_ru": "Некоторые материалы, присланные в редакцию OUTLET, до сих пор не публиковались по самым разным причинам. Жалко оставлять их пылиться на полке, поэтому по мере возможности мы будем помещать их в специальный раздел журнала — ADD-ENDERS (за исключением версий на Microdrive и Opus, где для этого просто нет свободного места).\n\nЭтот материал весьма разнообразен по качеству и типам программ: утилиты, экраны, шрифты и текстовые статьи. Кое-что из этого может быть неотредактированным, не протестированным, работать не полностью или не совсем корректно; может требовать адаптации под синтаксис вашей системы или принтер; поставляться без подробных инструкций и так далее. Читателям придется самим изучить содержимое, чтобы найти то, что им пригодится, а остальное отсеять. Кроме того, состав раздела на разных версиях журнала может различаться.\n\nНекоторые материалы Add-Enders могут запускаться прямо из меню OUTLET привычным образом — они обычно предшествуют этому тексту. Все программы, идущие следом за этой статьей, скорее всего, придется загружать вручную, либо они не будут запускаться автоматически.\n\nНиже приведена краткая информация о том, что вошло в раздел...\n\nДалее в ADDENDERS идет DISCKIT V2. В оригинале были ошибки, которые Danny Beach любезно исправил в этой новой версии. Подробности появятся ПРИ ЗАПУСКЕ ПРОГРАММЫ.\n\nЗа ней следует +D POKER — утилита, позволяющая вводить POKE (как в Multiface) с помощью кнопки создания снепшотов интерфейса +D для модификации игр и т. п.\n\nЗатем идет COPY ALL Version 2. Поскольку мы не могли протестировать COPYALL (OUTLET 75) без 24-игольчатого принтера, мы не заметили, что стандартная процедура настройки принтера перевела программу в неверный режим. В COPY ALL V2 это исправлено, и теперь всё должно работать как надо (надеемся!). Подробнее читайте в письме Rick Schuitemaker в рубрике OUTLETTER этого номера.\n\nФайл OUTDEX1.63 — это индексная база для загрузки в MASTERFILE. В прошлый номер случайно попали данные за выпуски 64 и 65! Подробности читайте в редакционной колонке этого месяца.\n\nDEXSPEC.D — новая спецификация принтера для OUTDEX в MASTERFILE, поскольку оригинальная была не совсем точной. Подробнее смотрите в передовице.\n\nУ нас также остается MASTERFILE +3, предназначенный только для версии журнала под Spectrum +3. Не уверен, хватит ли для него места в этом месяце — посмотрим. Если он не поместится, я, возможно, воспользуюсь случаем и запишу файл ROM INFO в формате Tasword, который мы не смогли уместить в 74-м номере для +3.\n\nBrian.\n",
+  "text_type": 3
+}

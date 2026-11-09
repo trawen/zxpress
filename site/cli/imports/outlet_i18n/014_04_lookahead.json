@@ -1,0 +1,29 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "014",
+  "article_id": "04_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "Анонс следующего номера",
+  "meta_description_en": "Preview of upcoming features in the next issue of Outlet magazine, including Z80 interrupts, printer guide, utilities, and games.",
+  "meta_description_ru": "Анонс материалов следующего номера журнала Outlet: утилиты, статьи по кодингу прерываний Z80, матричным принтерам и игры.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet mag",
+      "tag_alias": "outlet-mag"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "anons"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "L O O K A H E A D !\n\nNext month,proportionally-spaced\ntext in PRO-SPACER; TRAKTRAP!- a\nboard game;OUTPUT,Part 2 on DOT-\nMATRIX PRINTERS; OUTCLASS - more\nm/code tuition;INTERLUDE-an item\non Z80 interrupts; MEGATRUDER-an\ninterrupt routine linker;On Cart\nB/disk-Part 1 of a graphics/text\nadventure:CRALDONS CREEK;an item\non adventures for beginners;OUT-\nTAKE #5- pseudo-structured BASIC\n[like PROC-SIM (#2)]with a giant\npattern-fill;SHOPNLISTER-compile\na grocery list; DECIMALPLACER-to\nposition the decimal in a column\nof figures and a JIGBLOX screen!\n",
+  "body_ru_plain": "В З Г Л Я Д   В П Е Р Е Д !\n\nВ след. месяце: пропорциональный\nтекст в PRO-SPACER; TRAKTRAP! —\nнастольная игра; OUTPUT, часть 2\nо матричных принтерах; OUTCLASS:\nновые уроки по m/code;INTERLUDE:\nстатья о прерываниях Z80;\nMEGATRUDER — компоновщик подпро-\nграмм прерываний; На Cart B/дис-\nке — часть 1 графическо-тексто-\nвого квеста: CRALDONS CREEK;\nстатья об адвентюрах для нович-\nков; OUTTAKE #5 — псевдострук-\nтурный BASIC [как PROC-SIM (#2)]\nс гигантской узорной заливкой;\nSHOPNLISTER — список покупок;\nDECIMALPLACER — позиция десятич-\nной точки в столбце чисел,\nа также экран для JIGBLOX!\n",
+  "body_en": "## Lookahead!\n\nNext month, proportionally-spaced text in PRO-SPACER; TRAKTRAP! - a board game; OUTPUT, Part 2 on DOT-MATRIX PRINTERS; OUTCLASS - more m/code tuition; INTERLUDE - an item on Z80 interrupts; MEGATRUDER - an interrupt routine linker; On Cart B/disk - Part 1 of a graphics/text adventure: CRALDONS CREEK; an item on adventures for beginners; OUTTAKE #5 - pseudo-structured BASIC [like PROC-SIM (#2)] with a giant pattern-fill; SHOPNLISTER - compile a grocery list; DECIMALPLACER - to position the decimal in a column of figures and a JIGBLOX screen!\n",
+  "body_ru": "## Взгляд вперёд!\n\nВ след. месяце:\n\n- пропорциональный текст в PRO-SPACER;\n- TRAKTRAP! — настольная игра;\n- OUTPUT, часть 2 о матричных принтерах;\n- OUTCLASS: новые уроки по m/code;\n- INTERLUDE: статья о прерываниях Z80;\n- MEGATRUDER — компоновщик подпрограмм прерываний;\n- На Cart B/диске — часть 1 графическо-текстового квеста: CRALDONS CREEK;\n- статья об адвентюрах для новичков;\n- OUTTAKE #5 — псевдоструктурный BASIC [как PROC-SIM (#2)] с гигантской узорной заливкой;\n- SHOPNLISTER — список покупок;\n- DECIMALPLACER — позиция десятичной точки в столбце чисел;\n- а также экран для JIGBLOX!\n",
+  "text_type": 3
+}

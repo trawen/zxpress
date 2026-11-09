@@ -1,0 +1,36 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "125",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Editorial for Outlet #125 (January 1998): New Year wishes, Vision 8 Software contact details, contribution guidelines, and issue highlights.",
+  "meta_description_ru": "Редакторская колонка журнала Outlet #125 (январь 1998): поздравления с Новым годом, контакты Vision 8 Software, призыв присылать материалы и краткий анонс номера.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "vision 8 software",
+      "tag_alias": "vision-8-software"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "J A N U A R Y,   1 9 9 8\n\nA happy and prosperous new year\nto all our readers! Many thanks\nfor the Christmas cards and good\nwishes we have received from you\nand your continuing support!\n\n\nThe Dutch company Vision 8 Soft-\nware is a new branch of Vision\nEntertainment. They distribute\nand support all the main 8-bit\ncomputers including the Spectrum\n(but we don't much about them\nyet!).\n\nYou can send for their free cat-\nalogue to...\n\n\n\n       VISION 8 SOFTWARE\n         De Fazant 42,\n       7905 HD Hoogeveen,\n            Holland\n\n   Tel: (++31) (0)528 273107\n\n\n\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET.\nWe are sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\nWith the ever dwindling Spectrum\nmarket every new reader is a big\nhelp. What is especially import-\nant are CONTRIBUTIONS. Remember,\nwe need YOUR support, articles\nand programs, especially utility\nprograms,are always welcome.Even\na short routine can be like gold\nto another user! Send 'em in!\n\n\nThere's a super programming uti-\nlity in this issue that verifies\nif a BASIC variable exists be-\nfore you use it and a great tank\nshoot-'em-up that is easy to get\ninto and quite addictive! Enjoy!\n\n                     Ron & Brian\n\n\n\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n Email: ron.cavers@virgin.net\n\n Make out cheques to Ron Cavers.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nJ A N U A R Y,   1 9 9 8\n\nA happy and prosperous new year to all our readers! Many thanks for the Christmas cards and good wishes we have received from you and your continuing support!\n\nThe Dutch company Vision 8 Soft- ware is a new branch of Vision Entertainment. They distribute and support all the main 8-bit computers including the Spectrum (but we don't much about them yet!).\n\nYou can send for their free cat- alogue to...\n\nVISION 8 SOFTWARE De Fazant 42, 7905 HD Hoogeveen, Holland\n\n```text\n   Tel: (++31) (0)528 273107\n```\n\nMay we remind readers, we cannot answer computer, software, hard- ware or system queries etc., personally by mail.  All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder!Share your problems with others! That way, everyone benefits!\n\nWith the ever dwindling Spectrum market every new reader is a big help. What is especially import- ant are CONTRIBUTIONS. Remember, we need YOUR support, articles and programs, especially utility programs,are always welcome.Even a short routine can be like gold to another user! Send 'em in!\n\nThere's a super programming uti- lity in this issue that verifies if a BASIC variable exists be- fore you use it and a great tank shoot-'em-up that is easy to get into and quite addictive! Enjoy!\n\nRon & Brian\n\nOUTLET is produced by Chris Oliver Ron & Brian Cavers 34 Saltersgate Drive Birstall, Leicester LE4 3FF\n\nEmail: ron.cavers@virgin.net\n\nMake out cheques to Ron Cavers.\n",
+  "body_ru": "## Editorial (late)\n\nЯ Н В А Р Ь, 1 9 9 8\n\nСчастливого и успешного Нового года всем нашим читателям! Большое спасибо за рождественские открытки и добрые пожелания, которые мы от вас получили, а также за вашу постоянную поддержку!\n\nГолландская компания Vision 8 Software — это новое подразделение Vision Entertainment. Они занимаются дистрибуцией и поддержкой всех основных 8-битных компьютеров, включая Spectrum (но мы пока мало что о них знаем!).\n\nВы можете запросить их бесплатный каталог по адресу:\n\n```text\n       VISION 8 SOFTWARE\n         De Fazant 42,\n       7905 HD Hoogeveen,\n            Holland\n\n   Tel: (++31) (0)528 273107\n```\n\nНапоминаем читателям: мы не можем отвечать на вопросы по компьютерам, программному или аппаратному обеспечению, системам и т.д. лично по почте. Ответы на все подобные запросы публикуются в рубрике OUTLETTERS журнала OUTLET. Простите, что мы постоянно твердим об этом, но об этом действительно нужно напоминать регулярно! Делитесь своими проблемами с другими! Так польза будет для всех!\n\nУчитывая постоянно сжимающийся рынок Spectrum, каждый новый читатель — это огромная помощь. Но что особенно важно, так это МАТЕРИАЛЫ В НОМЕР. Помните, нам нужна ВАША поддержка: статьи и программы (особенно утилиты) приветствуются всегда. Даже короткая подпрограмма может оказаться на вес золота для другого пользователя! Присылайте их нам!\n\nВ этом выпуске вас ждет отличная утилита для программирования, которая проверяет, существует ли переменная BASIC перед ее использованием, а также великолепная танковая стрелялка — простая в освоении и весьма затягивающая! Приятного чтения!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n Email: ron.cavers@virgin.net\n\n Make out cheques to Ron Cavers.\n```\n",
+  "text_type": 3
+}

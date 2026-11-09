@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "081",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (Late)",
+  "title_ru": "Редакторская колонка (дополнение)",
+  "meta_description_en": "Outlet #81 editorial note on the shortage of 3-inch discs, updates on the new PC edition of Outlet, and instructions for saving magazine programs to tape or disc.",
+  "meta_description_ru": "Заметка редакции Outlet #81: дефицит 3-дюймовых дискет, новости о запуске версии для PC и инструкции по сохранению программ журнала на ленту и диски.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "3-inch discs",
+      "tag_alias": "3-inch-discs"
+    },
+    {
+      "tag_name": "pc",
+      "tag_alias": "pc"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "M A Y ,   1 9 9 4\n\nWe are having trouble getting 3\"\ndiscs for the +3 OUTLET.We heard\nthe only manufacturer, Maxell,\nstopped production but it's also\nrumoured Amsoft may now RESTART\nproduction!\n\nFor the time being we shall give\npriority to the current +3\nissues. You can still place an\norder for +3 back issues if you\nwant to but your order will be\nsuspended until we get a\ndefinite and reliable supply of\n3\" discs. If anyone knows of ANY\nsupply where we might obtain\nsome - then please let us know\nurgently!\n\n\nThose of you who have written in\nexpressing interest in the PC\nversion of OUTLET should, by the\ntime you read this, have\nreceived a complimentary copy of\nIssue 1. If you have not (or had\nnot written in before), drop us\na line now for your free copy!\n\nTo save a copy of most OUTLET\nprograms, BREAK and enter...\nRUN 9972 (+3), RUN 9982 (+D) or\nRUN 9983 (tape). 99% of all code\nis stored in REM lines in OUTLET\nprograms to speed up loading,\nsave room on disc and to make\nresaving programs easier. Now\nand again a large code file\nneeds to be loaded separately.\nFrom this month there will be a\nsave line for any such code at\nline 9984 in tape and +3 syntax.\n+D users can simply alter the\nsyntax by inserting d*; after\nthe SAVE. As this line follows\nthe BASIC tape save at line 9983\ntape users will automatically\nget the save prompt for the code\ntoo. +D and +3 user can enter\nRUN 9984.\n\nWell,our PC OUTLET got off to a\nnice start last month with good\nsupport in proportion to the low\nlevel of promotion we can afford\nat the moment! It already has a\ngood foundation of readers and\nIssue 2 is out now!\n\n                    Ron & Brian\n             ______\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF.\n",
+  "body_ru_plain": "",
+  "body_en": "MAY, 1994\n\nWe are having trouble getting 3\" discs for the +3 OUTLET. We heard the only manufacturer, Maxell, stopped production, but it's also rumoured Amsoft may now RESTART production!\n\nFor the time being we shall give priority to the current +3 issues. You can still place an order for +3 back issues if you want to, but your order will be suspended until we get a definite and reliable supply of 3\" discs. If anyone knows of ANY supply where we might obtain some — then please let us know urgently!\n\nThose of you who have written in expressing interest in the PC version of OUTLET should, by the time you read this, have received a complimentary copy of Issue 1. If you have not (or had not written in before), drop us a line now for your free copy!\n\nTo save a copy of most OUTLET programs, BREAK and enter...\n`RUN 9972` (+3), `RUN 9982` (+D) or `RUN 9983` (tape). 99% of all code is stored in REM lines in OUTLET programs to speed up loading, save room on disc and to make resaving programs easier. Now and again a large code file needs to be loaded separately. From this month there will be a save line for any such code at line 9984 in tape and +3 syntax. +D users can simply alter the syntax by inserting `d*;` after the SAVE. As this line follows the BASIC tape save at line 9983, tape users will automatically get the save prompt for the code too. +D and +3 users can enter `RUN 9984`.\n\nWell, our PC OUTLET got off to a nice start last month with good support in proportion to the low level of promotion we can afford at the moment! It already has a good foundation of readers and Issue 2 is out now!\n\nRon & Brian\n\n---\n\nOUTLET is produced by:\n\nChris Oliver  \nRon & Brian Cavers  \n\nCHEZRON SOFTWARE  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF.\n",
+  "body_ru": "МАЙ, 1994\n\nУ нас возникли трудности с приобретением 3-дюймовых дискет для версии OUTLET под ZX Spectrum +3. По слухам, единственный производитель, Maxell, прекратил их выпуск, однако также ходят слухи, что Amsoft может ВОЗОБНОВИТЬ производство!\n\nПока что мы отдаём приоритет текущим выпускам для +3. Вы по-прежнему можете заказывать архивные номера для +3, но выполнение заказов будет приостановлено до тех пор, пока мы не наладим гарантированные и надёжные поставки 3-дюймовых дисков. Если кто-то знает ХОТЬ КАКОЙ-ТО источник, где их можно достать — пожалуйста, срочно дайте нам знать!\n\nТе из вас, кто писал нам и проявлял интерес к PC-версии OUTLET, к моменту прочтения этих строк уже должны были получить бесплатный экземпляр первого номера. Если вы его ещё не получили (или не писали нам ранее), черкните нам пару строк прямо сейчас, чтобы получить свой бесплатный номер!\n\nЧтобы сохранить копию большинства программ из OUTLET, нажмите BREAK и введите...\n`RUN 9972` (+3), `RUN 9982` (+D) или `RUN 9983` (лента). В программах OUTLET 99% машинного кода хранится в строках REM — это ускоряет загрузку, экономит место на диске и упрощает пересохранение. Время от времени отдельный большой блок кода приходится загружать отдельно. С этого месяца для таких блоков добавлена строка сохранения 9984 (в синтаксисе для ленты и +3). Пользователи системы +D могут просто изменить команду, вставив `d*;` после оператора SAVE. Поскольку эта строка идёт сразу за сохранением бейсика на ленту в строке 9983, пользователи магнитофона автоматически получат приглашение сохранить и код. Пользователи +D и +3 могут просто ввести `RUN 9984`.\n\nЧто ж, наш PC OUTLET в прошлом месяце стартовал весьма успешно — поддержка оказалась отличной, особенно учитывая скромный уровень рекламы, который мы сейчас можем себе позволить! У издания уже сформировалась хорошая база читателей, и второй номер уже доступен!\n\nRon & Brian\n\n---\n\nOUTLET создают:\n\nChris Oliver  \nRon & Brian Cavers  \n\nCHEZRON SOFTWARE  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF.\n",
+  "text_type": 3
+}

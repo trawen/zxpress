@@ -1,0 +1,39 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "059",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "Анонсы следующего номера",
+  "meta_description_en": "A preview of the software, demos, and games planned for Outlet issue #060, including Jumper, Snake, and a 128K guitar tuner.",
+  "meta_description_ru": "Анонс программ, демок и игр, запланированных для следующего выпуска Outlet (#060): игры Jumper и Snake, гитарный тюнер для 128K и No Name Demo.",
+  "authors": [
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "jumper",
+      "tag_alias": "jumper"
+    },
+    {
+      "tag_name": "no name demo",
+      "tag_alias": "no-name-demo"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Planned for next month we have a\nrather smart envelope and label\naddress program; a SNAKE game; a\nmenu creator using Chris Pile's\nsmooth machine code pointer and\nselect system; an educational\ngame demonstrating the PFN print\nsystem in this issue; a 128K\nguitar tuner(original or what!);\neither an OUTCLASS or DRIVECHAT;\na fast, easy-to-use 64-column\ntext routine; a program that\ntells you the 071 or 081 code\nfor any London number and...\n\n\"JUMPER!\" - a great machine code\ngame; NO NAME DEMO - a selection\nof probably the best Spectrum\nscreens I have ever seen and yet\nanother new crossword puzzle.\n\nThere'll be all the regulars of\ncourse so make sure you don't\nmiss it. Oh, and ask everybody\nyou know to buy it too. We need\nall the support we can get in\nthese trying times!\n\n\n  - Brian (\"spare a tanner for a\n    cup o' tea guv'nor?\") Cavers.\n",
+  "body_ru_plain": "",
+  "body_en": "Planned for next month we have a rather smart envelope and label address program; a SNAKE game; a menu creator using Chris Pile's smooth machine code pointer and select system; an educational game demonstrating the PFN print system in this issue; a 128K guitar tuner (original or what!); either an OUTCLASS or DRIVECHAT; a fast, easy-to-use 64-column text routine; a program that tells you the 071 or 081 code for any London number and...\n\n\"JUMPER!\" — a great machine code game; NO NAME DEMO — a selection of probably the best Spectrum screens I have ever seen and yet another new crossword puzzle.\n\nThere'll be all the regulars of course so make sure you don't miss it. Oh, and ask everybody you know to buy it too. We need all the support we can get in these trying times!\n\n— Brian (\"spare a tanner for a cup o' tea guv'nor?\") Cavers.\n",
+  "body_ru": "В следующем месяце мы планируем выпустить весьма толковую программу для печати адресов на конвертах и наклейках; игру SNAKE; конструктор меню на основе плавной системы курсора и выбора в машинных кодах от Chris Pile; обучающую игру, демонстрирующую систему печати PFN из этого номера; гитарный тюнер для 128K (оригинально, не правда ли?); либо OUTCLASS, либо DRIVECHAT; быструю и простую подпрограмму вывода 64-символьного текста; утилиту, определяющую телефонный код 071 или 081 для любого лондонского номера, а также...\n\n«JUMPER!» — отличную игру в машинных кодах; NO NAME DEMO — подборку, пожалуй, лучших картинок для Спектрума, что я когда-либо видел, и очередной новый кроссворд.\n\nРазумеется, будут и все привычные постоянные рубрики, так что не пропустите! Да, и уговорите купить журнал всех своих знакомых. В эти нелёгкие времена нам важна любая поддержка!\n\n— Brian («не найдётся ли шестипенсовика на чашечку чая, сэр?») Cavers.\n",
+  "text_type": 3
+}

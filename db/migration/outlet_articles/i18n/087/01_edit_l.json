@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "087",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Editorial column from Outlet #087 (November 1994): discounts on back issues, upcoming radio rallies and computer fairs schedule, and an appeal for reader contributions.",
+  "meta_description_ru": "Редакторская колонка Outlet #087 (ноябрь 1994): скидки на старые выпуски журнала, анонсы радио- и компьютерных ярмарок (Radio Rally) и обращение к авторам материалов.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "radio rally",
+      "tag_alias": "radio-rally"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "events",
+      "tag_alias": "events"
+    }
+  ],
+  "category_ids": [
+    123,
+    118
+  ],
+  "body_en_plain": "N O V E M B E R ,   1 9 9 4\n\nWelcome to the new subscribers\nwe met at last month's computer\nfair in Enderby! Sales were not\nas good as hoped but they all\nhelp to increase the readership\nof OUTLET.\n\nWe recently announced reduced\nprices on back issues older than\n12 months. We are now pleased to\nannounce that we are extending\nthis offer to back issues that\nare only six months old or more!\nHere are the prices again...\n\n        DISCIPLE/PLUS  D\n        AND TAPE VERSION\n        ----------------\n\n 1 to  5 disks/tapes: `2.00 each\n 6 to 11   \"     \"  : `1.70 each\n12 or more \"     \"  : `1.50 each\n\n\n       PLUS 3 DISK VERSION\n       -------------------\n\n All disks (3\" only): `2.50 each\n\nMay we remind readers that we do\nnot answer computer, software,\nhardware or system queries etc.,\npersonally by mail. All such\nqueries are answered through the\nOUTLETTERS section published in\nOUTLET.\n\nAmazingly, all the yellow high-\nlighting ink used on our Radio\nRally list to indicate which are\nmore computer-oriented has just\nplain vanished this month! Gone\nto that great sheet of paper in\nthe sky we guess. However, we\nshall list them all and the\nfirst three look certain to be\n\"micro-inclusive\" (mind you, one\nof them appears to be on Mars so\nit might be difficult to reach).\nThe list is on the next page...\n\nNOV 12:THE ALL MICRO SHOW. For\n       details ring 0473 272002\n\nNOV 13:MARS-STOCKLAND Radio/\n       Computer Rally. Info:\n       Norman,G8BHE 021 422 9787\n       or Peter (evenings only)\n       G6DRN, 021 443 1189\n\nNOV 20:BISHOP AUCKLAND Radio and\n       Computer Annual Rally..\n       Info: GOPRQ, 0388 766264\n\nNOV 27:BRIDGEND & DARC Radio\n       Rally.Info:Mike, GW7NIS,\n       0656 722199 or Don,GW3RVG\n       0656 860434\n\nNOV 27:WEST MANCHESTER Radio\n       Clubs \"WINTER RALLY\".\n       G1IOO 0204 24104(evening)\n\nThanks for your contributions!\nKeep sending them in. Remember,\nthey don't need to be complete\nprograms - short routines are\nalso helpful to others as well\nas screen pictures and articles\non almost any relevant topic. It\nis always interesting to read,\nfor instance, about software and\nother products that people are\nusing. Articles must be on disk\nor tape though (returned later).\n                    Ron & Brian\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nN O V E M B E R ,   1 9 9 4\n\nWelcome to the new subscribers we met at last month's computer fair in Enderby! Sales were not as good as hoped but they all help to increase the readership of OUTLET.\n\nWe recently announced reduced prices on back issues older than 12 months. We are now pleased to announce that we are extending this offer to back issues that are only six months old or more! Here are the prices again...\n\nDISCIPLE/PLUS  D AND TAPE VERSION\n\n```text\n        ----------------\n```\n\n1 to  5 disks/tapes: `2.00 each 6 to 11   \"     \"  : `1.70 each 12 or more \"     \"  : `1.50 each\n\nPLUS 3 DISK VERSION\n\n```text\n       -------------------\n```\n\nAll disks (3\" only): `2.50 each\n\nMay we remind readers that we do not answer computer, software, hardware or system queries etc., personally by mail. All such queries are answered through the OUTLETTERS section published in OUTLET.\n\nAmazingly, all the yellow high- lighting ink used on our Radio Rally list to indicate which are more computer-oriented has just plain vanished this month! Gone to that great sheet of paper in the sky we guess. However, we shall list them all and the first three look certain to be \"micro-inclusive\" (mind you, one of them appears to be on Mars so it might be difficult to reach). The list is on the next page...\n\nNOV 12:THE ALL MICRO SHOW. For details ring 0473 272002\n\nNOV 13:MARS-STOCKLAND Radio/ Computer Rally. Info: Norman,G8BHE 021 422 9787 or Peter (evenings only)\n\n```text\n       G6DRN, 021 443 1189\n```\n\nNOV 20:BISHOP AUCKLAND Radio and Computer Annual Rally.. Info: GOPRQ, 0388 766264\n\nNOV 27:BRIDGEND & DARC Radio Rally.Info:Mike, GW7NIS, 0656 722199 or Don,GW3RVG\n\n```text\n       0656 860434\n```\n\nNOV 27:WEST MANCHESTER Radio Clubs \"WINTER RALLY\". G1IOO 0204 24104(evening)\n\nThanks for your contributions! Keep sending them in. Remember, they don't need to be complete programs - short routines are also helpful to others as well as screen pictures and articles on almost any relevant topic. It is always interesting to read, for instance, about software and other products that people are using. Articles must be on disk or tape though (returned later). Ron & Brian\n\nOUTLET is produced by\n\nChris Oliver Ron & Brian Cavers CHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF.\n",
+  "body_ru": "## Editorial (late)\n\nН О Я Б Р Ь , 1 9 9 4\n\nПриветствуем новых подписчиков, с которыми мы познакомились в прошлом месяце на компьютерной ярмарке в Enderby! Продажи оказались не столь высокими, как хотелось бы, но всё это помогает увеличивать читательскую аудиторию OUTLET.\n\nНедавно мы объявили о снижении цен на старые выпуски старше 12 месяцев. Теперь мы рады сообщить, что распространяем это предложение и на номера возрастом от шести месяцев! Напоминаем цены...\n\n```text\n        DISCIPLE/PLUS  D\n        AND TAPE VERSION\n        ----------------\n\n 1 to  5 disks/tapes: `2.00 each\n 6 to 11   \"     \"  : `1.70 each\n12 or more \"     \"  : `1.50 each\n\n\n       PLUS 3 DISK VERSION\n       -------------------\n\n All disks (3\" only): `2.50 each\n```\n\nНапоминаем читателям, что мы не отвечаем на вопросы по компьютерам, программному обеспечению, «железу» или системам лично по почте. Все подобные вопросы разбираются в рубрике OUTLETTERS на страницах OUTLET.\n\nУдивительно, но весь жёлтый маркер, которым в нашем списке Radio Rally были выделены более ориентированные на компьютеры мероприятия, в этом месяце просто-напросто испарился! Видимо, отправился на тот великий бумажный лист в небесах. Тем не менее мы перечислим их все, и первые три совершенно точно включают микрокомпьютерную тематику (правда, одно из них, судя по названию, проходит на Марсе, так что добраться туда может быть непросто). Вот этот список:\n\n**NOV 12:** THE ALL MICRO SHOW. Подробности по тел. 0473 272002  \n**NOV 13:** MARS-STOCKLAND Radio/Computer Rally. Инфо: Norman, G8BHE 021 422 9787 или Peter (только по вечерам) G6DRN, 021 443 1189  \n**NOV 20:** BISHOP AUCKLAND Radio and Computer Annual Rally. Инфо: GOPRQ, 0388 766264  \n**NOV 27:** BRIDGEND & DARC Radio Rally. Инфо: Mike, GW7NIS, 0656 722199 или Don, GW3RVG 0656 860434  \n**NOV 27:** WEST MANCHESTER Radio Clubs \"WINTER RALLY\". G1IOO 0204 24104 (вечером)\n\nСпасибо за ваши материалы! Продолжайте присылать их. Помните: это не обязательно должны быть законченные программы — короткие подпрограммы тоже очень полезны другим, как и экранные картинки, а также статьи практически на любую подходящую тему. Всегда интересно почитать, например, о софте и других продуктах, которыми пользуются читатели. Однако статьи обязательно должны быть на диске или кассете (позже мы их возвращаем).\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF.\n```\n",
+  "text_type": 3
+}

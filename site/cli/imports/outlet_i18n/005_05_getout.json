@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "005",
+  "article_id": "05_getout",
+  "title_en": "Get Out",
+  "title_ru": "Выход",
+  "meta_description_en": "Editorial outro for Outlet #005: upcoming features for issue 6, previews of ZX Spectrum utilities, games, and notes for Microdrive and Opus users.",
+  "meta_description_ru": "Заключительное слово редакторов Outlet #005: планы на шестой выпуск, анонсы программ и утилит для ZX Spectrum, Microdrive и Opus Discovery.",
+  "authors": [
+    "Ron",
+    "Brian"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "announcement"
+    },
+    {
+      "tag_name": "microdrive",
+      "tag_alias": "microdrive"
+    },
+    {
+      "tag_name": "opus discovery",
+      "tag_alias": "opus-discovery"
+    }
+  ],
+  "category_ids": [
+    123,
+    116
+  ],
+  "body_en_plain": "That's all for this issue - hope\nyou enjoyed it! We're so  behind\nschedule now that it is hard  to\nbe definite about next month! We\nhope to include BIGTOP,an editor\nfor TOPCHARS-type characters, an\nOUTCLASS article, a simple BASIC\nwindow technique,  some  m/drive\nstorage box suggestions, EXPEND,\na home expenses calculator,  ZAP\nwhich is a neat utility to CAT +\nERASE microdrive files easily, 1\nor 2 simple  graphic  demos  and\n\nmore. On cartridge  B  (included\nin the Opus Discovery version of\ncourse),will be episode 2 of our\nserial: \"THAT'S THE TICKET!\",the\nON ERROR GO TO utility,a demo of\nour BONABANNER  graphic  utility\nand THE DREADED MANGLEGROT TREE!\n\nSorry, Opus users, there seem to\nbe 2 or  3  microdrive  specific\nitems. Give us time...\n\n           Ron & Brian\n        Chezron Software,\n      605 Loughborough Road\n   Birstall, Leicester LE4 4NJ\n  PRESTEL MAILBOX NO: 014703943\n\n\n PRESS L TO LOAD*\"M\";1;\"run\" OR\n DELETE (SHIFT 0) TO RESET....\n",
+  "body_ru_plain": "Вот и всё в этом выпуске — наде-\nемся, вам понравилось! Мы столь\nсильно отстали от графика,  что\nтрудно сказать что-то точное про\nследующий месяц! Мы надеемся по-\nместить BIGTOP, редактор знаков\nтипа TOPCHARS,  статью OUTCLASS,\nпростую технику окон на  BASIC,\nсоветы по боксам  для  m/drive,\nEXPEND — калькулятор  расходов,\nZAP — удобную утилиту для лёгких\nCAT + ERASE на микродрайве, 1\nили 2 простых граф-демо и\n\nещё кое-что. На картридже B  (и,\nконечно, в версии Opus Discovery)\nвыйдет эпизод 2 нашего сериала:\n\"THAT'S THE TICKET!\",   утилита\nON ERROR GO TO,  демоверсия  на-\nшей граф-утилиты BONABANNER  и\nTHE DREADED MANGLEGROT TREE!\n\nПростите, пользователи Opus, тут\nвыходит 2 или 3 сугубо  микрод-\nрайвовских вещи. Дайте нам время...\n\n           Ron & Brian\n        Chezron Software,\n      605 Loughborough Road\n   Birstall, Leicester LE4 4NJ\n  PRESTEL MAILBOX NO: 014703943\n\n\n НАЖМИТЕ L: LOAD*\"M\";1;\"run\" ИЛИ\n DELETE (SHIFT 0) ДЛЯ СБРОСА....\n",
+  "body_en": "That's all for this issue - hope you enjoyed it! We're so behind schedule now that it is hard to be definite about next month! We hope to include BIGTOP, an editor for TOPCHARS-type characters, an OUTCLASS article, a simple BASIC window technique, some m/drive storage box suggestions, EXPEND, a home expenses calculator, ZAP which is a neat utility to CAT + ERASE microdrive files easily, 1 or 2 simple graphic demos and more. On cartridge B (included in the Opus Discovery version of course), will be episode 2 of our serial: \"THAT'S THE TICKET!\", the ON ERROR GO TO utility, a demo of our BONABANNER graphic utility and THE DREADED MANGLEGROT TREE!\n\nSorry, Opus users, there seem to be 2 or 3 microdrive specific items. Give us time...\n\nRon & Brian  \nChezron Software,  \n605 Loughborough Road  \nBirstall, Leicester LE4 4NJ  \nPRESTEL MAILBOX NO: 014703943  \n\nPRESS L TO LOAD*\"M\";1;\"run\" OR DELETE (SHIFT 0) TO RESET....\n",
+  "body_ru": "## Выход\n\nВот и всё в этом выпуске — надеемся, вам понравилось! Мы столь сильно отстали от графика, что трудно сказать что-то точное про следующий месяц! Мы надеемся поместить BIGTOP, редактор знаков типа TOPCHARS, статью OUTCLASS, простую технику окон на BASIC, советы по боксам для m/drive, EXPEND — калькулятор расходов, ZAP — удобную утилиту для лёгких CAT + ERASE на микродрайве, 1 или 2 простых граф-демо и ещё кое-что.\n\nНа картридже B (и, конечно, в версии Opus Discovery) выйдет эпизод 2 нашего сериала: \"THAT'S THE TICKET!\", утилита ON ERROR GO TO, демоверсия нашей граф-утилиты BONABANNER и THE DREADED MANGLEGROT TREE!\n\nПростите, пользователи Opus, тут выходит 2 или 3 сугубо микродрайвовских вещи. Дайте нам время...\n\n*Ron & Brian*  \nChezron Software,  \n605 Loughborough Road  \nBirstall, Leicester LE4 4NJ  \nPRESTEL MAILBOX NO: 014703943\n\n```text\nНАЖМИТЕ L: LOAD*\"M\";1;\"run\" ИЛИ\nDELETE (SHIFT 0) ДЛЯ СБРОСА....\n```\n",
+  "text_type": 3
+}

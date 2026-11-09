@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "093",
+  "article_id": "06_greymod2",
+  "title_en": "Spectrum 128 +2 (Grey): A Further Fault",
+  "title_ru": "Spectrum 128 +2 (серый): ещё один дефект сборки",
+  "meta_description_en": "Peter Johnson identifies a factory assembly fault in the grey Sinclair ZX Spectrum 128 +2: incorrect resistor value R68 in the MREQ timing circuit.",
+  "meta_description_ru": "Питер Джонсон описывает дефект заводской сборки в сером ZX Spectrum 128 +2: неверный номинал резистора R68 в цепи тайминга сигнала MREQ.",
+  "authors": [
+    "Peter W. Johnson"
+  ],
+  "tags": [
+    {
+      "tag_name": "spectrum +2",
+      "tag_alias": "spectrum-plus-2"
+    },
+    {
+      "tag_name": "hardware fix",
+      "tag_alias": "hardware-fix"
+    },
+    {
+      "tag_name": "resistor",
+      "tag_alias": "resistor"
+    },
+    {
+      "tag_name": "schematics",
+      "tag_alias": "schematics"
+    }
+  ],
+  "category_ids": [
+    10,
+    21
+  ],
+  "body_en_plain": "Article         Author    Page\n  -------         ------    ----\n\nThe Spectrum\n128 +2 (Grey),\nAnother fault  Peter Johnson  02\n\n\nSPECTRUM 128 +2 GREY CASE MODEL:\nA FURTHER FAULT.Peter W. Johnson\n--------------------------------\n\nDuring the investigation into\nthe keyboard problems affecting\nWORDMASTER and THE LAST WORD, I\ndiscovered a further assembly\nfault.This is in addition to the\nwrongly-connected transistors\ncovered in my article in another\nissue of OUTLET.\n\nThis time it is a relatively\nsimple matter: that of a wrong\nvalue of resistor being used. A\n100 ohm was used instead of a\n1000 ohm value. The particular\nresistor is R68 and is located\nnext to the RAM IC IC24 and\nclose to the cassette connector.\n\n\nA 100 ohm resistor has the col-\nour code of BROWN, BLACK, BROWN.\nThe correct 1000 ohm resistor\nshould have the colour code of\nBLACK, BROWN, RED.\n\nThe resistor forms part of a\ntiming circuit feeding MREQ to\nthe STD IC IC10.\n\nIf it had any particular effect\non the other problems I cannot\nconfirm but it was changed as a\nprecaution.\n\n\nThis assembly fault appeared on\nonly one of my two 128's; the\nserial number being U25 8916.The\nother unit serial No.u 064262,\nhad the correct resistor fitted.\n\n\nWith only two units to check I\ncannot determine how widespread\nthe assembly error may be. If an\ninspection shows the incorrect\nvalue has been used then I would\nrecommend that it be changed.\nIncorrect items such as this,\nwhile not causing a complete\nfailure, could explain some in-\nconsistencies between computers\nand programs at times.\n\n               PETER JOHNSON.\n",
+  "body_ru_plain": "",
+  "body_en": "## SPECTRUM 128 +2 GREY CASE MODEL: A FURTHER FAULT\n\n*By Peter W. Johnson*\n\nDuring the investigation into the keyboard problems affecting WORDMASTER and THE LAST WORD, I discovered a further assembly fault. This is in addition to the wrongly-connected transistors covered in my article in another issue of OUTLET.\n\nThis time it is a relatively simple matter: that of a wrong value of resistor being used. A 100 ohm was used instead of a 1000 ohm value. The particular resistor is R68 and is located next to the RAM IC IC24 and close to the cassette connector.\n\nA 100 ohm resistor has the colour code of BROWN, BLACK, BROWN. The correct 1000 ohm resistor should have the colour code of BLACK, BROWN, RED.\n\nThe resistor forms part of a timing circuit feeding MREQ to the STD IC IC10.\n\nIf it had any particular effect on the other problems I cannot confirm, but it was changed as a precaution.\n\nThis assembly fault appeared on only one of my two 128's; the serial number being U25 8916. The other unit, serial No. U 064262, had the correct resistor fitted.\n\nWith only two units to check I cannot determine how widespread the assembly error may be. If an inspection shows the incorrect value has been used then I would recommend that it be changed. Incorrect items such as this, while not causing a complete failure, could explain some inconsistencies between computers and programs at times.\n\nPETER JOHNSON.\n",
+  "body_ru": "## SPECTRUM 128 +2 В СЕРОМ КОРПУСЕ: ЕЩЁ ОДИН ДЕФЕКТ\n\n*Питер У. Джонсон*\n\nВ ходе расследования проблем с клавиатурой, влияющих на программы WORDMASTER и THE LAST WORD, я обнаружил ещё одну ошибку заводской сборки. Это в дополнение к неверно подключённым транзисторам, о которых я рассказывал в одном из прошлых номеров OUTLET.\n\nНа этот раз всё относительно просто: был использован резистор не того номинала. Вместо резистора на 1000 Ом (1 кОм) запаяли на 100 Ом. Речь идёт о резисторе R68, который расположен рядом с микросхемой памяти IC24 и неподалёку от разъёма для подключения магнитофона.\n\nРезистор на 100 Ом имеет цветовую маркировку: КОРИЧНЕВЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ. Правильный же резистор на 1000 Ом должен иметь цветовую маркировку: ЧЁРНЫЙ, КОРИЧНЕВЫЙ, КРАСНЫЙ.\n\nЭтот резистор входит в состав времязадающей цепи, подающей сигнал MREQ на микросхему IC10 (STD IC).\n\nОказывал ли он какое-то конкретное влияние на остальные проблемы, я подтвердить не могу, но в качестве меры предосторожности заменил его.\n\nДанный дефект сборки присутствовал только на одном из двух моих компьютеров Spectrum 128 (с серийным номером U25 8916). На втором экземпляре (серийный номер U 064262) был установлен правильный резистор.\n\nИмея на руках всего две машины для проверки, я не могу судить о том, насколько широко распространена эта ошибка на производстве. Однако если при осмотре платы вы обнаружите неверный номинал, я рекомендую заменить этот резистор. Подобные несоответствия компонентов, хоть и не приводят к полному отказу системы, могут время от времени объяснять нестабильность работы и несовместимость программ на разных экземплярах компьютера.\n\nПИТЕР ДЖОНСОН.\n",
+  "text_type": 3
+}

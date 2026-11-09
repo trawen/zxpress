@@ -1,0 +1,46 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "100",
+  "article_id": "01_edit_l",
+  "title_en": "Editorial (late)",
+  "title_ru": "Редакторская колонка (доп.)",
+  "meta_description_en": "Editorial for Outlet #100 (Christmas 1995): celebrating the milestone 100th issue, news on BG Services scaling down, and queries submission guidelines.",
+  "meta_description_ru": "Редакционная колонка Outlet #100 (Рождество 1995): юбилейный сотый выпуск журнала, сворачивание бизнеса BG Services и правила ответов на вопросы читателей.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "chezron software",
+      "tag_alias": "chezron-software"
+    },
+    {
+      "tag_name": "bg services",
+      "tag_alias": "bg-services"
+    },
+    {
+      "tag_name": "brian gaff",
+      "tag_alias": "brian-gaff"
+    }
+  ],
+  "category_ids": [
+    123,
+    87,
+    116
+  ],
+  "body_en_plain": "C H R I S T M A S ,  1 9 9 5\n\nThe Spectrum version of OUTLET\nhas now reached its 100th issue!\nOver eight years of blood sweat\nand tears makes OUTLET possibly\nthe longest-running disk'zine on\nany computer!\n\nWe've tried to cram in as much\nas possible into this issue and\nsince it's also the Christmas\nseason, have added the odd sprig\nof festive cheer here and there.\n\nDue to some bureaucratic rule or\nother, Brian Gaff of BG Services\nhas found he will be better off\nrunning down his business which\nhas provided excellent help over\nthe years. The Spectrum emulator\nwill still be available from him\nfor a while but his other prod-\nucts and services are not. The\nprinter ribbon re-inking side of\nthe business has been transferr-\ned to John Paine, 1 Elm Close,\nRains Park, London, SW20 9HX. BG\nSERVICES was a very much-needed\nprovider for a waning Spectrum\nmarket in recent years.\n\nMay we remind readers, we cannot\nanswer computer, software, hard-\nware or system queries etc.,\npersonally by mail.  All of such\nqueries are answered through the\nOUTLETTERS section in OUTLET. We\nare sorry to keep harping on\nabout this but it really needs\nto be a permanent reminder!Share\nyour problems with others! That\nway, everyone benefits!\n\nMerry Christmas to all!\n\n                     Ron & Brian\n\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n.\n",
+  "body_ru_plain": "",
+  "body_en": "## Editorial (late)\n\nC H R I S T M A S ,  1 9 9 5\n\nThe Spectrum version of OUTLET has now reached its 100th issue! Over eight years of blood sweat and tears makes OUTLET possibly the longest-running disk'zine on any computer!\n\nWe've tried to cram in as much as possible into this issue and since it's also the Christmas season, have added the odd sprig of festive cheer here and there.\n\nDue to some bureaucratic rule or other, Brian Gaff of BG Services has found he will be better off running down his business which has provided excellent help over the years. The Spectrum emulator will still be available from him for a while but his other prod- ucts and services are not. The printer ribbon re-inking side of the business has been transferr- ed to John Paine, 1 Elm Close, Rains Park, London, SW20 9HX. BG SERVICES was a very much-needed provider for a waning Spectrum market in recent years.\n\nMay we remind readers, we cannot answer computer, software, hard- ware or system queries etc., personally by mail.  All of such queries are answered through the OUTLETTERS section in OUTLET. We are sorry to keep harping on about this but it really needs to be a permanent reminder!Share your problems with others! That way, everyone benefits!\n\nMerry Christmas to all!\n\nRon & Brian\n\nOUTLET is produced by Chris Oliver Ron & Brian Cavers CHEZRON   SOFTWARE 34 Saltersgate Drive Birstall, Leicester LE4 3FF .\n",
+  "body_ru": "## C H R I S T M A S , 1 9 9 5\n\nСпектрумовская версия OUTLET достигла своего 100-го выпуска! Более восьми лет крови, пота и слёз делают OUTLET, возможно, самым долгоживущим дискзином на любом компьютере!\n\nМы постарались вместить в этот номер как можно больше всего, а поскольку сейчас ещё и рождественская пора, то добавили кое-где немного праздничного настроения.\n\nИз-за какого-то бюрократического предписания Brian Gaff из BG Services обнаружил, что ему выгоднее свернуть свой бизнес, который на протяжении многих лет оказывал отличную поддержку. Эмулятор Spectrum всё ещё можно будет приобрести у него некоторое время, но другие его товары и услуги уже недоступны. Направление по повторной заправке лент для принтеров передано John Paine, 1 Elm Close, Rains Park, London, SW20 9HX. BG SERVICES была крайне необходимой опорой для угасающего спектрумовского рынка в последние годы.\n\nНапоминаем читателям: мы не можем отвечать на вопросы о компьютерах, софте, железе, системных сбоях и прочем лично по почте. Все подобные вопросы разбираются через раздел OUTLETTERS в OUTLET. Извините, что мы постоянно твердим об этом, но об этом действительно нужно напоминать регулярно! Делитесь своими проблемами с другими! Так пользу получат все!\n\nСчастливого Рождества всем!\n\nRon & Brian\n\n```text\n      OUTLET is produced by\n          Chris Oliver\n       Ron & Brian Cavers\n       CHEZRON   SOFTWARE\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n```\n",
+  "text_type": 3
+}

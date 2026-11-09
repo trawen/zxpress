@@ -1,0 +1,39 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "074",
+  "article_id": "04_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of Outlet issue 75: featuring the Masterfile database system, programmer utilities, a card game, adventure game design tips, and more.",
+  "meta_description_ru": "Анонс 75-го номера журнала Outlet: база данных Masterfile, утилиты для программистов, карточная игра, советы по созданию адвентюр и многое другое.",
+  "authors": [
+    "Chris Bourne"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "masterfile",
+      "tag_alias": "masterfile"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Next month we hope at last to be\nable to bring you the best\nrecord-keeping system ever\ndevised for the Spectrum. Yes,\nMASTERFILE (the latest, improved\nversion). It's enormous, with\nthe instructions occupying a lot\nof disc space but there's plenty\nmore besides:- several useful\nutilities for programmers, one\nfor cyclists, and one for 24-pin\nprinter users.\n                        more...\n\nAnyone for cards?Test your skill\nagainst the computer in a trad-\nitional card game. Also in the\npipeline is an art collection of\nsketches and tips for Basic\nprogrammers with enough\ninformation to start you writing\nyour own adventure game.\n\n                        Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Next month we hope at last to be able to bring you the best record-keeping system ever devised for the Spectrum. Yes, MASTERFILE (the latest, improved version). It's enormous, with the instructions occupying a lot of disc space but there's plenty more besides: several useful utilities for programmers, one for cyclists, and one for 24-pin printer users.\n\nAnyone for cards? Test your skill against the computer in a traditional card game. Also in the pipeline is an art collection of sketches and tips for Basic programmers with enough information to start you writing your own adventure game.\n\nChris.\n",
+  "body_ru": "В следующем месяце мы надеемся наконец-то представить вам лучшую систему баз данных, когда-либо созданную для Spectrum. Да-да, MASTERFILE (новейшая, улучшенная версия). Она огромна, и её инструкции занимают немало дискового пространства, но помимо неё будет много всего интересного: несколько полезных утилит для программистов, программа для велосипедистов и ещё одна — для владельцев 24-игольчатых принтеров.\n\nКто не прочь сыграть в карты? Проверьте свои силы против компьютера в традиционной карточной игре. Также готовится подборка графических набросков и советы для Бейсик-программистов с достаточным количеством материала, чтобы вы могли начать писать свою собственную приключенческую игру.\n\nChris.\n",
+  "text_type": 3
+}

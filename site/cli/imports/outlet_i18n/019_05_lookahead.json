@@ -1,0 +1,41 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "019",
+  "article_id": "05_lookahead",
+  "title_en": "Lookahead",
+  "title_ru": "Lookahead: Анонс следующего номера",
+  "meta_description_en": "Preview of contents for next month's Outlet: Tasword utilities, UNITRANS+, circuit drawer, games, microdrive helpers, and more.",
+  "meta_description_ru": "Анонс материалов следующего номера журнала Outlet: утилиты для Tasword, UNITRANS+, адвентюра, утилиты для Microdrive и многое другое.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "анонс",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "tasword",
+      "tag_alias": "tasword"
+    },
+    {
+      "tag_name": "unitrans+",
+      "tag_alias": "unitrans-plus"
+    },
+    {
+      "tag_name": "microdrive",
+      "tag_alias": "microdrive"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Next month: A Tas 2 word count;\na utility to display blocks of\nmemory in hex; a utility to con-\nvert from Tas 3 to 2; UNITRANS+\na perfected UNITRANS to transfer\nautomatically any \"normal\" file\nfrom tape to drive; DRIVECHAT;\nOUTCLASS; OUTPUT;a great circuit\ndrawing program; an adventure;\nhigh speed cassette LOAD/SAVE; a\nRoman numeral calc!; a routine\nthat writes in microdrive syntax\nas soon as you touch the key and\na board game against the clock..\n",
+  "body_ru_plain": "В след. месяце: подсчёт слов\nTas 2; утилита для показа блоков\nпамяти в hex; утилита для кон-\nвертации из Tas 3 в 2; UNITRANS+\n— улучшенный UNITRANS для авто-\nпереноса любого \"обычного\" файла\nс ленты на привод; DRIVECHAT;\nOUTCLASS; OUTPUT; отличная прог-\nрамма черчения схем; адвентюра;\nскоростная кассетная LOAD/SAVE;\nкалькулятор римских чисел!; ру-\nтина, пишущая в синтаксисе мик-\nродрайва при нажатии клавиши, и\nнастольная игра на время..\n",
+  "body_en": "## Lookahead\n\nNext month: A Tas 2 word count; a utility to display blocks of memory in hex; a utility to convert from Tas 3 to 2; UNITRANS+ a perfected UNITRANS to transfer automatically any \"normal\" file from tape to drive; DRIVECHAT; OUTCLASS; OUTPUT; a great circuit drawing program; an adventure; high speed cassette LOAD/SAVE; a Roman numeral calc!; a routine that writes in microdrive syntax as soon as you touch the key and a board game against the clock..\n",
+  "body_ru": "## Анонс следующего номера\n\nВ след. месяце:\n\n- подсчёт слов Tas 2;\n- утилита для показа блоков памяти в hex;\n- утилита для конвертации из Tas 3 в 2;\n- UNITRANS+ — улучшенный UNITRANS для автопереноса любого \"обычного\" файла с ленты на привод;\n- DRIVECHAT;\n- OUTCLASS;\n- OUTPUT;\n- отличная программа черчения схем;\n- адвентюра;\n- скоростная кассетная LOAD/SAVE;\n- калькулятор римских чисел!;\n- рутина, пишущая в синтаксисе микродрайва при нажатии клавиши;\n- настольная игра на время..\n",
+  "text_type": 3
+}

@@ -1,0 +1,45 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "140",
+  "article_id": "09_addender",
+  "title_en": "Addender: Turbo-Imploder",
+  "title_ru": "Add-Enders: Turbo-Imploder",
+  "meta_description_en": "Chris Cowley introduces the Add-Enders section in Outlet #140 and asks readers for help with the mysterious Turbo-Imploder code compressor.",
+  "meta_description_ru": "Крис Коули представляет раздел Add-Enders в Outlet #140 и просит помощи читателей с компрессором кода Turbo-Imploder.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "add-enders",
+      "tag_alias": "add-enders"
+    },
+    {
+      "tag_name": "turbo-imploder",
+      "tag_alias": "turbo-imploder"
+    },
+    {
+      "tag_name": "packer",
+      "tag_alias": "packer"
+    },
+    {
+      "tag_name": "compression",
+      "tag_alias": "compression"
+    },
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    }
+  ],
+  "category_ids": [
+    52,
+    71,
+    121
+  ],
+  "body_en_plain": "Some items contributed to OUTLET\nhave not yet been included for a\nvariety of reasons. It's a shame\nto leave them on the shelf so,if\nappropriate, they will be added\nto this ADD-ENDERS area of the\nmagazine (not microdrive or Opus\nas there is not enough room).\n\nThe material covers a wide range\nof quality and program types:\nutilities, screens, character\nsets and text articles and SOME\nof it may be unedited, untested,\nnot working fully or properly;\nin need of conversion for your\n\nsystem's syntax or printer etc.;\nwithout full instructions or\nwhatever. Readers will have to\nsift through to see if there is\nanything of interest they can\nmake use of and discard the\nrest. Not everything will appear\non all versions necessarily.\n\nSome Add-Enders may be linked to\nOUTLET in the normal way. These\nwill usually precede this text\nfile. Any items that follow this\narticle will possibly need to be\nLOADed manually or may not auto-\nrun when loaded.\n\nThere may be some info on the\nfollowing pages...\n\nThe next item is TURBO-IMPLODER.\nOnce again, here is a good\nexample of what appears to be\na very powerful program that is\ngoing to waste because of the\nabsence of a few simple instr-\nuctions. The program \"TI\" is\nTurbo-Imploder which promises to\nbe a super code compressor.\n\nLoad up the program, and you are\ngiven a prompt to Save the prog-\nram or Goto start. Quite logic-\nally pressing \"S\" will save TI,\nand any other key starts the\nprogram. OK so far.\n\nGoing to the program,prompts for\n\"Start\",\"Length\" and \"Call\" seem\nlogical as start address, length\nand call address of the code to\ncompress. Fair enough.\n\nThe next prompt is for \"Mode\".\nYes, you know, er... \"Mode\"!\nUm, \"Mode? The computer seems to\naccept things like 1, 2, or 3,\nas valid entries here, but my\ntiny brain is unable to connect\nany sensible interpretation to\n\"Mode\"!\n\nI'm hoping that some genius will\nspend a few minutes with the\nprogram and write in telling me\nhow obtuse (ie. Thick!) I am,\nand of course modes are.....!\nAnd while this genius is about\nit, perhaps he or she could\nkindly go on to tell me which\naddress to call to re-expand\n(explode) the code, once it has\nbeen Imploded?\nThanks in anticipation,\n                         Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "Some items contributed to OUTLET have not yet been included for a variety of reasons. It's a shame to leave them on the shelf so, if appropriate, they will be added to this ADD-ENDERS area of the magazine (not microdrive or Opus as there is not enough room).\n\nThe material covers a wide range of quality and program types: utilities, screens, character sets and text articles and SOME of it may be unedited, untested, not working fully or properly; in need of conversion for your system's syntax or printer etc.; without full instructions or whatever. Readers will have to sift through to see if there is anything of interest they can make use of and discard the rest. Not everything will appear on all versions necessarily.\n\nSome Add-Enders may be linked to OUTLET in the normal way. These will usually precede this text file. Any items that follow this article will possibly need to be LOADed manually or may not auto-run when loaded.\n\nThere may be some info on the following pages...\n\nThe next item is TURBO-IMPLODER. Once again, here is a good example of what appears to be a very powerful program that is going to waste because of the absence of a few simple instructions. The program \"TI\" is Turbo-Imploder which promises to be a super code compressor.\n\nLoad up the program, and you are given a prompt to Save the program or Goto start. Quite logically pressing \"S\" will save TI, and any other key starts the program. OK so far.\n\nGoing to the program, prompts for \"Start\", \"Length\" and \"Call\" seem logical as start address, length and call address of the code to compress. Fair enough.\n\nThe next prompt is for \"Mode\". Yes, you know, er... \"Mode\"! Um, \"Mode? The computer seems to accept things like 1, 2, or 3, as valid entries here, but my tiny brain is unable to connect any sensible interpretation to \"Mode\"!\n\nI'm hoping that some genius will spend a few minutes with the program and write in telling me how obtuse (ie. Thick!) I am, and of course modes are.....! And while this genius is about it, perhaps he or she could kindly go on to tell me which address to call to re-expand (explode) the code, once it has been Imploded?\n\nThanks in anticipation,\n\nChris.\n",
+  "body_ru": "Некоторые материалы, присланные в редакцию OUTLET, до сих пор не были опубликованы по самым разным причинам. Жаль оставлять их пылиться на полке, поэтому, если сочтём уместным, мы будем помещать их в этот специальный раздел журнала — ADD-ENDERS (на версиях для Microdrive или Opus его не будет из-за нехватки свободного места).\n\nЭтот материал весьма разнообразен по качеству и типам программ: утилиты, экраны, наборы шрифтов и текстовые статьи. Кое-что из этого может оказаться неотредактированным, непротестированным, работающим не полностью или некорректно; требовать переделки под синтаксис вашей дисковой системы или принтер; быть вовсе без инструкций и так далее. Читателям придётся самостоятельно просеять всё это, чтобы найти что-то интересное и полезное для себя, а остальное отбросить. Далеко не всё обязательно появится во всех версиях выпуска.\n\nНекоторые материалы раздела Add-Enders могут запускаться из меню OUTLET стандартным образом. Обычно они располагаются перед этим текстовым файлом. Все программы, которые идут после этой статьи, возможно, придётся загружать вручную по LOAD, либо они не будут автоматически запускаться при загрузке.\n\nДалее следует некоторая информация...\n\nСледующий пункт — TURBO-IMPLODER. И снова перед нами отличный пример мощной с виду программы, которая пропадает зря лишь из-за отсутствия пары простых инструкций. Программа «TI» — это Turbo-Imploder, позиционируемый как суперкомпрессор машинного кода.\n\nЗагрузив программу, вы получаете приглашение сохранить её (Save) или перейти к запуску (Goto start). Вполне логично, что нажатие «S» сохраняет TI, а любая другая клавиша запускает саму программу. Пока всё понятно.\n\nПереходим к работе: запросы «Start», «Length» и «Call» выглядят предельно логично как начальный адрес, длина и адрес вызова кода, который требуется сжать. С этим всё ясно.\n\nСледующий запрос — «Mode». Да-да, вы знаете, эм... «Mode»! Гм, «Mode»? Компьютер принимает значения вроде 1, 2 или 3, но мой скромный мозг никак не может найти хоть сколько-нибудь разумное объяснение этому «Mode»!\n\nЯ надеюсь, что какой-нибудь гений потратит пару минут на эту программу и напишет в редакцию, объяснив, насколько я бестолков, и что режимы (modes) — это, конечно же,.....! А заодно этот гений, быть может, любезно подскажет, по какому адресу нужно обращаться для распаковки (explode) кода после того, как он был сжат (imploded)?\n\nЗаранее спасибо,\n\nChris.\n",
+  "text_type": 3
+}

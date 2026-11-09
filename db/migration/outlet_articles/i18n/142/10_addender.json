@@ -1,0 +1,53 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "142",
+  "article_id": "10_addender",
+  "title_en": "Addender",
+  "title_ru": "Дополнение",
+  "meta_description_en": "Add-Enders section in Outlet #142: unreleased reader contributions and Brian Cavers' universal SAVE.ALL BASIC routine for saving programs, code, or screens to tape/disk.",
+  "meta_description_ru": "Рубрика Add-Enders в Outlet #142: публикация архивных материалов и универсальной BASIC-процедуры SAVE.ALL от Brian Cavers для сохранения данных на ленту или диск.",
+  "authors": [
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet-magazine",
+      "tag_alias": "outlet-magazine"
+    },
+    {
+      "tag_name": "add-enders",
+      "tag_alias": "add-enders"
+    },
+    {
+      "tag_name": "save-all",
+      "tag_alias": "save-all"
+    },
+    {
+      "tag_name": "brian-cavers",
+      "tag_alias": "brian-cavers"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    },
+    {
+      "tag_name": "tape",
+      "tag_alias": "tape"
+    },
+    {
+      "tag_name": "disk",
+      "tag_alias": "disk"
+    }
+  ],
+  "category_ids": [
+    30,
+    74,
+    123
+  ],
+  "body_en_plain": "Some items contributed to OUTLET\nhave not yet been included for a\nvariety of reasons. It's a shame\nto leave them on the shelf so,if\nappropriate, they will be added\nto this ADD-ENDERS area of the\nmagazine (not microdrive or Opus\nas there is not enough room).\n\nThe material covers a wide range\nof quality and program types:\nutilities, screens, character\nsets and text articles and SOME\nof it may be unedited, untested,\nnot working fully or properly;\nin need of conversion for your\n\nsystem's syntax or printer etc.;\nwithout full instructions or\nwhatever. Readers will have to\nsift through to see if there is\nanything of interest they can\nmake use of and discard the\nrest. Not everything will appear\non all versions necessarily.\n\nSome Add-Enders may be linked to\nOUTLET in the normal way. These\nwill usually precede this text\nfile. Any items that follow this\narticle will possibly need to be\nLOADed manually or may not auto-\nrun when loaded.\n\nThere may be some info on the\nfollowing pages...\n\nFollowing on from the suggestion\nin OUTLET to reproduce some of\nthe better routines from earlier\nissues of OUTLET for the benefit\nof newer subscribers, this month\nwe have \"SAVE.ALL\" which is a\nuniversal routine written by\nBrian Cavers for saving a progr-\nam,a chunk of code, or a screen,\nto tape or disc on any Spectrum.\nWe use it in OUTLET whenever a\nSAVE is required.\n\nSave the routine and merge it\ninto your own program. When you\nwant to use it, simply use...\n        GOSUB 9500.\nNote that the routine is\ncurrently set to save a SCREEN$,\nso lines 9545, 9550, & 9555 will\nneed tweaking if you wish to use\nit to save something different.\n\nAny suggestions of programs that\nyou would like to see again or\nconsider to be of special value\nto other readers are always\nwelcome, and we will include one\nas an ADDENDER each month if\nspace permits. Be warned however\nthat most of those magical demos\nwill be much too large for\ninclusion!\n\n          ============\n\nPress \"N\" now to load 'SAVE.ALL'\n\nNote that you will probably get\nan Error report when the program\nis loaded from OUTLET, as it is\nnot Auto-run..\n",
+  "body_ru_plain": "",
+  "body_en": "## Addender\n\nSome items contributed to OUTLET have not yet been included for a variety of reasons. It's a shame to leave them on the shelf so,if appropriate, they will be added to this ADD-ENDERS area of the magazine (not microdrive or Opus as there is not enough room).\n\nThe material covers a wide range of quality and program types: utilities, screens, character sets and text articles and SOME of it may be unedited, untested, not working fully or properly; in need of conversion for your\n\nsystem's syntax or printer etc.; without full instructions or whatever. Readers will have to sift through to see if there is anything of interest they can make use of and discard the rest. Not everything will appear on all versions necessarily.\n\nSome Add-Enders may be linked to OUTLET in the normal way. These will usually precede this text file. Any items that follow this article will possibly need to be LOADed manually or may not auto- run when loaded.\n\nThere may be some info on the following pages...\n\nFollowing on from the suggestion in OUTLET to reproduce some of the better routines from earlier issues of OUTLET for the benefit of newer subscribers, this month we have \"SAVE.ALL\" which is a universal routine written by Brian Cavers for saving a progr- am,a chunk of code, or a screen, to tape or disc on any Spectrum. We use it in OUTLET whenever a SAVE is required.\n\nSave the routine and merge it into your own program. When you want to use it, simply use... GOSUB 9500. Note that the routine is currently set to save a SCREEN$, so lines 9545, 9550, & 9555 will need tweaking if you wish to use it to save something different.\n\nAny suggestions of programs that you would like to see again or consider to be of special value to other readers are always welcome, and we will include one as an ADDENDER each month if space permits. Be warned however that most of those magical demos will be much too large for inclusion!\n\n```text\n          ============\n```\n\nPress \"N\" now to load 'SAVE.ALL'\n\nNote that you will probably get an Error report when the program is loaded from OUTLET, as it is not Auto-run..\n",
+  "body_ru": "## Addender\n\nНекоторые материалы, присланные в OUTLET, до сих пор не были опубликованы по разным причинам. Жалко оставлять их пылиться на полке, поэтому при возможности они будут добавляться в эту рубрику ADD-ENDERS («Довески») нашего журнала (кроме версий для Microdrive или Opus, так как там не хватает места).\n\nМатериал охватывает широкий диапазон качества и типов программ: утилиты, экраны, наборы шрифтов и текстовые статьи, и ЧАСТЬ из этого может быть неотредактированной, непротестированной, работающей не полностью или не совсем корректно; требующей адаптации под синтаксис вашей системы или принтер и т. д.; без полных инструкций и тому подобное. Читателям придется покопаться во всем этом, чтобы найти то полезное, что сможет им пригодиться, а остальное отбросить. Далеко не всё обязательно появится во всех версиях журнала.\n\nНекоторые Add-Enders могут быть привязаны к меню OUTLET обычным образом. Обычно они предшествуют этому текстовому файлу. Любые материалы, идущие после этой статьи, возможно, придется загружать (LOAD) вручную, либо они могут не запуститься автоматически после загрузки.\n\nНа следующих страницах может быть некоторая информация...\n\nСледуя предложению, прозвучавшему в OUTLET, переиздать некоторые из лучших процедур из ранних номеров OUTLET на благо новых подписчиков, в этом месяце мы представляем «SAVE.ALL» — универсальную процедуру, написанную Brian Cavers для сохранения программы, блока кода или экрана на ленту или диск на любом Spectrum. Мы используем её в OUTLET каждый раз, когда требуется SAVE.\n\nСохраните эту процедуру и объедините (MERGE) её со своей собственной программой. Когда захотите её использовать, просто укажите:\n```text\n        GOSUB 9500.\n```\nОбратите внимание, что процедура в данный момент настроена на сохранение SCREEN$, поэтому строки 9545, 9550 и 9555 потребуют подгонки, если вы захотите сохранить что-то другое.\n\nЛюбые предложения о программах, которые вы хотели бы увидеть снова или считаете особенно ценными для других читателей, всегда приветствуются, и мы будем включать по одной в качестве ADDENDER каждый месяц, если позволит место. Имейте в виду, однако, что большинство тех волшебных демо будут слишком велики для включения!\n\n============\n\nНажмите «N» прямо сейчас, чтобы загрузить 'SAVE.ALL'\n\nОбратите внимание, что вы, вероятно, получите сообщение об ошибке (Error report) при загрузке программы из OUTLET, так как она не запускается автоматически...\n",
+  "text_type": 3
+}

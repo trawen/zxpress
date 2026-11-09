@@ -1,0 +1,45 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "26",
+  "article_id": "07_XONIX.TXT",
+  "source_lang": "de-AT",
+  "title_en": "Mega Xonix 128/48",
+  "title_ru": "Mega Xonix 128/48",
+  "meta_description_en": "Overview of Mega Xonix 128/48 for ZX Spectrum from Scene+ #26: a repackaged version combining elements of Zolyx, Pyromania, and Bomberman.",
+  "meta_description_ru": "Обзор игры Mega Xonix 128/48 для ZX Spectrum из журнала Scene+ #26: перепакованная версия, сочетающая механики Zolyx, Pyromania и Bomberman.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "mega-xonix",
+      "tag_alias": "mega-xonix"
+    },
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    },
+    {
+      "tag_name": "suc",
+      "tag_alias": "suc"
+    }
+  ],
+  "category_ids": [
+    1,
+    2,
+    3
+  ],
+  "body_de_plain": "M_XONI ü - MEGA XONIX 128/48 - Dieses Spiel war bereits auf der\nSCENE+ 14, allerdings gefiel esdort so vielen daß ich beschloßen\nhabe es auch für die SUC-Leserdieses Spiel zu inkludieren. Es\nist eine neu-gepackte Versiondie nur noch aus 3 Files besteht,\nfalls Jemand sie ersetzenwill. Wie schon mal beschrieben, ist\ndieses Spiel eine Mischung ausZolyx, Pyromania und Bomberman,\nalso meiner Meinung nach, diedrei interessantesten Klassiker auf\ndem Spectrum. Wie bei Zolyx kreist man Flächen ein um möglichst\nviel von derSpielfläche zu füllen. Die Vieher die einem dabei im\nWege stehenkönnen einfach mit einer Bombe ins Jenseits befördert\nwerden,und das sich ausbreitende Feuer muß entweder eingekreist\noderzerbombt werden. Allerdings Achtung! Viele Bomben stehen\nihnennicht zur verfügung. Die Schrift im Anfangsscreen ist zwar\nRussisch, aber die Optionzum starten ist \"1\" und die Steuerund\nist immer gleichzeitig auf Keyboard \"QAOPM\" und Sinclair\neingestellt. Wenn Sie das Spiel im 128er/USR Modus starten,\nhat jeder Leveleine eigene Musik. R - This game was allready\npresented on SCENE+ 14, it was so goodthat I have decidet to\npresent it also to the SUC-Sessionreaders. It is a new-packed\nversion that contains now only threefiles, if anyone want to\nreplace his old version that takes agesto load. As I allready\nwrote, this game is a mix crossover of Zolyx,Pyromania and\nBomberman, the three classic Spectrum games. Like in Zolyx you\nhave to fill a percentage of the field onscreen, but beware the\nnasties, they can be bombed out, but theyare moving very fast.\nThere is also fire thad must be closed infilled scape or bombed\nout. You have not many bombs, so use themwise. The Title screen\nis shown in Russian, but only the option \"1\"starts the game. The\ncontrols are allways Keyboard \"QAOPM\" and Sinclair Joystick.\nStart it in 128/USR mode and each level has its ow\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### MEGA XONIX 128/48\n\nThis game was already featured in *SCENE+ #14*, but so many people liked it that I decided to include it for the SUC readers as well. It is a newly repacked version that now consists of only 3 files, in case anyone wants to replace their old version that took ages to load.\n\nAs previously described, this game is a crossover mix of *Zolyx*, *Pyromania*, and *Bomberman* — in my opinion, three of the most interesting classics on the Spectrum. Just like in *Zolyx*, you outline areas to fill as much of the playing field as possible. The critters that get in your way can simply be dispatched to the afterlife with a bomb, and spreading fire must either be encircled or blown up. Be warned, though: you do not have many bombs at your disposal, so use them wisely!\n\nThe title screen is in Russian, but pressing \"1\" starts the game. The controls are always set simultaneously to keyboard (\"QAOPM\") and Sinclair joystick. If you launch the game in 128K/USR mode, every level features its own AY music.\n",
+  "body_ru": "### MEGA XONIX 128/48\n\nЭта игра уже публиковалась в *SCENE+ #14*, однако она столь многим пришлась по душе, что я решил включить её и для читателей SUC. Это новая, перепакованная версия, которая состоит всего из трёх файлов — на случай, если кто-то захочет заменить старую версию, загружавшуюся целую вечность.\n\nКак уже отмечалось ранее, эта игра представляет собой смесь *Zolyx*, *Pyromania* и *Bomberman* — на мой взгляд, трёх самых интересных классических игр на Спектруме. Как и в *Zolyx*, вы отсекаете участки игрового поля, чтобы закрасить как можно большую его площадь. Мешающих вам тварей можно просто отправить на тот свет с помощью бомбы, а распространяющийся огонь необходимо либо окружить, либо подорвать. Будьте осторожны: бомб в запасе совсем немного, так что расходуйте их с умом!\n\nТекст на стартовом экране на русском языке, но игра запускается клавишей «1». Управление всегда настроено одновременно на клавиатуру («QAOPM») и Sinclair-джойстик. Если запустить игру в режиме 128K / USR, на каждом уровне будет играть своя собственная музыка.\n",
+  "text_type": 3
+}

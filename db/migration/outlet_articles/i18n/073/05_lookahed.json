@@ -1,0 +1,40 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "073",
+  "article_id": "05_lookahed",
+  "title_en": "Lookahead",
+  "title_ru": "В следующем номере",
+  "meta_description_en": "A preview of the upcoming issue of Outlet: an article on sight, a Braille learning program, London dialling codes database, Outclass Screen Arithmetic, and more.",
+  "meta_description_ru": "Анонс следующего номера журнала Outlet: статья о зрении, программа для изучения шрифта Брайля, телефонные коды Лондона, Screen Arithmetic в Outclass и другое.",
+  "authors": [
+    "Chris Cowley"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "preview",
+      "tag_alias": "preview"
+    },
+    {
+      "tag_name": "braille",
+      "tag_alias": "braille"
+    },
+    {
+      "tag_name": "outclass",
+      "tag_alias": "outclass"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "One of the bonuses of OUTLET is\nthat we have no ties (except to\nour favourite computer)so we can\nbring you articles and programs\ndealing with almost any topic.\nNext month there is an article\nabout a subject that we take too\nmuch for granted:- the ability\nto see and also how we can, with\nsmall acts of thoughtfulness,\nhelp those less fortunate.\n\n                         more...\n\nFollowing the article is a\nprogram in nice BIG CHARS, for\nlearning Braille. I was quite\nsurprised how many symbols I\ncould recognise after only a few\nminutes practice!\n\nOther items we hope to include\nare a massive database of the\nInner and Outer London dialling\ncodes, a useful utility for\nmoving stuff off disc into RAM,\nthe final part of the OUTCLASS\nexplaing the mysteries of Screen\nArithmetic, the second great \"No\nMore Intelligence\" Demo, and\nwhatever else we can cram in.\n\n           Chris.\n",
+  "body_ru_plain": "",
+  "body_en": "One of the bonuses of OUTLET is that we have no ties (except to our favourite computer) so we can bring you articles and programs dealing with almost any topic. Next month there is an article about a subject that we take too much for granted: the ability to see, and also how we can, with small acts of thoughtfulness, help those less fortunate.\n\nFollowing the article is a program in nice BIG CHARS, for learning Braille. I was quite surprised how many symbols I could recognise after only a few minutes practice!\n\nOther items we hope to include are a massive database of the Inner and Outer London dialling codes, a useful utility for moving stuff off disc into RAM, the final part of the OUTCLASS explaining the mysteries of Screen Arithmetic, the second great \"No More Intelligence\" Demo, and whatever else we can cram in.\n\nChris.\n",
+  "body_ru": "Один из главных плюсов журнала OUTLET заключается в том, что мы ничем не связаны (кроме верности нашему любимому компьютеру) и поэтому можем предлагать вам статьи и программы практически на любую тему. В следующем месяце вас ждёт материал о вещи, которую мы привыкли воспринимать как должное — о зрении, а также о том, как мы, проявив немного внимания и заботы, можем помочь тем, кому повезло меньше.\n\nВ дополнение к статье пойдёт программа с красивыми КРУПНЫМИ СИМВОЛАМИ для изучения шрифта Брайля. Я сам был приятно удивлён, сколько знаков мне удалось выучить всего за несколько минут практики!\n\nСреди других материалов, которые мы надеемся включить: обширная база данных телефонных кодов внутреннего и внешнего Лондона, полезная утилита для выгрузки файлов с диска в память, заключительная часть серии OUTCLASS, раскрывающая секреты экранной арифметики (Screen Arithmetic), вторая часть замечательного демо «No More Intelligence» и всё остальное, что нам удастся уместить на диск.\n\nChris.\n",
+  "text_type": 3
+}

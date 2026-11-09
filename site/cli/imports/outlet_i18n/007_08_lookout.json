@@ -1,0 +1,46 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "007",
+  "article_id": "08_lookout",
+  "title_en": "Lookout",
+  "title_ru": "Lookout: Новости",
+  "meta_description_en": "Computer news and magazine overview: MGT developing a new 8-bit machine (SAM Coupé), 3.5\" disc shortages, and reviews of Sinclair User, Your Sinclair, and Your Computer.",
+  "meta_description_ru": "Новости компьютерного мира и обзор свежей прессы: разработка нового компьютера от MGT (SAM Coupé), дефицит 3.5\" дискет, журналы Sinclair User, Your Sinclair и Your Computer.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "mgt",
+      "tag_alias": "mgt"
+    },
+    {
+      "tag_name": "sam coupe",
+      "tag_alias": "sam-coupe"
+    },
+    {
+      "tag_name": "пресса",
+      "tag_alias": "press"
+    },
+    {
+      "tag_name": "sinclair user",
+      "tag_alias": "sinclair-user"
+    },
+    {
+      "tag_name": "your sinclair",
+      "tag_alias": "your-sinclair"
+    },
+    {
+      "tag_name": "дискеты",
+      "tag_alias": "floppy-disks"
+    }
+  ],
+  "category_ids": [
+    131,
+    136
+  ],
+  "body_en_plain": "The most interesting news this\nmonth is that Miles Gordon\nTechnology are developing a new\n8-bit computer at under `100\nwith advanced graphics modes but\nalso a Spectrum mode to run\nSpectrum software. If they can\nget the financial backing to\nproduce it, it may be out later\nthis year. 128K, expandable to\n256K; a BASIC similar to the\nSpectrum - but faster, and an\nadd-on disc drive will also  be\navailable.\n\nThere may be 3.5\" disc shortages\nin the near future and so prices\nmay increase until the Japanese\nmanufacturers catch up on the\nextra demand caused by the AMIGA\nand ST etc.\n\nToshiba have developed a new\n3.5\" disc system that formats to\n4 megabytes...\n\nBoots have now definitely \"run\ndown\"the computing side of their\nbusiness...\n\nNow this month's magazines:\n\nSINCLAIR USER has a little more\ndetail about the new computer\nfrom MGT mentioned above and a\nbrief review of the PLUS D disc\n\ninterface.HEWSON gives a machine\ncode routine to take data from a\nREM.Cassette loading without the\nflashing BORDER is explained.\n\nThe problem page tells us that\nSinclair Research are, indeed,\nstill selling microdrive cart-\nridges and has advice on radio\ninterference on your Spectrum.\nThis looks the same as an item\nof our own coming soon so don't\nget SU just for this. Ah,yes, an\nadvert for those `14 microdrives\nfrom DELTA that Don Weerasinghe\nmentioned in OUTLETTERS.\n\nYOUR COMPUTER has a review of\nthe STAR LC10 multifont printer\nat `250 and there is an article\non expert systems...\n\nYOUR SINCLAIR have listings for\nan on-screen digital clock and\nspecial screen printing routines\ntogether with brief hardware\nreviews of:PLUS D, MULTIFACE +3,\nMULTIPRINT, MULTIPLUG, the 3-2-1\nAERIAL SWITCH and the TROJAN\nLIGHT PEN.\n\nPERSONAL COMPUTER WORLD has many\nitems of interest but I couldn't\nfind anything on the Spectrum.\n\nAgain, I couldn't get CRASH in\ntime for this issue....\n",
+  "body_ru_plain": "Самая интересная новость этого\nмесяца: Miles Gordon\nTechnology разрабатывают новый\n8-битный компьютер дешевле `100\nс улучшенной графикой, но\nтакже и с режимом Spectrum для\nзапуска спектрумовских программ.\nЕсли они найдут финансирование\nдля производства, он может выйти\nуже в конце этого года. 128K с\nрасширением до 256K; BASIC,\nпохожий на спековский, но более\nбыстрый, плюс будет доступен\nподключаемый дисковод.\n\nВ ближайшем будущем возможен\nдефицит 3.5\" дискет, и цены\nмогут вырасти, пока японские\nпроизводители не справятся с\nповышенным спросом из-за AMIGA,\nST и прочих.\n\nToshiba разработала новую\nдисковую 3.5\" систему, которая\nформатирует на 4 мегабайта...\n\nBoots теперь окончательно\n\"свернули\" компьютерное\nнаправление своего бизнеса...\n\nА теперь журналы за этот месяц:\n\nВ SINCLAIR USER чуть больше\nподробностей о новом компьютере\nот MGT, упомянутом выше, а также\nкраткий обзор дискового\n\nинтерфейса PLUS D. HEWSON дает\nпроцедуру в машкодах для взятия\nданных из REM. Объясняется\nзагрузка с ленты без мигающего\nBORDER'а.\n\nНа странице проблем пишут, что\nSinclair Research действительно\nвсе еще продает картриджи для\nмикродрайва, и дают советы по\nрадиопомехам от Спектрума.\nПохоже на наш собственный\nматериал, который выйдет скоро,\nтак что не покупайте SU только\nради этого. Ах да, реклама тех\nсамых микродрайвов по `14 от\nDELTA, о которых упоминал\nDon Weerasinghe в OUTLETTERS.\n\nВ YOUR COMPUTER есть обзор\nмногошрифтового принтера STAR\nLC10 за `250, а также статья\nоб экспертных системах...\n\nВ YOUR SINCLAIR есть листинги\nэкранных цифровых часов и особых\nпроцедур печати экрана, а также\nкраткие обзоры железа: PLUS D,\nMULTIFACE +3, MULTIPRINT,\nMULTIPLUG, 3-2-1 AERIAL SWITCH и\nTROJAN LIGHT PEN.\n\nВ PERSONAL COMPUTER WORLD много\nвсего интересного, но я не нашел\nничего по Спектруму.\n\nИ снова мне не удалось вовремя\nдостать CRASH к этому выпуску...\n",
+  "body_en": "## Lookout\n\nThe most interesting news this month is that Miles Gordon Technology are developing a new 8-bit computer at under \\`100 with advanced graphics modes but also a Spectrum mode to run Spectrum software. If they can get the financial backing to produce it, it may be out later this year. 128K, expandable to 256K; a BASIC similar to the Spectrum - but faster, and an add-on disc drive will also be available.\n\nThere may be 3.5\" disc shortages in the near future and so prices may increase until the Japanese manufacturers catch up on the extra demand caused by the AMIGA and ST etc.\n\nToshiba have developed a new 3.5\" disc system that formats to 4 megabytes...\n\nBoots have now definitely \"run down\" the computing side of their business...\n\nNow this month's magazines:\n\n**SINCLAIR USER** has a little more detail about the new computer from MGT mentioned above and a brief review of the PLUS D disc interface. HEWSON gives a machine code routine to take data from a REM. Cassette loading without the flashing BORDER is explained.\n\nThe problem page tells us that Sinclair Research are, indeed, still selling microdrive cartridges and has advice on radio interference on your Spectrum. This looks the same as an item of our own coming soon so don't get SU just for this. Ah, yes, an advert for those \\`14 microdrives from DELTA that Don Weerasinghe mentioned in OUTLETTERS.\n\n**YOUR COMPUTER** has a review of the STAR LC10 multifont printer at \\`250 and there is an article on expert systems...\n\n**YOUR SINCLAIR** have listings for an on-screen digital clock and special screen printing routines together with brief hardware reviews of: PLUS D, MULTIFACE +3, MULTIPRINT, MULTIPLUG, the 3-2-1 AERIAL SWITCH and the TROJAN LIGHT PEN.\n\n**PERSONAL COMPUTER WORLD** has many items of interest but I couldn't find anything on the Spectrum.\n\nAgain, I couldn't get **CRASH** in time for this issue....\n",
+  "body_ru": "## Lookout: Новости\n\nСамая интересная новость этого месяца: Miles Gordon Technology разрабатывают новый 8-битный компьютер дешевле `100 с улучшенной графикой, но также и с режимом Spectrum для запуска спектрумовских программ. Если они найдут финансирование для производства, он может выйти уже в конце этого года. 128K с расширением до 256K; BASIC, похожий на спековский, но более быстрый, плюс будет доступен подключаемый дисковод.\n\nВ ближайшем будущем возможен дефицит 3.5\" дискет, и цены могут вырасти, пока японские производители не справятся с повышенным спросом из-за AMIGA, ST и прочих.\n\nToshiba разработала новую дисковую 3.5\" систему, которая форматирует на 4 мегабайта...\n\nBoots теперь окончательно «свернули» компьютерное направление своего бизнеса...\n\n### Журналы за этот месяц\n\nВ **SINCLAIR USER** чуть больше подробностей о новом компьютере от MGT, упомянутом выше, а также краткий обзор дискового интерфейса PLUS D. HEWSON дает процедуру в машкодах для взятия данных из REM. Объясняется загрузка с ленты без мигающего BORDER'а.\n\nНа странице проблем пишут, что Sinclair Research действительно все еще продает картриджи для микродрайва, и дают советы по радиопомехам от Спектрума. Похоже на наш собственный материал, который выйдет скоро, так что не покупайте SU только ради этого. Ах да, реклама тех самых микродрайвов по `14 от DELTA, о которых упоминал Don Weerasinghe в OUTLETTERS.\n\nВ **YOUR COMPUTER** есть обзор многошрифтового принтера STAR LC10 за `250, а также статья об экспертных системах...\n\nВ **YOUR SINCLAIR** есть листинги экранных цифровых часов и особых процедур печати экрана, а также краткие обзоры железа: PLUS D, MULTIFACE +3, MULTIPRINT, MULTIPLUG, 3-2-1 AERIAL SWITCH и TROJAN LIGHT PEN.\n\nВ **PERSONAL COMPUTER WORLD** много всего интересного, но я не нашел ничего по Спектруму.\n\nИ снова мне не удалось вовремя достать **CRASH** к этому выпуску...\n",
+  "text_type": 3
+}

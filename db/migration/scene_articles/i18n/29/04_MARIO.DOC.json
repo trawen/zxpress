@@ -1,0 +1,44 @@
+{
+  "press": "Scene+",
+  "press_id": 315,
+  "issue": "29",
+  "article_id": "04_MARIO.DOC",
+  "source_lang": "de-AT",
+  "title_en": "Mario Islands 128 Playable Demo",
+  "title_ru": "Играбельная демо-версия Mario Islands 128",
+  "meta_description_en": "A brief mini-review of the playable demo of Mario Islands 128 from Russia, featured in Scene+ #29.",
+  "meta_description_ru": "Краткая заметка о демо-версии игры Mario Islands 128 из России в журнале Scene+ #29.",
+  "authors": [],
+  "tags": [
+    {
+      "tag_name": "scene-plus",
+      "tag_alias": "scene-plus"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "mario islands",
+      "tag_alias": "mario-islands"
+    },
+    {
+      "tag_name": "games",
+      "tag_alias": "games"
+    },
+    {
+      "tag_name": "demo",
+      "tag_alias": "demo"
+    }
+  ],
+  "category_ids": [
+    1,
+    2
+  ],
+  "body_de_plain": "MARI ü - * MARIO ISLANDS 128 PLAYABLE DEMO! - Überraschung aus\nRußland, auf dieses Spiel haben wir gewartetseit Rainbow Arts\nGREAT GIANA SISTERS gekippt hat. Es hat zwarnur ein Level, doch\ndieser ist recht groß. Ach ja, KempstonIterface unbedingt\nanschließen, sonst springt Mario wild umher. - Surprise from\nRussia, we all wanted this game since Rainbow Artshas canceled\nGREAT GIANA SISTERS. It has only a level, but areally big one.\nAnd don't forget to connect a Kempston interfaceto your Co\n",
+  "body_en_plain": "",
+  "body_ru_plain": "",
+  "body_en": "### MARIO ISLANDS 128 PLAYABLE DEMO!\n\nA surprise from Russia: this is the game we've been waiting for ever since Rainbow Arts pulled the plug on *The Great Giana Sisters*. It may only feature one level, but it is a fairly large one. Oh, and be sure to connect a Kempston interface, otherwise Mario will jump around erratically.\n",
+  "body_ru": "### ИГРАБЕЛЬНАЯ ДЕМО-ВЕРСИЯ MARIO ISLANDS 128!\n\nСюрприз из России: это та самая игра, которую мы все ждали с тех пор, как Rainbow Arts свернула выпуск *The Great Giana Sisters*. В ней всего один уровень, но зато довольно большой. Ах да, обязательно подключите интерфейс Kempston, иначе Марио будет беспорядочно прыгать во все стороны.\n",
+  "text_type": 3
+}

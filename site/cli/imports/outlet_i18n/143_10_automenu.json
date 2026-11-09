@@ -1,0 +1,48 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "143",
+  "article_id": "10_automenu",
+  "title_en": "Automenu Information",
+  "title_ru": "Информация о программе Automenu",
+  "meta_description_en": "Bernadette Dowsland presents Automenu, a customizable +2/+3 style disk menu program for ZX Spectrum with Kempston mouse support, +D and Disc DOS compatibility.",
+  "meta_description_ru": "Бернадетт Доусланд представляет Automenu — настраиваемую дисковую оболочку в стиле загрузочного меню +2/+3 для ZX Spectrum с поддержкой мыши Kempston, интерфейсов +D и Disc DOS.",
+  "authors": [
+    "Bernadette Dowsland"
+  ],
+  "tags": [
+    {
+      "tag_name": "automenu",
+      "tag_alias": "automenu"
+    },
+    {
+      "tag_name": "menu",
+      "tag_alias": "menu"
+    },
+    {
+      "tag_name": "basic",
+      "tag_alias": "basic"
+    },
+    {
+      "tag_name": "kempston mouse",
+      "tag_alias": "kempston-mouse"
+    },
+    {
+      "tag_name": "plus d",
+      "tag_alias": "plus-d"
+    },
+    {
+      "tag_name": "zx spectrum +3",
+      "tag_alias": "zx-spectrum-plus-3"
+    }
+  ],
+  "category_ids": [
+    70,
+    64
+  ],
+  "body_en_plain": "AUTOMENU INFORMATION\n    By Bernadette Dowsland\n    ----------------------\nThe next item,AUTOMENU is a menu\nprogram based on the +2/+3 open-\ning screen. Yes,it has been done\nbefore. I know. But wait! There\nare some subtle differences:\n\nIn line 10 there are variables\nto alter the dimensions of the\nmenu. The menu can hold about 20\nitems maximum. The variables are\nas follows:-\n\n DIM b$(val \"x\") where x is the\nlength of your longest title\nmaximum 30 characters so you can\nbe quite descriptive.\n\n BA stands for the number of\nbars (files) in your menu.\n\n H is the bar highlighter colour\n\n UP is the top vertical coord of\nyour menu ie. the number of\ncharacter spaces from the top of\nthe screen.\n\n M is the number of character\nspaces from the left of the\nscreen\n\n MY contains the value which\ndetermines the file to be high-\nlighted on initiation.\n\nInserting DATA in your menu:-\n\n\nThe strings to appear in your\nbars on the screen are held in\ndata statements in line 210, and\ndata lines 222 onwards keep the\nexact file names as needed to\nload the files. One file name\nper data line, using the same\norder of files as in line 210.\n\n\nNote: Do not attempt to edit\nline 1000, as it contains some\nUDG's. Editing or re-numbering\nwould corrupt it.\n\n\n\nWhat's special about this menu?\nWell it loads files from the\nlast disk in use on a two drive\n+D system but if booted on a +3\nin the B drive with Dominic Mor-\nris's Disc Dos it will recognise\nthe system and only use load d1\nsyntax.\n\nLast but not least,if you have a\nKempston mouse fitted and you\nclick either button once before\ntouching the cursor keys, the\nmouse will be recognised and\nwill then operate as well as\ncursors. If you don't have a\nmouse then the first touch of\nthe cursors locks out the mouse\nroutine so preventing the\nnuisance effect that occurs when\nboth routines are operative but\nno mouse is present.\n\nIt takes a little bit of setting\nup so I wouldn't expect you'd\nput it on every disk, just those\nthat you use all the time and\nwant to add that little touch of\n\"savoir faire\" to.\n\n             Bernadette Dowsland\n\n\n\n\n\n\n Press \"N\" NOW to load AUTOMENU.\n",
+  "body_ru_plain": "",
+  "body_en": "### AUTOMENU INFORMATION\n*By Bernadette Dowsland*\n\nThe next item, AUTOMENU, is a menu program based on the +2/+3 opening screen. Yes, it has been done before. I know. But wait! There are some subtle differences:\n\nIn line 10 there are variables to alter the dimensions of the menu. The menu can hold about 20 items maximum. The variables are as follows:\n\n* `DIM b$(val \"x\")` where `x` is the length of your longest title, maximum 30 characters so you can be quite descriptive.\n* `BA` stands for the number of bars (files) in your menu.\n* `H` is the bar highlighter colour.\n* `UP` is the top vertical coord of your menu, i.e. the number of character spaces from the top of the screen.\n* `M` is the number of character spaces from the left of the screen.\n* `MY` contains the value which determines the file to be highlighted on initiation.\n\n#### Inserting DATA in your menu\n\nThe strings to appear in your bars on the screen are held in `DATA` statements in line 210, and data lines 222 onwards keep the exact file names as needed to load the files. One file name per data line, using the same order of files as in line 210.\n\n*Note:* Do not attempt to edit line 1000, as it contains some UDGs. Editing or re-numbering would corrupt it.\n\n#### What's special about this menu?\n\nWell, it loads files from the last disk in use on a two drive +D system, but if booted on a +3 in the B drive with Dominic Morris's Disc DOS, it will recognise the system and only use `load d1` syntax.\n\nLast but not least, if you have a Kempston mouse fitted and you click either button once before touching the cursor keys, the mouse will be recognised and will then operate as well as cursors. If you don't have a mouse, then the first touch of the cursors locks out the mouse routine, so preventing the nuisance effect that occurs when both routines are operative but no mouse is present.\n\nIt takes a little bit of setting up, so I wouldn't expect you'd put it on every disk, just those that you use all the time and want to add that little touch of \"savoir faire\" to.\n\n*Bernadette Dowsland*\n\nPress \"N\" NOW to load AUTOMENU.\n",
+  "body_ru": "### ИНФОРМАЦИЯ О ПРОГРАММЕ AUTOMENU\n*Бернадетт Доусланд (Bernadette Dowsland)*\n\nСледующая программа, AUTOMENU, представляет собой загрузочное меню, оформленное в стиле стартового экрана моделей +2/+3. Да, подобное уже делали раньше — я знаю. Но подождите! Здесь есть несколько тонких отличий:\n\nВ строке 10 находятся переменные для настройки размеров и расположения меню. Меню может вмещать максимум около 20 пунктов. Переменные следующие:\n\n* `DIM b$(val \"x\")`, где `x` — длина самого длинного названия (максимум 30 символов, так что описания могут быть вполне подробными).\n* `BA` — количество полос (файлов) в вашем меню.\n* `H` — цвет подсветки выбранной строки.\n* `UP` — верхняя координата меню по вертикали, то есть количество знакомест от верхнего края экрана.\n* `M` — отступ меню в знакоместах от левого края экрана.\n* `MY` — номер пункта, который будет подсвечен при запуске.\n\n#### Ввод данных (DATA) в меню\n\nСтроки с названиями, которые будут отображаться на экране, хранятся в операторах `DATA` в строке 210, а начиная со строки 222 размещаются точные имена файлов, необходимые для их загрузки. Одно имя файла на каждую строку `DATA`, в том же порядке, что и в строке 210.\n\n*Примечание:* не пытайтесь редактировать строку 1000, так как она содержит пользовательские символы (UDG). Попытка редактирования или перенумерации испортит её.\n\n#### В чём же особенность этого меню?\n\nОно загружает файлы с последнего использованного диска на двухдисководной системе +D, но если оно запущено на Spectrum +3 с дисковода B под управлением Disc DOS Доминика Морриса (Dominic Morris), меню распознает систему и будет использовать только синтаксис `load d1`.\n\nИ последнее, но не менее важное: если у вас подключена мышь Kempston и вы кликнете любой кнопкой до нажатия клавиш курсора, мышь будет распознана и начнёт работать наряду с клавишами управления курсором. Если же мыши у вас нет, первое нажатие на курсорные клавиши блокирует процедуру опроса мыши — это предотвращает неприятные сбои, возникающие при активной процедуре мыши в её физическое отсутствие.\n\nНастройка меню требует некоторых усилий, поэтому я не ожидаю, что вы станете ставить его на каждый диск подряд — только на те, которыми пользуетесь постоянно и которым хотите придать толику лоска и изящества.\n\n*Bernadette Dowsland*\n\nНажмите «N» СЕЙЧАС, чтобы загрузить AUTOMENU.\n",
+  "text_type": 3
+}

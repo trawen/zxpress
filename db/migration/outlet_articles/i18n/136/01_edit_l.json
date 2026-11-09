@@ -1,0 +1,41 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "136",
+  "article_id": "01_edit_l",
+  "title_en": "Christmas 1998 Editorial",
+  "title_ru": "Редакционная колонка: Рождество 1998",
+  "meta_description_en": "Christmas 1998 editorial from Outlet issue 136, featuring a nostalgic look at the ZX81 with an emulator, plus holiday greetings from the editors.",
+  "meta_description_ru": "Колонка редакторов Outlet #136 за Рождество 1998 года: эмулятор ZX81, праздничные поздравления и контактная информация редакции.",
+  "authors": [
+    "Ron Cavers",
+    "Brian Cavers"
+  ],
+  "tags": [
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "christmas",
+      "tag_alias": "christmas"
+    },
+    {
+      "tag_name": "zx81",
+      "tag_alias": "zx81"
+    }
+  ],
+  "category_ids": [
+    123,
+    130
+  ],
+  "body_en_plain": "C H R I S T M A S ,   1 9 9 8\n\nThis could be the last 'normal'\nChristmas of the millenium; next\nyear will be the very last one\nin the thousand years' period so\nought to be cause for extra cel-\nebrations!\n\n\nWe've a nostalgic look back at\nthe ZX81 with an emulator in\nthis month's issue as well as a\nselection of other goodies for\nyou to enjoy.Have a Wonderful\nChristmas everyone - and a very\nHappy New Year!\n\n                     Ron & Brian\n\n\n      OUTLET is produced by\n\n          Chris Oliver\n       Ron & Brian Cavers\n      34 Saltersgate Drive\n   Birstall, Leicester LE4 3FF\n\n   Email: outletmag@yahoo.com.\n",
+  "body_ru_plain": "",
+  "body_en": "### CHRISTMAS, 1998\n\nThis could be the last 'normal' Christmas of the millennium; next year will be the very last one in the thousand years' period so ought to be cause for extra celebrations!\n\nWe've a nostalgic look back at the ZX81 with an emulator in this month's issue as well as a selection of other goodies for you to enjoy. Have a Wonderful Christmas everyone — and a very Happy New Year!\n\nRon & Brian\n\n---\n\n**OUTLET is produced by:**\n\nChris Oliver  \nRon & Brian Cavers  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF  \n\nEmail: outletmag@yahoo.com.\n",
+  "body_ru": "### РОЖДЕСТВО 1998\n\nВозможно, это последнее «обычное» Рождество уходящего тысячелетия; следующий год станет последним в тысячелетнем цикле и непременно потребует особого размаха в праздновании!\n\nВ этом номере мы с ностальгией вспоминаем ZX81 благодаря эмулятору, а также приготовили для вас подборку других приятных материалов. Желаем всем чудесного Рождества и очень счастливого Нового года!\n\nRon & Brian\n\n---\n\n**OUTLET выпускают:**\n\nChris Oliver  \nRon & Brian Cavers  \n34 Saltersgate Drive  \nBirstall, Leicester LE4 3FF  \n\nEmail: outletmag@yahoo.com.\n",
+  "text_type": 3
+}

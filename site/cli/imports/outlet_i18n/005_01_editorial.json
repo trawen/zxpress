@@ -1,0 +1,48 @@
+{
+  "press": "Outlet",
+  "press_id": 314,
+  "issue": "005",
+  "article_id": "01_editorial",
+  "title_en": "Editorial",
+  "title_ru": "От редактора",
+  "meta_description_en": "Editorial for Outlet #05 by Ron & Brian: moving to Opus Discovery drives, double-sized issue, ZX Microfair impressions, and the Jigblox competition.",
+  "meta_description_ru": "Вступительное слово редакторов Outlet #05: переход на дисководы Opus Discovery, сдвоенный объём журнала, впечатления от ZX Microfair и конкурс по Jigblox.",
+  "authors": [
+    "Ron Kay",
+    "Brian Garside"
+  ],
+  "tags": [
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    },
+    {
+      "tag_name": "outlet",
+      "tag_alias": "outlet"
+    },
+    {
+      "tag_name": "opus discovery",
+      "tag_alias": "opus-discovery"
+    },
+    {
+      "tag_name": "microdrive",
+      "tag_alias": "microdrive"
+    },
+    {
+      "tag_name": "zx microfair",
+      "tag_alias": "zx-microfair"
+    },
+    {
+      "tag_name": "driller",
+      "tag_alias": "driller"
+    }
+  ],
+  "category_ids": [
+    123
+  ],
+  "body_en_plain": "Welcome to the new, double-sized\nOUTLET!We thought that we'd have\nplenty of space but it soon  got\nfilled! Where's that shoe horn?-\nwe can just squeeze in one  more\nprogram....\n\nDesperately busy now having  got\nfar behind because of time spent\ndeveloping the microdrive  ERROR\nroutines, time  spent  preparing\nfor the ZX MICROFAIR (Very, very\nnice meeting some of our readers\nat the fair), time spent setting\nup the Opus Discovery! Our  Opus\ndrive  arrived on Wednesday, the\n9th December - We had two and  a\nhalf days to  check it out, make\nup, modify, and test the Christ-\nmas issue on disc and  duplicate\nwell over a hundred discs!  Just\nto make it a little difficult we\nhad no discs so had to pay  high\nstreet prices!\n\nA few notes: We apologize  again\nfor any microdrive failures.  We\nare now using another duplicator\n\nso things may improve  but there\nwill always be a percentage that\nfail. We strive to give a return\npost service to anyone sending a\nfaulty cartridge back so  please\ndon't hesitate.\n\nWe also receive contributions at\ntimes that fail to load and some\nmay go astray in the mail so  we\nrecommend that you keep a backup\ncopy before sending.\n\nMay we draw your attention to an\nincreased range of printer inter\n-faces in our text mode:DISCIPLE\nOPUS and LPRINT III.\n\nThe new DRILLER game's something\nvery special in pushing  forward\nthe limits of the Spectrum.We've\n\n\na free copy here for the winning\nentry in our JIGBLOX competition\nso why not give it a go?Actually\nthe number of entries tailed off\nin the last couple of months  so\nperhaps it's time to put an  end\nto JIGBLOX. Is it too hard?  Too\nboring? Do you need longer?We'll\nput back the closing date by one\nmonth but let us know your views\non this- Keep it or get rid? The\nsame goes for the Top 10- should\nwe axe it? Anything else?  [What\ndo you mean, \"the editor!\" - who\nsaid that!]\n\n         HAPPY NEW YEAR!\n\n          - Ron & Brian.\n",
+  "body_ru_plain": "Добро пожаловать в новый сдвоен-\nный OUTLET! Мы думали, что места\nбудет полно, но оно быстро кончи\n-лось! Где ложка для обуви? — мы\nкак раз можем втиснуть ещё одну\nпрограммку....\n\nСейчас мы в дикой спешке, сильно\nотстав от графика из-за времени,\nушедшего на разработку процедур\nERROR для микродрайва, времени на\nподготовку к ZX MICROFAIR (было\nочень, очень приятно встретить на\nярмарке наших читателей), и вре-\nмени на запуск Opus Discovery!\nНаш дисковод Opus прибыл в среду,\n9 декабря — у нас было два с по-\nловиной дня, чтобы проверить его,\nсобрать, переделать и протестиро-\nвать рождественский выпуск на дис\n-ке и раскопировать больше сотни\nдисков! А для пущей сложности дис\n-кет у нас не было, так что при-\nшлось брать по магазинным ценам!\n\nПара заметок: мы снова просим из\n-винения за сбои микродрайва.Мы\nтеперь используем другой дублика-\nтор,\n\nтак что ситуация может улучшить-\nся, но какой-то процент брака бу-\nдет всегда. Мы стараемся высылать\nзамену обратной почтой каждому,\nкто вернёт сбойный картридж, так\nчто не стесняйтесь.\n\nМы также порой получаем прислан-\nные программы, которые не грузят-\nся, а кое-что теряется на почте,\nтак что мы советуем делать копию\nперед отправкой.\n\nОбратите внимание на расширенный\nсписок принтерных интерфейсов в\nнашем текстовом режиме: DISCIPLE,\nOPUS и LPRINT III.\n\nНовая игра DRILLER — это нечто\nсовершенно особое в плане расши-\nрения возможностей Spectrum. У нас\n\n\nесть бесплатная копия для победи-\nтеля конкурса по JIGBLOX, почему\nбы не попробовать? Правда, за па-\nру последних месяцев приток работ\nиссяк, так что, возможно, пора с\nJIGBLOX завязывать. Слишком слож-\nно? Слишком скучно? Нужно больше\nвремени? Мы продлим приём на ме-\nсяц, но напишите нам своё мнение:\nоставить или убрать? То же каса-\nется и Top 10 — закрыть его? Что\n-то ещё? [В смысле «редактора»?!\nКто это сказал?!]\n\n         HAPPY NEW YEAR!\n\n          - Ron & Brian.\n",
+  "body_en": "## Editorial\n\nWelcome to the new, double-sized OUTLET! We thought that we'd have plenty of space but it soon got filled! Where's that shoe horn? - we can just squeeze in one more program....\n\nDesperately busy now having got far behind because of time spent developing the microdrive ERROR routines, time spent preparing for the ZX MICROFAIR (Very, very nice meeting some of our readers at the fair), time spent setting up the Opus Discovery! Our Opus drive arrived on Wednesday, the 9th December - We had two and a half days to check it out, make up, modify, and test the Christmas issue on disc and duplicate well over a hundred discs! Just to make it a little difficult we had no discs so had to pay high street prices!\n\nA few notes: We apologize again for any microdrive failures. We are now using another duplicator so things may improve but there will always be a percentage that fail. We strive to give a return post service to anyone sending a faulty cartridge back so please don't hesitate.\n\nWe also receive contributions at times that fail to load and some may go astray in the mail so we recommend that you keep a backup copy before sending.\n\nMay we draw your attention to an increased range of printer interfaces in our text mode: DISCIPLE, OPUS and LPRINT III.\n\nThe new DRILLER game's something very special in pushing forward the limits of the Spectrum. We've a free copy here for the winning entry in our JIGBLOX competition so why not give it a go? Actually the number of entries tailed off in the last couple of months so perhaps it's time to put an end to JIGBLOX. Is it too hard? Too boring? Do you need longer? We'll put back the closing date by one month but let us know your views on this - Keep it or get rid? The same goes for the Top 10 - should we axe it? Anything else? [What do you mean, \"the editor!\" - who said that!]\n\n**HAPPY NEW YEAR!**\n\n— Ron & Brian.\n",
+  "body_ru": "## От редактора\n\nДобро пожаловать в новый сдвоенный OUTLET! Мы думали, что места будет полно, но оно быстро кончилось! Где ложка для обуви? — мы как раз можем втиснуть ещё одну программку....\n\nСейчас мы в дикой спешке, сильно отстав от графика из-за времени, ушедшего на разработку процедур ERROR для микродрайва, времени на подготовку к ZX MICROFAIR (было очень, очень приятно встретить на ярмарке наших читателей), и времени на запуск Opus Discovery! Наш дисковод Opus прибыл в среду, 9 декабря — у нас было два с половиной дня, чтобы проверить его, собрать, переделать и протестировать рождественский выпуск на диске и раскопировать больше сотни дисков! А для пущей сложности дискет у нас не было, так что пришлось брать по магазинным ценам!\n\nПара заметок: мы снова просим извинения за сбои микродрайва. Мы теперь используем другой дубликатор, так что ситуация может улучшиться, но какой-то процент брака будет всегда. Мы стараемся высылать замену обратной почтой каждому, кто вернёт сбойный картридж, так что не стесняйтесь.\n\nМы также порой получаем присланные программы, которые не грузятся, а кое-что теряется на почте, так что мы советуем делать копию перед отправкой.\n\nОбратите внимание на расширенный список принтерных интерфейсов в нашем текстовом режиме: DISCIPLE, OPUS и LPRINT III.\n\nНовая игра DRILLER — это нечто совершенно особое в плане расширения возможностей Spectrum. У нас есть бесплатная копия для победителя конкурса по JIGBLOX, почему бы не попробовать? Правда, за пару последних месяцев приток работ иссяк, так что, возможно, пора с JIGBLOX завязывать. Слишком сложно? Слишком скучно? Нужно больше времени? Мы продлим приём на месяц, но напишите нам своё мнение: оставить или убрать? То же касается и Top 10 — закрыть его? Что-то ещё? [В смысле «редактора»?! Кто это сказал?!]\n\nHAPPY NEW YEAR!\n\n— Ron & Brian.\n",
+  "text_type": 3
+}
