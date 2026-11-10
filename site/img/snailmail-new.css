@@ -4097,7 +4097,7 @@ body.smn-modal-open {
 }
 .smn-timeline-year-label {
 	position: absolute;
-	top: 32px;
+	top: 20px;
 	left: 50%;
 	transform: translateX(-50%);
 	font-family: var(--smn-sans);
