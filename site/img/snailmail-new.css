@@ -505,11 +505,16 @@ html:not([data-theme="dark"]) .smn-theme-icon--sun {
 	margin: 0 6px;
 }
 .smn-lang a {
-	color: var(--smn-accent);
+	color: var(--smn-muted);
 	text-decoration: none;
 }
+.smn-lang a:hover {
+	color: var(--smn-accent);
+}
 .smn-lang b {
-	color: var(--smn-ink);
+	color: var(--smn-accent);
+	text-decoration: underline;
+	text-underline-offset: 0.18em;
 }
 
 .smn-search {
@@ -2695,11 +2700,18 @@ body.smn-modal-open {
 		padding: 0;
 		border: 0;
 		font-size: inherit;
+		color: var(--smn-muted);
+		text-decoration: none;
+	}
+	.smn-menu-drawer-lang a:hover,
+	.smn-menu-drawer-lang-text a:hover {
 		color: var(--smn-accent);
 	}
 	.smn-menu-drawer-lang b,
 	.smn-menu-drawer-lang-text b {
-		color: var(--smn-ink);
+		color: var(--smn-accent);
+		text-decoration: underline;
+		text-underline-offset: 0.18em;
 	}
 	/* Class kept for hooks; scroll locked via JS touch/wheel guards (overflow:hidden jumps on iOS). */
 	body.smn-menu-open {
