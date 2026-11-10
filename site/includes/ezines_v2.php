@@ -544,7 +544,7 @@ function ezines_v2_null_if_empty(string $value): ?string
 }
 
 /** Clip UTF-8 string to VARCHAR length used by ezines v2 i18n meta columns. */
-function ezines_v2_clip_meta(string $value, int $maxLen = 512): string
+function ezines_v2_clip_meta(string $value, int $maxLen = 1024): string
 {
     if ($maxLen <= 0) {
         return '';

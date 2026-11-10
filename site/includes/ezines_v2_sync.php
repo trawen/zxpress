@@ -172,7 +172,7 @@ function ezines_v2_upsert_ezine_i18n(mysqli $db, int $ezineId, string $lang, arr
     $title = (string) ($fields['title'] ?? '');
     $slug = ezines_v2_null_if_empty((string) ($fields['slug'] ?? ''));
     $description = (string) ($fields['description'] ?? '');
-    $meta = ezines_v2_clip_meta((string) ($fields['meta_description'] ?? ''), 256);
+    $meta = ezines_v2_clip_meta((string) ($fields['meta_description'] ?? ''), 1024);
     $descBind = $description === '' ? null : $description;
 
     $stmt = $db->prepare(
@@ -267,7 +267,7 @@ function ezines_v2_upsert_issue_i18n(mysqli $db, int $issueId, int $ezineId, str
     $title = (string) ($fields['title'] ?? '');
     $slug = ezines_v2_null_if_empty((string) ($fields['slug'] ?? ''));
     $description = (string) ($fields['description'] ?? '');
-    $meta = ezines_v2_clip_meta((string) ($fields['meta_description'] ?? ''), 512);
+    $meta = ezines_v2_clip_meta((string) ($fields['meta_description'] ?? ''), 1024);
     $descBind = $description === '' ? null : $description;
 
     $stmt = $db->prepare(
@@ -412,7 +412,7 @@ function ezines_v2_upsert_article_i18n(mysqli $db, int $articleId, int $issueId,
     $lang = ezines_v2_lang_code($lang);
     $title = (string) ($fields['title'] ?? '');
     $slug = ezines_v2_null_if_empty((string) ($fields['slug'] ?? ''));
-    $meta = ezines_v2_clip_meta((string) ($fields['meta_description'] ?? ''), 512);
+    $meta = ezines_v2_clip_meta((string) ($fields['meta_description'] ?? ''), 1024);
 
     $stmt = $db->prepare(
         'INSERT INTO ezine_article_i18n (article_id, lang, issue_id, title, slug, meta_description)
