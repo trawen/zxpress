@@ -33,6 +33,9 @@ site/smarty/zxpress/cache/*
 # Uploaded content (user data, not code)
 site/tmp/*
 
+# Local scratch / download dumps (never commit)
+/tmp/
+
 # Large site content/binaries (keep repo clean)
 # These are runtime assets/uploads/archives; we don't want them to flood `git status`.
 site/chapters_images/
