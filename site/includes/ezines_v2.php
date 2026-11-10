@@ -542,3 +542,23 @@ function ezines_v2_null_if_empty(string $value): ?string
 
     return $value === '' ? null : $value;
 }
+
+/** Clip UTF-8 string to VARCHAR length used by ezines v2 i18n meta columns. */
+function ezines_v2_clip_meta(string $value, int $maxLen = 512): string
+{
+    if ($maxLen <= 0) {
+        return '';
+    }
+    if (function_exists('mb_strlen') && function_exists('mb_substr')) {
+        if (mb_strlen($value, 'UTF-8') <= $maxLen) {
+            return $value;
+        }
+
+        return mb_substr($value, 0, $maxLen, 'UTF-8');
+    }
+    if (strlen($value) <= $maxLen) {
+        return $value;
+    }
+
+    return substr($value, 0, $maxLen);
+}

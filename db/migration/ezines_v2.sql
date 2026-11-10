@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `ezine_issue_i18n` (
   `title` VARCHAR(64) NOT NULL DEFAULT '',
   `slug` VARCHAR(255) NULL DEFAULT NULL,
   `description` TEXT NULL,
-  `meta_description` VARCHAR(256) NOT NULL DEFAULT '',
+  `meta_description` VARCHAR(512) NOT NULL DEFAULT '',
   PRIMARY KEY (`issue_id`, `lang`),
   UNIQUE KEY `uq_ezine_issue_i18n_slug` (`ezine_id`, `lang`, `slug`),
   CONSTRAINT `fk_ezine_issue_i18n_issue`
