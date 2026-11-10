@@ -1,0 +1,21 @@
+{
+  "title_cs": "Subliminal Extacy #05: About this issue",
+  "title_ru": "Subliminal Extacy #05: Об этом выпуске",
+  "title_en": "Subliminal Extacy #05: About this issue",
+  "meta_description_cs": "Editorial notes and credits for Subliminal Extacy #05 diskmag released at Inercia Demoparty 2023.",
+  "meta_description_ru": "Редакционная колонка и авторы diskmag Subliminal Extacy #05, выпущенного на demoparty Inercia 2023.",
+  "meta_description_en": "Editorial notes and credits for Subliminal Extacy #05 diskmag released at Inercia Demoparty 2023.",
+  "tags_ru": [
+    "Subliminal Extacy",
+    "lordcoxis",
+    "mr.spiv",
+    "n1k-o",
+    "Diskmag",
+    "Дискмаг",
+    "Демосцена",
+    "FOREVER",
+    "От редакции"
+  ],
+  "body_ru": "### Об этом выпуске\n\n(c) SE Team 2023\n\nНа выпуск №04 у нас ушло 20 лет, но в этот раз мы уложились всего за два с половиной года! Похоже, совсем скоро мы наловчимся делать это быстрее ;)\n\nНадеемся, вам понравится содержимое этого спецвыпуска, с гордостью представленного на demoparty Inercia в декабре 2023 года в Португалии.\n\nМы хотим поблагодарить всех, кто прислал статьи, музыку, графику и ASCII-арт — особенно тех, кто успел в столь сжатые сроки (вы сами знаете, о ком речь, и вы просто космос!). Спасибо ps за постоянные пинки — без него этот выпуск, вероятно, затянулся бы еще на год (или два)...\n\nА бездельникам (вы тоже знаете, о ком речь) — вставайте с дивана!\n\nМы с нетерпением ждем ваших статей: нам хотелось бы выпустить №06 к demoparty Forever в 2024 году. Да-да, мы знаем, глядя на наш послужной список, это кажется попросту невозможным. Но мы ведь можем хотя бы попытаться? ;)\n\nУвидимся в следующем номере!\n\n### Управление\n\n- Клавиши курсора: перемещение\n- Пробел: возврат в меню\n- Enter: открыть выбранную страницу\n\n### Титры\n\n**Код:**\n- Основной движок: lordcoxis\n- Процедура очистки экрана: UB880D\n- Упаковщик: Mr. Spiv\n\n**Музыка:**\n1. Inercia Theme — jeenio\n2. Harakiri — JosSs\n3. S.E.C.A.S. — n1k-o\n\n**Графика:**\n- Загрузочный экран: Xile\n- Оболочка: H7\n- ASCII: k-0s, H7\n\n**Шрифты:**\n- 8x4: «subxtc» — k-0s\n- 8x8: «mO'sOul Remix» — k-0s (оригинал от Desoto/Mo'Soul)\n\n`<subxtc engine v1.0>`",
+  "body_en": "### About this issue\n\n(c) SE Team 2023\n\nIssue #04 took us 20 years, but this time we managed to do it in two and a half! It seems like pretty soon we will be getting the hang of this ;)\n\nWe hope you like the contents of this special edition — proudly released at Inercia Demoparty, December 2023, Portugal.\n\nWe would like to thank everyone who sent in articles, musics and gfx + ascii art, specially those who did it at such short notice (you all know who you are, and you rock!). Thanks to ps for the consistent nudging — without him this issue would probably take another year (or two) to be released...\n\nTo the slackers (you also know who you are) — get off the couch!\n\nWe eagerly await your articles — we would like to release #06 at Forever Party in 2024. Yeah, yeah, we know, our track record says that this is just not possible. But can we at least try? ;)\n\nSee you in the next issue!\n\n### Controls\n\n- Cursor keys: move around\n- Space: return to menu\n- Enter: show current page\n\n### Credits\n\n**Code:**\n- Main code: lordcoxis\n- Screen clear routine: UB880D\n- Cruncher: Mr. Spiv\n\n**Musics:**\n1. Inercia Theme by jeenio\n2. Harakiri by JosSs\n3. S.E.C.A.S. by n1k-o\n\n**Art:**\n- Loading screen: Xile\n- Frontend: H7\n- ASCII: k-0s, H7\n\n**Fonts:**\n- 8x4: \"subxtc\" by k-0s\n- 8x8: \"mO'sOul Remix\" by k-0s (original by Desoto/Mo'Soul)\n\n`<subxtc engine v1.0>`"
+}

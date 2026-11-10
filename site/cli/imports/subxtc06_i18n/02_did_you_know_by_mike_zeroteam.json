@@ -1,0 +1,20 @@
+{
+  "title_cs": "Did you know...? Difference between RLA and RL A",
+  "title_ru": "Знаете ли вы? Разница между командами RLA и RL A",
+  "title_en": "Did you know...? Difference between RLA and RL A",
+  "meta_description_cs": "Technical note on the differences between Z80 instructions RLA and RL A regarding opcode size, timing, and flag modification.",
+  "meta_description_ru": "Техническая заметка о различиях между командами Z80 RLA и RL A: размер опкода, такты и влияние на флаги.",
+  "meta_description_en": "Technical note on the differences between Z80 instructions RLA and RL A regarding opcode size, timing, and flag modification.",
+  "tags_ru": [
+    "Subliminal Extacy",
+    "Zeroteam",
+    "Z80",
+    "Кодинг",
+    "Программирование",
+    "Ассемблер",
+    "Флаги",
+    "Такты"
+  ],
+  "body_ru": "```text\n____ __                                                      __\n\\  // / -- ------------------------------------------- - -__/  \\\n \\ \\    Did you know...? by mike/zeroteam                /  \\__/\n--\\ -------------------------------------------------- - \\__/  \\\n                                                            \\__/\n```\n\nЗнаете ли вы, что между командами `RLA` (код операции `#17`) и `RL A` (код операции `#CB #17`) есть разница? В то время как `RLA` занимает всего один байт и выполняется за 4 такта, `RL A` занимает два байта и длится 8 тактов. Кроме того, `RLA` устанавливает только флаг Carry в соответствии со старшим седьмым битом и сбрасывает флаги H и N в ноль.\n\n`RL A`, помимо этого, выставляет флаг S (если результат отрицательный), флаг Z (если результат равен нулю) и флаг P/V в соответствии с чётностью результата.\n\nmikezt",
+  "body_en": "```text\n____ __                                                      __\n\\  // / -- ------------------------------------------- - -__/  \\\n \\ \\    Did you know...? by mike/zeroteam                /  \\__/\n--\\ -------------------------------------------------- - \\__/  \\\n                                                            \\__/\n```\n\nDid you know that there are differences between instructions `RLA` (opcode `#17`) and `RL A` (opcode `#CB #17`)? While `RLA` is only one byte long and lasts 4 clock cycles, `RL A` is two bytes long and lasts 8 clock cycles. Additionally, `RLA` only sets the Carry flag according to the high bit 7 and sets the H and N flags to zero.\n\n`RL A` additionally sets the S flag if the result was negative, the Z flag if the result was zero, and the P/V flag according to the parity of the result.\n\nmikezt"
+}

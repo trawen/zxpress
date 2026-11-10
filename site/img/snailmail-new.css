@@ -95,7 +95,7 @@
 	--smn-brand: #000000;
 	--smn-highlight: #ffe566;
 	--smn-paper-rgb: 244, 238, 224;
-	--smn-max: 920px;
+	--smn-max: 1024px;
 	--smn-sans: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	--smn-serif: "PF Regal Text", Georgia, "Times New Roman", serif;
 	--smn-mono: "Menlo", "Courier New", Courier, monospace;
@@ -1217,7 +1217,14 @@ a.smn-list-card:hover .smn-list-title {
 	font-weight: 600;
 }
 .smn-pages a {
+	color: var(--smn-ink);
 	text-decoration: none;
+}
+.smn-pages a:hover {
+	color: var(--smn-accent);
+}
+.smn-pages [aria-current="page"] {
+	color: var(--smn-accent);
 }
 .smn-pages-list {
 	display: inline-flex;
@@ -4184,9 +4191,9 @@ body.smn-modal-open {
 	}
 }
 
-/* Catalog: issues-by-year histogram */
+/* Catalog: issues-by-year histogram + year filter grid */
 .smn-year-chart {
-	margin: 12px 0 40px;
+	margin: 12px 0 20px;
 	padding: 0;
 }
 .smn-year-chart-caption {
@@ -4231,6 +4238,19 @@ body.smn-modal-open {
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	font: inherit;
+	color: inherit;
+}
+button.smn-year-chart-col {
+	cursor: pointer;
+}
+button.smn-year-chart-col:focus-visible {
+	outline: 2px solid var(--smn-accent);
+	outline-offset: 2px;
 }
 .smn-year-chart-bar {
 	display: block;
@@ -4249,9 +4269,14 @@ body.smn-modal-open {
 .smn-year-chart-col.is-empty .smn-year-chart-bar {
 	background: transparent;
 }
-.smn-year-chart-col:hover .smn-year-chart-bar {
+button.smn-year-chart-col:hover .smn-year-chart-bar,
+.smn-year-chart-col.is-active .smn-year-chart-bar {
 	background: var(--smn-accent);
 	transform: scaleX(1.15);
+}
+.smn-year-chart-col.is-active .smn-year-chart-label {
+	color: var(--smn-accent);
+	font-weight: 700;
 }
 .smn-year-chart-label {
 	position: absolute;
@@ -4265,10 +4290,112 @@ body.smn-modal-open {
 	white-space: nowrap;
 	pointer-events: none;
 }
+.smn-year-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(3.75rem, max-content));
+	justify-content: start;
+	justify-items: start;
+	column-gap: 14px;
+	row-gap: 8px;
+	margin: 16px 0 0;
+	padding: 14px 0 0;
+	border-top: 1px solid var(--smn-line);
+	font-family: var(--smn-sans);
+}
+.smn-year-grid-btn {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	font: inherit;
+	font-size: 14px;
+	font-weight: 700;
+	color: var(--smn-ink);
+	text-align: left;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.smn-year-grid-btn:hover,
+.smn-year-grid-btn.is-active {
+	color: var(--smn-accent);
+}
+.smn-year-grid-btn:focus-visible {
+	outline: 2px solid var(--smn-accent);
+	outline-offset: 2px;
+}
+.smn-year-grid-btn .smn-filter-count {
+	margin-left: 1px;
+}
+.smn-country-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px 16px;
+	margin: 0 0 28px;
+	padding: 14px 0 0;
+	border-top: 1px solid var(--smn-line);
+	border-bottom: none;
+	font-family: var(--smn-sans);
+}
+.smn-year-chart + .smn-country-grid {
+	margin-top: 0;
+}
+.smn-country-grid-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	font: inherit;
+	font-size: 14px;
+	font-weight: 700;
+	color: var(--smn-ink);
+	cursor: pointer;
+}
+.smn-country-grid-btn:hover,
+.smn-country-grid-btn.is-active {
+	color: var(--smn-accent);
+}
+.smn-country-grid-btn:focus-visible {
+	outline: 2px solid var(--smn-accent);
+	outline-offset: 2px;
+}
+.smn-country-grid-btn .smn-ezine-flag {
+	flex: 0 0 auto;
+}
+.smn-country-grid-btn .smn-filter-count {
+	margin-left: 1px;
+}
+.smn-ezine-index-item.is-catalog-hidden,
+.smn-ezine-index-letter.is-catalog-hidden,
+.smn-ezine-index-item.is-year-hidden,
+.smn-ezine-index-letter.is-year-hidden {
+	display: none;
+}
+.smn-az-item.is-catalog-hidden,
+.smn-az-item.is-year-hidden {
+	display: none;
+}
 
 @media (max-width: 820px) {
-	.smn-year-chart {
+	.smn-year-chart-plot {
 		display: none;
+	}
+	.smn-year-grid {
+		margin: 0;
+		padding: 0;
+		border-top: none;
+	}
+	.smn-year-chart {
+		margin: 8px 0 0;
+		padding: 14px 0 0;
+		border-top: 1px solid var(--smn-line);
+		border-bottom: none;
+	}
+	.smn-year-chart + .smn-country-grid {
+		margin-top: 0;
+		margin-bottom: 28px;
 	}
 }
 

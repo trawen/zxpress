@@ -1,0 +1,23 @@
+{
+  "title_cs": "About this issue — Subliminal Extacy #04 editorial and credits",
+  "title_ru": "Об этом номере — редакция и авторы Subliminal Extacy #04",
+  "title_en": "About this issue — Subliminal Extacy #04 editorial and credits",
+  "meta_description_cs": "Editorial and credits for Subliminal Extacy #04 diskmag (2021): engine history, MB03+ / eLeMeNt ZX support, controls, and contributors.",
+  "meta_description_ru": "Редакционная статья и титры электронного журнала Subliminal Extacy #04 (2021): история движка, поддержка MB03+ и eLeMeNt ZX, управление и создатели.",
+  "meta_description_en": "Editorial and credits for Subliminal Extacy #04 diskmag (2021): engine history, MB03+ / eLeMeNt ZX support, controls, and contributors.",
+  "tags_ru": [
+    "Subliminal Extacy",
+    "Дискмаг",
+    "Электронные журналы",
+    "Редакционная статья",
+    "От редакции",
+    "Credits",
+    "128K",
+    "512x192",
+    "ASCII art",
+    "Демосцена",
+    "ZX Spectrum"
+  ],
+  "body_ru": "## Об этом номере\n\n(c) SE Team 2021\n\n20 лет спустя, но мы всё-таки сделали это! Будем надеяться, что на этот раз график релизов окажется более регулярным, правда ведь? ;)\n\nВсе статьи (за исключением этой) были написаны примерно в 2001–2002 годах. Мы приложили максимум усилий, чтобы связаться со всеми авторами и убедиться, что они по-прежнему не против публикации, однако в некоторых случаях это оказалось невозможным (или нам было просто лень) — если вы чувствуете себя задетыми, свяжитесь с нами :)\n\nЭтот «новый» движок начал разрабатываться ещё в 2013 году, затем канул в небытие и лишь пару лет назад (медленно) всплыл на поверхность. Помимо стандартной версии для 128K, существует улучшенная версия в разрешении 512x192 для великолепного интерфейса MB03+ и клона eLeMeNt ZX (благодарим LMN128 и SCjoe за помощь с Z80DMA).\n\nМы не можем давать никаких обещаний, но (быть может) вернёмся в скором времени? Так что не стесняйтесь присылать статьи/музыку/ASCII для будущих выпусков на адрес se@zxmail.org. Мы принимаем как обычный текст, так и цветной ANSI. ASCII-арт должен быть в стиле Amiga.\n\n### Управление\n\n- Клавиши курсора: перемещение\n- Пробел: возврат в меню\n- Enter: показать текущую страницу\n\n### Авторы (Credits)\n\nКод:\n\n- Основной код: lordcoxis\n- Процедура очистки экрана: UB880D\n- Упаковщик: Mr. Spiv\n\nМузыка:\n\n1. Top Heavy — LaesQ\n2. Madmax — Aki\n3. Wazzup4 — X-agon\n4. TDM4SE — TDM\n\nГрафика:\n\n- Загрузочный экран: Xile\n- Оболочка (frontend): H7\n- ASCII: k-0s, H7\n\nШрифты:\n\n- 8x4: «subxtc» от k-0s\n- 8x8: «mO'sOul Remix» от k-0s (оригинал — Desoto/Mo'Soul)\n\n`<subxtc engine v1.0>`",
+  "body_en": "## About this issue\n\n(c) SE Team 2021\n\n20 years later, but we finally made it! Let's hope for a more frequent release schedule this time, shall we? ;)\n\nAll the articles (except this one) are from around 2001-2002. We did our best to try and contact all the authors to make sure they were still OK with this being released, but in some cases it wasn't possible (or we were too lazy) - if you feel dishonored, get in touch with us :)\n\nThis \"new\" engine was started back in 2013 and faded into oblivion until a couple of years ago, when it (slowly) resurfaced. In addition to the normal 128K version, there is an enhanced 512x192 version for the excellent MB03+ interface and eLeMeNt ZX clone (thanks to LMN128 and SCjoe for help with Z80DMA).\n\nWe can't make any promises, but (maybe) we'll be back soon? So feel free to send articles/musics/ascii for future issues to se@zxmail.org. We accept plain and ANSI coloured texts. ASCII art should be in Amiga style.\n\n### Controls\n\n- Cursor keys: move around\n- Space: return to menu\n- Enter: show current page\n\n### Credits\n\nCode:\n\n- Main code: lordcoxis\n- Screen clear routine: UB880D\n- Cruncher: Mr. Spiv\n\nMusics:\n\n1. Top Heavy by LaesQ\n2. Madmax by Aki\n3. Wazzup4 by X-agon\n4. TDM4SE by TDM\n\nArt:\n\n- Loading screen: Xile\n- Frontend: H7\n- ASCII: k-0s, H7\n\nFonts:\n\n- 8x4: \"subxtc\" by k-0s\n- 8x8: \"mO'sOul Remix\" by k-0s (original by Desoto/Mo'Soul)\n\n`<subxtc engine v1.0>`"
+}

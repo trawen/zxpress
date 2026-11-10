@@ -172,6 +172,7 @@
 				{/if}</div>
 			</section>
 
+{* Type filters temporarily disabled
 {if $ezines_filters && $ezines_filters|@count gt 0}
 			<nav class="smn-map-tabs" aria-label="{if $lng eq 'eng'}Filter by publication type{else}Фильтр по типу изданий{/if}">
 {foreach from=$ezines_filters item=flt}
@@ -183,37 +184,76 @@
 {/foreach}
 			</nav>
 {/if}
+*}
 
 {if $year_chart}
-			<figure class="smn-year-chart">
-{*
-				<figcaption class="smn-year-chart-caption">
-					<span class="smn-year-chart-title">{if $lng eq 'eng'}Issues by year{else}Выпуски по годам{/if}</span>
-					<span class="smn-year-chart-meta">
-						{$year_chart.start_year}—{$year_chart.end_year}
-						·
-						{$year_chart.total_label}
-					</span>
-				</figcaption>
-*}
+			<figure class="smn-year-chart" id="smn-year-filter" data-filter-year="">
 				<div
 					class="smn-year-chart-plot"
-					role="img"
-					aria-label="{if $lng eq 'eng'}Bar chart of issue counts from {$year_chart.start_year} to {$year_chart.end_year}{else}Гистограмма числа выпусков с {$year_chart.start_year} по {$year_chart.end_year}{/if}"
+					role="toolbar"
+					aria-label="{if $lng eq 'eng'}Filter by year, {$year_chart.start_year}–{$year_chart.end_year}{else}Фильтр по году, {$year_chart.start_year}–{$year_chart.end_year}{/if}"
 				>
 {foreach from=$year_chart.bars item=bar}
-					<div
-						class="smn-year-chart-col{if $bar.count eq 0} is-empty{/if}{if $bar.count eq $year_chart.max} is-peak{/if}"
+{if $bar.count gt 0}
+					<button
+						type="button"
+						class="smn-year-chart-col{if $bar.count eq $year_chart.max} is-peak{/if}"
+						data-year="{$bar.year}"
 						title="{$bar.year}: {$bar.count}"
+						aria-pressed="false"
+						aria-label="{if $lng eq 'eng'}{$bar.year}, {$bar.count} titles{else}{$bar.year}, {$bar.count} изданий{/if}"
 					>
 						<span class="smn-year-chart-bar" style="height: {$bar.height}%"></span>
 {if $bar.label}
 						<span class="smn-year-chart-label">{$bar.year}</span>
 {/if}
+					</button>
+{else}
+					<div
+						class="smn-year-chart-col is-empty"
+						title="{$bar.year}: 0"
+						aria-hidden="true"
+					>
+						<span class="smn-year-chart-bar" style="height: 0%"></span>
+{if $bar.label}
+						<span class="smn-year-chart-label">{$bar.year}</span>
+{/if}
 					</div>
+{/if}
 {/foreach}
 				</div>
+				<nav class="smn-year-grid" aria-label="{if $lng eq 'eng'}Years{else}Годы{/if}">
+{foreach from=$year_chart.bars item=bar}
+{if $bar.count gt 0}
+					<button
+						type="button"
+						class="smn-year-grid-btn"
+						data-year="{$bar.year}"
+						aria-pressed="false"
+						aria-label="{if $lng eq 'eng'}{$bar.year}, {$bar.count} titles{else}{$bar.year}, {$bar.count} изданий{/if}"
+					>{$bar.year}<sup class="smn-filter-count">{$bar.count}</sup></button>
+{/if}
+{/foreach}
+				</nav>
 			</figure>
+{/if}
+
+{if $country_filters && $country_filters|@count gt 0}
+			<nav class="smn-country-grid" id="smn-country-filter" aria-label="{if $lng eq 'eng'}Countries{else}Страны{/if}" data-filter-country="">
+{foreach from=$country_filters item=country}
+				<button
+					type="button"
+					class="smn-country-grid-btn"
+					data-country="{$country.id}"
+					aria-pressed="false"
+				>
+{if $country.id}
+					<img class="smn-ezine-flag" src="{$host}img/{$country.id}.png" width="16" height="10" alt="" loading="lazy" decoding="async">
+{/if}
+					<span class="smn-country-grid-label">{$country.label|escape:'html'}<sup class="smn-filter-count">{$country.count}</sup></span>
+				</button>
+{/foreach}
+			</nav>
 {/if}
 
 			{if $catalog && $catalog|@count gt 0}
@@ -233,7 +273,7 @@
 					<span class="smn-ezine-index-letter-mark">{$catalog[n].letter}</span>
 				</li>
 				{/if}
-				<li class="smn-ezine-index-item{if $catalog[n].online_articles eq 0} is-offline{/if}">
+				<li class="smn-ezine-index-item{if $catalog[n].online_articles eq 0} is-offline{/if}" data-year-from="{$catalog[n].years_from}" data-year-to="{$catalog[n].years_to}" data-country="{$catalog[n].country_id|default:0}">
 					<a class="smn-ezine-index-row" href="{$catalog[n].public_url}">
 						<span class="smn-ezine-index-text">
 							<span class="smn-ezine-index-headline">

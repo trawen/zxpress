@@ -799,6 +799,116 @@
 		window.addEventListener('resize', sync);
 	}
 
+	function initEzineCatalogFilters() {
+		var yearRoot = document.getElementById('smn-year-filter');
+		var countryRoot = document.getElementById('smn-country-filter');
+		var list = document.querySelector('.smn-ezine-index');
+		if (!list || (!yearRoot && !countryRoot)) return;
+
+		var yearButtons = yearRoot ? yearRoot.querySelectorAll('[data-year]') : [];
+		var countryButtons = countryRoot ? countryRoot.querySelectorAll('[data-country]') : [];
+		var items = list.querySelectorAll('.smn-ezine-index-item');
+		var letters = list.querySelectorAll('.smn-ezine-index-letter');
+		var az = document.querySelectorAll('.smn-az-item');
+		var activeYear = 0;
+		var activeCountry = 0;
+
+		function normYear(raw) {
+			var y = parseInt(raw, 10);
+			if (!y || y === 1970) return 0;
+			return y;
+		}
+
+		function matchesYear(item, year) {
+			if (!year) return true;
+			var from = normYear(item.getAttribute('data-year-from'));
+			var to = normYear(item.getAttribute('data-year-to'));
+			if (from && to) return from <= year && year <= to;
+			if (from) return from === year;
+			if (to) return to === year;
+			return false;
+		}
+
+		function matchesCountry(item, countryId) {
+			if (!countryId) return true;
+			return parseInt(item.getAttribute('data-country'), 10) === countryId;
+		}
+
+		function applyFilters() {
+			if (yearRoot) {
+				yearRoot.setAttribute('data-filter-year', activeYear ? String(activeYear) : '');
+				for (var i = 0; i < yearButtons.length; i++) {
+					var yBtn = yearButtons[i];
+					var yOn = activeYear > 0 && parseInt(yBtn.getAttribute('data-year'), 10) === activeYear;
+					yBtn.classList.toggle('is-active', yOn);
+					yBtn.setAttribute('aria-pressed', yOn ? 'true' : 'false');
+				}
+			}
+			if (countryRoot) {
+				countryRoot.setAttribute('data-filter-country', activeCountry ? String(activeCountry) : '');
+				for (var c = 0; c < countryButtons.length; c++) {
+					var cBtn = countryButtons[c];
+					var cOn = activeCountry > 0 && parseInt(cBtn.getAttribute('data-country'), 10) === activeCountry;
+					cBtn.classList.toggle('is-active', cOn);
+					cBtn.setAttribute('aria-pressed', cOn ? 'true' : 'false');
+				}
+			}
+
+			var filtering = activeYear > 0 || activeCountry > 0;
+			var visibleByLetter = {};
+			for (var j = 0; j < items.length; j++) {
+				var item = items[j];
+				var match = matchesYear(item, activeYear) && matchesCountry(item, activeCountry);
+				item.classList.toggle('is-catalog-hidden', !match);
+				if (!match) continue;
+				var prev = item.previousElementSibling;
+				while (prev && !prev.classList.contains('smn-ezine-index-letter')) {
+					prev = prev.previousElementSibling;
+				}
+				if (prev) {
+					var mark = prev.querySelector('.smn-ezine-index-letter-mark');
+					var letter = mark ? String(mark.textContent || '').trim() : '';
+					if (letter) visibleByLetter[letter] = true;
+				}
+			}
+
+			for (var k = 0; k < letters.length; k++) {
+				var letterEl = letters[k];
+				var markEl = letterEl.querySelector('.smn-ezine-index-letter-mark');
+				var letterKey = markEl ? String(markEl.textContent || '').trim() : '';
+				letterEl.classList.toggle('is-catalog-hidden', filtering && !visibleByLetter[letterKey]);
+			}
+
+			for (var m = 0; m < az.length; m++) {
+				var azItem = az[m];
+				var azLetter = String(azItem.textContent || '').trim();
+				azItem.classList.toggle('is-catalog-hidden', filtering && !visibleByLetter[azLetter]);
+			}
+		}
+
+		if (yearRoot) {
+			yearRoot.addEventListener('click', function (e) {
+				var btn = e.target.closest('[data-year]');
+				if (!btn || !yearRoot.contains(btn)) return;
+				var year = parseInt(btn.getAttribute('data-year'), 10) || 0;
+				if (!year) return;
+				activeYear = activeYear === year ? 0 : year;
+				applyFilters();
+			});
+		}
+
+		if (countryRoot) {
+			countryRoot.addEventListener('click', function (e) {
+				var btn = e.target.closest('[data-country]');
+				if (!btn || !countryRoot.contains(btn)) return;
+				var countryId = parseInt(btn.getAttribute('data-country'), 10) || 0;
+				if (!countryId) return;
+				activeCountry = activeCountry === countryId ? 0 : countryId;
+				applyFilters();
+			});
+		}
+	}
+
 	if (document.readyState === 'loading') {
 		document.addEventListener('DOMContentLoaded', function () {
 			initSuggest('input_query_smn', 'suggest-smn');
@@ -810,6 +920,7 @@
 			initTextCollapse('smn-letter-summary');
 			initTextCollapse('smn-press-issue-desc');
 			initCatAsidePin();
+			initEzineCatalogFilters();
 		});
 	} else {
 		initSuggest('input_query_smn', 'suggest-smn');
@@ -821,6 +932,7 @@
 		initTextCollapse('smn-letter-summary');
 		initTextCollapse('smn-press-issue-desc');
 		initCatAsidePin();
+		initEzineCatalogFilters();
 	}
 })();
 </script>

@@ -55,63 +55,18 @@
 		.smn-calendar-today-empty {
 			color: var(--smn-muted);
 		}
-		.smn-calendar-years {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			gap: 0;
-			margin: 0 0 20px;
-			padding: 0 8px;
+		.smn-calendar-years.smn-year-grid {
+			margin: 0 0 28px;
+			padding: 0 0 14px;
+			border-top: none;
+			border-bottom: 1px solid var(--smn-line);
 		}
-		.smn-calendar-year-sep {
-			display: inline-flex;
-			align-items: center;
-			align-self: center;
-			height: 1em;
-			padding-bottom: 4px;
-			margin: 0 4px;
-			color: var(--smn-line);
-			font-size: 14px;
-			font-weight: 900;
-			line-height: 1;
-			user-select: none;
-		}
-		.smn-calendar-year-link {
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			padding: 0;
-			font-family: var(--smn-sans);
-			font-size: 14px;
-			font-weight: 700;
+		a.smn-year-grid-btn {
 			text-decoration: none;
 			color: var(--smn-ink);
 		}
-		.smn-calendar-year-link sup {
-			margin-left: 1px;
-		}
-		.smn-calendar-year-link:hover {
+		a.smn-year-grid-btn:hover {
 			color: var(--smn-accent);
-		}
-		.smn-calendar-year-label {
-			position: relative;
-			display: inline-block;
-			padding-bottom: 4px;
-		}
-		.smn-calendar-year-label::after {
-			content: "";
-			position: absolute;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			height: 2px;
-			background: var(--smn-accent);
-			transform: scaleX(0);
-			transform-origin: left;
-			transition: transform 0.25s ease;
-		}
-		.smn-calendar-year-link:hover .smn-calendar-year-label::after {
-			transform: scaleX(1);
 		}
 		.smn-calendar-year {
 			margin: 0 0 24px;
@@ -363,7 +318,7 @@
 					{if $lng eq 'eng'}
 						It's hard to imagine, but in the mid-1990s, Russian-language electronic newspapers and magazines were published almost daily. Unfortunately, most of them became publicly known only years later—after they were discovered in personal floppy disk collections, copied, and published on websites like Virtual TR-DOS and ZXPress. And some publications are only now being rediscovered. We also recommend exploring the geography of these releases on the <a href="/en/map">map</a>.
 					{else}
-			Сложно представить, но в середине 90-х рускоязычныеэлектронные газеты и журналы выходили едва ли не каждый день. К сожалению, о большинстве из них широкая публика узнала лишь спустя годы — после того как они были обнаружены в личных коллекциях дискет, скопированы и опубликованы на сайтах  Virtual TR-DOS и ZXPress. А некоторые издания открываются заново только сейчас. Рекомендуем ознакомиться так же и с географией выхода этих изданий на <a href="/ru/map">карте</a>.
+			Сложно представить, но в середине 90-х русскоязычные электронные газеты и журналы выходили едва ли не каждый день. К сожалению, о большинстве из них широкая публика узнала лишь спустя годы — после того как они были обнаружены в личных коллекциях дискет, скопированы и опубликованы на сайтах  Virtual TR-DOS и ZXPress. А некоторые издания открываются заново только сейчас. Рекомендуем ознакомиться так же и с географией выхода этих изданий на <a href="/ru/map">карте</a>.
 					{/if}
 				</p>
 			</section>
@@ -387,13 +342,9 @@
 			</section>
 
 {if $calendar_years && $calendar_years|@count gt 0}
-			<nav class="smn-calendar-years" aria-label="{if $lng eq 'eng'}Jump to year{else}Перейти к году{/if}">
-{foreach from=$calendar_years item=yearBlock name=yearNav}
-				<a class="smn-calendar-year-link" href="#calendar-year-{$yearBlock.year}">
-					<span class="smn-calendar-year-label">
-						{$yearBlock.year}<sup class="smn-filter-count">{$yearBlock.total}</sup>
-					</span>
-				</a>{if !$smarty.foreach.yearNav.last}<span class="smn-calendar-year-sep" aria-hidden="true">·</span>{/if}
+			<nav class="smn-year-grid smn-calendar-years" aria-label="{if $lng eq 'eng'}Jump to year{else}Перейти к году{/if}">
+{foreach from=$calendar_years item=yearBlock}
+				<a class="smn-year-grid-btn" href="#calendar-year-{$yearBlock.year}">{$yearBlock.year}<sup class="smn-filter-count">{$yearBlock.total}</sup></a>
 {/foreach}
 			</nav>
 

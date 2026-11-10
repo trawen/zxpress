@@ -145,8 +145,141 @@ if ($pressId <= 0 || $issueId <= 0 || !aiem_issue_exists($db, $pressId, $issueId
 	exit;
 }
 
+/**
+ * Disk/tape images that can be picked from inside a ZIP.
+ *
+ * @return list<string>
+ */
+function aiem_zip_member_exts(): array
+{
+	return ['scl', 'trd', 'fdi', 'udi', 'mgt', 'img', 'sad', 'dsk', 'tap', 'tzx', 'z80', 'sna'];
+}
+
+/**
+ * @return list<array{path:string,name:string,ext:string}>
+ */
+function aiem_zip_disk_members(string $zipPath): array
+{
+	if (!class_exists('ZipArchive') || !is_file($zipPath)) {
+		return [];
+	}
+	$zip = new ZipArchive();
+	if ($zip->open($zipPath) !== true) {
+		return [];
+	}
+	$allowed = aiem_zip_member_exts();
+	$out = [];
+	for ($i = 0; $i < $zip->numFiles; $i++) {
+		$stat = $zip->statIndex($i);
+		if (!is_array($stat)) {
+			continue;
+		}
+		$entry = str_replace('\\', '/', (string) ($stat['name'] ?? ''));
+		if ($entry === '' || str_ends_with($entry, '/')) {
+			continue;
+		}
+		$base = basename($entry);
+		if ($base === '' || str_starts_with($base, '.')) {
+			continue;
+		}
+		$ext = strtolower(pathinfo($base, PATHINFO_EXTENSION));
+		if (!in_array($ext, $allowed, true)) {
+			continue;
+		}
+		$out[] = [
+			'path' => $entry,
+			'name' => $base,
+			'ext' => $ext,
+		];
+	}
+	$zip->close();
+	usort(
+		$out,
+		static fn (array $a, array $b): int => strnatcasecmp($a['name'], $b['name'])
+	);
+
+	return $out;
+}
+
+/**
+ * Extract a ZIP member into /files/_aiem/ so USP/T80 get a URL ending with the real extension.
+ *
+ * @return array{leaf:string,url:string,fileName:string}|null
+ */
+function aiem_cache_zip_member(string $zipPath, int $fileId, string $memberPath, string $memberBase): ?array
+{
+	$safe = preg_replace('/[^A-Za-z0-9._-]+/', '_', $memberBase) ?: 'disk.bin';
+	$leaf = '_aiem/' . $fileId . '_' . $safe;
+	$outPath = zx_storage_path('files', $leaf);
+	$dir = dirname($outPath);
+	if (!is_dir($dir) && !@mkdir($dir, 0775, true) && !is_dir($dir)) {
+		return null;
+	}
+	$zipMtime = (int) @filemtime($zipPath);
+	if (is_file($outPath) && (int) @filemtime($outPath) >= $zipMtime && filesize($outPath) > 0) {
+		return [
+			'leaf' => $leaf,
+			'url' => '/files/' . str_replace('%2F', '/', rawurlencode($leaf)),
+			'fileName' => $memberBase,
+		];
+	}
+
+	$zip = new ZipArchive();
+	if ($zip->open($zipPath) !== true) {
+		return null;
+	}
+	$stream = $zip->getStream($memberPath);
+	if ($stream === false) {
+		$zip->close();
+
+		return null;
+	}
+	$tmp = $outPath . '.tmp';
+	$dest = fopen($tmp, 'wb');
+	if ($dest === false) {
+		fclose($stream);
+		$zip->close();
+
+		return null;
+	}
+	stream_copy_to_stream($stream, $dest);
+	fclose($stream);
+	fclose($dest);
+	$zip->close();
+	if (!is_file($tmp) || filesize($tmp) <= 0 || !@rename($tmp, $outPath)) {
+		@unlink($tmp);
+
+		return null;
+	}
+	@touch($outPath, $zipMtime > 0 ? $zipMtime : time());
+
+	return [
+		'leaf' => $leaf,
+		'url' => '/files/' . str_replace('%2F', '/', rawurlencode($leaf)),
+		'fileName' => $memberBase,
+	];
+}
+
+/**
+ * @param list<string> $engines
+ * @return array{id:int,name:string,fileName:string,ext:string,engines:list<string>,url:string}
+ */
+function aiem_disk_entry(int $id, string $display, string $fileName, string $ext, array $engines, string $url): array
+{
+	return [
+		'id' => $id,
+		'name' => $display,
+		'fileName' => $fileName,
+		'ext' => $ext,
+		'engines' => $engines,
+		'url' => $url,
+	];
+}
+
 $uspExts = ['scl', 'trd', 'fdi', 'udi', 'zip', 'tap', 'tzx', 'z80', 'sna'];
 $t80Exts = ['mgt', 'img', 'sad', 'zip', 'tap', 'tzx', 'z80', 'sna', 'scl', 'trd', 'dsk'];
+$uspMemberExts = ['scl', 'trd', 'fdi', 'udi', 'tap', 'tzx', 'z80', 'sna'];
+$t80MemberExts = ['mgt', 'img', 'sad', 'tap', 'tzx', 'z80', 'sna', 'scl', 'trd', 'dsk'];
 $allowedExts = array_values(array_unique(array_merge($uspExts, $t80Exts)));
 $disks = [];
 $hasUsp = false;
@@ -167,14 +300,81 @@ while ($z && ($row = $z->fetch_assoc())) {
 	if ($name === '' || !in_array($ext, $allowedExts, true)) {
 		continue;
 	}
-	if (!is_file(zx_storage_path('files', $name))) {
+	$filePath = zx_storage_path('files', $name);
+	if (!is_file($filePath)) {
 		continue;
 	}
+	$fileId = (int) ($row['id'] ?? 0);
 	$label = trim((string) ($row['file_title'] ?? ''));
 	$display = $label !== '' ? $label . ' — ' . $name : $name;
 	if ((int) ($row['id_issue'] ?? 0) === 0) {
 		$display = 'издание — ' . $display;
 	}
+
+	if ($ext === 'zip') {
+		$members = aiem_zip_disk_members($filePath);
+		if ($members !== []) {
+			$zipHasTrdos = false;
+			$zipHasPlusd = false;
+			foreach ($members as $member) {
+				if (in_array($member['ext'], ['trd', 'scl', 'fdi', 'udi'], true)) {
+					$zipHasTrdos = true;
+				}
+				if (in_array($member['ext'], ['mgt', 'img', 'sad'], true)) {
+					$zipHasPlusd = true;
+				}
+			}
+			if ($zipHasTrdos) {
+				$hasTrdos = true;
+			}
+			if ($zipHasPlusd && !$zipHasTrdos) {
+				$hasT80Prefer = true;
+			} elseif (!$zipHasTrdos) {
+				// ZIP without recognizable TR-DOS/PlusD images — keep old auto bias to Turbo80.
+				$hasT80Prefer = true;
+			}
+
+			$many = count($members) > 1;
+			$expanded = 0;
+			foreach ($members as $memberIndex => $member) {
+				$cached = aiem_cache_zip_member($filePath, $fileId, $member['path'], $member['name']);
+				if ($cached === null) {
+					continue;
+				}
+				$engines = [];
+				if (in_array($member['ext'], $uspMemberExts, true)) {
+					$engines[] = 'usp';
+					$hasUsp = true;
+				}
+				if (in_array($member['ext'], $t80MemberExts, true)) {
+					$engines[] = 't80';
+				}
+				if ($engines === []) {
+					continue;
+				}
+				$memberDisplay = $many
+					? ($member['name'] . ' · ' . $name)
+					: $display;
+				$disks[] = aiem_disk_entry(
+					$fileId * 1000 + $memberIndex + 1,
+					$memberDisplay,
+					$cached['fileName'],
+					$member['ext'],
+					$engines,
+					$cached['url']
+				);
+				$expanded++;
+			}
+			if ($expanded > 0) {
+				// Expanded into members — do not also offer the raw ZIP.
+				continue;
+			}
+			// Fall through to raw ZIP if extraction failed for every member.
+		} else {
+			$hasT80Prefer = true;
+		}
+	}
+
 	$engines = [];
 	if (in_array($ext, $uspExts, true)) {
 		$engines[] = 'usp';
@@ -189,23 +389,19 @@ while ($z && ($row = $z->fetch_assoc())) {
 	if (in_array($ext, ['trd', 'scl', 'fdi', 'udi'], true)) {
 		$hasTrdos = true;
 	}
-	// ZIP without TR-DOS siblings → likely PlusD/MGT magazine archive (Scene+, Outlet…).
-	if ($ext === 'zip') {
-		$hasT80Prefer = true;
-	}
-	$disks[] = [
-		'id' => (int) $row['id'],
-		'name' => $display,
-		'fileName' => $name,
-		'ext' => $ext,
-		'engines' => $engines,
-		'url' => '/files/' . rawurlencode($name),
-	];
+	$disks[] = aiem_disk_entry(
+		$fileId,
+		$display,
+		$name,
+		$ext,
+		$engines,
+		'/files/' . rawurlencode($name)
+	);
 }
 
-$engineReq = strtolower(trim((string) ($_GET['engine'] ?? 'auto')));
+$engineReq = strtolower(trim((string) ($_GET['engine'] ?? 'usp')));
 if (!in_array($engineReq, ['auto', 'usp', 't80'], true)) {
-	$engineReq = 'auto';
+	$engineReq = 'usp';
 }
 if ($engineReq === 'auto') {
 	// Prefer Turbo80 for PlusD/MGT (and ZIP magazines); USP for TR-DOS/tape dumps.
@@ -321,7 +517,7 @@ $scriptSrc = $isT80
 		</div>
 		<div class="aiem-controls">
 			<div class="aiem-engine">Движок: <strong><?= $isT80 ? 'Turbo80 (+D / MGT)' : 'USP (TR-DOS)' ?></strong></div>
-			<label>Файл выпуска
+			<label>Образ диска
 				<select id="aiem-disk"></select>
 			</label>
 			<button type="button" class="primary" id="aiem-shot" disabled>Снять кадр</button>

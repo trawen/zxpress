@@ -131,7 +131,8 @@ function ezines_press_splash_map(mysqli $db): array
 }
 
 /**
- * Yearly issue histogram for the catalog (optionally limited to a press type).
+ * Yearly publication histogram for the catalog (optionally limited to a press type).
+ * Counts press titles active in each year (years_from..years_to), matching the frontend filter.
  *
  * @return array{bars:list<array{year:int,count:int,height:float,label:bool}>,total:int,max:int,start_year:int,end_year:int}|null
  */
@@ -141,15 +142,14 @@ function ezines_catalog_year_chart(mysqli $db, ?int $typeFilter): ?array
 	if ($typeFilter === null) {
 		$z = db_select(
 			$db,
-			'SELECT YEAR(FROM_UNIXTIME(date)) AS y, COUNT(*) AS c'
-			. ' FROM issue WHERE date > 0 GROUP BY y ORDER BY y ASC'
+			'SELECT YEAR(FROM_UNIXTIME(years_from)) AS yf, YEAR(FROM_UNIXTIME(years_to)) AS yt'
+			. ' FROM press'
 		);
 	} else {
 		$stmt = mysqli_prepare(
 			$db,
-			'SELECT YEAR(FROM_UNIXTIME(i.date)) AS y, COUNT(*) AS c'
-			. ' FROM issue i INNER JOIN press p ON p.id = i.id_press'
-			. ' WHERE i.date > 0 AND p.type = ? GROUP BY y ORDER BY y ASC'
+			'SELECT YEAR(FROM_UNIXTIME(years_from)) AS yf, YEAR(FROM_UNIXTIME(years_to)) AS yt'
+			. ' FROM press WHERE type = ?'
 		);
 		if (!$stmt) {
 			return null;
@@ -160,10 +160,25 @@ function ezines_catalog_year_chart(mysqli $db, ?int $typeFilter): ?array
 	}
 
 	while ($z && ($row = mysqli_fetch_assoc($z))) {
-		$year = (int) ($row['y'] ?? 0);
-		$count = (int) ($row['c'] ?? 0);
-		if ($year >= 1970 && $count > 0) {
-			$counts[$year] = $count;
+		$from = (int) ($row['yf'] ?? 0);
+		$to = (int) ($row['yt'] ?? 0);
+		if ($from === 1970) {
+			$from = 0;
+		}
+		if ($to === 1970) {
+			$to = 0;
+		}
+		if ($from && $to) {
+			if ($to < $from) {
+				continue;
+			}
+			for ($year = $from; $year <= $to; $year++) {
+				$counts[$year] = (int) ($counts[$year] ?? 0) + 1;
+			}
+		} elseif ($from) {
+			$counts[$from] = (int) ($counts[$from] ?? 0) + 1;
+		} elseif ($to) {
+			$counts[$to] = (int) ($counts[$to] ?? 0) + 1;
 		}
 	}
 	if ($counts === []) {
@@ -351,14 +366,42 @@ while ($z && ($t = mysqli_fetch_array($z))) {
 }
 $smarty->assign('catalog', $c);
 
+$countryFilters = [];
+foreach ($c as $row) {
+	if ((int) ($row['off'] ?? 0) !== 1) {
+		continue;
+	}
+	$countryId = (int) ($row['country_id'] ?? 0);
+	$label = trim((string) ($row['country_label'] ?? ''));
+	if ($countryId <= 0 || $label === '') {
+		continue;
+	}
+	if (!isset($countryFilters[$countryId])) {
+		$countryFilters[$countryId] = [
+			'id' => $countryId,
+			'label' => $label,
+			'count' => 0,
+		];
+	}
+	$countryFilters[$countryId]['count']++;
+}
+$countryFilters = array_values($countryFilters);
+usort($countryFilters, static function (array $a, array $b): int {
+	return strcmp(
+		mb_strtolower((string) $a['label'], 'UTF-8'),
+		mb_strtolower((string) $b['label'], 'UTF-8')
+	);
+});
+$smarty->assign('country_filters', $countryFilters);
+
 $typeCounts = ezines_type_counts($db);
 $countAll = $typeCounts[0] + $typeCounts[1] + $typeCounts[2];
 $yearChart = ezines_catalog_year_chart($db, $typeFilter);
 if (is_array($yearChart)) {
 	if ($isEng) {
-		$yearChart['total_label'] = $yearChart['total'] . ' ' . ($yearChart['total'] === 1 ? 'issue' : 'issues');
+		$yearChart['total_label'] = $yearChart['total'] . ' ' . ($yearChart['total'] === 1 ? 'title' : 'titles');
 	} else {
-		$yearChart['total_label'] = $yearChart['total'] . ' ' . getNumEnding($yearChart['total'], ['выпуск', 'выпуска', 'выпусков']);
+		$yearChart['total_label'] = $yearChart['total'] . ' ' . getNumEnding($yearChart['total'], ['издание', 'издания', 'изданий']);
 	}
 }
 $smarty->assign('year_chart', $yearChart);

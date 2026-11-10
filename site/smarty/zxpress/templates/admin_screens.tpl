@@ -189,12 +189,12 @@
 <div class="admin-ascr-emulator-bar">
 <label>Движок
 <select id="admin-ascr-engine" title="USP — TR-DOS; Turbo80 — PlusD/MGT">
-<option value="auto">авто</option>
+<option value="usp" selected>USP (TR-DOS)</option>
 <option value="t80">Turbo80 (+D / MGT)</option>
-<option value="usp">USP (TR-DOS)</option>
+<option value="auto">авто</option>
 </select>
 </label>
-<span>Scene+/Outlet (.mgt / zip) → Turbo80; TRD/SCL → USP</span>
+<span>По умолчанию USP; Scene+/Outlet (.mgt) → Turbo80</span>
 </div>
 <iframe
 	class="admin-ascr-emulator-frame"
@@ -333,7 +333,7 @@
 	if (!details || !frame) return;
 
 	function engineValue() {
-		return (engineSelect && engineSelect.value) || 'auto';
+		return (engineSelect && engineSelect.value) || 'usp';
 	}
 
 	function emulatorUrl() {
