@@ -504,17 +504,42 @@ html:not([data-theme="dark"]) .smn-theme-icon--sun {
 .smn-lang-switch > span {
 	margin: 0 6px;
 }
+.smn-lang a,
+.smn-lang b {
+	position: relative;
+	padding-bottom: 2px;
+	text-decoration: none;
+}
+.smn-lang a::after,
+.smn-lang b::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 2px;
+	background: var(--smn-accent);
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.25s ease;
+	pointer-events: none;
+}
 .smn-lang a {
 	color: var(--smn-muted);
-	text-decoration: none;
+	transition: color 0.25s ease;
 }
 .smn-lang a:hover {
 	color: var(--smn-accent);
 }
+.smn-lang a:hover::after {
+	transform: scaleX(1);
+}
 .smn-lang b {
 	color: var(--smn-accent);
-	text-decoration: underline;
-	text-underline-offset: 0.18em;
+	font-weight: 700;
+}
+.smn-lang b::after {
+	transform: scaleX(1);
 }
 
 .smn-search {
@@ -2694,24 +2719,54 @@ body.smn-modal-open {
 		gap: 6px;
 	}
 	.smn-menu-drawer-lang a,
-	.smn-menu-drawer-lang-text a {
+	.smn-menu-drawer-lang-text a,
+	.smn-menu-drawer-lang b,
+	.smn-menu-drawer-lang-text b {
 		display: inline;
+		position: relative;
 		width: auto;
-		padding: 0;
+		padding: 0 0 2px;
 		border: 0;
 		font-size: inherit;
-		color: var(--smn-muted);
 		text-decoration: none;
+	}
+	.smn-menu-drawer-lang a::after,
+	.smn-menu-drawer-lang-text a::after,
+	.smn-menu-drawer-lang b::after,
+	.smn-menu-drawer-lang-text b::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 2px;
+		background: var(--smn-accent);
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 0.25s ease;
+		pointer-events: none;
+	}
+	.smn-menu-drawer-lang a,
+	.smn-menu-drawer-lang-text a {
+		color: var(--smn-muted);
+		transition: color 0.25s ease;
 	}
 	.smn-menu-drawer-lang a:hover,
 	.smn-menu-drawer-lang-text a:hover {
 		color: var(--smn-accent);
 	}
+	.smn-menu-drawer-lang a:hover::after,
+	.smn-menu-drawer-lang-text a:hover::after {
+		transform: scaleX(1);
+	}
 	.smn-menu-drawer-lang b,
 	.smn-menu-drawer-lang-text b {
 		color: var(--smn-accent);
-		text-decoration: underline;
-		text-underline-offset: 0.18em;
+		font-weight: 700;
+	}
+	.smn-menu-drawer-lang b::after,
+	.smn-menu-drawer-lang-text b::after {
+		transform: scaleX(1);
 	}
 	/* Class kept for hooks; scroll locked via JS touch/wheel guards (overflow:hidden jumps on iOS). */
 	body.smn-menu-open {
