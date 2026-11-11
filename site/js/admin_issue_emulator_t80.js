@@ -273,6 +273,51 @@
 		openDisk();
 	}
 
+	function diskNeedsTrdos(disk) {
+		var ext = String((disk && disk.ext) || '').toLowerCase();
+		return ext === 'trd' || ext === 'scl' || ext === 'fdi' || ext === 'udi';
+	}
+
+	function needsTrdos() {
+		return (cfg.disks || []).some(diskNeedsTrdos);
+	}
+
+	/**
+	 * Turbo80 does not bundle TR-DOS ROM (licence). It only auto-fetches
+	 * Roms/trdos.rom on localhost AND only if the machine is already Pentagon.
+	 * Our admin embed starts as 48k for +D, so seed localStorage ourselves
+	 * (same key Turbo80 uses) before boot — works on prod hostnames too.
+	 */
+	function ensureTrdosRom() {
+		if (!needsTrdos()) return Promise.resolve();
+		try {
+			if (localStorage.getItem('zx-trdos')) return Promise.resolve();
+		} catch (e) { /* ignore */ }
+		var url = t80Base.replace(/\/?$/, '/') + 'Roms/trdos.rom';
+		return fetch(url, { cache: 'force-cache' }).then(function (response) {
+			if (!response.ok) throw new Error('HTTP ' + response.status);
+			return response.arrayBuffer();
+		}).then(function (buf) {
+			var bytes = new Uint8Array(buf);
+			if (bytes.length !== 16384) {
+				throw new Error('trdos.rom must be 16384 bytes, got ' + bytes.length);
+			}
+			var bin = '';
+			for (var i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+			try {
+				localStorage.setItem('zx-trdos', btoa(bin));
+			} catch (e) {
+				throw new Error('localStorage: ' + (e && e.message ? e.message : e));
+			}
+		}).catch(function (error) {
+			status(
+				'Нет TR-DOS ROM (' + (error && error.message ? error.message : error)
+					+ '). Положи site/t80/Roms/trdos.rom или загрузи вручную в Settings → Peripherals.',
+				'err'
+			);
+		});
+	}
+
 	function bootTurbo80() {
 		if (typeof window.Turbo80 !== 'function') {
 			status('Turbo80 не загрузился', 'err');
@@ -306,7 +351,9 @@
 	var script = document.createElement('script');
 	script.src = t80Base.replace(/\/?$/, '/') + 'turbo80.js';
 	script.async = true;
-	script.onload = bootTurbo80;
+	script.onload = function () {
+		ensureTrdosRom().then(bootTurbo80);
+	};
 	script.onerror = function () {
 		status('Не удалось загрузить /t80/turbo80.js', 'err');
 	};
