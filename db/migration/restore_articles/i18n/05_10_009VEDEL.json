@@ -1,0 +1,20 @@
+{
+  "article_id": "05_10_009VEDEL",
+  "press": "Restore",
+  "press_id": 326,
+  "issue": "05",
+  "sort_order": 10,
+  "source_file": "009_009vedel.md",
+  "source_lang": "cs",
+  "title_cs": "Vedeli ste, že... ?",
+  "title_ru": "Знаете ли вы, что... ?",
+  "title_en": "",
+  "meta_description_cs": "",
+  "meta_description_ru": "Заметка mike/zeroteam о разной ширине чёрного и белого пикселей ULA на ZX Spectrum (эффект в демо MQM5) и реклама устройств (divIDE 57c, AYčko) и плат от магазина shop.technomorous.eu.",
+  "meta_description_en": "Note by mike/zeroteam on how ZX Spectrum ULA pixel width differences are used in the MQM5 demo for four brightness levels, plus an ad for shop.technomorous.eu hardware like divIDE 57c and AYčko.",
+  "body_cs": "Vedeli ste, že čierny a biely pixel má na ZX Spectre inú šírku? Môže za to ULA, resp. hradlá, ktoré generujú pixely. Čas pre zmenu z log. 0 na log. 1 je totiž iný ako z log. 1 do log. 0. To je síce pekné, ale v praxi nanič. Nie tak úplne. Na konci časti 20 dema MQM5 sa zobrazí obrázok \"Have you ever seen four bright levels on ZXS?\", kde sa táto vlastnosť ULAy využíva. A ak máte emulátor, tak máte smolu.\n\nmike/zeroteam\n\nŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢ\n\nOukej, to by nešlo, takhle krátký článek by tu být nemohl! Takže jej příhodně doplníme trochou komerce!\n\nhttps://shop.technomorous.eu\n\ndivIDE 57c + cfIDE + 2GB CF karta ... 1499 Kč zvukový interface AYčko ... 399 Kč\n\nDále desky pro výrobu divIDE, AYčka, rozdvojek a roztrojek sběrnice, vkusné placky a samolepky s motivy nejen tohoto diskmagu!\n\nCeny mírné, obsluha vzorná!\n",
+  "body_ru": "Знаете ли вы, что чёрный и белый пиксель на ZX Spectrum имеют разную ширину? Виновата в этом ULA, точнее вентили, которые генерируют пиксели. Время перехода с лог. 0 на лог. 1 ведь иное, чем с лог. 1 на лог. 0. Это, конечно, красиво, но на практике бесполезно. Не совсем. В конце части 20 демо MQM5 появляется картинка «Have you ever seen four bright levels on ZXS?», где это свойство ULA используется. А если у вас эмулятор — вам не повезло.\n\nmike/zeroteam\n\nŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢŢ\n\nОкей, так нельзя, такая короткая статья тут быть не могла! Так что уместно дополним её чуточкой коммерции!\n\nhttps://shop.technomorous.eu\n\ndivIDE 57c + cfIDE + 2GB CF-карта ... 1499 Kč звуковой интерфейс AYчко ... 399 Kč\n\nДалее платы для изготовления divIDE, AYчка, раздвоек и растроек шины, вкусные значки и наклейки с мотивами не только этого дискмага!\n\nЦены умеренные, обслуживание образцовое!\n",
+  "body_en": "",
+  "category_ids": [],
+  "tags": []
+}

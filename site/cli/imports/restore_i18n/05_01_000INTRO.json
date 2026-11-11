@@ -1,0 +1,40 @@
+{
+  "article_id": "05_01_000INTRO",
+  "press": "Restore",
+  "press_id": 326,
+  "issue": "05",
+  "sort_order": 1,
+  "source_file": "000_000intro.md",
+  "source_lang": "cs",
+  "title_cs": "Ahoj spectristi,",
+  "title_ru": "Привет, спектрумисты,",
+  "title_en": "",
+  "meta_description_cs": "",
+  "meta_description_ru": "Вступительное слово редактора Logout к RESTORE 5 о нехватке статей (как у Dex в ZX Magazín и Noby в X-Magazin), неопределённой дате выхода и добавлении моноширинного шрифта для кода и ASCII-арта.",
+  "meta_description_en": "RESTORE 5 editorial by Logout on the lack of articles and uncertain release date, recalling Dex (ZX Magazín) and Noby (X-Magazin), plus a new fixed-width font for code and ASCII art.",
+  "body_cs": "vítejte u nového RESTORE.\n\nNechtěl jsem se a stále se nechci připojovat k letité tradici, že správný spectrista čte časák/diskmag odzadu, nicméně o tomto čísle se toho dozvíte více v Závěru, než zde. Já teď a tady totiž ještě ani nevím, kdy vlastně vyšlo.\n\nPři psaní tohoto textu všude kolem mě naplno zuří prosinec a to znamená, že zatímco ostatní žadoní u Ježíška o dárky, já obesílám spectristy a žadoním u nich, zda by nenašli v prachem zapadaných koutech svých disků nějaký dosud nepublikovaný text, který by se sem hodil. Zatím to vypadá prachbídně, i se započtením mých vlastních blábolů jsem sotva na polovině plánovaného rozsahu. Nemám tedy tušení, zda se stihne RESTORE 5 vydat do konce roku 2025 a řekl jsem si, že až to zjistím, do již sepsaného Úvodníku sahat nebudu - jen ať se široká veřejnost dozví, jak to bylo!\n\nAno, čekal jsem to od začátku své snahy o diskmag. Prastaré svitky ostatně jasně říkají, že stejné potíže řešili i magazínoví velikáni dob minulých - Dex se ZX Magazínem a Noby (tehdy Aragorn, předtím JardaSoft) s X-Magazinem. Oba nakonec prozřeli a své bohulibé činnosti zanechali, což však lze očekávat od příčetných, logicky uvažujících lidí, ale určitě ne ode mě. Ostatně i Dex se pokoušel několik let být jediným redaktorem, editorem a vydavatelem celého časopisu, než se na to prostě jednoho dne vykašlal, tak v nejhorším dopadnu stejně. Do té doby ale budu stále obesílat a žadonit, on nakonec někdo něco pošle.\n\nTeď už tedy chápete, proč tenhle dlouhý úvod k Úvodníku. Snažím se jím ze své osoby trochu sejmout odpovědnost za skutečný datum vydání, který sám neznám. Je možné, že je v menu vpravo nahoře napsáno \"prosinec 2025\", může tam ale také být \"září 2026\", \"únor 2027\", nebo taky třeba RESTORE 5 nevyšel nikdy a vy si tenhle text čtete, protože vaše chapadlo našlo v sutinách města na neznámé planetě velmi primitivní datové úložiště a velitel vám přikázal ho zprovoznit.\n\nTak či onak vězte, že toto číslo RESTORE je první, které umí v jednom textu použít dva fonty, čímž naplňuji předsevzetí v každém vydání něco vylepšit. Kromě fontu standardního jsem přidal písmo s fixní šířkou znaků, takže je konec rozpadlého formátu publikovaných assemblerových i jiných zdrojáků a naopak by to mohl být začátek nejrůznějších ASCIIartů, tabulek, atp. Ze seznamu plánovaných vylepšení tím jedna položka odpadla, leč je i nadále neprázdný, takže bude i příště co dělat.\n\nVzhled menu jsem od minula kromě čísla a jeho barvy neměnil. Zůstáváme u strohé textovosti, dostalo se mi totiž hodnocení, že \"po té modré, skoro až commodoristické hrůze z roku 2023 to konečně vypadá snesitelně\".\n\nA na této pozitivní notě toho úvodníkování už raději nechám, pouze vám popřeji příjemné počtení a ať už je vaše datum jakékoliv, přeju vám od něj do budoucna jen to nejlepší.\n\nSpectru zdar! Logout, šéfredaktor\n",
+  "body_ru": "добро пожаловать к новому RESTORE.\n\nЯ не хотел и по-прежнему не хочу присоединяться к давней традиции, что настоящий спектрумист читает журнал/дискмаг с конца, тем не менее об этом номере вы узнаете больше в Заключении, чем здесь. Я сейчас и здесь ведь ещё даже не знаю, когда он собственно вышел.\n\nПока я пишу этот текст, вокруг меня вовсю бушует декабрь, а это значит, что пока остальные выпрашивают у Деда Мороза подарки, я рассылаю спектрумистам письма и выпрашиваю у них, не найдётся ли в запылённых углах их дисков какой-нибудь ещё не опубликованный текст, который бы сюда подошёл. Пока выглядит из рук вон плохо: даже с учётом моих собственных разглагольствований я едва на половине запланированного объёма. Так что я понятия не имею, успеет ли RESTORE 5 выйти до конца 2025 года, и решил: когда узнаю — в уже написанный Вступительный текст лезть не буду, пусть широкая публика узнает, как оно было!\n\nДа, я этого ждал с самого начала своей затеи с дискмагом. Древние свитки, впрочем, ясно говорят, что те же трудности решали и журнальные великаны былых времён — Dex с ZX Magazínem и Noby (тогда Aragorn, до того JardaSoft) с X-Magazinem. Оба в конце концов прозрели и оставили свои богоугодные занятия, чего и следует ожидать от вменяемых, логически мыслящих людей, но уж точно не от меня. Впрочем, и Dex несколько лет пытался быть единственным редактором, составителем и издателем всего журнала, пока однажды просто на это забил — так что в худшем случае я закончу так же. А до тех пор буду по-прежнему рассылать и выпрашивать: в конце концов кто-нибудь что-нибудь пришлёт.\n\nТеперь вы понимаете, зачем этот длинный ввод к Вступительному. Я пытаюсь им чуть снять с себя ответственность за реальную дату выхода, которую сам не знаю. Возможно, в меню справа вверху написано «декабрь 2025», а может там «сентябрь 2026», «февраль 2027», а может RESTORE 5 так никогда и не вышел, и вы читаете этот текст, потому что ваше щупальце нашло в руинах города на неизвестной планете очень примитивное хранилище данных, и командир приказал вам его запустить.\n\nТак или иначе знайте: этот номер RESTORE — первый, который умеет в одном тексте использовать два шрифта, чем я выполняю обет в каждом выпуске что-нибудь улучшать. Помимо стандартного шрифта я добавил шрифт с фиксированной шириной символов, так что конец развалившемуся формату публикуемых ассемблерных и прочих исходников, и наоборот — это мог бы быть начало всевозможных ASCII-артов, таблиц и т. п. Из списка запланированных улучшений одна позиция отпала, но он по-прежнему не пуст, так что и в следующий раз будет чем заняться.\n\nВнешний вид меню с прошлого раза, кроме номера и его цвета, я не менял. Остаёмся при скупой текстовости: мне ведь досталась оценка, что «после той синей, почти уже коммодористской жути 2023 года наконец выглядит терпимо».\n\nИ на этой позитивной ноте вступительного уже лучше остановлюсь, лишь пожелаю вам приятного чтения, и какая бы у вас ни была дата — желаю вам от неё в будущее только самого лучшего.\n\nСпектруму здравия! Logout, главный редактор\n",
+  "body_en": "",
+  "category_ids": [
+    123,
+    116
+  ],
+  "tags": [
+    {
+      "tag_name": "restore",
+      "tag_alias": "restore"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "czech",
+      "tag_alias": "czech"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    }
+  ]
+}

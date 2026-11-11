@@ -1,0 +1,40 @@
+{
+  "article_id": "04_15_014OUTRO",
+  "press": "Restore",
+  "press_id": 326,
+  "issue": "04",
+  "sort_order": 15,
+  "source_file": "014_014outro.md",
+  "source_lang": "cs",
+  "title_cs": "Pár slov závěrem",
+  "title_ru": "Несколько слов напоследок",
+  "title_en": "",
+  "meta_description_cs": "",
+  "meta_description_ru": "Заключительное слово Logout к RESTORE 4: подготовка номера к концу 2024 года, редактор шрифтов и смена кодировки, список авторов (Aki, Ellvis, Martin Bórik, MikeZT и др.) и игра Koko&Keke в приложении.",
+  "meta_description_en": "Logout's closing words for RESTORE 4 detailing the rushed late-2024 release, font editor and encoding updates, credits to Aki, Ellvis, Martin Bórik, MikeZT and others, plus a Koko&Keke game attachment.",
+  "body_cs": "Je úterý, 31. prosince 2024, 15:28. Nechci být přehnaným optimistou, ale jeví se mi to, jako že RESTORE 4 přeci jen stihnu vydat ještě v roce 2024.\n\nJako vždy to byl ale boj. Půl roku po vydání většinou nemám nějak chuť se na ty zdrojáky byť jen podívat. Letos jsem se k zahájení prací na novém čísle dostal až na sklonku léta a to zahájení bylo samo zahájeno instalací Java Development Kitu, což člověku úplně na nadšení nepřidá. Editor fontu se ale podařil, přechod na nové kódování také a pak už začalo nahánění autorů. Poslední článek jsem obdržel včera a jsem tomu rád, protože (stejně jako ty ostatní) stojí za to.\n\nOptimista ve mně doufá, že u RESTORE 5 to bude jiné, méně hektické, texty mi budou chodit mailem i bez vyzvání, já to jen pročtu, opravím nejzjevnější překlepy, nalámu do rozlišení 256x192 a vydám.\n\nRealista ví, že se to nestane a bude to zase totéž.\n\nOba jsou ale spokojeni, protože tak je život alespoň pestřejší.\n\nTak Spectru zdar a zase uvidíme se nad novým RESTORE. Doufám, že to bude dříve, než za rok. (Optimista zrovna vítězí.)\n\nLogout\n\n- - - - - - - - - - - - - - - - - - - - - - - - - - - -\n\nDo RESTORE 4 přispěli: Aki (texty, hudba) Ellvis (text) Lukáš Rachůnek (text) Martin Bórik (text, PT3 player) MikeZT (texty, příloha) panprase (texty) ... a samozřejmě něco málo jsem přidal i já.\n\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - PS: Jako přílohu najdete další hru z produkce Koko&Keke. Zdá se, že dobře skladované historické magnetofonové pásky jsou zcela nevyčerpatelným zdrojem překvapení a zábavy!\n\nPPS: Na e-shopu mám stále skladem vysoce vkusné samolepky a placky RESTORE! Neváhejte a nakupujte! https://shop.technomorous.eu\n",
+  "body_ru": "Вторник, 31 декабря 2024, 15:28. Не хочу быть чрезмерным оптимистом, но кажется, что RESTORE 4 всё‑таки успею выпустить ещё в 2024 году.\n\nКак всегда, это была борьба. Полгода после выпуска обычно даже смотреть на исходники не тянет. В этом году к началу работ над новым номером я добрался только под конец лета, а начало началось с установки Java Development Kit — что энтузиазма человеку не прибавляет. Редактор шрифта, впрочем, получился, переход на новую кодировку тоже, а дальше началась охота за авторами. Последнюю статью я получил вчера и рад этому, потому что (как и остальные) она того стоит.\n\nОптимист во мне надеется, что у RESTORE 5 будет иначе, менее суматошно: тексты будут приходить на почту и без просьб, я только прочту, поправлю самые явные опечатки, сверстаю в разрешение 256×192 и выпущу.\n\nРеалист знает, что этого не случится и будет снова то же самое.\n\nОба, однако, довольны — потому что так жизнь хотя бы разнообразнее.\n\nТак что Spectrum в добрый путь — и увидимся снова над новым RESTORE. Надеюсь, раньше, чем через год. (Оптимист как раз побеждает.)\n\nLogout\n\n- - - - - - - - - - - - - - - - - - - - - - - - - - - -\n\nВ RESTORE 4 участвовали: Aki (тексты, музыка) Ellvis (текст) Lukáš Rachůnek (текст) Martin Bórik (текст, PT3 player) MikeZT (тексты, приложение) panprase (тексты) … и, разумеется, немного добавил и я.\n\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - PS: В приложении найдёте ещё одну игру производства Koko&Keke. Кажется, хорошо сохранённые исторические магнитофонные ленты — совершенно неисчерпаемый источник сюрпризов и развлечений!\n\nPPS: В интернет‑магазине у меня по‑прежнему на складе весьма изысканные наклейки и значки RESTORE! Не стесняйтесь — покупайте! https://shop.technomorous.eu\n",
+  "body_en": "",
+  "category_ids": [
+    123,
+    116
+  ],
+  "tags": [
+    {
+      "tag_name": "restore",
+      "tag_alias": "restore"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "czech",
+      "tag_alias": "czech"
+    },
+    {
+      "tag_name": "outro",
+      "tag_alias": "outro"
+    }
+  ]
+}

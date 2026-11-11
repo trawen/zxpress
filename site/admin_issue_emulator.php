@@ -6,17 +6,65 @@ require 'init.inc';
 require_once __DIR__ . '/includes/admin_helpers.php';
 require_once __DIR__ . '/includes/screen_images.php';
 
-if (empty($_SESSION['login'])) {
-	header('HTTP/1.1 403 Forbidden');
-	exit;
-}
-
 function aiem_json(int $status, array $payload): never
 {
 	http_response_code($status);
 	header('Content-Type: application/json; charset=utf-8');
 	header('Cache-Control: no-store');
 	echo json_encode($payload, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+	exit;
+}
+
+$aiemAction = (string) ($_GET['action'] ?? '');
+$aiemIsShot = ($aiemAction === 'shot');
+$aiemIsReauth = ($aiemAction === 'reauth');
+
+if ($aiemIsReauth) {
+	if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
+		aiem_json(405, ['ok' => false, 'code' => 'auth', 'error' => 'POST required']);
+	}
+	$username = trim((string) ($_POST['username'] ?? ''));
+	$password = (string) ($_POST['password'] ?? '');
+	if ($username === '' || $password === '') {
+		aiem_json(422, ['ok' => false, 'code' => 'auth', 'error' => 'Введите логин и пароль']);
+	}
+	$stmt = $db->prepare('SELECT id, username, password, `level` FROM users WHERE username = ?');
+	if (!$stmt) {
+		aiem_json(500, ['ok' => false, 'code' => 'auth', 'error' => 'Ошибка БД']);
+	}
+	$stmt->bind_param('s', $username);
+	$stmt->execute();
+	$user = $stmt->get_result()->fetch_assoc();
+	$stmt->close();
+	if (!$user || !admin_password_verify($password, (string) ($user['password'] ?? ''))) {
+		aiem_json(403, ['ok' => false, 'code' => 'auth', 'error' => 'Неверный логин или пароль']);
+	}
+	if (!zxpress_user_is_admin_level($user['level'] ?? null)) {
+		aiem_json(403, ['ok' => false, 'code' => 'auth', 'error' => 'Нет прав администратора']);
+	}
+	session_regenerate_id(true);
+	$_SESSION['login'] = 1;
+	$_SESSION['username'] = (string) $user['username'];
+	$_SESSION['id_username'] = (int) $user['id'];
+	$_SESSION['admin_last_activity'] = time();
+	// Rotate CSRF after login so the iframe can continue uploading.
+	$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+	aiem_json(200, [
+		'ok' => true,
+		'csrf_token' => csrf_token(),
+		'username' => (string) $user['username'],
+	]);
+}
+
+if (empty($_SESSION['login'])) {
+	if ($aiemIsShot) {
+		aiem_json(403, [
+			'ok' => false,
+			'code' => 'auth',
+			'error' => 'Сессия истекла — войдите снова',
+		]);
+	}
+	header('HTTP/1.1 403 Forbidden');
 	exit;
 }
 
@@ -114,11 +162,22 @@ function aiem_save_screenshot(mysqli $db, int $pressId, int $issueId, int $type,
 $pressId = (int) ($_REQUEST['id'] ?? 0);
 $issueId = (int) ($_REQUEST['issue'] ?? 0);
 
-if (($_GET['action'] ?? '') === 'shot') {
+if ($aiemIsShot) {
 	if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 		aiem_json(405, ['ok' => false, 'error' => 'POST required']);
 	}
-	csrf_verify();
+	$token = (string) ($_POST['csrf_token'] ?? '');
+	if ($token === '' || !hash_equals(csrf_token(), $token)) {
+		error_log(
+			'[FIX] CSRF token mismatch uri=' . ($_SERVER['REQUEST_URI'] ?? '')
+			. ' sid=' . (session_id() ?: '')
+		);
+		aiem_json(403, [
+			'ok' => false,
+			'code' => 'auth',
+			'error' => 'Сессия устарела — войдите снова',
+		]);
+	}
 	if ($pressId <= 0 || $issueId <= 0 || !aiem_issue_exists($db, $pressId, $issueId)) {
 		aiem_json(404, ['ok' => false, 'error' => 'Выпуск не найден']);
 	}
@@ -425,9 +484,11 @@ $config = [
 	'issueId' => $issueId,
 	'engine' => $engine,
 	'csrfToken' => csrf_token(),
+	'username' => (string) ($_SESSION['username'] ?? ''),
 	'disks' => $disksForEngine,
 	't80Base' => '/t80/',
 	'uploadUrl' => '/admin_issue_emulator.php?action=shot&id=' . $pressId . '&issue=' . $issueId,
+	'reauthUrl' => '/admin_issue_emulator.php?action=reauth',
 ];
 $configJson = json_encode(
 	$config,
@@ -438,9 +499,12 @@ $scriptPath = $isT80
 	? (__DIR__ . '/js/admin_issue_emulator_t80.js')
 	: (__DIR__ . '/js/admin_issue_emulator.js');
 $scriptVersion = is_readable($scriptPath) ? (string) filemtime($scriptPath) : '0';
+$reauthPath = __DIR__ . '/js/admin_issue_emulator_reauth.js';
+$reauthVersion = is_readable($reauthPath) ? (string) filemtime($reauthPath) : '0';
 $scriptSrc = $isT80
 	? '/js/admin_issue_emulator_t80.js?v=' . $scriptVersion
 	: '/js/admin_issue_emulator.js?v=' . $scriptVersion;
+$reauthSrc = '/js/admin_issue_emulator_reauth.js?v=' . $reauthVersion;
 ?>
 <!doctype html>
 <html lang="ru">
@@ -492,6 +556,15 @@ $scriptSrc = $isT80
 		.aiem-shot button{padding:4px;font-size:11px}
 		.aiem-shot-del{font-weight:normal;color:var(--smn-accent)}
 		.aiem-engine{font-size:11px;color:var(--smn-muted)}
+		.aiem-reauth{border:0;padding:0;max-width:calc(100% - 24px);width:340px;background:transparent}
+		.aiem-reauth::backdrop{background:rgba(10,9,8,.45)}
+		.aiem-reauth-card{background:var(--smn-surface);border:1px solid var(--smn-line);padding:14px;display:grid;gap:10px}
+		.aiem-reauth-card h2{margin:0;font:bold 14px Verdana,sans-serif}
+		.aiem-reauth-card p{margin:0;color:var(--smn-muted);line-height:1.4}
+		.aiem-reauth-card label{display:grid;gap:4px}
+		.aiem-reauth-card input{font:inherit;padding:7px;border:1px solid var(--smn-line);background:#fff;color:var(--smn-ink)}
+		.aiem-reauth-actions{display:flex;gap:8px;flex-wrap:wrap}
+		.aiem-reauth-err{min-height:18px;color:var(--smn-accent);font-size:12px}
 	</style>
 </head>
 <body>
@@ -537,7 +610,25 @@ $scriptSrc = $isT80
 		</div>
 		<div class="aiem-shots" id="aiem-shots"></div>
 	</div>
+	<dialog class="aiem-reauth" id="aiem-reauth" aria-labelledby="aiem-reauth-title">
+		<form class="aiem-reauth-card" id="aiem-reauth-form" action="#" method="post">
+			<h2 id="aiem-reauth-title">Сессия истекла</h2>
+			<p>Введите пароль, чтобы продолжить отправку кадров.</p>
+			<label>Логин
+				<input type="text" id="aiem-reauth-user" name="username" autocomplete="username" required>
+			</label>
+			<label>Пароль
+				<input type="password" id="aiem-reauth-pass" name="password" autocomplete="current-password" required>
+			</label>
+			<div class="aiem-reauth-err" id="aiem-reauth-err" aria-live="polite"></div>
+			<div class="aiem-reauth-actions">
+				<button type="submit" class="primary" id="aiem-reauth-submit" value="ok">Войти</button>
+				<button type="button" id="aiem-reauth-cancel" value="cancel">Отмена</button>
+			</div>
+		</form>
+	</dialog>
 	<script id="aiem-config" type="application/json"><?= $configJson ?></script>
+	<script src="<?= htmlspecialchars($reauthSrc, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') ?>"></script>
 	<script src="<?= htmlspecialchars($scriptSrc, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') ?>"></script>
 <?php endif; ?>
 </body>

@@ -1,0 +1,40 @@
+{
+  "article_id": "00_04_SOFTWARE",
+  "press": "Restore",
+  "press_id": 326,
+  "issue": "00",
+  "sort_order": 4,
+  "source_file": "003_software.md",
+  "source_lang": "cs",
+  "title_cs": "Software",
+  "title_ru": "Software - Обзор утилит для ZX Spectrum",
+  "title_en": "Software - Review of hardware-independent ZX Spectrum utilities",
+  "meta_description_cs": "",
+  "meta_description_ru": "Обзор утилит для ZX Spectrum: редактор атрибутной графики Stipple ATTR Art Tool (Andy Jenkinson), изометрический 3D-редактор Pants Attack и 4KB аудиовизуальный секвенсор ZXAV от британской группы Ate Bit.",
+  "meta_description_en": "Review of hardware-independent ZX Spectrum utilities: Andy Jenkinson's attribute editor Stipple ATTR Art Tool, open-source isometric 3D terrain editor Pants Attack, and Ate Bit's 4KB audiovisual sequencer ZXAV.",
+  "body_cs": "Trochu jsem podléhal malomyslnosti, když jsem zjistil, že v posledních dvou letech nevyšla pro Spectrum prakticky žádná utilita, která by byla hardwarově nezávislá. Nové periferie, nové klony, pro to vše software vzniká - různé konfigurační utility, síťový software, atd. - a je to rozhodně dobře. Ale napsat něco co něco dělá jen na samotném Speccy? Tam přece už nikdo stejně nic nedělá, tam se kouká na dema, hrají hry, poslouchá muzika, na práci jsou tu Pomocné Computery. Trochu škoda, ne?\n\nNaštěstí to není až tak horké. Něco se přeci jen najde, ale musel jsem prolézt dva přední spektristické servery a všechny releasy na nich, abych to našel.\n\n1. Stipple ATTR Art Tool\n\nEditor atributové grafiky od Andy Jenkinsona. Vizuálně velmi jednoduchý ale schopný a pěkně ovladatelný. Můžete nastavovat PAPER i INK, vybírat zda mají atributy být šrafované mezi těmito dvěma barvami nebo plné, lze měnit BRIGHT i FLASH, z palety vybírat přednastavené kombinace všech těchto vlastností, scrollovat si nakresleným obrázkem po obrazovce s tím, že se z jedné strany vrací, co jste z druhé poslali pryč a třešničkou na dortu je deset kreslících ploch, které se přepínají pomocí SYMBOL SHIFT + číslo a ve kterých je hned po nahrání programu předpřipraveno několik pěkných obrázků. Nápověda k ovládání se zobrazuje podržením klávesy I, žel ani v ní jsem nenašel možnost, jak si obrázek uložit - buď se předpokládá nějaké snapnutí pomocí diskového systému nebo asi rovnou práce v emulátoru. To je ale jediný kaz na kráse, který jsem na této utilitce našel.\n\n2. Pants Attack\n\nS grafikou má něco společného i tento program, jedná se o editor izometrického 3D terénu složeného z kostek na ploše až 128x128 polí v 7 úrovních výšky. U kostek lze určovat barevnou kombinaci stěn, výšku, polohu v prostoru, zda mají začínat od společného základu (tj. položeny \"na zemi\") nebo někde nad ním (tj. \"létající\"). Editor umí kostky posouvat, mazat, kopírovat a vkládat. Ani zde není možnost ukládání přímo v programu, ale v dokumentaci je zmínka buď o snapshotu nebo o uložení 16 kB paměti od adresy 49152. Celý projekt je open-source, takže dopsat ukládání pro konkrétní diskový systém, nebo naopak použít vykreslovací rutinu někde jinde by neměl být až takový problém.\n\n3. ZXAV\n\nNa závěr nejlepší: audiovizuální sekvencér od britské demogrupy Ate Bit. Program umožňuje sekvencovat čtyři kanály - vizuální efekty, hlas A, hlas B a bicí. Má sloužit pro živá vystoupení na akcích, kde performer sekvence přepisuje za chodu, nicméně pokud by šel výledek uložit jako spustitelný kód, obstál by i v leckterém 4k intro compu. Software se opravdu podařil, udělat v něm krátkou smyčku střídajících se efektů včetně hudby zvládne i takový analfabet jako já, nicméně bez jedenáctistránkového manuálu velikosti A4 se určitě neobejde. Na to, že program vznikl jako experiment pro ověření kolik se toho dá nacpat do 4 kB paměti je to skoro až neuvěřitelné. Doufám, že si někdy někde někdo dá tu práci a se ZXAV živé vystoupení udělá...\n\nPouze pro RESTORE 0 se novinkama prohrabal Logout.\n",
+  "body_ru": "Я немного поддался унынию, когда выяснил, что за последние два года для Spectrum практически не вышло ни одной утилиты, которая была бы аппаратно независимой. Новые периферии, новые клоны — под всё это софт появляется: разные конфигурационные утилиты, сетевой софт и т.д. — и это безусловно хорошо. Но написать что-то, что что-то делает просто на самом Speccy? Там ведь уже никто всё равно ничего не делает — там смотрят демки, играют в игры, слушают музыку, а для работы есть Вспомогательные Компьютеры. Немного жаль, правда?\n\nК счастью, не всё так горячо. Что-то всё же находится, но мне пришлось перерыть два ведущих спектрумистских сервера и все релизы на них, чтобы это отыскать.\n\n1. Stipple ATTR Art Tool\n\nРедактор атрибутной графики от Andy Jenkinsona. Визуально очень простой, но умелый и приятно управляемый. Можно задавать PAPER и INK, выбирать, будут ли атрибуты штрихованными между этими двумя цветами или сплошными, менять BRIGHT и FLASH, из палитры выбирать предустановленные сочетания всех этих свойств, скроллить нарисованную картинку по экрану так, что с одной стороны возвращается то, что с другой ушло за край, а вишенка на торте — десять холстов для рисования, переключаемых через SYMBOL SHIFT + цифра, в которых сразу после загрузки программы уже приготовлено несколько симпатичных картинок. Справка по управлению появляется при удержании клавиши I; увы, даже в ней я не нашёл способа сохранить картинку — либо предполагается какой-то снапшот через дисковую систему, либо сразу работа в эмуляторе. Но это единственный изъян, который я у этой утилитки нашёл.\n\n2. Pants Attack\n\nС графикой кое-что общее есть и у этой программы: это редактор изометрического 3D-рельефа из кубиков на площади до 128×128 клеток в 7 уровнях высоты. У кубиков можно задавать цветовую комбинацию стенок, высоту, положение в пространстве, начинаются ли они от общего основания (то есть положены «на земле») или где-то над ним (то есть «летающие»). Редактор умеет кубики сдвигать, удалять, копировать и вставлять. И здесь нет возможности сохранения прямо в программе, но в документации упоминается либо снапшот, либо сохранение 16 кБ памяти начиная с адреса 49152. Весь проект open-source, так что дописать сохранение под конкретную дисковую систему или, наоборот, использовать процедуру отрисовки где-то ещё не должно быть такой уж проблемой.\n\n3. ZXAV\n\nНапоследок самое лучшее: аудиовизуальный секвенсор от британской демогруппы Ate Bit. Программа позволяет секвенсировать четыре канала — визуальные эффекты, голос A, голос B и ударные. Она должна служить для живых выступлений на тусовках, где перформер переписывает секвенции на ходу; тем не менее, если бы результат можно было сохранить как исполняемый код, он бы устоял и в не одном 4k intro compo. Софт действительно удался: короткую петлю чередующихся эффектов с музыкой в нём сделает даже такой неграмотный, как я, но без одиннадцатистраничного мануала формата A4 точно не обойтись. Учитывая, что программа родилась как эксперимент — проверить, сколько можно впихнуть в 4 кБ памяти, — это почти невероятно. Надеюсь, когда-нибудь кто-нибудь где-нибудь возьмёт на себя труд и устроит с ZXAV живое выступление...\n\nСпециально для RESTORE 0 новинки перерыл Logout.\n",
+  "body_en": "",
+  "category_ids": [
+    62,
+    157
+  ],
+  "tags": [
+    {
+      "tag_name": "restore",
+      "tag_alias": "restore"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "czech",
+      "tag_alias": "czech"
+    },
+    {
+      "tag_name": "software",
+      "tag_alias": "software"
+    }
+  ]
+}

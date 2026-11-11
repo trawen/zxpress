@@ -1,0 +1,40 @@
+{
+  "article_id": "03_01_INTRO000",
+  "press": "Restore",
+  "press_id": 326,
+  "issue": "03",
+  "sort_order": 1,
+  "source_file": "000_intro000.md",
+  "source_lang": "cs",
+  "title_cs": "Ahoj spectristi!",
+  "title_ru": "Привет, спектрумисты!",
+  "title_en": "",
+  "meta_description_cs": "",
+  "meta_description_ru": "Вступительное слово главреда Logout к третьему номеру дискмага RESTORE, вышедшему к JHCon 2023. Описаны новое курсорное меню журнала, 20-летие JHCon и специальный раздел с ежегодником мероприятия.",
+  "meta_description_en": "Editorial by Logout introducing RESTORE #03, released for JHCon 2023. Covers the diskmag's new cursor-driven menu, JHCon's 20th anniversary in České Budějovice, and a special JHCon yearbook section.",
+  "body_cs": "Vítám vás u dalšího vydání diskmagu RESTORE a musím se hned v jeho úvodu pochválit: Mezi prvním a druhým číslem byla prodleva 18 měsíců, mezi číslem druhým a třetím už to je o čtyři měsíce méně. Nerad dělám silná prohlášení, leč bude-li toto bezprecedentní zlepšování se pokračovat, někdy kolem roku 2031 by mohla vyjít i dvě čísla ročně!\n\nNovinek v samotném programu diskmagu je tentokráte méně a jsou obě viditelné hned v úvodním menu: vybírá se z něj kurzorem, nikoliv stiskem kláves 1 až 9, položek v něm může být libovolný počet a mohou být zobrazeny v libovolném úhlu, chci říct v libovolném rozložení - stačí mi k tomu nadefinovat pár tabulek. Není to žádná raketová věda, pouze takový mírný pokrok v mezích zákona, ale změna to je a změna je život. Další změny budou následovat příště, to-do seznam v mém notesu zdaleka ještě není proškrtán.\n\nToto číslo vychází během exilového JHConu 2023, tedy v roce, kdy JHCon oslavil dvacet let. Je sice smutné, že se nemůže konat tam, kde se konal v letech 2003 až 2018, ale jsem rád, že se může konat alespoň někde - když jsme se v zimě 2020 pololegálně ve čtyřech sešli na naší rodinné chalupě, moc šancí jsem mu do budoucna nedával. Naštěstí vloni už žádná omezení neplatila, a tak jsme opět využili prostor českobudějovické školy Jintes, stejně jako v posledním předcovidovém roce, a ač účast byla menší než obvyklá, byl to nový start.\n\nVe chvíli, kdy píšu tyto řádky, je už na letošní JHCon přihlášeno více lidí, než bylo přihlášeno vloni a jako rozený, byť pečlivě maskovaný optimista to chci mít za dobré znamení.\n\nPoprvé se JHCon conal v lednu 2003 v Jindřichově Hradci (proto je v menu jindřichohradecký zámek), zanedlouho to tedy bude vlastně už jednadvacet let, nicméně s výjimkou právě toho prvního to vždy bylo v závěru roku. Proto jsem do RESTORE pod položku Speciál zařadil jeho ročenku. Nápad na ni jsem dostal už v zimě 2015, když jsem po zasněžené Lysé nad Labem tlačil kočárek, nicméně některé věci holt trvají trochu déle a nakonec mají jinou podobu, než bylo původně zamýšleno - v diskmagu mě to ostatně těší víc než někde na webu. Je toho ale samozřejmě víc, takže už dost zdržování mými žvásty, přeji příjemnou zábavu při čtení.\n\nLogout, šéfredaktor\n",
+  "body_ru": "Приветствую вас у очередного выпуска дискмага RESTORE — и сразу в самом начале должен себя похвалить: между первым и вторым номером прошло 18 месяцев, между вторым и третьим уже на четыре месяца меньше. Не люблю громких заявлений, но если это беспрецедентное улучшение продолжится, где-то около 2031 года могут выходить и по два номера в год!\n\nНововведений в самой программе дискмага на этот раз меньше, и оба видны сразу в стартовом меню: выбор идёт курсором, а не нажатием клавиш 1–9, пунктов в нём может быть сколько угодно, и они могут отображаться под любым углом — хотел сказать, в произвольной раскладке: достаточно определить пару таблиц. Это не ракетная наука, лишь скромный прогресс в рамках дозволенного, но перемена есть, а перемена — это жизнь. Дальнейшие изменения последуют в следующий раз: to-do список в моём блокноте ещё далеко не весь вычеркнут.\n\nЭтот номер выходит во время эмигрантского JHCon 2023, то есть в год, когда JHCon отметил двадцатилетие. Грустно, конечно, что он не может проходить там, где проходил в 2003–2018 годах, но я рад, что может проходить хотя бы где-то — когда зимой 2020-го мы полулегально вчетвером собрались на нашей семейной даче, особых шансов на будущее я ему не давал. К счастью, в прошлом году ограничений уже не было, и мы снова воспользовались помещениями ческебудеёвицкой школы Jintes, как в последний доковидный год; хоть участников было меньше обычного, это был новый старт.\n\nВ момент, когда я пишу эти строки, на нынешний JHCon уже записалось больше людей, чем в прошлом году, и как прирождённый, пусть и тщательно маскирующийся оптимист, я хочу считать это добрым знаком.\n\nВпервые JHCon прошёл в январе 2003 года в Йиндржихув-Градеце (поэтому в меню — йиндржихоградецкий замок); совсем скоро это будет, по сути, уже двадцать один год, однако за исключением именно того первого раза он всегда приходился на конец года. Поэтому в раздел «Спецвыпуск» RESTORE я включил его летопись. Идея пришла мне ещё зимой 2015-го, когда я толкал коляску по заснеженной Лысе-над-Лабем, но некоторые вещи, увы, длятся чуть дольше и в итоге принимают иной вид, чем задумывалось — в дискмаге, впрочем, мне это нравится больше, чем где-то в вебе. Материала, конечно, ещё много, так что хватит тянуть время моей болтовнёй — приятного чтения!\n\nLogout, главный редактор\n",
+  "body_en": "",
+  "category_ids": [
+    123,
+    116
+  ],
+  "tags": [
+    {
+      "tag_name": "restore",
+      "tag_alias": "restore"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "czech",
+      "tag_alias": "czech"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    }
+  ]
+}

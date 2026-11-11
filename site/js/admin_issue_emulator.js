@@ -329,9 +329,14 @@
 			credentials: 'same-origin',
 			cache: 'no-store'
 		}).then(function (response) {
-			return response.json().then(function (json) {
-				if (!response.ok || !json.ok) {
-					throw new Error(json.error || ('HTTP ' + response.status));
+			return window.AiemReauth.parseJsonResponse(response).then(function (pack) {
+				var json = pack.json;
+				if (!pack.response.ok || !json.ok) {
+					var msg = json.error || ('HTTP ' + pack.response.status);
+					if (window.AiemReauth.isAuthError(null, json) || pack.response.status === 403) {
+						throw window.AiemReauth.AuthError(msg, json);
+					}
+					throw new Error(msg);
 				}
 				return json;
 			});
@@ -346,6 +351,7 @@
 
 		var total = shots.length;
 		var sent = 0;
+		var authAsked = false;
 
 		(function next() {
 			if (shots.length === 0) {
@@ -371,6 +377,26 @@
 					next();
 				})
 				.catch(function (error) {
+					if (!authAsked && window.AiemReauth.isAuthError(error, error && error.json)) {
+						authAsked = true;
+						status('Сессия истекла — нужен повторный вход…', 'busy');
+						window.AiemReauth.prompt(cfg)
+							.then(function () {
+								status('Вход выполнен, продолжаю отправку…', 'busy');
+								next();
+							})
+							.catch(function (authErr) {
+								busy = false;
+								shotButton.disabled = !ready;
+								status(
+									'Ошибка на кадре ' + (sent + 1) + ': '
+										+ (authErr && authErr.message ? authErr.message : String(authErr)),
+									'err'
+								);
+								refreshQueueUi();
+							});
+						return;
+					}
 					busy = false;
 					shotButton.disabled = !ready;
 					status(

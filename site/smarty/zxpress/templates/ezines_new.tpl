@@ -285,26 +285,27 @@
 							<span class="smn-ezine-index-meta">
 								{if $catalog[n].issues_count_label}<span class="smn-ezine-index-count">{$catalog[n].issues_count_label}</span>{/if}
 								{if $catalog[n].years_label}<span class="smn-ezine-index-years">{$catalog[n].years_label}</span>{/if}
-								{if $catalog[n].city_name_label || $catalog[n].country_label}
+								{if $catalog[n].city_name_label || $catalog[n].country_id}
 								<span class="smn-ezine-index-city">
 									{if $catalog[n].city_name_label}<span class="smn-ezine-index-city-name">{$catalog[n].city_name_label}</span>{/if}
 									{if $catalog[n].country_id}<img class="smn-ezine-flag" src="{$host}img/{$catalog[n].country_id}.png" width="16" height="10" alt="">{/if}
-									{if $catalog[n].country_label}<span class="smn-ezine-index-country">({$catalog[n].country_label})</span>{/if}
 								</span>
 								{/if}
 							</span>
 						</span>
-{if $catalog[n].splash}
+{if $catalog[n].screens && $catalog[n].screens|@count gt 0}
 						<span class="smn-ezine-index-splash">
+{foreach from=$catalog[n].screens item=shot}
 							<img
-								class="smn-gallery-img{if $catalog[n].splash.gallery_frame_class} {$catalog[n].splash.gallery_frame_class}{/if}"
-								src="{$host}screens/1/{$catalog[n].splash.id}.{$catalog[n].splash.format}"
+								class="smn-gallery-img{if $shot.gallery_frame_class} {$shot.gallery_frame_class}{/if}"
+								src="{$host}screens/1/{$shot.id}.{$shot.format}"
 								alt=""
 								width="80"
 								height="60"
 								loading="lazy"
 								decoding="async"
 							>
+{/foreach}
 						</span>
 {/if}
 					</a>

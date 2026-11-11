@@ -1,0 +1,40 @@
+{
+  "article_id": "03_10_OUTRO000",
+  "press": "Restore",
+  "press_id": 326,
+  "issue": "03",
+  "sort_order": 10,
+  "source_file": "009_outro000.md",
+  "source_lang": "cs",
+  "title_cs": "Pár slov závěrem",
+  "title_ru": "Несколько слов напоследок",
+  "title_en": "",
+  "meta_description_cs": "",
+  "meta_description_ru": "Заключительная заметка Logout для RESTORE 3, написанная на JHCon 2023: итоги слёта в Южной Чехии, заметки о чешских и словацких Speccy-конвентах (JHCon, KapliCon, Forever, SinDiKat) и авторы выпуска.",
+  "meta_description_en": "Logout's closing notes for RESTORE 3 written at JHCon 2023: impressions of the event in South Bohemia, remarks on Czech and Slovak ZX Spectrum cons (JHCon, KapliCon, Forever, SinDiKat), and issue contributor credits.",
+  "body_cs": "Je sobota, 2. prosince 2023, 23:37. JHCon 2023 čeká poslední noc a mně čeká posledních pár stovek bajtů textu, který musím dokončit a zalámat, abych mohl diskmag vydat. Ano, mohl jsem to celé udělat v pohodlí domova už před akcí, ale narozdíl od ostatních mně se v ruchu conu dělá nejlépe. (Navíc mě hřeje škodolibé vědomí, že Wotnau si myslel, že RESTORE vyjde už na ByteFestu a je to v jeho textu vidět.)\n\nDoufám ale, že se nikde při finalizaci nezaseknu, protože bych rád šel alespoň na pár hodin spát. Zítra řídím a během JHConu 2023 napadlo v jižních Čechách více než 70 centimetrů sněhu, takže cesta zpět ku Praze bude asi docela výzva. JHCon 2023 proběhl (tedy přesněji v pátek a v sobotu probíhal, zítra ještě uvidíme) lépe, než jsem do posledních dnů čekal. Přijelo více lidí, bylo tu k vidění více zajímavé techniky, zdá se, že restart akce v náhradních prostorech se uskutečnil a má i nějakou budoucnost.\n\nEllvis tu při přednášce říkal, že specifikem Čech, Moravy a Slezska je, že když se tu sejdou dva spectristi, je to už con. Na Slovensku mají Forever a SinDiKat a tím to končí. U nás jsme sice conů měli dostatek, ale nějak se nám to na Speccy scéně smrsklo na dva - JHCon a KapliCon - a shodou okolností oba jsou v jižních Čechách, oba organizuju já a na obou se vydatnou, ba dokonce zcela zásadní měrou podílí Míra Talíř. Vynasnažím se, aby to tak zůstalo, oba cony se i nadále conaly a také se pokusím o pokračování diskmagu. Někdo to dělat musí. Keep Speccy alive!\n\nLogout\n\n- - - - - - - - - - - - - - - - - - - - - - - - - - - -\n\nDo RESTORE 3 přispěli: Aki (texty, hudba) Dex (text) Martin Bórik (PT3 player) MikeZT (texty, příloha) panprase (texty) Wotnau (dlouhý, předlouhý text) z00m (text) ... a samozřejmě něco málo jsem přidal i já.\n",
+  "body_ru": "Суббота, 2 декабря 2023, 23:37. JHCon 2023 ждёт последняя ночь, а меня — последние несколько сотен байт текста, которые нужно дописать и сверстать, чтобы выпустить дискмаг. Да, я мог бы сделать всё это дома в комфорте ещё до мероприятия, но в отличие от остальных мне лучше всего работается в суете кона. (К тому же греет злорадное знание, что Wotnau думал, будто RESTORE выйдет уже на ByteFest, и это видно в его тексте.)\n\nНадеюсь только, что нигде при финализации не застряну: хотелось бы хотя бы пару часов поспать. Завтра за рулём, а за время JHCon 2023 в Южной Чехии выпало больше 70 сантиметров снега, так что дорога обратно к Праге будет, пожалуй, ещё тем вызовом. JHCon 2023 прошёл (точнее, в пятницу и субботу шёл, завтра ещё посмотрим) лучше, чем я ожидал до последних дней. Приехало больше людей, было видно больше интересной техники; похоже, перезапуск мероприятия в запасных помещениях состоялся и имеет какое-то будущее.\n\nEllvis на лекции говорил, что специфика Чехии, Моравии и Силезии в том, что когда здесь сойдутся двое спектрумистов — это уже кон. В Словакии есть Forever и SinDiKat — и на том всё. У нас конов было достаточно, но на Speccy-сцене это как-то сжалось до двух — JHCon и KapliCon, — и по совпадению оба в Южной Чехии, оба организую я, и в обоих обильно, даже решающе участвует Мира Талиш. Постараюсь, чтобы так и осталось: оба кона и дальше проходили, и попробую продолжить дискмаг. Кто-то же должен. Keep Speccy alive!\n\nLogout\n\n- - - - - - - - - - - - - - - - - - - - - - - - - - - -\n\nВ RESTORE 3 участвовали: Aki (тексты, музыка) Dex (текст) Martin Bórik (PT3 player) MikeZT (тексты, приложение) panprase (тексты) Wotnau (длинный, очень длинный текст) z00m (текст) … и, разумеется, немного добавил и я.\n",
+  "body_en": "",
+  "category_ids": [
+    123,
+    116
+  ],
+  "tags": [
+    {
+      "tag_name": "restore",
+      "tag_alias": "restore"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "czech",
+      "tag_alias": "czech"
+    },
+    {
+      "tag_name": "outro",
+      "tag_alias": "outro"
+    }
+  ]
+}

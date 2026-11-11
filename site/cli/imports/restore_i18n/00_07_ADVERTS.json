@@ -1,0 +1,36 @@
+{
+  "article_id": "00_07_ADVERTS",
+  "press": "Restore",
+  "press_id": 326,
+  "issue": "00",
+  "sort_order": 7,
+  "source_file": "006_adverts_.md",
+  "source_lang": "cs",
+  "title_cs": "Inzerce",
+  "title_ru": "Объявления - Предложение рекламы и прайс-лист DIVIDE.CZ (от 27.8.2020) на интерфейсы DivIDE с ESXDOS",
+  "title_en": "Classifieds - Ad space and a DIVIDE.CZ price list (as of 27.8.2020) for DivIDE interfaces, CF-IDE adapters, ESXDOS",
+  "meta_description_cs": "",
+  "meta_description_ru": "Объявления в Restore #00: предложение рекламы и прайс-лист DIVIDE.CZ (от 27.8.2020) на интерфейсы DivIDE с ESXDOS, адаптеры CF-IDE, мембраны Gumák и Spectrum+/128+, чипы AY-3-8912A/P и Deprchátor Umbrella.",
+  "meta_description_en": "Classifieds in Restore #00 offering ad space and a DIVIDE.CZ price list (as of 27.8.2020) for DivIDE interfaces, CF-IDE adapters, ESXDOS, Gumák and Spectrum+/128+ membranes, AY-3-8912A/P chips, and Deprchátor Umbrella.",
+  "body_cs": "Ano, zde může být i VÁŠ inzerát!\n\n(Nebo tu už příště z důvodu nedostatku zájmu bude\n\n## něco úplně jiného.)\n\nDivIDE s CF-IDE, 2GB CF a ESXDOS 1300 Kč DivIDE sestavené 900 Kč DivIDE stavebnice 800 Kč DivIDE deska 125 Kč CF-IDE přímo do desky 100 Kč CF-IDE na kabel 100 Kč Membrána Gumák 300 Kč Membrána Spectrum+/128+ 500 Kč AY-3-8912A/P 175 Kč Deprchátor Umbrella 125 Kč\n\nA mnoho dalšího...\n\n....jedině na DIVIDE.CZ!\n\n(Ceny platné k 27.8.2020)\n",
+  "body_ru": "Да, здесь может быть и ВАШЕ объявление!\n\n(Или в следующий раз из-за отсутствия интереса здесь будет\n\n## что-нибудь совсем другое.)\n\nDivIDE с CF-IDE, 2GB CF и ESXDOS 1300 Kč DivIDE собранный 900 Kč DivIDE набор 800 Kč DivIDE плата 125 Kč CF-IDE прямо в плату 100 Kč CF-IDE на кабель 100 Kč Мембрана Резинка 300 Kč Мембрана Spectrum+/128+ 500 Kč AY-3-8912A/P 175 Kč Deprchátor Umbrella 125 Kč\n\nИ многое другое...\n\n....только на DIVIDE.CZ!\n\n(Цены действительны на 27.8.2020)\n",
+  "body_en": "",
+  "category_ids": [
+    118,
+    116
+  ],
+  "tags": [
+    {
+      "tag_name": "restore",
+      "tag_alias": "restore"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "czech",
+      "tag_alias": "czech"
+    }
+  ]
+}

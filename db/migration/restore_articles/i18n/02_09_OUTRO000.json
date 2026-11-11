@@ -1,0 +1,20 @@
+{
+  "article_id": "02_09_OUTRO000",
+  "press": "Restore",
+  "press_id": 326,
+  "issue": "02",
+  "sort_order": 9,
+  "source_file": "008_outro000.md",
+  "source_lang": "cs",
+  "title_cs": "Pár slov závěrem",
+  "title_ru": "Несколько слов в заключение",
+  "title_en": "",
+  "meta_description_cs": "",
+  "meta_description_ru": "Послесловие Logout к RESTORE 2: выпуск 2022 года объёмом свыше 100 000 байт, планы добавить сжатие и несколько шрифтов, авторы (Aki, Dex, Martin Bórik, MikeZT, Noby, Shrek, Wotnau) и анонс возможного JHCon.",
+  "meta_description_en": "Logout reflects on compiling RESTORE 2 in 2022 (over 100,000 bytes of text), plans compression and multi-font support, credits Aki, Dex, Martin Bórik, MikeZT, Noby, Shrek, and Wotnau, and mentions JHCon.",
+  "body_cs": "Čekali jste tak dlouho a už to je zase za vámi. Přál bych si, abyste RESTORE 2 četli alespoň tak dlouho, jak dlouho jsem ho já sestavoval. Ale to by bylo vůči vám vlastně dost nefér, sestavoval jsem ho totiž dlouho. Než jsem uhnal dostatek autorů a nasbíral od nich dostatek textu, uplynula většina roku 2022, k jehož začátku jsem číslo chtěl původně vydat. Inu, stanou se i horší věci.\n\nČekání se ale vyplatilo, všechny texty dohromady překonaly délkou hranici 100 000 bajtů, což je o čtvrtinu více než minule. Taky je to, jen tak mimochodem, 56 normostran textu a to dneska nemají ani některé diplomové práce.\n\nDoufám, že do příštího čísla rozsah opět o něco naroste a zejména doufám, že se ho podaří vydat dříve než za rok a půl. Práce na něm bude ale zase jak na kostele, potíže při tvorbě čísla tohoto ukázaly spoustu nedostatků v kódu, které budu mít to potěšení odstranit. Pokud se tradičně slibovaných alespoň dvou vylepšení týká, tak se nabízí zavedení nějaké datové komprese a pak bych také rád přidal možnost použití více fontů. Ale třeba se nakonec ukáže jako důležitější něco jiného.\n\nKeep Speccy alive!\n\nLogout Do RESTORE 2 přispěli:\n\nAki (text, hudba) Dex (text) Martin Bórik (PT3 player) MikeZT (texty, příloha) Noby (text) Shrek (texty) Wotnau (dlouhý, dlouhý text) ... a samozřejmě snažil jsem se i já.\n\nPS: Pokud se něco nepokazí (a že taková globální pandemie či atomová válka den pokazit zvládnou), je velmi pravděpodobné, že se bude konat JHCon, byť v exilu. Sledujte online zdroje, nejlépe web CI5 (https://ci5.speccy.cz), vše bude včas oznámeno.\n",
+  "body_ru": "Вы так долго ждали — и вот уже снова позади. Я бы хотел, чтобы вы читали RESTORE 2 хотя бы столько же, сколько я его собирал. Но это было бы по отношению к вам довольно нечестно: собирал я его долго. Пока я нагнал достаточно авторов и набрал от них достаточно текста, прошла большая часть 2022 года, к началу которого я номер изначально хотел выпустить. Ну что ж, бывают и худшие вещи.\n\nОжидание, однако, окупилось: все тексты вместе преодолели по длине границу в 100 000 байт, что на четверть больше, чем в прошлый раз. Это, между прочим, и 56 стандартных страниц текста — сегодня столько нет даже у некоторых дипломных работ.\n\nНадеюсь, что к следующему номеру объём снова немного вырастет, и особенно надеюсь, что удастся выпустить его раньше, чем через полтора года. Работа над ним, впрочем, снова будет как на стройке собора: трудности при создании этого номера показали кучу недостатков в коде, которые мне предстоит с удовольствием устранить. Если говорить о традиционно обещаемых хотя бы двух улучшениях, то напрашивается введение какой-нибудь компрессии данных, а ещё я бы хотел добавить возможность использования нескольких шрифтов. Но, может, в итоге важнее окажется что-то другое.\n\nKeep Speccy alive!\n\nLogout В RESTORE 2 участвовали:\n\nAki (текст, музыка) Dex (текст) Martin Bórik (PT3 player) MikeZT (тексты, приложение) Noby (текст) Shrek (тексты) Wotnau (длинный, длинный текст) … и, разумеется, старался и я.\n\nP.S.: Если ничего не сломается (а глобальная пандемия или атомная война день испортить умеют), весьма вероятно, что состоится JHCon, пусть и в изгнании. Следите за онлайн-источниками, лучше всего за сайтом CI5 (https://ci5.speccy.cz) — всё будет вовремя объявлено.\n",
+  "body_en": "",
+  "category_ids": [],
+  "tags": []
+}

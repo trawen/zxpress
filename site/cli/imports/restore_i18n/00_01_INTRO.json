@@ -1,0 +1,40 @@
+{
+  "article_id": "00_01_INTRO",
+  "press": "Restore",
+  "press_id": 326,
+  "issue": "00",
+  "sort_order": 1,
+  "source_file": "000_intro___.md",
+  "source_lang": "cs",
+  "title_cs": "Ahoj spektristi!",
+  "title_ru": "Привет, спектрумисты!",
+  "title_en": "",
+  "meta_description_cs": "",
+  "meta_description_ru": "Вводная статья номера 0 чешского ZX Spectrum дискмага Restore (август 2020), призванного возродить местные журналы после X-Magazín. О разработке на Speccy 2010 в Art Studio и Fuse и выборе названия.",
+  "meta_description_en": "Editorial for issue 0 of the Czech ZX Spectrum diskmag Restore (August 2020), aiming to revive local diskmags after X-Magazín. Details its creation on Speccy 2010, Art Studio, and Fuse, and its BASIC-inspired name.",
+  "body_cs": "Vítejte u ukázkového čísla 0 diskmagu Restore. Hned na úvod odpovím na otázku, která by stejně později přišla: Proboha, proč?\n\nMáme za sebou pětinu 21. století a navzdory tomu jak to vypadalo na jeho začátku, ZX Spectrum nezheblo. Všichni jsme si vyzkoušeli báječné moderní počítače připojené do Internetu a když nás to zase přestalo bavit, Speccy na nás trpělivě čekalo. Troufnu si odhadnout, že dneska se v báječném černém osmibitu od strýčka Cliva Sinclaira vrtá stejně, ne-li více lidí, než tenkrát - v roce 2001 - když Aragorn vydal poslední číslo X-Magazínu a tím víceméně zakončil éru českých diskmagů pro ZX Spectrum a kompatibilní. Přelom let 2001/2002 byla shodou okolností doba, kdy jsem se já ke Speccy po několikaleté pauze vracel a trochu pesimistické řeči o tom, jak všechno umírá, mě zaskočily. Považoval jsem totiž vše za mrtvé od roku 1997, kdy mi v Proximě telefonicky řekli, že už se tím dávno nezabývají. Když jsem poprvé na Internetu našel, co vše se děje, byl jsem nadšený: demoscéna, připojování harddisku a CD mechaniky, přehrávání videa...\n\nUž když jsem tehdy dočetl poslední X-Mag, řekl jsem si, že skončit je škoda a že by to chtělo nějak pokračovat. Nejsem z nejrychlejších a tak mi poznání, že když nezačnu sám, nezačne nikdo, trvalo skoro dvacet let. Definitivně jsem se rozhodl po ZX Šumavě, v den osmdesátých narozenin sira Sinclaira, nastartoval assembler a začal. Vše, co před sebou vidíte vzniklo během srpna 2020, ve chvilkách volného času na Speccy 2010 (grafika v Art Studiu) nebo v MHD (AS+Fuse).\n\nPomocí mi byla klasická spektristická assemblerová literatura, spoustu věcí jsem si ale napsal sám, prostě proto že mi příklady z literatury nefungovaly. Z toho samozřejmě plyne, že jde o kód horší kvality, takže omluvte případné nedostatky. A jelikož jsem se snažil udržet vše v tajnosti, aby mi to snad někdo nerozmlouval jako úplnou blbost, tak tu je ticho - pseudokód, pseudotexty a pseudografiku jsem schopen nějak zpatlat sám, ale muziku nedám dohromady nikdy.\n\nDlouho jsem přemýšlel nad názvem. Nechtěl jsem těžit ze slávy X-Magu ani ZX Magazínu, dlouho mě nic nenapadalo a tak jsem se obrátil tam, kam se obracím ve všech těžkých životních situacích: k bibli. Ale ne k bibli s velkým B, nýbrž k bibli zvané Sinclair ZX Spectrum: BASIC programming od Stevena Vickerse. Tam mě v rejstříku zaujalo klíčové slovo RESTORE a tak je tu. A pokusí se obnovit spektristický diskmag v českých zemích. Držte palce.\n\n--- Logout\n",
+  "body_ru": "Добро пожаловать к демонстрационному нулевому номеру дискмага Restore. Сразу в начале отвечу на вопрос, который всё равно позже бы прозвучал: Господи, зачем?\n\nЗа плечами у нас пятая часть XXI века, и несмотря на то, как всё выглядело на его старте, ZX Spectrum не сдох. Мы все попробовали чудесные современные компьютеры, подключённые к Интернету, а когда это снова надоело — Speccy терпеливо нас ждало. Осмелюсь предположить, что сегодня в чудесном чёрном восьмибитнике от дядюшки Clive Sinclair копается столько же, если не больше людей, чем тогда — в 2001 году, — когда Aragorn выпустил последний номер X-Magazínu и тем самым более-менее закрыл эпоху чешских дискмагов для ZX Spectrum и совместимых. Рубеж 2001/2002 годов по стечению обстоятельств был как раз тем временем, когда я после нескольких лет перерыва возвращался к Speccy, и довольно пессимистичные разговоры о том, что всё умирает, меня застали врасплох. Я-то считал всё мёртвым ещё с 1997-го, когда мне по телефону в Proximě сказали, что этим давно уже не занимаются. Когда я впервые в Интернете нашёл, что всё происходит, я был в восторге: демосцена, подключение винчестера и CD-привода, воспроизведение видео...\n\nУже тогда, когда я дочитал последний X-Mag, я сказал себе, что заканчивать жалко и что надо бы как-то продолжать. Я не из самых быстрых, так что осознание того, что если не начну сам — не начнёт никто, заняло почти двадцать лет. Окончательно я решился после ZX Šumavy, в день восьмидесятилетия сэра Sinclairа, завёл ассемблер и начал. Всё, что вы видите перед собой, возникло в течение августа 2020-го, в минуты свободного времени на Speccy 2010 (графика в Art Studio) или в общественном транспорте (AS+Fuse).\n\nПомощью мне была классическая спектрумистская ассемблерная литература, но многое я написал сам — просто потому, что примеры из литературы у меня не работали. Из этого, разумеется, следует, что код худшего качества, так что извините за возможные недочёты. А поскольку я старался держать всё в тайне, чтобы мне вдруг кто-нибудь не отговорил как от полной глупости, то здесь тишина — псевдокод, псевдотексты и псевдографику я как-нибудь сам сляпаю, а вот музыку никогда не соберу.\n\nДолго я думал над названием. Не хотел паразитировать на славе X-Magu или ZX Magazínu, долго ничего не приходило в голову, и я обратился туда, куда обращаюсь во всех тяжёлых жизненных ситуациях: к библии. Но не к Библии с большой буквы, а к библии под названием Sinclair ZX Spectrum: BASIC programming от Stevena Vickersа. Там в указателе меня заинтересовало ключевое слово RESTORE — вот оно и здесь. И попытается возродить спектрумистский дискмаг в чешских землях. Держите кулаки.\n\n--- Logout\n",
+  "body_en": "",
+  "category_ids": [
+    123,
+    116
+  ],
+  "tags": [
+    {
+      "tag_name": "restore",
+      "tag_alias": "restore"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "czech",
+      "tag_alias": "czech"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "article_id": "05_15_014OUTRO",
+  "press": "Restore",
+  "press_id": 326,
+  "issue": "05",
+  "sort_order": 15,
+  "source_file": "014_014outro.md",
+  "source_lang": "cs",
+  "title_cs": "Pár slov závěrem",
+  "title_ru": "Несколько слов в заключение",
+  "title_en": "",
+  "meta_description_cs": "",
+  "meta_description_ru": "Заключительное слово Logout к RESTORE 5 (июль 2026), написанное на ZX Šumava: о выходе номера со статьями Ellvis, порте MDOS на divMMC, планах на RESTORE 6 и авторах (Aki, BruXy, Martin Bórik, MikeZT, PanPrase).",
+  "meta_description_en": "Logout's closing remarks for RESTORE 5 (July 2026), written at ZX Šumava. Mentions Ellvis's contributions, an MDOS port to divMMC, RESTORE 6 plans, and credits Aki, BruXy, Martin Bórik, MikeZT, and PanPrase.",
+  "body_cs": "Tak už to víme: RESTORE 5 vyšel v červenci 2026. Inu, proč ne.\n\nTěsně poté, co jsem sepsal onen poněkud pesimistický úvodník, vstoupil do hry Ellvis a napsal mi články takového rozsahu, že jen ony v délce překonaly celé nulté číslo diskmagu. Pak jsem ovšem začal trpět nedostatkem času já a k dokončení jsem se dostal až během ZX Šumavy.\n\nTa pro mě při psaní těchto řádků stále probíhá, byť se již chýlí ke konci. Zatím se tam ale ještě úplně nenachýlila. Zatím pořád sedím na gauči u panenky Marie AYčské, venku část osazenstva dělá čajový dýchánek, někdo je na výletě, někdo aktualizuje Ubuntu a někdo včera poprvé viděl živého dudáka. Je tu taková pohoda, jaká má na pravé spectristické dovolené být.\n\nNěkolik set kilometrů odsud probíhá paralelně další spectristická dovolená a zákulisní informace z ní naznačují, že během ní proběhl port (nejen) MDOSu na divMMC, takže bude možné si RESTORE číst na dalším typu zařízení. Už jen proto jsem si řekl, že číslo vydám, ještě než se z obou míst spectristi rozjedou do svých domovů. A pokud mě během následujících pár hodin nesrazil trolejbus (na Šumavě nepředpokládám, ale...), pak se mi to i podařilo.\n\nA až se mi to podaří, založím si ve stromu se zdrojáky hned adresář R06 a začnu otravovat ostatní s požadavky na nové články. Optimista se ze mě už asi nestane, ale věřím, že minimálně do příštího léta další číslo sesmolíme. Logout\n\nDo RESTORE 5 přispěli: Aki (hudba) BruXy (text) Ellvis (texty) Martin Bórik (text, PT3 player) MikeZT (texty, příloha) PanPrase (texty) ... a samozřejmě něco málo jsem přidal i já.\n",
+  "body_ru": "Так вот мы и узнали: RESTORE 5 вышел в июле 2026. Ну, почему бы и нет.\n\nСразу после того, как я написал тот несколько пессимистичный вступительный, в игру вступил Ellvis и прислал мне статьи такого объёма, что одни только они по длине превзошли весь нулевой номер дискмага. Потом, правда, начал страдать от нехватки времени я, и до завершения добрался лишь во время ZX Šumavy.\n\nОна для меня в момент написания этих строк всё ещё идёт, хотя уже близится к концу. Пока, впрочем, ещё не совсем закончилась. Пока я всё ещё сижу на диване у куколки Marie AYčské, снаружи часть компании устраивает чайный приём, кто-то на экскурсии, кто-то обновляет Ubuntu, а кто-то вчера впервые увидел живого волынщика. Здесь такая благодать, какая и должна быть на настоящей спектрумистской отпускной.\n\nВ нескольких сотнях километров отсюда параллельно идёт ещё один спектрумистский отпуск, и закулисные сведения из него намекают, что во время него состоялся порт (не только) MDOS на divMMC, так что читать RESTORE можно будет ещё на одном типе устройств. Уже хотя бы поэтому я решил выпустить номер, прежде чем спектрумисты с обоих мест разъедутся по домам. А если за ближайшие несколько часов меня не сбил троллейбус (на Šumavě не предполагаю, но...), то у меня и получилось.\n\nИ когда получится — сразу заведу в дереве исходников каталог R06 и начну донимать остальных требованиями новых статей. Оптимистом я, наверное, уже не стану, но верю, что как минимум до следующего лета ещё один номер слепим. Logout\n\nВ RESTORE 5 внесли вклад: Aki (музыка) BruXy (текст) Ellvis (тексты) Martin Bórik (текст, PT3 player) MikeZT (тексты, приложение) PanPrase (тексты) ... и, разумеется, кое-что добавил и я.\n",
+  "body_en": "",
+  "category_ids": [
+    123,
+    116
+  ],
+  "tags": [
+    {
+      "tag_name": "restore",
+      "tag_alias": "restore"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "czech",
+      "tag_alias": "czech"
+    },
+    {
+      "tag_name": "outro",
+      "tag_alias": "outro"
+    }
+  ]
+}

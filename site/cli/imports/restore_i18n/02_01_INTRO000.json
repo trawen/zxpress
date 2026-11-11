@@ -1,0 +1,40 @@
+{
+  "article_id": "02_01_INTRO000",
+  "press": "Restore",
+  "press_id": 326,
+  "issue": "02",
+  "sort_order": 1,
+  "source_file": "000_intro000.md",
+  "source_lang": "cs",
+  "title_cs": "Ahoj spectristi!",
+  "title_ru": "Привет, спектрумисты!",
+  "title_en": "",
+  "meta_description_cs": "",
+  "meta_description_ru": "Вступительное слово редактора Logout к RESTORE 2 (ByteFest 2022): добавление поддержки BSDOS, TRDOS и +3DOS в движок, а также борьба с нехваткой памяти из-за музыки Aki, плеера Martin Bórik и статьи Wotnau.",
+  "meta_description_en": "Editorial by Logout for RESTORE 2 (ByteFest 2022) detailing new engine support for BSDOS, TRDOS, and +3DOS, plus memory optimizations for Aki's music with Martin Bórik's Vortex Tracker player.",
+  "body_cs": "Tak jste se přece jen dočkali: Po zpoždění zapříčiněném tím či oním, je tu RESTORE 2, srdečně vás u něj vítám. Jsem rád, že jsem to nakonec v roce 2022 stihl, i když musím sebekriticky přiznat, že to mohlo být i dřív než na konci října. Ale alespoň že tak.\n\nHned na úvod si dovolím napsat, co jsou ty dvě novinky, které jsem v engine diskmagu slíbil v každém čísle udělat:\n\n- BSDOS\n- TRDOS\n- +3DOS\n\nPozorný čtenář si jistě povšimne, že to jsou věci tři. Ano, dlouho to vypadalo, že systémy zvládnu do RESTORE napsat jen dva, ale nakonec se povedlo a jsou tři - plán byl tedy splněn na 150%!\n\nPo čísle 1 jsem vyhlásil, že číslo další bude umět kromě MDOSu i BSDOS a +3DOS. Na neKapliConu jsem ale upadl do debaty s Pokem a když mi bylo vysvětleno, že programování TRDOSem není až tak hrozné, jak se všeobecně tvrdí, odložil jsem +3 stranou a vrhl se na podporu BetaDisku. Musím potvrdit, že to skutečně bylo vcelku příjemné programování, zejména třeba proti MDOSu.\n\nBSDOS jsem plánoval od začátku, první verzi rutin jsem napsal na Speccy 2010 v Prométheu a finální pak odladil v ASu a v RealSpecu s emulací MB-02+. No a nakonec jsem si nechal +3DOS, který je sice co do služeb nejpropracovanější, ale dělal se mi nejhůř - musí se v něm už stránkovat a vůbec zabrušovat do světa 128k, čemuž jsem se jinak vždy vyhýbal jako čert kříži.\n\nCož mě plynule přivádí od toho, co je v tomto čísle dobře, k tomu, co je tu špatně.\n\nPostěžoval jsem si, že nějak nemůžu sehnat dostatečně dlouhou hudbu a že číst časopis u muziky, která se po 90 sekundách opakuje, je opruz. A Aki sedla a doslova za pár dnů vytvořila pecku, kterou už asi chvíli posloucháte. Jenže ta pecka má i s playerem 18 kilobajtů, což v kombinaci s délkou samotného časopisu a různých bufferů dávalo limit zhruba 10 kilo textu na jednu položku z úvodního menu.\n\nHned jsem si říkal, že to je strašně málo, protože už minule byly některé kapitoly delší. Aby byla má slova potvrzena, poslal Wotnau článek o délce 25 kilobajtů. Hned po příchodu na ByteFest mi nabídl Martin Bórik svoji rutinu pro přehrávání hudby z Vortex Trackeru, která je kratší a umožňuje i zkrátit hudební data. Po jeho zásahu jsem získal další 3 kB místa, ale to bylo pořád málo.\n\nJelikož jsem diskmag chtěl během ByteFestu opravdu vydat (když už je v menu obrázek a datum konání, přilo mi to tak nějak logické), zrušil narychlo jsem kreslení úvodního menu z bufferu a tak se v tomto čísle obrázek při každém návratu do menu loaduje z diskety znovu, snad to přežijete. I tak bylo nutné některé kapitoly sloučit a jiné rozdělit na více částí. Redakce se tímto omlouvá za zhoršenou kvalitu komfortu čtení.\n\nA teď už dost pindů o diskmagu a vrhněte se do jeho čtení. A užijte si ByteFest!\n\nLogout, šéfredaktor\n",
+  "body_ru": "Итак, вы всё-таки дождались: после задержки, вызванной тем или иным, вот он — RESTORE 2, сердечно вас при нём приветствую. Я рад, что в конце концов успел в 2022 году, хотя должен самокритично признать, что могло быть и раньше, чем в конце октября. Но хотя бы так.\n\nСразу в начале позволю себе написать, что это за две новинки, которые я в движке дикмага обещал сделать в каждом номере:\n\n- BSDOS\n- TRDOS\n- +3DOS\n\nВнимательный читатель наверняка заметит, что это вещи три. Да, долго казалось, что в RESTORE я осилю только две системы, но в итоге получилось, и их три — план, стало быть, выполнен на 150%!\n\nПосле номера 1 я объявил, что следующий номер будет уметь помимо MDOS ещё BSDOS и +3DOS. На neKapliCon’е я, однако, ввязался в спор с Pokem, и когда мне объяснили, что программирование под TRDOS не такое уж страшное, как принято считать, я отложил +3 в сторону и бросился на поддержку BetaDisk. Должен подтвердить: это действительно было довольно приятное программирование, особенно, скажем, по сравнению с MDOS.\n\nBSDOS я планировал с самого начала, первую версию рутин написал на Speccy 2010 в Prometheus, а финальную потом отладил в AS и в RealSpec с эмуляцией MB-02+. Ну а напоследок оставил себе +3DOS, который хоть и самый проработанный по сервисам, но давался мне хуже всего — в нём уже приходится страничить и вообще погружаться в мир 128k, чего я иначе всегда избегал как чёрт креста.\n\nЧто плавно подводит меня от того, что в этом номере хорошо, к тому, что здесь плохо.\n\nЯ пожаловался, что как-то не могу раздобыть достаточно длинную музыку и что читать журнал под музыку, которая через 90 секунд повторяется, — это мучение. И Aki села и буквально за пару дней создала бомбу, которую вы, наверное, уже какое-то время слушаете. Только вот эта бомба вместе с плеером занимает 18 килобайт, что в сочетании с длиной самого журнала и разных буферов давало лимит примерно 10 кило текста на один пункт стартового меню.\n\nСразу подумал, что это ужасно мало, потому что уже в прошлый раз некоторые главы были длиннее. Чтобы мои слова подтвердились, Wotnau прислал статью длиной 25 килобайт. Сразу по приезде на ByteFest Martin Bórik предложил мне свою рутину для проигрывания музыки из Vortex Tracker, которая короче и позволяет ещё и укоротить музыкальные данные. После его вмешательства я получил ещё 3 кБ места, но этого всё равно было мало.\n\nПоскольку я действительно хотел выпустить дикмаг во время ByteFest (раз уж в меню картинка и дата проведения, показалось мне это как-то логичным), я наспех отменил отрисовку стартового меню из буфера — и так в этом номере картинка при каждом возврате в меню загружается с дискеты заново, надеюсь, вы это переживёте. Даже так пришлось некоторые главы объединить, а другие разбить на несколько частей. Редакция приносит извинения за ухудшение комфорта чтения.\n\nА теперь хватит нытья про дикмаг — бросайтесь читать. И наслаждайтесь ByteFest!\n\nLogout, главный редактор\n",
+  "body_en": "",
+  "category_ids": [
+    123,
+    116
+  ],
+  "tags": [
+    {
+      "tag_name": "restore",
+      "tag_alias": "restore"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "czech",
+      "tag_alias": "czech"
+    },
+    {
+      "tag_name": "editorial",
+      "tag_alias": "editorial"
+    }
+  ]
+}

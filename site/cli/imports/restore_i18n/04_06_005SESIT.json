@@ -1,0 +1,36 @@
+{
+  "article_id": "04_06_005SESIT",
+  "press": "Restore",
+  "press_id": 326,
+  "issue": "04",
+  "sort_order": 6,
+  "source_file": "005_005sesit.md",
+  "source_lang": "cs",
+  "title_cs": "Zelený sešit a co v něm bylo",
+  "title_ru": "Зелёная тетрадь и что в ней было",
+  "title_en": "",
+  "meta_description_cs": "",
+  "meta_description_ru": "После смерти Клайва Синклера в 2021 году автор Logout вспоминает свой Didaktik Gama 1995 года и приводит листинги пяти первых графических программ на BASIC из зелёной тетради.",
+  "meta_description_en": "Sparked by Clive Sinclair's death in 2021, Logout recalls his 1995 Didaktik Gama and shares the code listings of five early BASIC graphics programs from an old green notebook.",
+  "body_cs": "Když v 16. září 2021 zemřel strýček Clive, zrovna jsem se chystal na víkend k rodičům na chalupu. V rámci prudkého záchvatu tesku a nostalgie jsem tak mohl prohrabat svůj starý psací stůl a najít sešit v tvrdých zelených deskách, který jsem na Vánoce roku 1995 dostal společně s Didaktikem Gama. Na úplně posledních stránkách tohoto sešitu bylo čínským perem napsáno několik programů v BASICu a jelikož jsem k Didaktiku neměl několik týdnů žádné záznamové médium, byl tenhle sešit jediným zdrojem zábavy, kterou jsem si se svým prvním počítačem užíval.\n\nMovitější kamarádi tou dobou hráli na svých čtyři-osm-šestkách Doom, ti chudší proháněli Amigu, já napsal na beznadějně zastaralém osmibitu prvních pět programů ve svém životě a bylo už navždy jasné, že na hraní her mě neužije - já budu programovat. Ohlédnu-li se těch dvacet devět let zpět, jsem nesmírně rád, že tomu tak bylo a nelituju vůbec ničeho.\n\nTěch prvních pět programů jsem pro vás přepsal a záměrně je nedávám jako přílohu - já je musel opisovat taky, tak jakýpa copa. V programu číslo jedna na řádku padesát do uvozovek patří grafický znak, který se zadává v módu G se shiftem na čísle osm, zbytek stačí zadat tak, jak leží a běží. Tolik čirého štěstí, jako já tenkrát, určitě nezažijete, ale pokud jste opravdu rádi, že oblažuju vaše životy svojí existencí, tak těchto pět programů za to může. To je radosti, že?\n\n### PROGRAM 1\n\n10 BORDER 0: PAPER 0: CLS 20 LET x=1 30 FOR t=0 TO 21 40 FOR c=1 TO 6 50 PRINT INK c;AT t,c+x;\" \" 60 NEXT c 70 LET x=x+1 80 NEXT t\n\n### PROGRAM 2\n\n5 BORDER 1: PAPER 6: CLS 10 INPUT n 20 FOR r=20 TO 80 STEP 2 25 LET x=128: LET y=87 30 LET h1=x-r: LET v1=y 35 PLOT h1,v1 40 FOR a=0 TO 361 STEP 360/n 50 LET h2=x-r*COS (a*PI/180) 60 LET v2=y+r*SIN (a*PI/180) 70 DRAW h2-h1,v2-v1 80 LET h1=h2: LET v1=v2 90 NEXT a 100 NEXT r\n\n### PROGRAM 3\n\n10 OVER 1 20 FOR x=-100 TO 100 STEP 1+RND*15 30 PLOT 128,150 40 DRAW x,-120 50 NEXT x 60 GO TO 20\n\n### PROGRAM 4\n\n10 BORDER 4: PAPER 1: INK 6: CLS 30 FOR y=0 TO 20 STEP 2 40 PLOT 0,y 50 DRAW 255,0 60 NEXT y 70 FOR n=100 TO 220 STEP 30 80 FOR x=-10-n/10 TO 10+n/10 90 PLOT n,35+n/10 100 DRAW x,-n/4 110 NEXT x: NEXT n 120 FOR n=0 TO 2*PI STEP PI/12 130 PLOT 40+2*COS n,140+2*SIN n 140 DRAW 15*COS n,15*SIN n 150 NEXT n\n\n### PROGRAM 5\n\n10 BORDER 0: PAPER 0: INK 6: CLS 20 LET x=RND*255 30 LET y=RND*104+71 40 LET t=INT (175-y)/8 50 LET c=INT (x/8) 60 PLOT 0,0: DRAW OVER 1;x,y 70 PLOT 0,0: DRAW OVER 1;x,y 80 PRINT AT t,c;\"*\" 90 GO TO 20 Tak trochu lituju všechny, kdo začínali rovnou u počítače, který není možné takhle snadno přinutit \"něco\" dělat. Kliknutí na ikonu či ťapnutí prstem na displej není totéž jako říct \"KRESLI!\", \"POČÍTEJ!\", \"PIŠ!\" a pak užasle sledovat, jak to počítač skutečně dělá.\n\nPro RESTORE nostalgičnil Logout.\n",
+  "body_ru": "Когда 16 сентября 2021 года умер дядюшка Clive, я как раз собирался на выходные к родителям на дачу. В приступе острой тоски и ностальгии я смог перерыть свой старый письменный стол и найти тетрадь в твёрдой зелёной обложке, которую на Рождество 1995 года получил вместе с Didaktik Gama. На самых последних страницах этой тетради китайской ручкой были записаны несколько программ на BASIC, и поскольку к Didaktikу у меня несколько недель не было никакого носителя, эта тетрадь была единственным источником развлечения, которое я себе со своим первым компьютером устраивал.\n\nБолее состоятельные друзья в ту пору играли на своих четыре‑восемь‑шестых в Doom, победнее — гоняли Amiga, а я на безнадёжно устаревшем восьмибитнике написал первые пять программ в своей жизни — и навсегда стало ясно, что играть в игры мне не суждено: я буду программировать. Оглядываясь на те двадцать девять лет назад, я безмерно рад, что так вышло, и ни о чём не жалею.\n\nТе первые пять программ я для вас переписал — и намеренно не даю их приложением: мне их тоже пришлось переписывать от руки, так какого ж рожна. В программе номер один в строке пятьдесят в кавычки входит графический символ, который вводится в режиме G с шифтом на цифре восемь; остальное достаточно набрать как есть. Столько чистого счастья, сколько я тогда, вы наверняка не испытаете — но если вам и правда радостно, что я освещаю ваши жизни своим существованием, то виноваты в этом эти пять программ. Ну и радость, а?\n\n### ПРОГРАММА 1\n\n10 BORDER 0: PAPER 0: CLS 20 LET x=1 30 FOR t=0 TO 21 40 FOR c=1 TO 6 50 PRINT INK c;AT t,c+x;\" \" 60 NEXT c 70 LET x=x+1 80 NEXT t\n\n### ПРОГРАММА 2\n\n5 BORDER 1: PAPER 6: CLS 10 INPUT n 20 FOR r=20 TO 80 STEP 2 25 LET x=128: LET y=87 30 LET h1=x-r: LET v1=y 35 PLOT h1,v1 40 FOR a=0 TO 361 STEP 360/n 50 LET h2=x-r*COS (a*PI/180) 60 LET v2=y+r*SIN (a*PI/180) 70 DRAW h2-h1,v2-v1 80 LET h1=h2: LET v1=v2 90 NEXT a 100 NEXT r\n\n### ПРОГРАММА 3\n\n10 OVER 1 20 FOR x=-100 TO 100 STEP 1+RND*15 30 PLOT 128,150 40 DRAW x,-120 50 NEXT x 60 GO TO 20\n\n### ПРОГРАММА 4\n\n10 BORDER 4: PAPER 1: INK 6: CLS 30 FOR y=0 TO 20 STEP 2 40 PLOT 0,y 50 DRAW 255,0 60 NEXT y 70 FOR n=100 TO 220 STEP 30 80 FOR x=-10-n/10 TO 10+n/10 90 PLOT n,35+n/10 100 DRAW x,-n/4 110 NEXT x: NEXT n 120 FOR n=0 TO 2*PI STEP PI/12 130 PLOT 40+2*COS n,140+2*SIN n 140 DRAW 15*COS n,15*SIN n 150 NEXT n\n\n### ПРОГРАММА 5\n\n10 BORDER 0: PAPER 0: INK 6: CLS 20 LET x=RND*255 30 LET y=RND*104+71 40 LET t=INT (175-y)/8 50 LET c=INT (x/8) 60 PLOT 0,0: DRAW OVER 1;x,y 70 PLOT 0,0: DRAW OVER 1;x,y 80 PRINT AT t,c;\"*\" 90 GO TO 20 Я немного жалею всех, кто начинал сразу с компьютера, который нельзя так легко заставить «что‑то» делать. Клик по иконке или тычок пальцем по дисплею — это не то же самое, что сказать «РИСУЙ!», «СЧИТАЙ!», «ПИШИ!» — и потом с изумлением смотреть, как компьютер и правда это делает.\n\nДля RESTORE ностальгировал Logout.\n",
+  "body_en": "",
+  "category_ids": [
+    100,
+    111
+  ],
+  "tags": [
+    {
+      "tag_name": "restore",
+      "tag_alias": "restore"
+    },
+    {
+      "tag_name": "zx-spectrum",
+      "tag_alias": "zx-spectrum"
+    },
+    {
+      "tag_name": "czech",
+      "tag_alias": "czech"
+    }
+  ]
+}

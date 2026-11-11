@@ -85,49 +85,111 @@ function ezines_type_counts(mysqli $db): array
 }
 
 /**
- * One best-fit screen per press: prefer menu (type=1), then splash (type=0),
- * then any other screen; within that, prefer the last issue
- * (same order as the press overview: LENGTH(title) DESC, title DESC).
+ * Up to two catalog thumbs per press from splash (0), menu (1), text (2).
+ * Prefer splash + menu from one later issue; text is only a fallback when
+ * splash and/or menu are missing. Issue order matches the press overview:
+ * LENGTH(title) DESC, title DESC. Display order: splash, menu, then text.
  *
- * @return array<int, array{id:int,format:string,src:string}>
+ * @return array<int, list<array{id:int,format:string,src:string,type:int,width:int,height:int}>>
  */
-function ezines_press_splash_map(mysqli $db): array
+function ezines_press_screens_map(mysqli $db): array
 {
-	$map = [];
+	$byPress = [];
 	$dimCols = screen_table_has_dimensions($db) ? ', s.width, s.height' : '';
 	$z = db_select(
 		$db,
-		'SELECT s.id_press, s.id, s.format, s.type' . $dimCols
+		'SELECT s.id_press, s.id_issue, s.id, s.format, s.type' . $dimCols
 		. ' FROM screens s'
 		. ' INNER JOIN issue i ON i.id = s.id_issue'
+		. ' WHERE s.type IN (0, 1, 2)'
 		. ' ORDER BY s.id_press ASC,'
-		. ' CASE'
-		. ' WHEN s.type = 1 THEN 0'
-		. ' WHEN s.type = 0 THEN 1'
-		. ' ELSE 2'
-		. ' END ASC,'
-		. ' LENGTH(i.title) DESC, i.title DESC, s.id ASC'
+		. ' LENGTH(i.title) DESC, i.title DESC, s.type ASC, s.id ASC'
 	);
 	while ($z && ($row = mysqli_fetch_assoc($z))) {
 		$pressId = (int) ($row['id_press'] ?? 0);
-		if ($pressId <= 0 || isset($map[$pressId])) {
-			continue;
-		}
+		$issueId = (int) ($row['id_issue'] ?? 0);
+		$type = (int) ($row['type'] ?? -1);
 		$screenId = (int) ($row['id'] ?? 0);
-		if ($screenId <= 0) {
+		if ($pressId <= 0 || $issueId <= 0 || $screenId <= 0 || $type < 0 || $type > 2) {
 			continue;
 		}
-		$format = strtolower(preg_replace('/[^a-z0-9]+/i', '', (string) ($row['format'] ?? '')) ?: 'png');
-		$map[$pressId] = [
-			'id' => $screenId,
-			'format' => $format,
-			'width' => (int) ($row['width'] ?? 0),
-			'height' => (int) ($row['height'] ?? 0),
-			'src' => '/screens/1/' . $screenId . '.' . $format,
-		];
+		if (!isset($byPress[$pressId])) {
+			$byPress[$pressId] = [
+				'issues' => [],
+				'issue_order' => [],
+				'by_type' => [],
+			];
+		}
+		if (!isset($byPress[$pressId]['issues'][$issueId])) {
+			$byPress[$pressId]['issues'][$issueId] = [];
+			$byPress[$pressId]['issue_order'][] = $issueId;
+		}
+		if (!isset($byPress[$pressId]['issues'][$issueId][$type])) {
+			$format = strtolower(preg_replace('/[^a-z0-9]+/i', '', (string) ($row['format'] ?? '')) ?: 'png');
+			$entry = [
+				'id' => $screenId,
+				'format' => $format,
+				'type' => $type,
+				'width' => (int) ($row['width'] ?? 0),
+				'height' => (int) ($row['height'] ?? 0),
+				'src' => '/screens/1/' . $screenId . '.' . $format,
+			];
+			$byPress[$pressId]['issues'][$issueId][$type] = $entry;
+			if (!isset($byPress[$pressId]['by_type'][$type])) {
+				$byPress[$pressId]['by_type'][$type] = $entry;
+			}
+		}
 	}
 
-	return $map;
+	$pickPair = static function (array $byType): array {
+		$pair = [];
+		if (isset($byType[0])) {
+			$pair[] = $byType[0];
+		}
+		if (isset($byType[1])) {
+			$pair[] = $byType[1];
+		}
+		// Text (type=2) only fills missing splash/menu slots.
+		if (count($pair) < 2 && isset($byType[2])) {
+			$pair[] = $byType[2];
+		}
+		return array_slice($pair, 0, 2);
+	};
+
+	$out = [];
+	foreach ($byPress as $pressId => $pack) {
+		$pair = [];
+		// Best: splash + menu from the same later issue.
+		foreach ($pack['issue_order'] as $issueId) {
+			$issueScreens = $pack['issues'][$issueId] ?? [];
+			if (isset($issueScreens[0], $issueScreens[1])) {
+				$pair = [$issueScreens[0], $issueScreens[1]];
+				break;
+			}
+		}
+		// Next: any same-issue pair that can be completed with text fallback.
+		if ($pair === []) {
+			foreach ($pack['issue_order'] as $issueId) {
+				$candidate = $pickPair($pack['issues'][$issueId] ?? []);
+				if (count($candidate) === 2) {
+					$pair = $candidate;
+					break;
+				}
+				if ($pair === [] && $candidate !== []) {
+					$pair = $candidate;
+				}
+			}
+		}
+		// Last resort: best splash/menu/text across issues.
+		if (count($pair) < 2) {
+			$pair = $pickPair($pack['by_type']);
+		}
+		if ($pair !== []) {
+			$out[(int) $pressId] = $pair;
+		}
+	}
+
+	return $out;
 }
 
 /**
@@ -300,15 +362,19 @@ $f = 0;
 $n = 0;
 $a = '#';
 $c = [];
-$splashMap = ezines_press_splash_map($db);
+$screensMap = ezines_press_screens_map($db);
 while ($z && ($t = mysqli_fetch_array($z))) {
 	$t['title_plain'] = title_plain($t['title'] ?? '');
 	$t['public_url'] = ezn_url_press($t, $isEng);
 	$pressId = (int) ($t['id'] ?? 0);
-	$t['splash'] = $splashMap[$pressId] ?? null;
-	if (is_array($t['splash']) && (int) ($t['splash']['id'] ?? 0) > 0) {
-		screen_enrich_gallery_thumb($t['splash']);
+	$t['screens'] = $screensMap[$pressId] ?? [];
+	foreach ($t['screens'] as &$screenRow) {
+		if (is_array($screenRow) && (int) ($screenRow['id'] ?? 0) > 0) {
+			screen_enrich_gallery_thumb($screenRow);
+		}
 	}
+	unset($screenRow);
+	$t['splash'] = $t['screens'][0] ?? null;
 	$s = strtoupper(mb_substr($t['title_plain'], 0, 1, 'UTF-8'));
 	$isAlphaLetter = ($s < '0' || $s > '9');
 	if ($isAlphaLetter && (!$f || $a !== $s)) {

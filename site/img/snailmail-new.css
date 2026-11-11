@@ -2404,7 +2404,10 @@ body.smn-modal-open {
 	color: var(--smn-muted);
 }
 .smn-ezine-index-splash {
+	display: flex;
 	flex: 0 0 auto;
+	align-items: flex-start;
+	gap: 6px;
 	line-height: 0;
 	position: relative;
 	z-index: 1;
@@ -4599,11 +4602,16 @@ body.smn-has-cat-aside .smn-main {
 .smn-article-layout {
 	display: block;
 }
+.smn-article-layout > .smn-article {
+	/* Reading width 640px (frame padding excluded), with or without related aside */
+	max-width: 640px;
+}
 body.smn-has-cat-aside .smn-article-layout {
 	display: grid;
-	grid-template-columns: minmax(0, 1fr) 200px;
+	grid-template-columns: minmax(0, 640px) 200px;
 	column-gap: 24px;
 	align-items: start;
+	justify-content: start;
 }
 .smn-article-cat-aside-sentinel {
 	display: none;
